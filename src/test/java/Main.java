@@ -106,7 +106,6 @@ public class Main {
 			match(cgLine = cgLines.readLine(), PATTERN_CG_S);
 			
 			char[] cs = line.toCharArray();
-			int next = 0;
 			
 			Matcher entryMatcher;
 			String sKey;
@@ -122,7 +121,13 @@ public class Main {
 			if (key[j] == '$')
 				j++;
 			
-			for (int i = 0; i < cs.length; i++) {
+			int next = 0;
+			while(isWhitespace(cs[next]) || cs[next] == '"') {
+				out.printf("%c", cs[next]);
+				next++;
+			}
+
+			for (int i = next; i < cs.length; i++) {
 				if (j == key.length || isWhitespace(key[j])) {
 					// match!
 					emitToken(line, next, i, entryMatcher);
