@@ -50,13 +50,9 @@ public class Parser {
 	}
 
 	private void parse0(Reader cgText, Reader sgmlText) throws IOException, ParserException {
-		BufferedReader bcgLines = new BufferedReader(cgText);
 		BufferedReader sgmlLines = new BufferedReader(sgmlText);
 		
-		ArrayList<String> cgLines = new ArrayList<String>();
-		String l;
-		while ((l = bcgLines.readLine()) != null)
-			cgLines.add(l);
+		ArrayList<String> cgLines = preParseCG(cgText);
 		
 		int ccgLine = -1;
 		String line;
@@ -220,6 +216,15 @@ public class Parser {
 		
 		match(line, PATTERN_SGML_S_TEXT);
 		match(line = sgmlLines.readLine(), PATTERN_SGML_S_DOC);
+	}
+
+	private ArrayList<String> preParseCG(Reader cgText) throws IOException {
+		BufferedReader bcgLines = new BufferedReader(cgText);
+		ArrayList<String> cgLines = new ArrayList<String>();
+		String l;
+		while ((l = bcgLines.readLine()) != null)
+			cgLines.add(l);
+		return cgLines;
 	}
 
 	private void bailOut(char[] cs, int from, char[] key, int j, int to) throws ParserException {
