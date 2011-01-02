@@ -19,32 +19,52 @@ public class SGMLSAXParser {
 	public void parse(Reader reader) throws IOException {
 		buffer.clear();
 		
-		reader.read(buffer);
-
-		buffer.flip();
-		char c = buffer.get();
-		if (isWhitespace(c)) {
-			try {
-				while (isWhitespace(buffer.get()));
-				handler.whitespace(buffer.array(), 0, buffer.position() - 1);
-			} catch (BufferUnderflowException e) {
-				handler.whitespace(buffer.array(), 0, buffer.position());
+		while (reader.read(buffer) != -1 || buffer.hasRemaining()) {
+			System.out.printf("limit: %d\n", buffer.limit());
+			System.out.printf("position: %d\n", buffer.position());
+			buffer.flip();
+			if (!buffer.hasRemaining())
+				break;
+			
+			System.out.printf("limit: %d\n", buffer.limit());
+			System.out.printf("position: %d\n", buffer.position());
+			char c = buffer.get();
+			if (isWhitespace(c)) {
+				int length;
+				try {
+					while (isWhitespace(buffer.get()));
+					length = buffer.position() - 1;
+				} catch (BufferUnderflowException e) {
+					length = buffer.position();
+				}
+				buffer.rewind();
+				char[] c1 = new char[length];
+				buffer.get(c1);
+				handler.whitespace(new String(c1));
+			} else if (c == '<') {
+				while (buffer.get() != '>');
+				int length = buffer.position();
+				
+				buffer.rewind();
+				char[] c1 = new char[length];
+				buffer.get(c1);
+				handler.tag(new String(c1, 1, length - 2));
+			} else {
+				int length;
+				try {
+					while (buffer.get() != '<');
+					length = buffer.position() - 1;
+				} catch (BufferUnderflowException e) {
+					length = buffer.position();
+				}
+				buffer.rewind();
+				char[] c1 = new char[length];
+				buffer.get(c1);
+				handler.text(new String(c1));
 			}
-		} else if (c == '<') {
-			int off = buffer.position();
-			while (buffer.get() != '>');
-			handler.tag(buffer.array(), off, buffer.position() - off - 1);
-		} else {
-			try {
-				while (buffer.get() != '<');
-				handler.text(buffer.array(), 0, buffer.position() - 1);
-			} catch (BufferUnderflowException e) {
-				handler.text(buffer.array(), 0, buffer.position());
-			}
+			
+			buffer.compact();
 		}
-		
-		buffer.compact();
-		
 	}
 
 }

@@ -2,7 +2,7 @@ package br.eti.rslemos.nlp.corpora.chave.parser;
 
 
 public interface SGMLSAXHandler {
-	public void tag(char[] buffer, int start, int len);
-	public void whitespace(char[] buffer, int start, int len);
-	public void text(char[] buffer, int start, int len);
+	public void tag(String tag);
+	public void whitespace(String whitespace);
+	public void text(String text);
 }
