@@ -1,3 +1,6 @@
+import static java.lang.Character.isWhitespace;
+import static java.lang.Character.toLowerCase;
+
 import java.io.BufferedReader;
 import java.io.File;
 import java.io.InputStream;
@@ -119,11 +122,11 @@ public class Main {
 				j++;
 			
 			for (int i = 0; i < cs.length; i++) {
-				if (j == key.length || Character.isWhitespace(key[j])) {
+				if (j == key.length || isWhitespace(key[j])) {
 					// match!
 					emitToken(line, next, i, entryMatcher);
 					
-					while(Character.isWhitespace(cs[i]) || cs[i] == '"') {
+					while(isWhitespace(cs[i]) || cs[i] == '"') {
 						out.printf("%c", cs[i]);
 						i++;
 					}
@@ -140,17 +143,17 @@ public class Main {
 				}
 				
 				if (key[j] == '=') {
-					while(Character.isWhitespace(cs[i]))
+					while(isWhitespace(cs[i]))
 						i++;
 					
 					j++;
 				}
 				
-				if (Character.toLowerCase(cs[i]) == Character.toLowerCase(key[j]))
+				if (toLowerCase(cs[i]) == toLowerCase(key[j]))
 					j++;
-				else if (cs[i] == 'à' && key[j] == 'a' && innerMatcher != null)
+				else if (toLowerCase(cs[i]) == 'à' && toLowerCase(key[j]) == 'a' && innerMatcher != null)
 					j++;
-				else if (cs[i] == 'à' && key[j] == 'a' && key.length == j + 1) {
+				else if (toLowerCase(cs[i]) == 'à' && toLowerCase(key[j]) == 'a' && key.length == j + 1) {
 					// double-match
 					innerMatcher = entryMatcher;
 					
@@ -164,7 +167,7 @@ public class Main {
 					j = 0;
 					if (key[j] == '$')
 						j++;
-				} else if(cs[i] == 'n' && key[j] == 'e' && key[j+1] == 'm' && key.length == j+2) {
+				} else if(toLowerCase(cs[i]) == 'n' && toLowerCase(key[j]) == 'e' && toLowerCase(key[j+1]) == 'm' && key.length == j+2) {
 					// match!
 					i++;
 					emitToken(line, next, i, entryMatcher);
