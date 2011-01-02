@@ -1,0 +1,792 @@
+<DOC>
+<DOCNO.valor=FSP940101-122>
+<DOCID.valor=FSP940101-122>
+<DATE.valor=940101>
+<TEXT>
+<s>
+Corinne=Day	 [Corinne=Day] PROP M/F S @SUBJ>
+elege	 [eleger] V PR 3S IND VFIN <fmc> @FMV
+a	 [o] DET F S <artd> @>N
+imperfeição	 [imperfeição] N F S @<ACC
+e	 [e] <co-fmc> <co-vfin> KC @CO
+defende	 [defender] V PR 3S IND VFIN <fmc> @FMV
+o	 [o] DET M S <artd> @>N
+naturalismo	 [naturalismo] N M S @<ACC
+$¶	 [$¶] PU <<<
+</s>
+<s>
+EVA=JOORY	 [EVA=JOORY] PROP M/F S @NPHR
+$¶	 [$¶] PU <<<
+</s>
+<s>
+Da=Reportagem=Local	 [Da=Reportagem=Local] PROP F S @NPHR
+$¶	 [$¶] PU <<<
+</s>
+<s>
+A	 [o] DET F S <artd> @>N
+tendência	 [tendência] N F S @SUBJ>
+de	 [de] PRP <sam-> @N<
+o	 [o] DET M S <artd> <-sam> @>N
+realismo	 [realismo] N M S @P<
+e	 [e] KC @CO
+de	 [de] PRP <sam-> @N<
+o	 [o] DET M S <artd> <-sam> @>N
+naturalismo	 [naturalismo] N M S @P<
+em	 [em] PRP <sam-> @N<
+a	 [o] DET F S <artd> <-sam> @>N
+moda	 [moda] N F S @P<
+trouxe	 [trazer] V PS 3S IND VFIN <fmc> @FMV
+para	 [para] PRP @<ADVL
+as	 [o] DET F P <artd> @>N
+páginas	 [página] N F P @P<
+de	 [de] PRP <sam-> @N<
+as	 [o] DET F P <artd> <-sam> @>N
+revistas	 [revista] N F P @P<
+alguns	 [algum] DET M P <quant> @>N
+nomes	 [nome] N M P @<ACC
+novos	 [novo] ADJ M P @N<
+também	 [também] ADV @>P
+em	 [em] PRP <sam-> @<ADVL
+a	 [o] DET F S <artd> <-sam> @>N
+fotograa ALT xxxa	 [fotograa] N F S @P<
+$.	 [$.] PU <<<
+$¶	 [$¶] PU <<<
+</s>
+<s>
+O	 [o] DET M S <artd> @>N
+mais	 [mais] ADV <KOMP> <quant> @>A
+significativo	 [significativo] <n> ADJ M S @SUBJ>
+é	 [ser] V PR 3S IND VFIN <fmc> @FMV
+o	 [o] DET M S <dem> @<SC
+de	 [de] PRP @N<
+Corinne=Day	 [Corinne=Day] PROP M/F S @P<
+$,
+inglesa	 [inglês] N F S @N<PRED
+$,
+27	 [27] NUM M P <card> @>N
+anos	 [ano] N M P @<SC
+$.	 [$.] PU <<<
+$¶	 [$¶] PU <<<
+</s>
+<s>
+Foi	 [foi] ADV <foc> @FOC>
+a	 [o] DET F S <artd> @>N
+revista	 [revista] N F S @SUBJ>
+inglesa	 [inglês] ADJ F S @N<
+$'	 [$'] PU
+The=Face	 [The=Face] PROP F S <*2> @N<
+que	 [que] ADV <foc> @<FOC
+primeiro	 [primeiro] ADV @ADVL>
+publicou	 [publicar] V PS 3S IND VFIN <fmc> @FMV
+as	 [o] DET F P <artd> @>N
+fotos	 [foto] N F P @<ACC
+propositalmente	 [propositalmente] ADV @ADVL>
+desglamourizadas	 [desglamourizar] V PCP F P <DERP> @IMV @#ICL-N<
+de	 [de] PRP @N<
+Corinne=Day	 [Corinne=Day] PROP M/F S @P<
+$	 [$] PU
+as	 [o] DET F P <artd> @>N
+primeiras	 [primeiro] <n> ADJ F P <NUM-ord> @<ACC
+também	 [também] ADV @>P
+a	 [a] PRP @<ADVL
+mostrar	 [mostrar] V INF @IMV @#ICL-P<
+a	 [o] DET F S <artd> @>N
+modelo	 [modelo] N F S @<SUBJ
+Kate=Moss	 [Kate=Moss] PROP F S @N<
+$.	 [$.] PU <<<
+$¶	 [$¶] PU <<<
+</s>
+<s>
+Três	 [três] NUM M P <card> @>N
+anos	 [ano] N M P @>A
+depois	 [depois] ADV @ADVL>
+$,
+a	 [o] DET F S <artd> @>N
+estética	 [estética] N F S @SUBJ>
+despojada	 [despojar] V PCP F S @IMV @#ICL-N<
+de	 [de] PRP @<PIV
+Day	 [Day] PROP M/F S @P<
+chega	 [chegar] V PR 3S IND VFIN <fmc> @FMV
+a	 [a] PRP <sam-> @<ADVS
+as	 [o] DET F P <artd> <-sam> @>N
+principais	 [principal] ADJ F P <SUP> @>N
+revistas	 [revista] N F P @P<
+especializadas	 [especializado] ADJ F P @N<
+e	 [e] <co-fmc> <co-vfin> KC @CO
+influência	 [influência] N F S @<ACC
+toda=a	 [todo=o] DET F S <quant> @>N
+produção	 [produção] N F S @SUBJ>
+de	 [de] PRP @N<
+moda	 [moda] N F S @P<
+em	 [em] PRP <sam-> @N<
+o	 [o] DET M S <artd> <-sam> @>N
+mundo	 [mundo] N M S @P<
+$,
+formando	 [formar] V GER @#ICL-<ADVL @IMV
+uma	 [um] DET F S <arti> @>N
+nova	 [novo] ADJ F S @>N
+tendência	 [tendência] N F S @<ACC
+$(	 [$(] PU
+leia	 [ler] V PR 3S SUBJ VFIN <fmc> @FMV
+textos	 [texto] N M P @<ACC
+abaixo	 [abaixo] ADV @<ADVL
+$)	 [$)] PU
+$.	 [$.] PU <<<
+$¶	 [$¶] PU <<<
+</s>
+<s>
+Levam	 [levar] V PR 3P IND VFIN <fmc> @FMV
+sua	 [seu] DET F S <si> <poss 3S> @>N
+assinatura	 [assinatura] N F S @<ACC
+as	 [o] DET F P <artd> @>N
+fotos	 [foto] N F P @<SUBJ
+que	 [que] SPEC M/F S @ACC> <rel> @#FS-N<
+atualizaram	 [atualizar] V PS/MQP 3P IND VFIN @FMV
+a	 [o] DET F S <artd> @>N
+imagem	 [imagem] N F S @<SUBJ
+de	 [de] PRP @N<
+Linda=Evangelista	 [Linda=Evangelista] PROP F S @P<
+$,
+publicadas	 [publicar] V PCP F P @N<PRED
+em	 [em] PRP <sam-> @<ADVL
+a	 [o] DET F S <artd> <-sam> @>N
+Vogue	 [vogar] V PR 1/3S SUBJ VFIN <*2> <*1> @P<
+inglesa	 [inglês] N F S @<ACC
+$,
+e	 [e] KC @CO
+as	 [o] DET F P <artd> @>N
+famosas	 [famoso] ADJ F P @>N
+fotos	 [foto] N F P @PRED>
+de	 [de] PRP @N<
+Kate=Moss	 [Kate=Moss] PROP M/F S @P<
+de	 [de] PRP @N<
+calcinha	 [calcinha] N F S @P<
+$,
+em	 [em] PRP <sam-> @<ADVL
+a	 [o] DET F S <artd> <-sam> @>N
+mesma	 [mesmo] DET F S <KOMP> <diff> @>N
+revista	 [revista] N F S @P<
+$.	 [$.] PU <<<
+$¶	 [$¶] PU <<<
+</s>
+<s>
+O	 [o] DET M S <artd> @>N
+trabalho	 [trabalho] N M S @SUBJ>
+causou	 [causar] V PS 3S IND VFIN <fmc> @FMV
+protestos	 [protesto] N M P @<ACC
+por=parte=de	 [por=parte=de] PRP <sam-> @<ADVL
+os	 [o] DET M P <-sam> <artd> @>N
+leitores	 [leitor] N M P @P<
+e	 [e] <co-vfin> KC @CO
+de	 [de] PRP <sam-> @<ADVL
+a	 [o] DET F S <artd> <-sam> @>N
+imprensa	 [imprensa] N F S @P<
+sensacionalista	 [sensacionalista] ADJ F S @N<
+britânica	 [britânico] ADJ F S @N<
+$,
+que	 [que] SPEC M/F S @SUBJ> <rel> @#FS-N<
+chegou	 [chegar] V PS 3S IND VFIN @FAUX
+a	 [a] PRP @PRT-AUX<
+acusar	 [acusar] V INF @IMV @#ICL-AUX<
+Day	 [Day] PROP M/F S @<ACC
+de	 [de] PRP @<PIV
+incentivar	 [incentivar] V INF @IMV @#ICL-P<
+a	 [o] DET F S <artd> @>N
+pedofilia	 [pedofilia] N F S @<ACC
+com	 [com] PRP @<ADVL
+esss ALT xxx	 [esss] N M S @P<
+fotos	 [foto] N F P @PRED>
+$.	 [$.] PU <<<
+$¶	 [$¶] PU <<<
+</s>
+<s>
+A	 [o] DET F S <artd> @>N
+explosão	 [explosão] N F S @SUBJ>
+de	 [de] PRP <sam-> @N<
+as	 [o] DET F P <artd> <-sam> @>N
+imagens	 [imagem] N F P @P<
+realistas	 [realista] ADJ F P @N<
+aconteceu	 [acontecer] V PS 3S IND VFIN <fmc> @FMV
+depois	 [depois] PRP @<ADVL
+que	 [que] KS @SUB @#FS-P<
+a	 [o] DET F S <artd> @>N
+fotografia	 [fotografia] N F S @SUBJ>
+de	 [de] PRP @N<
+moda	 [moda] N F S @P<
+levou	 [levar] V PS 3S IND VFIN @FMV
+para	 [para] PRP @<ADVL
+o	 [o] DET M S <artd> @>N
+topo	 [topo] N M S @P<
+de	 [de] PRP <sam-> @N<
+a	 [o] DET F S <artd> <-sam> @>N
+fama	 [fama] N F S @P<
+os	 [o] DET M P <artd> @>N
+$'	 [$'] PU
+darlings	 [darling] N M P @<ACC
+$'	 [$'] PU
+de	 [de] PRP <sam-> @<ADVL
+o	 [o] DET M S <artd> <-sam> @>N
+meio	 [meio] N M S @P<
+$.	 [$.] PU <<<
+$¶	 [$¶] PU <<<
+</s>
+<s>
+Steven=Meisel	 [Steven=Meisel] PROP M/F S @VOK @SUBJ>
+$,
+Herb=Ritts	 [Herb=Ritts] PROP M/F S @SUBJ>
+$,
+Bruce=Weber	 [Bruce=Weber] PROP M/F S @SUBJ>
+$,
+Patrick=Demarchelier	 [Patrick=Demarchelier] PROP M/F S @SUBJ>
+e	 [e] KC @CO
+Peter=Lindbergh	 [Peter=Lindbergh] PROP M/F S @SUBJ>
+só	 [só] ADV @>P
+para	 [para] PRP @ADVL>
+citar	 [citar] V INF @IMV @#ICL-P<
+alguns-	 [algum] DET M P <quant> <hyfen> @<ACC
+$,
+ganharam	 [ganhar] V PS/MQP 3P IND VFIN <fmc> @FMV
+$,
+em	 [em] PRP <sam-> @<ADVL
+o	 [o] DET M S <artd> <-sam> @>N
+final	 [final] N M S @P<
+de	 [de] PRP <sam-> @N<
+os	 [o] DET M P <artd> <-sam> @>N
+anos	 [ano] N M P @P<
+80	 [80] NUM M/F P <card> @N<
+e	 [e] KC @CO
+começo	 [começo] N M S @<ACC
+de	 [de] PRP <sam-> @N<
+os	 [o] DET M P <artd> <-sam> @>N
+90	 [90] NUM M P <card> @P<
+$,
+o	 [o] DET M S <artd> @>N
+rótulo	 [rótulo] N M S @APP
+de	 [de] PRP @N<
+celebridade	 [celebridade] N F S @P<
+$.	 [$.] PU <<<
+$¶	 [$¶] PU <<<
+</s>
+<s>
+A	 [o] DET F S <artd> @>N
+simples	 [simples] ADJ F S @>N
+menção	 [menção] N F S @SUBJ>
+de	 [de] PRP <sam-> @N<
+os	 [o] DET M P <artd> <-sam> @>N
+seus	 [seu] DET M P <poss 3S> @>N
+nomes	 [nome] N M P @P<
+causava	 [causar] V IMPF 3S IND VFIN <fmc> @FMV
+$'	 [$'] PU
+frisson	 [frisson] N M S @<ACC
+$'	 [$'] PU
+$.	 [$.] PU <<<
+$¶	 [$¶] PU <<<
+</s>
+<s>
+Ficaram	 [ficar] V PS/MQP 3P IND VFIN <fmc> @FMV
+ricos	 [rico] ADJ M P @<SC
+e	 [e] KC @CO
+famosos	 [famoso] ADJ M P @<SC
+$.	 [$.] PU <<<
+$¶	 [$¶] PU <<<
+</s>
+<s>
+Agora	 [agora] ADV <kc> @ADVL>
+é	 [ser] V PR 3S IND VFIN <fmc> @FMV
+a	 [o] DET F S <artd> @>N
+vez	 [vez] N F S @<SC
+de	 [de] PRP <sam-> @N<
+a	 [o] DET F S <artd> <-sam> @>N
+nova	 [novo] ADJ F S @>N
+geração	 [geração] N F S @SUBJ>
+se	 [se] PERS M/F 3S ACC <refl> @ACC>
+tornar	 [tornar] V INF 3S @IMV @#ICL-<SUBJ
+o	 [o] DET M S <artd> @>N
+centro	 [centro] N M S @<ACC
+de	 [de] PRP <sam-> @N<
+as	 [o] DET F P <artd> <-sam> @>N
+atenções	 [atenção] N F P @P<
+$.	 [$.] PU <<<
+$¶	 [$¶] PU <<<
+</s>
+<s>
+Com	 [com] PRP @ADVL
+uma	 [um] DET F S <arti> @>N
+diferença	 [diferença] N F S @P<
+$:	 [$:] PU <<<
+a	 [o] DET F S <artd> @>N
+aversão	 [aversão] N F S @NPHR
+para=com	 [para=com] PRP @N<
+o	 [o] DET M S <artd> @>N
+súbito	 [súbito] ADJ M S @>N
+estrelato	 [estrelato] N M S @P<
+a	 [a] PRP @PIV>
+que	 [que] KS @SUB @#FS-<ACC
+também	 [também] ADV @ADVL>
+foram	 [ser] V PS/MQP 3P IND VFIN @FAUX
+submetidos	 [submeter] V PCP M P @IMV @#ICL-AUX<
+$.	 [$.] PU <<<
+$¶	 [$¶] PU <<<
+</s>
+<s>
+Em	 [em] PRP @ADVL>
+entrevista	 [entrevista] N F S @P<
+exclusiva	 [exclusivo] ADJ F S @N<
+a	 [a] PRP <sam-> @N<
+a	 [o] DET F S <artd> <-sam> @>N
+Folha	 [Folha] PROP F S @P<
+$,
+Corinne=Day	 [Corinne=Day] PROP M/F S @SUBJ>
+mostra	 [mostrar] V PR 3S IND VFIN <fmc> @FMV
+que	 [que] KS @SUB @#FS-<ACC
+não	 [não] ADV @ADVL>
+foge	 [fugir] V PR 3S IND VFIN @FMV
+a	 [a] PRP <sam-> @<ADVL
+a	 [o] DET F S <artd> <-sam> @>N
+regra	 [regra] N F S @P<
+$:	 [$:] PU <<<
+fala	 [falar] V PR 3S IND VFIN <fmc> @FMV
+pouco	 [pouco] ADV <quant> @<ADVL
+e	 [e] <co-fmc> <co-vfin> KC @CO
+demonstra	 [demonstrar] V PR 3S IND VFIN <fmc> @FMV
+modéstia	 [modéstia] N F S @<ACC
+a	 [a] PRP <sam-> @<ADVL
+o	 [o] DET M S <artd> <-sam> @>N
+falar	 [falar] N M S @P<
+sobre	 [sobre] PRP @<ADVL
+seu	 [seu] DET M S <si> <poss 3S> @>N
+trabalho	 [trabalho] N M S @P<
+$.	 [$.] PU <<<
+$¶	 [$¶] PU <<<
+</s>
+<s>
+$*	 [$*] PU
+$.	 [$.] PU <<<
+$¶	 [$¶] PU <<<
+</s>
+<s>
+Folha	 [Folha] PROP F S @SUBJ>
+$-	 [$-] PU
+O	 [o] N M/F S @S<
+que	 [que] SPEC M/F S @ACC> <interr> @SUBJ>
+mudou	 [mudar] V PS 3S IND VFIN <fmc> @FMV
+em	 [em] PRP <sam-> @<PIV
+a	 [o] DET F S <artd> <-sam> @>N
+fotografia	 [fotografia] N F S @P<
+desde	 [desde] PRP @<ADVL
+os	 [o] DET M P <artd> @>N
+anos	 [ano] N M P @P<
+50	 [50] NUM M/F P <card> @N<
+$?	 [$?] PU <<<
+$¶	 [$¶] PU <<<
+</s>
+<s>
+Corinne=Day	 [Corinne=Day] PROP M/F S @SUBJ>
+$-	 [$-] PU
+Os	 [os] N M/F S @SUBJ>
+padrões	 [padrão] N M P @PRED>
+morais	 [moral] ADJ M P @N<
+mudaram	 [mudar] V PS/MQP 3P IND VFIN <fmc> @FMV
+$,
+cedendo	 [ceder] V GER @#ICL-<ADVL @IMV
+lugar	 [lugar] N M S @<ACC
+a	 [a] PRP @<ADVL
+uma	 [um] DET F S <arti> @>N
+expressão	 [expressão] N F S @P<
+pessoal	 [pessoal] ADJ F S @N<
+criativa	 [criativo] ADJ F S @<SUBJ
+$.	 [$.] PU <<<
+$¶	 [$¶] PU <<<
+</s>
+<s>
+Folha	 [Folha] PROP F S @SUBJ>
+$-	 [$-] PU
+Você ALT xxx	 [você] N M S @SUBJ>
+disse	 [dizer] V PS 3S IND VFIN <fmc> @FMV
+uma=vez=que	 [uma=vez=que] KS @SUB @#FS-<ADVL
+as	 [o] DET F P <artd> @>N
+mulheres	 [mulher] N F P @SUBJ>
+se	 [se] PERS M/F 3S ACC <refl> @ACC>
+esqueceram	 [esquecer] V PS/MQP 3P IND VFIN @FMV
+de	 [de] PRP @<PIV
+como	 [como] ADV @ADVL> <interr> @#FS-P<
+é	 [ser] V PR 3S IND VFIN @FMV
+ser	 [ser] V INF @IMV @#ICL-<SC
+jovem	 [jovem] ADJ M/F S @<SC
+$.	 [$.] PU <<<
+$¶	 [$¶] PU <<<
+</s>
+<s>
+Você	 [você] PERS M/F 3S NOM @SUBJ>
+acha	 [achar] V PR 3S IND VFIN <fmc> @FMV
+que	 [que] KS @SUB @#FS-<ACC
+a	 [o] DET F S <artd> @>N
+fotografia	 [fotografia] N F S @SUBJ>
+de	 [de] PRP @N<
+moda	 [moda] N F S @P<
+estava	 [estar] V IMPF 3S IND VFIN @FAUX
+ficando	 [ficar] V GER @#ICL-AUX< @IMV
+velha	 [velho] ADJ F S @<SC
+$?	 [$?] PU <<<
+$¶	 [$¶] PU <<<
+</s>
+<s>
+Corinne	 [Corinne] PROP M/F S @SUBJ>
+$-	 [$-] PU
+No	 [no] N M/F S @N<PRED
+fim	 [fim] N M S @N<PRED
+de	 [de] PRP <sam-> @N<
+os	 [o] DET M P <artd> <-sam> @>N
+anos	 [ano] N M P @P<
+80	 [80] NUM M/F P <card> @N<
+e	 [e] KC @CO
+começo	 [começar] V PR 1S IND VFIN <fmc> @FMV
+de	 [de] PRP <sam-> @<ADVL
+os	 [o] DET M P <artd> <-sam> @>N
+90	 [90] NUM M P <card> @P<
+$,
+achei	 [achar] V PS 1S IND VFIN <fmc> @FMV
+que	 [que] KS @SUB @#FS-<ACC
+a	 [o] DET F S <artd> @>N
+fotografia	 [fotografia] N F S @SUBJ>
+de	 [de] PRP @N<
+moda	 [moda] N F S @P<
+estava	 [estar] V IMPF 3S IND VFIN @FAUX
+ficando	 [ficar] V GER @#ICL-AUX< @IMV
+viciada	 [viciar] V PCP F S @<SC
+$.	 [$.] PU <<<
+$¶	 [$¶] PU <<<
+</s>
+<s>
+Me	 [eu] PERS M/F 1S ACC <refl> @ACC>
+direcionei	 [direcionar] V PS 1S IND VFIN <fmc> @FMV
+então	 [então] ADV <kc> @<ADVL
+para	 [para] PRP @<ADVL
+a	 [o] DET F S <artd> @>N
+juventude	 [juventude] N F S @P<
+e	 [e] KC @CO
+para	 [para] PRP @<ADVL
+as	 [o] DET F P <artd> @>N
+ingênuas	 [ingênuo] ADJ F P @>N
+imperfeições	 [imperfeição] N F P @P<
+de	 [de] PRP <sam-> @N<
+o	 [o] DET M S <artd> <-sam> @>N
+adolescente	 [adolescente] N M S @P<
+experimental	 [experimental] ADJ M S @N<
+$.	 [$.] PU <<<
+$¶	 [$¶] PU <<<
+</s>
+<s>
+Folha	 [Folha] PROP F S @P<
+$-	 [$-] PU
+Você ALT xxx	 [você] N M S @SUBJ>
+acredita	 [acreditar] V PR 3S IND VFIN <fmc> @FMV
+que	 [que] KS @SUB @#FS-<ACC
+suas	 [seu] DET F P <poss 3S> @>N
+fotos	 [foto] N F P @SUBJ>
+deram	 [dar] V PS/MQP 3P IND VFIN @FMV
+uma	 [um] DET F S <arti> @>N
+sacudida	 [sacudir] <n> V PCP F S @<ACC
+em	 [em] PRP <sam-> @<ADVL
+as	 [o] DET F P <artd> <-sam> @>N
+velhas	 [velho] ADJ F P @>N
+fórmulas	 [fórmula] N F P @P<
+$?	 [$?] PU <<<
+$¶	 [$¶] PU <<<
+</s>
+<s>
+Sua	 [seu] DET F S <poss 3S> @>N
+atitude	 [atitude] N F S @SUBJ>
+foi	 [ser] V PS 3S IND VFIN <fmc> @FMV
+intencional	 [intencional] ADJ F S @<SC
+$?	 [$?] PU <<<
+$¶	 [$¶] PU <<<
+</s>
+<s>
+Corinne	 [Corinne] PROP M/F S @SUBJ>
+$-	 [$-] PU
+Não ALT xxx	 [não] N M S @PRED>
+sei	 [saber] V PR 1S IND VFIN <fmc> @FMV
+$.	 [$.] PU <<<
+$¶	 [$¶] PU <<<
+</s>
+<s>
+Eu	 [eu] PERS M/F 1S NOM @SUBJ>
+não	 [não] ADV @ADVL>
+senti	 [sentir] V PS 1S IND VFIN <fmc> @FMV
+necessidade	 [necessidade] N F S @<ACC
+de	 [de] PRP @N<
+mudar	 [mudar] V INF @IMV @#ICL-P<
+nada	 [nada] SPEC M S <quant> @<ACC
+$.	 [$.] PU <<<
+$¶	 [$¶] PU <<<
+</s>
+<s>
+Gosto	 [gostar] V PR 1S IND VFIN <fmc> @FMV
+de	 [de] PRP @<PIV
+fotografar	 [fotografar] V INF @IMV @#ICL-P<
+gente	 [gente] N F S @<ACC
+que	 [que] SPEC M/F S @ACC> <rel> @#FS-N<
+conheço	 [conhecer] V PR 1S IND VFIN @FMV
+e	 [e] KC @CO
+amigos	 [amigo] N M P @PRED>
+em=geral	 [em=geral] ADV @<ADVL
+$.	 [$.] PU <<<
+$¶	 [$¶] PU <<<
+</s>
+<s>
+Folha	 [Folha] PROP F S @SUBJ>
+$-	 [$-] PU
+O	 [o] N M/F S @S<
+que	 [que] SPEC M/F S <interr> @ACC>
+achou	 [achar] V PS 3S IND VFIN <fmc> @FMV
+de	 [de] PRP <sam-> @<ADVL
+o	 [o] DET M S <artd> <-sam> @>N
+escândalo	 [escândalo] N M S @P<
+provocado	 [provocar] V PCP M S @N<
+por=causa=de	 [por=causa=de] PRP @N<
+suas	 [seu] DET F P <poss 3S> @>N
+fotos	 [foto] N F P @P<
+de	 [de] PRP @N<
+Kate=Moss	 [Kate=Moss] PROP M/F S @P<
+de	 [de] PRP @N<
+calcinha	 [calcinha] N F S @P<
+$?	 [$?] PU <<<
+$¶	 [$¶] PU <<<
+</s>
+<s>
+Corinne	 [Corinne] PROP F S @SUBJ>
+$-	 [$-] PU
+Estas ALT xxxas	 [Esto] ADJ F P @>N
+fotos	 [foto] N F P @SUBJ>
+$,
+intituladas	 [intitular] V PCP F P @N<PRED
+Under=Exposed	 [Under=Exposed] PROP M/F S <*2> <*1> @APP
+em	 [em] PRP <sam-> @ADVL>
+a	 [o] DET F S <artd> <-sam> @>N
+Vogue	 [vogar] V PR 3S SUBJ VFIN <*2> <*1> @P<
+inglesa	 [inglês] N F S @N<PRED
+$,
+eram	 [ser] V IMPF 3P IND VFIN <fmc> @FMV
+fotos	 [foto] N F P @<SC
+honestas	 [honesto] ADJ F P @N<PRED
+de	 [de] PRP @<ADVL
+Kate=Moss	 [Kate=Moss] PROP M/F S @P<
+$,
+em	 [em] PRP <sam-> @<ADVL
+o	 [o] DET M S <artd> <-sam> @>N
+seu	 [seu] DET M S <si> <poss 3S> @>N
+apartamento	 [apartamento] N M S @P<
+em	 [em] PRP @N<
+Londres	 [Londres] PROP F S @P<
+$.	 [$.] PU <<<
+$¶	 [$¶] PU <<<
+</s>
+<s>
+É	 [ser] V PR 3S IND VFIN <fmc> @FMV
+preocupante	 [preocupante] ADJ M S @<SC
+ver	 [ver] V INF @IMV @#ICL-<SUBJ
+os	 [o] DET M P <artd> @>N
+jornais	 [jornal] N M P @SUBJ>
+publicando	 [publicar] V GER @IMV @#ICL-<ACC
+qualquer	 [qualquer] DET F S <quant> @>N
+coisa	 [coisa] N F S @<ACC
+para	 [para] PRP @<ADVL
+preencher	 [preencher] V INF @IMV @#ICL-P<
+espaço	 [espaço] N M S @<ACC
+$.	 [$.] PU <<<
+$¶	 [$¶] PU <<<
+</s>
+<s>
+Folha	 [Folha] PROP F S @NPHR
+$-	 [$-] PU
+Acha ALT xxxa	 [acha] N F S @S<
+que	 [que] SPEC M/F S <interr> @SUBJ>
+o	 [o] DET M S <artd> @>N
+mercado	 [mercado] N M S @SUBJ>
+de	 [de] PRP @N<
+fotografia	 [fotografia] N F S @P<
+de	 [de] PRP @N<
+moda	 [moda] N F S @P<
+ainda	 [ainda] ADV @ADVL>
+é	 [ser] V PR 3S IND VFIN <fmc> @FAUX
+dominado	 [dominar] V PCP M S @IMV @#ICL-AUX<
+por	 [por] PRP <sam-> @<PASS
+os	 [o] DET M P <artd> <-sam> @>N
+homens	 [homem] N M P @P<
+$?	 [$?] PU <<<
+$¶	 [$¶] PU <<<
+</s>
+<s>
+Corinne	 [Corinne] PROP M/F S @SUBJ>
+$-	 [$-] PU
+Não ALT xxx	 [não] N M S @PRED>
+sei	 [saber] V PR 1S IND VFIN <fmc> @FMV
+$,
+nunca	 [nunca] ADV @ADVL>
+pensei	 [pensar] V PS 1S IND VFIN <fmc> @FMV
+sobre	 [sobre] PRP @<PIV @<ADVL
+isso	 [isso] SPEC M S <dem> @P<
+$.	 [$.] PU <<<
+$¶	 [$¶] PU <<<
+</s>
+<s>
+Folha	 [Folha] PROP F S @SUBJ>
+$-	 [$-] PU
+Como ALT xxxo	 [como] N M S @SUBJ>
+foi	 [ser] V PS 3S IND VFIN <fmc> @FMV
+o	 [o] DET M S <artd> @>N
+início	 [início] N M S @<SC
+de	 [de] PRP @N<
+sua	 [seu] DET F S <poss 3S> @>N
+carreira	 [carreira] N F S @P<
+$?	 [$?] PU <<<
+$¶	 [$¶] PU <<<
+</s>
+<s>
+Corinne	 [Corinne] PROP M/F S @SUBJ>
+$-	 [$-] PU
+Minhas ALT xxxas	 [minha] N F P @SUBJ>
+primeiras	 [primeiro] ADJ F P <NUM-ord> @>N
+fotos	 [foto] N F P @SUBJ>
+eram	 [ser] V IMPF 3P IND VFIN <fmc> @FMV
+de	 [de] PRP @<SC
+amigos	 [amigo] N M P @P<
+e	 [e] KC @CO
+de	 [de] PRP @<SC
+gente	 [gente] N F S @P<
+conhecida	 [conhecido] ADJ F S @N<
+$.	 [$.] PU <<<
+$¶	 [$¶] PU <<<
+</s>
+<s>
+Em	 [em] PRP @ADVL>
+1990	 [1990] NUM M/F S <card> @P<
+$,
+comecei	 [começar] V PS 1S IND VFIN <fmc> @FAUX
+a	 [a] PRP @PRT-AUX<
+trabalhar	 [trabalhar] V INF @IMV @#ICL-AUX<
+para	 [para] PRP @<ADVL
+a	 [o] DET F S <artd> @>N
+The=Face	 [The=Face] PROP F S <*2> <*1> @P<
+$.	 [$.] PU <<<
+$¶	 [$¶] PU <<<
+</s>
+<s>
+Folha	 [Folha] PROP F S @NPHR
+$-	 [$-] PU
+Qual ALT xxx	 [qual] N M S @S<
+os	 [o] DET M P <artd> @>N
+seus	 [seu] DET M P <poss 3S> @>N
+temas	 [tema] N M P @NPHR
+favoritos	 [favorito] ADJ M P @N<
+$?	 [$?] PU <<<
+$¶	 [$¶] PU <<<
+</s>
+<s>
+Corinne	 [Corinne] PROP M/F S @SUBJ>
+$-	 [$-] PU
+Eu	 [eu] N M/F S @PRED>
+gosto	 [gostar] V PR 1S IND VFIN <fmc> @FMV
+de	 [de] PRP @<PIV
+retratar	 [retratar] V INF @IMV @#ICL-P<
+meus	 [meu] DET M P <poss 1S> @>N
+amigos	 [amigo] N M P @<ACC
+e	 [e] <co-vfin> KC @CO
+pessoas	 [pessoa] N F P @<ACC
+que	 [que] KS @SUB @#FS-<ACC
+gosto	 [gostar] V PR 1S IND VFIN @FMV
+$.	 [$.] PU <<<
+$¶	 [$¶] PU <<<
+</s>
+<s>
+Folha	 [Folha] PROP F S @SUBJ>
+$-	 [$-] PU
+Você ALT xxx	 [você] N M S @SUBJ>
+se	 [se] PERS M/F 3S ACC @ACC>-PASS
+identifica	 [identificar] V PR 3S IND VFIN <fmc> @FMV
+com	 [com] PRP @<PIV
+a	 [o] DET F S <artd> @>N
+estética	 [estética] N F S @P<
+de	 [de] PRP @N<
+alguma	 [algum] DET F S <quant> @>N
+revista	 [revista] N F S @P<
+em	 [em] PRP @<ADVL
+especial	 [especial] ADJ M/F S @P<
+$?	 [$?] PU <<<
+$¶	 [$¶] PU <<<
+</s>
+<s>
+Corinne	 [Corinne] PROP M/F S @SUBJ>
+$-	 [$-] PU
+Não ALT xxx	 [não] N M S @PRED>
+me	 [eu] PERS M/F 1S ACC <refl> @ACC>
+importo	 [importar] V PR 1S IND VFIN <fmc> @FMV
+para	 [para] PRP @<ADVO
+qual	 [qual] DET F S <rel> @>N
+revista	 [revista] N F S @P<
+trabalho	 [trabalhar] V PR 1S IND VFIN <fmc> @FMV
+$,
+se	 [se] KS @#FS-<ADVL @SUB
+o	 [o] DET M S <artd> @>N
+diretor	 [diretor] N M S @SUBJ>
+de	 [de] PRP @N<
+arte	 [arte] N F S @P<
+e	 [e] <co-vfin> KC @CO
+o	 [o] DET M S <artd> @>N
+editor	 [editor] N M S @SUBJ>
+gostam	 [gostar] V PR 3P IND VFIN @FMV
+de	 [de] PRP <sam-> @<PIV
+o	 [o] DET M S <artd> <-sam> @>N
+meu	 [meu] DET M S <poss 1S> @>N
+trabalho	 [trabalho] N M S @P<
+$.	 [$.] PU <<<
+$¶	 [$¶] PU <<<
+</s>
+<s>
+Folha	 [Folha] PROP F S @SUBJ>
+$-	 [$-] PU
+Suas ALT xxxs	 [Sua] N M P @SUBJ>
+fotos	 [foto] N F P @PRED>
+são	 [ser] V PR 3P IND VFIN <fmc> @FAUX
+consideradas	 [considerar] V PCP F P @IMV @#ICL-AUX<
+realistas	 [realista] ADJ M/F P @<SC
+$.	 [$.] PU <<<
+$¶	 [$¶] PU <<<
+</s>
+<s>
+Ao=contrário=de	 [ao=contrário=de] PRP <sam-> @ADVL>
+a	 [o] DET F S <-sam> <artd> @>N
+maioria	 [maioria] N F S @P<
+$,
+não	 [não] ADV @ADVL>
+são	 [ser] V PR 3P IND VFIN <fmc> @FAUX
+glamourizadas	 [glamourizar] V PCP F P @IMV @#ICL-AUX<
+$.	 [$.] PU <<<
+$¶	 [$¶] PU <<<
+</s>
+<s>
+Por=quê	 [por=quê] ADV <interr> @ADVL>
+$?	 [$?] PU <<<
+$¶	 [$¶] PU <<<
+</s>
+<s>
+Corinne	 [Corinne] PROP M/F S @NPHR
+$-	 [$-] PU
+Gosto ALT xxxo	 [gosto] N M S @S<
+de	 [de] PRP @N<
+fotografar	 [fotografar] V INF @IMV @#ICL-P<
+adolescentes	 [adolescente] N M/F P @<ACC
+de	 [de] PRP <sam-> @N<
+o	 [o] DET M S <artd> <-sam> @>N
+jeito	 [jeito] N M S @P<
+que	 [que] SPEC M/F S @SC> <rel> @#FS-N<
+são	 [ser] V PR 3P IND VFIN @FMV
+$,
+naturalmente	 [naturalmente] ADV @<ADVL
+$.	 [$.] PU <<<
+$¶	 [$¶] PU <<<
+</s>
+</TEXT>
+$¶	 [$¶] PU <<<
+</DOC>

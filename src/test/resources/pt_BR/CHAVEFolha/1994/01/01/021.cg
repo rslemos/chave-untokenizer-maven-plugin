@@ -1,0 +1,316 @@
+<DOC>
+<DOCNO.valor=FSP940101-021>
+<DOCID.valor=FSP940101-021>
+<DATE.valor=940101>
+<TEXT>
+<s>
+Da=Sucursal=de=Brasília	 [Da=Sucursal=de=Brasília] PROP F S @NPHR
+$¶	 [$¶] PU <<<
+</s>
+<s>
+A	 [o] DET F S <artd> @>N
+tributação	 [tributação] N F S @SUBJ>
+sobre	 [sobre] PRP @N<
+operações	 [operação] N F P @P<
+sem	 [sem] PRP @N<
+rendimento	 [rendimento] N M S @P<
+real	 [real] ADJ M S @N<
+$,
+prevista	 [prever] V PCP F S @IMV @#ICL-N<PRED
+por	 [por] PRP <sam-> @<PASS
+a	 [o] DET F S <artd> <-sam> @>N
+medida	 [medida] N F S @P<
+provisória	 [provisório] ADJ F S @N<
+assinada	 [assinar] V PCP F S @IMV @#ICL-N<
+por	 [por] PRP <sam-> @<PASS
+o	 [o] DET M S <artd> <-sam> @>N
+presidente	 [presidente] N M S @P<
+Itamar=Franco	 [Itamar=Franco] PROP M S @N<
+em	 [em] PRP <sam-> @<ADVL
+a	 [o] DET F S <artd> <-sam> @>N
+última	 [último] ADJ F S <NUM-ord> @>N
+quarta-feira	 [quarta-feira] N F S @P<
+$,
+tem	 [ter] V PR 3S IND VFIN <fmc> @FMV
+como	 [como] ADV @#AS-<OC <rel> @PRD
+principal	 [principal] ADJ M S <SUP> @>N
+objetivo	 [objetivo] N M S @AS<
+coibir	 [coibir] V INF @IMV @#ICL-<ACC
+artifícios	 [artifício] N M P @<ACC
+de	 [de] PRP <sam-> @N<
+as	 [o] DET F P <artd> <-sam> @>N
+grandes	 [grande] ADJ F P @>N
+empresas	 [empresa] N F P @P<
+para	 [para] PRP @<ADVL
+diminuir	 [diminuir] V INF @IMV @#ICL-P<
+a	 [o] DET F S <artd> @>N
+base	 [base] N F S @<ACC
+de	 [de] PRP @<PIV
+cálculo	 [cálculo] N M S @P<
+de	 [de] PRP <sam-> @N<
+o	 [o] DET M S <artd> <-sam> @>N
+recolhimento	 [recolhimento] N M S @P<
+de	 [de] PRP <sam-> @N<
+o	 [o] DET M S <artd> <-sam> @>N
+imposto=de=renda	 [imposto=de=renda] N M S @P<
+$.	 [$.] PU <<<
+$¶	 [$¶] PU <<<
+</s>
+<s>
+Segundo	 [segundo] ADV @COM <prp> <rel> @#AS-ADVL>
+o	 [o] DET M S <artd> @>N
+coordenador	 [coordenador] N M S @AS<
+de	 [de] PRP @N<
+Arrecadação=da=Receita=Federal	 [Arrecadação=da=Receita=Federal] PROP F S @P<
+$,
+José=Alves=da=Fonseca	 [José=Alves=da=Fonseca] PROP M S @APP
+$,
+muitas	 [muito] DET F P <quant> @>N
+empresas	 [empresa] N F P @SUBJ>
+estavam	 [estar] V IMPF 3P IND VFIN <fmc> @FAUX
+simulando	 [simular] V GER @#ICL-AUX< @IMV
+prejuízos	 [prejuízo] N M P @<ACC
+para	 [para] PRP @<ADVL
+diminuir	 [diminuir] V INF @IMV @#ICL-P<
+a	 [o] DET F S <artd> @>N
+taxação	 [taxação] N F S @<ACC
+sobre	 [sobre] PRP @<PIV @N< @<ADVL
+o	 [o] DET M S <artd> @>N
+resultado	 [resultado] N M S @P<
+financeiro	 [financeiro] ADJ M S @N<
+$.	 [$.] PU <<<
+$¶	 [$¶] PU <<<
+</s>
+<s>
+Com	 [com] PRP @ADVL> @PRED>
+o	 [o] DET M S <artd> @>N
+apoio	 [apoio] N M S @P<
+de	 [de] PRP @N<
+gerentes	 [gerente] N M/F P @P<
+de	 [de] PRP @N<
+bancos	 [banco] N M P @P<
+$,
+as	 [o] DET F P <artd> @>N
+empresas	 [empresa] N F P @SUBJ>
+acertam	 [acertar] V PR 3P IND VFIN <fmc> @FMV
+um	 [um] DET M S <arti> @>N
+rendimento	 [rendimento] N M S @<ACC
+de	 [de] PRP <sam-> @N<
+os	 [o] DET M P <artd> <-sam> @>N
+CDBs	 [CDBs] PROP M S @P<
+abaixo=de	 [abaixo=de] PRP <sam-> @<ADVL
+a	 [o] DET F S <-sam> <artd> @>N
+inflação	 [inflação] N F S @P<
+e	 [e] <co-fmc> <co-vfin> KC @CO
+$,
+por	 [por] PRP @ADVL>
+isso	 [isso] SPEC M S <dem> @P<
+mesmo	 [mesmo] DET M S <ident> @N<
+$,
+simulam	 [simular] V PR 3P IND VFIN <fmc> @FMV
+prejuízos	 [prejuízo] N M P @<ACC
+em	 [em] PRP <sam-> @<ADVL
+o	 [o] DET M S <artd> <-sam> @>N
+resultado	 [resultado] N M S @P<
+financeiro	 [financeiro] ADJ M S @N<
+$.	 [$.] PU <<<
+$¶	 [$¶] PU <<<
+</s>
+<s>
+A	 [a] PRP @ADVL> @ADVL
+partir	 [partir] V INF @IMV @#ICL-P<
+de	 [de] PRP <sam-> @<ADVL
+este	 [este] DET M S <dem> <-sam> @>N
+mês	 [mês] N M S @P<
+$,
+as	 [o] DET F P <artd> @>N
+aplicacões ALT xxxcões	 [aplicacão] <n> <n> ADJ M P <DERS> @SUBJ>
+financeiras	 [financeiro] ADJ F P @N<
+com	 [com] PRP @N<
+correção	 [correção] N F S @P<
+monetária	 [monetário] ADJ F S @N<
+e	 [e] <co-inf> KC @CO
+sem	 [sem] PRP @ADVL>
+receber	 [receber] V INF @IMV @#ICL-P<
+rendimento	 [rendimento] N M S @<ACC
+real	 [real] ADJ M S @N<
+$(	 [$(] PU
+acima=de	 [acima=de] PRP <sam-> @<ADVL
+a	 [o] DET F S <-sam> <artd> @>N
+inflação	 [inflação] N F S @P<
+$)	 [$)] PU
+$,
+como	 [como] ADV @#FS-<ADVL <ks> <rel> @ADVL>
+os	 [o] DET M P <artd> @>N
+CDBs	 [CDBs] PROP M S @SUBJ>
+carecas	 [careca] N M/F P <*2> <*1> @N<
+e	 [e] KC @CO
+os	 [o] DET M P <artd> @>N
+fundos	 [fundo] N M P @SUBJ>
+de	 [de] PRP @N<
+carteira	 [carteira] N F S @P<
+livre	 [livrar] V PR 3S SUBJ VFIN @FMV
+$,
+serão	 [ser] V FUT 3P IND VFIN <fmc> @FAUX
+tributadas	 [tributar] V PCP F P @IMV @#ICL-AUX<
+com	 [com] PRP @<ADVL
+alíquota	 [alíquota] N F S @P<
+de	 [de] PRP @N<
+até	 [até] PRP @N<
+1,5	 [1,5] NUM M/F P <card> @>N
+$%	 [%] N M P @P<	 [$%] PU
+a	 [a] PRP <sam-> @<ADVL
+o	 [o] DET M S <artd> <-sam> @>N
+dia	 [dia] N M S @P<
+de	 [de] PRP @N<
+IOF	 [IOF] PROP M/F S @P<
+$.	 [$.] PU <<<
+$¶	 [$¶] PU <<<
+</s>
+<s>
+Fonseca	 [Fonseca] PROP M/F S @SUBJ>
+afirmou	 [afirmar] V PS 3S IND VFIN <fmc> @FMV
+que	 [que] KS @SUB @#FS-<ACC
+o	 [o] DET M S <artd> @>N
+aumento	 [aumento] N M S @SUBJ>
+de	 [de] PRP @N<
+23	 [23] NUM M/F P <card> @>N
+$%	 [%] N M P @P<	 [$%] PU
+para	 [para] PRP @N<
+30	 [30] NUM M/F P <card> @>N
+$%	 [%] N M P @P<	 [$%] PU
+em	 [em] PRP <sam-> @N<
+a	 [o] DET F S <artd> <-sam> @>N
+alíquota	 [alíquota] N F S @P<
+de	 [de] PRP <sam-> @N<
+a	 [o] DET F S <artd> <-sam> @>N
+contribuição	 [contribuição] N F S @P<
+social	 [social] ADJ F S @N<
+de	 [de] PRP <sam-> @N<
+os	 [o] DET M P <artd> <-sam> @>N
+bancos	 [banco] N M P @P<
+$,
+proposta	 [propor] V PCP F S @>N
+mediante	 [mediante] ADJ F S @>N
+lei	 [lei] N F S @N<PRED
+complementar	 [complementar] ADJ F S @N<
+$,
+vai	 [ir] V PR 3S IND VFIN @FAUX
+gerar	 [gerar] V INF @IMV @#ICL-AUX<
+uma	 [um] DET F S <arti> @>N
+arrecadação	 [arrecadação] N F S @<ACC
+adicional	 [adicional] ADJ F S @N<
+de	 [de] PRP @N<
+US$	 [US$] PROP M/F S @P<
+360	 [360] NUM M P <card> @>N
+milhões	 [milhão] N M P @<ACC
+em	 [em] PRP @N<
+94	 [94] NUM M/F P <card> @P<
+$.	 [$.] PU <<<
+$¶	 [$¶] PU <<<
+</s>
+<s>
+Já	 [já] ADV @ADVL>
+a	 [o] DET F S <artd> @>N
+taxação	 [taxação] N F S @SUBJ>
+de	 [de] PRP <sam-> @N<
+o	 [o] DET M S <artd> <-sam> @>N
+IOF	 [IOF] PROP M S @P<
+sobre	 [sobre] PRP @N<
+os	 [o] DET M P <artd> @>N
+CDBs	 [CDBs] PROP M S @P<
+carecas	 [careca] N M/F P @N< <*2> <*1> @SUBJ>
+e	 [e] KC @CO
+fundos	 [fundo] N M P @P<
+de	 [de] PRP @N<
+carteira	 [carteira] N F S @P<
+livre	 [livre] ADJ F S @N<
+$,
+usados	 [usado] ADJ M P @N<PRED
+principalmente	 [principalmente] ADV @>P
+por	 [por] PRP @ADVL>
+fundos	 [fundo] N M P @P<
+de	 [de] PRP @N<
+pensão	 [pensão] N F S @P<
+$,
+resultará	 [resultar] V FUT 3S IND VFIN @FMV @#FS-ACC>>
+em	 [em] PRP <sam-> @<PIV
+um	 [um] DET M S <arti> <-sam> @>N
+aumento	 [aumento] N M S <*1> @P<
+insignificante	 [insignificante] ADJ M S <*2> @N<
+de	 [de] PRP @N<
+receita	 [receita] N F S @P<
+$,
+disse	 [dizer] V PS 3S IND VFIN <fmc> @FMV
+Fonseca	 [Fonseca] PROP M/F S @<SUBJ
+$.	 [$.] PU <<<
+$¶	 [$¶] PU <<<
+</s>
+<s>
+A	 [o] DET F S <artd> @>N
+Medida=Provisória	 [Medida=Provisória] PROP F S @SUBJ>
+402	 [402] NUM M/F P <card> @N<
+também	 [também] ADV @ADVL>
+muda	 [mudar] V PR 3S IND VFIN <fmc> @FMV
+o	 [o] DET M S <artd> @>N
+regime	 [regime] N M S @<ACC
+tributário	 [tributário] ADJ M S @N<
+sobre	 [sobre] PRP @<PIV @<ADVL
+as	 [o] DET F P <artd> @>N
+aplicações	 [aplicação] N F P @P<
+de	 [de] PRP @N<
+investidores	 [investidor] N M P @P<
+estrangeiros	 [estrangeiro] ADJ M P @N<
+$.	 [$.] PU <<<
+$¶	 [$¶] PU <<<
+</s>
+<s>
+Os	 [o] DET M P <artd> @>N
+rendimentos	 [rendimento] N M P @SUBJ>
+de	 [de] PRP <sam-> @N<
+estes	 [este] DET M P <dem> <-sam> @>N
+investidores	 [investidor] N M P @P<
+decorrentes	 [decorrente] ADJ M P @N<
+de	 [de] PRP @A<
+aplicações	 [aplicação] N F P @P<
+em	 [em] PRP @N<
+fundos	 [fundo] N M P @P<
+de	 [de] PRP @N<
+renda	 [renda] N F S @P<
+fixa	 [fixar] V PCP F S @N<
+$,
+ganhos	 [ganho] N M P @N<PRED @P<
+líquidos	 [líquido] ADJ M P @N<
+em	 [em] PRP @N<
+operações	 [operação] N F P @P<
+em	 [em] PRP <sam-> @N<
+as	 [o] DET F P <artd> <-sam> @>N
+Bolsas	 [bolsa] <prop> N F P @P<
+e	 [e] KC @CO
+fundos	 [fundo] N M P @P<
+e	 [e] KC @CO
+clubes	 [clube] N M P @P<
+de	 [de] PRP @N<
+investimentos	 [investimento] N M P @P<
+de	 [de] PRP @N<
+renda	 [renda] N F S @P<
+variável	 [variável] ADJ F S @N<
+passam	 [passar] V PR 3P IND VFIN <fmc> @FAUX
+a	 [a] PRP @PRT-AUX<
+ser	 [ser] V INF @IAUX @#ICL-AUX<
+tributados	 [tributar] V PCP M P @IMV @#ICL-AUX<
+em	 [em] PRP <sam-> @<ADVL
+a	 [o] DET F S <artd> <-sam> @>N
+fonte	 [fonte] N F S @P<
+$,
+com	 [com] PRP @N<PRED @<ADVL
+alíquota	 [alíquota] N F S @P<
+de	 [de] PRP @N<
+15	 [15] NUM M/F P <card> @>N
+$%	 [%] N M P @P<	 [$%] PU
+$.	 [$.] PU <<<
+$¶	 [$¶] PU <<<
+</s>
+</TEXT>
+$¶	 [$¶] PU <<<
+</DOC>

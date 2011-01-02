@@ -1,0 +1,317 @@
+<DOC>
+<DOCNO.valor=FSP940101-089>
+<DOCID.valor=FSP940101-089>
+<DATE.valor=940101>
+<TEXT>
+<s>
+Da=Reportagem=Local	 [Da=Reportagem=Local] PROP F S @NPHR
+$¶	 [$¶] PU <<<
+</s>
+<s>
+A	 [o] DET F S <artd> @>N
+Secretaria=da=Educação	 [Secretaria=da=Educação] PROP F S @SUBJ>
+pretende	 [pretender] V PR 3S IND VFIN <fmc> @FMV
+amarrar	 [amarrar] V INF @IMV <*2> <*1> @#ICL-<ACC
+o	 [o] DET M S <artd> @>N
+ano=letivo	 [ano=letivo] N M S @<ACC
+de	 [de] PRP @N<
+1993	 [1993] NUM M/F P <card> @P<
+a	 [a] PRP <sam-> @<ADVL
+o	 [o] DET M S <-sam> @P<
+de	 [de] PRP @N<
+1994	 [1994] NUM M/F P <card> @P<
+$.	 [$.] PU <<<
+$¶	 [$¶] PU <<<
+</s>
+<s>
+O	 [o] DET M S <artd> <*1> @>N
+que	 [que] SPEC M/F S @ACC> @#FS-SUBJ> <rel>
+temos	 [ter] V PR 1P IND VFIN @FAUX
+de	 [de] PRP @PRT-AUX<
+garantir	 [garantir] V INF @IMV @#ICL-AUX<
+é	 [ser] V PR 3S IND VFIN @FMV @#FS-ACC>>
+a	 [o] DET F S <artd> @>N
+continuidade	 [continuidade] N F S @<SC
+pedagógica	 [pedagógico] ADJ F S @N<
+e	 [e] <co-vfin> KC @CO
+os	 [o] DET M P <artd> @>N
+mínimos	 [mínimo] N M P @<ACC
+de	 [de] PRP @N<
+conteúdos	 [conteúdo] N M P @P<
+em	 [em] PRP <sam-> @<ADVL
+este	 [este] DET M S <dem> <-sam> @>N
+ano=letivo	 [ano=letivo] N M S @P<
+$"	 [$"] PU
+$,
+diz	 [dizer] V PR 3S IND VFIN <fmc> @FMV
+José=Carlos=Bortolato	 [José=Carlos=Bortolato] PROP M S @<SUBJ
+$,
+diretor	 [diretor] N M S @N<PRED
+de	 [de] PRP <sam-> @N<
+a	 [o] DET F S <artd> <-sam> @>N
+Coordenadoria=de=Ensino=do=Interior	 [Coordenadoria=de=Ensino=do=Interior] PROP F S @P<
+$.	 [$.] PU <<<
+$¶	 [$¶] PU <<<
+</s>
+<s>
+O	 [o] DET M S <artd> <*1> @>N
+conteúdo	 [conteúdo] N M S @SUBJ>
+de	 [de] PRP <sam-> @N<
+o	 [o] DET M S <artd> <-sam> @>N
+ano=que=vem	 [ano=que=vem] N M S @P<
+deve	 [dever] V PR 3S IND VFIN <fmc> @FAUX
+iniciar	 [iniciar] V INF @IMV @#ICL-AUX<
+de	 [de] PRP <sam-> @<ADVL
+o	 [o] DET M S <artd> <-sam> @>N
+ponto	 [ponto] N M S @P<
+em	 [em] PRP @ADVL>
+que	 [que] KS @SUB @#FS-<ACC
+acabou	 [acabar] V PS 3S IND VFIN @FMV
+93.	 [93.] ADJ M/F S <NUM-ord> @<SC
+$"	 [$"] PU
+$¶	 [$¶] PU <<<
+</s>
+<s>
+Segundo	 [segundo] ADV @COM <prp> <rel> @#AS-ADVL>
+Bortolato	 [Bortolato] PROP M/F S @AS<
+$,
+o	 [o] DET M S <artd> @>N
+ano=letivo	 [ano=letivo] N M S @SUBJ>
+é	 [ser] V PR 3S IND VFIN <fmc> @FAUX
+regulado	 [regular] V PCP M S @IMV @#ICL-AUX<
+por	 [por] PRP @<PASS
+três	 [três] NUM M P <card> @>N
+parâmetros	 [parâmetro] N M P @P<
+$:	 [$:] PU <<<
+o	 [o] DET M S <dem> @NPHR
+de	 [de] PRP @N<
+dias=letivos	 [dia=letivo] N M P @P<
+$(	 [$(] PU
+que	 [que] SPEC M/F S @ACC> <rel> @#FS-N<
+baixou	 [baixar] V PS 3S IND VFIN @FMV
+de	 [de] PRP @<ADVL
+200=para=180	 [200=para=180] NUM M/F P @P<
+$)	 [$)] PU
+$,
+o	 [o] DET M S <dem> @<SUBJ
+de	 [de] PRP @N<
+horas	 [hora] N F P @P<
+$/	 [$/] PU	 [$/] KC @CO
+aula	 [aula] N F S @P<
+$(	 [$(] PU
+720	 [720] NUM M/F P <card> @<SC
+por	 [por] PRP @<ADVL
+ano	 [ano] N M S @P<
+$)	 [$)] PU
+e	 [e] KC @CO
+o	 [o] DET M S <dem> @P<
+de	 [de] PRP @N<
+conteúdo	 [conteúdo] N M S @P<
+mínimo	 [pequeno] ADJ M S <SUP> @N<
+$.	 [$.] PU <<<
+$¶	 [$¶] PU <<<
+</s>
+<s>
+Este	 [este] DET M S <dem> @>N
+último	 [último] <n> ADJ M S <NUM-ord> @SUBJ>
+exige	 [exigir] V PR 3S IND VFIN <fmc> @FMV
+que	 [que] KS @SUB @#FS-<ACC
+o	 [o] DET M S <artd> @>N
+professor	 [professor] N M S @SUBJ>
+nunca	 [nunca] ADV @ADVL>
+dê	 [dar] V PR 3S SUBJ VFIN @FMV
+menos=de	 [menos=de] ADV <quant> @>A
+75	 [75] NUM M/F P <card> @>N
+$%	 [%] N M P @<ACC	 [$%] PU
+de	 [de] PRP <sam-> @N<
+o	 [o] DET M S <artd> <-sam> @>N
+conteúdo	 [conteúdo] N M S @P<
+planejado	 [planejar] V PCP M S @N<
+para	 [para] PRP @N<
+uma	 [um] DET F S <arti> @>N
+determinada	 [determinar] V PCP F S @>N
+turma	 [turma] N F S @P<
+$.	 [$.] PU <<<
+$¶	 [$¶] PU <<<
+</s>
+<s>
+Assim	 [assim] ADV <kc> @ADVL>
+$,
+o	 [o] DET M S <artd> @>N
+planejamento	 [planejamento] N M S @SUBJ>
+de	 [de] PRP <sam-> @N<
+a	 [o] DET F S <artd> <-sam> @>N
+reposição	 [reposição] N F S @P<
+deveria	 [dever] V COND 3S VFIN <fmc> @FAUX
+envolver	 [envolver] V INF @IMV @#ICL-AUX<
+o	 [o] DET M S <artd> @>N
+cálculo	 [cálculo] N M S @<ACC
+de	 [de] PRP <sam-> @N<
+o	 [o] DET M S <artd> <-sam> @>N
+conteúdo	 [conteúdo] N M S @P<
+de	 [de] PRP @N<
+cada	 [cada] DET F S <quant> @>N
+turma	 [turma] N F S @P<
+e	 [e] KC @CO
+o	 [o] DET M S <dem> @<ACC
+de	 [de] PRP @N<
+dias=letivos	 [dia=letivo] N M P @P<
+$.	 [$.] PU <<<
+$¶	 [$¶] PU <<<
+</s>
+<s>
+Bortolato	 [Bortolato] PROP M/F S @SUBJ>
+diz	 [dizer] V PR 3S IND VFIN <fmc> @FMV
+que	 [que] KS @SUB @#FS-<ACC
+só	 [só] ADV @>N
+as	 [o] DET F P <artd> @>N
+escolas	 [escola] N F P @SUBJ>
+que	 [que] SPEC M/F S @SUBJ> <rel> @#FS-N<
+enfrentaram	 [enfrentar] V PS/MQP 3P IND VFIN @FMV
+os	 [o] DET M P <artd> @>N
+79	 [79] NUM M P <card> @>N
+dias	 [dia] N M P @<ACC
+de	 [de] PRP @N<
+aula	 [aula] N F S @P<
+é	 [ser] V PR 3S IND VFIN @FMV
+que	 [que] KS @SUB @#FS-<SC
+terão	 [ter] V FUT 3P IND VFIN @FAUX
+de	 [de] PRP @PRT-AUX<
+repor	 [repor] V INF @IMV @#ICL-AUX<
+32	 [32] NUM M P <card> @>N
+dias=letivos	 [dia=letivo] N M P @<ACC
+de	 [de] PRP @N<
+aula	 [aula] N F S @P<
+$.	 [$.] PU <<<
+$¶	 [$¶] PU <<<
+</s>
+<s>
+Outra	 [outro] DET F S <KOMP> <diff> @>N
+modificação	 [modificação] N F S @SUBJ>
+decorrente	 [decorrente] ADJ F S @N<
+de	 [de] PRP <sam-> @A<
+a	 [o] DET F S <artd> <-sam> @>N
+greve	 [greve] N F S @P<
+foi	 [ser] V PS 3S IND VFIN <fmc> @FMV
+a	 [o] DET F S <artd> @>N
+unificação	 [unificação] N F S @<SC
+de	 [de] PRP <sam-> @N<
+as	 [o] DET F P <artd> <-sam> @>N
+duas	 [dois] NUM F P <card> @>N
+provas	 [prova] N F P @P<
+bimestrais	 [bimestral] ADJ F P @N<
+de	 [de] PRP <sam-> @N<
+o	 [o] DET M S <artd> <-sam> @>N
+segundo	 [segundo] ADJ M S <NUM-ord> @>N
+semestre	 [semestre] N M S @P<
+$.	 [$.] PU <<<
+$¶	 [$¶] PU <<<
+</s>
+<s>
+Com	 [com] PRP <*1> @ADVL>
+um	 [um] DET M S <arti> @>N
+período	 [período] N M S @P<
+curto	 [curto] ADJ M S @N<
+de	 [de] PRP @N<
+reposição	 [reposição] N F S @P<
+$,
+se	 [se] KS @SUB
+mantivéssemos	 [manter] V IMPF 1P SUBJ VFIN <fmc> @FMV
+os	 [o] DET M P <artd> @>N
+dois	 [dois] NUM M P <card> @>N
+conceitos	 [conceito] N M P @<ACC
+$,
+as	 [o] DET F P <artd> @>N
+aulas	 [aula] N F P @SUBJ>
+ficariam	 [ficar] V COND 3P VFIN @FMV @#FS-ACC>>
+concentradas	 [concentrar] V PCP F P @IMV @#ICL-<SC
+em	 [em] PRP <sam-> @<ADVL
+a	 [o] DET F S <artd> <-sam> @>N
+avaliação	 [avaliação] N F S @P<
+e	 [e] <co-fmc> <co-vfin> KC @CO
+não	 [não] ADV @>P
+em	 [em] PRP <sam-> @N<
+a	 [o] DET F S <artd> <-sam> @>N
+própria	 [próprio] ADJ F S @>N
+reposição	 [reposição] N F S <*2> @P<
+$,
+afirma	 [afirmar] V PR 3S IND VFIN <fmc> @FMV
+Akiko=Oyafuso	 [Akiko=Oyafuso] PROP F S @<SUBJ
+$,
+diretora	 [diretora] N F S @N<PRED
+de	 [de] PRP <sam-> @N<
+a	 [o] DET F S <artd> <-sam> @>N
+Coordenadoria=de=Ensino	 [Coordenadoria=de=Ensino] PROP F S @P<
+de	 [de] PRP <sam-> @N<
+a	 [o] DET F S <artd> <-sam> @>N
+Região=Metropolitana	 [Região=Metropolitana] PROP F S @P<
+de	 [de] PRP @N<
+São=Paulo	 [São=Paulo] PROP M S @P<
+$.	 [$.] PU <<<
+$¶	 [$¶] PU <<<
+</s>
+<s>
+A	 [o] DET F S <artd> @>N
+possibilidade	 [possibilidade] N F S @SUBJ>
+de	 [de] PRP <sam-> @N<
+isso	 [isso] SPEC M S <dem> <-sam> @SUBJ>
+poder	 [poder] V INF 3S @#ICL-P< @IAUX
+prejudicar	 [prejudicar] V INF @IMV @#ICL-AUX<
+alunos	 [aluno] N M P @<ACC
+que	 [que] KS @SUB @#FS-<ACC
+tenham	 [ter] V PR 3P SUBJ VFIN @FAUX
+tirado	 [tirar] V PCP @IMV @#ICL-AUX<
+notas	 [nota] N F P @<ACC
+baixas	 [baixo] ADJ F P @N<
+em	 [em] PRP <sam-> @<ADVL
+o	 [o] DET M S <artd> <-sam> @>N
+primeiro	 [primeiro] ADJ M S <NUM-ord> @>N
+semestre	 [semestre] N M S @P<
+é	 [ser] V PR 3S IND VFIN <fmc> @FAUX
+refutada	 [refutar] V PCP F S @IMV @#ICL-AUX<
+$:	 [$:] PU <<<
+O	 [o] DET M S <artd> <*1> @>N
+aluno	 [aluno] N M S @SUBJ>
+não	 [não] ADV @ADVL>
+pode	 [poder] V PR 3S IND VFIN @FAUX @#FS-ACC>>
+ser	 [ser] V INF @IAUX @#ICL-AUX<
+prejudicado	 [prejudicar] V PCP M S @IMV @#ICL-AUX<
+por	 [por] PRP <sam-> @<PASS
+a	 [o] DET F S <artd> <-sam> @>N
+greve	 [greve] N F S <*2> @P<
+$,
+diz	 [dizer] V PR 3S IND VFIN <fmc> @FMV
+Akiko	 [Akiko] PROP M/F S @<SUBJ
+$.	 [$.] PU <<<
+$¶	 [$¶] PU <<<
+</s>
+<s>
+Se	 [se] KS @#FS-ADVL> <*1> @SUB
+alguém	 [alguém] SPEC M S @SUBJ>
+repetiu	 [repetir] V PS 3S IND VFIN @FMV
+por	 [por] PRP @<ADVL
+isso	 [isso] SPEC M S <dem> @P<
+$,
+é	 [ser] V PR 3S IND VFIN <fmc> @FMV
+por=que	 [por=que] ADV @ADVL> <interr> @#FS-<SC
+a	 [o] DET F S <artd> @>N
+escola	 [escola] N F S @SUBJ>
+não	 [não] ADV @ADVL>
+organizou	 [organizar] V PS 3S IND VFIN @FMV
+adequadamente	 [adequadamente] ADV @<ADVL
+a	 [o] DET F S <artd> @>N
+reposição	 [reposição] N F S <*2> @<ACC
+$,
+acrescenta	 [acrescentar] V PR 3S IND VFIN <fmc> @FMV
+$.	 [$.] PU <<<
+$¶	 [$¶] PU <<<
+</s>
+<s>
+$(	 [$(] PU
+Fr	 [fr] N M S @NPHR
+$)	 [$)] PU
+$¶	 [$¶] PU <<<
+</s>
+</TEXT>
+$¶	 [$¶] PU <<<
+</DOC>

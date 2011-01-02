@@ -1,0 +1,459 @@
+<DOC>
+<DOCNO.valor=FSP940101-059>
+<DOCID.valor=FSP940101-059>
+<DATE.valor=940101>
+<TEXT>
+<s>
+De	 [de] PRP <sam-> @ADVL
+as	 [o] DET F P <artd> <-sam> @>N
+agências=internacionais	 [agência=internacional] N F P @P<
+$¶	 [$¶] PU <<<
+</s>
+<s>
+O	 [o] DET M S <artd> @>N
+secretário	 [secretário] N M S @SUBJ>
+de	 [de] PRP <sam-> @N<
+a	 [o] DET F S <artd> <-sam> @>N
+Defesa=dos=Eua	 [Defesa=dos=Eua] PROP F S @P<
+$,
+Les=Aspin	 [Les=Aspin] PROP M/F S @APP
+$,
+ordenou	 [ordenar] V PS 3S IND VFIN <fmc> @FMV
+a	 [o] DET F S <artd> @>N
+abertura	 [abertura] N F S @<ACC
+de	 [de] PRP @N<
+todos=os	 [todo=o] DET M P <quant> @>N
+arquivos	 [arquivo] N M P @P<
+relativos	 [relativo] ADJ M P @N<
+a	 [a] PRP <sam-> @A<
+os	 [o] DET M P <artd> <-sam> @>N
+anos	 [ano] N M P @P<
+40	 [40] NUM M/F P <card> @N<
+para	 [para] PRP @N<
+descobrir	 [descobrir] V INF @IMV @#ICL-P<
+se	 [se] KS @SUB @#FS-<ACC
+o	 [o] DET M S <artd> @>N
+Departamento	 [departamento] <prop> N M S @SUBJ>
+teve	 [ter] V PS 3S IND VFIN @FMV
+algum	 [algum] DET M S <quant> @>N
+envolvimento	 [envolvimento] N M S @<ACC
+com	 [com] PRP @<ADVL
+o	 [o] DET M S <artd> @>N
+uso	 [uso] N M S @P<
+de	 [de] PRP @N<
+cobaias	 [cobaia] N F P @P<
+humanas	 [humano] ADJ F P @N<
+em	 [em] PRP @N<
+experimentos	 [experimento] N M P @P<
+com	 [com] PRP @N<
+radiação	 [radiação] N F S @P<
+em	 [em] PRP <sam-> @<ADVL
+aquela	 [aquele] DET F S <dem> <-sam> @>N
+época	 [época] N F S @P<
+$.	 [$.] PU <<<
+$¶	 [$¶] PU <<<
+</s>
+<s>
+A	 [o] DET F S <artd> @>N
+realização	 [realização] N F S @SUBJ>
+de	 [de] PRP <sam-> @N<
+os	 [o] DET M P <artd> <-sam> @>N
+testes	 [teste] N M P @P<
+foi	 [ser] V PS 3S IND VFIN <fmc> @FAUX
+denunciada	 [denunciar] V PCP F S @IMV @#ICL-AUX<
+domingo	 [domingo] N M S @<SC
+passado	 [passar] V PCP M S @IMV @#ICL-N< 
+por	 [por] PRP <sam-> @<ADVL
+o	 [o] DET M S <artd> <-sam> @>N
+jornal	 [jornal] N M S @P<
+The=Boston=Globe	 [The=Boston=Globe] PROP M S <*2> <*1> @N<
+e	 [e] KC @CO
+confirmada	 [confirmar] V PCP F S @IMV @#ICL-N<
+por	 [por] PRP <sam-> @<PASS
+o	 [o] DET M S <artd> <-sam> @>N
+Departamento=de=Energia	 [Departamento=de=Energia] PROP M S @P<
+$.	 [$.] PU <<<
+$¶	 [$¶] PU <<<
+</s>
+<s>
+Segundo	 [segundo] ADV @COM <prp> <rel> @#AS-ADVL>
+o	 [o] DET M S <artd> @>N
+diário	 [diário] N M S @AS<
+$,
+os	 [o] DET M P <artd> @>N
+testes	 [teste] N M P @SUBJ>
+continuaram	 [continuar] V PS/MQP 3P IND VFIN <fmc> @FMV
+até	 [até] PRP @<ADVL
+os	 [o] DET M P <artd> @>N
+anos	 [ano] N M P @P<
+60	 [60] NUM M/F P <card> @N<
+em	 [em] PRP <sam-> @N<
+a	 [o] DET F S <artd> <-sam> @>N
+faculdade	 [faculdade] N F S @P<
+Walter=E.=Fernald	 [Walter=E.=Fernald] PROP F S @N<
+$,
+de	 [de] PRP @N<PRED
+Massachusetts	 [Massachusetts] PROP M/F S @P<
+$.	 [$.] PU <<<
+$¶	 [$¶] PU <<<
+</s>
+<s>
+As	 [o] DET F P <artd> @>N
+cobaias	 [cobaia] N F P @SUBJ>
+$,
+em	 [em] PRP <sam-> @ADVL>
+esse	 [esse] DET M S <dem> <-sam> @>N
+caso	 [caso] N M S @P<
+$,
+foram	 [ser] V PS/MQP 3P IND VFIN <fmc> @FMV
+49	 [49] NUM F P <card> @>N
+adolescentes	 [adolescente] N F P @<SC
+e	 [e] KC @CO
+61	 [61] NUM F P <card> @>N
+crianças	 [criança] N F P @<SC
+com	 [com] PRP @N<
+duas	 [dois] NUM F P <card> @>N
+coisas	 [coisa] N F P @P<
+em	 [em] PRP @<ADVL
+comum	 [comum] ADJ M/F S @P<
+$:	 [$:] PU <<<
+eram	 [ser] V IMPF 3P IND VFIN <fmc> @FMV
+deficientes	 [deficiente] <n> ADJ M/F P @<SC
+mentais	 [mental] ADJ M/F P @N<
+e	 [e] <co-fmc> <co-vfin> KC @CO
+não	 [não] ADV @ADVL>
+sabiam	 [saber] V IMPF 3P IND VFIN <fmc> @FMV
+que	 [que] KS @SUB @#FS-<ACC
+estavam	 [estar] V IMPF 3P IND VFIN @FAUX
+sendo	 [ser] V GER @#ICL-AUX< @IAUX
+testados	 [testar] V PCP M P @IMV @#ICL-AUX<
+$.	 [$.] PU <<<
+$¶	 [$¶] PU <<<
+</s>
+<s>
+Eles	 [eles] PERS M 3P NOM @SUBJ>
+foram	 [ser] V PS/MQP 3P IND VFIN @FAUX @#FS-ACC>>
+alimentados	 [alimentar] V PCP M P @IMV @#ICL-AUX<
+com	 [com] PRP @<ADVL
+cereais	 [cereal] N M P @P<
+e	 [e] <co-vfin> KC @CO
+leite	 [leite] N M S @P<
+radiativos	 [radiativo] ADJ M P @N<
+e	 [e] <co-vfin> KC @CO
+receberam	 [receber] V PS/MQP 3P IND VFIN <fmc> @FMV
+injeção	 [injeção] N F S @<ACC @SUBJ>
+de	 [de] PRP @N<
+isótopos	 [isótopo] N M P @P<
+radiativos	 [radiativo] ADJ M P @N<
+para	 [para] PRP <*1> @N<
+saber	 [saber] V INF 3S @IMV @#ICL-P<
+como	 [como] ADV @ADVL> <interr> @#FS-<ACC
+o	 [o] DET M S <artd> @>N
+corpo	 [corpo] N M S @SUBJ>
+absorve	 [absorver] V PR 3S IND VFIN @FMV
+minerais	 [mineral] N M P <*2> @<ACC
+$,
+disse	 [dizer] V PS 3S IND VFIN <fmc> @FMV
+Frank=Masse	 [Frank=Masse] PROP M S @<SUBJ
+$,
+um	 [um] NUM M S <card> @N<PRED
+de	 [de] PRP <sam-> @N<
+os	 [o] DET M P <artd> <-sam> @>N
+diretores	 [diretor] N M P @P<
+de	 [de] PRP <sam-> @N<
+o	 [o] DET M S <artd> <-sam> @>N
+Instituto=de=Tecnologia=de=Massachusetts	 [Instituto=de=Tecnologia=de=Massachusetts] PROP M S @P<
+$(	 [$(] PU
+MIT	 [MIT] PROP M/F S @N<PRED
+$)	 [$)] PU
+$,
+que	 [que] KS @SUB @#FS-<ACC
+ajudou	 [ajudar] V PS 3S IND VFIN @FMV
+diretamente	 [diretamente] ADV @<ADVL
+a	 [a] PRP @<ADVL
+fazer	 [fazer] V INF @IMV @#ICL-P<
+os	 [o] DET M P <artd> @>N
+testes	 [teste] N M P @<ACC
+$.	 [$.] PU <<<
+$¶	 [$¶] PU <<<
+</s>
+<s>
+Masse	 [Masse] PROP M/F S @SUBJ>
+disse	 [dizer] V PS 3S IND VFIN <fmc> @FMV
+que	 [que] KS @SUB @#FS-<ACC
+$,
+em	 [em] PRP <sam-> @ADVL>
+os	 [o] DET M P <artd> <-sam> @>N
+anos	 [ano] N M P @P<
+60	 [60] NUM M/F P <card> @N<
+$,
+a	 [o] DET F S <artd> @>N
+Fernald	 [Fernald] PROP F S @SUBJ>
+fez	 [fazer] V PS 3S IND VFIN @FMV
+cobaias	 [cobaia] N F P @SUBJ>
+beberem	 [beber] V INF 3P @IMV @#ICL-<ACC
+uma	 [um] DET F S <arti> @>N
+solução	 [solução] N F S @<ACC
+contendo	 [conter] V GER @#ICL-<ADVL @IMV
+iodo	 [iodo] N M S @<ACC
+radiativo	 [radiativo] ADJ M S @N<
+em	 [em] PRP @<ADVL
+pesquisas	 [pesquisa] N F P @P<
+sobre	 [sobre] PRP @N<
+a	 [o] DET F S <artd> @>N
+tiróide	 [tiróide] N F S @P<
+$.	 [$.] PU <<<
+$¶	 [$¶] PU <<<
+</s>
+<s>
+Segundo	 [segundo] ADV @COM <prp> <rel> @#AS-ADVL>
+ele	 [ele] PERS M 3S NOM @SUBJ>
+$,
+todos=os	 [todo=o] DET M P <quant> @>N
+pacientes	 [paciente] N M P @SUBJ>
+tinham	 [ter] V IMPF 3P IND VFIN <fmc> @FMV
+mais=de	 [mais=de] ADV <quant> @>A
+20	 [20] NUM M P <card> @>N
+anos	 [ano] N M P @<ACC
+e	 [e] <co-fmc> <co-vfin> KC @CO
+apresentavam	 [apresentar] V IMPF 3P IND VFIN <fmc> @FMV
+deficiências	 [deficiência] N F P @<ACC
+em	 [em] PRP <sam-> @<ADVL
+a	 [o] DET F S <artd> <-sam> @>N
+glândula	 [glândula] N F S @P<
+$.	 [$.] PU <<<
+$¶	 [$¶] PU <<<
+</s>
+<s>
+O	 [o] DET M S <artd> @>N
+jornal	 [jornal] N M S @SUBJ>
+afirmou	 [afirmar] V PS 3S IND VFIN <fmc> @FMV
+que	 [que] KS @SUB @#FS-<ACC
+os	 [o] DET M P <artd> @>N
+pesquisadores	 [pesquisador] N M P @SUBJ>
+de	 [de] PRP <sam-> @N<
+o	 [o] DET M S <artd> <-sam> @>N
+MIT	 [MIT] PROP M S @P<
+e	 [e] <co-vfin> KC @CO
+de	 [de] PRP <sam-> @N<
+a	 [o] DET F S <artd> <-sam> @>N
+Universidade=Harvard	 [Universidade=Harvard] PROP F S @P<
+realizaram	 [realizar] V PS/MQP 3P IND VFIN @FMV
+os	 [o] DET M P <artd> @>N
+experimentos	 [experimento] N M P @<ACC
+sob	 [sob] PRP @N< @<ADVL
+patrocínio	 [patrocínio] N M S @P<
+de	 [de] PRP <sam-> @N<
+a	 [o] DET F S <artd> <-sam> @>N
+Comissão=de=Energia=Atômica	 [Comissão=de=Energia=Atômica] PROP F S @P<
+$(	 [$(] PU
+predecessora	 [predecessora] N F S @N<PRED
+de	 [de] PRP <sam-> @N<
+o	 [o] DET M S <artd> <-sam> @>N
+Departamento=de=Energia	 [Departamento=de=Energia] PROP M S @P<
+$)	 [$)] PU
+$,
+mas	 [mas] KC @CO
+sem	 [sem] PRP @<ADVL
+obter	 [obter] V INF @IMV @#ICL-P<
+permissão	 [permissão] N F S @<ACC
+de	 [de] PRP <sam-> @N<
+as	 [o] DET F P <artd> <-sam> @>N
+cobaias	 [cobaia] N F P @P<
+ou	 [ou] KC @CO
+de	 [de] PRP @N<
+seus	 [seu] DET M P <poss 3S> @>N
+responsáveis	 [responsável] <n> ADJ M P @P<
+$.	 [$.] PU <<<
+$¶	 [$¶] PU <<<
+</s>
+<s>
+Masse	 [Masse] PROP M/F S @SUBJ>
+confirmou	 [confirmar] V PS 3S IND VFIN <fmc> @FMV
+a	 [o] DET F S <artd> @>N
+informação	 [informação] N F S @<ACC
+a	 [a] PRP <sam-> @<ADVL
+o	 [o] DET M S <artd> <-sam> @>N
+Globe	 [Globe] PROP M S <*2> <*1> @P<
+$,
+disse	 [dizer] V PS 3S IND VFIN <fmc> @FMV
+que	 [que] KS @SUB @#FS-<ACC
+os	 [o] DET M P <artd> @>N
+pesquisadores	 [pesquisador] N M P @SUBJ>
+estavam	 [estar] V IMPF 3P IND VFIN @FMV
+orgulhosos	 [orgulhoso] ADJ M P <*2> <*1> @<SC
+de	 [de] PRP @A<
+seu	 [seu] DET M S <poss 3S> @>N
+trabalho	 [trabalho] N M S @P<
+e	 [e] <co-fmc> <co-vfin> KC @CO
+culpou	 [culpar] V PS 3S IND VFIN <fmc> @FMV
+a	 [o] DET F S <artd> @>N
+administração	 [administração] N F S @<ACC
+de	 [de] PRP <sam-> @<PIV
+as	 [o] DET F P <artd> <-sam> @>N
+universidades	 [universidade] N F P @P<
+por	 [por] PRP @<ADVL
+não	 [não] ADV @ADVL>
+ter	 [ter] V INF @IAUX @#ICL-P<
+conseguido	 [conseguir] V PCP @IMV @#ICL-AUX<
+o	 [o] DET M S <artd> @>N
+consentimento	 [consentimento] N M S @<ACC
+$.	 [$.] PU <<<
+$¶	 [$¶] PU <<<
+</s>
+<s>
+O	 [o] DET M S <artd> @>N
+Departamento=de=Energia	 [Departamento=de=Energia] PROP M S @SUBJ>
+calcula	 [calcular] V PR 3S IND VFIN <fmc> @FMV
+que	 [que] KS @SUB @#FS-<ACC
+entre=600=e=800	 [entre=600=e=800] NUM F P <card> @>N
+pessoas	 [pessoa] N F P @P<
+foram	 [ser] V PS/MQP 3P IND VFIN @FAUX
+submetidas	 [submeter] V PCP F P @IMV @#ICL-AUX<
+a	 [a] PRP @<PIV
+esses	 [esse] DET M P <dem> @>N
+testes	 [teste] N M P @P<
+de	 [de] PRP @N<
+1946=a=1956	 [1946=a=1956] NUM M/F P @P<
+$.	 [$.] PU <<<
+$¶	 [$¶] PU <<<
+</s>
+<s>
+A	 [o] DET F S <artd> @>N
+secretária	 [secretária] N F S @SUBJ>
+de	 [de] PRP @N<
+Energia	 [energia] N F S @P<
+$,
+Hazel=O'Leary	 [Hazel=O'Leary] PROP M S @APP
+$,
+disse	 [dizer] V PS 3S IND VFIN <fmc> @FMV
+que	 [que] KS @SUB @#FS-<ACC
+o	 [o] DET M S <artd> @>N
+governo	 [governo] N M S @SUBJ>
+está	 [estar] V PR 3S IND VFIN @FAUX
+tentando	 [tentar] V GER @#ICL-AUX< @IMV
+localizar	 [localizar] V INF @IMV @#ICL-<ACC
+os	 [o] DET M P <dem> @<ACC
+que	 [que] KS @SUB @#FS-<ACC
+se	 [se] PERS M/F 3S ACC <refl> @ACC>
+submeteram	 [submeter] V PS/MQP 3P IND VFIN @FMV
+a	 [a] PRP <sam-> @<PIV
+os	 [o] DET M P <artd> <-sam> @>N
+experimentos	 [experimento] N M P @P<
+e	 [e] <co-fmc> <co-vfin> KC @CO
+estuda	 [estudar] V PR 3S IND VFIN <fmc> @FMV
+fórmulas	 [fórmula] N F P @<ACC
+para	 [para] PRP @<ADVL
+indenizar-	 [indenizar] V INF @IMV <hyfen> @#ICL-P<
+los	 [eles] PERS M 3P ACC @<ACC
+$.	 [$.] PU <<<
+$¶	 [$¶] PU <<<
+</s>
+<s>
+O	 [o] DET M S <artd> @>N
+deputado	 [deputado] N M S @SUBJ>
+Martin=Frost	 [Martin=Frost] PROP M S @N<
+$(	 [$(] PU
+democrata	 [democrata] N M S @N<PRED
+$)	 [$)] PU
+defende	 [defender] V PR 3S IND VFIN <fmc> @FMV
+uma	 [um] DET F S <arti> @>N
+lei	 [lei] N F S @<ACC
+específica	 [específico] ADJ F S @N<
+para	 [para] PRP @<ADVL
+proteger	 [proteger] V INF @IMV @#ICL-P<
+as	 [o] DET F P <artd> @>N
+cobaias	 [cobaia] N F P @<ACC
+humanas	 [humano] ADJ F P @N<
+$.	 [$.] PU <<<
+$¶	 [$¶] PU <<<
+</s>
+<s>
+Frost	 [Frost] PROP M/F S @VOK @SUBJ>
+$,
+o	 [o] DET M S <artd> @>N
+deputado	 [deputado] N M S @SUBJ>
+Ed=Markey	 [Ed=Markey] PROP M S @N<
+e	 [e] KC @CO
+o	 [o] DET M S <artd> @>N
+senador	 [senador] N M S @SUBJ>
+Ted=Kennedy	 [Ted=Kennedy] PROP M S @N<
+$,
+também	 [também] ADV @>P
+de	 [de] PRP <sam-> @N<PRED
+o	 [o] DET M S <artd> <-sam> @>N
+Partido=Democrata	 [Partido=Democrata] PROP M S @P<
+$,
+pediram	 [pedir] V PS/MQP 3P IND VFIN <fmc> @FMV
+a	 [o] DET F S <artd> @>N
+instauração	 [instauração] N F S @<ACC
+de	 [de] PRP @N<
+uma	 [um] DET F S <arti> @>N
+comissão	 [comissão] PROP F S @P<
+parlamentar	 [parlamentar] ADJ F S @N<
+para	 [para] PRP @N<
+investigar	 [investigar] V INF @IMV @#ICL-P<
+o	 [o] DET M S <artd> @>N
+escândalo	 [escândalo] N M S @<ACC
+$.	 [$.] PU <<<
+$¶	 [$¶] PU <<<
+</s>
+<s>
+Estou	 [estar] V PR 1S IND VFIN @FMV <*1> @#FS-ACC>>
+preocupado	 [preocupado] ADJ M S @<SC
+com	 [com] PRP @A<
+as	 [o] DET F P <artd> @>N
+informações	 [informação] N F P @P<
+de	 [de] PRP @N<
+que	 [que] KS @SUB @#FS-P<
+seres=humanos	 [ser=humano] N M P @SUBJ>
+foram	 [ser] V PS/MQP 3P IND VFIN @FAUX
+usados	 [usar] V PCP M P @IMV @#ICL-AUX<
+em	 [em] PRP @<ADVL
+experimentos	 [experimento] N M P @P<
+com	 [com] PRP @<SC @N<
+radiação	 [radiação] N F S @P<
+sem	 [sem] PRP @<SC @<ADVL
+seu	 [seu] DET M S <si> <poss 3S> @>N
+conhecimento	 [conhecimento] N M S <*2> @P<
+$,
+disse	 [dizer] V PS 3S IND VFIN <fmc> @FMV
+Aspin	 [Aspin] PROP M/F S @<SUBJ
+$.	 [$.] PU <<<
+$¶	 [$¶] PU <<<
+</s>
+<s>
+Quero	 [querer] V PR 1S IND VFIN <fmc> <*1> @FMV
+ter	 [ter] V INF @IMV @#ICL-<ACC
+certeza	 [certeza] N F S @<ACC
+de	 [de] PRP @N<
+que	 [que] KS @SUB @#FS-P<
+fizemos	 [fazer] V PS 1P IND VFIN @FMV
+o	 [o] DET M S <artd> @>N
+possível	 [possível] <n> ADJ M S @<ACC
+para	 [para] PRP @<ADVL
+resgatar	 [resgatar] V INF @IMV @#ICL-P<
+todos=os	 [todo=o] DET M P <quant> @>N
+documentos	 [documento] N M P @<ACC
+sobre	 [sobre] PRP @<ADVL
+o	 [o] DET M S <artd> @>N
+assunto	 [assunto] N M S @P<
+em	 [em] PRP <sam-> @N<
+o	 [o] DET M S <artd> <-sam> @>N
+Departamento=de=Defesa	 [Departamento=de=Defesa] PROP M S @P<
+$,
+para	 [para] PRP @<ADVL
+que	 [que] KS @SUB @#FS-P<
+se	 [se] PERS M/F 3S ACC @SUBJ>
+jogue	 [jogar] V PR 3S SUBJ VFIN @FMV
+luz	 [luz] N F S @<ACC
+sobre	 [sobre] PRP @<ADVL
+essas	 [esse] DET F P <dem> @>N
+acusações	 [acusação] N F P @P<
+$.	 [$.] PU <<<
+$"	 [$"] PU
+$¶	 [$¶] PU <<<
+</s>
+</TEXT>
+$¶	 [$¶] PU <<<
+</DOC>

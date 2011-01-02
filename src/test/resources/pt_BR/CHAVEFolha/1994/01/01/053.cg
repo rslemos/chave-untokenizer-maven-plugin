@@ -1,0 +1,245 @@
+<DOC>
+<DOCNO.valor=FSP940101-053>
+<DOCID.valor=FSP940101-053>
+<DATE.valor=940101>
+<TEXT>
+<s>
+De	 [de] PRP @ADVL
+Washington	 [Washington] PROP M/F S @P<
+$¶	 [$¶] PU <<<
+</s>
+<s>
+Estudo=do=Censo=dos=Eua	 [Estudo=do=Censo=dos=Eua] PROP M S @SUBJ>
+divulgado	 [divulgar] V PCP M S @IMV @#ICL-N<
+em	 [em] PRP @<ADVL
+novembro	 [novembro] N M S @P<
+de	 [de] PRP @N<
+1993	 [1993] NUM M/F P <card> @P<
+oferece	 [oferecer] V PR 3S IND VFIN <fmc> @FMV
+mais	 [muito] DET M S <KOMP> <quant> @>N
+dados	 [dado] N M P @<ACC
+para	 [para] PRP @<ADVL
+se	 [se] PERS M/F 3S ACC @SUBJ>
+compreender	 [compreender] V INF 3S @IMV @#ICL-P<
+por=que	 [por=que] ADV @ADVL> <interr> @#FS-<ACC
+os	 [o] DET M P <artd> @>N
+norte-americanos	 [norte-americano] N M P @SUBJ>
+natos	 [nato] ADJ M P @N<
+andam	 [andar] V PR 3P IND VFIN @FMV
+com	 [com] PRP @<PIV
+tanto	 [tanto] DET M S <KOMP> <quant> @>N
+desconforto	 [desconforto] N M S @P<
+em=relação=a	 [em=relação=a] PRP <sam-> @<ADVL
+os	 [o] DET M P <-sam> <artd> @>N
+estrangeiros	 [estrangeiro] N M P @P<
+$:	 [$:] PU <<<
+o	 [o] DET M S <artd> @>N
+desempenho	 [desempenho] N M S @SUBJ>
+social	 [social] ADJ M S @N<
+de	 [de] PRP <sam-> @N<
+os	 [o] DET M P <artd> <-sam> @>N
+imigrantes	 [imigrante] N M P @P<
+legais	 [legal] ADJ M P @N<
+é	 [ser] V PR 3S IND VFIN <fmc> @FMV
+tão	 [tão] ADV <KOMP> <quant> <dem> @>A
+bom	 [bom] ADJ M S @<SC
+ou	 [ou] KC @CO
+melhor	 [bom] ADJ M S <SUP> <KOMP> @<SC
+do=que	 [do=que] KS @COM @#AS-KOMP<
+o	 [o] DET M S <dem> @AS<
+de	 [de] PRP <sam-> @N<
+eles	 [eles] PERS M 3P NOM/PIV <-sam> @P<
+$.	 [$.] PU <<<
+$¶	 [$¶] PU <<<
+</s>
+<s>
+Por=exemplo	 [por=exemplo] ADV @ADVL
+$:	 [$:] PU <<<
+20,4	 [20,4] NUM M/F P <card> @>N
+$%	 [%] N M P @SUBJ>	 [$%] PU
+de	 [de] PRP <sam-> @N<
+os	 [o] DET M P <artd> <-sam> @>N
+estrangeiros	 [estrangeiro] N M P @P<
+terminam	 [terminar] V PR 3P IND VFIN <fmc> @FMV
+um	 [um] DET M S <arti> @>N
+curso	 [curso] N M S @<ACC
+superior	 [alto] ADJ M S <SUP> <KOMP> @N<
+$,
+o	 [o] DET M S <artd> @>N
+que	 [que] SPEC M/F S @ACC> @#FS-S< <rel>
+só	 [só] ADV @>N
+20,3	 [20,3] NUM M/F P <card> @>N
+$%	 [%] N M P @SUBJ>	 [$%] PU
+de	 [de] PRP <sam-> @N<
+os	 [o] DET M P <artd> <-sam> @>N
+americanos	 [americano] N M P @P<
+conseguem	 [conseguir] V PR 3P IND VFIN @FMV
+$;	 [$;] PU <<<
+a	 [o] DET F S <artd> @>N
+renda	 [renda] N F S @SUBJ>
+familiar	 [familiar] ADJ F S @N<
+média	 [médio] ADJ F S @N<
+anual	 [anual] ADJ F S @N<
+de	 [de] PRP <sam-> @N<
+o	 [o] DET M S <artd> <-sam> @>N
+estrangeiro	 [estrangeiro] N M S @P<
+é	 [ser] V PR 3S IND VFIN <fmc> @FMV
+apenas	 [apenas] ADV @>N
+US$	 [US$] PROP F S @<SC
+1.800	 [1.800] NUM M/F P <card> @N<
+inferior	 [inferior] ADJ M/F S <SUP> <KOMP> @N<
+a	 [a] PRP <sam-> @A<
+a	 [o] DET F S <-sam> @P<
+de	 [de] PRP <sam-> @N<
+os	 [o] DET M P <artd> <-sam> @>N
+americanos	 [americano] N M P @P<
+$;	 [$;] PU <<<
+6,8	 [6,8] NUM M/F P <card> @>N
+$%	 [%] N M P @SUBJ>	 [$%] PU
+de	 [de] PRP <sam-> @N<
+os	 [o] DET M P <artd> <-sam> @>N
+estrangeiros	 [estrangeiro] N M P @P<
+têm	 [ter] V PR 3P IND VFIN <fmc> @FMV
+seus	 [seu] DET M P <si> <poss 3S> @>N
+próprios	 [próprio] ADJ M P @>N
+negócios	 [negócio] N M P @<ACC
+$(	 [$(] PU
+7	 [7] NUM M/F P <card> @>N
+$%	 [%] N M P @PRED>	 [$%] PU
+de	 [de] PRP <sam-> @N<
+os	 [o] DET M P <artd> <-sam> @>N
+americanos	 [americano] N M P @P<
+estão	 [estar] V PR 3P IND VFIN <fmc> @FMV
+em	 [em] PRP <sam-> @<ADVS
+o	 [o] DET M S <artd> <-sam> @>N
+mesmo	 [mesmo] DET M S <KOMP> <diff> @>N
+caso	 [caso] N M S @P<
+$)	 [$)] PU
+$.	 [$.] PU <<<
+$¶	 [$¶] PU <<<
+</s>
+<s>
+O	 [o] DET M S <artd> @>N
+Urban=Institute	 [Urban=Institute] PROP M S @SUBJ>
+$,
+conceituada	 [conceituar] V PCP F S @>N
+entidade	 [entidade] N F S @N<PRED
+que	 [que] SPEC M/F S @SUBJ> <rel> @#FS-N<
+se	 [se] PERS M/F 3S ACC <refl> @ACC>
+dedica	 [dedicar] V PR 3S IND VFIN @FMV
+a	 [a] PRP @<PIV
+estudar	 [estudar] V INF @IMV @#ICL-P<
+fenômenos	 [fenômeno] N M P @<ACC
+urbanos	 [urbano] ADJ M P @N<PRED
+em	 [em] PRP <sam-> @<ADVL
+os	 [o] DET M P <artd> <-sam> @>N
+Eua	 [Eua] PROP M S @P<
+$,
+concluiu	 [concluir] V PS 3S IND VFIN <fmc> @FMV
+em	 [em] PRP @<ADVL
+setembro	 [setembro] N M S @P<
+de	 [de] PRP @N<
+1993	 [1993] NUM M/F P <card> @P<
+um	 [um] NUM M S <card> @>N
+estudo	 [estudo] N M S @P<
+que	 [que] KS @SUB @#FS-<ACC
+levou	 [levar] V PS 3S IND VFIN @FMV
+dez	 [dez] NUM M P <card> @>N
+anos	 [ano] N M P @<ACC
+para	 [para] PRP @<ADVL
+ser	 [ser] V INF @IAUX @#ICL-P<
+completado	 [completar] V PCP M S @IMV @#ICL-AUX<
+$,
+segundo	 [segundo] ADV @#AS-<ADVL <prp> <rel> @COM
+o=qual	 [o=qual] SPEC M S <rel> @AS<
+as	 [o] DET F P <artd> @>N
+cidades	 [cidade] N F P @<ACC @SUBJ>
+americanas	 [americano] ADJ F P @N<
+que	 [que] SPEC M/F S @ACC> <rel> @#FS-N<
+receberam	 [receber] V PS/MQP 3P IND VFIN @FMV
+mais	 [mais] ADV <KOMP> <quant> @>A
+imigrantes	 [imigrante] ADJ M/F P @<PRED
+cresceram	 [crescer] V PS/MQP 3P IND VFIN <fmc> @FMV
+mais	 [muito] DET M/F S <KOMP> <quant> @<OC
+do=que	 [do=que] KS @COM @#AS-KOMP<
+as	 [o] DET F P <artd> @>N
+menos	 [menos] ADV <KOMP> <quant> @>A
+preferidas	 [preferir] <n> V PCP F P @SC>
+por	 [por] PRP <sam-> @<PASS
+os	 [o] DET M P <artd> <-sam> @>N
+estrangeiros	 [estrangeiro] N M P @P<
+$.	 [$.] PU <<<
+$¶	 [$¶] PU <<<
+</s>
+<s>
+Outro	 [outro] DET M S <KOMP> <diff> @>N
+trabalho	 [trabalho] N M S @SUBJ>
+$,
+de	 [de] PRP <sam-> @N<PRED
+o	 [o] DET M S <artd> <-sam> @>N
+economista	 [economista] N M S @P<
+Gregory=de=Freitas	 [Gregory=de=Freitas] PROP M S @N<
+$,
+de	 [de] PRP <sam-> @N<PRED
+a	 [o] DET F S <artd> <-sam> @>N
+Universidade=Hofstra	 [Universidade=Hofstra] PROP F S @P<
+$,
+de	 [de] PRP @N<PRED
+Nova=York	 [Nova=York] PROP F S @P<
+$,
+diz	 [dizer] V PR 3S IND VFIN <fmc> @FMV
+que	 [que] KS @SUB @#FS-<ACC
+imigrantes	 [imigrante] N M/F P @SUBJ>
+legais	 [legal] ADJ M/F P @N<
+e	 [e] <co-vfin> KC @CO
+ilegais	 [ilegal] ADJ M/F P @N<
+em	 [em] PRP @N<
+Los=Angeles	 [Los=Angeles] PROP M S @P<
+pagaram	 [pagar] V PS/MQP 3P IND VFIN @FMV
+impostos	 [imposto] N M P @<ACC
+em	 [em] PRP <sam-> @<ADVL
+o	 [o] DET M S <artd> <-sam> @>N
+valor	 [valor] N M S @P<
+de	 [de] PRP @N<
+US$	 [US$] PROP M/F S @P<
+4,3	 [4,3] NUM M P <card> @>N
+bilhões	 [bilhão] N M P @<ACC
+em	 [em] PRP @N<
+1991	 [1991] NUM M/F P <card> @P<
+e	 [e] <co-fmc> <co-vfin> KC @CO
+usufruíram	 [usufruir] V PS/MQP 3P IND VFIN <fmc> @FMV
+de	 [de] PRP @<PIV
+serviços	 [serviço] N M P @P<
+públicos	 [público] ADJ M P @N<
+em	 [em] PRP <sam-> @<ADVL
+o	 [o] DET M S <artd> <-sam> @>N
+valor	 [valor] N M S @P<
+de	 [de] PRP @N<
+US$	 [US$] PROP M/F S @P<
+2,5	 [2,5] NUM M P <card> @>N
+bilhões	 [bilhão] N M P @PRED>
+$,
+o	 [o] DET M S <artd> @>N
+que	 [que] SPEC M/F S @SUBJ> @#FS-S< <rel>
+deu	 [dar] V PS 3S IND VFIN @FMV
+a	 [a] PRP <sam-> @<PIV
+o	 [o] DET M S <artd> <-sam> @>N
+governo	 [governo] N M S @P<
+um	 [um] DET M S <arti> @>N
+saldo	 [saldo] N M S @<ACC
+de	 [de] PRP @N<
+US$	 [US$] PROP M/F S @P<
+1,8	 [1,8] NUM M P <card> @>N
+bilhão	 [bilhão] N M S @<ACC
+$.	 [$.] PU <<<
+$¶	 [$¶] PU <<<
+</s>
+<s>
+$(	 [$(] PU
+CELS	 [CELS] PROP M/F S @NPHR
+$)	 [$)] PU
+$¶	 [$¶] PU <<<
+</s>
+</TEXT>
+$¶	 [$¶] PU <<<
+</DOC>

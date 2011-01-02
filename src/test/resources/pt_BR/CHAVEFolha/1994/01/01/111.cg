@@ -1,0 +1,67 @@
+<DOC>
+<DOCNO.valor=FSP940101-111>
+<DOCID.valor=FSP940101-111>
+<DATE.valor=940101>
+<TEXT>
+<s>
+Solidariedade	 [solidariedade] N F S @NPHR
+$¶	 [$¶] PU <<<
+</s>
+<s>
+O	 [o] DET M S <artd> @>N
+diário	 [diário] N M S @SUBJ>
+Cronica	 [Cronica] PROP M S <*2> <*1> @N<
+$,
+de	 [de] PRP @N<PRED
+Buenos=Aires	 [Buenos=Aires] PROP M/F S @P<
+$,
+divulgou	 [divulgar] V PS 3S IND VFIN <fmc> @FMV
+que	 [que] KS @SUB @#FS-<ACC
+a	 [o] DET F S <artd> @>N
+atriz	 [atriz] N F S @SUBJ>
+mexicana	 [mexicano] ADJ F S @N<
+Veronica=Castro	 [Veronica=Castro] PROP F S @N<
+sofreu	 [sofrer] V PS 3S IND VFIN @FMV
+uma	 [um] DET F S <arti> @>N
+operação	 [operação] N F S @<ACC
+plástica	 [plástico] ADJ F S @N<
+facial	 [facial] ADJ F S @N<
+em	 [em] PRP <sam-> @<ADVL
+a	 [o] DET F S <artd> <-sam> @>N
+cidade	 [cidade] N F S @P<
+$.	 [$.] PU <<<
+$¶	 [$¶] PU <<<
+</s>
+<s>
+Mas	 [mas] KC @CO
+o	 [o] DET M S <artd> @>N
+mais	 [mais] ADV <KOMP> <quant> @>A
+espantoso	 [espantoso] <n> ADJ M S @SUBJ>
+é=que	 [é=que] ADV <foc> @<FOC
+levou	 [levar] V PS 3S IND VFIN <fmc> @FMV
+com	 [com] PRP <sam-> @<ADVL
+si	 [se] PERS M/F 3S PIV <refl> <-sam> @P<
+a	 [o] DET F S <artd> @>N
+irmã	 [irmã] N F S @<ACC
+Beatriz	 [beatriz] <prop> N F S <DERS> <DERS> @N<
+$,
+o	 [o] DET M S <artd> @>N
+cabelereiro ALT xxxereiro	 [cabelereiro] N M S <DERS> @<ACC
+e	 [e] KC @CO
+uma	 [um] DET F S <arti> @>N
+cantora	 [cantora] N F S @<ACC
+não	 [não] ADV @ADVL>
+identificada	 [identificar] V PCP F S @IMV @#ICL-N<
+$.	 [$.] PU <<<
+$¶	 [$¶] PU <<<
+</s>
+<s>
+Todos	 [todo] DET M P <quant> @SUBJ>
+sairam ALT saíram	 [sair] V PS/MQP 3P IND VFIN <fmc> @FMV
+operados	 [operado] ADJ M P @<SC
+$.	 [$.] PU <<<
+$¶	 [$¶] PU <<<
+</s>
+</TEXT>
+$¶	 [$¶] PU <<<
+</DOC>

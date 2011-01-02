@@ -1,0 +1,417 @@
+<DOC>
+<DOCNO.valor=FSP940101-064>
+<DOCID.valor=FSP940101-064>
+<DATE.valor=940101>
+<TEXT>
+<s>
+Carlos=Eduardo=Alves	 [Carlos=Eduardo=Alves] PROP M S @NPHR
+$¶	 [$¶] PU <<<
+</s>
+<s>
+Da=Reportagem=Local	 [Da=Reportagem=Local] PROP F S @NPHR
+$¶	 [$¶] PU <<<
+</s>
+<s>
+O	 [o] DET M S <artd> @>N
+ano	 [ano] N M S @ADVL>
+não	 [não] ADV @ADVL>
+terminou	 [terminar] V PS 3S IND VFIN <fmc> @FMV
+bem	 [bem] ADV <quant> @<ADVL
+para	 [para] PRP @<ADVL
+o	 [o] DET M S <artd> @>N
+prefeito	 [prefeito] N M S @P<
+Paulo=Maluf	 [Paulo=Maluf] PROP M S @N<
+$.	 [$.] PU <<<
+$¶	 [$¶] PU <<<
+</s>
+<s>
+Dezembro	 [dezembro] N M S @SUBJ>
+era	 [ser] V IMPF 3S IND VFIN <fmc> @FMV
+o	 [o] DET M S <artd> @>N
+mês	 [mês] N M S @<SC
+que	 [que] SPEC M/F S @ACC> <rel> @#FS-N<
+Maluf	 [Maluf] PROP M S @SUBJ>
+reservara	 [reservar] V MQP 3S IND VFIN @FMV
+para	 [para] PRP @<ADVL
+consolidar	 [consolidar] V INF @IMV @#ICL-P<
+a	 [o] DET F S <artd> @>N
+imagem	 [imagem] N F S @<ACC
+de	 [de] PRP @N<
+administrador	 [administrador] N M S <*1> @P<
+competente	 [competente] ADJ M S <*2> @N<
+$,
+indispensável	 [indispensável] ADJ M/F S @N<PRED
+para	 [para] PRP @<ADVL
+alavancar	 [alavancar] V INF @IMV @#ICL-P<
+sua	 [seu] DET F S <poss 3S> @>N
+candidatura	 [candidatura] N F S @<SC
+a	 [a] PRP <sam-> @N<
+a	 [o] DET F S <artd> <-sam> @>N
+Presidência=da=República	 [Presidência=da=República] PROP F S @P<
+$.	 [$.] PU <<<
+$¶	 [$¶] PU <<<
+</s>
+<s>
+A	 [o] DET F S <artd> @>N
+quase	 [quase] ADV <quant> @>A
+irrelevante	 [irrelevante] ADJ F S @>N
+mudança	 [mudança] N F S @SUBJ>
+em	 [em] PRP <sam-> @N<
+os	 [o] DET M P <artd> <-sam> @>N
+índices	 [índice] N M P @P<
+de	 [de] PRP @N<
+avaliação	 [avaliação] N F S @P<
+de	 [de] PRP @N<
+Maluf	 [Maluf] PROP M S @P<
+$,
+no=entanto	 [no=entanto] ADV <kc> @ADVL>
+$,
+não	 [não] ADV @ADVL>
+estava	 [estar] V IMPF 3S IND VFIN <fmc> @FMV
+em	 [em] PRP <sam-> @<ADVS
+os	 [o] DET M P <artd> <-sam> @>N
+planos	 [plano] N M P @P<
+de	 [de] PRP <sam-> @N<
+a	 [o] DET F S <artd> <-sam> @>N
+cúpula	 [cúpula] N F S @P<
+de	 [de] PRP <sam-> @N<
+o	 [o] DET M S <artd> <-sam> @>N
+PPR	 [PPR] PROP M S @P<
+$.	 [$.] PU <<<
+$¶	 [$¶] PU <<<
+</s>
+<s>
+Desde	 [desde] PRP @ADVL>
+o	 [o] DET M S <artd> @>N
+início	 [início] N M S @P<
+de	 [de] PRP <sam-> @N<
+a	 [o] DET F S <artd> <-sam> @>N
+administração	 [administração] N F S @P<
+$,
+Maluf	 [Maluf] PROP M S @SUBJ>
+apostou	 [apostar] V PS 3S IND VFIN <fmc> @FMV
+que	 [que] KS @SUB @#FS-<ACC
+em	 [em] PRP <sam-> @ADVL>
+o	 [o] DET M S <artd> <-sam> @>N
+final	 [final] N M S @P<
+de	 [de] PRP @N<
+93	 [93] NUM M/F P <card> @P<
+já	 [já] ADV @ADVL>
+poderia	 [poder] V COND 3S VFIN @FMV
+se	 [se] KS @#FS-<SUBJ @#FS-<ADVL @SUB
+apresentar	 [apresentar] V FUT 3S SUBJ VFIN @FMV
+como	 [como] ADV @COM <prp> <rel> @#AS-<ADVL
+o	 [o] DET M S <artd> <*1> @>N
+prefeito	 [prefeito] N M S @AS<
+que	 [que] SPEC M/F S @SUBJ> <rel> @#FS-N<
+mais	 [mais] ADV <KOMP> <quant> @ADVL>
+fez	 [fazer] V PS 3S IND VFIN @FMV
+obras	 [obra] N F P @<ACC
+em	 [em] PRP @<ADVL
+tão	 [tão] ADV <quant> <dem> @<ADVL
+pouco	 [pouco] DET M S <quant> @>N
+tempo	 [tempo] N M S <*2> @P<
+$.	 [$.] PU <<<
+$¶	 [$¶] PU <<<
+</s>
+<s>
+Esperava	 [esperar] V IMPF 1/3S IND VFIN <fmc> @FMV
+a	 [o] DET F S <artd> @>N
+recíproca	 [recíproco] <n> ADJ F S @<ACC
+em=termos=de	 [em=termos=de] PRP @<ADVL
+intenção	 [intenção] N F S @P<
+de	 [de] PRP @N<
+voto	 [voto] N M S @P<
+$.	 [$.] PU <<<
+$¶	 [$¶] PU <<<
+</s>
+<s>
+Por	 [por] PRP @ADVL>
+isso	 [isso] SPEC M S <dem> @P<
+$,
+começou	 [começar] V PS 3S IND VFIN <fmc> @FAUX
+a	 [a] PRP @PRT-AUX<
+veicular	 [veicular] V INF @IMV @#ICL-AUX<
+publicidade	 [publicidade] N F S @<ACC
+e	 [e] <co-inf> KC @CO
+reforçar	 [reforçar] V INF @IMV @#ICL-AUX<
+o	 [o] DET M S <artd> @>N
+esquema	 [esquema] N M S @<ACC
+azeitado	 [azeitar] V PCP M S @N<
+que	 [que] KS @SUB @#FS-<ACC
+mantém	 [manter] V PR 3S IND VFIN @FMV
+em	 [em] PRP <sam-> @<PIV
+os	 [o] DET M P <artd> <-sam> @>N
+programas	 [programa] N M P @P<
+de	 [de] PRP <sam-> @N<
+os	 [o] DET M P <artd> <-sam> @>N
+chamados	 [chamado] ADJ M P @>N
+comunicadores	 [comunicador] N M P <*2> <*1> @P<
+de	 [de] PRP @N<
+rádio	 [rádio] N M S @P<
+$.	 [$.] PU <<<
+$¶	 [$¶] PU <<<
+</s>
+<s>
+O	 [o] DET M S <artd> @>N
+raciocínio	 [raciocínio] N M S @SUBJ>
+político	 [político] ADJ M S @N<
+de	 [de] PRP <sam-> @N<
+o	 [o] DET M S <artd> <-sam> @>N
+PPR	 [PPR] PROP M S @P<
+é=que	 [é=que] ADV <foc> @<FOC
+Maluf	 [Maluf] PROP M S @SUBJ>
+teria	 [ter] V COND 3S VFIN <fmc> @FAUX
+que	 [que] KS @PRT-AUX<
+estar	 [estar] V INF @IMV @#ICL-AUX<
+agora	 [agora] ADV <kc> @<ADVL
+em	 [em] PRP <sam-> @<ADVS
+a	 [o] DET F S <artd> <-sam> @>N
+condição	 [condição] N F S @P<
+de	 [de] PRP @N<
+vice-líder	 [vice-líder] N M S @P<
+inconteste	 [inconteste] ADJ M S @N<
+em	 [em] PRP <sam-> @N<
+a	 [o] DET F S <artd> <-sam> @>N
+corrida	 [corrida] N F S @P<
+presidencial	 [presidencial] ADJ F S @N<
+$.	 [$.] PU <<<
+$¶	 [$¶] PU <<<
+</s>
+<s>
+Assim	 [assim] ADV <kc> @ADVL>
+$,
+seria	 [ser] V COND 3S VFIN <fmc> @FMV
+$,
+em	 [em] PRP <sam-> @<ADVL
+o	 [o] DET M S <artd> <-sam> @>N
+mínimo	 [mínimo] N M S @P<
+por	 [por] PRP @<ADVL
+falta	 [falta] N F S @P<
+de	 [de] PRP @N<
+outras	 [outro] DET F P <KOMP> <diff> @>N
+opções	 [opção] N F P @P<
+$,
+o	 [o] DET M S <artd> @>N
+desaguadouro	 [desaguadouro] N M S @<SC
+de	 [de] PRP <sam-> @N<
+os	 [o] DET M P <-sam> @P<
+que	 [que] SPEC M/F S @ACC> <rel> @#FS-N<
+rejeitam	 [rejeitar] V PR 3P IND VFIN @FMV
+a	 [o] DET F S <artd> @>N
+alternativa	 [alternativo] <n> ADJ F S @<SUBJ
+Luiz=Inácio=Lula=da=Silva	 [Luiz=Inácio=Lula=da=Silva] PROP M S @APP
+$(	 [$(] PU
+PT	 [PT] PROP M/F S @N<PRED
+$)	 [$)] PU
+$.	 [$.] PU <<<
+$¶	 [$¶] PU <<<
+</s>
+<s>
+Não	 [não] ADV @ADVL>
+é	 [ser] V PR 3S IND VFIN <fmc> @FMV
+o	 [o] DET M S <dem> @<SC
+que	 [que] SPEC M/F S @SUBJ> <rel> @#FS-N<
+está	 [estar] V PR 3S IND VFIN @FAUX
+ocorrendo	 [ocorrer] V GER @#ICL-AUX< @IMV
+$.	 [$.] PU <<<
+$¶	 [$¶] PU <<<
+</s>
+<s>
+Maluf	 [Maluf] PROP M S @SUBJ>
+sofreu	 [sofrer] V PS 3S IND VFIN <fmc> @FMV
+em	 [em] PRP <sam-> @<ADVL
+o	 [o] DET M S <artd> <-sam> @>N
+segundo	 [segundo] ADJ M S <NUM-ord> @>N
+semestre	 [semestre] N M S @P<
+arranhões	 [arranhão] N F P @<ACC
+que	 [que] SPEC M/F S @ACC> <rel> @#FS-N<
+prejudicaram	 [prejudicar] V PS/MQP 3P IND VFIN @FMV
+sua	 [seu] DET F S <poss 3S> @>N
+candidatura	 [candidatura] N F S @PRED>
+a	 [a] PRP <sam-> @N<
+o	 [o] DET M S <artd> <-sam> @>N
+Planalto	 [planalto] <prop> N M S @P<
+$.	 [$.] PU <<<
+$¶	 [$¶] PU <<<
+</s>
+<s>
+A	 [o] DET F S <artd> @>N
+eclosão	 [eclosão] N F S @SUBJ>
+de	 [de] PRP <sam-> @N<
+o	 [o] DET M S <artd> <-sam> @>N
+caso	 [caso] N M S @P<
+Paubrasil	 [Paubrasil] PROP M S @N<
+$,
+empresa	 [empresa] N F S @N<PRED
+de	 [de] PRP <sam-> @N<
+o	 [o] DET M S <artd> <-sam> @>N
+pianista	 [pianista] N M S @P<
+João=Carlos=Martins	 [João=Carlos=Martins] PROP M S @N<
+que	 [que] SPEC M S @SUBJ> <rel> @#FS-N<
+arrecadou	 [arrecadar] V PS 3S IND VFIN @FMV
+dinheiro	 [dinheiro] N M S @<ACC
+para	 [para] PRP @<ADVL
+as	 [o] DET F P <artd> @>N
+duas	 [dois] NUM F P <card> @>N
+últimas	 [último] ADJ F P <NUM-ord> @>N
+campanhas=eleitorais	 [campanha=eleitoral] N F P @P<
+de	 [de] PRP <sam-> @N<
+o	 [o] DET M S <artd> <-sam> @>N
+prefeito	 [prefeito] N M S @P<
+$,
+foi	 [ser] V PS 3S IND VFIN <fmc> @FMV
+o	 [o] DET M S <artd> @>N
+principal	 [principal] ADJ M S <SUP> @>N
+revés	 [revés] N M S @<SC
+político	 [político] ADJ M S @N<
+de	 [de] PRP @N<
+Maluf	 [Maluf] PROP M S @P<
+$.	 [$.] PU <<<
+$¶	 [$¶] PU <<<
+</s>
+<s>
+O	 [o] DET M S <artd> @>N
+surgimento	 [surgimento] N M S @SUBJ>
+de	 [de] PRP <sam-> @N<
+o	 [o] DET M S <artd> <-sam> @>N
+nome	 [nome] N M S @P<
+de	 [de] PRP @N<
+Flávio=Maluf	 [Flávio=Maluf] PROP M S @P<
+$(	 [$(] PU
+filho	 [filho] N M S @N<PRED
+de	 [de] PRP <sam-> @N<
+o	 [o] DET M S <artd> <-sam> @>N
+prefeito	 [prefeito] N M S @P<
+$)	 [$)] PU
+em	 [em] PRP <sam-> @ADVL>
+o	 [o] DET M S <artd> <-sam> @>N
+episódio	 [episódio] N M S @P<
+transformou	 [transformar] V PS 3S IND VFIN <fmc> @FMV
+o	 [o] DET M S <artd> @>N
+possível	 [possível] ADJ M S @>N
+candidato	 [candidato] N M S @<ACC
+em	 [em] PRP <sam-> @<PIV
+um	 [um] DET M S <arti> <-sam> @>N
+homem	 [homem] N M S @P<
+tenso	 [tenso] ADJ M S @N<
+$,
+preocupando	 [preocupar] V GER @#ICL-<ADVL @IMV
+os	 [o] DET M P <artd> @>N
+responsáveis	 [responsável] <n> ADJ M P @<ACC
+por	 [por] PRP <sam-> @A<
+o	 [o] DET M S <artd> <-sam> @>N
+marketing	 [marketing] N M S @P<
+malufista	 [malufista] ADJ M/F S @N<PRED
+$.	 [$.] PU <<<
+$¶	 [$¶] PU <<<
+</s>
+<s>
+A	 [o] DET F S <artd> @>N
+própria	 [próprio] DET F S <ident> @>N
+direção	 [direção] N F S @SUBJ>
+de	 [de] PRP <sam-> @N<
+o	 [o] DET M S <artd> <-sam> @>N
+PPR	 [PPR] PROP M S @P<
+admite	 [admitir] V PR 3S IND VFIN <fmc> @FMV
+que	 [que] KS @SUB @#FS-<ACC
+a	 [o] DET F S <artd> @>N
+costura	 [costura] N F S @SUBJ>
+de	 [de] PRP <sam-> @N<
+a	 [o] DET F S <artd> <-sam> @>N
+candidatura	 [candidatura] N F S @P<
+Maluf	 [Maluf] PROP M S @SUBJ>
+estaria	 [estar] V COND 3S VFIN @FMV
+mais	 [mais] ADV <KOMP> <quant> @>A
+adiantada	 [adiantar] V PCP F S @<SC
+se	 [se] KS @#FS-<ACC @#FS-<ADVL @SUB
+o	 [o] DET M S <artd> @>N
+caso	 [caso] N M S @SUBJ>
+não	 [não] ADV @ADVL>
+houvesse	 [haver] V IMPF 3S SUBJ VFIN @FAUX
+eclodido	 [eclodir] V PCP M S @IMV @#ICL-AUX<
+$.	 [$.] PU <<<
+$¶	 [$¶] PU <<<
+</s>
+<s>
+Junto=com	 [junto=com] PRP @ADVL>
+isso	 [isso] SPEC M S <dem> @P<
+$,
+problemas	 [problema] N M P @SUBJ>
+com	 [com] PRP @N<
+a	 [o] DET F S <artd> @>N
+licitação	 [licitação] N F S @P<
+para	 [para] PRP @N<
+coleta	 [coleta] N F S @P<
+de	 [de] PRP @N<
+lixo	 [lixo] N M S @P<
+em	 [em] PRP @N<
+São=Paulo	 [São=Paulo] PROP M S @P<
+e	 [e] KC @CO
+buracos	 [buraco] N M P @SUBJ>
+em	 [em] PRP @N<
+obra	 [obra] N F S @P<
+em	 [em] PRP <sam-> @N<
+a	 [o] DET F S <artd> <-sam> @>N
+avenida	 [avenida] N F S @P<
+Juscelino=Kubitschek	 [Juscelino=Kubitschek] PROP M S @N<
+também	 [também] ADV @ADVL>
+não	 [não] ADV @ADVL>
+estavam	 [estar] V IMPF 3P IND VFIN <fmc> @FMV
+em	 [em] PRP <sam-> @<ADVS
+os	 [o] DET M P <artd> <-sam> @>N
+planos	 [plano] N M P @P<
+de	 [de] PRP @N<
+quem	 [quem] SPEC M/F S @#FS-P< <rel> @SUBJ>
+pretendia	 [pretender] V IMPF 3S IND VFIN @FMV
+reforçar	 [reforçar] V INF @IMV @#ICL-<ACC
+a	 [o] DET F S <artd> @>N
+candidatura	 [candidatura] N F S @<ACC
+em	 [em] PRP @<ADVL
+apenas	 [apenas] ADV @>A
+um	 [um] NUM M S <card> @>N
+ano	 [ano] N M S @P<
+de	 [de] PRP @N<
+administração	 [administração] N F S @P<
+municipal	 [municipal] ADJ F S @N<
+$.	 [$.] PU <<<
+$¶	 [$¶] PU <<<
+</s>
+<s>
+O	 [o] DET M S <artd> @>N
+desafio	 [desafio] N M S @SUBJ>
+de	 [de] PRP @N<
+Maluf	 [Maluf] PROP M S @P<
+até	 [até] PRP @N<
+2	 [2] NUM M/F P <card> @P<
+de	 [de] PRP @N<
+abril	 [abril] N M S @P<
+$,
+prazo	 [prazo] N M S @N<PRED
+para	 [para] PRP @N<
+desincompatibilização	 [desincompatibilização] N F S <DERP> @P<
+de	 [de] PRP <sam-> @N<
+os	 [o] DET M P <-sam> @P<
+que	 [que] SPEC M/F S @ACC> <rel> @#FS-N<
+querem	 [querer] V PR 3P IND VFIN @FMV
+disputar	 [disputar] V INF @IMV @#ICL-<ACC
+eleição	 [eleição] N F S @<ACC
+$,
+é	 [ser] V PR 3S IND VFIN <fmc> @FMV
+dar	 [dar] V INF @IMV @#ICL-<SC
+o	 [o] DET M S <artd> @>N
+pulo	 [pulo] N M S @<ACC
+definitivo	 [definitivo] ADJ M S @N<
+em	 [em] PRP @N<
+São=Paulo	 [São=Paulo] PROP M S @P<
+$,
+sua	 [seu] DET F S <poss 3S> @>N
+principal	 [principal] ADJ F S <SUP> @>N
+base	 [base] N F S @APP
+eleitoral	 [eleitoral] ADJ F S @N<
+$.	 [$.] PU <<<
+$¶	 [$¶] PU <<<
+</s>
+</TEXT>
+$¶	 [$¶] PU <<<
+</DOC>

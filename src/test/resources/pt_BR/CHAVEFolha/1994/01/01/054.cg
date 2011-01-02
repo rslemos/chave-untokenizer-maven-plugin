@@ -1,0 +1,409 @@
+<DOC>
+<DOCNO.valor=FSP940101-054>
+<DOCID.valor=FSP940101-054>
+<DATE.valor=940101>
+<TEXT>
+<s>
+De	 [de] PRP @ADVL
+Washington	 [Washington] PROP M/F S @P<
+$¶	 [$¶] PU <<<
+</s>
+<s>
+As	 [o] DET F P <artd> @>N
+pesquisas	 [pesquisa] N F P @SUBJ>
+sobre	 [sobre] PRP @N<
+os	 [o] DET M P <artd> @>N
+sentimentos	 [sentimento] N M P @P<
+de	 [de] PRP <sam-> @N<
+os	 [o] DET M P <artd> <-sam> @>N
+americanos	 [americano] N M P @P<
+em=relação=a	 [em=relação=a] PRP <sam-> @N<
+os	 [o] DET M P <-sam> <artd> @>N
+imigrantes	 [imigrante] N M P @P<
+não	 [não] ADV @ADVL>
+deixam	 [deixar] V PR 3P IND VFIN <fmc> @FMV
+dúvida	 [dúvida] N F S @<ACC
+de	 [de] PRP @N<
+que	 [que] KS @SUB @#FS-P<
+grande	 [grande] ADJ F S @>N
+parte	 [parte] N F S @PRED>
+de	 [de] PRP <sam-> @N<
+a	 [o] DET F S <artd> <-sam> @>N
+má-vontade	 [má-vontade] N F S @P<
+atual	 [atual] ADJ F S @N<
+se	 [se] KS @#FS-<ACC @SUB
+deve	 [dever] V PR 3S IND VFIN @FMV
+a	 [o] DET F S <artd> @>N
+simples	 [simples] ADJ M S @>N
+racismo	 [racismo] N M S @<ACC
+$.	 [$.] PU <<<
+$¶	 [$¶] PU <<<
+</s>
+<s>
+Os	 [o] DET M P <artd> @>N
+estrangeiros	 [estrangeiro] N M P @SUBJ>
+latino-americanos	 [latino-americano] N M P @N<
+$,
+árabes	 [árabe] N M P @N<PRED @SUBJ>
+e	 [e] KC @CO
+asiáticos	 [asiático] N M P @N<PRED @SUBJ>
+$,
+por	 [por] PRP <sam-> @ADVL>
+a	 [o] DET F S <artd> <-sam> @>N
+ordem	 [ordem] N F S @P<
+$,
+são	 [ser] V PR 3P IND VFIN <fmc> @FMV
+muito	 [muito] ADV <quant> @>A
+pior	 [mau] ADJ M S <SUP> <KOMP> @<SC
+vistos	 [visto] ADJ M P @N<PRED
+do=que	 [do=que] KS @COM @#AS-KOMP<
+os	 [o] DET M P <artd> @>N
+europeus	 [europeu] N M P @AS<
+$(	 [$(] PU
+inclusive	 [inclusive] ADV @>N
+os	 [o] DET M P <dem> @AS<
+de	 [de] PRP <sam-> @N<
+a	 [o] DET F S <artd> <-sam> @>N
+Europa	 [Europa] PROP F S @P<
+oriental	 [oriental] ADJ F S @N<
+$)	 [$)] PU
+e	 [e] KC @CO
+africanos	 [africano] ADJ M P @N<
+$.	 [$.] PU <<<
+$¶	 [$¶] PU <<<
+</s>
+<s>
+Esse	 [esse] DET M S <dem> @>N
+racismo	 [racismo] N M S @PRED>
+em=parte	 [em=parte] ADV @ADVL>
+se	 [se] PERS M/F 3S ACC @SUBJ>
+explica	 [explicar] V PR 3S IND VFIN <fmc> @FMV
+por	 [por] PRP <sam-> @<ADVL
+o	 [o] DET M S <artd> <-sam> @>N
+fato	 [fato] N M S @P<
+de	 [de] PRP @N<
+que	 [que] KS @SUB @#FS-P<
+a	 [o] DET F S <artd> @>N
+maior	 [grande] ADJ F S <KOMP> @>N
+parte	 [parte] N F S @SUBJ>
+de	 [de] PRP <sam-> @N<
+os	 [o] DET M P <artd> <-sam> @>N
+americanos	 [americano] N M P @P<
+atuais	 [atual] ADJ M P @N<
+descende	 [descender] V PR 3S IND VFIN @FMV
+de	 [de] PRP @<PIV
+europeus	 [europeu] ADJ M P @P<
+e	 [e] KC @CO
+africanos	 [africano] ADJ M P @P<
+$(	 [$(] PU
+58	 [58] NUM M P <card> @>N
+milhões	 [milhão] N M P @N<PRED
+de	 [de] PRP @N<
+alemães	 [alemão] N M P @P<
+$,
+39	 [39] NUM M P <card> @>N
+milhões	 [milhão] N M P @APP
+de	 [de] PRP @N<
+irlandeses	 [irlandês] N M P @P<
+$,
+33	 [33] NUM M P <card> @>N
+milhões	 [milhão] N M P @APP
+de	 [de] PRP @N<
+ingleses	 [inglês] N M P @P<
+$,
+24	 [24] NUM M P <card> @>N
+milhões	 [milhão] N M P @APP
+de	 [de] PRP @N<
+africanos	 [africano] ADJ M P @P<
+$,
+15	 [15] NUM M P <card> @>N
+milhões	 [milhão] N M P @APP
+de	 [de] PRP @N<
+italianos	 [italiano] N M P @P<
+$,
+10	 [10] NUM M P <card> @>N
+milhões	 [milhão] N M P @APP
+de	 [de] PRP @N<
+franceses	 [francês] N M P @P<
+$,
+9	 [9] NUM M P <card> @>N
+milhões	 [milhão] N M P @APP
+de	 [de] PRP @N<
+poloneses	 [polonês] N M P @P<
+$,
+6	 [6] NUM M P <card> @>N
+milhões	 [milhão] N M P @APP
+de	 [de] PRP @N<
+holandeses	 [holandês] N M P @P<
+$)	 [$)] PU
+$.	 [$.] PU <<<
+$¶	 [$¶] PU <<<
+</s>
+<s>
+Poucos	 [pouco] DET M P <quant> @SUBJ>
+odeiam	 [odiar] V PR 3P IND VFIN <fmc> @FMV
+seus	 [seu] DET M P <si> <poss 3S> @>N
+ancestrais	 [ancestrais] N M P @<ACC
+$.	 [$.] PU <<<
+$¶	 [$¶] PU <<<
+</s>
+<s>
+Outra	 [outro] DET F S <KOMP> <diff> @>N
+razão	 [razão] N F S @SUBJ>
+é	 [ser] V PR 3S IND VFIN <fmc> @FMV
+o	 [o] DET M S <artd> @>N
+fato	 [fato] N M S @<SC
+de	 [de] PRP @N<
+que	 [que] KS @SUB @#FS-P<
+a	 [o] DET F S <artd> @>N
+maior	 [grande] ADJ F S <KOMP> @>N
+parte	 [parte] N F S @SUBJ>
+de	 [de] PRP <sam-> @N<
+os	 [o] DET M P <artd> <-sam> @>N
+imigrantes	 [imigrante] N M P @P<
+$	 [$] PU
+legais	 [legal] ADJ M/F P @N<PRED
+ou	 [ou] <parkc-1> <co-vfin> KC @CO
+não	 [não] ADV @>A
+$	 [$] PU
+em	 [em] PRP <sam-> @<ADVL
+os	 [o] DET M P <artd> <-sam> @>N
+últimos	 [último] ADJ M P <NUM-ord> @>N
+20	 [20] NUM M P <card> @>N
+anos	 [ano] N M P @P<
+vêm	 [vir] V PR 3P IND VFIN @FMV
+de	 [de] PRP <sam-> @<ADVS
+a	 [o] DET F S <artd> <-sam> @>N
+América=Latina	 [América=Latina] PROP F S @P<
+ou	 [ou] <parkc-2> <co-fmc> <co-vfin> KC @CO
+de	 [de] PRP <sam-> @<ADVL
+a	 [o] DET F S <artd> <-sam> @>N
+Asia	 [Asia] PROP F S @P<
+$(	 [$(] PU
+22	 [22] NUM M/F P <card> @>N
+$%	 [%] N M P @SUBJ>	 [$%] PU
+são	 [ser] V PR 3P IND VFIN <fmc> @FMV
+mexicanos	 [mexicano] ADJ M P @<SC
+$,
+8	 [8] NUM M/F P <card> @>N
+$%	 [%] N M P @<SC	 [$%] PU
+vietnamitas	 [vietnamita] ADJ M/F P @N<
+$,
+6,3	 [6,3] NUM M/F P <card> @>N
+$%	 [%] N M P @<SC	 [$%] PU
+filipinos	 [filipino] ADJ M P @N<
+$,
+4,3	 [4,3] NUM M/F P <card> @>N
+$%	 [%] N M P @<SC	 [$%] PU
+dominicanos	 [dominicano] ADJ M P @N<
+$,
+4	 [4] NUM M/F P <card> @>N
+$%	 [%] N M P @<SC	 [$%] PU
+chineses	 [chinês] ADJ M P @N<
+$,
+2,7	 [2,7] NUM M/F P <card> @>N
+$%	 [%] N M P @APP	 [$%] PU
+salvadorenhos	 [salvadorenho] ADJ M P @N<
+$)	 [$)] PU
+$.	 [$.] PU <<<
+$¶	 [$¶] PU <<<
+</s>
+<s>
+Eles	 [eles] PERS M 3P NOM @SUBJ>
+são	 [ser] V PR 3P IND VFIN <fmc> @FMV
+mais	 [mais] ADV <KOMP> <quant> @>A
+visíveis	 [visível] <n> ADJ M P @<SC
+para	 [para] PRP @N<
+os	 [o] DET M P <artd> @>N
+americanos	 [americano] N M P @P<
+$,
+quase	 [quase] ADV <quant> @>A
+sempre	 [sempre] ADV @<ADVL
+em	 [em] PRP <sam-> @<ADVL
+o	 [o] DET M S <artd> <-sam> @>N
+desempenho	 [desempenho] N M S @P<
+de	 [de] PRP @N<
+funções	 [função] N F P @P<
+consideradas	 [considerado] ADJ F P @N<PRED
+menos	 [menos] ADV <KOMP> <quant> @>A
+nobres	 [nobre] ADJ M/F P @N<
+$.	 [$.] PU <<<
+$¶	 [$¶] PU <<<
+</s>
+<s>
+Um	 [um] DET M S <arti> @>N
+terceiro	 [terceiro] ADJ M S <NUM-ord> @>N
+fator	 [fator] N M S @SUBJ>
+para	 [para] PRP @N<
+o	 [o] DET M S <artd> @>N
+desconforto	 [desconforto] N M S @P<
+provocado	 [provocar] V PCP M S @IMV @#ICL-N<
+por	 [por] PRP @<PASS
+estrangeiros	 [estrangeiro] N M P @P<
+de	 [de] PRP @N<
+certas	 [certo] DET F P <quant> @>N
+partes	 [parte] N F P @P<
+de	 [de] PRP <sam-> @N<
+o	 [o] DET M S <artd> <-sam> @>N
+mundo	 [mundo] N M S @P<
+é	 [ser] V PR 3S IND VFIN <fmc> @FMV
+a	 [o] DET F S <artd> @>N
+publicidade	 [publicidade] N F S @<SC
+negativa	 [negativo] ADJ F S @N<
+de	 [de] PRP @N<
+atos	 [ato] N M P @P<
+criminosos	 [criminoso] ADJ M P @N<PRED
+praticados	 [praticar] V PCP M P @IMV @#ICL-N<PRED
+por	 [por] PRP @<PASS
+alguns	 [algum] DET M P <quant> @P<
+de	 [de] PRP <sam-> @N<
+eles	 [eles] PERS M 3P NOM/PIV <-sam> @P<
+$.	 [$.] PU <<<
+$¶	 [$¶] PU <<<
+</s>
+<s>
+O	 [o] DET M S <artd> @>N
+atentado	 [atentado] N M S @SUBJ>
+contra	 [contra] PRP @N<
+o	 [o] DET M S <artd> @>N
+World=Trade=Center	 [World=Trade=Center] PROP M S @P<
+$,
+por=exemplo	 [por=exemplo] ADV @ADVL>
+$,
+fez	 [fazer] V PS 3S IND VFIN <fmc> @FMV
+com	 [com] PRP @<ADVL
+que	 [que] KS @SUB @#FS-P<
+o	 [o] DET M S <artd> @>N
+sentimento	 [sentimento] N M S @SUBJ>
+antiárabe	 [antiárabe] ADJ M S <DERP> @N<
+atingisse	 [atingir] V IMPF 3S SUBJ VFIN @FMV
+seus	 [seu] DET M P <poss 3S> @>N
+níveis	 [nível] N M P @<ACC
+mais	 [mais] ADV <KOMP> <quant> @>A
+altos	 [alto] ADJ M P @N<
+em	 [em] PRP <sam-> @<ADVL
+os	 [o] DET M P <artd> <-sam> @>N
+Eua	 [Eua] PROP M S @P<
+desde	 [desde] PRP @<ADVL
+os	 [o] DET M P <artd> @>N
+sequestros ALT seqüestros	 [sequestro] N M P @P<
+de	 [de] PRP @N<
+americanos	 [americano] N M P @P<
+em	 [em] PRP @<ADVL
+Teerã	 [Teerã] PROP F S @P<
+em	 [em] PRP <sam-> @<ADVL
+os	 [o] DET M P <artd> <-sam> @>N
+anos	 [ano] N M P @P<
+70	 [70] NUM M/F P <card> @N<
+$.	 [$.] PU <<<
+$¶	 [$¶] PU <<<
+</s>
+<s>
+Contra	 [contra] PRP @ADVL>
+latinos	 [latino] N M P @P<
+e	 [e] KC @CO
+asiáticos	 [asiático] N M P @P<
+o	 [o] DET M S <artd> @>N
+racismo	 [racismo] N M S @SUBJ>
+vem	 [vir] V PR 3S IND VFIN <fmc> @FMV
+não	 [não] ADV @<ADVL
+só	 [só] ADV @>P
+de	 [de] PRP <sam-> @<ADVL
+os	 [o] DET M P <artd> <-sam> @>N
+brancos	 [branco] N M P @P<
+$,
+mas	 [mas] KC @CO
+também	 [também] ADV @>P
+de	 [de] PRP <sam-> @N<
+os	 [o] DET M P <artd> <-sam> @>N
+negros	 [negro] <n> ADJ M P @P<
+$.	 [$.] PU <<<
+$¶	 [$¶] PU <<<
+</s>
+<s>
+Muita	 [muito] DET F S <quant> @SUBJ>
+de	 [de] PRP <sam-> @N<
+a	 [o] DET F S <artd> <-sam> @>N
+tensão	 [tensão] N F S @P<
+social	 [social] ADJ F S @N<
+de	 [de] PRP @N<
+cidades	 [cidade] N F P @P<
+como	 [como] ADV @COM <rel> @#AS-N<
+Washington	 [Washington] PROP M/F S @AS<
+$,
+Los=Angeles	 [Los=Angeles] PROP M S @AS<
+e	 [e] KC @CO
+Miami	 [Miami] PROP M/F S @AS<
+se	 [se] PERS F 3S ACC <refl> @ACC>-PASS
+deve	 [dever] V PR 3S IND VFIN <fmc> @FMV
+a	 [a] PRP <sam-> @<PIV
+a	 [o] DET F S <artd> <-sam> @>N
+rivalidade	 [rivalidade] N F S @P<
+existente	 [existente] ADJ F S @N<
+entre	 [entre] PRP @N<
+negros	 [negro] ADJ M P @P<
+e	 [e] KC @CO
+latinos	 [latino] ADJ M P @P<
+e	 [e] KC @CO
+asiáticos	 [asiático] ADJ M P @P<
+$,
+provocada	 [provocar] V PCP F S @IMV @#ICL-P< @#ICL-N<PRED @#ICL-<SUBJ
+por	 [por] PRP <sam-> @<PASS
+a	 [o] DET F S <artd> <-sam> @>N
+disputa	 [disputa] N F S @P<
+por	 [por] PRP <sam-> @<ADVL
+o	 [o] DET M S <artd> <-sam> @>N
+mercado=de=trabalho	 [mercado=de=trabalho] N M S @P<
+$.	 [$.] PU <<<
+$¶	 [$¶] PU <<<
+</s>
+<s>
+Quando	 [quando] ADV @#FS-ADVL> <ks> <rel> @ADVL>
+explode	 [explodir] V PR 3S IND VFIN @FMV
+em	 [em] PRP @<ADVL
+conflitos	 [conflito] N M P @P<
+$,
+a	 [o] DET F S <artd> @>N
+tensão	 [tensão] N F S @SUBJ>
+faz	 [fazer] V PR 3S IND VFIN <fmc> @FMV
+aumentar	 [aumentar] V INF @IMV @#ICL-<ACC
+a	 [o] DET F S <artd> @>N
+antipatia	 [antipatia] N F S @<ACC
+generalizada	 [generalizar] V PCP F S @N<
+contra	 [contra] PRP @<ADVL
+latinos	 [latino] N M P @P<
+e	 [e] <co-fmc> <co-vfin> KC @CO
+asiáticos	 [asiático] N M P @P<
+$	 [$] PU
+que	 [que] SPEC M/F S @ACC> <rel> @#FS-N<
+chegaram	 [chegar] V PS/MQP 3P IND VFIN @FMV
+há	 [há] PRP @<ADVL
+menos	 [pouco] DET M S <KOMP> <quant> @>N
+tempo	 [tempo] N M S @P<
+em	 [em] PRP <sam-> @<ADVL
+o	 [o] DET M S <artd> <-sam> @>N
+país	 [país] N M S @P<
+e	 [e] <co-fmc> <co-vfin> KC @CO
+$,
+por	 [por] PRP @ADVL>
+isso	 [isso] SPEC M S <dem> @P<
+$,
+são	 [ser] V PR 3P IND VFIN <fmc> @FAUX
+vistos	 [ver] V PCP M P @IMV @#ICL-AUX<
+como	 [como] ADV @#AS-<SC <rel> @PRD
+merecedores	 [merecedor] N M P @AS<
+de	 [de] PRP @N<
+menos	 [menos] ADV <KOMP> <quant> @>A
+direitos	 [direito] ADJ M P @P<
+$.	 [$.] PU <<<
+$¶	 [$¶] PU <<<
+</s>
+<s>
+$(	 [$(] PU
+CELS	 [CELS] PROP M/F S @NPHR
+$)	 [$)] PU
+$¶	 [$¶] PU <<<
+</s>
+</TEXT>
+$¶	 [$¶] PU <<<
+</DOC>

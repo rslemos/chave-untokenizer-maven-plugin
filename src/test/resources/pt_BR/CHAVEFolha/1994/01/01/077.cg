@@ -1,0 +1,189 @@
+<DOC>
+<DOCNO.valor=FSP940101-077>
+<DOCID.valor=FSP940101-077>
+<DATE.valor=940101>
+<TEXT>
+<s>
+A	 [o] DET F S <artd> @>N
+leitora	 [leitora] N F S @SUBJ>
+Luciane=da=Silva	 [Luciane=da=Silva] PROP F S @N<
+reclama	 [reclamar] V PR 3S IND VFIN <fmc> @FMV
+o	 [o] DET M S <artd> @>N
+pagamento	 [pagamento] N M S @<ACC
+de	 [de] PRP @N<
+sua	 [seu] DET F S <poss 3S> @>N
+conta	 [conta] N F S @P<
+inativa	 [inativo] ADJ F S @N<
+$.	 [$.] PU <<<
+$¶	 [$¶] PU <<<
+</s>
+<s>
+Segundo	 [segundo] ADV @COM <prp> <rel> @#AS-ADVL>
+ela	 [ela] PERS F 3S NOM/PIV @AS<
+$,
+em	 [em] PRP @ADVL>
+18	 [18] NUM M/F S <card> @P<
+de	 [de] PRP @N<
+novembro	 [novembro] N M S @P<
+o	 [o] DET M S <artd> @>N
+pagamento	 [pagamento] N M S @SUBJ>
+estava	 [estar] V IMPF 3S IND VFIN <fmc> @FMV
+atrasado	 [atrasar] V PCP M S @<SC
+56	 [56] NUM M P <card> @>N
+dias	 [dia] N M P @<ADVL
+$.	 [$.] PU <<<
+$¶	 [$¶] PU <<<
+</s>
+<s>
+Gostaria	 [gostar] V COND 1/3S VFIN <fmc> <*1> @FMV
+que	 [que] KS @SUB @#FS-<ACC
+a	 [o] DET F S <artd> @>N
+Caixa=Econômica=Federal	 [Caixa=Econômica=Federal] PROP F S @SUBJ>
+averiguasse	 [averiguar] V IMPF 3S SUBJ VFIN @FMV
+o	 [o] DET M S <artd> @>N
+motivo	 [motivo] N M S @<ACC
+de	 [de] PRP @N<
+tal	 [tal] ADV <quant> <dem> @ADVL>
+demora	 [demora] N F S <*2> @P<
+$,
+disse	 [dizer] V PS 3S IND VFIN <fmc> @FMV
+$.	 [$.] PU <<<
+$¶	 [$¶] PU <<<
+</s>
+<s>
+Resposta	 [resposta] N F S @NPHR
+$¶	 [$¶] PU <<<
+</s>
+<s>
+O	 [o] DET M S <artd> @>N
+gerente	 [gerente] N M S @SUBJ>
+de	 [de] PRP @N<
+fundos	 [fundo] N M P @P<
+e	 [e] KC @CO
+seguros	 [seguro] <n> ADJ M P @P<
+de	 [de] PRP <sam-> @N<
+a	 [o] DET F S <artd> <-sam> @>N
+superintendência	 [superintendência] N F S @P<
+regional	 [regional] ADJ F S @N<
+de	 [de] PRP @N<
+São=Paulo	 [São=Paulo] PROP M S @P<
+de	 [de] PRP <sam-> @N<
+a	 [o] DET F S <artd> <-sam> @>N
+Caixa=Econômica=Federal	 [Caixa=Econômica=Federal] PROP F S @P<
+$,
+José=Carlos=Barbosa=de=Moraes	 [José=Carlos=Barbosa=de=Moraes] PROP M S @APP
+$,
+informou	 [informar] V PS 3S IND VFIN <fmc> @FMV
+$,
+através	 [através] ADV @<ADVL
+de	 [de] PRP @A<
+carta	 [carta] N F S @P<
+enviada	 [enviar] V PCP F S @IMV @#ICL-N<
+a	 [a] PRP <sam-> @<ADVS
+o	 [o] DET M S <artd> <-sam> @>N
+jornal	 [jornal] N M S @P<
+$,
+que	 [que] KS @SUB @#FS-<ACC
+as	 [o] DET F P <artd> @>N
+contas	 [conta] N F P @SUBJ>
+inativas	 [inativo] ADJ F P @N<
+de	 [de] PRP <sam-> @N<
+a	 [o] DET F S <artd> <-sam> @>N
+leitora	 [leitora] N F S @P<
+estão	 [estar] V PR 3P IND VFIN @FMV
+disponíveis	 [disponível] <n> ADJ F P @<SC
+para	 [para] PRP @N<
+saque	 [saque] N M S @P<
+em	 [em] PRP <sam-> @<ADVL
+a	 [o] DET F S <artd> <-sam> @>N
+agência	 [agência] N F S @P<
+Borba=Gato	 [Borba=Gato] PROP F S @N<
+$,
+em	 [em] PRP @<ADVL
+São=Paulo	 [São=Paulo] PROP M S @P<
+$.	 [$.] PU <<<
+$¶	 [$¶] PU <<<
+</s>
+<s>
+Segundo	 [segundo] ADV @COM <prp> <rel> @#AS-ADVL>
+Moraes	 [Moraes] PROP M/F S @AS<
+$,
+a	 [o] DET F S <artd> @>N
+leitora	 [leitora] N F S @SUBJ>
+já	 [já] ADV @ADVL>
+foi	 [ser] V PS 3S IND VFIN <fmc> @FAUX
+informada	 [informar] V PCP F S @IMV @#ICL-AUX<
+sobre	 [sobre] PRP @<PIV @<ADVL
+as	 [elas] PERS F 3P ACC @ACC>
+disponibilidade	 [disponibilidade] N F S @AS<
+de	 [de] PRP <sam-> @N<
+o	 [o] DET M S <artd> <-sam> @>N
+dinheiro	 [dinheiro] N M S @P<
+de	 [de] PRP <sam-> @N<
+a	 [o] DET F S <artd> <-sam> @>N
+conta	 [conta] N F S @P<
+inativa	 [inativo] ADJ F S @N<
+$.	 [$.] PU <<<
+$¶	 [$¶] PU <<<
+</s>
+<s>
+Cartas	 [carta] N F P @SUBJ>
+para	 [para] PRP @N<
+$"	 [$"] PU
+A=Cidade	 [A=Cidade] PROP F S @P<
+é	 [ser] V PR 3S IND VFIN <fmc> @FMV
+Sua	 [seu] DET F S <poss 3S> @<SC
+$/	 [$/] <co-vfin> KC @CO &KC-CLOSE &KC-CLOSE	 [$/] PU
+Via=São=Paulo	 [Via=São=Paulo] PROP F S @<SC
+$"	 [$"] PU
+devem	 [dever] V PR 3P IND VFIN <fmc> @FAUX
+ser	 [ser] V INF @IMV @#ICL-AUX<
+enviadas	 [enviada] N F P @<SC
+para	 [para] PRP @N<
+a	 [o] DET F S <artd> @>N
+Secretaria=de=Redação	 [Secretaria=de=Redação] PROP F S @P<
+$(	 [$(] PU
+Area=Administrativa	 [Area=Administrativa] PROP F S @N<PRED
+$)	 [$)] PU
+$,
+em	 [em] PRP <sam-> @<ADVL
+a	 [o] DET F S <artd> <-sam> @>N
+al	 [al] N F S @P<
+$.	 [$.] PU <<<
+Barão=de=Limeira	 [Barão=de=Limeira] PROP M/F S @NPHR
+$,
+425	 [425] NUM M/F P <card> @>N
+$,
+3º.	 [3º.] ADJ M S <NUM-ord> @>N
+andar	 [andar] N M S @NPHR
+$,
+Campos=Elíseos	 [Campos=Elíseos] PROP M/F S @NPHR
+$,
+São=Paulo	 [São=Paulo] PROP M S @NPHR
+$(	 [$(] PU
+SP	 [SP] PROP M S @N<PRED
+$)	 [$)] PU
+$,
+CEP=01290-	 [CEP=01290-] PROP M/F S @NPHR
+900	 [900] NUM M/F P <card> @P<
+$,
+com	 [com] PRP @N<PRED
+nome	 [nome] N M S @P<
+completo	 [completo] ADJ M S @N<
+$,
+CIC	 [cIC] N M S @P<
+$,
+RG	 [rG] N M S @P<
+$,
+endereço	 [endereço] N M S @P<
+e	 [e] KC @CO
+telefone	 [telefone] N M S @P<
+de	 [de] PRP <sam-> @N<
+o	 [o] DET M S <artd> <-sam> @>N
+reclamante	 [reclamante] N M S @P<
+$.	 [$.] PU <<<
+$¶	 [$¶] PU <<<
+</s>
+</TEXT>
+$¶	 [$¶] PU <<<
+</DOC>

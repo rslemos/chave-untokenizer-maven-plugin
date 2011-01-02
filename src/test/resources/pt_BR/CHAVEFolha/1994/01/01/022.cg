@@ -1,0 +1,259 @@
+<DOC>
+<DOCNO.valor=FSP940101-022>
+<DOCID.valor=FSP940101-022>
+<DATE.valor=940101>
+<TEXT>
+<s>
+Da=Reportagem=Local	 [Da=Reportagem=Local] PROP F S @NPHR
+$¶	 [$¶] PU <<<
+</s>
+<s>
+O	 [o] DET M S <artd> @>N
+aumento	 [aumento] N M S @SUBJ>
+de	 [de] PRP @N<
+impostos	 [imposto] N M P @P<
+em	 [em] PRP <sam-> @N<
+o	 [o] DET M S <artd> <-sam> @>N
+setor	 [setor] N M S @P<
+bancário	 [bancário] ADJ M S @N<
+levará	 [levar] V FUT 3S IND VFIN <fmc> @FMV
+a	 [a] PRP @<ADVL
+uma	 [um] DET F S <arti> @>N
+alta	 [alta] N F S @P<
+de	 [de] PRP <sam-> @N<
+as	 [o] DET F P <artd> <-sam> @>N
+taxas	 [taxa] N F P @P<
+de	 [de] PRP @N<
+juros	 [juro] N M P @P<
+de	 [de] PRP <sam-> @N<
+os	 [o] DET M P <artd> <-sam> @>N
+empréstimos	 [empréstimo] N M P @P<
+$.	 [$.] PU <<<
+$¶	 [$¶] PU <<<
+</s>
+<s>
+Esta	 [este] DET F S <dem> @SUBJ>
+é	 [ser] V PR 3S IND VFIN <fmc> @FMV
+a	 [o] DET F S <artd> @>N
+avaliação	 [avaliação] N F S @<SC
+de	 [de] PRP <sam-> @N<
+a	 [o] DET F S <artd> <-sam> @>N
+Febraban	 [Febraban] PROP F S @P<
+$(	 [$(] PU
+Federação=Brasileira=das=Associações=de=Bancos	 [Federação=Brasileira=das=Associações=de=Bancos] PROP F S @N<PRED
+$)	 [$)] PU
+$.	 [$.] PU <<<
+$¶	 [$¶] PU <<<
+</s>
+<s>
+Segundo	 [segundo] ADV @COM <prp> <rel> @#AS-ADVL>
+a	 [o] DET F S <artd> @>N
+entidade	 [entidade] N F S @AS<
+$,
+50	 [50] NUM M/F P <card> @>N
+$%	 [%] N M P @SUBJ>	 [$%] PU
+de	 [de] PRP <sam-> @N<
+as	 [o] DET F P <artd> <-sam> @>N
+taxas	 [taxa] N F P @P<
+de	 [de] PRP @N<
+juros	 [juro] N M P @P<
+reais	 [real] ADJ M P @N<
+em	 [em] PRP <sam-> @N<
+a	 [o] DET F S <artd> <-sam> @>N
+concessão	 [concessão] N F S @P<
+de	 [de] PRP @N<
+empréstimos	 [empréstimo] N M P @P<
+já	 [já] ADV @ADVL>
+referem-	 [referir] V PR 3P IND VFIN <fmc> <hyfen> @FMV
+se	 [se] PERS M 3S ACC @<ACC-PASS
+a	 [a] PRP @<PIV
+impostos	 [imposto] N M P @P<
+recolhidos	 [recolher] V PCP M P @N<
+a	 [a] PRP <sam-> @N<
+o	 [o] DET M S <artd> <-sam> @>N
+governo	 [governo] N M S @P<
+$.	 [$.] PU <<<
+$¶	 [$¶] PU <<<
+</s>
+<s>
+E	 [e] KC @CO
+este	 [este] DET M S <dem> @>N
+percentual	 [percentual] <n> ADJ M S @SUBJ>
+deverá	 [dever] V FUT 3S IND VFIN <fmc> @FAUX
+aumentar	 [aumentar] V INF @IMV @#ICL-AUX<
+$,
+pressionando	 [pressionar] V GER @#ICL-<ADVL @IMV
+os	 [o] DET M P <artd> @>N
+juros	 [juro] N M P @<ACC
+$.	 [$.] PU <<<
+$¶	 [$¶] PU <<<
+</s>
+<s>
+Segundo	 [segundo] ADV @COM <prp> <rel> @#AS-ADVL>
+a	 [o] DET F S <artd> @>N
+Febraban	 [Febraban] PROP F S @AS<
+$,
+antes	 [antes] ADV @ADVL>
+de	 [de] PRP <sam-> @A<
+o	 [o] DET M S <artd> <-sam> @>N
+aumento	 [aumento] N M S @P<
+de	 [de] PRP <sam-> @N<
+o	 [o] DET M S <artd> <-sam> @>N
+IOF	 [IOF] PROP M S @P<
+para	 [para] PRP @ADVL>
+os	 [o] DET M P <artd> @>N
+bancos	 [banco] N M P @P<
+em	 [em] PRP <sam-> @ADVL>
+o	 [o] DET M S <artd> <-sam> @>N
+início	 [início] N M S @P<
+de	 [de] PRP @N<
+dezembro	 [dezembro] N M S @P<
+passado	 [passado] ADJ M S @N<
+$,
+o	 [o] DET M S <artd> @>N
+percentual	 [percentual] <n> <n> ADJ M S @SC>
+de	 [de] PRP <sam-> @N<
+os	 [o] DET M P <artd> <-sam> @>N
+juros	 [juro] N M P @P<
+referentes	 [referente] N M P @AS<
+a	 [a] PRP <sam-> @ADVL>
+os	 [o] DET M P <artd> <-sam> @>N
+impostos	 [imposto] N M P @P<
+era	 [ser] V IMPF 1/3S IND VFIN <fmc> @FMV
+de	 [de] PRP @<ADVL
+47	 [47] NUM M/F P <card> @>N
+$%	 [%] N M P @P<	 [$%] PU
+$.	 [$.] PU <<<
+$¶	 [$¶] PU <<<
+</s>
+<s>
+Subiu	 [subir] V PS 3S IND VFIN <fmc> @FMV
+para	 [para] PRP @<ADVL
+50	 [50] NUM M/F P <card> @>N
+$%	 [%] N M P @P<	 [$%] PU
+com	 [com] PRP @<ADVL
+o	 [o] DET M S <artd> @>N
+aumento	 [aumento] N M S @P<
+de	 [de] PRP <sam-> @N<
+o	 [o] DET M S <artd> <-sam> @>N
+IOF	 [IOF] PROP M S @P<
+e	 [e] <co-fmc> <co-vfin> KC @CO
+deverá	 [dever] V FUT 3S IND VFIN <fmc> @FAUX
+subir	 [subir] V INF @IMV @#ICL-AUX<
+ainda	 [ainda] ADV @>A
+mais	 [mais] ADV <KOMP> <quant> @<ADVL
+agora	 [agora] ADV <kc> @<ADVL
+com	 [com] PRP @<ADVL
+a	 [o] DET F S <artd> @>N
+elevação	 [elevação] N F S @P<
+em	 [em] PRP <sam-> @<ADVL
+a	 [o] DET F S <artd> <-sam> @>N
+contribuição	 [contribuição] N F S @P<
+social	 [social] ADJ F S @N<
+de	 [de] PRP <sam-> @N<
+as	 [o] DET F P <artd> <-sam> @>N
+instituições	 [instituição] N F P @P<
+financeiras	 [financeiro] ADJ F P @N<
+de	 [de] PRP @N<
+23	 [23] NUM M/F P <card> @>N
+$%	 [%] N M P @P<	 [$%] PU
+para	 [para] PRP @N< @<ADVL
+30	 [30] NUM M/F P <card> @>N
+$%	 [%] N M P @P<	 [$%] PU
+sobre	 [sobre] PRP @<PIV @<ADVL
+o	 [o] DET M S <artd> @>N
+lucro	 [lucro] N M S @P<
+e	 [e] <co-vfin> KC @CO
+também	 [também] ADV @>P
+com	 [com] PRP @<ADVL
+o	 [o] DET M S <artd> @>N
+IPMF	 [IPMF] PROP M S @P<
+que	 [que] SPEC M/F S @ACC> <rel> @#FS-N<
+passa	 [passar] V PR 3S IND VFIN @FAUX
+a	 [a] PRP @PRT-AUX<
+vigorar	 [vigorar] V INF @IMV @#ICL-AUX<
+a=partir=de	 [a=partir=de] PRP @<ADVL
+hoje	 [hoje] ADV @P<
+$.	 [$.] PU <<<
+$¶	 [$¶] PU <<<
+</s>
+<s>
+Os	 [o] DET M P <artd> @>N
+dados	 [dado] N M P @SUBJ>
+mais	 [mais] ADV <KOMP> <quant> @>A
+recentes	 [recente] ADJ M/F P @N<
+de	 [de] PRP <sam-> @N<
+a	 [o] DET F S <artd> <-sam> @>N
+Febraban	 [Febraban] PROP F S @P<
+mostram	 [mostrar] V PR 3P IND VFIN <fmc> @FMV
+que	 [que] KS @SUB @#FS-<ACC
+em	 [em] PRP @ADVL>
+1992	 [1992] NUM M/F S <card> @P<
+o	 [o] DET M S <artd> @>N
+sistema	 [sistema] N M S @SUBJ>
+bancário	 [bancário] ADJ M S @N<
+brasileiro	 [brasileiro] ADJ M S @N<
+recolheu	 [recolher] V PS 3S IND VFIN @FMV
+US$	 [US$] PROP M/F S @<ACC
+3	 [3] NUM M P <card> @>N
+bilhões	 [bilhão] N M P @<ACC
+em	 [em] PRP @<ADVL
+impostos	 [imposto] N M P @P<
+$.	 [$.] PU <<<
+$¶	 [$¶] PU <<<
+</s>
+<s>
+De	 [de] PRP <sam-> @ADVL>
+este	 [este] DET M S <dem> <-sam> @>N
+total	 [total] N M S @P<
+$,
+US$	 [US$] PROP M/F S @SUBJ>
+1,2	 [1,2] NUM M P <card> @>N
+bilhão	 [bilhão] N M S @PRED>
+foi	 [ser] V PS 3S IND VFIN <fmc> @FMV
+de	 [de] PRP @<SC
+Imposto=de=Renda	 [Imposto=de=Renda] PROP M S @P<
+$,
+US$	 [US$] PROP M/F S @APP
+700	 [700] NUM M P <card> @>N
+milhões	 [milhão] N M P @APP
+em	 [em] PRP @N<
+contribuição	 [contribuição] N F S @P<
+social	 [social] ADJ F S @N<
+e	 [e] KC @CO
+o	 [o] DET M S <artd> @>N
+restante	 [restante] <n> <n> ADJ M S @<SC
+em	 [em] PRP @N<
+demais	 [demais] DET F S @>N
+despesas	 [despesa] N F P @P<
+tributárias	 [tributário] ADJ F P @N<
+$.	 [$.] PU <<<
+$¶	 [$¶] PU <<<
+</s>
+<s>
+Em	 [em] PRP <sam-> @ADVL>
+a	 [o] DET F S <artd> <-sam> @>N
+avaliação	 [avaliação] N F S @P<
+de	 [de] PRP <sam-> @N<
+o	 [o] DET M S <artd> <-sam> @>N
+mercado	 [mercado] N M S @P<
+financeiro	 [financeiro] ADJ M S @N<
+$,
+o	 [o] DET M S <artd> @>N
+aumento	 [aumento] N M S @SUBJ>
+de	 [de] PRP <sam-> @N<
+os	 [o] DET M P <artd> <-sam> @>N
+impostos	 [imposto] N M P @P<
+acabará	 [acabar] V FUT 3S IND VFIN <fmc> @FAUX
+sendo	 [ser] V GER @#ICL-AUX< @IAUX
+repassado	 [repassar] V PCP M S @IMV @#ICL-AUX<
+para	 [para] PRP @<ADVL
+o	 [o] DET M S <artd> @>N
+consumidor	 [consumidor] N M S @P<
+final	 [final] ADJ M S @N<
+$.	 [$.] PU <<<
+$¶	 [$¶] PU <<<
+</s>
+</TEXT>
+$¶	 [$¶] PU <<<
+</DOC>

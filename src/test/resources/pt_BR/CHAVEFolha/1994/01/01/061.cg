@@ -1,0 +1,566 @@
+<DOC>
+<DOCNO.valor=FSP940101-061>
+<DOCID.valor=FSP940101-061>
+<DATE.valor=940101>
+<TEXT>
+<s>
+Jarbas=Vasconcelos	 [Jarbas=Vasconcelos] PROP M/F S @SUBJ>
+é	 [ser] V PR 3S IND VFIN <fmc> @FAUX
+aprovado	 [aprovar] V PCP M S @IMV @#ICL-AUX<
+por	 [por] PRP @<PASS
+63	 [63] NUM M/F P <card> @>N
+$%	 [%] N M P @P<	 [$%] PU
+em	 [em] PRP @<ADVL
+pesquisa	 [pesquisa] N F S @P<
+Datafolha	 [Datafolha] PROP F S @N<
+$;	 [$;] PU <<<
+César=Maia	 [César=Maia] PROP M S @SUBJ>
+$(	 [$(] PU
+Rio	 [Rio] PROP M S @N<PRED
+$)	 [$)] PU
+tem	 [ter] V PR 3S IND VFIN <fmc> @FMV
+pior	 [mau] ADJ F S <SUP> <KOMP> @>N
+avaliação	 [avaliação] N F S @<ACC
+$¶	 [$¶] PU <<<
+</s>
+<s>
+Da=Redação	 [Da=Redação] PROP F S @NPHR
+$¶	 [$¶] PU <<<
+</s>
+<s>
+Após	 [após] PRP @ADVL>
+um	 [um] NUM M S <card> @>N
+ano	 [ano] N M S @P<
+de	 [de] PRP @N<
+mandato	 [mandato] N M S @P<
+$,
+o	 [o] DET M S <artd> @>N
+prefeito	 [prefeito] N M S @SUBJ>
+de	 [de] PRP @N<
+Recife	 [Recife] PROP M S @P<
+$,
+Jarbas=Vasconcelos	 [Jarbas=Vasconcelos] PROP M/F S @APP
+$(	 [$(] PU
+PMDB	 [PMDB] PROP M S @N<PRED
+$)	 [$)] PU
+$,
+obteve	 [obter] V PS 3S IND VFIN <fmc> @FMV
+a	 [o] DET F S <artd> @>N
+maior	 [grande] ADJ F S <KOMP> @>N
+taxa	 [taxa] N F S @<ACC
+de	 [de] PRP @N<
+aprovação	 [aprovação] N F S @P<
+de	 [de] PRP @N<
+sua	 [seu] DET F S <poss 3S> @>N
+população	 [população] N F S @P<
+entre	 [entre] PRP @<ADVL
+os	 [o] DET M P <artd> @>N
+dez	 [dez] NUM M P <card> @>N
+prefeitos	 [prefeito] N M P @P<
+avaliados	 [avaliar] V PCP M P @IMV @#ICL-N<
+em	 [em] PRP @<ADVL
+pesquisa	 [pesquisa] N F S @P<
+de	 [de] PRP <sam-> @N<
+o	 [o] DET M S <artd> <-sam> @>N
+Datafolha	 [Datafolha] PROP F S @P<
+realizada	 [realizar] V PCP F S @IMV @#ICL-N<
+entre	 [entre] PRP @<ADVL
+os	 [o] DET M P <artd> @>N
+dias	 [dia] N M P @P<
+16	 [16] NUM M/F P <card> @N<
+e	 [e] KC @CO
+17	 [17] NUM M/F P <card> @N<
+de	 [de] PRP @N<
+dezembro	 [dezembro] N M S @P<
+últimos	 [último] ADJ M P <NUM-ord> @N<
+$.	 [$.] PU <<<
+$¶	 [$¶] PU <<<
+</s>
+<s>
+Para	 [para] PRP @ADVL>
+63	 [63] NUM M/F P <card> @>N
+$%	 [%] N M P @P<	 [$%] PU
+de	 [de] PRP <sam-> @N<
+a	 [o] DET F S <artd> <-sam> @>N
+população	 [população] N F S @P<
+recifense	 [recifense] ADJ F S @N<
+$,
+a	 [o] DET F S <artd> @>N
+administração	 [administração] N F S @SUBJ>
+Vasconcelos	 [Vasconcelos] PROP F S @N<
+é	 [ser] V PR 3S IND VFIN <fmc> @FMV
+boa	 [bom] ADJ F S @<SC
+ou	 [ou] KC @CO
+ótima	 [bom] ADJ F S <SUP> @<SC
+$.	 [$.] PU <<<
+$¶	 [$¶] PU <<<
+</s>
+<s>
+O	 [o] DET M S <artd> @>N
+prefeito	 [prefeito] N M S @SUBJ>
+de	 [de] PRP <sam-> @N<
+o	 [o] DET M S <artd> <-sam> @>N
+Rio	 [Rio] PROP M S @P<
+$,
+César=Maia	 [César=Maia] PROP M S @APP
+$,
+recebeu	 [receber] V PS 3S IND VFIN <fmc> @FMV
+a	 [o] DET F S <artd> @>N
+pior	 [mau] ADJ F S <SUP> <KOMP> @>N
+avaliação	 [avaliação] N F S @<ACC
+$	 [$] PU
+50	 [50] NUM M/F P <card> @>N
+$%	 [%] N M P @PRED>	 [$%] PU
+de	 [de] PRP <sam-> @N<
+os	 [o] DET M P <artd> <-sam> @>N
+pesquisadores	 [pesquisador] N M P @P<
+consideram	 [considerar] V PR 3P IND VFIN <fmc> @FMV
+sua	 [seu] DET F S <si> <poss 3S> @>N
+gestão	 [gestão] N F S @<ACC
+ruim	 [ruim] ADJ M/F S @<OC
+ou	 [ou] KC @CO
+péssima	 [mal] ADJ F S <SUP> @N<PRED
+$.	 [$.] PU <<<
+$¶	 [$¶] PU <<<
+</s>
+<s>
+O	 [o] DET M S <artd> @>N
+prefeito	 [prefeito] N M S @SUBJ>
+de	 [de] PRP @N<
+São=Paulo	 [São=Paulo] PROP M S @P<
+$,
+Paulo=Maluf	 [Paulo=Maluf] PROP M S @APP
+$,
+ficou	 [ficar] V PS 3S IND VFIN <fmc> @FMV
+em	 [em] PRP @<ADVS
+oitavo	 [oitavo] ADJ M S <NUM-ord> @>N
+lugar	 [lugar] N M S @P<
+entre	 [entre] PRP @N< @<ADVL
+os	 [o] DET M P <artd> @>N
+dez	 [dez] NUM M P <card> @>N
+prefeitos	 [prefeito] N M P @P<
+avaliados	 [avaliado] ADJ M P @N<
+$,
+com	 [com] PRP @N<PRED @<ADVL
+uma	 [um] DET F S <arti> @>N
+taxa	 [taxa] N F S @P<
+de	 [de] PRP @N<
+aprovação	 [aprovação] N F S @P<
+de	 [de] PRP @N<
+apenas	 [apenas] ADV @>A
+25	 [25] NUM M/F P <card> @>N
+$%	 [%] N M P @P<	 [$%] PU
+$.	 [$.] PU <<<
+$¶	 [$¶] PU <<<
+</s>
+<s>
+Além=de	 [além=de] PRP @ADVL>
+Vasconcelos	 [Vasconcelos] PROP M/F S @P<
+$,
+o	 [o] DET M S <artd> @>N
+único	 [único] ADJ M S @>N
+prefeito	 [prefeito] N M S @SUBJ>
+a	 [a] PRP @ADVL>
+ter	 [ter] V INF @IMV @#ICL-P<
+sua	 [seu] DET F S <si> <poss 3S> @>N
+administração	 [administração] N F S @<ACC
+aprovada	 [aprovar] V PCP F S @N<
+por	 [por] PRP <sam-> @<OC
+a	 [o] DET F S <artd> <-sam> @>N
+maioria	 [maioria] N F S @P<
+absoluta	 [absoluto] ADJ F S @N<
+de	 [de] PRP <sam-> @N<
+a	 [o] DET F S <artd> <-sam> @>N
+população	 [população] N F S @P<
+é	 [ser] V PR 3S IND VFIN <fmc> @FMV
+Tarso=Genro	 [Tarso=Genro] PROP M S @<SC
+$(	 [$(] PU
+PT	 [PT] PROP M/F S @N<PRED
+$)	 [$)] PU
+$,
+prefeito	 [prefeito] N M S @N<PRED @<SC
+de	 [de] PRP @N<
+Porto=Alegre	 [Porto=Alegre] PROP M S @P<
+$.	 [$.] PU <<<
+$¶	 [$¶] PU <<<
+</s>
+<s>
+A	 [o] DET F S <artd> @>N
+gestão	 [gestão] N F S @SUBJ>
+de	 [de] PRP @N<
+Genro	 [genro] N M S @P<
+recebeu	 [receber] V PS 3S IND VFIN <fmc> @FMV
+55	 [55] NUM M/F P <card> @>N
+$%	 [%] N M P @<ACC	 [$%] PU
+de	 [de] PRP @N<
+bom	 [bom] ADJ M S @P<
+ou	 [ou] KC @CO
+ótimo	 [bom] ADJ M S <SUP> @P<
+$.	 [$.] PU <<<
+$¶	 [$¶] PU <<<
+</s>
+<s>
+Por=outro=lado	 [por=outro=lado] ADV @ADVL>
+$,
+a	 [o] DET F S <artd> @>N
+prefeita	 [prefeita] N F S @SUBJ>
+de	 [de] PRP @N<
+Salvador	 [Salvador] PROP M S @P<
+$,
+Lídice=da=Mata	 [Lídice=da=Mata] PROP M/F S @APP
+$(	 [$(] PU
+PSDB	 [pSDB] N M S @N<PRED
+$)	 [$)] PU
+$,
+forma	 [formar] V PR 3S IND VFIN <fmc> @FMV
+com	 [com] PRP @<ADVL
+Paulo=Maluf	 [Paulo=Maluf] PROP M S @P<
+e	 [e] KC @CO
+César=Maia	 [César=Maia] PROP M S @P<
+o	 [o] DET M S <artd> @>N
+trio	 [trio] N M S @<ACC
+de	 [de] PRP @N<
+prefeitos	 [prefeito] N M P @P<
+reprovados	 [reprovar] V PCP M P @IMV @#ICL-N<
+por	 [por] PRP <sam-> @<PASS
+os	 [o] DET M P <artd> <-sam> @>N
+moradores	 [morador] N M P @P<
+de	 [de] PRP @N<
+suas	 [seu] DET F P <poss 3S> @>N
+cidades	 [cidade] N F P @P<
+$.	 [$.] PU <<<
+$¶	 [$¶] PU <<<
+</s>
+<s>
+Lídice	 [Lídice] PROP M/F S @SUBJ>
+foi	 [ser] V PS 3S IND VFIN <fmc> @FAUX
+avaliada	 [avaliar] V PCP F S @IMV @#ICL-AUX<
+como	 [como] ADV @#AS-<ADVL <prp> <rel> @ADVL
+ruim	 [ruim] ADJ M/F S @AS<
+ou	 [ou] KC @CO
+péssima	 [mal] ADJ F S <SUP> @<PRED
+por	 [por] PRP @<ADVL
+48	 [48] NUM M/F P <card> @>N
+$%	 [%] N M P @P<	 [$%] PU
+de	 [de] PRP <sam-> @N<
+a	 [o] DET F S <artd> <-sam> @>N
+população	 [população] N F S @P<
+de	 [de] PRP <sam-> @N<
+a	 [o] DET F S <artd> <-sam> @>N
+capital	 [capital] N F S @P<
+baiana	 [baiano] ADJ F S @N<
+$.	 [$.] PU <<<
+$¶	 [$¶] PU <<<
+</s>
+<s>
+O	 [o] DET M S <artd> @>N
+índice	 [índice] N M S @SUBJ>
+de	 [de] PRP @N<
+63	 [63] NUM M/F P <card> @>N
+$%	 [%] N M P @P<	 [$%] PU
+de	 [de] PRP @N<
+aprovação	 [aprovação] N F S @P<
+a	 [a] PRP <sam-> @ADVL>
+a	 [o] DET F S <artd> <-sam> @>N
+gestão	 [gestão] N F S @P<
+de	 [de] PRP @N<
+Jarbas=Vasconcelos	 [Jarbas=Vasconcelos] PROP M/F S @P<
+em	 [em] PRP @N<
+Recife	 [Recife] PROP M S @P<
+cresceu	 [crescer] V PS 3S IND VFIN <fmc> @FMV
+em=relação=a	 [em=relação=a] PRP <sam-> @<ADVL
+a	 [o] DET F S <-sam> <artd> @>N
+pesquisa	 [pesquisa] N F S @P<
+realizada	 [realizar] V PCP F S @IMV @#ICL-N<
+após	 [após] PRP @<ADVL
+seis	 [seis] NUM M P <card> @>N
+meses	 [mês] N M P @P<
+de	 [de] PRP @N<
+sua	 [seu] DET F S <poss 3S> @>N
+administração	 [administração] N F S @P<
+$	 [$] PU
+quando	 [quando] ADV @#FS-<ADVL <ks> <rel> @ADVL>
+obteve	 [obter] V PS 3S IND VFIN @FMV
+47	 [47] NUM M/F P <card> @>N
+$%	 [%] N M P @<ACC	 [$%] PU
+$	 [$] PU
+e	 [e] <co-fmc> <co-vfin> KC @CO
+se	 [se] PERS M/F 3S ACC <refl> @ACC>
+aproxima	 [aproximar] V PR 3S IND VFIN <fmc> @FMV
+de	 [de] PRP <sam-> @<PIV
+a	 [o] DET F S <artd> <-sam> @>N
+expectativa	 [expectativa] N F S @P<
+de	 [de] PRP <sam-> @N<
+os	 [o] DET M P <artd> <-sam> @>N
+recifenses	 [recifense] <n> <n> ADJ M P @P<
+de	 [de] PRP @N<
+que	 [que] KS @SUB @#FS-P<
+sua	 [seu] DET F S <poss 3S> @>N
+administração	 [administração] N F S @SUBJ>
+fosse	 [ser] V IMPF 3S SUBJ VFIN @FMV
+boa	 [bom] ADJ F S @<SC
+ou	 [ou] KC @CO
+ótima	 [bom] ADJ F S <SUP> @<SC
+$	 [$] PU
+68	 [68] NUM M/F P <card> @>N
+$%	 [%] N M P @<ACC	 [$%] PU
+$.	 [$.] PU <<<
+$¶	 [$¶] PU <<<
+</s>
+<s>
+A	 [o] DET F S <artd> @>N
+pesquisa	 [pesquisa] N F S @SUBJ>
+aponta	 [apontar] V PR 3S IND VFIN <fmc> @FMV
+também	 [também] ADV @>N
+uma	 [um] DET F S <arti> @>N
+queda	 [queda] N F S @<ACC
+em	 [em] PRP <sam-> @N<
+a	 [o] DET F S <artd> <-sam> @>N
+reprovação	 [reprovação] N F S @P<
+a	 [a] PRP <sam-> @<ADVL
+a	 [o] DET F S <artd> <-sam> @>N
+gestão	 [gestão] N F S @P<
+Vasconcelos	 [Vasconcelos] PROP F S @N<
+$,
+de	 [de] PRP @N<PRED
+13	 [13] NUM M/F P <card> @>N
+$%	 [%] N M P @P<	 [$%] PU
+após	 [após] PRP @N< @<ADVL
+seis	 [seis] NUM M/F P <card> @P<
+de	 [de] PRP @N<
+mandato	 [mandato] N M S @P<
+$,
+para	 [para] PRP @<ADVL
+9	 [9] NUM M/F P <card> @>N
+$%	 [%] N M P @P<	 [$%] PU
+agora	 [agora] ADV <kc> @<ADVL
+$.	 [$.] PU <<<
+$¶	 [$¶] PU <<<
+</s>
+<s>
+Por=outro=lado	 [por=outro=lado] ADV @ADVL>
+$,
+o	 [o] DET M S <artd> @>N
+prefeito	 [prefeito] N M S @SUBJ>
+César=Maia	 [César=Maia] PROP M S @N<
+recebe	 [receber] V PR 3S IND VFIN <fmc> @FMV
+por	 [por] PRP <sam-> @<ADVL
+a	 [o] DET F S <artd> <-sam> @>N
+segunda	 [segundo] ADJ F S <NUM-ord> @>N
+vez	 [vez] N F S @P<
+a	 [o] DET F S <artd> @>N
+pior	 [mau] ADJ F S <SUP> <KOMP> @>N
+avaliação	 [avaliação] N F S @<ACC
+entre	 [entre] PRP @N< @<ADVL
+os	 [o] DET M P <artd> @>N
+prefeitos	 [prefeito] N M P @P<
+$.	 [$.] PU <<<
+$¶	 [$¶] PU <<<
+</s>
+<s>
+A	 [o] DET F S <artd> @>N
+reprovação	 [reprovação] N F S @SUBJ>
+a	 [a] PRP <sam-> @N<
+a	 [o] DET F S <artd> <-sam> @>N
+sua	 [seu] DET F S <poss 3S> @>N
+administração	 [administração] N F S @P<
+a	 [a] PRP <sam-> @ADVL>
+a	 [o] DET F S <artd> <-sam> @>N
+frente	 [frente] N F S @P<
+de	 [de] PRP <sam-> @N<
+a	 [o] DET F S <artd> <-sam> @>N
+Prefeitura=do=Rio	 [Prefeitura=do=Rio] PROP F S @P<
+cresceu	 [crescer] V PS 3S IND VFIN <fmc> @FMV
+nove	 [nove] NUM M P <card> @>N
+pontos	 [ponto] N M P @PRED>
+percentuais	 [percentual] ADJ M P @N<
+em=relação=a	 [em=relação=a] PRP <sam-> @N<
+o	 [o] DET M S <-sam> <artd> @>N
+levantamento	 [levantamento] N M S @P<
+feito	 [fazer] V PCP M S @N<
+após	 [após] PRP @N<
+seis	 [seis] NUM M P <card> @>N
+meses	 [mês] N M P @P<
+de	 [de] PRP @N<
+mandato	 [mandato] N M S @P<
+$,
+passando	 [passar] V GER @#ICL-<ADVL @IMV
+de	 [de] PRP @<PIV
+41	 [41] NUM M/F P <card> @>N
+$%	 [%] N M P @P<	 [$%] PU
+para	 [para] PRP @<ADVL
+50	 [50] NUM M/F P <card> @>N
+$%	 [%] N M P @P<	 [$%] PU
+$.	 [$.] PU <<<
+$¶	 [$¶] PU <<<
+</s>
+<s>
+Maia	 [maia] N F S @SUBJ>
+recebe	 [receber] V PR 3S IND VFIN <fmc> @FMV
+ainda	 [ainda] ADV @>N
+38	 [38] NUM M/F P <card> @>N
+$%	 [%] N M P @<ACC	 [$%] PU
+de	 [de] PRP @N<
+regular	 [regular] ADJ M S @>N
+e	 [e] N M S @P<
+apenas	 [apenas] ADV @>A
+9	 [9] NUM M/F P <card> @>N
+$%	 [%] N M P @PRED>	 [$%] PU
+de	 [de] PRP @N<
+ótimo	 [bom] ADJ M S <SUP> @P<
+ou	 [ou] KC @CO
+bom	 [bom] ADJ M S @P<
+$.	 [$.] PU <<<
+$¶	 [$¶] PU <<<
+</s>
+<s>
+A	 [o] DET F S <artd> @>N
+falta	 [falta] N F S @SUBJ>
+de	 [de] PRP @N<
+segurança	 [segurança] N F S @P<
+e	 [e] KC @CO
+de	 [de] PRP @N<
+policiamento	 [policiamento] N M S @P<
+é	 [ser] V PR 3S IND VFIN <fmc> @FAUX
+apontado	 [apontar] V PCP M S @IMV @#ICL-AUX<
+por	 [por] PRP @<PASS
+37	 [37] NUM M/F P <card> @>N
+$%	 [%] N M P @P<	 [$%] PU
+de	 [de] PRP <sam-> @N<
+os	 [o] DET M P <artd> <-sam> @>N
+cariocas	 [carioca] N M P @P<
+como	 [como] ADV @COM <rel> @#AS-N<
+o	 [o] DET M S <artd> @>N
+principal	 [principal] ADJ M S <SUP> @>N
+problema	 [problema] N M S @AS<
+de	 [de] PRP <sam-> @N<
+a	 [o] DET F S <artd> <-sam> @>N
+cidade	 [cidade] N F S @P<
+$.	 [$.] PU <<<
+$¶	 [$¶] PU <<<
+</s>
+<s>
+Já	 [já] ADV @ADVL>
+Paulo=Maluf	 [Paulo=Maluf] PROP M S @SUBJ>
+viu	 [ver] V PS 3S IND VFIN <fmc> @FMV
+subir	 [subir] V INF @IMV @#ICL-<ACC
+de	 [de] PRP @<ADVL
+35	 [35] NUM M/F P <card> @>N
+$%	 [%] N M P @P<	 [$%] PU
+para	 [para] PRP @<ADVL
+41	 [41] NUM M/F P <card> @>N
+$%	 [%] N M P @P<	 [$%] PU
+a	 [o] DET F S <artd> @>N
+taxa	 [taxa] N F S @<ACC
+de	 [de] PRP @N<
+reprovação	 [reprovação] N F S @P<
+de	 [de] PRP @N<
+sua	 [seu] DET F S <poss 3S> @>N
+gestão	 [gestão] N F S @P<
+em	 [em] PRP <sam-> @N<
+a	 [o] DET F S <artd> <-sam> @>N
+Prefeitura	 [prefeitura] <prop> N F S @P<
+de	 [de] PRP @N<
+São=Paulo	 [São=Paulo] PROP M S @P<
+$,
+em=relação=a	 [em=relação=a] PRP <sam-> @<ADVL
+a	 [o] DET F S <-sam> <artd> @>N
+pesquisa	 [pesquisa] N F S @P<
+feita	 [fazer] V PCP F S @N<
+após	 [após] PRP @N<
+sete	 [sete] NUM M P <card> @>N
+meses	 [mês] N M P @P<
+de	 [de] PRP @N<
+mandato	 [mandato] N M S @P<
+$.	 [$.] PU <<<
+$¶	 [$¶] PU <<<
+</s>
+<s>
+A	 [o] DET F S <artd> @>N
+taxa	 [taxa] N F S @SUBJ>
+é	 [ser] V PR 3S IND VFIN <fmc> @FMV
+igual	 [igual] ADJ F S @<SC
+a	 [a] PRP <sam-> @A<
+a	 [o] DET F S <artd> <-sam> @>N
+obtida	 [obter] <n> V PCP F S @P<
+por	 [por] PRP @<PASS
+Maluf	 [Maluf] PROP M S @P<
+após	 [após] PRP @<ADVL
+seis	 [seis] NUM M P <card> @>N
+meses	 [mês] N M P @P<
+a	 [a] PRP <sam-> @N<
+a	 [o] DET F S <artd> <-sam> @>N
+frente	 [frente] N F S @P<
+de	 [de] PRP <sam-> @N<
+a	 [o] DET F S <artd> <-sam> @>N
+prefeitura	 [prefeitura] N F S @P<
+paulistana	 [paulistano] ADJ F S @N<
+$.	 [$.] PU <<<
+$¶	 [$¶] PU <<<
+</s>
+<s>
+A	 [o] DET F S <artd> @>N
+taxa	 [taxa] N F S @SUBJ>
+de	 [de] PRP <sam-> @N<
+os	 [o] DET M P <-sam> @P<
+que	 [que] SPEC M/F S @SUBJ> <rel> @#FS-N<
+consideram	 [considerar] V PR 3P IND VFIN @FMV
+sua	 [seu] DET F S <si> <poss 3S> @>N
+gestão	 [gestão] N F S @<ACC
+regular	 [regular] ADJ M/F S @<OC
+também	 [também] ADV @ADVL>
+caiu	 [cair] V PS 3S IND VFIN <fmc> @FMV
+$,
+de	 [de] PRP @<PRED
+39	 [39] NUM M/F P <card> @>N
+$%	 [%] N M P @P<	 [$%] PU
+para	 [para] PRP @<ADVL
+33	 [33] NUM M/F P <card> @>N
+$%	 [%] N M P @P<	 [$%] PU
+$.	 [$.] PU <<<
+$¶	 [$¶] PU <<<
+</s>
+<s>
+Já	 [já] ADV @ADVL>
+a	 [o] DET F S <artd> @>N
+taxa	 [taxa] N F S @SUBJ>
+de	 [de] PRP @N<
+aprovação	 [aprovação] N F S @P<
+de	 [de] PRP @N<
+subiu	 [subir] V PS 3S IND VFIN <fmc> @FMV
+de	 [de] PRP @<ADVL
+20	 [20] NUM M/F P <card> @>N
+$%	 [%] N M P @P<	 [$%] PU
+para	 [para] PRP @<ADVL
+25	 [25] NUM M/F P <card> @>N
+$%	 [%] N M P @P<	 [$%] PU
+$.	 [$.] PU <<<
+$¶	 [$¶] PU <<<
+</s>
+<s>
+Os	 [o] DET M P <artd> @>N
+paulistanos	 [paulistano] N M P @SUBJ>
+apontaram	 [apontar] V PS/MQP 3P IND VFIN <fmc> @FMV
+o	 [o] DET M S <artd> @>N
+transporte	 [transporte] N M S @<ACC
+coletivo	 [coletivo] ADJ M S @N<
+$	 [$] PU
+19	 [19] NUM M/F P <card> @>N
+$%	 [%] N M P @PRED>	 [$%] PU
+de	 [de] PRP <sam-> @N<
+as	 [o] DET F P <artd> <-sam> @>N
+menções	 [menção] N F P @P<
+$	 [$] PU
+como	 [como] ADV @PRD <rel> @#AS-<OC
+o	 [o] DET M S <artd> @>N
+principal	 [principal] ADJ M S <SUP> @>N
+problema	 [problema] N M S @AS<
+de	 [de] PRP <sam-> @N<
+a	 [o] DET F S <artd> <-sam> @>N
+cidade	 [cidade] N F S @P<
+$.	 [$.] PU <<<
+$¶	 [$¶] PU <<<
+</s>
+</TEXT>
+$¶	 [$¶] PU <<<
+</DOC>

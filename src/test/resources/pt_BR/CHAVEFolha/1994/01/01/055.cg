@@ -1,0 +1,534 @@
+<DOC>
+<DOCNO.valor=FSP940101-055>
+<DOCID.valor=FSP940101-055>
+<DATE.valor=940101>
+<TEXT>
+<s>
+Fernanda=Godoy	 [Fernanda=Godoy] PROP F S @NPHR
+$¶	 [$¶] PU <<<
+</s>
+<s>
+De=Nova=York	 [De=Nova=York] PROP M/F S @NPHR
+$¶	 [$¶] PU <<<
+</s>
+<s>
+Desde	 [desde] PRP @ADVL>
+o	 [o] DET M S <artd> @>N
+primeiro	 [primeiro] ADJ M S <NUM-ord> @>N
+minuto	 [minuto] N M S @P<
+de	 [de] PRP @N<
+hoje	 [hoje] ADV @P<
+$,
+Nova=York	 [Nova=York] PROP F S @SUBJ>
+tem	 [ter] V PR 3S IND VFIN <fmc> @FMV
+novo	 [novo] ADJ M S @>N
+prefeito	 [prefeito] N M S @<ACC
+$,
+o	 [o] DET M S <artd> @>N
+ítalo-americano	 [ítalo-americano] N M S @APP
+Rudolph=Giuliani	 [Rudolph=Giuliani] PROP M S @N<
+$,
+49	 [49] NUM M P <card> @<ACC
+$,
+advogado	 [advogado] N M S @N<PRED
+e	 [e] KC @CO
+ex-procurador	 [ex-procurador] N M S @N<PRED
+federal	 [federal] ADJ M S @N<
+$.	 [$.] PU <<<
+$¶	 [$¶] PU <<<
+</s>
+<s>
+Giuliani	 [Giuliani] PROP M/F S @SUBJ>
+celebra	 [celebrar] V PR 3S IND VFIN <fmc> @FMV
+somente	 [somente] ADV @>A
+amanhã	 [amanhã] ADV @<ADVL
+sua	 [seu] DET F S <si> <poss 3S> @>N
+posse	 [posse] N F S @<ACC
+como	 [como] ADV @#AS-<ADVL <prp> <rel> @ADVL
+sucessor	 [sucessor] N M S @AS<
+de	 [de] PRP <sam-> @N<
+o	 [o] DET M S <artd> <-sam> @>N
+democrata	 [democrata] N M S @P<
+David=Dinkins	 [David=Dinkins] PROP M S @N<
+$,
+primeiro	 [primeiro] ADJ M S <NUM-ord> @>N
+prefeito	 [prefeito] N M S @AS< @N<PRED
+negro	 [negro] ADJ M S @N<
+de	 [de] PRP <sam-> @N<
+a	 [o] DET F S <artd> <-sam> @>N
+história	 [história] N F S @P<
+de	 [de] PRP <sam-> @N<
+a	 [o] DET F S <artd> <-sam> @>N
+maior	 [grande] ADJ F S <KOMP> @>N
+cidade	 [cidade] N F S @P<
+de	 [de] PRP <sam-> @N<
+os	 [o] DET M P <artd> <-sam> @>N
+Estados=Unidos	 [Estados=Unidos] PROP M P @P<
+$.	 [$.] PU <<<
+$¶	 [$¶] PU <<<
+</s>
+<s>
+E	 [e] KC @CO
+a	 [o] DET F S <artd> @>N
+festa	 [festa] N F S @SUBJ>
+já	 [já] ADV @ADVL>
+é	 [ser] V PR 3S IND VFIN <fmc> @FMV
+motivo	 [motivo] N M S @<SC
+de	 [de] PRP <sam-> @N<
+a	 [o] DET F S <artd> <-sam> @>N
+primeira	 [primeiro] ADJ F S <NUM-ord> @>N
+briga	 [briga] N F S @P<
+$.	 [$.] PU <<<
+$¶	 [$¶] PU <<<
+</s>
+<s>
+O	 [o] DET M S <artd> @>N
+novo	 [novo] ADJ M S @>N
+prefeito	 [prefeito] N M S @SUBJ>
+adiou	 [adiar] V PS 3S IND VFIN <fmc> @FMV
+a	 [o] DET F S <artd> @>N
+festa	 [festa] N F S @<ACC
+porque	 [porque] KS @SUB
+o	 [o] DET M S <artd> @>N
+dia	 [dia] N M S @<ADVL
+1º	 [1º] NUM M/F P <card> @N<
+$.	 [$.] PU <<<
+de	 [de] PRP @ADVL>
+janeiro	 [janeiro] N M S @P<
+$	 [$] PU
+data	 [data] N F S @SUBJ>
+tradicional	 [tradicional] ADJ F S @N<
+de	 [de] PRP <sam-> @N<
+a	 [o] DET F S <artd> <-sam> @>N
+posse	 [posse] N F S @P<
+$	 [$] PU
+caiu	 [cair] V PS 3S IND VFIN <fmc> @FMV
+em	 [em] PRP <sam-> @<PIV
+um	 [um] DET M S <arti> <-sam> @>N
+sábado	 [sábado] N M S @P<
+$,
+dia	 [dia] N M S @N<PRED @P<
+sagrado	 [sagrar] V PCP M S @N<
+para	 [para] PRP @N<
+os	 [o] DET M P <artd> @>N
+judeus	 [judeu] N M P @P<
+$.	 [$.] PU <<<
+$¶	 [$¶] PU <<<
+</s>
+<s>
+Giuliani	 [Giuliani] PROP M/F S @SUBJ>
+$,
+que	 [que] SPEC M S @SUBJ> <rel> @#FS-N<
+é	 [ser] V PR 3S IND VFIN @FMV
+católico	 [católico] ADJ M S @<SC
+$,
+se	 [se] PERS M/F 3S ACC @ACC>-PASS
+elegeu	 [eleger] V PS 3S IND VFIN <fmc> @FMV
+por	 [por] PRP @<ADVL
+pequena	 [pequeno] ADJ F S @>N
+vantagem	 [vantagem] N F S @P<
+com	 [com] PRP @N<
+apoio	 [apoio] N M S @P<
+maciço	 [maciço] ADJ M S @N<
+de	 [de] PRP <sam-> @N<
+o	 [o] DET M S <artd> <-sam> @>N
+eleitorado	 [eleitorado] N M S @P<
+judaico	 [judaico] ADJ M S @N<
+$.	 [$.] PU <<<
+$¶	 [$¶] PU <<<
+</s>
+<s>
+Lideranças	 [liderança] N F P @SUBJ>
+negras	 [negro] ADJ F P @N<
+$	 [$] PU
+e	 [e] KC @CO
+cristãs	 [cristã] N F P @SUBJ>
+$	 [$] PU
+protestaram	 [protestar] V PS/MQP 3P IND VFIN <fmc> @FMV
+$.	 [$.] PU <<<
+$¶	 [$¶] PU <<<
+</s>
+<s>
+Nós	 [nós] PERS M/F 1P NOM <*1> @SUBJ>
+consideramos	 [considerar] V PR 1P IND VFIN <fmc> @FMV
+isso	 [isso] SPEC M S <dem> @<ACC
+um	 [um] DET M S <arti> @>N
+ato	 [ato] N M S @<OC
+aberto	 [abrir] V PCP M S @N<
+de	 [de] PRP @N<
+racismo	 [racismo] N M S @P<
+$.	 [$.] PU <<<
+$¶	 [$¶] PU <<<
+</s>
+<s>
+Ficamos	 [ficar] V PR 1P IND VFIN <fmc> @FMV
+muito	 [muito] ADV <quant> @>A
+preocupados	 [preocupado] ADJ M P @<SC
+com	 [com] PRP @A<
+esse	 [esse] DET M S <dem> @>N
+gesto	 [gesto] N M S <*2> @P<
+$,
+disse	 [dizer] V PS 3S IND VFIN <fmc> @FMV
+a	 [a] PRP <sam-> @<PIV
+a	 [o] DET F S <artd> <-sam> @>N
+Folha	 [Folha] PROP F S @P<
+o	 [o] DET M S <artd> @>N
+reverendo	 [reverendo] N M S @<SUBJ
+Al=Sharpton	 [Al=Sharpton] PROP M S @N<
+$,
+uma	 [uma] NUM F S <card> @N<PRED
+de	 [de] PRP <sam-> @N<
+as	 [o] DET F P <artd> <-sam> @>N
+lideranças	 [liderança] N F P @P<
+negras	 [negro] ADJ F P @N<
+mais	 [mais] ADV <KOMP> <quant> @>A
+radicais	 [radical] ADJ M/F P @N<
+de	 [de] PRP @N<
+Nova=York	 [Nova=York] PROP F S @P<
+$.	 [$.] PU <<<
+$¶	 [$¶] PU <<<
+</s>
+<s>
+A	 [o] DET F S <artd> @>N
+festa	 [festa] N F S @SUBJ>
+foi	 [ser] V PS 3S IND VFIN <fmc> @FAUX
+marcada	 [marcar] V PCP F S @IMV @#ICL-AUX<
+para	 [para] PRP @<ADVL
+amanhã	 [amanhã] ADV @P<
+a	 [a] PRP <sam-> @<ADVL
+as	 [o] DET F P <artd> <-sam> @>N
+11h	 [11h] N F P @P<
+$,
+exatamente	 [exatamente] ADV @<ADVL
+o	 [o] DET M S <artd> @>N
+horário	 [horário] N M S @APP
+em	 [em] PRP @ADVL>
+que	 [que] KS @SUB @#FS-<ACC
+as	 [o] DET F P <artd> @>N
+igrejas	 [igreja] N F P @SUBJ>
+protestantes	 [protestante] ADJ F P @N<
+de	 [de] PRP <sam-> @N<
+o	 [o] DET M S <artd> <-sam> @>N
+bairro	 [bairro] N M S @P<
+negro	 [negro] ADJ M S @N<
+de	 [de] PRP <sam-> @N<
+o	 [o] DET M S <artd> <-sam> @>N
+Harlem	 [Harlem] PROP M S @P<
+realizam	 [realizar] V PR 3P IND VFIN @FMV
+seus	 [seu] DET M P <si> <poss 3S> @>N
+cultos	 [culto] N M P @<ACC
+$.	 [$.] PU <<<
+$¶	 [$¶] PU <<<
+</s>
+<s>
+Giuliani	 [Giuliani] PROP M S @SUBJ>
+$,
+eleito	 [eleger] V PCP M S @IMV @#ICL-N<PRED
+por	 [por] PRP @<PASS
+uma	 [um] DET F S <arti> @>N
+coalizão	 [coalizão] N F S @P<
+liberal-republicana	 [liberal-republicana] N M/F S @N<
+$	 [$] PU
+de	 [de] PRP @N<PRED
+oposição	 [oposição] N F S @P<
+a	 [a] PRP <sam-> @ADVL>
+o	 [o] DET M S <artd> <-sam> @>N
+presidente	 [presidente] N M S @P<
+de	 [de] PRP <sam-> @N<
+os	 [o] DET M P <artd> <-sam> @>N
+Eua	 [Eua] PROP M S @P<
+$,
+Bill=Clinton	 [Bill=Clinton] PROP M/F S @APP
+$	 [$] PU
+$,
+não	 [não] ADV @ADVL>
+parece	 [parecer] V PR 3S IND VFIN <fmc> @FMV
+disposto	 [dispor] V PCP M S @IMV @#ICL-<SC
+a	 [a] PRP @<PIV
+deixar	 [deixar] V INF @IMV @#ICL-P<
+as	 [o] DET F P <artd> @>N
+pressões	 [pressão] N F P @<ACC
+de	 [de] PRP @N<
+grupos	 [grupo] N M P @P<
+comunitários	 [comunitário] ADJ M P @N<
+ou	 [ou] KC @CO
+étnicos	 [étnico] ADJ M P @N<
+dirigirem	 [dirigir] V INF 3P @#ICL-P< @IMV
+seu	 [seu] DET M S <si> <poss 3S> @>N
+governo	 [governo] N M S @<ACC
+$.	 [$.] PU <<<
+$¶	 [$¶] PU <<<
+</s>
+<s>
+Em	 [em] PRP @ADVL>
+entrevista	 [entrevista] N F S @P<
+a	 [a] PRP <sam-> @ADVL>
+os	 [o] DET M P <artd> <-sam> @>N
+correspondentes	 [correspondente] N M P @P<
+estrangeiros	 [estrangeiro] ADJ M P @N<
+$,
+o	 [o] DET M S <artd> @>N
+novo	 [novo] ADJ M S @>N
+prefeito	 [prefeito] N M S @SUBJ>
+disse	 [dizer] V PS 3S IND VFIN <fmc> @FMV
+que	 [que] KS @SUB @#FS-<ACC
+está	 [estar] V PR 3S IND VFIN <*1> @FMV
+em	 [em] PRP <sam-> @<ADVS
+a	 [o] DET F S <artd> <-sam> @>N
+hora	 [hora] N F S @P<
+de	 [de] PRP @N<
+os	 [o] DET M P <artd> @>N
+nova-iorquinos	 [nova-iorquino] <n> ADJ M P @SUBJ>
+pensarem	 [pensar] V INF 3P @#ICL-P< @IMV
+menos	 [menos] ADV <KOMP> <quant> @<ADVL
+em	 [em] PRP @<PIV
+suas	 [seu] DET F P <si> <poss 3S> @>N
+diferenças	 [diferença] N F P @P<
+e	 [e] <co-fmc> <co-vfin> KC @CO
+mais	 [mais] ADV <KOMP> <quant> @>A
+em	 [em] PRP <sam-> @<ADVL
+o=que	 [o=que] SPEC M/F S <interr> @P<
+os	 [o] DET M P <artd> @>N
+une	 [unir] V PR 3S IND VFIN <fmc> <*2> @FMV
+$.	 [$.] PU <<<
+$¶	 [$¶] PU <<<
+</s>
+<s>
+Enxugando	 [enxugar] V GER @#ICL-ADVL @IMV
+a	 [o] DET F S <artd> @>N
+máquina	 [máquina] N F S @<ACC
+$¶	 [$¶] PU <<<
+</s>
+<s>
+Giuliani	 [Giuliani] PROP M/F S @SUBJ>
+cortou	 [cortar] V PS 3S IND VFIN <fmc> @FMV
+cargos	 [cargo] N M P @<ACC
+de	 [de] PRP @N<
+representantes	 [representante] N M/F P @P<
+de	 [de] PRP @N<
+comunidades	 [comunidade] N F P @P<
+$	 [$] PU
+asiática	 [asiática] N F S @PRED>
+$,
+afro-americana	 [afro-americana] N F S @N<PRED
+$,
+latina	 [latino] ADJ F S @N<PRED
+etc	 [etc] ADV @<ADVL
+$.	 [$.] PU <<<
+$¶	 [$¶] PU <<<
+</s>
+<s>
+$	 [$] PU
+e	 [e] KC @CO
+revogou	 [revogar] V PS 3S IND VFIN <fmc> @FMV
+políticas	 [política] N F P @<ACC
+de	 [de] PRP @N<
+quotas	 [quota] N F P @P<
+de	 [de] PRP @N<
+empregos	 [emprego] N M P @P<
+para	 [para] PRP @<ADVL
+esses	 [esse] DET M P <dem> @>N
+grupos	 [grupo] N M P @P<
+$,
+que	 [que] KS @SUB @#FS-<ACC
+haviam	 [haver] V IMPF 3P IND VFIN @FAUX
+sido	 [ser] V PCP M S @IAUX @#ICL-AUX<
+estabelecidas	 [estabelecer] V PCP F P @IMV @#ICL-AUX<
+por	 [por] PRP @<PASS
+seu	 [seu] DET M S <poss 3S> @>N
+antecessor	 [antecessor] N M S @P<
+segundo	 [segundo] ADJ M S <NUM-ord> @N<
+o	 [o] DET M S <artd> @>N
+princípio	 [princípio] N M S @<ACC
+liberal	 [liberal] ADJ M S @N<
+de	 [de] PRP <sam-> @N<
+a	 [o] DET F S <artd> <-sam> @>N
+ação	 [ação] N F S <*1> @P<
+afirmativa	 [afirmativo] ADJ F S <*2> @N<
+$.	 [$.] PU <<<
+$¶	 [$¶] PU <<<
+</s>
+<s>
+Segundo=Giuliani	 [Segundo=Giuliani] PROP M S @SUBJ>
+$,
+o	 [o] DET M S <artd> @>N
+critério	 [critério] N M S @SUBJ>
+de	 [de] PRP <sam-> @N<
+as	 [o] DET F P <artd> <-sam> @>N
+nomeações	 [nomeação] N F P @P<
+foi	 [ser] V PS 3S IND VFIN <fmc> @FMV
+e	 [e] <co-vfin> KC @CO
+continuará	 [continuar] V FUT 3S IND VFIN <fmc> @FAUX
+sendo	 [ser] V GER @#ICL-AUX< @IMV
+apenas	 [apenas] ADV @>N
+o	 [o] DET M S <dem> @<SC
+de	 [de] PRP <sam-> @N<
+a	 [o] DET F S <artd> <-sam> @>N
+competência	 [competência] N F S @P<
+$.	 [$.] PU <<<
+$¶	 [$¶] PU <<<
+</s>
+<s>
+Mas	 [mas] KC @CO
+o	 [o] DET M S <artd> @>N
+novo	 [novo] ADJ M S @>N
+administrador	 [administrador] N M S @SUBJ>
+optou	 [optar] V PS 3S IND VFIN <fmc> @FMV
+também	 [também] ADV @>P
+por	 [por] PRP @<PIV
+nomear	 [nomear] V INF @IMV @#ICL-P<
+pessoas	 [pessoa] N F P @<ACC
+com	 [com] PRP @N< @<ADVL
+pouca	 [pouco] DET F S @P< <quant> @>N
+ou	 [ou] KC @CO
+nenhuma	 [nenhum] DET F S <quant> @>N
+experiência	 [experiência] N F S @<ACC
+prévia	 [prévio] ADJ F S @N<
+em	 [em] PRP <sam-> @N<
+a	 [o] DET F S <artd> <-sam> @>N
+administração	 [administração] N F S @P<
+pública	 [público] ADJ F S @N<
+$.	 [$.] PU <<<
+$¶	 [$¶] PU <<<
+</s>
+<s>
+Ele	 [ele] PERS M 3S NOM @SUBJ>
+próprio	 [próprio] DET M S <ident> @N<
+ocupando	 [ocupar] V GER @#ICL-ADVL> @IMV
+seu	 [seu] DET M S <si> <poss 3S> @>N
+primeiro	 [primeiro] ADJ M S <NUM-ord> @>N
+cargo	 [cargo] N M S @<ACC
+eletivo	 [eletivo] ADJ M S @N<
+$,
+Giuliani	 [Giuliani] PROP M/F S @SUBJ>
+está	 [estar] V PR 3S IND VFIN <fmc> @FAUX
+criando	 [criar] V GER @#ICL-AUX< @IMV
+grande	 [grande] ADJ F S @>N
+expectativa	 [expectativa] N F S @<ACC
+sobre	 [sobre] PRP @<PIV @<ADVL
+o	 [o] DET M S <artd> @>N
+desempenho	 [desempenho] N M S @P<
+de	 [de] PRP @N<
+sua	 [seu] DET F S <poss 3S> @>N
+equipe	 [equipe] N F S @P<
+em	 [em] PRP <sam-> @<ADVL
+a	 [o] DET F S <artd> <-sam> @>N
+prefeitura	 [prefeitura] N F S @P<
+$.	 [$.] PU <<<
+$¶	 [$¶] PU <<<
+</s>
+<s>
+Durante	 [durante] PRP @ADVL>
+os	 [o] DET M P <artd> @>N
+dois	 [dois] NUM M P <card> @>N
+meses	 [mês] N M P @P<
+de	 [de] PRP <sam-> @N<
+a	 [o] DET F S <artd> <-sam> @>N
+transição	 [transição] N F S @P<
+$,
+o	 [o] DET M S <artd> @>N
+time	 [time] N M S @SUBJ>
+de	 [de] PRP @N<
+Giuliani	 [Giuliani] PROP M/F S @P<
+já	 [já] ADV @ADVL>
+anunciou	 [anunciar] V PS 3S IND VFIN <fmc> @FMV
+a	 [o] DET F S <artd> @>N
+intenção	 [intenção] N F S @<ACC
+de	 [de] PRP @N<
+reduzir	 [reduzir] V INF @IMV @#ICL-P<
+o	 [o] DET M S <artd> @>N
+tamanho	 [tamanho] N M S @<ACC
+de	 [de] PRP <sam-> @N<
+a	 [o] DET F S <artd> <-sam> @>N
+máquina	 [máquina] N F S @P<
+administrativa	 [administrativo] ADJ F S @N<
+$.	 [$.] PU <<<
+$¶	 [$¶] PU <<<
+</s>
+<s>
+Para	 [para] PRP @ADVL>
+isso	 [isso] SPEC M S <dem> @P<
+$,
+empresas	 [empresa] N F P @SUBJ>
+e	 [e] KC @CO
+órgãos	 [órgão] N M P @SUBJ>
+públicos	 [público] ADJ M P @N<
+serão	 [ser] V FUT 3P IND VFIN <fmc> @FAUX
+fundidos	 [fundir] V PCP M P @IMV @#ICL-AUX<
+ou	 [ou] KC @CO
+simplesmente	 [simplesmente] ADV @<ADVL
+eliminados	 [eliminar] V PCP M P @#ICL-AUX< @IMV
+$.	 [$.] PU <<<
+$¶	 [$¶] PU <<<
+</s>
+<s>
+Buraco	 [buraco] N M S @NPHR
+de	 [de] PRP @N<
+US$	 [US$] PROP M/F S @P<
+2	 [2] NUM M/F P <card> @N<
+bi	 [bi] N M/F S @NPHR
+$¶	 [$¶] PU <<<
+</s>
+<s>
+O	 [o] DET M S <artd> @>N
+déficit	 [déficit] N M S @SUBJ>
+de	 [de] PRP <sam-> @N<
+o	 [o] DET M S <artd> <-sam> @>N
+orçamento	 [orçamento] N M S @P<
+de	 [de] PRP @N<
+Nova=York	 [Nova=York] PROP F S @P<
+em	 [em] PRP @N<
+1994	 [1994] NUM M/F P <card> @P<
+deverá	 [dever] V FUT 3S IND VFIN <fmc> @FAUX
+superar	 [superar] V INF @IMV @#ICL-AUX<
+US$	 [US$] PROP M/F S @<ACC
+2	 [2] NUM M P <card> @>N
+bilhões	 [bilhão] N M P @PRED>
+$,
+segundo	 [segundo] ADV @#AS-<ADVL <prp> <rel> @COM
+as	 [o] DET F P <artd> @>N
+últimas	 [último] ADJ F P <NUM-ord> @>N
+previsões	 [previsão] N F P @AS<
+$.	 [$.] PU <<<
+$¶	 [$¶] PU <<<
+</s>
+<s>
+Como=Giuliani	 [Como=Giuliani] PROP M S @SUBJ>
+prometeu	 [prometer] V PS 3S IND VFIN <fmc> @FMV
+durante	 [durante] PRP @<ADVL
+a	 [o] DET F S <artd> @>N
+campanha	 [campanha] N F S @P<
+reduzir	 [reduzir] V INF @#ICL-<ACC @IMV
+os	 [o] DET M P <artd> @>N
+impostos	 [imposto] N M P @<ACC
+de	 [de] PRP <sam-> @N<
+a	 [o] DET F S <artd> <-sam> @>N
+cidade	 [cidade] N F S @P<
+$,
+que	 [que] KS @SUB @#FS-<ADVL
+são	 [ser] V PR 3P IND VFIN @FMV
+os	 [o] DET M P <artd> @>N
+mais	 [mais] ADV <KOMP> <quant> @>A
+altos	 [alto] <n> ADJ M P @<SC
+de	 [de] PRP @KOMP<
+todos=os	 [todo=o] DET M P <quant> @>N
+Estados=Unidos	 [Estados=Unidos] PROP M P @P<
+$,
+cortes	 [corte] N F P @N<PRED
+em	 [em] PRP <sam-> @<ADVL
+os	 [o] DET M P <artd> <-sam> @>N
+gastos	 [gasto] N M P @P<
+sociais	 [social] ADJ M P @N<
+e	 [e] <co-fmc> <co-vfin> KC @CO
+privatizações	 [privatização] N F P @P<
+deverão	 [dever] V FUT 3P IND VFIN <fmc> @FAUX
+ser	 [ser] V INF @IMV @#ICL-AUX<
+os	 [o] DET M P <artd> @>N
+caminhos	 [caminho] N M P @<SC
+escolhidos	 [escolhido] ADJ M P @N<
+$.	 [$.] PU <<<
+$¶	 [$¶] PU <<<
+</s>
+</TEXT>
+$¶	 [$¶] PU <<<
+</DOC>

@@ -1,0 +1,207 @@
+<DOC>
+<DOCNO.valor=FSP940101-058>
+<DOCID.valor=FSP940101-058>
+<DATE.valor=940101>
+<TEXT>
+<s>
+De	 [de] PRP <sam-> @ADVL
+as	 [o] DET F P <artd> <-sam> @>N
+agências=internacionais	 [agência=internacional] N F P @P<
+$¶	 [$¶] PU <<<
+</s>
+<s>
+O	 [o] DET M S <artd> @>N
+Exército=do=Japão	 [Exército=do=Japão] PROP M S @SUBJ>
+usou	 [usar] V PS 3S IND VFIN <fmc> @FMV
+armas	 [arma] N F P @<ACC
+biológicas	 [biológico] ADJ F P @N<
+em	 [em] PRP <sam-> @<ADVL
+a	 [o] DET F S <artd> <-sam> @>N
+China	 [China] PROP F S @P<
+durante	 [durante] PRP @<ADVL
+a	 [o] DET F S <artd> @>N
+2.ª	 [2.ª] <n> ADJ F S <NUM-ord> @P<
+Guerra=Mundial	 [Guerra=Mundial] PROP F S @P<
+$.	 [$.] PU <<<
+$¶	 [$¶] PU <<<
+</s>
+<s>
+Forças	 [força] N F P @SUBJ>
+japonesas	 [japonês] ADJ F P @N<
+disseminaram	 [disseminar] V PS/MQP 3P IND VFIN <fmc> @FMV
+pulgas	 [pulga] N F P @<ACC
+portadoras	 [portador] ADJ F P @N<PRED
+de	 [de] PRP <sam-> @A<
+a	 [o] DET F S <artd> <-sam> @>N
+bactéria	 [bactéria] N F S @P<
+de	 [de] PRP <sam-> @N<
+a	 [o] DET F S <artd> <-sam> @>N
+peste	 [peste] N F S @P<
+e	 [e] <co-fmc> <co-vfin> KC @CO
+infectaram	 [infectar] V PS/MQP 3P IND VFIN <fmc> @FMV
+poços	 [poço] N M P @<ACC
+de	 [de] PRP @N<
+água	 [água] N F S @P<
+e	 [e] KC @CO
+frutas	 [fruta] N F P @<ACC
+com	 [com] PRP @<ADVL
+o	 [o] DET M S <artd> @>N
+vibrião	 [vibrião] N M S @P<
+de	 [de] PRP <sam-> @N<
+o	 [o] DET M S <artd> <-sam> @>N
+cólera	 [cólera] N M S @P<
+$,
+entre	 [entre] PRP @<ADVL
+outros	 [outro] DET M P <KOMP> <diff> @>N
+recursos	 [recurso] N M P @P<
+$.	 [$.] PU <<<
+$¶	 [$¶] PU <<<
+</s>
+<s>
+As	 [o] DET F P <artd> @>N
+acusações	 [acusação] N F P @SUBJ>
+foram	 [ser] V PS/MQP 3P IND VFIN <fmc> @FAUX
+feitas	 [fazer] V PCP F P @IMV @#ICL-AUX<
+por	 [por] PRP @<PASS
+professores	 [professor] N M P @P<
+de	 [de] PRP <sam-> @N<
+as	 [o] DET F P <artd> <-sam> @>N
+universidades	 [universidade] N F P @P<
+de	 [de] PRP @N<
+Chuo	 [Chuo] PROP M/F S @P<
+e	 [e] KC @CO
+de	 [de] PRP @N<
+Rikkyo	 [Rikkyo] PROP M/F S @P<
+$,
+em	 [em] PRP <sam-> @<ADVL
+o	 [o] DET M S <artd> <-sam> @>N
+Japão	 [Japão] PROP M S @P<
+$,
+através	 [através] ADV @<ADVL
+de	 [de] PRP <sam-> @A<
+o	 [o] DET M S <artd> <-sam> @>N
+Centro=de=Dados	 [Centro=de=Dados] PROP M S @P<
+sobre	 [sobre] PRP @<ADVL
+a	 [o] DET F S <artd> @>N
+Responsabilidade=de=Guerra=do=Japão	 [Responsabilidade=de=Guerra=do=Japão] PROP F S @P<
+$.	 [$.] PU <<<
+$¶	 [$¶] PU <<<
+</s>
+<s>
+Eles	 [eles] PERS M 3P NOM @SUBJ>
+investigaram	 [investigar] V PS/MQP 3P IND VFIN <fmc> @FMV
+diários	 [diário] N M P @<ACC
+de	 [de] PRP @N<
+oficiais	 [oficial] N M P @P<
+de	 [de] PRP <sam-> @N<
+os	 [o] DET M P <artd> <-sam> @>N
+departamentos	 [departamento] N M P @P<
+médico	 [médico] ADJ M S @N<PRED
+e	 [e] <co-vfin> KC @CO
+estratégico	 [estratégico] ADJ M S @N<PRED
+de	 [de] PRP <sam-> @<ADVL
+o	 [o] DET M S <artd> <-sam> @>N
+quartel-general	 [quartel-general] N M S @P<
+de	 [de] PRP <sam-> @N<
+o	 [o] DET M S <artd> <-sam> @>N
+Exército	 [exército] <prop> N M S @P<
+$,
+que	 [que] KS @SUB @#FS-<ACC
+estão	 [estar] V PR 3P IND VFIN @FMV
+em	 [em] PRP <sam-> @<ADVS
+os	 [o] DET M P <artd> <-sam> @>N
+arquivos	 [arquivo] N M P @P<
+de	 [de] PRP <sam-> @N<
+o	 [o] DET M S <artd> <-sam> @>N
+Instituto=Nacional=de=Defesa	 [Instituto=Nacional=de=Defesa] PROP M S @P<
+$.	 [$.] PU <<<
+$¶	 [$¶] PU <<<
+</s>
+<s>
+O	 [o] DET M S <artd> <*1> @>N
+envenenamento	 [envenenamento] N M S @SUBJ>
+$(	 [$(] PU
+disperso	 [dispersar] V PCP M S @IMV @#ICL-N<PRED
+por	 [por] PRP @<PASS
+aviões	 [avião] N M P @P<
+militares	 [militar] ADJ M P @N<
+$)	 [$)] PU
+presente	 [presente] ADJ M S @N<
+perto=de	 [perto=de] PRP @N<
+Changde	 [Changde] PROP M/F S @P<
+$...	 [$...] PU
+as	 [o] DET F P <artd> @>N
+pessoas	 [pessoa] N F P @P< @SUBJ>
+que	 [que] SPEC M/F S @SUBJ> <rel> @#FS-N<
+entraram	 [entrar] V PS/MQP 3P IND VFIN @FMV
+em	 [em] PRP @<ADVS
+contato	 [contato] N M S @P<
+com	 [com] PRP @N<
+ele	 [ele] PERS M 3S NOM/PIV @P<
+sofreram	 [sofrer] V PS/MQP 3P IND VFIN <fmc> @FMV
+envenenamento	 [envenenamento] N M S @<ACC
+terrível	 [terrível] ADJ M S <*2> @N<
+$,
+consta	 [constar] V PR 3S IND VFIN <fmc> @FMV
+em	 [em] PRP @<PIV
+um	 [um] NUM M S <card> @P<
+de	 [de] PRP <sam-> @N<
+os	 [o] DET M P <artd> <-sam> @>N
+diários	 [diário] N M P @P<
+investigados	 [investigar] V PCP M P @N<
+$.	 [$.] PU <<<
+$¶	 [$¶] PU <<<
+</s>
+<s>
+Os	 [o] DET M P <artd> @>N
+diários	 [diário] N M P @SUBJ>
+revelaram	 [revelar] V PS/MQP 3P IND VFIN <fmc> @FMV
+planos	 [plano] N M P @<ACC
+de	 [de] PRP @N<
+estender	 [estender] V INF @IMV @#ICL-P<
+a	 [o] DET F S <artd> @>N
+guerra	 [guerra] N F S @<ACC
+biológica	 [biológico] ADJ F S @N<
+a	 [o] DET F S <artd> @>N
+quase	 [quase] ADV <quant> @>A
+toda=a	 [todo=o] DET F S <quant> @>N
+região	 [região] N F S @<SUBJ
+de	 [de] PRP <sam-> @N<
+o	 [o] DET M S <artd> <-sam> @>N
+Pacífico	 [pacífico] <prop> <n> ADJ M S @P<
+$,
+de	 [de] PRP <sam-> @N<
+as	 [o] DET F P <artd> <-sam> @>N
+Filipinas	 [Filipinas] PROP F P @P<
+a	 [a] PRP <sam-> @<ADVL
+o	 [o] DET M S <artd> <-sam> @>N
+Havaí	 [Havaí] PROP M S @P<
+e	 [e] KC @CO
+a	 [a] PRP <sam-> @<ADVL
+a	 [o] DET F S <artd> <-sam> @>N
+Austrália	 [Austrália] PROP F S @P<
+$.	 [$.] PU <<<
+$¶	 [$¶] PU <<<
+</s>
+<s>
+Os	 [o] DET M P <artd> @>N
+japoneses	 [japonês] N M P @SUBJ>
+abandonaram	 [abandonar] V PS/MQP 3P IND VFIN <fmc> @FMV
+os	 [o] DET M P <artd> @>N
+planos	 [plano] N M P @<ACC
+em	 [em] PRP @<ADVL
+julho	 [julho] N M S @P<
+de	 [de] PRP @N<
+1945	 [1945] NUM M/F P <card> @P<
+$,
+um	 [um] NUM M S <card> @>N
+mês	 [mês] N M S @>A
+antes	 [antes] ADV @N< @<ADVL
+de	 [de] PRP @A<
+capitularem	 [capitular] V INF 3P @IMV @#ICL-P<
+$.	 [$.] PU <<<
+$¶	 [$¶] PU <<<
+</s>
+</TEXT>
+$¶	 [$¶] PU <<<
+</DOC>

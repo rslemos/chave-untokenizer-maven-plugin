@@ -1,0 +1,139 @@
+<DOC>
+<DOCNO.valor=FSP940101-079>
+<DOCID.valor=FSP940101-079>
+<DATE.valor=940101>
+<TEXT>
+<s>
+Da=Redação	 [Da=Redação] PROP F S @NPHR
+$¶	 [$¶] PU <<<
+</s>
+<s>
+A	 [o] DET F S <artd> @>N
+pesquisa	 [pesquisa] N F S @SUBJ>
+Datafolha	 [Datafolha] PROP F S @N<
+é	 [ser] V PR 3S IND VFIN <fmc> @FMV
+um	 [um] DET M S <arti> @>N
+levantamento	 [levantamento] N M S @<SC
+por	 [por] PRP @N<
+amostragem	 [amostragem] N F S @P<
+estratificada	 [estratificar] V PCP F S @N<
+$,
+com	 [com] PRP @N<PRED @<ADVL
+cotas	 [cota] N F P @P<
+de	 [de] PRP @N<
+sexo	 [sexo] N M S @P<
+e	 [e] <co-vfin> KC @CO
+cidade	 [cidade] N F S @P<
+$,
+sendo=que	 [sendo=que] KS @SUB @#FS-<ADVL
+o	 [o] DET M S <artd> @>N
+conjunto	 [conjunto] N M S @SUBJ>
+de	 [de] PRP <sam-> @N<
+a	 [o] DET F S <artd> <-sam> @>N
+população	 [população] N F S @P<
+adulta	 [adulto] ADJ F S @N<
+de	 [de] PRP <sam-> @N<
+a	 [o] DET F S <artd> <-sam> @>N
+cidade	 [cidade] N F S @P<
+é	 [ser] V PR 3S IND VFIN @FAUX
+tomado	 [tomar] V PCP M S @IMV @#ICL-AUX<
+como	 [como] ADV @#AS-<SC <rel> @PRD
+universo	 [universo] N M S @AS<
+de	 [de] PRP <sam-> @N<
+a	 [o] DET F S <artd> <-sam> @>N
+pesquisa	 [pesquisa] N F S @P<
+$.	 [$.] PU <<<
+$¶	 [$¶] PU <<<
+</s>
+<s>
+Em	 [em] PRP <sam-> @ADVL>
+este	 [este] DET M S <dem> <-sam> @>N
+levantamento	 [levantamento] N M S @P<
+$,
+realizado	 [realizar] V PCP M S @IMV @#ICL-PRED>
+entre	 [entre] PRP @<ADVL
+os	 [o] DET M P <artd> @>N
+dias	 [dia] N M P @P<
+16	 [16] NUM M/F P <card> @N<
+e	 [e] KC @CO
+17	 [17] NUM M/F P <card> @N<
+de	 [de] PRP @N<
+dezembro	 [dezembro] N M S @P<
+$,
+foram	 [ser] V PS/MQP 3P IND VFIN <fmc> @FAUX
+entrevistadas	 [entrevistar] V PCP F P @IMV @#ICL-AUX<
+1.076	 [1.076] NUM F P <card> @>N
+pessoas	 [pessoa] N F P @<SUBJ
+em	 [em] PRP @<ADVL
+São=Paulo	 [São=Paulo] PROP M S @P<
+$,
+646	 [646] NUM M/F P <card> @<SUBJ
+em	 [em] PRP <sam-> @<ADVL
+o	 [o] DET M S <artd> <-sam> @>N
+Rio=de=Janeiro	 [Rio=de=Janeiro] PROP M S @P<
+$,
+432	 [432] NUM M/F P <card> @<SUBJ
+em	 [em] PRP @<ADVL
+Belo=Horizonte	 [Belo=Horizonte] PROP M S @P<
+$,
+432	 [432] NUM M/F P <card> @<SUBJ
+em	 [em] PRP @<ADVL
+Salvador	 [Salvador] PROP M S @P<
+$,
+432	 [432] NUM M/F P <card> @<SUBJ
+em	 [em] PRP @<ADVL
+Porto=Alegre	 [Porto=Alegre] PROP M S @P<
+$,
+432	 [432] NUM M/F P <card> @<SUBJ
+em	 [em] PRP @<ADVL
+Curitiba	 [Curitiba] PROP M S @P<
+$,
+432	 [432] NUM M/F P <card> @<SUBJ
+em	 [em] PRP @<ADVL
+Florianópolis	 [Florianópolis] PROP M S @P<
+$,
+432	 [432] NUM M/F P <card> @<SUBJ
+em	 [em] PRP @<ADVL
+Fortaleza	 [fortaleza] N F S @P<
+$,
+428	 [428] NUM M/F P <card> @<SUBJ
+em	 [em] PRP @<ADVL
+Recife	 [Recife] PROP M S @P<
+e	 [e] KC @CO
+431	 [431] NUM M/F P <card> @<SUBJ
+em	 [em] PRP @<ADVL
+Campo=Grande	 [Campo=Grande] PROP M S @P<
+$.	 [$.] PU <<<
+$¶	 [$¶] PU <<<
+</s>
+<s>
+A	 [o] DET F S <artd> @>N
+direção	 [direção] N F S @SUBJ>
+de	 [de] PRP <sam-> @N<
+o	 [o] DET M S <artd> <-sam> @>N
+Datafolha	 [Datafolha] PROP F S @P<
+é	 [ser] V PR 3S IND VFIN <fmc> @FAUX
+exercida	 [exercer] V PCP F S @IMV @#ICL-AUX<
+por	 [por] PRP <sam-> @<PASS
+os	 [o] DET M P <artd> <-sam> @>N
+sociólogos	 [sociólogo] N M P @P<
+Antonio=Manuel=Teixeira=Mendes	 [Antonio=Manuel=Teixeira=Mendes] PROP M S @N<
+e	 [e] KC @CO
+Gustavo=Venturi	 [Gustavo=Venturi] PROP M S @N<
+$,
+tendo	 [ter] V GER @#ICL-<ADVL @IMV
+como	 [como] ADV @#AS-<ADVL <prp> <rel> @ADVL
+assistentes	 [assistente] N M/F P @AS<
+Mauro=Francisco=Paulino	 [Mauro=Francisco=Paulino] PROP M S @N<
+$,
+Emilia=de=Franco	 [Emilia=de=Franco] PROP F S @APP @<ACC
+e	 [e] KC @CO
+a	 [o] DET F S <artd> @>N
+estatística	 [estatístico] <n> ADJ F S @APP @<ACC
+Renata=Nunes=Cesar	 [Renata=Nunes=Cesar] PROP F S @APP @AS<
+$.	 [$.] PU <<<
+$¶	 [$¶] PU <<<
+</s>
+</TEXT>
+$¶	 [$¶] PU <<<
+</DOC>

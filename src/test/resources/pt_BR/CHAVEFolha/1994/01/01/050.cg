@@ -1,0 +1,346 @@
+<DOC>
+<DOCNO.valor=FSP940101-050>
+<DOCID.valor=FSP940101-050>
+<DATE.valor=940101>
+<TEXT>
+<s>
+Madonna	 [Madonna] PROP F S @SUBJ>
+vê	 [ver] V PR 3S IND VFIN <fmc> @FMV
+seu	 [seu] DET M S <poss 3S> @>N
+time	 [time] N M S @SUBJ>
+perder	 [perder] V INF 3S @IMV @#ICL-<ACC
+em	 [em] PRP <sam-> @<ADVL
+a	 [o] DET F S <artd> <-sam> @>N
+NBA	 [NBA] PROP F S @P<
+$¶	 [$¶] PU <<<
+</s>
+<s>
+A	 [o] DET F S <artd> @>N
+cantora	 [cantora] N F S @SUBJ>
+Madonna	 [Madonna] PROP F S @N<
+foi	 [ir] V PS 3S IND VFIN <fmc> @FMV
+a	 [a] PRP <sam-> @<ADVS
+o	 [o] DET M S <artd> <-sam> @>N
+Miami=Arena	 [Miami=Arena] PROP M S @P<
+quinta-feira	 [quinta-feira] N F S @PRED>
+para	 [para] PRP @N<
+ver	 [ver] V INF @IMV @#ICL-P<
+a	 [o] DET F S <artd> @>N
+partida	 [partida] N F S @<SUBJ
+entre	 [entre] PRP @<ADVO
+Miami=Heat	 [Miami=Heat] PROP M/F S @P<
+e	 [e] <co-fmc> <co-vfin> KC @CO
+Orlando=Magic	 [Orlando=Magic] PROP M S @P<
+por	 [por] PRP <sam-> @<ADVL
+a	 [o] DET F S <artd> <-sam> @>N
+NBA	 [NBA] PROP F S @P<
+$(	 [$(] PU
+em	 [em] PRP <sam-> @<ADVL
+a	 [o] DET F S <artd> <-sam> @>N
+foto	 [foto] N F S @P<
+ela	 [ela] PERS F 3S NOM @SUBJ>
+é	 [ser] V PR 3S IND VFIN <fmc> @FAUX
+abraçada	 [abraçar] V PCP F S @IMV @#ICL-AUX<
+por	 [por] PRP @<PASS
+Bernie	 [Bernie] PROP M/F S <*2> <*1> @P<
+$,
+mascote	 [mascote] N M S @N<PRED
+de	 [de] PRP <sam-> @N<
+o	 [o] DET M S <artd> <-sam> @>N
+time	 [time] N M S @P<
+de	 [de] PRP <sam-> @N<
+a	 [o] DET F S <artd> <-sam> @>N
+casa	 [casa] N F S @P<
+$)	 [$)] PU
+$.	 [$.] PU <<<
+$¶	 [$¶] PU <<<
+</s>
+<s>
+A	 [o] DET F S <artd> @>N
+equipe	 [equipe] N F S @SUBJ>
+visitante	 [visitante] N M/F S @N<
+venceu	 [vencer] V PS 3S IND VFIN <fmc> @FMV
+o	 [o] DET M S <artd> @>N
+jogo	 [jogo] N M S @<ACC
+por	 [por] PRP @<ADVL
+108=a=100	 [108=a=100] NUM M/F P @P<
+$.	 [$.] PU <<<
+$¶	 [$¶] PU <<<
+</s>
+<s>
+Jackson	 [Jackson] PROP M/F S @SUBJ>
+aparece	 [aparecer] V PR 3S IND VFIN <fmc> @FMV
+em	 [em] PRP @<ADVL
+$'	 [$'] PU
+resort	 [resort] N M S @P<
+$'	 [$'] PU
+de	 [de] PRP @<ADVL
+Las=Vegas	 [Las=Vegas] PROP M/F S @P<
+$¶	 [$¶] PU <<<
+</s>
+<s>
+Pressionado	 [pressionar] V PCP M S @IMV @#ICL-PRED>
+por	 [por] PRP @<PASS
+acusações	 [acusação] N F P @P<
+de	 [de] PRP @N<
+molestamento	 [molestamento] N M S @P<
+sexual	 [sexual] ADJ M S @N<
+contra	 [contra] PRP @N<
+crianças	 [criança] N F P @P<
+$,
+Michael=Jackson	 [Michael=Jackson] PROP M S @SUBJ>
+apareceu	 [aparecer] V PS 3S IND VFIN <fmc> @FMV
+anteontem	 [anteontem] ADV @<ADVL
+em	 [em] PRP <sam-> @<ADVL
+o	 [o] DET M S <artd> <-sam> @>N
+Treasure=Island=Resort	 [Treasure=Island=Resort] PROP M S @P<
+de	 [de] PRP @N<
+Las=Vegas	 [Las=Vegas] PROP M/F S @P<
+$(	 [$(] PU
+em	 [em] PRP <sam-> @<ADVL
+a	 [o] DET F S <artd> <-sam> @>N
+foto	 [foto] N F S @P<
+$,
+ele	 [ele] PERS M 3S NOM @SUBJ>
+vê	 [ver] V PR 3S IND VFIN <fmc> @FMV
+um	 [um] DET M S <arti> @>N
+show	 [show] N M S @SUBJ>
+retratando	 [retratar] V GER @IMV @#ICL-<ACC
+uma	 [um] DET F S <arti> @>N
+batalha	 [batalha] N F S @<ACC
+entre	 [entre] PRP @N< @<ADVL
+piratas	 [pirata] N M/F P @P<
+$)	 [$)] PU
+$.	 [$.] PU <<<
+$¶	 [$¶] PU <<<
+</s>
+<s>
+O	 [o] DET M S <artd> @>N
+cantor	 [cantor] N M S @SUBJ>
+foi	 [ser] V PS 3S IND VFIN <fmc> @FAUX
+visto	 [ver] V PCP M S @IMV @#ICL-AUX<
+em	 [em] PRP @<ADVL
+companhia	 [companhia] N F S @P<
+de	 [de] PRP <sam-> @N<
+o	 [o] DET M S <artd> <-sam> @>N
+megainvestidor	 [megainvestidor] N M S @P<
+Michael=Milken	 [Michael=Milken] PROP M S @N<
+$,
+condenado	 [condenar] V PCP M S @N<PRED
+há	 [há] PRP @<ADVL
+poucos	 [pouco] DET M P <quant> @>N
+anos	 [ano] N M P @P<
+por	 [por] PRP @<ADVL
+um	 [um] DET M S <arti> @>N
+escândalo	 [escândalo] N M S @P<
+financeiro	 [financeiro] ADJ M S @N<
+$.	 [$.] PU <<<
+$¶	 [$¶] PU <<<
+</s>
+<s>
+Piora	 [piora] N F S @NPHR
+cenário	 [cenário] N M S @NPHR
+para	 [para] PRP @N<
+a	 [o] DET F S <artd> @>N
+ajuda	 [ajuda] N F S @P<
+em	 [em] PRP <sam-> @N<
+a	 [o] DET F S <artd> <-sam> @>N
+Bósnia	 [Bósnia] PROP F S @P<
+$¶	 [$¶] PU <<<
+</s>
+<s>
+A	 [o] DET F S <artd> @>N
+ONU	 [ONU] PROP F S @SUBJ>
+terá	 [ter] V FUT 3S IND VFIN <fmc> @FMV
+este	 [este] DET M S <dem> @>N
+ano	 [ano] N M S @<ADVL
+muito	 [muito] ADV <quant> @>A
+mais	 [mais] ADV <KOMP> <quant> @<ADVL
+dificuldade	 [dificuldade] N F S @<ACC
+para	 [para] PRP @<ADVL
+entregar	 [entregar] V INF @IMV @#ICL-P<
+a	 [o] DET F S <artd> @>N
+ajuda	 [ajuda] N F S @<ACC
+humanitária	 [humanitário] ADJ F S @N<PRED
+a	 [a] PRP <sam-> @<PIV
+as	 [o] DET F P <artd> <-sam> @>N
+vítimas	 [vítima] N F P @P<
+de	 [de] PRP <sam-> @N<
+a	 [o] DET F S <artd> <-sam> @>N
+guerra=civil	 [guerra=civil] N F S @P<
+em	 [em] PRP <sam-> @<ADVL
+a	 [o] DET F S <artd> <-sam> @>N
+Bósnia	 [Bósnia] PROP F S @P<
+do=que	 [do=que] KS @COM @#AS-KOMP<
+em	 [em] PRP <sam-> @AS<
+o	 [o] DET M S <artd> <-sam> @>N
+início	 [início] N M S @P<
+de	 [de] PRP @N<
+1993	 [1993] NUM M/F P <card> @P<
+$,
+disse	 [dizer] V PS 3S IND VFIN <fmc> @FMV
+o	 [o] DET M S <artd> @>N
+Alto=Comissariado	 [Alto=Comissariado] PROP M S @<ACC
+de	 [de] PRP <sam-> @N<
+a	 [o] DET F S <artd> <-sam> @>N
+ONU	 [ONU] PROP F S @P<
+para	 [para] PRP @<ADVL
+Refugiados	 [refugiado] N M P @P<
+$.	 [$.] PU <<<
+$¶	 [$¶] PU <<<
+</s>
+<s>
+Um	 [um] DET M S <arti> @>N
+soldado	 [soldado] N M S @SUBJ>
+francês	 [francês] ADJ M S @N<
+de	 [de] PRP <sam-> @N<
+as	 [o] DET F P <artd> <-sam> @>N
+forças	 [força] N F P @P<
+de	 [de] PRP @N<
+paz	 [paz] N F S @P<
+foi	 [ser] V PS 3S IND VFIN <fmc> @FAUX
+ferido	 [ferir] V PCP M S @IMV @#ICL-AUX<
+a	 [a] PRP @<ADVL
+tiro	 [tiro] N M S @P<
+ontem	 [ontem] ADV @<ADVL
+por	 [por] PRP @<ADVL
+muçulmanos	 [muçulmano] N M P @P<
+$.	 [$.] PU <<<
+$¶	 [$¶] PU <<<
+</s>
+<s>
+Tufão=Nell	 [Tufão=Nell] PROP M/F S @SUBJ>
+deixa	 [deixar] V PR 3S IND VFIN <fmc> @FMV
+126	 [126] NUM M/F P <card> @>N
+mortos	 [morto] <n> <n> ADJ M P @<ACC
+em	 [em] PRP <sam-> @N<
+as	 [o] DET F P <artd> <-sam> @>N
+Filipinas	 [Filipinas] PROP F P @P<
+$¶	 [$¶] PU <<<
+</s>
+<s>
+O	 [o] DET M S <artd> @>N
+balanço	 [balanço] N M S @SUBJ>
+é	 [ser] V PR 3S IND VFIN <fmc> @FMV
+de	 [de] PRP <sam-> @<SC
+a	 [o] DET F S <artd> <-sam> @>N
+Cruz=Vermelha	 [Cruz=Vermelha] PROP F S @P<
+local	 [local] ADJ F S @N<
+$.	 [$.] PU <<<
+$¶	 [$¶] PU <<<
+</s>
+<s>
+O	 [o] DET M S <artd> @>N
+Nell	 [Nell] PROP M S @SUBJ>
+foi	 [ser] V PS 3S IND VFIN <fmc> @FMV
+o	 [o] DET M S <artd> @>N
+32º.	 [32º.] ADJ M S <NUM-ord> @>N
+tufão	 [tufão] N M S @<SC
+a	 [a] PRP @N<
+castigar	 [castigar] V INF @IMV @#ICL-P<
+as	 [o] DET F P <artd> @>N
+Filipinas	 [Filipinas] PROP F P @<ACC
+em	 [em] PRP @<ADVL
+1993	 [1993] NUM M/F S <card> @P<
+$.	 [$.] PU <<<
+$¶	 [$¶] PU <<<
+</s>
+<s>
+Apenas	 [apenas] ADV @>P
+em	 [em] PRP @ADVL>
+dezembro	 [dezembro] N M S @P<
+passado	 [passado] ADJ M S @N<
+$,
+400	 [400] NUM F P <card> @>N
+pessoas	 [pessoa] N F P @SUBJ>
+morreram	 [morrer] V PS/MQP 3P IND VFIN <fmc> @FMV
+$.	 [$.] PU <<<
+$¶	 [$¶] PU <<<
+</s>
+<s>
+Novos	 [novo] ADJ M P @>N
+tufões	 [tufão] N M P @SUBJ>
+são	 [ser] V PR 3P IND VFIN <fmc> @FAUX
+esperados	 [esperar] V PCP M P @IMV @#ICL-AUX<
+para	 [para] PRP @<ADVL
+os	 [o] DET M P <artd> @>N
+próximos	 [próximo] ADJ M P @>N
+dias	 [dia] N M P @P<
+$.	 [$.] PU <<<
+$¶	 [$¶] PU <<<
+</s>
+<s>
+Crocodilo	 [crocodilo] N M S @NPHR
+matador	 [matador] N M S @N<
+pega	 [pegar] V PCP F S @NPHR
+$'	 [$'] PU
+pena	 [pena] N F S @NPHR
+perpétua	 [perpétuo] ADJ F S @N<
+$'	 [$'] PU
+$¶	 [$¶] PU <<<
+</s>
+<s>
+O	 [o] DET M S <artd> @>N
+crocodilo	 [crocodilo] N M S @SUBJ>
+de	 [de] PRP @N<
+2,8	 [2,8] NUM M P <card> @>N
+m	 [m] N M S @P<
+que	 [que] SPEC M/F S @SUBJ> <rel> @#FS-N<
+matou	 [matar] V PS 3S IND VFIN @FMV
+Cassey=Bond	 [Cassey=Bond] PROP M/F S @<ACC
+$,
+47	 [47] NUM M/F P <card> @<ACC
+$,
+em	 [em] PRP <sam-> @<ADVL
+a	 [o] DET F S <artd> <-sam> @>N
+véspera	 [véspera] N F S @P<
+de	 [de] PRP <sam-> @N<
+o	 [o] DET M S <artd> <-sam> @>N
+Natal	 [Natal] PROP M S @P<
+$,
+será	 [ser] V FUT 3S IND VFIN <fmc> @FAUX
+mantido	 [manter] V PCP M S @IMV @#ICL-AUX<
+por	 [por] PRP <sam-> @<PASS
+o	 [o] DET M S <artd> <-sam> @>N
+resto	 [resto] N M S @P<
+de	 [de] PRP <sam-> @N<
+a	 [o] DET F S <artd> <-sam> @>N
+vida	 [vida] N F S @P<
+em	 [em] PRP @<ADVL
+cativeiro	 [cativeiro] N M S @P<
+$.	 [$.] PU <<<
+$¶	 [$¶] PU <<<
+</s>
+<s>
+Bond	 [Bond] PROP M/F S @SUBJ>
+foi	 [ser] V PS 3S IND VFIN <fmc> @FAUX
+atacado	 [atacar] V PCP M S @IMV @#ICL-AUX<
+quando	 [quando] ADV @#FS-<ADVL <ks> <rel> @ADVL>
+nadava	 [nadar] V IMPF 3S IND VFIN @FMV
+para	 [para] PRP @<ADVL
+salvar	 [salvar] V INF @IMV @#ICL-P<
+dois	 [dois] NUM M/F P <card> @<ACC
+de	 [de] PRP @N<
+seus	 [seu] DET M P <poss 3S> @>N
+sete	 [sete] NUM M P <card> @>N
+filhos	 [filho] N M P @P<
+de	 [de] PRP @N<
+uma	 [um] DET F S <arti> @>N
+balsa	 [balsa] N F S @P<
+avariada	 [avariar] V PCP F S @IMV @#ICL-N<
+em	 [em] PRP <sam-> @<ADVL
+um	 [um] DET M S <arti> <-sam> @>N
+rio	 [rio] N M S @P<
+em	 [em] PRP @<ADVL
+Bamba	 [bambo] ADJ F S @P<
+$,
+Brisbane	 [Brisbane] PROP M/F S @APP
+$(	 [$(] PU
+norte	 [norte] ADJ M/F S @N<PRED
+$)	 [$)] PU
+$.	 [$.] PU <<<
+$¶	 [$¶] PU <<<
+</s>
+</TEXT>
+$¶	 [$¶] PU <<<
+</DOC>

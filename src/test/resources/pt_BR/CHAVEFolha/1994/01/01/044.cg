@@ -1,0 +1,400 @@
+<DOC>
+<DOCNO.valor=FSP940101-044>
+<DOCID.valor=FSP940101-044>
+<DATE.valor=940101>
+<TEXT>
+<s>
+Da=Reportagem=Local	 [Da=Reportagem=Local] PROP F S @NPHR
+$¶	 [$¶] PU <<<
+</s>
+<s>
+Décio=Burd	 [Décio=Burd] PROP M S @SUBJ>
+$,
+40	 [40] NUM M/F P <card> @P<
+$,
+vice-presidente	 [vice-presidente] N M S @APP
+de	 [de] PRP @N<
+vendas	 [venda] N F P @P<
+diretas	 [direto] ADJ F P @N<
+de	 [de] PRP <sam-> @N<
+o	 [o] DET M S <artd> <-sam> @>N
+Credicard	 [Credicard] PROP M S @P<
+$,
+diz	 [dizer] V PR 3S IND VFIN <fmc> @FMV
+que	 [que] KS @SUB @#FS-<ACC
+o	 [o] DET M S <artd> @>N
+cartão	 [cartão] N M S @SUBJ>
+de	 [de] PRP @N<
+afinidade	 [afinidade] N F S @P<
+é	 [ser] V PR 3S IND VFIN @FMV
+um	 [um] DET M S <arti> @>N
+novo	 [novo] ADJ M S @>N
+filão	 [filão] N M S @<SC
+de	 [de] PRP @N<
+expansão	 [expansão] N F S @P<
+de	 [de] PRP <sam-> @N<
+o	 [o] DET M S <artd> <-sam> @>N
+mercado	 [mercado] N M S @P<
+brasileiro	 [brasileiro] ADJ M S @N<
+$.	 [$.] PU <<<
+$¶	 [$¶] PU <<<
+</s>
+<s>
+Em	 [em] PRP <sam-> @ADVL>
+os	 [o] DET M P <artd> <-sam> @>N
+Eua	 [Eua] PROP M S @P<
+$,
+a	 [o] DET F S <artd> @>N
+tendência	 [tendência] N F S @SUBJ>
+iniciou-	 [iniciar] V PS 3S IND VFIN <fmc> <hyfen> @FMV
+se	 [se] PERS F 3S ACC @<ACC-PASS
+há	 [há] PRP @<ADVL
+sete	 [sete] NUM M P <card> @>N
+anos	 [ano] N M P @P<
+$.	 [$.] PU <<<
+$¶	 [$¶] PU <<<
+</s>
+<s>
+O	 [o] DET M S <artd> @>N
+Credicard	 [Credicard] PROP M S @SUBJ>
+lançou	 [lançar] V PS 3S IND VFIN <fmc> @FMV
+o	 [o] DET M S <artd> @>N
+cartão	 [cartão] N M S @<ACC
+de	 [de] PRP <sam-> @N<
+o	 [o] DET M S <artd> <-sam> @>N
+Esporte=Clube=Internacional=Mastercard	 [Esporte=Clube=Internacional=Mastercard] PROP M S @P<
+$.	 [$.] PU <<<
+$¶	 [$¶] PU <<<
+</s>
+<s>
+Não	 [não] ADV @ADVL>
+é	 [ser] V PR 3S IND VFIN <fmc> @FMV
+preciso	 [preciso] ADJ M S @<SC
+ser	 [ser] V INF @IMV @#ICL-<SUBJ
+associado	 [associado] N M S @<SC
+de	 [de] PRP <sam-> @N<
+o	 [o] DET M S <artd> <-sam> @>N
+Credicard	 [Credicard] PROP M S @P<
+para	 [para] PRP @<ADVL
+possuir	 [possuir] V INF @IMV @#ICL-P<
+o	 [o] DET M S <artd> @>N
+cartão	 [cartão] N M S @<ACC
+$.	 [$.] PU <<<
+$¶	 [$¶] PU <<<
+</s>
+<s>
+Para	 [para] PRP @ADVL>
+as	 [o] DET F P <artd> @>N
+administradoras	 [administradora] N F P @P<
+$,
+o	 [o] DET M S <artd> @>N
+custo	 [custo] N M S @SUBJ>
+de	 [de] PRP <sam-> @N<
+o	 [o] DET M S <artd> <-sam> @>N
+cartão	 [cartão] N M S @P<
+de	 [de] PRP @N<
+afinidade	 [afinidade] N F S @P<
+é	 [ser] V PR 3S IND VFIN <fmc> @FMV
+menor	 [pequeno] ADJ M S <KOMP> @<SC
+porque	 [porque] KS @SUB @#FS-<ADVL
+o	 [o] DET M S <artd> @>N
+grupo	 [grupo] N M S @SUBJ>
+participa	 [participar] V PR 3S IND VFIN @FMV
+de	 [de] PRP <sam-> @<PIV
+a	 [o] DET F S <artd> <-sam> @>N
+promoção	 [promoção] N F S @P<
+de	 [de] PRP <sam-> @N<
+o	 [o] DET M S <artd> <-sam> @>N
+programa	 [programa] N M S @P<
+$.	 [$.] PU <<<
+$¶	 [$¶] PU <<<
+</s>
+<s>
+A	 [o] DET F S <artd> @>N
+utilização	 [utilização] N F S @SUBJ>
+de	 [de] PRP <sam-> @N<
+o	 [o] DET M S <artd> <-sam> @>N
+cartão	 [cartão] N M S @P<
+aumenta	 [aumentar] V PR 3S IND VFIN @FMV @#FS-ACC>>
+porque	 [porque] KS @SUB @#FS-<ADVL
+o	 [o] DET M S <artd> @>N
+usuário	 [usuário] N M S @SUBJ>
+se	 [se] KS @SUB
+sente	 [sentir] V PR 3S IND VFIN @FMV
+orgulhoso	 [orgulhoso] ADJ M S @<PRED
+em	 [em] PRP @<ADVL
+usar-	 [usar] V INF @IMV <hyfen> @#ICL-P<
+lo	 [ele] PERS M 3S ACC @<ACC
+e	 [e] <co-vfin> KC @CO
+o	 [ele] PERS M 3S ACC @ACC>
+os	 [o] DET M P <artd> @>N
+atrasos	 [atraso] N M P @SUBJ>
+são	 [ser] V PR 3P IND VFIN <fmc> @FMV
+menores	 [pequeno] ADJ M P <KOMP> @<SC
+$,
+uma=vez=que	 [uma=vez=que] KS @SUB @#FS-<ADVL
+o	 [o] DET M S <artd> @>N
+portador	 [portador] N M S @SUBJ>
+não	 [não] ADV @ADVL>
+quer	 [querer] V PR 3S IND VFIN @FMV
+ter	 [ter] V INF @IMV @#ICL-<ACC
+reflexos	 [reflexo] N M P @<ACC
+negativos	 [negativo] ADJ M P @N<
+junto	 [junto] ADV @<ADVL
+a	 [a] PRP <sam-> @A<
+a	 [o] DET F S <artd> <-sam> @>N
+comunidade	 [comunidade] N F S @P<
+$,
+comentam	 [comentar] V PR 3P IND VFIN <fmc> @FMV
+os	 [o] DET M P <artd> @>N
+administradores	 [administrador] N M P @<SUBJ
+de	 [de] PRP @N<
+cartão	 [cartão] N M S @P<
+$.	 [$.] PU <<<
+$¶	 [$¶] PU <<<
+</s>
+<s>
+Guilherme=Zattar	 [Guilherme=Zattar] PROP M/F S @SUBJ>
+$,
+34	 [34] NUM M/F P <card> @P<
+$,
+diretor	 [diretor] N M S @N<PRED
+de	 [de] PRP @N<
+novos	 [novo] ADJ M P @>N
+negócios	 [negócio] N M P @P<
+de	 [de] PRP <sam-> @N<
+o	 [o] DET M S <artd> <-sam> @>N
+cartão	 [cartão] N M S @P<
+Nacional	 [nacional] <prop> ADJ M S @N<
+$,
+diz	 [dizer] V PR 3S IND VFIN <fmc> @FMV
+que	 [que] KS @SUB @#FS-<ACC
+a	 [o] DET F S <artd> @>N
+instituição	 [instituição] N F S @SUBJ>
+já	 [já] ADV @ADVL>
+lançou	 [lançar] V PS 3S IND VFIN @FMV
+dez	 [dez] NUM M P <card> @>N
+grupos	 [grupo] N M P @<ACC
+de	 [de] PRP @N<
+afinidade	 [afinidade] N F S @P<
+$,
+entre	 [entre] PRP @<ADVL
+eles	 [eles] PERS M 3P NOM/PIV @P<
+$,
+os	 [o] DET M P <artd> @>N
+cartões	 [cartão] N M P @APP @P<
+de	 [de] PRP <sam-> @N<
+a	 [o] DET F S <artd> <-sam> @>N
+TVA	 [TVA] PROP F S @P<
+$,
+locadora	 [locadora] N F S @P<
+Unidas	 [unido] <prop> ADJ F P @N<PRED
+$,
+Fundação=Rubem=Berta	 [Fundação=Rubem=Berta] PROP F S @P<
+e	 [e] KC @CO
+Associação=do=Cavalo=Arabe	 [Associação=do=Cavalo=Arabe] PROP F S @P<
+$.	 [$.] PU <<<
+$¶	 [$¶] PU <<<
+</s>
+<s>
+No=caso=de	 [no=caso=de] PRP <sam-> @ADVL>
+o	 [o] DET M S <-sam> <artd> @>N
+cartão	 [cartão] N M S @P<
+Unidas	 [unido] <prop> ADJ F P @N<PRED
+$,
+o	 [o] DET M S <artd> @>N
+possuidor	 [possuidor] N M S @SUBJ>
+tem	 [ter] V PR 3S IND VFIN <fmc> @FMV
+desconto	 [desconto] N M S @<ACC
+de	 [de] PRP @N<
+até	 [até] PRP @ADVL>
+5	 [5] NUM M/F P <card> @>N
+$%	 [%] N M P @P<	 [$%] PU
+em	 [em] PRP <sam-> @<ADVL
+a	 [o] DET F S <artd> <-sam> @>N
+locação	 [locação] N F S @P<
+$,
+possui	 [possuir] V PR 3S IND VFIN <fmc> @FMV
+tratamento	 [tratamento] N M S @<ACC
+preferencial	 [preferencial] ADJ M S @N<
+e	 [e] KC @CO
+melhoria	 [melhoria] N F S @<ACC
+em	 [em] PRP <sam-> @<ADVL
+a	 [o] DET F S <artd> <-sam> @>N
+categoria	 [categoria] N F S @P<
+de	 [de] PRP @N<
+carro	 [carro] N M S @P<
+$.	 [$.] PU <<<
+$¶	 [$¶] PU <<<
+</s>
+<s>
+O	 [o] DET M S <artd> @>N
+cartão	 [cartão] N M S @SUBJ>
+TVA	 [TVA] PROP M S @N<
+vai	 [ir] V PR 3S IND VFIN <fmc> @FAUX
+permitir	 [permitir] V INF @IMV @#ICL-AUX<
+a	 [a] PRP @<ACC
+seus	 [seu] DET M P <poss 3S> @>N
+portadores	 [portador] N M P @P<
+$,
+a	 [a] PRP @<ADVL
+partir	 [partir] V INF @IMV @#ICL-P<
+de	 [de] PRP <sam-> @<ADVL
+este	 [este] DET M S <dem> <-sam> @>N
+mês	 [mês] N M S @P<
+$,
+a	 [o] DET F S <artd> @>N
+participação	 [participação] N F S @<ACC
+em	 [em] PRP <sam-> @N<
+as	 [o] DET F P <artd> <-sam> @>N
+primeiras	 [primeiro] ADJ F P <NUM-ord> @>N
+exibições	 [exibição] N F P @P<
+realizadas	 [realizar] V PCP F P @IMV @#ICL-N<
+em	 [em] PRP @<ADVL
+espaços	 [espaço] N M P @P<
+culturais	 [cultural] ADJ M P @N<
+de	 [de] PRP <sam-> @N<
+o	 [o] DET M S <artd> <-sam> @>N
+Banco=Nacional	 [Banco=Nacional] PROP M S @P<
+$.	 [$.] PU <<<
+$¶	 [$¶] PU <<<
+</s>
+<s>
+A	 [o] DET F S <artd> @>N
+American=Express	 [American=Express] PROP F S @SUBJ>
+estuda	 [estudar] V PR 3S IND VFIN <fmc> @FMV
+também	 [também] ADV @<ADVL
+lançar	 [lançar] V INF @#ICL-<ACC @IMV
+cartões	 [cartão] N M P @<ACC
+de	 [de] PRP @N<
+afinidade	 [afinidade] N F S @P<
+$.	 [$.] PU <<<
+$¶	 [$¶] PU <<<
+</s>
+<s>
+Os	 [o] DET M P <artd> @>N
+cartões	 [cartão] N M P @SUBJ>
+Sollo	 [Sollo] PROP M/F S @N<
+já	 [já] ADV @ADVL>
+realizaram	 [realizar] V PS/MQP 3P IND VFIN <fmc> @FMV
+contratos	 [contrato] N M P @<ACC
+$,
+entre	 [entre] PRP @<ADVL
+outros	 [outro] DET M P <KOMP> <diff> @P<
+$,
+com	 [com] PRP @N<PRED @<ADVL
+o	 [o] DET M S <artd> @>N
+Jockey=Club	 [Jockey=Club] PROP M S @P<
+de	 [de] PRP @N<
+São=Paulo	 [São=Paulo] PROP M S @P<
+$,
+a	 [o] DET F S <artd> @>N
+Fundação=Getúlio=Vargas	 [Fundação=Getúlio=Vargas] PROP F S @APP
+$,
+a	 [o] DET F S <artd> @>N
+Associação=Paulista=de=Propaganda	 [Associação=Paulista=de=Propaganda] PROP F S @APP
+$,
+a	 [o] DET F S <artd> @>N
+Birello	 [Birello] PROP F S @APP
+e	 [e] KC @CO
+a	 [o] DET F S <artd> @>N
+Jogê	 [Jogê] PROP F S @APP
+$.	 [$.] PU <<<
+$¶	 [$¶] PU <<<
+</s>
+<s>
+Jean=Pirie	 [Jean=Pirie] PROP F S @SUBJ>
+$,
+diretora	 [diretora] N F S @N<PRED
+de	 [de] PRP <sam-> @N<
+o	 [o] DET M S <artd> <-sam> @>N
+cartão	 [cartão] N M S @P<
+Panamericano	 [panamericano] <prop> ADJ M S @N<
+$,
+de	 [de] PRP <sam-> @N<
+o	 [o] DET M S <artd> <-sam> @>N
+grupo	 [grupo] N M S @P<
+Silvio=Santos	 [Silvio=Santos] PROP M S @N<
+$,
+lança	 [lançar] V PR 3S IND VFIN <fmc> @FMV
+seu	 [seu] DET M S <si> <poss 3S> @>N
+primeiro	 [primeiro] ADJ M S <NUM-ord> @>N
+cartão	 [cartão] N M S @<ACC
+de	 [de] PRP @N<
+afinidade	 [afinidade] N F S @P<
+$:	 [$:] PU <<<
+o	 [o] DET M S <artd> @>N
+Doctor's	 [Doctor's] PROP M S @NPHR
+em=conjunto	 [em=conjunto] ADV @ADVL
+com	 [com] PRP @ADVL
+o	 [o] DET M S <artd> @>N
+laboratório	 [laboratório] N M S @P<
+Aché	 [Aché] PROP M S @N<
+$.	 [$.] PU <<<
+$¶	 [$¶] PU <<<
+</s>
+<s>
+Ele	 [ele] PERS M 3S NOM @SUBJ>
+é	 [ser] V PR 3S IND VFIN <fmc> @FAUX
+destinado	 [destinar] V PCP M S @IMV @#ICL-AUX<
+exclusivamente	 [exclusivamente] ADV @<ADVL
+para	 [para] PRP @<ADVL
+médicos	 [médico] N M P @P<
+$.	 [$.] PU <<<
+$¶	 [$¶] PU <<<
+</s>
+<s>
+O	 [o] DET M S <artd> @>N
+Banco=Panamericano	 [Banco=Panamericano] PROP M S @SUBJ>
+optou	 [optar] V PS 3S IND VFIN <fmc> @FMV
+por	 [por] PRP @<PIV
+deixar	 [deixar] V INF @IMV @#ICL-P<
+o	 [o] DET M S <artd> @>N
+processamento	 [processamento] N M S @<ACC
+de	 [de] PRP <sam-> @N<
+os	 [o] DET M P <artd> <-sam> @>N
+cartões	 [cartão] N M P @P<
+com	 [com] PRP @<ADVL
+a	 [o] DET F S <artd> @>N
+empresa	 [empresa] N F S @P<
+Unnisa	 [Unnisa] PROP F S @N<
+$.	 [$.] PU <<<
+$¶	 [$¶] PU <<<
+</s>
+<s>
+Sergio=Daiuto	 [Sergio=Daiuto] PROP M S @SUBJ>
+$,
+presidente	 [presidente] N M S @APP
+de	 [de] PRP <sam-> @N<
+a	 [o] DET F S <artd> <-sam> @>N
+Unnisa	 [Unnisa] PROP F S @P<
+$,
+diz	 [dizer] V PR 3S IND VFIN <fmc> @FMV
+que	 [que] KS @SUB @#FS-<ACC
+é	 [ser] V PR 3S IND VFIN @FMV
+crescente	 [crescente] ADJ M S @<SC
+o	 [o] DET M S <artd> @>N
+interesse	 [interesse] N M S @<SUBJ
+de	 [de] PRP <sam-> @N<
+as	 [o] DET F P <artd> <-sam> @>N
+administradoras	 [administradora] N F P @P<
+em	 [em] PRP @N<
+lançar	 [lançar] V INF @IMV @#ICL-P<
+cartões	 [cartão] N M P @<ACC
+de	 [de] PRP @N<
+afinidade	 [afinidade] N F S @P<
+para	 [para] PRP @<ADVL
+seus	 [seu] DET M P <si> <poss 3S> @>N
+clientes	 [cliente] N M P @P<
+$.	 [$.] PU <<<
+$¶	 [$¶] PU <<<
+</s>
+<s>
+$(	 [$(] PU
+RV	 [RV] PROP M/F S @NPHR
+$)	 [$)] PU
+$¶	 [$¶] PU <<<
+</s>
+</TEXT>
+$¶	 [$¶] PU <<<
+</DOC>

@@ -1,0 +1,263 @@
+<DOC>
+<DOCNO.valor=FSP940101-106>
+<DOCID.valor=FSP940101-106>
+<DATE.valor=940101>
+<TEXT>
+<s>
+Da=Reportagem=Local	 [Da=Reportagem=Local] PROP F S @NPHR
+$¶	 [$¶] PU <<<
+</s>
+<s>
+A	 [o] DET F S <artd> @>N
+queniana	 [queniana] N F S @SUBJ>
+Hellen=Kimayio	 [Hellen=Kimayio] PROP F S @N<
+$,
+de	 [de] PRP <sam-> @N<PRED
+a	 [o] DET F S <artd> <-sam> @>N
+tribo	 [tribo] N M S @P<
+Kalejin	 [Kalejin] PROP M S @N<
+$,
+disse	 [dizer] V PS 3S IND VFIN <fmc> @FMV
+ontem	 [ontem] ADV @<ADVL
+que	 [que] KS @SUB @#FS-<ACC
+não	 [não] ADV @ADVL>
+esperava	 [esperar] V IMPF 3S IND VFIN @FMV
+vencer	 [vencer] V INF @IMV @#ICL-<ACC
+a	 [o] DET F S <artd> @>N
+São=Silvestre	 [São=Silvestre] PROP F S @<ACC
+$.	 [$.] PU <<<
+$¶	 [$¶] PU <<<
+</s>
+<s>
+Kimayio	 [Kimayio] PROP M/F S @SUBJ>
+$,
+25	 [25] NUM M/F P <card> @P<
+$,
+recepcionista	 [recepcionista] ADJ M/F S @N<PRED
+de	 [de] PRP <sam-> @N<
+a	 [o] DET F S <artd> <-sam> @>N
+empresa	 [empresa] N F S @P<
+estatal	 [estatal] ADJ F S @N<
+de	 [de] PRP @N<
+telecomunicações	 [telecomunicação] N F P @P<
+e	 [e] KC @CO
+correios	 [correio] N M P @P<
+de	 [de] PRP <sam-> @N<
+o	 [o] DET M S <artd> <-sam> @>N
+Quênia	 [Quênia] PROP F S @P<
+$,
+só	 [só] ADV @ADVL>
+se	 [se] PERS M/F 3S ACC @ACC>-PASS
+irritou	 [irritar] V PS 3S IND VFIN <fmc> @FMV
+em	 [em] PRP <sam-> @<ADVL
+a	 [o] DET F S <artd> <-sam> @>N
+chegada	 [chegada] N F S @P<
+$,
+quando	 [quando] ADV @#FS-<ADVL <ks> <rel> @ADVL>
+foi	 [ser] V PS 3S IND VFIN @FAUX
+agarrada	 [agarrar] V PCP F S @IMV @#ICL-AUX<
+por	 [por] PRP <sam-> @<PIV
+a	 [o] DET F S <artd> <-sam> @>N
+organização	 [organização] N F S @P<
+de	 [de] PRP <sam-> @N<
+a	 [o] DET F S <artd> <-sam> @>N
+prova	 [prova] N F S @P<
+e	 [e] <co-pcv> KC @CO
+empurrada	 [empurrar] V PCP F S @#ICL-AUX< @P< @IMV
+em	 [em] PRP <sam-> @<ADVL
+a	 [o] DET F S <artd> <-sam> @>N
+direção	 [direção] N F S @P<
+de	 [de] PRP <sam-> @N<
+o	 [o] DET M S <artd> <-sam> @>N
+pódio	 [pódio] N M S @P<
+$.	 [$.] PU <<<
+$¶	 [$¶] PU <<<
+</s>
+<s>
+Antes	 [antes] ADV @ADVL>
+de	 [de] PRP <sam-> @A<
+a	 [o] DET F S <artd> <-sam> @>N
+premiação	 [premiação] N F S @P<
+$,
+a	 [o] DET F S <artd> @>N
+atleta	 [atleta] N F S @APP
+de	 [de] PRP @N<
+1,75	 [1,75] NUM M P <card> @>N
+kg	 [kg] N M S @P<
+e	 [e] KC @CO
+52	 [52] NUM M P <card> @>N
+kg	 [kg] N M S @APP
+$,
+deu	 [dar] V PS 3S IND VFIN <fmc> @FMV
+um	 [um] DET M S <arti> @>N
+forte	 [forte] ADJ M S @>N
+abraço	 [abraço] N M S @<ACC
+em	 [em] PRP @<ADVL
+sua	 [seu] DET F S <si> <poss 3S> @>N
+manager	 [manager] N M S <*2> <*1> @P<
+$,
+a	 [o] DET F S <artd> @>N
+holandesa	 [holandês] <n> ADJ F S @APP
+Carolyn=Feith	 [Carolyn=Feith] PROP M/F S @APP
+$.	 [$.] PU <<<
+$¶	 [$¶] PU <<<
+</s>
+<s>
+Leia	 [ler] V PR 1/3S SUBJ VFIN <fmc> @FMV
+a	 [a] PRP @<ADVL
+seguir	 [seguir] V INF @IMV @#ICL-P<
+$,
+os	 [o] DET M P <artd> @>N
+melhores	 [bom] ADJ M P <SUP> <KOMP> @>N
+trechos	 [trecho] N M P @PRED>
+de	 [de] PRP <sam-> @N<
+a	 [o] DET F S <artd> <-sam> @>N
+entrevista	 [entrevista] N F S @P<
+que	 [que] SPEC M/F S @ACC> <rel> @#FS-N<
+deu	 [dar] V PS 3S IND VFIN @FMV
+após	 [após] PRP @<ADVL
+a	 [o] DET F S <artd> @>N
+prova	 [prova] N F S @P<
+$:	 [$:] PU <<<
+$¶	 [$¶] PU <<<
+</s>
+<s>
+Pergunta	 [perguntar] V PR 3S IND VFIN <fmc> @FMV
+$-	 [$-] PU
+Que ALT xxx	 [que] N F S @<ACC
+tática	 [tático] ADJ F S @N<
+usou	 [usar] V PS 3S IND VFIN <fmc> @FMV
+$?	 [$?] PU <<<
+$¶	 [$¶] PU <<<
+</s>
+<s>
+Hellen=Kimayio	 [Hellen=Kimayio] PROP M S @SUBJ>
+$-	 [$-] PU
+O	 [o] N M/F S @SUBJ>
+percurso	 [percurso] N M S @PRED>
+é	 [ser] V PR 3S IND VFIN <fmc> @FMV
+bem	 [bem] ADV <quant> @>A
+difícil	 [difícil] ADJ M/F S @<SC
+$.	 [$.] PU <<<
+$¶	 [$¶] PU <<<
+</s>
+<s>
+Tentei	 [tentar] V PS 1S IND VFIN <fmc> @FMV
+ser	 [ser] V INF @IMV @#ICL-<ACC
+rápida	 [rápido] ADJ F S @<SC
+$.	 [$.] PU <<<
+$¶	 [$¶] PU <<<
+</s>
+<s>
+A	 [o] DET F S <artd> @>N
+vitória	 [vitória] N F S @SUBJ>
+foi	 [ser] V PS 3S IND VFIN <fmc> @FMV
+uma	 [um] DET F S <arti> @>N
+supresa ALT xxxesa	 [suprês] N F S @<SC
+$.	 [$.] PU <<<
+$¶	 [$¶] PU <<<
+</s>
+<s>
+Pergunta	 [perguntar] V PR 3S IND VFIN <fmc> @FMV
+$-	 [$-] PU
+Você ALT xxx	 [você] N M S @<ACC
+parecia	 [parecer] V IMPF 1/3S IND VFIN <fmc> @FMV
+cansada	 [cansar] V PCP F S @IMV @#ICL-<SC
+em	 [em] PRP <sam-> @<ADVL
+o	 [o] DET M S <artd> <-sam> @>N
+meio	 [meio] N M S @P<
+$.	 [$.] PU <<<
+$¶	 [$¶] PU <<<
+</s>
+<s>
+Estava	 [estar] V IMPF 1/3S IND VFIN <fmc> @FMV
+mesmo	 [mesmo] ADV <quant> @<ADVL
+$?	 [$?] PU <<<
+$¶	 [$¶] PU <<<
+</s>
+<s>
+Kimayio	 [Kimayio] PROP M/F S @NPHR
+$-	 [$-] PU
+Não ALT xxx	 [não] N F S @S<
+$.	 [$.] PU <<<
+$¶	 [$¶] PU <<<
+</s>
+<s>
+Esse	 [esse] DET M S <dem> @SUBJ>
+é	 [ser] V PR 3S IND VFIN <fmc> @FMV
+o	 [o] DET M S <artd> @>N
+meu	 [meu] DET M S <poss 1S> @>N
+estilo	 [estilo] N M S @<SC
+de	 [de] PRP @N<
+correr	 [correr] V INF @IMV @#ICL-P<
+$.	 [$.] PU <<<
+$¶	 [$¶] PU <<<
+</s>
+<s>
+Pergunta	 [perguntar] V PR 3S IND VFIN <fmc> @FMV
+$-	 [$-] PU
+Quando ALT xxxo	 [quando] N M S @SUBJ>
+viu	 [ver] V PS 3S IND VFIN <fmc> @FMV
+que	 [que] KS @SUB @#FS-<ACC
+ia	 [ir] V IMPF 3S IND VFIN @FAUX
+vencer	 [vencer] V INF @IMV @#ICL-AUX<
+$?	 [$?] PU <<<
+$¶	 [$¶] PU <<<
+</s>
+<s>
+Kimayio	 [Kimayio] PROP M/F S @SUBJ>
+$-	 [$-] PU
+Quando ALT xxxo	 [quando] N M S @SUBJ>
+faltava	 [faltar] V IMPF 3S IND VFIN <fmc> @FMV
+um	 [um] NUM M S <card> @>N
+quilômetro	 [quilômetro] N M S @PRED>
+$.	 [$.] PU <<<
+$¶	 [$¶] PU <<<
+</s>
+<s>
+Aí	 [aí] ADV <kc> @ADVL>
+$,
+decidi	 [decidir] V PS 1S IND VFIN <fmc> @FMV
+acelerar	 [acelerar] V INF @IMV @#ICL-<ACC
+$.	 [$.] PU <<<
+$¶	 [$¶] PU <<<
+</s>
+<s>
+Pergunta	 [perguntar] V PR 3S IND VFIN <fmc> @FMV
+$-	 [$-] PU
+Qual ALT xxx	 [qual] N M S @<ACC
+foi	 [ser] V PS 3S IND VFIN <fmc> @FMV
+a	 [o] DET F S <artd> @>N
+pior	 [mau] ADJ F S <SUP> <KOMP> @>N
+parte	 [parte] N F S @<SC
+de	 [de] PRP <sam-> @N<
+a	 [o] DET F S <artd> <-sam> @>N
+prova	 [prova] N F S @P<
+$?	 [$?] PU <<<
+$¶	 [$¶] PU <<<
+</s>
+<s>
+Kimayio	 [Kimayio] PROP M/F S @NPHR
+$-	 [$-] PU
+A	 [a] N M/F S @S<
+descida	 [descer] V PCP F S @N<
+$.	 [$.] PU <<<
+$¶	 [$¶] PU <<<
+</s>
+<s>
+O	 [o] DET M S <artd> @>N
+ritmo	 [ritmo] N M S @SUBJ>
+foi	 [ser] V PS 3S IND VFIN <fmc> @FMV
+tão	 [tão] ADV <KOMP> <quant> <dem> @>A
+forte	 [forte] ADJ M S @<SC
+que	 [que] KS @SUB @#FS-KOMP<
+senti	 [sentir] V PS 1S IND VFIN @FMV
+meu	 [meu] DET M S <poss 1S> @>N
+joelho	 [joelho] N M S @SUBJ>
+falsear	 [falsear] V INF 3S @IMV @#ICL-<ACC
+$.	 [$.] PU <<<
+$¶	 [$¶] PU <<<
+</s>
+</TEXT>
+$¶	 [$¶] PU <<<
+</DOC>

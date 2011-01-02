@@ -1,0 +1,297 @@
+<DOC>
+<DOCNO.valor=FSP940101-075>
+<DOCID.valor=FSP940101-075>
+<DATE.valor=940101>
+<TEXT>
+<s>
+Da=Reportagem=Local	 [Da=Reportagem=Local] PROP F S @NPHR
+$¶	 [$¶] PU <<<
+</s>
+<s>
+Os	 [o] DET M P <artd> @>N
+moradores	 [morador] N M P @SUBJ>
+de	 [de] PRP <sam-> @N<
+o	 [o] DET M S <artd> <-sam> @>N
+edifício	 [edifício] N M S @P<
+Paul=Klee	 [Paul=Klee] PROP M/F S @SUBJ>
+economizaram	 [economizar] V PS/MQP 3P IND VFIN <fmc> @FMV
+Cr$	 [cr$] <prop> N M S @<ACC
+900	 [900] NUM M/F P <card> @>N
+mil	 [mil] NUM M/F P <card> @N<
+em	 [em] PRP <sam-> @N<
+a	 [o] DET F S <artd> <-sam> @>N
+conta	 [conta] N F S @P<
+de	 [de] PRP @N<
+água	 [água] N F S @P<
+referente=a	 [referente=a] PRP <sam-> @<ADVL
+o	 [o] DET M S <-sam> <artd> @>N
+consumo	 [consumo] N M S @P<
+em	 [em] PRP @<ADVL
+novembro	 [novembro] N M S @P<
+por=causa=de	 [por=causa=de] PRP @<ADVL
+uma	 [um] DET F S <arti> @>N
+planilha	 [planilha] N F S @P<
+$.	 [$.] PU <<<
+$¶	 [$¶] PU <<<
+</s>
+<s>
+Trata-	 [tratar] V PR 3S IND VFIN <fmc> <hyfen> @FMV
+se	 [se] PERS M/F 3S ACC <refl> @<ACC
+de	 [de] PRP @<PIV
+um	 [um] DET M S <arti> @>N
+gráfico	 [gráfico] N M S @P<
+para	 [para] PRP @<ADVL
+o	 [o] DET M S <artd> @>N
+controle	 [controle] N M S @P<
+diário	 [diário] ADJ M S @N<
+de	 [de] PRP <sam-> @N<
+o	 [o] DET M S <artd> <-sam> @>N
+consumo	 [consumo] N M S @P<
+de	 [de] PRP @N<
+água	 [água] N F S @P<
+$,
+que	 [que] SPEC M/F S @ACC> <rel> @#FS-N<
+tem	 [ter] V PR 3S IND VFIN @FMV
+como	 [como] ADV @COM <prp> <rel> @#AS-<ADVL
+objetivo	 [objetivo] N M S @AS<
+inicial	 [inicial] ADJ M S @N<
+detectar	 [detectar] V INF @IMV @#ICL-AS<
+rapidamente	 [rápido] ADV @<ADVL
+qualquer	 [qualquer] DET M S <quant> @>N
+vazamento	 [vazamento] N M S @<ACC
+que	 [que] SPEC M/F S @SUBJ> <rel> @#FS-N<
+esteja	 [estar] V PR 3S SUBJ VFIN @FAUX
+ocorrendo	 [ocorrer] V GER @#ICL-AUX< @IMV
+em	 [em] PRP @<ADVL
+um	 [um] DET M S <arti> @>N
+apartamento	 [apartamento] N M S @P<
+$.	 [$.] PU <<<
+$¶	 [$¶] PU <<<
+</s>
+<s>
+A	 [o] DET F S <artd> @>N
+planilha	 [planilha] N F S @SUBJ>
+é	 [ser] V PR 3S IND VFIN <fmc> @FMV
+simples	 [simples] ADJ F S @<SC
+$.	 [$.] PU <<<
+$¶	 [$¶] PU <<<
+</s>
+<s>
+Em	 [em] PRP @ADVL>
+uma	 [um] DET F S <arti> @>N
+coluna	 [coluna] N F S @P<
+$,
+coloca-	 [colocar] V PR 3S IND VFIN <fmc> <hyfen> @FMV
+se	 [se] PERS M/F 3S ACC <refl> @<ACC-PASS
+a	 [o] DET F S <artd> @>N
+data	 [data] N F S @<SUBJ
+$,
+em	 [em] PRP <sam-> @<ADVL
+a	 [o] DET F S <artd> <-sam> @>N
+outra	 [outro] DET F S <KOMP> <diff> @P<
+$,
+a	 [o] DET F S <artd> @>N
+marcação	 [marcação] N F S @APP
+de	 [de] PRP <sam-> @N<
+o	 [o] DET M S <artd> <-sam> @>N
+relógio	 [relógio] N M S @P<
+de	 [de] PRP @N<
+água	 [água] N F S @P<
+$.	 [$.] PU <<<
+$¶	 [$¶] PU <<<
+</s>
+<s>
+A	 [o] DET F S <artd> @>N
+diferença	 [diferença] N F S @SUBJ>
+de	 [de] PRP @N<
+um	 [um] NUM M S <card> @>N
+dia	 [dia] N M S @P<
+para	 [para] PRP @N<
+outro	 [outro] DET M S <KOMP> <diff> @P<
+equivale	 [equivaler] V PR 3S IND VFIN <fmc> @FMV
+a	 [a] PRP <sam-> @<PIV
+o	 [o] DET M S <artd> <-sam> @>N
+consumo	 [consumo] N M S @P<
+$.	 [$.] PU <<<
+$¶	 [$¶] PU <<<
+</s>
+<s>
+Em	 [em] PRP <sam-> @ADVL>
+o	 [o] DET M S <artd> <-sam> @>N
+final	 [final] N M S @P<
+de	 [de] PRP <sam-> @N<
+o	 [o] DET M S <artd> <-sam> @>N
+mês	 [mês] N M S @P<
+é	 [ser] V PR 3S IND VFIN <fmc> @FMV
+possível	 [possível] ADJ M/F S @<SC
+somar	 [somar] V INF @IMV
+e	 [e] <co-inf> KC @CO
+comparar	 [comparar] V INF @IMV
+com	 [com] PRP @<SC @<ADVL
+a	 [o] DET F S <artd> @>N
+medição	 [medição] N F S @P<
+impressa	 [imprimir] V PCP F S @N<
+em	 [em] PRP <sam-> @N<PRED
+a	 [o] DET F S <artd> <-sam> @>N
+conta	 [conta] N F S @P<
+de	 [de] PRP <sam-> @N<
+a	 [o] DET F S <artd> <-sam> @>N
+Sabesp	 [Sabesp] PROP F S @P<
+$.	 [$.] PU <<<
+$¶	 [$¶] PU <<<
+</s>
+<s>
+Se	 [se] KS @#FS-ADVL> @SUB
+houver	 [haver] V FUT 1/3S SUBJ VFIN @FMV
+alguma	 [algum] DET F S <quant> @>N
+grande	 [grande] ADJ F S @>N
+diferença	 [diferença] N F S @<ACC
+de	 [de] PRP @N<
+um	 [um] NUM M S <card> @>N
+dia	 [dia] N M S @P<
+para	 [para] PRP @<ADVL
+o	 [o] DET M S <artd> @>N
+outro	 [outro] DET M S <KOMP> <diff> @P<
+$,
+é	 [ser] V PR 3S IND VFIN <fmc> @FMV
+muito	 [muito] ADV <quant> @>A
+provável	 [provável] ADJ M S @<SC
+que	 [que] KS @SUB @#FS-<SUBJ
+haja	 [haver] V PR 1/3S SUBJ VFIN @FMV
+vazamento	 [vazamento] N M S @<ACC
+$.	 [$.] PU <<<
+$¶	 [$¶] PU <<<
+</s>
+<s>
+O	 [o] DET M S <artd> @>N
+síndico	 [síndico] N M S @SUBJ>
+de	 [de] PRP <sam-> @N<
+o	 [o] DET M S <artd> <-sam> @>N
+edifício	 [edifício] N M S @P<
+que	 [que] SPEC M/F S @SUBJ> <rel> @#FS-N<
+usa	 [usar] V PR 3S IND VFIN @FMV
+a	 [o] DET F S <artd> @>N
+planilha	 [planilha] N F S @<ACC
+$,
+Eduardo=Armêmio=Kissajikian	 [Eduardo=Armêmio=Kissajikian] PROP M S @<ACC
+$,
+39	 [39] NUM M/F P <card> @<ACC
+$,
+contou	 [contar] V PS 3S IND VFIN <fmc> @FMV
+que	 [que] KS @SUB @#FS-<ACC
+quando	 [quando] ADV @#FS-ADVL> <ks> <rel> @ADVL>
+o	 [o] DET M S <artd> @>N
+zelador	 [zelador] N M S @SUBJ>
+recebeu	 [receber] V PS 3S IND VFIN @FMV
+uma	 [um] DET F S <arti> @>N
+conta	 [conta] N F S @<ACC
+em	 [em] PRP <sam-> @<ADVL
+o	 [o] DET M S <artd> <-sam> @>N
+valor	 [valor] N M S @P<
+de	 [de] PRP @N<
+Cr$	 [cr$] N M S @P<
+1,5	 [1,5] NUM M P <card> @>N
+milhão	 [milhão] N M S @<ACC
+$,
+reclamou	 [reclamar] V PS 3S IND VFIN @FMV
+em	 [em] PRP <sam-> @<ADVL
+a	 [o] DET F S <artd> <-sam> @>N
+hora	 [hora] N F S @P<
+$.	 [$.] PU <<<
+$¶	 [$¶] PU <<<
+</s>
+<s>
+Segundo	 [segundo] ADV @COM <prp> <rel> @#AS-ADVL>
+ele	 [ele] PERS M 3S NOM @SUBJ>
+$,
+a	 [o] DET F S <artd> @>N
+Sabesp	 [Sabesp] PROP F S @SUBJ>
+retificou	 [retificar] V PS 3S IND VFIN <fmc> @FMV
+a	 [o] DET F S <artd> @>N
+conta	 [conta] N F S @<ACC
+cobrando	 [cobrar] V GER @#ICL-<ADVL @IMV
+por	 [por] PRP <sam-> @<ADVL
+a	 [o] DET F S <artd> <-sam> @>N
+média	 [média] N F S @P<
+de	 [de] PRP <sam-> @N<
+o	 [o] DET M S <artd> <-sam> @>N
+consumo	 [consumo] N M S @P<
+em	 [em] PRP <sam-> @<ADVL
+os	 [o] DET M P <artd> <-sam> @>N
+meses	 [mês] N M P @P<
+anteriores	 [anterior] ADJ M P @N<
+$,
+ou=seja	 [ou=seja] ADV <kc> @<ADVL
+$,
+Cr$	 [cr$] N M S @<ACC
+600	 [600] NUM M/F P <card> @>N
+mil	 [mil] NUM M/F P <card> @N<
+$.	 [$.] PU <<<
+$¶	 [$¶] PU <<<
+</s>
+<s>
+Em	 [em] PRP <sam-> @ADVL>
+a	 [o] DET F S <artd> <-sam> @>N
+conta	 [conta] N F S @P<
+de	 [de] PRP @N<
+dezembro	 [dezembro] N M S @P<
+$,
+recebida	 [receber] V PCP F S @IMV @#ICL-PRED>
+em	 [em] PRP <sam-> @<ADVL
+a	 [o] DET F S <artd> <-sam> @>N
+última	 [último] ADJ F S <NUM-ord> @>N
+quinta-feira	 [quinta-feira] N F S @P<
+$,
+o	 [o] DET M S <artd> @>N
+valor	 [valor] N M S @SUBJ>
+surpreendeu	 [surpreender] V PS 3S IND VFIN <fmc> @FMV
+até	 [até] PRP @<ADVL
+a	 [o] DET F S <artd> @>N
+Sabesp	 [Sabesp] PROP F S @P<
+$:	 [$:] PU <<<
+Cr$	 [cr$] N M S @NPHR
+87	 [87] NUM M/F P <card> @>N
+mil	 [mil] NUM M/F P <card> @N<
+$.	 [$.] PU <<<
+$¶	 [$¶] PU <<<
+</s>
+<s>
+Kissajikian	 [Kissajikian] PROP M/F S @SUBJ>
+afirma	 [afirmar] V PR 3S IND VFIN <fmc> @FMV
+que	 [que] KS @SUB @#FS-<ACC
+$,
+como	 [como] ADV @#FS-ADVL> <ks> <rel> @ADVL>
+a	 [o] DET F S <artd> @>N
+medição	 [medição] N F S @SUBJ>
+de	 [de] PRP <sam-> @N<
+o	 [o] DET M S <artd> <-sam> @>N
+consumo	 [consumo] N M S @P<
+é	 [ser] V PR 3S IND VFIN @FAUX
+feita	 [fazer] V PCP F S @IMV @#ICL-AUX<
+por	 [por] PRP @<PASS
+metros=cúbicos	 [metro=cúbico] N M P @P<
+$,
+o	 [o] DET M S <artd> @>N
+erro	 [erro] N M S @SUBJ>
+de	 [de] PRP @N<
+um	 [um] DET M S <arti> @>N
+dígito	 [dígito] N M S @P<
+em	 [em] PRP <sam-> @N<
+a	 [o] DET F S <artd> <-sam> @>N
+leitura	 [leitura] N F S @P<
+pode	 [poder] V PR 3S IND VFIN @FAUX
+registrar	 [registrar] V INF @IMV @#ICL-AUX<
+um	 [um] DET M S <arti> @>N
+milhão	 [milhão] N M S @<ACC
+de	 [de] PRP @N<
+litros	 [litro] N M P @P<
+de	 [de] PRP @N<
+água	 [água] N F S @P<
+a	 [o] DET F S <artd> @>N
+mais	 [muito] DET M/F S <KOMP> <quant> @<OC
+$.	 [$.] PU <<<
+$¶	 [$¶] PU <<<
+</s>
+</TEXT>
+$¶	 [$¶] PU <<<
+</DOC>

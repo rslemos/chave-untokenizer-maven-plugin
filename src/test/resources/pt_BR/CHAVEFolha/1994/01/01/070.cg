@@ -1,0 +1,154 @@
+<DOC>
+<DOCNO.valor=FSP940101-070>
+<DOCID.valor=FSP940101-070>
+<DATE.valor=940101>
+<TEXT>
+<s>
+Da=Agência=Folha	 [Da=Agência=Folha] PROP F S @NPHR
+$,
+em	 [em] PRP @ADVL
+Belém	 [Belém] PROP M S @P<
+$¶	 [$¶] PU <<<
+</s>
+<s>
+Representantes	 [representante] N M/F P @PRED>
+de	 [de] PRP @N<
+entidades	 [entidade] N F P @P<
+internacionais	 [internacional] ADJ F P @N<
+ligadas	 [ligar] V PCP F P @IMV @#ICL-N<
+a	 [a] PRP <sam-> @<PIV
+a	 [o] DET F S <artd> <-sam> @>N
+Organização=das=Nações=Unidas	 [Organização=das=Nações=Unidas] PROP F S @P<
+$(	 [$(] PU
+ONU	 [ONU] PROP F S @N<PRED
+$)	 [$)] PU
+vão	 [ir] V PR 3P IND VFIN <fmc> @FAUX
+se	 [se] PERS M/F 3S ACC <coll> <refl> @ACC>
+reunir	 [reunir] V INF @IMV @#ICL-AUX<
+$,
+em	 [em] PRP @<ADVL
+Brasília	 [Brasília] PROP F S @P<
+$,
+a=partir=de	 [a=partir=de] PRP @<ADVL
+15	 [15] NUM M/F P <card> @P<
+de	 [de] PRP @N<
+janeiro	 [janeiro] N M S @P<
+$,
+para	 [para] PRP @<ADVL
+aprovar	 [aprovar] V INF @IMV @#ICL-P<
+um	 [um] DET M S <arti> @>N
+projeto	 [projeto] N M S @<ACC
+em	 [em] PRP <sam-> @<ADVL
+o	 [o] DET M S <artd> <-sam> @>N
+valor	 [valor] N M S @P<
+de	 [de] PRP @N<
+US$	 [US$] PROP M/F S @P<
+300	 [300] NUM M/F P <card> @>N
+mil	 [mil] NUM M/F P <card> @N<
+dedicado	 [dedicar] V PCP M S @IMV @#ICL-N<
+a	 [a] PRP <sam-> @<PIV
+o	 [o] DET M S <artd> <-sam> @>N
+combate	 [combate] N M S @P<
+a	 [a] PRP <sam-> @N<
+a	 [o] DET F S <artd> <-sam> @>N
+prostituição	 [prostituição] N F S @P<
+infantil	 [infantil] ADJ F S @N<
+em	 [em] PRP @N<
+Belém	 [Belém] PROP M S @P<
+$.	 [$.] PU <<<
+$¶	 [$¶] PU <<<
+</s>
+<s>
+A	 [o] DET F S <artd> @>N
+informação	 [informação] N F S @SUBJ>
+é	 [ser] V PR 3S IND VFIN <fmc> @FMV
+de	 [de] PRP <sam-> @<SC
+a	 [o] DET F S <artd> <-sam> @>N
+presidente	 [presidente] N F S @P<
+de	 [de] PRP <sam-> @N<
+a	 [o] DET F S <artd> <-sam> @>N
+Funpapa	 [Funpapa] PROP F S @P<
+$(	 [$(] PU
+Fundação=Papa=João	 [Fundação=Papa=João] PROP F S @APP
+23	 [23] NUM F P <card> @<SC
+$)	 [$)] PU
+$,
+Adelayde=Soares	 [Adelayde=Soares] PROP F S @APP	 [Adelayde=Soares] PROP M/F S @APP
+$,
+entidade	 [entidade] N F S @N<PRED
+de	 [de] PRP <sam-> @N<
+o	 [o] DET M S <artd> <-sam> @>N
+PA	 [PA] PROP M S @P<
+$.	 [$.] PU <<<
+$¶	 [$¶] PU <<<
+</s>
+<s>
+Adelayde	 [Adelayde] PROP M/F S @SUBJ>
+afirma	 [afirmar] V PR 3S IND VFIN <fmc> @FMV
+que	 [que] KS @SUB @#FS-<ACC
+a	 [o] DET F S <artd> @>N
+cidade	 [cidade] N F S @SUBJ>
+tem	 [ter] V PR 3S IND VFIN @FMV
+um	 [um] NUM M S <card> @<ACC
+de	 [de] PRP <sam-> @N<
+os	 [o] DET M P <artd> <-sam> @>N
+mais	 [mais] ADV <KOMP> <quant> @>A
+graves	 [grave] ADJ M P @>N
+problemas	 [problema] N M P @P<
+de	 [de] PRP @N<
+prostituição	 [prostituição] N F S @P<
+infantil	 [infantil] ADJ F S @N<
+em	 [em] PRP <sam-> @N<
+o	 [o] DET M S <artd> <-sam> @>N
+país	 [país] N M S @P<
+$.	 [$.] PU <<<
+$¶	 [$¶] PU <<<
+</s>
+<s>
+Em	 [em] PRP @ADVL>
+julho	 [julho] N M S @P<
+$,
+a	 [o] DET F S <artd> @>N
+Funpapa	 [Funpapa] PROP F S @SUBJ>
+levantou	 [levantar] V PS 3S IND VFIN <fmc> @FMV
+que	 [que] KS @SUB @#FS-<ACC
+23,7	 [23,7] NUM M/F P <card> @>N
+$%	 [%] N M P @SUBJ>	 [$%] PU
+de	 [de] PRP <sam-> @N<
+as	 [o] DET F P <artd> <-sam> @>N
+crianças	 [criança] N F P @P<
+e	 [e] <co-vfin> KC @CO
+adolescentes	 [adolescente] N M/F P @P<
+em	 [em] PRP <sam-> @N<
+as	 [o] DET F P <artd> <-sam> @>N
+ruas	 [rua] N F P @P<
+eram	 [ser] V IMPF 3P IND VFIN @FMV
+meninas	 [menina] N F P @<SC
+$.	 [$.] PU <<<
+$¶	 [$¶] PU <<<
+</s>
+<s>
+Por	 [por] PRP <sam-> <*1> @ADVL>
+o	 [o] DET M S <artd> <-sam> @>N
+fato	 [fato] N M S @P<
+de	 [de] PRP @N<
+estar	 [estar] V INF @IMV @#ICL-P<
+em	 [em] PRP <sam-> @<ADVS
+a	 [o] DET F S <artd> <-sam> @>N
+rua	 [rua] N F S @P<
+$,
+elas	 [elas] PERS F 3P NOM @SUBJ>
+já	 [já] ADV @ADVL>
+estão	 [estar] V PR 3P IND VFIN <fmc> @FMV
+ou	 [ou] <co-vfin> KC @CO
+caminham	 [caminhar] V PR 3P IND VFIN <fmc> @FMV
+para	 [para] PRP @<ADVL
+a	 [o] DET F S <artd> @>N
+prostituição	 [prostituição] N F S @P<
+$.	 [$.] PU <<<
+$"	 [$"] PU
+$¶	 [$¶] PU <<<
+</s>
+</TEXT>
+$¶	 [$¶] PU <<<
+</DOC>

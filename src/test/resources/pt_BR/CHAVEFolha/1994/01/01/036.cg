@@ -1,0 +1,906 @@
+<DOC>
+<DOCNO.valor=FSP940101-036>
+<DOCID.valor=FSP940101-036>
+<DATE.valor=940101>
+<TEXT>
+<s>
+Preço	 [preço] N M S @SUBJ>
+mais	 [mais] ADV <KOMP> <quant> @>A
+baixo	 [baixo] ADJ M S @N<
+$,
+alta	 [alto] ADJ F S @>N
+tecnologia	 [tecnologia] N F S @SUBJ>
+e	 [e] KC @CO
+melhor	 [bom] ADJ F S <SUP> <KOMP> @>N
+qualidade	 [qualidade] N F S @SUBJ>
+marcam	 [marcar] V PR 3P IND VFIN <fmc> @FMV
+os	 [o] DET M P <artd> @>N
+novos	 [novo] ADJ M P @>N
+lançamentos	 [lançamento] N M P @<ACC
+$¶	 [$¶] PU <<<
+</s>
+<s>
+Filomena=Sayão	 [Filomena=Sayão] PROP F S @NPHR
+$¶	 [$¶] PU <<<
+</s>
+<s>
+Da=Reportagem=Local	 [Da=Reportagem=Local] PROP F S @NPHR
+$¶	 [$¶] PU <<<
+</s>
+<s>
+Ano=novo	 [Ano=novo] PROP M S @NPHR
+$,
+produtos	 [produto] N M P @NPHR
+novos	 [novo] ADJ M P @N<
+$.	 [$.] PU <<<
+$¶	 [$¶] PU <<<
+</s>
+<s>
+Alta	 [alto] ADJ F S @>N
+tecnologia	 [tecnologia] N F S @SUBJ>
+$,
+melhor	 [bom] ADJ F S <SUP> <KOMP> @>N
+qualidade	 [qualidade] N F S @SUBJ>
+e	 [e] KC @CO
+preços	 [preço] N M P @SUBJ>
+mais	 [mais] ADV <KOMP> <quant> @>A
+baixos	 [baixo] ADJ M P @N<
+deverão	 [dever] V FUT 3P IND VFIN <fmc> @FAUX
+marcar	 [marcar] V INF @IMV @#ICL-AUX<
+o	 [o] DET M S <artd> @>N
+que	 [que] SPEC M/F S @ACC> @SUBJ> @#FS-<ACC <rel>
+vai	 [ir] V PR 3S IND VFIN @FAUX
+chegar	 [chegar] V INF @IMV @#ICL-AUX<
+em	 [em] PRP <sam-> @<ADVS
+as	 [o] DET F P <artd> <-sam> @>N
+prateleiras	 [prateleira] N F P @P<
+de	 [de] PRP <sam-> @N<
+as	 [o] DET F P <artd> <-sam> @>N
+lojas	 [loja] N F P @P<
+durante	 [durante] PRP @<ADVL
+1994	 [1994] NUM M/F P <card> @P<
+$.	 [$.] PU <<<
+$¶	 [$¶] PU <<<
+</s>
+<s>
+As	 [o] DET F P <artd> @>N
+indústrias	 [indústria] N F P @SUBJ>
+já	 [já] ADV @ADVL>
+começam	 [começar] V PR 3P IND VFIN <fmc> @FAUX
+a	 [a] PRP @PRT-AUX<
+antecipar	 [antecipar] V INF @IMV @#ICL-AUX<
+seus	 [seu] DET M P <si> <poss 3S> @>N
+lançamentos	 [lançamento] N M P @<ACC
+$.	 [$.] PU <<<
+$¶	 [$¶] PU <<<
+</s>
+<s>
+Empresas	 [empresa] N F P @SUBJ>
+que	 [que] SPEC M/F S @SUBJ> <rel> @#FS-N<
+trazem	 [trazer] V PR 3P IND VFIN @FMV
+artigos	 [artigo] N M P @<ACC
+de	 [de] PRP <sam-> @N<
+o	 [o] DET M S <artd> <-sam> @>N
+Primeiro=Mundo	 [Primeiro=Mundo] PROP M S @P<
+e	 [e] <co-vfin> KC @CO
+de	 [de] PRP <sam-> @N<
+os	 [o] DET M P <artd> <-sam> @>N
+tigres	 [tigre] N M P @P<
+asiáticos	 [asiático] ADJ M P @N<
+avisam	 [avisar] V PR 3P IND VFIN <fmc> @FMV
+$:	 [$:] PU <<<
+vão	 [ir] V PR 3P IND VFIN <fmc> @FAUX
+trabalhar	 [trabalhar] V INF @IMV @#ICL-AUX<
+a=todo=vapor	 [a=todo=vapor] ADV @<ADVL
+$.	 [$.] PU <<<
+$¶	 [$¶] PU <<<
+</s>
+<s>
+Para	 [para] PRP @ADVL>
+quem	 [quem] SPEC M/F S <rel> @#FS-P<
+pretende	 [pretender] V PR 3S IND VFIN @FMV
+se	 [se] PERS M/F 3S ACC <refl> @ACC>>
+deixar	 [deixar] V INF @IMV @#ICL-<ACC
+seduzir	 [seduzir] V INF @IMV @#ICL-<ACC
+por	 [por] PRP <sam-> @<ADVL
+os	 [o] DET M P <artd> <-sam> @>N
+minisystems	 [minisystem] N M P <DERP> @P<
+$	 [$] PU
+a	 [o] DET F S <artd> @>N
+onda	 [onda] N F S @<ACC
+de	 [de] PRP <sam-> @N<
+o	 [o] DET M S <artd> <-sam> @>N
+momento	 [momento] N M S @P<
+em	 [em] PRP @<ADVL
+equipamentos	 [equipamento] N M P @P<
+de	 [de] PRP @N<
+som	 [som] N M S @P<
+pequenos	 [pequeno] N M P @<OC
+$	 [$] PU
+$,
+a	 [a] PRP @PIV>
+Gradiente	 [gradiente] N M S @P<
+promete	 [prometer] V PR 3S IND VFIN <fmc> @FMV
+lançar	 [lançar] V INF @IMV @#ICL-<ACC
+o	 [o] DET M S <artd> @>N
+AL=1	 [AL=1] PROP M S @<ACC
+em	 [em] PRP <sam-> @<ADVL
+o	 [o] DET M S <artd> <-sam> @>N
+final	 [final] N M S @P<
+de	 [de] PRP @N<
+janeiro	 [janeiro] N M S @P<
+$.	 [$.] PU <<<
+$¶	 [$¶] PU <<<
+</s>
+<s>
+Quinto	 [quinto] ADJ M S <NUM-ord> @>N
+modelo	 [modelo] N M S @SUBJ>
+de	 [de] PRP <sam-> @N<
+a	 [o] DET F S <artd> <-sam> @>N
+linha	 [linha] N F S @P<
+Allegro	 [allegro] <prop> N M S @SUBJ>
+$,
+ele	 [ele] PERS M 3S NOM @SUBJ>
+é	 [ser] V PR 3S IND VFIN <fmc> @FMV
+mais	 [mais] ADV <KOMP> <quant> @>A
+simples	 [simples] ADJ M S @<SC
+e	 [e] KC @CO
+mais	 [mais] ADV <KOMP> <quant> @>A
+barato	 [barato] ADJ M S @<SC
+$.	 [$.] PU <<<
+$¶	 [$¶] PU <<<
+</s>
+<s>
+Com	 [com] PRP @ADVL> @PRED>
+28	 [28] NUM M P <card> @>N
+watts	 [watt] N M P @P<
+RMS	 [RMS] PROP M/F S @N<
+de	 [de] PRP @N<
+potência	 [potência] N F S @P<
+$(	 [$(] PU
+real	 [real] ADJ M/F S @PRED> @N<PRED
+$)	 [$)] PU
+$,
+tem	 [ter] V PR 3S IND VFIN <fmc> @FMV
+dysplay ALT xxx	 [dysplay] N M S @<ACC
+de	 [de] PRP @N<
+cristal	 [cristal] N M S @P<
+líquido	 [líquido] ADJ M S @N<
+$,
+rádio	 [rádio] N M S @P< @<ACC
+AM	 [AM] PROP M S @N<
+$/	 [$/] PU	 [$/] KC @CO
+FM	 [FM] PROP M S @<ACC @N< @P< @APP
+$,
+gravador	 [gravador] N M S @N<PRED
+com	 [com] PRP @N<PRED @<ADVL
+duplo-deck ALT xxx	 [duplo-deck] N M S @P<
+e	 [e] KC @CO
+equalizador	 [equalizador] N M S @P<
+gráfico	 [gráfico] ADJ M S @N<
+$.	 [$.] PU <<<
+$¶	 [$¶] PU <<<
+</s>
+<s>
+Os	 [o] DET M P <artd> @>N
+equipamentos	 [equipamento] N M P @SUBJ>
+chegam	 [chegar] V PR 3P IND VFIN <fmc> @FMV
+em	 [em] PRP @<ADVS
+cerca=de	 [cerca=de] ADV @>A
+4.000	 [4.000] NUM M P <card> @>N
+pontos	 [ponto] N M P @P<
+de	 [de] PRP @N<
+venda	 [venda] N F S @P<
+em	 [em] PRP <sam-> @<ADVL
+o	 [o] DET M S <artd> <-sam> @>N
+final	 [final] N M S @P<
+de	 [de] PRP <sam-> @N<
+o	 [o] DET M S <artd> <-sam> @>N
+mês	 [mês] N M S @P<
+a	 [a] PRP @N< <sam-> @<ADVL
+o	 [o] DET M S <artd> <-sam> @>N
+preço	 [preço] N M S @P<
+médio	 [médio] ADJ M S @N<
+de	 [de] PRP @N<
+US$	 [US$] PROP M/F S @P<
+460	 [460] NUM M/F P <card> @N<
+$(	 [$(] PU
+câmbio	 [câmbio] N M S @N<PRED
+comercial	 [comercial] ADJ M S @N<
+$)	 [$)] PU
+$.	 [$.] PU <<<
+$¶	 [$¶] PU <<<
+</s>
+<s>
+Em	 [em] PRP <sam-> @ADVL>
+o	 [o] DET M S <artd> <-sam> @>N
+final	 [final] N M S @P<
+de	 [de] PRP @N<
+fevereiro	 [fevereiro] N M S @P<
+as	 [o] DET F P <artd> @>N
+vitrines	 [vitrine] N F P @SUBJ>
+deverão	 [dever] V FUT 3P IND VFIN <fmc> @FAUX
+exibir	 [exibir] V INF @IMV @#ICL-AUX<
+o	 [o] DET M S <artd> @>N
+system	 [system] N M S @<ACC
+AT=80	 [AT=80] PROP M S @N<
+$,
+com	 [com] PRP @N<PRED
+potência	 [potência] N F S @P<
+de	 [de] PRP @N<
+56	 [56] NUM M P <card> @>N
+watts	 [watt] N M P @P<
+RMS	 [RMS] PROP M/F S @N<
+$,
+controle=remoto	 [controle=remoto] N M S @N<PRED
+unificado	 [unificar] V PCP M S @N<
+$(	 [$(] PU
+para	 [para] PRP @<ADVL
+o	 [o] DET M S <artd> @>N
+CD	 [cD] <prop> N M S @P<
+e	 [e] <co-fmc> <co-vfin> KC @CO
+o	 [o] DET M S <artd> @>N
+system	 [system] N M S @P<
+$)	 [$)] PU
+$,
+sintonia	 [sintonia] N F S @<ACC
+digital	 [digital] ADJ F S @N<
+com	 [com] PRP @<ADVL
+19	 [19] NUM F P <card> @>N
+memórias	 [memória] N F P @P<
+programáveis	 [programar] V IMPF 2P IND VFIN <fmc> @FMV
+$,
+rádios	 [rádio] N M P @<PRED
+AM	 [AM] PROP M S @N<
+$/	 [$/] PU	 [$/] KC @CO
+FM	 [FM] PROP M S @N< @<ACC
+$,
+duplo-deck ALT xxx	 [duplo-deck] N M S @N<PRED
+e	 [e] KC @CO
+toca-discos	 [toca-discos] N M S @N<PRED
+$,
+entre	 [entre] PRP @<ADVL
+outras	 [outro] DET F P <KOMP> <diff> @>N
+características	 [característica] N F P @P<
+$.	 [$.] PU <<<
+$¶	 [$¶] PU <<<
+</s>
+<s>
+Preço	 [preço] N M S @NPHR
+aproximado	 [aproximado] ADJ M S @N<
+$:	 [$:] PU <<<
+US$	 [US$] PROP M/F S @NPHR
+450	 [450] NUM M/F P <card> @N<
+$.	 [$.] PU <<<
+$¶	 [$¶] PU <<<
+</s>
+<s>
+Donas-de-casa	 [dona-de=casa] N F P @SUBJ>
+que	 [que] SPEC M/F S @SUBJ> <rel> @#FS-N<
+pensam	 [pensar] V PR 3P IND VFIN @FMV
+em	 [em] PRP @<PIV
+renovar	 [renovar] V INF @IMV @#ICL-P<
+seus	 [seu] DET M P <si> <poss 3S> @>N
+eletrodomésticos	 [eletrodomésticos] N M P @<ACC
+vão	 [ir] V PR 3P IND VFIN <fmc> @FAUX
+se	 [se] PERS M/F 3S ACC <refl> @ACC>
+deparar	 [deparar] V INF @IMV @#ICL-AUX<
+com	 [com] PRP @<PIV
+várias	 [várias] DET F P <quant> @>N
+novidades	 [novidade] N F P @P<
+em	 [em] PRP <sam-> @<ADVL
+o	 [o] DET M S <artd> <-sam> @>N
+início	 [início] N M S @P<
+de	 [de] PRP <sam-> @N<
+este	 [este] DET M S <dem> <-sam> @>N
+ano	 [ano] N M S @P<
+$.	 [$.] PU <<<
+$¶	 [$¶] PU <<<
+</s>
+<s>
+A	 [o] DET F S <artd> @>N
+Consul	 [Consul] PROP F S @SUBJ>
+lança	 [lançar] V PR 3S IND VFIN <fmc> @FMV
+este	 [este] DET M S <dem> @>N
+mês	 [mês] N M S @<ADVL
+freezers	 [freezer] N M P @<ACC
+horizontais	 [horizontal] ADJ M P @N<
+com	 [com] PRP @<ADVL
+capacidades	 [capacidade] N F P @P<
+para	 [para] PRP @<ADVL
+220	 [220] NUM M/F P <card> @P<
+$,
+310	 [310] NUM M/F P <card> @>N
+$,
+415	 [415] NUM M P <card> @>N
+e	 [e] KC @CO
+530	 [530] NUM M P <card> @>N
+litros	 [litro] N M P @<ACC
+$.	 [$.] PU <<<
+$¶	 [$¶] PU <<<
+</s>
+<s>
+A	 [o] DET F S <artd> @>N
+indústria	 [indústria] N F S @SUBJ>
+afirma	 [afirmar] V PR 3S IND VFIN <fmc> @FMV
+que	 [que] KS @SUB @#FS-<ACC
+os	 [o] DET M P <artd> @>N
+produtos	 [produto] N M P @SUBJ>
+acompanham	 [acompanhar] V PR 3P IND VFIN @FMV
+tendências	 [tendência] N F P @<ACC
+mundiais	 [mundial] ADJ F P @N<
+em	 [em] PRP <sam-> @<ADVL
+a	 [o] DET F S <artd> <-sam> @>N
+chamada	 [chamado] ADJ F S @>N
+linha	 [linha] N F S @P<
+branca	 [branco] ADJ F S @N<
+$:	 [$:] PU <<<
+baixo	 [baixo] ADV @ADVL
+consumo	 [consumo] N M S @NPHR
+de	 [de] PRP @N<
+energia	 [energia] N F S @P<
+$,
+design	 [design] N M S @N<PRED
+arredondado	 [arredondado] ADJ M S @N<
+que	 [que] SPEC M/F S @SUBJ> <rel> @#FS-N<
+facilita	 [facilitar] V PR 3S IND VFIN @FMV
+a	 [o] DET F S <artd> @>N
+limpeza	 [limpeza] N F S @<ACC
+$,
+maior	 [grande] ADJ M S <KOMP> @>N
+espaço	 [espaço] N M S @N<PRED
+interno	 [interno] ADJ M S @N<
+com	 [com] PRP @<ADVL
+menor	 [pequeno] ADJ M S <KOMP> @>N
+volume	 [volume] N M S @P<
+externo	 [externo] ADJ M S @N<
+e	 [e] KC @CO
+função	 [função] N F S @P<
+de	 [de] PRP @N<
+freezer	 [freezer] N M S @P<
+e	 [e] KC @CO
+conservador	 [conservador] N M S @P<
+de	 [de] PRP @N<
+alimentos	 [alimento] N M P @P<
+$.	 [$.] PU <<<
+$¶	 [$¶] PU <<<
+</s>
+<s>
+A	 [o] DET F S <artd> @>N
+Consul	 [Consul] PROP F S @SUBJ>
+não	 [não] ADV @ADVL>
+informou	 [informar] V PS 3S IND VFIN <fmc> @FMV
+quanto	 [quanto] ADV @ADVL> <quant> <interr> @#FS-<ACC
+que	 [que] SPEC M/F S <interr> @ACC>
+o	 [o] DET M S <artd> @>N
+consumidor	 [consumidor] N M S @SUBJ>
+terá	 [ter] V FUT 3S IND VFIN @FAUX
+que	 [que] KS @PRT-AUX<
+desembolsar	 [desembolsar] V INF @IMV @#ICL-AUX<
+por	 [por] PRP <sam-> @<ADVL
+o	 [o] DET M S <artd> <-sam> @>N
+freezer	 [freezer] N M S @P<
+que	 [que] SPEC M/F S @ACC> <rel> @#FS-N<
+escolher	 [escolher] V FUT 3S SUBJ VFIN @FMV
+$.	 [$.] PU <<<
+$¶	 [$¶] PU <<<
+</s>
+<s>
+Liquidificadores	 [liquidificador] N M P @NPHR
+$¶	 [$¶] PU <<<
+</s>
+<s>
+Os	 [o] DET M P <artd> @>N
+liquidificadores	 [liquidificador] N M P @SUBJ>
+têm	 [ter] V PR 3P IND VFIN <fmc> @FMV
+mais	 [mais] ADV <kc> @>A
+dois	 [dois] NUM M P <card> @>N
+novos	 [novo] ADJ M P @>N
+modelos	 [modelo] N M P @<ACC
+$.	 [$.] PU <<<
+$¶	 [$¶] PU <<<
+</s>
+<s>
+O	 [o] DET M S <artd> @>N
+primeiro	 [primeiro] <n> ADJ M S <NUM-ord> @SUBJ>
+já	 [já] ADV @ADVL>
+foi	 [ser] V PS 3S IND VFIN <fmc> @FAUX
+colocado	 [colocar] V PCP M S @IMV @#ICL-AUX<
+em	 [em] PRP <sam-> @<ADVO
+o	 [o] DET M S <artd> <-sam> @>N
+mercado	 [mercado] N M S @P<
+$	 [$] PU
+em	 [em] PRP @<ADVL
+silêncio	 [silêncio] N M S @P<
+$	 [$] PU
+por	 [por] PRP <sam-> @<ADVL
+a	 [o] DET F S <artd> <-sam> @>N
+Walita	 [Walita] PROP F S @P<
+há	 [há] PRP @<ADVL
+cerca=de	 [cerca=de] ADV @>A
+um	 [um] NUM M S <card> @>N
+mês	 [mês] N M S @P<
+$,
+é	 [ser] V PR 3S IND VFIN <fmc> @FMV
+o	 [o] DET M S <artd> @>N
+Veneza	 [Veneza] PROP F S @<SC
+$.	 [$.] PU <<<
+$¶	 [$¶] PU <<<
+</s>
+<s>
+O	 [o] DET M S <artd> @>N
+produto	 [produto] N M S @SUBJ>
+está	 [estar] V PR 3S IND VFIN <fmc> @FAUX
+sendo	 [ser] V GER @#ICL-AUX< @IAUX
+chamado	 [chamar] V PCP M S @IMV @#ICL-AUX<
+de	 [de] PRP @<SC
+mundial	 [mundial] ADJ M/F S <*2> <*1> @P<
+porque	 [porque] KS @SUB @#FS-<ADVL
+é	 [ser] V PR 3S IND VFIN @FMV
+made ALT xxxe	 [made] N M S <*1> <*1> @<SC
+in	 [in] PRP @N< @<ADVL
+Brazil	 [Brazil] PROP M/F S <*2> @P<
+e	 [e] <co-vfin> KC @CO
+exportado	 [exportar] V PCP M S @P< @<SC
+para	 [para] PRP @<ADVL
+dezenas=de	 [dezenas=de] DET M P <quant> @>N
+países	 [país] N M P @P<
+onde	 [onde] ADV @ADVL> <ks> <rel> @#FS-N<
+a	 [o] DET F S <artd> @>N
+Philips	 [Philips] PROP F S @SUBJ>
+$(	 [$(] PU
+dona	 [dona] N F S @N<PRED
+de	 [de] PRP <sam-> @N<
+a	 [o] DET F S <artd> <-sam> @>N
+Walita	 [Walita] PROP F S @P<
+$)	 [$)] PU
+comercializa	 [comercializar] V PR 3S IND VFIN @FMV
+liquidificadores	 [liquidificador] N M P @<ACC
+$.	 [$.] PU <<<
+$¶	 [$¶] PU <<<
+</s>
+<s>
+Para	 [para] PRP @ADVL>
+que	 [que] KS @SUB @#FS-P<
+o	 [o] DET M S <artd> @>N
+produto	 [produto] N M S @SUBJ>
+preenchesse	 [preencher] V IMPF 3S SUBJ VFIN @FMV
+as	 [o] DET F P <artd> @>N
+necessidades	 [necessidade] N F P @<ACC
+de	 [de] PRP @N<
+padrão	 [padrão] N M S @P<
+de	 [de] PRP @N<
+todos=os	 [todo=o] DET M P <quant> @>N
+locais	 [local] N M P @P<
+onde	 [onde] ADV @ADVL> <ks> <rel> @#FS-N<
+será	 [ser] V FUT 3S IND VFIN @FAUX
+comercializado	 [comercializar] V PCP M S @IMV @#ICL-AUX<
+$,
+foram	 [ser] V PS/MQP 3P IND VFIN <fmc> @FAUX
+investidos	 [investir] V PCP M P @IMV @#ICL-AUX<
+US$	 [US$] PROP M/F S @<SC
+6	 [6] NUM M P <card> @>N
+milhões	 [milhão] N M P @<SUBJ
+em	 [em] PRP <sam-> @N<
+o	 [o] DET M S <artd> <-sam> @>N
+projeto	 [projeto] N M S @P<
+$.	 [$.] PU <<<
+$¶	 [$¶] PU <<<
+</s>
+<s>
+O	 [o] DET M S <artd> @>N
+liquidificador	 [liquidificador] N M S @SUBJ>
+$,
+que	 [que] SPEC M/F S @SUBJ> <rel> @#FS-N<
+é	 [ser] V PR 3S IND VFIN @FAUX
+vendido	 [vender] V PCP M S @IMV @#ICL-AUX<
+por	 [por] PRP <sam-> @<PASS
+o	 [o] DET M S <artd> <-sam> @>N
+equivalente	 [equivalente] <n> ADJ M S @P<
+a	 [a] PRP @A<
+US$	 [US$] PROP M/F S @P<
+70	 [70] NUM M/F P <card> @N<
+$,
+tem	 [ter] V PR 3S IND VFIN <fmc> @FMV
+trava	 [trava] N F S @<ACC
+de	 [de] PRP @N<
+segurança	 [segurança] N F S @P<
+com	 [com] PRP @N<
+sinal	 [sinal] N M S @P<
+luminoso	 [luminoso] ADJ M S @N<
+$(	 [$(] PU
+uma	 [um] DET F S <arti> @>N
+luz	 [luz] N F S @SUBJ>
+acusa	 [acusar] V PR 3S IND VFIN <fmc> @FMV
+se	 [se] KS @#FS-<ADVL @SUB
+a	 [o] DET F S <artd> @>N
+base	 [base] N F S @SUBJ>
+estiver	 [estar] V FUT 3S SUBJ VFIN @FMV
+mal	 [mal] ADV @ADVL>
+encaixada	 [encaixar] V PCP F S @IMV @#ICL-<SC
+$)	 [$)] PU
+$,
+baixo	 [baixo] ADJ M S @>N
+nível	 [nível] N M S @<ACC
+de	 [de] PRP @N<
+ruído	 [ruído] N M S @P<
+$(	 [$(] PU
+exigência	 [exigência] N F S @N<PRED
+internacional	 [internacional] ADJ F S @N<
+$)	 [$)] PU
+e	 [e] KC @CO
+motor	 [motor] N M S @<ACC
+com	 [com] PRP @<ADVL
+sete	 [sete] NUM F P <card> @>N
+velocidades	 [velocidade] N F P @P<
+$.	 [$.] PU <<<
+$¶	 [$¶] PU <<<
+</s>
+<s>
+Por	 [por] PRP @ADVL>
+bem	 [bem] ADV <quant> @>A
+menos	 [menos] ADV <KOMP> <quant> @ADVL>
+$,
+US$	 [US$] PROP M/F S @SUBJ>
+30	 [30] NUM M/F P <card> @N<
+$,
+a	 [o] DET F S <artd> @>N
+Mallory	 [Mallory] PROP F S @SUBJ>
+vai	 [ir] V PR 3S IND VFIN <fmc> @FAUX
+lançar	 [lançar] V INF @IMV @#ICL-AUX<
+o	 [o] DET M S <artd> @>N
+liquidificador	 [liquidificador] N M S @<ACC
+e	 [e] KC @CO
+picador	 [picador] N M S @<ACC
+Multil-Liq	 [Multil-Liq] PROP M S @N<
+$,
+dirigido	 [dirigir] V PCP M S @N<PRED
+a	 [a] PRP @<ADVL
+consumidores	 [consumidor] N M P @P<
+de	 [de] PRP @N<
+menor	 [pequeno] ADJ M S <KOMP> @>N
+poder=aquisitivo	 [poder=aquisitivo] N M S @P<
+$.	 [$.] PU <<<
+$¶	 [$¶] PU <<<
+</s>
+<s>
+O	 [o] DET M S <artd> @>N
+desenvolvimento	 [desenvolvimento] N M S @SUBJ>
+de	 [de] PRP <sam-> @N<
+o	 [o] DET M S <artd> <-sam> @>N
+produto	 [produto] N M S @P<
+exigiu	 [exigir] V PS 3S IND VFIN @FMV @#FS-ACC>>
+investimento	 [investimento] N M S @<ACC
+de	 [de] PRP @N<
+US$	 [US$] PROP M/F S @P<
+1	 [1] NUM M S <card> @>N
+milhão	 [milhão] N M S @<ACC
+$,
+informa	 [informar] V PR 3S IND VFIN <fmc> @FMV
+o	 [o] DET M S <artd> @>N
+diretor-comercial	 [diretor-comercial] N M S @<SUBJ
+$,
+Adilson=Tadeu=Patarro	 [Adilson=Tadeu=Patarro] PROP M S @APP
+$,
+41	 [41] NUM M/F P <card> @<ACC
+$.	 [$.] PU <<<
+$¶	 [$¶] PU <<<
+</s>
+<s>
+A	 [o] DET F S <artd> @>N
+nova	 [novo] ADJ F S @>N
+cria	 [cria] N F S @SUBJ>
+de	 [de] PRP <sam-> @N<
+a	 [o] DET F S <artd> <-sam> @>N
+Mallory	 [Mallory] PROP F S @P<
+chega	 [chegar] V PR 3S IND VFIN <fmc> @FMV
+a	 [a] PRP <sam-> @<ADVS
+as	 [o] DET F P <artd> <-sam> @>N
+lojas	 [loja] N F P @P<
+em	 [em] PRP <sam-> @<ADVL
+o	 [o] DET M S <artd> <-sam> @>N
+início	 [início] N M S @P<
+de	 [de] PRP @N<
+março	 [março] N M S @P<
+e	 [e] KC @CO
+em	 [em] PRP @<ADVL
+dois	 [dois] NUM M P <card> @>N
+recipientes	 [recipiente] N M P @P<
+$	 [$] PU
+um	 [um] NUM M S <card> @<ACC
+com	 [com] PRP @<ADVL
+capacidade	 [capacidade] N F S @P<
+para	 [para] PRP @<ADVL
+um	 [um] NUM M S <card> @>N
+litro	 [litro] N M S @P<
+e	 [e] KC @CO
+outro	 [outro] DET M S <KOMP> <diff> @P<
+com	 [com] PRP @<ADVL
+250	 [250] NUM M P <card> @>N
+mililitros	 [mililitro] N M P @P<
+para	 [para] PRP @<ADVL
+as	 [o] DET F P <artd> @>N
+funções	 [função] N F P @P<
+de	 [de] PRP @<ADVL
+picar	 [picar] V INF @IMV @#ICL-P<
+e	 [e] <co-inf> KC @CO
+moer	 [moer] V INF @#ICL-P< @IMV
+$.	 [$.] PU <<<
+$¶	 [$¶] PU <<<
+</s>
+<s>
+Em	 [em] PRP @ADVL>
+cerca=de	 [cerca=de] ADV @>A
+100	 [100] NUM M P <card> @>N
+mil	 [mil] NUM M P <card> @>N
+pontos	 [ponto] N M P @P<
+de	 [de] PRP @N<
+venda	 [venda] N F S @P<
+$	 [$] PU
+a	 [o] DET F S <artd> @>N
+maioria	 [maioria] N F S @SUBJ>
+supermercados	 [supermercado] N M P @PRED>
+e	 [e] KC @CO
+farmácias	 [farmácia] N F P @PRED>
+$	 [$] PU
+a	 [o] DET F S <artd> @>N
+multinacional	 [multinacional] <n> ADJ F S @ACC>
+Johnson=&=Johnson	 [Johnson=&=Johnson] PROP F S @SUBJ>
+promete	 [prometer] V PR 3S IND VFIN <fmc> @FMV
+surgir	 [surgir] V INF @IMV @#ICL-<ACC
+com	 [com] PRP @<ADVL
+a	 [o] DET F S <artd> @>N
+escova	 [escova] N F S @P<
+dental	 [dental] ADJ F S @N<
+Alcance=Reache=Control	 [Alcance=Reache=Control] PROP F S @N< @<ACC
+$,
+que	 [que] ADV <interr> <quant> @>A
+inova	 [inovar] V PR 3S IND VFIN <fmc> @FMV
+com	 [com] PRP @<ADVL
+cabo	 [cabo] N M S @P<
+emborrachado	 [emborrachar] V PCP M S @N<
+e	 [e] KC @CO
+cerdas	 [cerda] N F P @<ACC
+internas	 [interno] ADJ F P @N<
+onduladas	 [ondular] V PCP F P @N<
+$.	 [$.] PU <<<
+$¶	 [$¶] PU <<<
+</s>
+<s>
+A	 [o] DET F S <artd> @>N
+empresa	 [empresa] N F S @SUBJ>
+lança	 [lançar] V PR 3S IND VFIN <fmc> @FMV
+ainda	 [ainda] ADV @>N
+este	 [este] DET M S <dem> @>N
+mês	 [mês] N M S @<ADVL
+o	 [o] DET M S <artd> @>N
+sabonete	 [sabonete] N M S @<ACC
+Johnson's	 [Johnson's] PROP M S @N<
+para	 [para] PRP @<ADVL
+crianças	 [criança] N F P @P<
+com	 [com] PRP @N<
+fórmula	 [fórmula] N F S @P<
+hidratante	 [hidratante] ADJ F S @N<
+$.	 [$.] PU <<<
+$¶	 [$¶] PU <<<
+</s>
+<s>
+O	 [o] DET M S <artd> @>N
+produto	 [produto] N M S @SUBJ>
+inclui	 [incluir] V PR 3S IND VFIN <fmc> @FMV
+em	 [em] PRP @<ADVL
+sua	 [seu] DET F S <si> <poss 3S> @>N
+composição	 [composição] N F S @P<
+a	 [o] DET F S <artd> @>N
+fragrância	 [fragrância] N F S @<ACC
+de	 [de] PRP <sam-> @N<
+a	 [o] DET F S <artd> <-sam> @>N
+loção	 [loção] N F S @P<
+hidratante	 [hidratante] ADJ F S @N<
+$.	 [$.] PU <<<
+$¶	 [$¶] PU <<<
+</s>
+<s>
+Além=de	 [além=de] PRP <sam-> @ADVL
+isso	 [isso] SPEC M S <-sam> <dem> @P<
+$,
+uma	 [um] DET F S <arti> @>N
+boa	 [bom] ADJ F S @>N
+notícia	 [notícia] N F S @NPHR
+$.	 [$.] PU <<<
+$¶	 [$¶] PU <<<
+</s>
+<s>
+A	 [o] DET F S <artd> @>N
+embalagem	 [embalagem] N F S @SUBJ>
+de	 [de] PRP @N<
+125	 [125] NUM M P <card> @>N
+cotonetes	 [cotonete] N M P @P<
+foi	 [ser] V PS 3S IND VFIN <fmc> @FAUX
+modificada	 [modificar] V PCP F S @IMV @#ICL-AUX<
+$.	 [$.] PU <<<
+$¶	 [$¶] PU <<<
+</s>
+<s>
+Como	 [como] ADV @ADVL <prp> <rel> @#AS-ADVL>
+resultado	 [resultar] V PCP M S @AS<
+$,
+o	 [o] DET M S <artd> @>N
+preço	 [preço] N M S @SUBJ>
+ficou	 [ficar] V PS 3S IND VFIN <fmc> @FMV
+27	 [27] NUM M/F P <card> @>N
+$%	 [%] N M P @AS<	 [$%] PU
+menor	 [pequeno] ADJ M/F S <KOMP> @N<PRED
+que	 [que] KS @COM @#AS-KOMP<
+a	 [o] DET F S <artd> @>N
+versão	 [versão] N F S @AS<
+anterior	 [anterior] ADJ F S @N<
+$.	 [$.] PU <<<
+$¶	 [$¶] PU <<<
+</s>
+<s>
+Tênis	 [tênis] N M S @NPHR
+$¶	 [$¶] PU <<<
+</s>
+<s>
+Entre	 [entre] PRP @ADVL>
+os	 [o] DET M P <artd> @>N
+importados	 [importar] <n> V PCP M P @P<
+$,
+um	 [um] DET M S <arti> @>N
+produto	 [produto] N M S @SUBJ>
+que	 [que] SPEC M S @ACC> @SUBJ> <rel> @#FS-N<
+promete	 [prometer] V PR 3S IND VFIN @FMV
+chamar	 [chamar] V INF @IMV @#ICL-<ACC
+a	 [o] DET F S <artd> @>N
+atenção	 [atenção] N F S @<ACC
+de	 [de] PRP <sam-> @N<
+o	 [o] DET M S <artd> <-sam> @>N
+público	 [público] N M S @P<
+é	 [ser] V PR 3S IND VFIN <fmc> @FMV
+o	 [o] DET M S <artd> @>N
+tênis	 [tênis] N M S @<SC
+Tubular	 [tubular] <prop> ADJ M S @N<
+$,
+de	 [de] PRP <sam-> @<ADVL
+a	 [o] DET F S <artd> <-sam> @>N
+marca	 [marca] N F S @P<
+alemã	 [alemã] ADJ F S <n> @N<
+Adidas	 [adir] <prop> V PCP F P @<SC
+$.	 [$.] PU <<<
+$¶	 [$¶] PU <<<
+</s>
+<s>
+A	 [o] DET F S <artd> @>N
+Adidas=do=Brasil	 [Adidas=do=Brasil] PROP F S @TOP
+$,
+anuncia	 [anunciar] V PR 3S IND VFIN <fmc> @FMV
+Marta=Madalena	 [Marta=Madalena] PROP F S @<SUBJ
+$,
+27	 [27] NUM M/F P <card> @<SC
+$,
+gerente	 [gerente] N M/F S @N<PRED
+de	 [de] PRP @N<
+produto	 [produto] N M S @P<
+$,
+vai	 [ir] V PR 3S IND VFIN <fmc> @FAUX
+trazer	 [trazer] V INF @IMV @#ICL-AUX<
+poucos	 [pouco] DET M P <quant> @>N
+produtos	 [produto] N M P @<ACC
+para	 [para] PRP @<ADVL
+o	 [o] DET M S <artd> @>N
+mercado	 [mercado] N M S @P<
+brasileiro	 [brasileiro] ADJ M S @N<
+$	 [$] PU
+numeração	 [numeração] N F S @<SUBJ
+38=a=44	 [38=a=44] NUM M/F P @N<
+$.	 [$.] PU <<<
+$¶	 [$¶] PU <<<
+</s>
+<s>
+Motivo	 [motivo] N M S @NPHR
+$:	 [$:] PU <<<
+é	 [ser] V PR 3S IND VFIN <fmc> @FAUX
+considerado	 [considerar] V PCP M S @IMV @#ICL-AUX<
+caro	 [caro] ADJ M S @<SC
+$,
+pois	 [pois] KS @ADVL>
+será	 [ser] V FUT 3S IND VFIN <fmc> @FAUX
+vendido	 [vender] V PCP M S @IMV @#ICL-AUX<
+por	 [por] PRP @<PASS
+aproximadamente	 [aproximadamente] ADV @ADVL>
+US$	 [US$] PROP M/F S @P<
+120	 [120] NUM M/F P <card> @N<
+$.	 [$.] PU <<<
+$¶	 [$¶] PU <<<
+</s>
+<s>
+O	 [o] DET M S <artd> @>N
+preço	 [preço] N M S @SUBJ>
+tem	 [ter] V PR 3S IND VFIN <fmc> @FMV
+sua	 [seu] DET F S <si> <poss 3S> @>N
+justificativa	 [justificativa] N F S @<ACC
+$.	 [$.] PU <<<
+$¶	 [$¶] PU <<<
+</s>
+<s>
+O	 [o] DET M S <artd> @>N
+tênis	 [tênis] N M S @SUBJ>
+vem	 [vir] V PR 3S IND VFIN <fmc> @FMV
+equipado	 [equipar] V PCP M S @IMV @#ICL-<PRED 
+com	 [com] PRP @<ADVL
+um	 [um] DET M S <arti> @>N
+sistema	 [sistema] N M S @P<
+de	 [de] PRP @N<
+amortecimento	 [amortecimento] N M S @P<
+em	 [em] PRP <sam-> @<ADVL
+a	 [o] DET F S <artd> <-sam> @>N
+sola	 [sola] N F S @P<
+similar	 [similar] ADJ F S @N<
+a	 [a] PRP @N<
+duas	 [dois] NUM F P <card> @>N
+câmaras	 [câmara] N F P @P<
+de	 [de] PRP @N<
+pneus	 [pneu] N M P @P<
+de	 [de] PRP @N<
+carros	 [carro] N M P @P<
+$.	 [$.] PU <<<
+$¶	 [$¶] PU <<<
+</s>
+<s>
+O	 [o] DET M S <artd> @>N
+produto	 [produto] N M S @SUBJ>
+vem	 [vir] V PR 3S IND VFIN <fmc> @FMV
+até	 [até] ADV @>P
+com	 [com] PRP @<ADVL
+uma	 [um] DET F S <arti> @>N
+bomba	 [bomba] N F S @P<
+e	 [e] KC @CO
+visor	 [visor] N M S @P<
+digital	 [digital] ADJ M S @N<
+$.	 [$.] PU <<<
+$¶	 [$¶] PU <<<
+</s>
+<s>
+O	 [o] DET M S <artd> @>N
+usuário	 [usuário] N M S @SUBJ>
+consulta	 [consultar] V PR 3S IND VFIN <fmc> @FMV
+uma	 [um] DET F S <arti> @>N
+tabela	 [tabela] N F S @<ACC
+para	 [para] PRP @<ADVL
+poder	 [poder] V INF @IAUX @#ICL-P<
+calibrar	 [calibrar] V INF @IMV @#ICL-AUX<
+as	 [o] DET F P <artd> @>N
+câmaras	 [câmara] N F P @<ACC
+de	 [de] PRP <sam-> @N<
+o	 [o] DET M S <artd> <-sam> @>N
+tênis	 [tênis] N M S @P<
+$.	 [$.] PU <<<
+$¶	 [$¶] PU <<<
+</s>
+<s>
+É	 [ser] V PR 3S IND VFIN @FAUX <*1> @#FS-ACC>>
+dirigido	 [dirigir] V PCP M S @IMV @#ICL-AUX<
+a	 [a] PRP @<ADVL
+corredores	 [corredor] N M P @P<
+profissionais	 [profissional] ADJ M P <*2> @N<
+$,
+afirma	 [afirmar] V PR 3S IND VFIN <fmc> @FMV
+Marta=Madalena	 [Marta=Madalena] PROP F S @<SUBJ
+$.	 [$.] PU <<<
+$¶	 [$¶] PU <<<
+</s>
+<s>
+Excepcionalmente	 [excepcionalmente] ADV @ADVL>
+hoje	 [hoje] ADV @ADVL>
+deixa	 [deixar] V PR 3S IND VFIN <fmc> @FAUX
+de	 [de] PRP @PRT-AUX<
+circular	 [circular] V INF @IMV @#ICL-AUX<
+o	 [o] DET M S <artd> @>N
+caderno	 [caderno] N M S @<ACC
+Consumo	 [consumo] <prop> N M S @<ACC
+$¶	 [$¶] PU <<<
+</s>
+</TEXT>
+$¶	 [$¶] PU <<<
+</DOC>

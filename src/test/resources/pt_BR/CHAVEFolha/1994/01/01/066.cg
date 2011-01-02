@@ -1,0 +1,185 @@
+<DOC>
+<DOCNO.valor=FSP940101-066>
+<DOCID.valor=FSP940101-066>
+<DATE.valor=940101>
+<TEXT>
+<s>
+Da=Folha=Nordeste	 [Da=Folha=Nordeste] PROP F S @NPHR
+$¶	 [$¶] PU <<<
+</s>
+<s>
+A	 [o] DET F S <artd> @>N
+Fundação=Civil=Casa=de=Misericórdia	 [Fundação=Civil=Casa=de=Misericórdia] PROP F S @SUBJ>
+$,
+que	 [que] SPEC M/F S @SUBJ> <rel> @#FS-N<
+administra	 [administrar] V PR 3S IND VFIN @FMV
+a	 [o] DET F S <artd> @>N
+Santa=Casa=de=Franca	 [Santa=Casa=de=Franca] PROP F S @<ACC
+$,
+vai	 [ir] V PR 3S IND VFIN <fmc> @FAUX
+assumir	 [assumir] V INF @IMV @#ICL-AUX<
+a	 [o] DET F S <artd> @>N
+área	 [área] N F S @<ACC
+de	 [de] PRP <sam-> @N<
+a	 [o] DET F S <artd> <-sam> @>N
+Saúde	 [saúde] <prop> N F S @P<
+de	 [de] PRP <sam-> @N<
+o	 [o] DET M S <artd> <-sam> @>N
+município	 [município] N M S @P<
+por	 [por] PRP @<ADVL
+30	 [30] NUM M P <card> @>N
+dias	 [dia] N M P @P<
+$,
+até	 [até] PRP @<ADVL
+que	 [que] KS @SUB @#FS-P<
+a	 [o] DET F S <artd> @>N
+prefeitura	 [prefeitura] N F S @SUBJ>
+local	 [local] ADJ F S @N<
+resolva	 [resolver] V PR 3S SUBJ VFIN @FMV
+a	 [o] DET F S <artd> @>N
+situação	 [situação] N F S @<ACC
+de	 [de] PRP <sam-> @N<
+o	 [o] DET M S <artd> <-sam> @>N
+setor	 [setor] N M S @P<
+$.	 [$.] PU <<<
+$¶	 [$¶] PU <<<
+</s>
+<s>
+A	 [o] DET F S <artd> @>N
+decisão	 [decisão] N F S @SUBJ>
+foi	 [ser] V PS 3S IND VFIN <fmc> @FAUX
+anunciada	 [anunciar] V PCP F S @IMV @#ICL-AUX<
+ontem	 [ontem] ADV @<ADVL
+após	 [após] PRP @<ADVL
+reunião	 [reunião] N F S @P<
+entre	 [entre] PRP @N< @<ADVL
+representantes	 [representante] N M/F P @P<
+de	 [de] PRP <sam-> @N<
+a	 [o] DET F S <artd> <-sam> @>N
+fundação	 [fundação] N F S @P<
+e	 [e] KC @CO
+o	 [o] DET M S <artd> @>N
+prefeito	 [prefeito] N M S @PRED>
+Ary=Balieiro	 [Ary=Balieiro] PROP M S @N<
+$.	 [$.] PU <<<
+$¶	 [$¶] PU <<<
+</s>
+<s>
+Esses	 [esse] DET M P <dem> <*1> @>N
+30	 [30] NUM M P <card> @>N
+dias	 [dia] N M P @SUBJ>
+serão	 [ser] V FUT 3P IND VFIN @FMV @#FS-ACC>>
+suficientes	 [suficiente] ADJ M P <quant> @<SC
+para	 [para] PRP @A<
+reassumirmos	 [reassumir] V INF 1P @IMV <DERP> @#ICL-P<
+a	 [o] DET F S <artd> @>N
+Saúde	 [saúde] <prop> N F S @<ACC
+de	 [de] PRP <sam-> @N<
+o	 [o] DET M S <artd> <-sam> @>N
+município	 [município] N M S <*2> @P<
+$,
+afirmou	 [afirmar] V PS 3S IND VFIN <fmc> @FMV
+o	 [o] DET M S <artd> @>N
+prefeito	 [prefeito] N M S @<SUBJ
+$.	 [$.] PU <<<
+$¶	 [$¶] PU <<<
+</s>
+<s>
+A	 [o] DET F S <artd> @>N
+crise	 [crise] N F S @SUBJ>
+de	 [de] PRP <sam-> @N<
+o	 [o] DET M S <artd> <-sam> @>N
+setor	 [setor] N M S @P<
+em	 [em] PRP @N<
+Franca	 [franco] ADJ F S @P<
+agravou-	 [agravar] V PS 3S IND VFIN <fmc> <hyfen> @FMV
+se	 [se] PERS F 3S ACC <refl> @<ACC
+anteontem	 [anteontem] ADV @<ADVL
+com	 [com] PRP @<ADVL
+a	 [o] DET F S <artd> @>N
+demissão	 [demissão] N F S @P<
+de	 [de] PRP <sam-> @N<
+o	 [o] DET M S <artd> <-sam> @>N
+secretário	 [secretário] N M S @P<
+Ciro=Botto	 [Ciro=Botto] PROP M S @N<
+$.	 [$.] PU <<<
+$¶	 [$¶] PU <<<
+</s>
+<s>
+Não	 [não] ADV <*1> @ADVL>
+aceitei	 [aceitar] V PS 1S IND VFIN <fmc> @FMV
+ainda	 [ainda] ADV @>N
+a	 [o] DET F S <artd> @>N
+decisão	 [decisão] N F S @<ACC
+de	 [de] PRP <sam-> @N<
+o	 [o] DET M S <artd> <-sam> @>N
+Botto	 [Botto] PROP M S @P<
+$.	 [$.] PU <<<
+$¶	 [$¶] PU <<<
+</s>
+<s>
+Ele	 [ele] PERS M 3S NOM @SUBJ>
+continua	 [continuar] V PR 3S IND VFIN @FMV @#FS-ACC>>
+em	 [em] PRP <sam-> @<ADVL
+o	 [o] DET M S <artd> <-sam> @>N
+cargo	 [cargo] N M S @P<
+até	 [até] PRP @<ADVL
+segunda	 [segundo] ADJ F S <NUM-ord> @>N
+ordem	 [ordem] N F S <*2> @P<
+$,
+disse	 [dizer] V PS 3S IND VFIN <fmc> @FMV
+ontem	 [ontem] ADV @<ADVL
+Balieiro	 [Balieiro] PROP M/F S @<SUBJ
+$,
+de	 [de] PRP <sam-> @N<PRED
+o	 [o] DET M S <artd> <-sam> @>N
+PMDB	 [PMDB] PROP M S @P<
+$.	 [$.] PU <<<
+$¶	 [$¶] PU <<<
+</s>
+<s>
+A	 [o] DET F S <artd> @>N
+greve	 [greve] N F S @SUBJ>
+de	 [de] PRP <sam-> @N<
+os	 [o] DET M P <artd> <-sam> @>N
+médicos	 [médico] N M P @P<
+municipais	 [municipal] ADJ M P @N<
+$,
+há	 [há] PRP @ADVL>
+dois	 [dois] NUM M P <card> @>N
+meses	 [mês] N M P @P<
+$,
+iniciou	 [iniciar] V PS 3S IND VFIN <fmc> @FMV
+a	 [o] DET F S <artd> @>N
+crise	 [crise] N F S @<ACC
+de	 [de] PRP <sam-> @N<
+a	 [o] DET F S <artd> <-sam> @>N
+Saúde	 [saúde] <prop> N F S @P<
+em	 [em] PRP @<PIV
+Franca	 [franco] ADJ F S @P<
+$.	 [$.] PU <<<
+$¶	 [$¶] PU <<<
+</s>
+<s>
+O	 [o] DET M S <artd> @>N
+problema	 [problema] N M S @SUBJ>
+agravou-	 [agravar] V PS 3S IND VFIN <fmc> <hyfen> @FMV
+se	 [se] PERS M 3S ACC <refl> @<ACC
+em	 [em] PRP <sam-> @<ADVL
+a	 [o] DET F S <artd> <-sam> @>N
+última	 [último] ADJ F S <NUM-ord> @>N
+sexta-feira	 [sexta-feira] N F S @P<
+$,
+com	 [com] PRP @N<PRED @<ADVL
+a	 [o] DET F S <artd> @>N
+demissão	 [demissão] N F S @P<
+coletiva	 [coletivo] ADJ F S @N<
+de	 [de] PRP <sam-> @N<
+os	 [o] DET M P <artd> <-sam> @>N
+grevistas	 [grevista] N M P @P<
+$.	 [$.] PU <<<
+$¶	 [$¶] PU <<<
+</s>
+</TEXT>
+$¶	 [$¶] PU <<<
+</DOC>

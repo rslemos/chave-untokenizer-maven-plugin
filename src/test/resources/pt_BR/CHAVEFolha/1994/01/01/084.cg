@@ -1,0 +1,254 @@
+<DOC>
+<DOCNO.valor=FSP940101-084>
+<DOCID.valor=FSP940101-084>
+<DATE.valor=940101>
+<TEXT>
+<s>
+Da=Reportagem=Local	 [Da=Reportagem=Local] PROP F S @NPHR
+$¶	 [$¶] PU <<<
+</s>
+<s>
+Passado	 [passar] V PCP M S @PRED>
+um	 [um] NUM M S <card> @>N
+ano	 [ano] N M S @SUBJ>
+de	 [de] PRP <sam-> @N<
+o	 [o] DET M S <artd> <-sam> @>N
+governo	 [governo] N M S @P<
+Maluf	 [Maluf] PROP M S @N<
+$,
+a	 [o] DET F S <artd> @>N
+equipe	 [equipe] N F S @APP
+de	 [de] PRP <sam-> @N<
+a	 [o] DET F S <artd> <-sam> @>N
+área	 [área] N F S @P<
+de	 [de] PRP @N<
+transportes	 [transporte] N M P @P<
+ainda	 [ainda] ADV @>A
+não	 [não] ADV @ADVL>
+definiu	 [definir] V PS 3S IND VFIN <fmc> @FMV
+o	 [o] DET M S <artd> @>N
+destino	 [destino] N M S @<ACC
+de	 [de] PRP <sam-> @N<
+a	 [o] DET F S <artd> <-sam> @>N
+CMTC	 [CMTC] PROP F S @P<
+$(	 [$(] PU
+Companhia=Municipal=de=Transportes=Coletivos	 [Companhia=Municipal=de=Transportes=Coletivos] PROP F S @N<PRED
+$)	 [$)] PU
+$,
+a	 [o] DET F S <artd> @>N
+maior	 [grande] ADJ F S <KOMP> @>N
+empresa	 [empresa] N F S @APP
+pública	 [público] ADJ F S @N<
+de	 [de] PRP @N<
+transporte	 [transporte] N M S @P<
+rodoviário	 [rodoviário] ADJ M S @N<
+urbano	 [urbano] N M S @N<
+de	 [de] PRP <sam-> @N<
+o	 [o] DET M S <artd> <-sam> @>N
+Brasil	 [Brasil] PROP M S @P<
+$.	 [$.] PU <<<
+$¶	 [$¶] PU <<<
+</s>
+<s>
+Restam	 [restar] V PR 3P IND VFIN <fmc> @FMV
+pelo=menos	 [pelo=menos] ADV <quant> @>N
+duas	 [dois] NUM F P <card> @>N
+pendências	 [pendência] N F P @<SUBJ
+importantes	 [importante] ADJ F P @N<
+$:	 [$:] PU <<<
+1	 [1] NUM M/F S <card> @P<
+$-	 [$-] PU
+Definir ALT xxxir	 [Definir] V INF @IMV
+quem	 [quem] SPEC M/F S @SUBJ> <rel> @#FS-<ACC
+assumirá	 [assumir] V FUT 3S IND VFIN @FMV
+as	 [o] DET F P <artd> @>N
+funções	 [função] N F P @<ACC
+próprias	 [próprio] ADJ F P @N<
+de	 [de] PRP <sam-> @A<
+a	 [o] DET F S <artd> <-sam> @>N
+CMTC	 [CMTC] PROP F S @P<
+$	 [$] PU
+como	 [como] ADV @#AS-<ADVL <prp> <rel> @COM
+o	 [o] DET M S <artd> @>N
+gerenciamento	 [gerenciamento] N M S @AS<
+de	 [de] PRP <sam-> @N<
+a	 [o] DET F S <artd> <-sam> @>N
+municipalização	 [municipalização] N F S @P<
+e	 [e] KC @CO
+a	 [o] DET F S <artd> @>N
+fiscalização	 [fiscalização] N F S @AS<
+de	 [de] PRP <sam-> @N<
+o	 [o] DET M S <artd> <-sam> @>N
+sistema	 [sistema] N M S @P<
+$.	 [$.] PU <<<
+$¶	 [$¶] PU <<<
+</s>
+<s>
+2	 [2] NUM M/F P <card> @P<
+$-	 [$-] PU
+Detalhar ALT xxxar	 [Detalhar] V INF @IMV
+a	 [o] DET F S <artd> @>N
+terceira	 [terceiro] ADJ F S <NUM-ord> @>N
+etapa	 [etapa] N F S @<ACC
+de	 [de] PRP <sam-> @N<
+a	 [o] DET F S <artd> <-sam> @>N
+privatização	 [privatização] N F S @P<
+$,
+que	 [que] SPEC M/F S @SUBJ> <rel> @#FS-N<
+prevê	 [prever] V PR 3S IND VFIN @FMV
+a	 [o] DET F S <artd> @>N
+transferência	 [transferência] N F S @<ACC
+de	 [de] PRP <sam-> @N<
+as	 [o] DET F P <artd> <-sam> @>N
+linhas	 [linha] N F P @P<
+mais	 [mais] ADV <KOMP> <quant> @>A
+deficitárias	 [deficitário] ADJ F P @N<
+$	 [$] PU
+como	 [como] ADV @#AS-<ADVL <prp> <rel> @COM
+a	 [o] DET F S <artd> @>N
+rede	 [rede] N F S @AS<
+de	 [de] PRP @N<
+trólebus ALT xxxs	 [trólebu] N M P @P<
+$.	 [$.] PU <<<
+$¶	 [$¶] PU <<<
+</s>
+<s>
+O	 [o] DET M S <artd> @>N
+programa	 [programa] N M S @SUBJ>
+de	 [de] PRP <sam-> @N<
+o	 [o] DET M S <artd> <-sam> @>N
+secretário	 [secretário] N M S @P<
+de	 [de] PRP @N<
+Transportes	 [transporte] N M P @P<
+$,
+Getúlio=Hanashiro	 [Getúlio=Hanashiro] PROP M S @APP
+$(	 [$(] PU
+PPR	 [PPR] PROP M/F S @N<PRED
+$)	 [$)] PU
+$,
+para	 [para] PRP @ADVL>
+a	 [o] DET F S <artd> @>N
+empresa	 [empresa] N F S @P<
+está	 [estar] V PR 3S IND VFIN <fmc> @FMV
+traçado	 [traçar] V PCP M S @<SC
+até	 [até] PRP @<ADVL
+o	 [o] DET M S <artd> @>N
+segundo	 [segundo] ADJ M S <NUM-ord> @>N
+semestre	 [semestre] N M S @P<
+$,
+quando	 [quando] ADV @ADVL> <ks> <rel> @#FS-N<
+a	 [o] DET F S <artd> @>N
+privatização	 [privatização] N F S @SUBJ>
+entra	 [entrar] V PR 3S IND VFIN @FMV
+em	 [em] PRP <sam-> @<ADVS
+a	 [o] DET F S <artd> <-sam> @>N
+etapa	 [etapa] N F S @P<
+de	 [de] PRP <sam-> @N<
+a	 [o] DET F S <artd> <-sam> @>N
+criação	 [criação] N F S @P<
+de	 [de] PRP <sam-> @N<
+a	 [o] DET F S <artd> <-sam> @>N
+frota	 [frota] N F S @P<
+pública	 [público] ADJ F S @N<
+$	 [$] PU
+transferência	 [transferência] N F S @PRED>
+de	 [de] PRP @N<
+linhas	 [linha] N F P @P<
+$,
+veículos	 [veículo] N M P @P<
+e	 [e] KC @CO
+garagens	 [garagem] N F P @P<
+para	 [para] PRP @N<
+a	 [o] DET F S <artd> @>N
+iniciativa	 [iniciativa] N F S @P<
+privada	 [privado] ADJ F S @N<
+$.	 [$.] PU <<<
+$¶	 [$¶] PU <<<
+</s>
+<s>
+Hanashiro	 [Hanashiro] PROP M S @SUBJ>
+é	 [ser] V PR 3S IND VFIN <fmc> @FMV
+um	 [um] NUM M S <card> @<SC
+de	 [de] PRP <sam-> @N<
+os	 [o] DET M P <artd> <-sam> @>N
+poucos	 [pouco] DET M P <quant> @P<
+de	 [de] PRP <sam-> @<ADVL
+a	 [o] DET F S <artd> <-sam> @>N
+equipe	 [equipe] N F S @P<
+de	 [de] PRP @N<
+Maluf	 [Maluf] PROP M S @P<
+a	 [a] PRP @<ADVL
+assumir	 [assumir] V INF @IMV @#ICL-P<
+abertamente	 [abertamente] ADV @<ADVL
+ser	 [ser] V INF @IMV @#ICL-<ACC
+candidato	 [candidato] N M S @<SC
+$(	 [$(] PU
+a	 [a] PRP @N<
+uma	 [um] DET F S <arti> @>N
+vaga	 [vaga] N F S @P<
+de	 [de] PRP @N<
+deputado	 [deputado] N M S @P<
+federal	 [federal] ADJ M S @N<
+$)	 [$)] PU
+em	 [em] PRP @<ADVL
+93	 [93] NUM M/F S <card> @P<
+$.	 [$.] PU <<<
+$¶	 [$¶] PU <<<
+</s>
+<s>
+A	 [o] DET F S <artd> @>N
+nova	 [novo] ADJ F S @>N
+equipe	 [equipe] N F S @SUBJ>
+pode	 [poder] V PR 3S IND VFIN <fmc> @FAUX
+adotar	 [adotar] V INF @IMV @#ICL-AUX<
+estilo	 [estilo] N M S @<ACC
+diferente	 [diferente] ADJ M S @N<
+para	 [para] PRP @<ADVL
+conduzir	 [conduzir] V INF @IMV @#ICL-P<
+a	 [o] DET F S <artd> @>N
+política	 [política] N F S @<ACC
+de	 [de] PRP @N<
+transportes	 [transporte] N M P @P<
+em	 [em] PRP <sam-> @<ADVL
+a	 [o] DET F S <artd> <-sam> @>N
+cidade	 [cidade] N F S @P<
+$.	 [$.] PU <<<
+$¶	 [$¶] PU <<<
+</s>
+<s>
+Hanashiro	 [Hanashiro] PROP M/F S @SUBJ>
+deve	 [dever] V PR 3S IND VFIN <fmc> @FAUX
+deixar	 [deixar] V INF @IMV @#ICL-AUX<
+a	 [o] DET F S <artd> @>N
+secretaria	 [secretaria] N F S @<ACC
+ainda	 [ainda] ADV @>P
+em	 [em] PRP <sam-> @<ADVL
+o	 [o] DET M S <artd> <-sam> @>N
+primeiro	 [primeiro] ADJ M S <NUM-ord> @>N
+trimestre	 [trimestre] N M S @P<
+$.	 [$.] PU <<<
+$¶	 [$¶] PU <<<
+</s>
+<s>
+A	 [o] DET F S <artd> <*1> @>N
+equipe	 [equipe] N F S @SUBJ>
+sucessora	 [sucessora] N F S @N<
+vai	 [ir] V PR 3S IND VFIN <fmc> @FAUX
+saber	 [saber] V INF @IMV @#ICL-AUX<
+tocar	 [tocar] V INF @IMV @#ICL-<ACC
+o	 [o] DET M S <artd> @>N
+processo	 [processo] N M S <*2> @<ACC
+$,
+afirma	 [afirmar] V PR 3S IND VFIN <fmc> @FMV
+$.	 [$.] PU <<<
+$¶	 [$¶] PU <<<
+</s>
+<s>
+$(	 [$(] PU
+As	 [elas] PERS F 3P ACC @ACC>
+$)	 [$)] PU
+$¶	 [$¶] PU <<<
+</s>
+</TEXT>
+$¶	 [$¶] PU <<<
+</DOC>

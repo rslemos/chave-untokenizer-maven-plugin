@@ -1,0 +1,277 @@
+<DOC>
+<DOCNO.valor=FSP940101-028>
+<DOCID.valor=FSP940101-028>
+<DATE.valor=940101>
+<TEXT>
+<s>
+Da=Agência=Folha	 [Da=Agência=Folha] PROP F S @NPHR
+$,
+em	 [em] PRP @ADVL
+João=Pessoa	 [João=Pessoa] PROP M S @P<
+$¶	 [$¶] PU <<<
+</s>
+<s>
+O	 [o] DET M S <artd> @>N
+economista	 [economista] N M S @SUBJ>
+Lucindo=José=Quintans	 [Lucindo=José=Quintans] PROP M S @N<
+$,
+46	 [46] NUM M/F P <card> @P<
+$,
+professor	 [professor] N M S @N<PRED
+de	 [de] PRP <sam-> @N<
+o	 [o] DET M S <artd> <-sam> @>N
+curso	 [curso] N M S @P<
+de	 [de] PRP @N<
+Administração	 [administração] N F S @P<
+de	 [de] PRP <sam-> @N<
+a	 [o] DET F S <artd> <-sam> @>N
+UFPB	 [UFPB] PROP F S @P<
+e	 [e] KC @CO
+coordenador	 [coordenador] N M S @P<
+de	 [de] PRP <sam-> @N<
+o	 [o] DET M S <artd> <-sam> @>N
+estudo	 [estudo] N M S @P<
+$,
+compara	 [comparar] V PR 3S IND VFIN <fmc> @FMV
+o	 [o] DET M S <artd> @>N
+Cariri=Ocidental=da=Paraíba	 [Cariri=Ocidental=da=Paraíba] PROP M S @<ACC
+a	 [a] PRP <sam-> @<ADVL
+a	 [o] DET F S <artd> <-sam> @>N
+Eritréia	 [Eritréia] PROP F S @P<
+$,
+uma	 [uma] NUM F S <card> @N<PRED
+de	 [de] PRP <sam-> @N<
+as	 [o] DET F P <artd> <-sam> @>N
+regiões	 [região] N F P @P<
+mais	 [mais] ADV <KOMP> <quant> @>A
+pobres	 [pobre] ADJ M/F P @N<
+de	 [de] PRP <sam-> @N<
+a	 [o] DET F S <artd> <-sam> @>N
+Etiópia	 [Etiópia] PROP F S @P<
+$.	 [$.] PU <<<
+$¶	 [$¶] PU <<<
+</s>
+<s>
+A	 [o] DET F S <artd> @>N
+renda	 [renda] N F S @SUBJ>
+per=capita	 [per=capita] ADJ F S @N<
+de	 [de] PRP <sam-> @N<
+a	 [o] DET F S <artd> <-sam> @>N
+Etiópia	 [Etiópia] PROP F S @P<
+$(	 [$(] PU
+US$	 [US$] PROP M/F S @APP
+120	 [120] NUM M/F P <card> @N<
+$)	 [$)] PU
+só	 [só] ADV @ADVL>
+supera	 [superar] V PR 3S IND VFIN <fmc> @FMV
+dois	 [dois] NUM M P <card> @>N
+países	 [país] N M P @<ACC
+$,
+Moçambique	 [Moçambique] PROP M S @APP
+$(	 [$(] PU
+US$	 [US$] PROP M/F S @APP
+80	 [80] NUM M/F P <card> @N<
+$)	 [$)] PU
+e	 [e] KC @CO
+Tanzânia	 [Tanzânia] PROP M/F S @<ACC @APP
+$(	 [$(] PU
+US$	 [US$] PROP M/F S @APP
+110	 [110] NUM M/F P <card> @N<
+$)	 [$)] PU
+$.	 [$.] PU <<<
+$¶	 [$¶] PU <<<
+</s>
+<s>
+Segundo	 [segundo] ADV @COM <prp> <rel> @#AS-ADVL>
+ele	 [ele] PERS M 3S NOM @SUBJ>
+$,
+60	 [60] NUM M/F P <card> @>N
+$%	 [%] N M P @SUBJ>	 [$%] PU
+de	 [de] PRP <sam-> @N<
+os	 [o] DET M P <artd> <-sam> @>N
+111	 [111] NUM M P <card> @>N
+mil	 [mil] NUM M P <card> @>N
+habitantes	 [habitante] N M P @P<
+de	 [de] PRP <sam-> @N<
+o	 [o] DET M S <artd> <-sam> @>N
+Cariri	 [Cariri] PROP M S @P<
+vivem	 [viver] V PR 3P IND VFIN <fmc> @FMV
+em	 [em] PRP <*1> @<ADVS
+miséria	 [miséria] N F S @P<
+absoluta	 [absoluto] ADJ F S <*2> @N<
+$.	 [$.] PU <<<
+$¶	 [$¶] PU <<<
+</s>
+<s>
+São	 [ser] V PR 3P IND VFIN <fmc> @FMV
+pessoas	 [pessoa] N F P @<SC
+com	 [com] PRP @N<
+renda	 [renda] N F S @P<
+per=capita	 [per=capita] ADV @>A
+anual	 [anual] ADJ M/F S @N<PRED
+de	 [de] PRP @<ADVL
+US$	 [US$] PROP M/F S @P<
+118	 [118] NUM M/F P <card> @N<
+$.	 [$.] PU <<<
+$¶	 [$¶] PU <<<
+</s>
+<s>
+A	 [o] DET F S <artd> @>N
+renda	 [renda] N F S @SUBJ>
+per=capita	 [per=capita] ADV @ADVL>
+anual	 [anual] <n> ADJ M/F S @SUBJ>
+de	 [de] PRP <sam-> @N<
+o	 [o] DET M S <artd> <-sam> @>N
+restante	 [restante] <n> <n> ADJ M S @P<
+de	 [de] PRP <sam-> @N<
+a	 [o] DET F S <artd> <-sam> @>N
+população	 [população] N F S @P<
+varia	 [variar] V PR 3S IND VFIN <fmc> @FMV
+entre	 [entre] PRP @<ADVL
+US$	 [US$] PROP M/F S @P<
+118	 [118] NUM M/F P <card> @N<
+e	 [e] KC @CO
+US$	 [US$] PROP M/F S @P<
+365	 [365] NUM M/F P <card> @N<
+$.	 [$.] PU <<<
+$¶	 [$¶] PU <<<
+</s>
+<s>
+Segundo	 [segundo] ADV @COM <prp> <rel> @#AS-ADVL>
+Quintans	 [Quintans] PROP M/F S @AS<
+$,
+a	 [o] DET F S <artd> @>N
+população	 [população] N F S @SUBJ>
+de	 [de] PRP <sam-> @N<
+o	 [o] DET M S <artd> <-sam> @>N
+Cariri=Ocidental	 [Cariri=Ocidental] PROP M S @P<
+sobrevive	 [sobreviver] V PR 3S IND VFIN <fmc> @FMV
+abaixo=de	 [abaixo=de] PRP <sam-> @<ADVL
+os	 [o] DET M P <-sam> <artd> @>N
+padrões	 [padrão] N M P @P<
+mínimos	 [pequeno] ADJ M P <SUP> @N<
+tolerados	 [tolerar] V PCP M P @IMV @#ICL-N<
+por	 [por] PRP <sam-> @<PASS
+a	 [o] DET F S <artd> <-sam> @>N
+ONU	 [ONU] PROP F S @P<
+$(	 [$(] PU
+Organização=das=Nações=Unidos	 [Organização=das=Nações=Unidos] PROP F S @N<PRED
+$)	 [$)] PU
+$	 [$] PU
+uma	 [um] DET F S <arti> @>N
+renda	 [renda] N F S @N<PRED
+per=capita	 [per=capita] ADV @>A
+anual	 [anual] ADJ M/F S @N<PRED
+de	 [de] PRP @N<PRED
+US$	 [US$] PROP M/F S @P<
+250	 [250] NUM M/F P <card> @N<
+$.	 [$.] PU <<<
+$¶	 [$¶] PU <<<
+</s>
+<s>
+De	 [de] PRP @ADVL>
+cada	 [cada] DET F S <quant> @>N
+mil	 [mil] NUM F P <card> @>N
+crianças	 [criança] N F P @P<
+nascidas	 [nascer] V PCP F P @IMV @#ICL-N<
+em	 [em] PRP <sam-> @<ADVL
+a	 [o] DET F S <artd> <-sam> @>N
+região	 [região] N F S @P<
+$,
+151	 [151] NUM M/F P <card> @SUBJ>
+morrem	 [morrer] V PR 3P IND VFIN @FMV @#FS-ACC>>
+antes	 [antes] ADV @<ADVL
+de	 [de] PRP @<PIV
+completar	 [completar] V INF @IMV @#ICL-P<
+um	 [um] NUM M S <card> @>N
+ano	 [ano] N M S @<ACC
+de	 [de] PRP @N<
+idade	 [idade] N F S @P<
+$,
+informa	 [informar] V PR 3S IND VFIN <fmc> @FMV
+o	 [o] DET M S <artd> @>N
+professor	 [professor] N M S @<SUBJ
+Quintans	 [Quintans] PROP M S @N<
+$.	 [$.] PU <<<
+$¶	 [$¶] PU <<<
+</s>
+<s>
+A	 [o] DET F S <artd> @>N
+situação	 [situação] N F S @SUBJ>
+é	 [ser] V PR 3S IND VFIN <fmc> @FMV
+pior	 [mau] ADJ F S <SUP> <KOMP> @<SC
+do=que	 [do=que] KS @COM @#AS-KOMP<
+em	 [em] PRP <sam-> @AS<
+a	 [o] DET F S <artd> <-sam> @>N
+Somália	 [Somália] PROP F S @P<
+$(	 [$(] PU
+125	 [125] NUM M/F P <card> @N<
+por	 [por] PRP @<ADVL
+mil	 [mil] NUM M/F P <card> @P<
+$)	 [$)] PU
+$	 [$] PU
+país	 [país] N M S @P<
+que	 [que] SPEC M/F S @SUBJ> <rel> @#FS-N<
+atravessa	 [atravessar] V PR 3S IND VFIN @FMV
+uma	 [um] DET F S <arti> @>N
+guerra=civil	 [guerra=civil] N F S @<ACC
+$	 [$] PU
+e	 [e] KC @CO
+Camboja	 [Camboja] PROP M/F S @<ACC
+$(	 [$(] PU
+110	 [110] NUM M/F P <card> @<ACC
+por	 [por] PRP @<ADVL
+mil	 [mil] NUM M/F P <card> @P<
+$)	 [$)] PU
+$.	 [$.] PU <<<
+$¶	 [$¶] PU <<<
+</s>
+<s>
+De	 [de] PRP <sam-> @ADVL>
+os	 [o] DET M P <artd> <-sam> @>N
+12	 [12] NUM M P <card> @>N
+municípios	 [município] N M P @P<
+de	 [de] PRP <sam-> @N<
+a	 [o] DET F S <artd> <-sam> @>N
+área	 [área] N F S @P<
+$,
+oito	 [oito] NUM M/F P <card> @SUBJ>
+tiveram	 [ter] V PS/MQP 3P IND VFIN <fmc> @FMV
+crescimento	 [crescimento] N M S @<ACC
+populacional	 [populacional] ADJ M S @N<
+negativo	 [negativo] ADJ M S @N<
+em	 [em] PRP <sam-> @<ADVL
+a	 [o] DET F S <artd> <-sam> @>N
+década	 [década] N F S @P<
+de	 [de] PRP @N<
+80	 [80] NUM M/F P <card> @P<
+$.	 [$.] PU <<<
+$¶	 [$¶] PU <<<
+</s>
+<s>
+O	 [o] DET M S <artd> @>N
+economista	 [economista] N M S @SUBJ>
+aponta	 [apontar] V PR 3S IND VFIN <fmc> @FMV
+como	 [como] ADV @COM <prp> <rel> @#AS-<ADVL
+solução	 [solução] N F S @AS<
+para	 [para] PRP @N<
+o	 [o] DET M S <artd> @>N
+Cariri	 [Cariri] PROP M S @P<
+a	 [o] DET F S <artd> @>N
+criação	 [criação] N F S @<ACC
+de	 [de] PRP @N<
+pólos	 [pólo] N M P @P<
+de	 [de] PRP @N<
+beneficiamento	 [beneficiamento] N M S @P<
+de	 [de] PRP @N<
+minérios	 [minério] N M P @P<
+e	 [e] KC @CO
+de=criação	 [de=criação] ADJ @<SC
+de	 [de] PRP @<ADVL
+cabras	 [cabra] N F P @P<
+$.	 [$.] PU <<<
+$¶	 [$¶] PU <<<
+</s>
+</TEXT>
+$¶	 [$¶] PU <<<
+</DOC>

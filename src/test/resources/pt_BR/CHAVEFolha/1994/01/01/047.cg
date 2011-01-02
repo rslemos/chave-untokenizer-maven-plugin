@@ -1,0 +1,76 @@
+<DOC>
+<DOCNO.valor=FSP940101-047>
+<DOCID.valor=FSP940101-047>
+<DATE.valor=940101>
+<TEXT>
+<s>
+Em	 [em] PRP @ADVL>
+seu	 [seu] DET M S <si> <poss 3S> @>N
+pronunciamento	 [pronunciamento] N M S @P<
+de	 [de] PRP @N<
+início	 [início] N M S @P<
+de	 [de] PRP @N<
+ano	 [ano] N M S @P<
+$,
+o	 [o] DET M S <artd> @>N
+primeiro-ministro	 [primeiro-ministro] N M S @SUBJ>
+japonês	 [japonês] ADJ M S @N<
+$,
+Morihiro=Hosokawa	 [Morihiro=Hosokawa] PROP M S @APP
+$,
+reafirmou	 [reafirmar] V PS 3S IND VFIN <fmc> @FMV
+suas	 [seu] DET F P <si> <poss 3S> @>N
+metas	 [meta] N F P @<ACC
+de	 [de] PRP @N<
+desregulamentação	 [desregulamentação] N F S @P<
+de	 [de] PRP <sam-> @N<
+a	 [o] DET F S <artd> <-sam> @>N
+economia	 [economia] N F S @P<
+e	 [e] <co-vfin> KC @CO
+políticas	 [política] N F P @P<
+que	 [que] SPEC M/F S @ACC> <rel> @#FS-N<
+dão	 [dar] V PR 3P IND VFIN @FMV
+uma	 [um] DET F S <arti> @>N
+maior	 [grande] ADJ F S <KOMP> @>N
+ênfase	 [ênfase] N F S @PRED>
+a	 [a] PRP <sam-> @<PIV
+o	 [o] DET M S <artd> <-sam> @>N
+consumidor	 [consumidor] N M S @P<
+$.	 [$.] PU <<<
+$¶	 [$¶] PU <<<
+</s>
+<s>
+A	 [a] PRP <sam-> @ADVL>
+o	 [o] DET M S <artd> <-sam> @>N
+ser	 [ser] V INF @IAUX @#ICL-P<
+eleito	 [eleger] V PCP M S @IMV @#ICL-AUX<
+premiê	 [premiê] N M S @<SC
+$,
+em	 [em] PRP @ADVL>
+agosto	 [agosto] N M S @P<
+passado	 [passado] ADJ M S @N<
+$,
+Hosakawa	 [Hosakawa] PROP M/F S @SUBJ>
+prometeu	 [prometer] V PS 3S IND VFIN <fmc> @FMV
+que	 [que] KS @SUB @#FS-<ACC
+faria	 [fazer] V COND 3S VFIN @FMV
+o	 [o] DET M S <artd> @>N
+Parlamento	 [parlamento] <prop> N M S @SUBJ>
+aprovar	 [aprovar] V INF 3S @IMV @#ICL-<ACC
+as	 [o] DET F P <artd> @>N
+reformas	 [reforma] N F P @<ACC
+até	 [até] PRP @<ADVL
+o	 [o] DET M S <artd> @>N
+fim	 [fim] N M S @P<
+de	 [de] PRP @N<
+93	 [93] NUM M/F P <card> @P<
+$,
+mas	 [mas] <co-fmc> <co-vfin> KC @CO
+não	 [não] ADV @ADVL>
+conseguiu	 [conseguir] V PS 3S IND VFIN <fmc> @FMV
+$.	 [$.] PU <<<
+$¶	 [$¶] PU <<<
+</s>
+</TEXT>
+$¶	 [$¶] PU <<<
+</DOC>

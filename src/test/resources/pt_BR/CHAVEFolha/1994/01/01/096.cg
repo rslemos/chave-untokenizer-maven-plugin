@@ -1,0 +1,415 @@
+<DOC>
+<DOCNO.valor=FSP940101-096>
+<DOCID.valor=FSP940101-096>
+<DATE.valor=940101>
+<TEXT>
+<s>
+Torneio	 [torneio] N M S @SUBJ>
+em	 [em] PRP <sam-> @N<
+a	 [o] DET F S <artd> <-sam> @>N
+Austrália	 [Austrália] PROP F S @P<
+testa	 [testar] V PR 3S IND VFIN <fmc> @FMV
+sistema	 [sistema] N M S @<ACC
+que	 [que] SPEC M/F S @SUBJ> <rel> @#FS-N<
+pode	 [poder] V PR 3S IND VFIN @FAUX
+revolucionar	 [revolucionar] V INF @IMV @#ICL-AUX<
+o	 [o] DET M S <artd> @>N
+esporte	 [esporte] N M S @<ACC
+$¶	 [$¶] PU <<<
+</s>
+<s>
+De	 [de] PRP <sam-> @ADVL
+as	 [o] DET F P <artd> <-sam> @>N
+agências=internacionais	 [agência=internacional] N F P @P<
+$¶	 [$¶] PU <<<
+</s>
+<s>
+Uma	 [um] DET F S <arti> @>N
+novidade	 [novidade] N F S @SUBJ>
+futurística	 [futurístico] ADJ F S <DERS> @N<
+é	 [ser] V PR 3S IND VFIN <fmc> @FMV
+a	 [o] DET F S <artd> @>N
+atração	 [atração] N F S @PRED>
+de	 [de] PRP <sam-> @N<
+a	 [o] DET F S <artd> <-sam> @>N
+Copa=Hopman	 [Copa=Hopman] PROP F S @P<
+de	 [de] PRP @N<
+tênis	 [tênis] N M S @P<
+$,
+cuja	 [cujo] DET F S @>N <rel> @#FS-N<
+abertura	 [abertura] N F S @SUBJ>
+estava	 [estar] V IMPF 3S IND VFIN @FMV
+programada	 [programar] <n> V PCP F S @<SC
+para	 [para] PRP @N<
+ontem	 [ontem] ADV @P<
+em	 [em] PRP @<ADVL
+Perth	 [Perth] PROP M S @P<
+$(	 [$(] PU
+Austrália	 [Austrália] PROP F S @N<PRED
+$)	 [$)] PU
+$.	 [$.] PU <<<
+$¶	 [$¶] PU <<<
+</s>
+<s>
+Pela=primeira=vez	 [pela=primeira=vez] ADV @ADVL>
+$,
+partidas	 [partir] <n> V PCP F P @SUBJ>
+de	 [de] PRP @N<
+tênis	 [tênis] N M S @P<
+serão	 [ser] V FUT 3P IND VFIN <fmc> @FAUX
+disputadas	 [disputar] V PCP F P @IMV @#ICL-AUX<
+sem	 [sem] PRP @<ADVL
+juiz=de=linha	 [juiz=de=linha] N M S @P<
+$.	 [$.] PU <<<
+$¶	 [$¶] PU <<<
+</s>
+<s>
+Todas=as	 [todo=o] DET F P <quant> @>N
+marcações	 [marcação] N F P @SUBJ>
+serão	 [ser] V FUT 3P IND VFIN <fmc> @FAUX
+realizadas	 [realizar] V PCP F P @IMV @#ICL-AUX<
+por	 [por] PRP @<PASS
+um	 [um] DET M S <arti> @>N
+sistema	 [sistema] N M S @P<
+eletrônico	 [eletrônico] ADJ M S @N<
+$.	 [$.] PU <<<
+$¶	 [$¶] PU <<<
+</s>
+<s>
+Restam	 [restar] V PR 3P IND VFIN <fmc> @FMV
+apenas	 [apenas] ADV @>N
+o	 [o] DET M S <artd> @>N
+juiz	 [juiz] N M S @<SUBJ
+de=cadeira	 [de=cadeira] ADV @<ADVL
+$,
+o	 [o] DET M S <dem> @<SUBJ
+de	 [de] PRP @N<
+rede	 [rede] N F S @P<
+e	 [e] <co-vfin> KC @CO
+o	 [o] DET M S <dem> @<SUBJ
+que	 [que] SPEC M/F S @SUBJ> <rel> @#FS-N<
+controla	 [controlar] V PR 3S IND VFIN @FMV
+o	 [o] DET M S <artd> @>N
+pé	 [pé] N M S @<ACC
+de	 [de] PRP <sam-> @N<
+os	 [o] DET M P <artd> <-sam> @>N
+tenistas	 [tenista] N M P @P<
+em	 [em] PRP <sam-> @<ADVL
+o	 [o] DET M S <artd> <-sam> @>N
+saque	 [saque] N M S @P<
+$.	 [$.] PU <<<
+$¶	 [$¶] PU <<<
+</s>
+<s>
+O	 [o] DET M S <artd> @>N
+Tel	 [tel] <prop> N M S @SUBJ>
+$(	 [$(] PU
+Tennis=Electronic=Lines	 [Tennis=Electronic=Lines] PROP M/F S @APP
+$,
+ou=seja	 [ou=seja] ADV <kc> @ADVL>
+$,
+linhas	 [linha] N F P @N<PRED
+eletrônicas	 [eletrônico] ADJ F P @N<
+de	 [de] PRP @N<
+tênis	 [tênis] N M S @P<
+$)	 [$)] PU
+$,
+criado	 [criar] V PCP M S @IMV @#ICL-N<PRED
+por	 [por] PRP <sam-> @<PASS
+o	 [o] DET M S <artd> <-sam> @>N
+inventor	 [inventor] N M S @P<
+australiano	 [australiano] ADJ M S @N<
+Brian=Williams	 [Brian=Williams] PROP M S @N<
+$,
+seria	 [ser] V COND 3S VFIN <fmc> @FMV
+cinco	 [cinco] NUM F P <card> @>N
+vezes	 [vez] N F P @<ADVL
+mais	 [mais] ADV <KOMP> <quant> @>A
+preciso	 [preciso] ADJ M S @N<
+que	 [que] KS @SUB @#FS-<SUBJ
+o	 [ele] PERS M 3S ACC @ACC>
+olho	 [olhar] V PR 1S IND VFIN @FMV
+humano	 [humano] ADJ M S @<PRED
+$.	 [$.] PU <<<
+$¶	 [$¶] PU <<<
+</s>
+<s>
+O	 [o] DET M S <artd> @>N
+sistema	 [sistema] N M S @SUBJ>
+apresentou	 [apresentar] V PS 3S IND VFIN <fmc> @FMV
+defeitos	 [defeito] N M P @<ACC
+em	 [em] PRP <sam-> @<ADVL
+os	 [o] DET M P <artd> <-sam> @>N
+testes	 [teste] N M P @P<
+já	 [já] ADV @ADVL>
+realizados	 [realizar] V PCP M P @IMV @#ICL-N<
+$,
+mas	 [mas] <co-fmc> <co-vfin> KC @CO
+seu	 [seu] DET M S <poss 3S> @>N
+criador	 [criador] N M S @SUBJ>
+afirmaue	 [afirma] V PR 3S SUBJ VFIN <fmc> <DERS> <DERP> @FMV
+ele	 [ele] PERS M 3S NOM @SUBJ>
+vai	 [ir] V PR 3S IND VFIN <fmc> @FAUX
+revolucionar	 [revolucionar] V INF @IMV @#ICL-AUX<
+o	 [o] DET M S <artd> @>N
+esporte	 [esporte] N M S @<ACC
+$.	 [$.] PU <<<
+$¶	 [$¶] PU <<<
+</s>
+<s>
+O	 [o] DET M S <artd> <*1> @>N
+tênis	 [tênis] N M S @SUBJ>
+mundial	 [mundial] ADJ M S @N<
+estava	 [estar] V IMPF 3S IND VFIN @FMV @#FS-ACC>>
+a	 [a] PRP <sam-> @<SC
+a	 [o] DET F S <artd> <-sam> @>N
+espera	 [espera] N F S @P<
+de	 [de] PRP @N<
+um	 [um] DET M S <arti> @>N
+sistema	 [sistema] N M S @P<
+semelhante	 [semelhante] ADJ M S @N<
+para	 [para] PRP @<ADVL
+ser	 [ser] V INF @IAUX @#ICL-P<
+usado	 [usar] V PCP M S @IMV @#ICL-AUX<
+em	 [em] PRP @<ADVL
+grandes	 [grande] ADJ M P @>N
+torneios	 [torneio] N M P <*2> @P<
+$,
+exultou	 [exultar] V PS 3S IND VFIN <fmc> @FMV
+o	 [o] DET M S <artd> @>N
+diretor	 [diretor] N M S @<SUBJ
+de	 [de] PRP <sam-> @N<
+o	 [o] DET M S <artd> <-sam> @>N
+torneio	 [torneio] N M S @P<
+$,
+o	 [o] DET M S <artd> @>N
+ex-jogador	 [ex-jogador] N M S @APP
+australiano	 [australiano] ADJ M S @N<
+Paul=McNamee	 [Paul=McNamee] PROP M S @N<
+$.	 [$.] PU <<<
+$¶	 [$¶] PU <<<
+</s>
+<s>
+Se	 [se] KS @#FS-ADVL> <*1> @SUB
+tudo	 [tudo] SPEC M S <quant> @SUBJ>
+correr	 [correr] V FUT 3S SUBJ VFIN @FMV
+bem	 [bem] ADV <quant> @<ADVL
+$,
+poderia	 [poder] V COND 3S VFIN <fmc> @FAUX
+até	 [até] ADV @ADVL>
+ser	 [ser] V INF @IAUX @#ICL-AUX<
+utilizado	 [utilizar] V PCP M S @IMV @#ICL-AUX<
+em	 [em] PRP @<ADVL
+Wimbledon	 [Wimbledon] PROP M S @P<
+$.	 [$.] PU <<<
+$¶	 [$¶] PU <<<
+</s>
+<s>
+Para	 [para] PRP @ADVL> @ADVL
+enfrentar	 [enfrentar] V INF @IMV @#ICL-P<
+a	 [o] DET F S <artd> @>N
+concorrência	 [concorrência] N F S @<ACC
+de	 [de] PRP @N<
+outros	 [outro] DET M P <KOMP> <diff> @>N
+esportes	 [esporte] N M P @P<
+que	 [que] SPEC M/F S @ACC> <rel> @#FS-N<
+chegam	 [chegar] V PR 3P IND VFIN @FMV
+a	 [a] PRP <sam-> @<ADVL
+o	 [o] DET M S <artd> <-sam> @>N
+ano	 [ano] N M S @P<
+2000	 [2000] NUM M/F P <card> @N<
+$,
+temos	 [ter] V PR 1P IND VFIN <fmc> @FAUX
+que	 [que] KS @PRT-AUX<
+inovar	 [inovar] V INF @IMV <*2> @#ICL-AUX<
+$,
+acrescentou	 [acrescentar] V PS 3S IND VFIN <fmc> @FMV
+$.	 [$.] PU <<<
+$¶	 [$¶] PU <<<
+</s>
+<s>
+O	 [o] DET M S <artd> @>N
+Tel	 [tel] <prop> N M S @SUBJ>
+se	 [se] PERS M/F 3S ACC <refl> @ACC>
+baseia	 [basear] V PR 3S IND VFIN <fmc> @FMV
+em	 [em] PRP @<PIV
+sensores	 [sensor] N M P @P<
+sob	 [sob] PRP @N< @<ADVL
+a	 [o] DET F S <artd> @>N
+quadra	 [quadra] N F S @P<
+$,
+capazes	 [capaz] ADJ M/F P @N<PRED
+de	 [de] PRP @A<
+detectar	 [detectar] V INF @IMV @#ICL-P<
+o	 [o] DET M S <artd> @>N
+contato	 [contato] N M S @<ACC
+de	 [de] PRP @N<
+uma	 [um] DET F S <arti> @>N
+bola	 [bola] N F S @P<
+que	 [que] SPEC M/F S @SUBJ> <rel> @#FS-N<
+contenha	 [conter] V PR 3S SUBJ VFIN @FMV
+ferro	 [ferro] N M S @<ACC
+$.	 [$.] PU <<<
+$¶	 [$¶] PU <<<
+</s>
+<s>
+Um	 [um] DET M S <arti> @>N
+som	 [som] N M S @SUBJ>
+indica	 [indicar] V PR 3S IND VFIN <fmc> @FMV
+que	 [que] KS @SUB @#FS-<ACC
+a	 [o] DET F S <artd> @>N
+bola	 [bola] N F S @SUBJ>
+caiu	 [cair] V PS 3S IND VFIN @FMV
+fora	 [fora] ADV @<ADVS
+$,
+enquanto	 [enquanto] ADV @#FS-<ADVL <ks> <rel> @ADVL>
+a	 [o] DET F S <artd> @>N
+informação	 [informação] N F S @SUBJ>
+é	 [ser] V PR 3S IND VFIN @FAUX
+enviada	 [enviar] V PCP F S @IMV @#ICL-AUX<
+a	 [a] PRP <sam-> @<ADVL
+o	 [o] DET M S <artd> <-sam> @>N
+árbitro	 [árbitro] N M S @P<
+de=cadeira	 [de=cadeira] ADV @<ADVL
+por	 [por] PRP @<ADVL
+computador	 [computador] N M S @P<
+$.	 [$.] PU <<<
+$¶	 [$¶] PU <<<
+</s>
+<s>
+O	 [o] DET M S <artd> @>N
+sistema	 [sistema] N M S @SUBJ>
+deveria	 [dever] V COND 3S VFIN <fmc> @FAUX
+ter	 [ter] V INF @IAUX @#ICL-AUX<
+sido	 [ser] V PCP @IAUX @#ICL-AUX<
+usado	 [usar] V PCP M S @IMV @#ICL-AUX<
+em	 [em] PRP <sam-> @<ADVL
+o	 [o] DET M S <artd> <-sam> @>N
+último	 [último] <n> ADJ M S <NUM-ord> @P<
+Aberto=dos=Eua	 [Aberto=dos=Eua] PROP M S @P<
+$,
+mas	 [mas] <co-fmc> <co-vfin> KC @CO
+foi	 [ser] V PS 3S IND VFIN <fmc> @FAUX
+abandonado	 [abandonar] V PCP M S @IMV @#ICL-AUX<
+em	 [em] PRP <sam-> @<ADVL
+o	 [o] DET M S <artd> <-sam> @>N
+qualifying ALT xxx	 [qualifying] N M S @P<
+porque	 [porque] KS @SUB @#FS-<ADVL
+os	 [o] DET M P <artd> @>N
+calçados	 [calçado] N M P @SUBJ>
+de	 [de] PRP <sam-> @N<
+os	 [o] DET M P <artd> <-sam> @>N
+jogadores	 [jogador] N M P @P<
+enganavam	 [enganar] V IMPF 3P IND VFIN @FMV
+os	 [o] DET M P <artd> @>N
+sensores	 [sensor] N M P @<ACC
+$.	 [$.] PU <<<
+$¶	 [$¶] PU <<<
+</s>
+<s>
+Em	 [em] PRP <sam-> @ADVL>
+o	 [o] DET M S <artd> <-sam> @>N
+Aberto=da=Austrália	 [Aberto=da=Austrália] PROP M S @P<
+$,
+em	 [em] PRP @ADVL>
+janeiro	 [janeiro] N M S @P<
+de	 [de] PRP @N<
+93	 [93] NUM M/F P <card> @P<
+$,
+fortes	 [forte] ADJ F P @>N
+chuvas	 [chuva] N F P @SUBJ>
+impediram	 [impedir] V PS/MQP 3P IND VFIN <fmc> @FMV
+a	 [o] DET F S <artd> @>N
+instalação	 [instalação] N F S @<ACC
+de	 [de] PRP <sam-> @<PIV
+o	 [o] DET M S <artd> <-sam> @>N
+equipamento	 [equipamento] N M S @P<
+$.	 [$.] PU <<<
+$¶	 [$¶] PU <<<
+</s>
+<s>
+Participam=da=Copa=Hopman	 [Participam=da=Copa=Hopman] PROP M/F S @NPHR
+duplas	 [duplo] ADJ F P @N<
+mistas	 [misturar] V PCP F P @N<
+de	 [de] PRP @ADVL @N<
+12	 [12] NUM M P <card> @>N
+países	 [país] N M P @P<
+$,
+em	 [em] PRP @ADVL
+sistema	 [sistema] N M S @P<
+semelhante	 [semelhante] ADJ M S @N<
+a	 [a] PRP <sam-> @A<
+o	 [o] DET M S <-sam> @P<
+de	 [de] PRP <sam-> @N<
+a	 [o] DET F S <artd> <-sam> @>N
+Copa=Davis	 [Copa=Davis] PROP F S @P<
+$.	 [$.] PU <<<
+$¶	 [$¶] PU <<<
+</s>
+<s>
+Destacam-	 [destacar] V PR 3P IND VFIN <fmc> <hyfen> @FMV
+se	 [se] PERS M/F 3S ACC <refl> @<ACC
+Ivan=Lendl	 [Ivan=Lendl] PROP M/F S @<SUBJ
+e	 [e] KC @CO
+Mary=Joe=Fernandez	 [Mary=Joe=Fernandez] PROP M/F S @<SUBJ
+$(	 [$(] PU
+Eua	 [Eua] PROP M/F S @N<PRED
+$)	 [$)] PU
+$,
+Petr=Korda	 [Petr=Korda] PROP M/F S @APP
+e	 [e] KC @CO
+Jana=Novotna	 [Jana=Novotna] PROP F S @APP
+$(	 [$(] PU
+República=Tcheca	 [República=Tcheca] PROP F S @N<PRED
+$)	 [$)] PU
+$,
+Emilio=Sanchez	 [Emilio=Sanchez] PROP M S @APP
+e	 [e] KC @CO
+Conchita=Martinez	 [Conchita=Martinez] PROP F S @APP
+$(	 [$(] PU
+Espanha	 [Espanha] PROP F S @N<PRED
+$)	 [$)] PU
+$,
+Andrei=Medvedev	 [Andrei=Medvedev] PROP M/F S @<SUBJ @APP
+e	 [e] KC @CO
+Natalia=Medvedeva	 [Natalia=Medvedeva] PROP F S @<SUBJ @APP
+$(	 [$(] PU
+Ucrânia	 [Ucrânia] PROP F S @N<PRED
+$)	 [$)] PU
+$.	 [$.] PU <<<
+$¶	 [$¶] PU <<<
+</s>
+<s>
+John=McEnroe	 [John=McEnroe] PROP M S @SUBJ>
+$,
+terror	 [terror] N M S @N<PRED
+de	 [de] PRP <sam-> @N<
+os	 [o] DET M P <artd> <-sam> @>N
+juízes	 [juíz] N M P @P<
+de	 [de] PRP <sam-> @N<
+o	 [o] DET M S <artd> <-sam> @>N
+mundo	 [mundo] N M S @P<
+inteiro	 [inteiro] ADJ M S @N<
+$,
+foi	 [ser] V PS 3S IND VFIN <fmc> @FMV
+convidado	 [convidado] N M S @<SC
+para	 [para] PRP @<ADVL
+testar	 [testar] V INF @IMV @#ICL-P<
+o	 [o] DET M S <artd> @>N
+Tel	 [tel] <prop> N M S @<ACC
+$,
+mas	 [mas] <co-fmc> <co-vfin> KC @CO
+$,
+contundido	 [contundir] V PCP M S @N<PRED
+$,
+cedeu	 [ceder] V PS 3S IND VFIN <fmc> @FMV
+o	 [o] DET M S <artd> @>N
+lugar	 [lugar] N M S @<ACC
+a	 [a] PRP @<PIV
+Lendl	 [Lendl] PROP M/F S @P<
+$.	 [$.] PU <<<
+$¶	 [$¶] PU <<<
+</s>
+</TEXT>
+$¶	 [$¶] PU <<<
+</DOC>

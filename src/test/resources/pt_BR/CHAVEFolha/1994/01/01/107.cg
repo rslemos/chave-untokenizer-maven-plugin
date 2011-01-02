@@ -1,0 +1,135 @@
+<DOC>
+<DOCNO.valor=FSP940101-107>
+<DOCID.valor=FSP940101-107>
+<DATE.valor=940101>
+<TEXT>
+<s>
+Da=Reportagem=Local	 [Da=Reportagem=Local] PROP F S @NPHR
+$¶	 [$¶] PU <<<
+</s>
+<s>
+A	 [o] DET F S <artd> @>N
+brasileira	 [brasileira] N F S @SUBJ>
+Carmem=de=Oliveira	 [Carmem=de=Oliveira] PROP F S @N<
+$,
+28	 [28] NUM M/F P <card> @P<
+$,
+disse	 [dizer] V PS 3S IND VFIN <fmc> @FMV
+após	 [após] PRP @<ADVL
+a	 [o] DET F S <artd> @>N
+prova	 [prova] N F S @P<
+feminina	 [feminino] ADJ F S @N<
+ter	 [ter] V INF @#ICL-<ACC @IAUX
+ficado	 [ficar] V PCP @IMV @#ICL-AUX<
+feliz	 [feliz] <n> ADJ F S @<SC
+com	 [com] PRP @N<
+o	 [o] DET M S <artd> @>N
+2º.	 [2º.] ADJ M S <NUM-ord> @>N
+lugar	 [lugar] N M S @P<
+$.	 [$.] PU <<<
+$¶	 [$¶] PU <<<
+</s>
+<s>
+Queria	 [querer] V IMPF 1/3S IND VFIN <fmc> <*1> @FMV
+melhorar	 [melhorar] V INF @IMV @#ICL-<ACC
+um	 [um] NUM M S <card> @>N
+minuto	 [minuto] N M S @<ACC
+$.	 [$.] PU <<<
+$¶	 [$¶] PU <<<
+</s>
+<s>
+Melhorei	 [melhorar] V PS 1S IND VFIN <fmc> @FMV
+quase	 [quase] ADV <quant> @>A
+quatro	 [quatro] NUM M/F P <card> <*2> @<ACC
+$,
+disse	 [dizer] V PS 1/3S IND VFIN <fmc> @FMV
+$.	 [$.] PU <<<
+$¶	 [$¶] PU <<<
+</s>
+<s>
+Em	 [em] PRP @ADVL>
+92	 [92] NUM M/F S <card> @P<
+$,
+fez	 [fazer] V PS 3S IND VFIN <fmc> @FMV
+a	 [o] DET F S <artd> @>N
+prova	 [prova] N F S @<ACC
+em	 [em] PRP @N<
+54	 [54] NUM M/F P <card> @P<
+min19	 [min19] PROP M/F S @APP
+$;	 [$;] PU <<<
+ontem	 [ontem] ADV @ADVL>
+$,
+levou	 [levar] V PS 3S IND VFIN <fmc> @FMV
+50	 [50] NUM M/F P <card> @>N
+min31	 [min31] PROP M/F S @<ACC
+$.	 [$.] PU <<<
+$¶	 [$¶] PU <<<
+</s>
+<s>
+Em	 [em] PRP <sam-> <*1> @ADVL>
+a	 [o] DET F S <artd> <-sam> @>N
+outra=vez	 [outra=vez] ADV @ADVL>
+$,
+ela	 [ela] PERS F 3S NOM @SUBJ>
+perdeu	 [perder] V PS 3S IND VFIN <fmc> @FMV
+$.	 [$.] PU <<<
+$¶	 [$¶] PU <<<
+</s>
+<s>
+Hoje	 [hoje] ADV @ADVL>
+$(	 [$(] PU
+ontem	 [ontem] ADV @ADVL>
+$)	 [$)] PU
+$,
+a	 [o] DET F S <artd> @>N
+outra	 [outro] DET F S <KOMP> <diff> @SUBJ>
+ganhou	 [ganhar] V PS 3S IND VFIN @FMV <*2> @#FS-ACC>>
+$,
+disse	 [dizer] V PS 3S IND VFIN <fmc> @FMV
+seu	 [seu] DET M S <poss 3S> @>N
+técnico	 [técnico] N M S @<SUBJ
+$,
+Brian=Appell	 [Brian=Appell] PROP M S @APP
+$.	 [$.] PU <<<
+$¶	 [$¶] PU <<<
+</s>
+<s>
+$(	 [$(] PU
+Md	 [md] N M S @NPHR
+$)	 [$)] PU
+$¶	 [$¶] PU <<<
+</s>
+<s>
+A	 [o] DET F S <artd> @>N
+edição	 [edição] N F S @SUBJ>
+saiu	 [sair] V PS 3S IND VFIN <fmc> @FMV
+com	 [com] PRP @<PIV
+a	 [o] DET F S <artd> @>N
+data	 [data] N F S @P<
+de	 [de] PRP <sam-> @N<
+o	 [o] DET M S <artd> <-sam> @>N
+alto	 [alto] <n> <n> ADJ M S @P<
+errada	 [errado] ADJ F S @N<
+$.	 [$.] PU <<<
+$¶	 [$¶] PU <<<
+</s>
+<s>
+A	 [o] DET F S <artd> @>N
+data	 [data] N F S @SUBJ>
+correta	 [correto] ADJ F S @N<
+é	 [ser] V PR 3S IND VFIN <fmc> @FMV
+1	 [1] NUM M/F S <card> @<ADVL
+de	 [de] PRP @N<
+janeiro	 [janeiro] N M S @P<
+de	 [de] PRP @N<
+1994	 [1994] NUM M/F P <card> @P<
+$.	 [$.] PU <<<
+$¶	 [$¶] PU <<<
+</s>
+<s>
+Erramos	 [errar] V PR 1P IND VFIN <fmc> @FMV
+$¶	 [$¶] PU <<<
+</s>
+</TEXT>
+$¶	 [$¶] PU <<<
+</DOC>

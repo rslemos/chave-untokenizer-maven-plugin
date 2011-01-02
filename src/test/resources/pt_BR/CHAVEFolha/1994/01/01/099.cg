@@ -1,0 +1,211 @@
+<DOC>
+<DOCNO.valor=FSP940101-099>
+<DOCID.valor=FSP940101-099>
+<DATE.valor=940101>
+<TEXT>
+<s>
+$*	 [$*] PU
+$.	 [$.] PU <<<
+$¶	 [$¶] PU <<<
+</s>
+<s>
+Brunner	 [Brunner] PROP M/F S @SUBJ>
+trabalhou	 [trabalhar] V PS 3S IND VFIN <fmc> @FMV
+em	 [em] PRP <sam-> @<PIV
+a	 [o] DET F S <artd> <-sam> @>N
+Ferrari	 [Ferrari] PROP F S @P<
+de	 [de] PRP @N<
+86=a=88	 [86=a=88] NUM M/F P @P<
+$,
+fez	 [fazer] V PS 3S IND VFIN <fmc> @FMV
+o	 [o] DET M S <artd> @>N
+projeto	 [projeto] N M S @<ACC
+de	 [de] PRP <sam-> @N<
+o	 [o] DET M S <artd> <-sam> @>N
+carro	 [carro] N M S @P<
+de	 [de] PRP @N<
+Indy	 [Indy] PROP M/F S @P<
+de	 [de] PRP <sam-> @N<
+a	 [o] DET F S <artd> <-sam> @>N
+fábrica	 [fábrica] N F S @P<
+$	 [$] PU
+que	 [que] SPEC M/F S @SUBJ> @#FS-<SUBJ @#FS-N< <rel>
+nunca	 [nunca] ADV @ADVL>
+correu	 [correr] V PS 3S IND VFIN @FMV
+$	 [$] PU
+e	 [e] <co-fmc> <co-vfin> KC @CO
+só	 [só] ADV @ADVL>
+saiu	 [sair] V PS 3S IND VFIN <fmc> @FMV
+de	 [de] PRP @<ADVS
+lá	 [lá] ADV @P<
+quando	 [quando] ADV @#FS-<ADVL <ks> <rel> @ADVL>
+Barnard	 [Barnard] PROP M/F S @SUBJ>
+chegou	 [chegar] V PS 3S IND VFIN @FMV
+pela=primeira=vez	 [pela=primeira=vez] ADV @<ADVL
+$.	 [$.] PU <<<
+$¶	 [$¶] PU <<<
+</s>
+<s>
+Seu	 [seu] DET M S <poss 3S> @>N
+último	 [último] ADJ M S <NUM-ord> @>N
+trabalho	 [trabalho] N M S @SUBJ>
+foi	 [ser] V PS 3S IND VFIN <fmc> @FMV
+o	 [o] DET M S <artd> @>N
+bom	 [bom] <n> ADJ M S @<SC
+Minardi	 [Minardi] PROP M S @<SC
+de	 [de] PRP @N<
+93	 [93] NUM M/F P <card> @P<
+$	 [$] PU
+que	 [que] SPEC M/F S @SUBJ> <rel> @#FS-N<
+só	 [só] ADV @ADVL>
+não	 [não] ADV @ADVL>
+andou	 [andar] V PS 3S IND VFIN @FMV
+nada	 [nada] SPEC M S <quant> @<ADVL
+porque	 [porque] KS @SUB @#FS-<ADVL
+o	 [o] DET M S <artd> @>N
+time	 [time] N M S @SUBJ>
+vive	 [viver] V PR 3S IND VFIN @FMV
+em	 [em] PRP <sam-> @<ADVS
+uma	 [um] DET F S <arti> <-sam> @>N
+pindaíba	 [pindaíba] N F S @P<
+de	 [de] PRP @N<
+dar	 [dar] V INF @IMV @#ICL-P<
+dó	 [dó] N M S @<ACC
+e	 [e] <co-fmc> <co-vfin> KC @CO
+não	 [não] ADV @ADVL>
+gastou	 [gastar] V PS 3S IND VFIN <fmc> @FMV
+um	 [um] NUM M S <card> @>N
+centavo	 [centavo] N M S @<ACC
+em	 [em] PRP @<ADVL
+testes	 [teste] N M P @P<
+$.	 [$.] PU <<<
+$¶	 [$¶] PU <<<
+</s>
+<s>
+Em	 [em] PRP <sam-> @ADVL>
+a	 [o] DET F S <artd> <-sam> @>N
+Ferrari	 [Ferrari] PROP F S @P<
+$,
+Brunner	 [Brunner] PROP M/F S @SUBJ>
+será	 [ser] V FUT 3S IND VFIN <fmc> @FMV
+responsável	 [responsável] ADJ M/F S @<SC
+por	 [por] PRP <sam-> @A<
+o	 [o] DET M S <artd> <-sam> @>N
+desenvolvimento	 [desenvolvimento] N M S @P<
+de	 [de] PRP <sam-> @N<
+o	 [o] DET M S <artd> <-sam> @>N
+carro	 [carro] N M S @P<
+que	 [que] SPEC M/F S @ACC> <rel> @#FS-N<
+Barnard	 [Barnard] PROP M/F S @SUBJ>
+fez	 [fazer] V PS 3S IND VFIN @FMV
+para	 [para] PRP @<ADVL
+este	 [este] DET M S <dem> @>N
+ano	 [ano] N M S @P<
+$.	 [$.] PU <<<
+$¶	 [$¶] PU <<<
+</s>
+<s>
+$*	 [$*] PU
+$.	 [$.] PU <<<
+$¶	 [$¶] PU <<<
+</s>
+<s>
+O	 [o] DET M S <artd> @>N
+sujeito	 [sujeito] N M S @SUBJ>
+que	 [que] SPEC M S @SUBJ> <rel> @#FS-N<
+comprou	 [comprar] V PS 3S IND VFIN @FMV
+a	 [a] PRP @<ADVL
+Ligier	 [Ligier] PROP M/F S @P<
+em	 [em] PRP <sam-> @<ADVL
+o	 [o] DET M S <artd> <-sam> @>N
+ano	 [ano] N M S @P<
+passado	 [passado] ADJ M S @N<
+$,
+Cyril=De=Rouvre	 [Cyril=De=Rouvre] PROP M/F S @APP
+$,
+está	 [estar] V PR 3S IND VFIN <fmc> @FMV
+preso	 [preso] N M S @<SC
+em	 [em] PRP @N<
+Paris	 [Paris] PROP M S @P<
+$,
+envolvido	 [envolver] V PCP M S @IMV @#ICL-N<PRED
+em	 [em] PRP @<ADVL
+escândalos	 [escândalo] N M P @P<
+financeiros	 [financeiro] ADJ M P @N<
+que	 [que] KS @SUB @#FS-<ACC
+vão	 [ir] V PR 3P IND VFIN @FMV
+de	 [de] PRP @<ADVL
+não	 [não] ADV @>N
+pagamento	 [pagamento] N M S @P<
+de	 [de] PRP @<ADVS
+benefícios	 [benefício] N M P @P<
+sociais	 [social] ADJ M P @N<
+a	 [a] PRP @N<
+desvios	 [desvio] N M P @P<
+de	 [de] PRP @N<
+verbas	 [verba] N F P @P<
+de	 [de] PRP @N<
+US$	 [US$] PROP M/F S @P<
+10	 [10] NUM M P <card> @>N
+milhões	 [milhão] N M P @<SUBJ
+de	 [de] PRP @N<
+uma	 [um] DET F S <arti> @>N
+antiga	 [antigo] ADJ F S @>N
+sociedade	 [sociedade] N F S @P<
+$.	 [$.] PU <<<
+$¶	 [$¶] PU <<<
+</s>
+<s>
+$*	 [$*] PU
+$.	 [$.] PU <<<
+$¶	 [$¶] PU <<<
+</s>
+<s>
+Ex-cineasta	 [ex-cineasta] N M/F S @PRED>
+$,
+picareta	 [picareta] N F S @TOP
+de=carteirinha	 [de=carteirinha] ADJ @N<
+$,
+De=Rouvre	 [De=Rouvre] PROP M/F S @SUBJ>
+agora	 [agora] ADV <kc> @ADVL>
+vai	 [ir] V PR 3S IND VFIN <fmc> @FAUX
+ter	 [ter] V INF @IAUX @#ICL-AUX<
+que	 [que] KS @PRT-AUX<
+devolver	 [devolver] V INF @IMV @#ICL-AUX<
+a	 [o] DET F S <artd> @>N
+equipe	 [equipe] N F S @<ACC
+a	 [a] PRP <sam-> @<PIV
+o	 [o] DET M S <artd> <-sam> @>N
+seu	 [seu] DET M S <si> <poss 3S> @>N
+fundador	 [fundador] N M S @P<
+$,
+Guy=Ligier	 [Guy=Ligier] PROP M/F S @APP
+$,
+já=que	 [já=que] KS @SUB @#FS-<ADVL
+comprou	 [comprar] V PS 3S IND VFIN @FMV
+e	 [e] <co-fmc> <co-vfin> KC @CO
+não	 [não] ADV @ADVL>
+pagou	 [pagar] V PS 3S IND VFIN <fmc> @FMV
+$.	 [$.] PU <<<
+$¶	 [$¶] PU <<<
+</s>
+<s>
+A	 [o] DET F S <artd> @>N
+Benetton	 [Benetton] PROP F S @SUBJ>
+tem	 [ter] V PR 3S IND VFIN <fmc> @FMV
+interesse	 [interesse] N M S @<ACC
+em	 [em] PRP <sam-> @<ADVL
+o	 [o] DET M S <artd> <-sam> @>N
+espólio	 [espólio] N M S @P<
+$,
+que	 [que] SPEC M/F S @SUBJ> <rel> @#FS-N<
+inclui	 [incluir] V PR 3S IND VFIN @FMV
+os	 [o] DET M P <artd> @>N
+motores	 [motor] <n> ADJ M P @<ACC
+Renault	 [Renault] PROP M/F S @APP
+$.	 [$.] PU <<<
+$¶	 [$¶] PU <<<
+</s>
+</TEXT>
+$¶	 [$¶] PU <<<
+</DOC>

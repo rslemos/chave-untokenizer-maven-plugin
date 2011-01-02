@@ -1,9 +1,8 @@
 import java.io.BufferedReader;
-import java.io.IOException;
+import java.io.File;
 import java.io.InputStream;
 import java.io.InputStreamReader;
 import java.io.PrintStream;
-import java.net.MalformedURLException;
 import java.net.URL;
 import java.nio.charset.Charset;
 import java.util.regex.Matcher;
@@ -45,8 +44,29 @@ public class Main {
 	}
 
 	public static void main(String[] args) throws Exception {
-		URL cg = Main.class.getResource("/pt_BR/CHAVEFolha/1994/01/01/124.cg");
-		new Main(cg, System.out).parse();
+		PrintStream out = new PrintStream("/dev/null");
+		
+		int total = 0;
+		int ok = 0;
+		
+		URL dir = Main.class.getResource("/pt_BR/CHAVEFolha/1994/01/01/");
+		String[] list = new File(dir.toURI()).list();
+		for (String entry : list) {
+			if (entry.endsWith(".cg")) {
+				total++;
+				URL cg = new URL(dir, entry);
+				System.out.printf("%s...", entry);
+				try {
+					new Main(cg, out).parse();
+					ok++;
+					System.out.printf("OK\n");
+				} catch (Exception e) {
+					e.printStackTrace();
+				}
+			}
+		}
+		
+		System.out.printf("%d/%d\n", ok, total);
 	}
 
 	private void parse() throws Exception {
@@ -104,7 +124,7 @@ public class Main {
 					emitToken(line, next, i, entryMatcher);
 					
 					while(Character.isWhitespace(cs[i]) || cs[i] == '"') {
-						System.out.printf("%c", cs[i]);
+						out.printf("%c", cs[i]);
 						i++;
 					}
 					next = i;

@@ -1,0 +1,373 @@
+<DOC>
+<DOCNO.valor=FSP940101-045>
+<DOCID.valor=FSP940101-045>
+<DATE.valor=940101>
+<TEXT>
+<s>
+Mauro=Zafalon	 [Mauro=Zafalon] PROP M S @NPHR
+$¶	 [$¶] PU <<<
+</s>
+<s>
+Da=Redação	 [Da=Redação] PROP F S @NPHR
+$¶	 [$¶] PU <<<
+</s>
+<s>
+Os	 [o] DET M P <artd> @>N
+reajustes	 [reajuste] N M P @SUBJ>
+de	 [de] PRP @N<
+preços	 [preço] N M P @P<
+em	 [em] PRP <sam-> @N<
+os	 [o] DET M P <artd> <-sam> @>N
+supermercados	 [supermercado] N M P @P<
+ficaram	 [ficar] V PS/MQP 3P IND VFIN <fmc> @FMV
+em	 [em] PRP @<ADVS
+7,44	 [7,44] NUM M/F P <card> @>N
+$%	 [%] N M P @P<	 [$%] PU
+em	 [em] PRP <sam-> @<ADVL
+a	 [o] DET F S <artd> <-sam> @>N
+última	 [último] ADJ F S <NUM-ord> @>N
+semana	 [semana] N F S @P<
+de	 [de] PRP <sam-> @N<
+o	 [o] DET M S <artd> <-sam> @>N
+ano	 [ano] N M S @P<
+em	 [em] PRP @<ADVL
+São=Paulo	 [São=Paulo] PROP M S @P<
+$.	 [$.] PU <<<
+$¶	 [$¶] PU <<<
+</s>
+<s>
+Esta	 [este] DET F S <dem> @>N
+evolução	 [evolução] N F S @SUBJ>
+foi	 [ser] V PS 3S IND VFIN <fmc> @FMV
+menor	 [pequeno] ADJ F S <KOMP> @<SC
+do=que	 [do=que] KS @COM @#AS-KOMP<
+a	 [o] DET F S <dem> @AS<
+de	 [de] PRP <sam-> @N<
+as	 [o] DET F P <artd> <-sam> @>N
+duas	 [dois] NUM F P <card> @>N
+semanas	 [semana] N F P @P<
+imediatamente	 [imediatamente] ADV @>A
+anteriores	 [anterior] ADJ M/F P @N<PRED
+$,
+quando	 [quando] ADV @#FS-<ADVL <ks> <rel> @ADVL>
+a	 [o] DET F S <artd> @>N
+alta	 [alta] N F S @SUBJ>
+esteve	 [estar] V PS 3S IND VFIN @FMV
+em	 [em] PRP @<ADVS
+10	 [10] NUM M/F P <card> @>N
+$%	 [%] N M P @P<	 [$%] PU
+$.	 [$.] PU <<<
+$¶	 [$¶] PU <<<
+</s>
+<s>
+Os	 [o] DET M P <artd> @>N
+hipermercados	 [hipermercado] N M P @SUBJ>
+também	 [também] ADV @ADVL>
+registraram	 [registrar] V PS/MQP 3P IND VFIN <fmc> @FMV
+aceleração	 [aceleração] N F S @<ACC
+menor	 [pequeno] ADJ F S <KOMP> @N<
+em	 [em] PRP <sam-> @<ADVL
+os	 [o] DET M P <artd> <-sam> @>N
+preços	 [preço] N M P @P<
+$,
+com	 [com] PRP @N<PRED @<ADVL
+aumento	 [aumento] N M S @P<
+médio	 [médio] ADJ M S @N<
+de	 [de] PRP @N<
+7,7	 [7,7] NUM M/F P <card> @>N
+$%	 [%] N M P @P<	 [$%] PU
+em	 [em] PRP <sam-> @N<
+este	 [este] DET M S <dem> <-sam> @>N
+final	 [final] N M S @P<
+de	 [de] PRP @N<
+ano	 [ano] N M S @P<
+$,
+contra	 [contra] PRP @<ADVL
+9,9	 [9,9] NUM M/F P <card> @>N
+$%	 [%] N M P @P<	 [$%] PU
+em	 [em] PRP <sam-> @<ADVL
+as	 [o] DET F P <artd> <-sam> @>N
+duas	 [dois] NUM F P <card> @>N
+semanas	 [semana] N F P @P<
+anteriores	 [anterior] ADJ F P @N<
+$.	 [$.] PU <<<
+$¶	 [$¶] PU <<<
+</s>
+<s>
+Dezembro	 [dezembro] N M S @SUBJ>
+foi	 [ser] V PS 3S IND VFIN <fmc> @FMV
+um	 [um] DET M S <arti> @>N
+período	 [período] N M S @<SC
+de	 [de] PRP @N<
+fortes	 [forte] ADJ M P @>N
+reajustes	 [reajuste] N M P @P<
+em	 [em] PRP <sam-> @N<
+os	 [o] DET M P <artd> <-sam> @>N
+supermercados	 [supermercado] N M P @P<
+e	 [e] KC @CO
+hipermercados	 [hipermercado] N M P @P<
+$.	 [$.] PU <<<
+$¶	 [$¶] PU <<<
+</s>
+<s>
+Após	 [após] PRP @ADVL>
+a	 [o] DET F S <artd> @>N
+guerra	 [guerra] N F S @P<
+de	 [de] PRP @N<
+preços	 [preço] N M P @P<
+ocorrida	 [ocorrer] V PCP F S @IMV @#ICL-N<
+em	 [em] PRP <sam-> @<ADVL
+o	 [o] DET M S <artd> <-sam> @>N
+segundo	 [segundo] ADJ M S <NUM-ord> @>N
+semestre	 [semestre] N M S @P<
+$,
+estes	 [este] DET M P <dem> @>N
+estabelecimentos	 [estabelecimento] N M P @SUBJ>
+começaram	 [começar] V PS/MQP 3P IND VFIN <fmc> @FAUX
+a	 [a] PRP @PRT-AUX<
+recuperar	 [recuperar] V INF @IMV @#ICL-AUX<
+margens	 [margem] N F P @<ACC
+perdidas	 [perdido] ADJ F P @N<
+em	 [em] PRP <sam-> @<ADVL
+os	 [o] DET M P <artd> <-sam> @>N
+últimos	 [último] ADJ M P <NUM-ord> @>N
+meses	 [mês] N M P @P<
+$.	 [$.] PU <<<
+$¶	 [$¶] PU <<<
+</s>
+<s>
+As	 [o] DET F P <artd> @>N
+vendas	 [venda] N F P @SUBJ>
+foram	 [ser] V PS/MQP 3P IND VFIN <fmc> @FAUX
+mais	 [mais] ADV <KOMP> <quant> @>A
+aquecidas	 [aquecer] V PCP F P @IMV @#ICL-AUX<
+e	 [e] <co-fmc> <co-vfin> KC @CO
+o	 [o] DET M S <artd> @>N
+maior	 [grande] ADJ M S <KOMP> @>N
+poder	 [poder] N M S @SUBJ>
+de	 [de] PRP @N<
+compra	 [compra] N F S @P<
+de	 [de] PRP <sam-> @N<
+os	 [o] DET M P <artd> <-sam> @>N
+consumidores	 [consumidor] N M P @P<
+permitiu	 [permitir] V PS 3S IND VFIN <fmc> @FMV
+repasse	 [repassar] V PR 3S SUBJ VFIN @FMV @#FS-<ACC
+maior	 [grande] ADJ M/F S <KOMP> @<PRED
+em	 [em] PRP <sam-> @<ADVL
+os	 [o] DET M P <artd> <-sam> @>N
+preços	 [preço] N M P @P<
+$.	 [$.] PU <<<
+$¶	 [$¶] PU <<<
+</s>
+<s>
+O	 [o] DET M S <artd> @>N
+faturamento	 [faturamento] N M S @SUBJ>
+de	 [de] PRP <sam-> @N<
+os	 [o] DET M P <artd> <-sam> @>N
+supermercados	 [supermercado] N M P @P<
+em	 [em] PRP <sam-> @N<
+este	 [este] DET M S <dem> <-sam> @>N
+final	 [final] N M S @P<
+de	 [de] PRP @N<
+ano	 [ano] N M S @P<
+deve	 [dever] V PR 3S IND VFIN <fmc> @FAUX
+superar	 [superar] V INF @IMV @#ICL-AUX<
+de	 [de] PRP @<ADVL
+8	 [8] NUM M/F P <card> @>N
+$%	 [%] N M P @P<	 [$%] PU
+a	 [a] PRP @<PIV
+10	 [10] NUM M/F P <card> @>N
+$%	 [%] N M P @P<	 [$%] PU
+o	 [o] DET M S <dem> @<OC
+de	 [de] PRP <sam-> @N<
+o	 [o] DET M S <artd> <-sam> @>N
+mesmo	 [mesmo] DET M S <KOMP> <diff> @>N
+período	 [período] N M S @P<
+de	 [de] PRP @N<
+1992	 [1992] NUM M/F P <card> @P<
+$,
+segundo	 [segundo] ADV @#AS-<ADVL <prp> <rel> @COM
+Firmino=Rodrigues=Alves	 [Firmino=Rodrigues=Alves] PROP M S @<ACC
+$,
+de	 [de] PRP <sam-> @N<PRED
+a	 [o] DET F S <artd> <-sam> @>N
+Associação=Paulista=de=Supermercados	 [Associação=Paulista=de=Supermercados] PROP F S @P<
+$.	 [$.] PU <<<
+$¶	 [$¶] PU <<<
+</s>
+<s>
+O	 [o] DET M S <artd> @>N
+Datafolha	 [Datafolha] PROP F S @SUBJ>
+mostrou	 [mostrar] V PS 3S IND VFIN <fmc> @FMV
+que	 [que] KS @SUB @#FS-<ACC
+os	 [o] DET M P <artd> @>N
+paulistanos	 [paulistano] N M P @SUBJ>
+pagaram	 [pagar] V PS/MQP 3P IND VFIN @FMV
+$,
+em	 [em] PRP @<ADVL
+média	 [média] N F S @P<
+$,
+41	 [41] NUM M/F P <card> @>N
+$%	 [%] N M P @<ACC	 [$%] PU
+mais	 [mais] ADV <KOMP> <quant> @<ADVL
+por	 [por] PRP <sam-> @<PIV
+os	 [o] DET M P <artd> <-sam> @>N
+produtos	 [produto] N M P @P<
+incluídos	 [incluir] V PCP M P @IMV @#ICL-N<
+em	 [em] PRP @<ADVL
+sua	 [seu] DET F S <si> <poss 3S> @>N
+pesquisa	 [pesquisa] N F S @P<
+em	 [em] PRP <sam-> @N<
+os	 [o] DET M P <artd> <-sam> @>N
+supermercados	 [supermercado] N M P @P<
+$.	 [$.] PU <<<
+$¶	 [$¶] PU <<<
+</s>
+<s>
+Já	 [já] ADV @ADVL>
+em	 [em] PRP <sam-> @ADVL>
+os	 [o] DET M P <artd> <-sam> @>N
+hipermercados	 [hipermercado] N M P @P<
+$,
+onde	 [onde] ADV @ADVL> <ks> <rel> @#FS-N<
+a	 [o] DET F S <artd> @>N
+guerra	 [guerra] N F S @SUBJ>
+de	 [de] PRP @N<
+preços	 [preço] N M P @P<
+foi	 [ser] V PS 3S IND VFIN @FMV
+mais	 [mais] ADV <KOMP> <quant> @>A
+acentuada	 [acentuar] V PCP F S @IMV @#ICL-<SC 
+no=decorrer=de	 [no=decorrer=de] PRP <sam-> @<ADVL
+o	 [o] DET M S <-sam> <artd> @>N
+ano	 [ano] N M S @P<
+$,
+a	 [o] DET F S <artd> @>N
+evolução	 [evolução] N F S @SUBJ>
+acumulada	 [acumular] V PCP F S @IMV @#ICL-N<
+em	 [em] PRP @<ADVL
+dezembro	 [dezembro] N M S @P<
+atingiu	 [atingir] V PS 3S IND VFIN <fmc> @FMV
+45	 [45] NUM M/F P <card> @>N
+$%	 [%] N M P @<ACC	 [$%] PU
+$.	 [$.] PU <<<
+$¶	 [$¶] PU <<<
+</s>
+<s>
+Se	 [se] KS @#FS-ADVL> @SUB
+dezembro	 [dezembro] N M S @SUBJ>
+foi	 [ser] V PS 3S IND VFIN @FMV
+preocupante	 [preocupante] ADJ M S @<SC
+$,
+janeiro	 [janeiro] N M S @SUBJ>
+será	 [ser] V FUT 3S IND VFIN <fmc> @FMV
+mais	 [mais] ADV <KOMP> <quant> @<ADVL
+ainda	 [ainda] ADV @>P
+em	 [em] PRP <sam-> @<SC
+a	 [o] DET F S <artd> <-sam> @>N
+opinião	 [opinião] N F S @P<
+de	 [de] PRP @N<
+Rodrigues	 [Rodrigues] PROP M/F S @P<
+$.	 [$.] PU <<<
+$¶	 [$¶] PU <<<
+</s>
+<s>
+As	 [o] DET F P <artd> @>N
+novas	 [novo] ADJ F P @>N
+tabelas=de=preços	 [tabela=de=preços] N F P @SUBJ>
+anunciadas	 [anunciar] V PCP F P @IMV @#ICL-N<
+por	 [por] PRP <sam-> @<PASS
+as	 [o] DET F P <artd> <-sam> @>N
+indústrias	 [indústria] N F P @P<
+estão	 [estar] V PR 3P IND VFIN <fmc> @FMV
+com	 [com] PRP @<SC
+reajustes	 [reajuste] N M P @P<
+médios	 [médio] ADJ M P @N<
+de	 [de] PRP @N<
+42	 [42] NUM M/F P <card> @>N
+$%	 [%] N M P @P<	 [$%] PU
+$.	 [$.] PU <<<
+$¶	 [$¶] PU <<<
+</s>
+<s>
+A	 [o] DET F S <artd> @>N
+primeira	 [primeiro] ADJ F S <NUM-ord> @>N
+semana	 [semana] N F S @SUBJ>
+não	 [não] ADV @ADVL>
+deve	 [dever] V PR 3S IND VFIN <fmc> @FAUX
+ser	 [ser] V INF @IMV @#ICL-AUX<
+um	 [um] DET M S <arti> @>N
+período	 [período] N M S @<SC
+de	 [de] PRP @N<
+fortes	 [forte] ADJ M P @>N
+aumentos	 [aumento] N M P @P<
+$,
+porque	 [porque] KS @SUB @#FS-<ADVL
+a	 [o] DET F S <artd> @>N
+reposição	 [reposição] N F S @SUBJ>
+de	 [de] PRP @N<
+produtos	 [produto] N M P @P<
+será	 [ser] V FUT 3S IND VFIN @FMV
+pequena	 [pequeno] ADJ F S @<SC
+$.	 [$.] PU <<<
+$¶	 [$¶] PU <<<
+</s>
+<s>
+A	 [o] DET F S <artd> @>N
+segunda	 [segundo] <n> ADJ F S <NUM-ord> @SUBJ>
+$,
+no=entanto	 [no=entanto] ADV <kc> @ADVL>
+$,
+poderá	 [poder] V FUT 3S IND VFIN @FAUX @#FS-ACC>>
+registrar	 [registrar] V INF @IMV @#ICL-AUX<
+evolução	 [evolução] N F S @<ACC
+recorde	 [recorde] ADJ F S @N<
+$,
+afirma	 [afirmar] V PR 3S IND VFIN <fmc> @FMV
+Rodrigues	 [Rodrigues] PROP M/F S @<SUBJ
+$.	 [$.] PU <<<
+$¶	 [$¶] PU <<<
+</s>
+<s>
+A	 [o] DET F S <artd> @>N
+pesquisa	 [pesquisa] N F S @SUBJ>
+de	 [de] PRP <sam-> @N<
+o	 [o] DET M S <artd> <-sam> @>N
+Datafolha	 [Datafolha] PROP F S @P<
+inclui	 [incluir] V PR 3S IND VFIN <fmc> @FMV
+96	 [96] NUM M P <card> @>N
+itens	 [item] N M P @<ACC
+$,
+pesquisados	 [pesquisar] V PCP M P @IMV @#ICL-N<PRED
+em	 [em] PRP @<ADVL
+12	 [12] NUM M P <card> @>N
+supermercados	 [supermercado] N M P @P<
+e	 [e] KC @CO
+12	 [12] NUM M P <card> @>N
+hipermercados	 [hipermercado] N M P @P<
+de	 [de] PRP @N<
+São=Paulo	 [São=Paulo] PROP M S @P<
+$.	 [$.] PU <<<
+$¶	 [$¶] PU <<<
+</s>
+<s>
+Os	 [o] DET M P <artd> @>N
+setores	 [setor] N M P @SUBJ>
+acompanhados	 [acompanhar] V PCP M P @N<
+semanalmente	 [semanalmente] ADV @ADVL>
+são	 [ser] V PR 3P IND VFIN <fmc> @FMV
+os	 [o] DET M P <dem> @<SC
+de	 [de] PRP @N<
+alimento	 [alimento] N M S @P<
+$,
+produtos	 [produto] N M P @N<PRED
+de	 [de] PRP @N<
+higiene	 [higiene] N F S @P<
+e	 [e] KC @CO
+de	 [de] PRP @N<
+limpeza	 [limpeza] N F S @P<
+$.	 [$.] PU <<<
+$¶	 [$¶] PU <<<
+</s>
+</TEXT>
+$¶	 [$¶] PU <<<
+</DOC>

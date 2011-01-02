@@ -1,0 +1,170 @@
+<DOC>
+<DOCNO.valor=FSP940101-019>
+<DOCID.valor=FSP940101-019>
+<DATE.valor=940101>
+<TEXT>
+<s>
+Da=Sucursal=de=Brasília	 [Da=Sucursal=de=Brasília] PROP F S @NPHR
+$¶	 [$¶] PU <<<
+</s>
+<s>
+O	 [o] DET M S <artd> @>N
+líder	 [líder] N M S @SUBJ>
+de	 [de] PRP <sam-> @N<
+o	 [o] DET M S <artd> <-sam> @>N
+governo	 [governo] N M S @P<
+em	 [em] PRP <sam-> @N<
+o	 [o] DET M S <artd> <-sam> @>N
+Senado	 [senado] <prop> N M S @P<
+$,
+Pedro=Simon	 [Pedro=Simon] PROP M S @APP
+$,
+imaginava	 [imaginar] V IMPF 3S IND VFIN <fmc> @FMV
+que	 [que] KS @SUB @#FS-<ACC
+o	 [o] DET M S <artd> @>N
+Orçamento	 [orçamento] <prop> N M S @SUBJ>
+não	 [não] ADV @ADVL>
+contaria	 [contar] V COND 3S VFIN @FMV
+com	 [com] PRP @<PIV
+o	 [o] DET M S <artd> @>N
+Fundo=Social=de=Emergência	 [Fundo=Social=de=Emergência] PROP M S @P<
+$.	 [$.] PU <<<
+$¶	 [$¶] PU <<<
+</s>
+<s>
+Eu	 [eu] PERS M/F 1S NOM <*1> @SUBJ>
+tinha	 [ter] V IMPF 1S IND VFIN <fmc> @FAUX
+lido	 [ler] V PCP @IMV @#ICL-AUX<
+em	 [em] PRP <sam-> @<ADVL
+os	 [o] DET M P <artd> <-sam> @>N
+jornais	 [jornal] N M P @P<
+que	 [que] SPEC M/F S @ACC> <rel> @#FS-N<
+a	 [o] DET F S <artd> @>N
+área	 [área] N F S @SUBJ>
+econômica	 [econômico] ADJ F S @N<
+enviaria	 [enviar] V COND 3S VFIN @FMV
+o	 [o] DET M S <artd> @>N
+projeto	 [projeto] N M S @<ACC
+sem	 [sem] PRP @<ADVL
+contar	 [contar] V INF @IMV @#ICL-P<
+com	 [com] PRP @<PIV
+os	 [o] DET M P <artd> @>N
+15	 [15] NUM M P <card> @>N
+$%	 [%] N M P @P<	 [$%] PU
+$"	 [$"] PU
+$,
+disse	 [dizer] V PS 3S IND VFIN <fmc> @FMV
+$.	 [$.] PU <<<
+$¶	 [$¶] PU <<<
+</s>
+<s>
+Mas	 [mas] KC @CO
+lembrou	 [lembrar] V PS 3S IND VFIN <fmc> @FMV
+que	 [que] KS @SUB @#FS-<ACC
+partiu	 [partir] V PS 3S IND VFIN @FMV
+de	 [de] PRP <sam-> @<ADVL
+o	 [o] DET M S <artd> <-sam> @>N
+Congresso	 [congresso] <prop> N M S @P<
+o	 [o] DET M S <artd> @>N
+pedido	 [pedido] N M S @<ACC
+para	 [para] PRP @<ADVL
+mandar	 [mandar] V INF @IMV @#ICL-P<
+o	 [o] DET M S <artd> @>N
+projeto	 [projeto] N M S @<ACC
+ainda	 [ainda] ADV @>P
+em	 [em] PRP @<ADVL
+93	 [93] NUM M/F S <card> @P<
+$,
+mesmo	 [mesmo] ADV <quant> @<ADVL
+que	 [que] KS @SUB @#FS-A<
+com	 [com] PRP @ADVL>
+o	 [o] DET M S <artd> @>N
+fundo	 [fundo] N M S @P<
+$,
+em	 [em] PRP <sam-> @ADVL>
+a	 [o] DET F S <artd> <-sam> @>N
+esperança	 [esperança] N F S @P<
+de	 [de] PRP @N<
+se	 [se] PERS M/F 3S ACC @SUBJ>
+votar	 [votar] V INF 3S @IMV @#ICL-P<
+a	 [o] DET F S <artd> @>N
+emenda	 [emenda] N F S @<ACC
+que	 [que] SPEC M/F S @SUBJ> <rel> @#FS-N<
+prevê	 [prever] V PR 3S IND VFIN @FMV
+a	 [o] DET F S <artd> @>N
+sua	 [seu] DET F S <si> <poss 3S> @>N
+criação	 [criação] N F S @<ACC
+antes	 [antes] ADV @<ADVL
+de	 [de] PRP <sam-> @A<
+a	 [o] DET F S <artd> <-sam> @>N
+votação	 [votação] N F S @P<
+de	 [de] PRP <sam-> @N<
+o	 [o] DET M S <artd> <-sam> @>N
+Orçamento	 [orçamento] <prop> N M S @P<
+$.	 [$.] PU <<<
+$¶	 [$¶] PU <<<
+</s>
+<s>
+Se	 [se] KS @#FS-SUBJ> <*1> @SUB
+a	 [o] DET F S <artd> @>N
+suspensão	 [suspensão] N F S @SUBJ>
+de	 [de] PRP <sam-> @N<
+os	 [o] DET M P <artd> <-sam> @>N
+15	 [15] NUM M P <card> @>N
+$%	 [%] N M P @P<	 [$%] PU
+de	 [de] PRP <sam-> @N<
+as	 [o] DET F P <artd> <-sam> @>N
+transferências	 [transferência] N F P @P<
+constitucionais	 [constitucional] ADJ F P @N<
+for	 [ser] V FUT 3S SUBJ VFIN @FAUX
+aprovada	 [aprovar] V PCP F S @IMV @#ICL-AUX<
+$,
+tudo	 [tudo] SPEC M S <quant> @SUBJ>
+bem	 [bem] ADV <quant> @ADVL>
+$,
+o	 [o] DET M S <artd> @>N
+Orçamento	 [orçamento] <prop> N M S @SUBJ>
+passa	 [passar] V PR 3S IND VFIN <fmc> @FAUX
+a	 [a] PRP @PRT-AUX<
+ser	 [ser] V INF @IMV @#ICL-AUX<
+constitucional	 [constitucional] ADJ M S @<SC
+$.	 [$.] PU <<<
+$¶	 [$¶] PU <<<
+</s>
+<s>
+Se	 [se] KS @#FS-SUBJ> @SUB
+não	 [não] ADV @ADVL>
+for	 [ser] V FUT 3S SUBJ VFIN @FMV
+$,
+o	 [o] DET M S <artd> @>N
+Congresso	 [congresso] <prop> N M S @SUBJ>
+proporá	 [propor] V FUT 3S IND VFIN @FMV @#FS-ACC>>
+outra	 [outro] DET F S <KOMP> <diff> @>N
+forma	 [forma] N F S @<ACC
+de	 [de] PRP @N<
+zerar	 [zerar] V INF @IMV @#ICL-P<
+o	 [o] DET M S <artd> @>N
+déficit	 [déficit] N M S @<ACC
+público	 [público] ADJ M S @N<
+e	 [e] <co-vfin> KC @CO
+a	 [ela] PERS F 3S ACC @SUBJ>>
+faz	 [fazer] V PR 3S IND VFIN @#FS-ACC>>
+constar	 [constar] V INF @#ICL-<ACC @IMV
+de	 [de] PRP <sam-> @<PIV
+o	 [o] DET M S <artd> <-sam> @>N
+Orçamento	 [orçamento] <prop> N M S @P<
+em	 [em] PRP <sam-> @N<
+o	 [o] DET M S <artd> <-sam> @>N
+lugar	 [lugar] N M S @P<
+de	 [de] PRP <sam-> @N<
+o	 [o] DET M S <artd> <-sam> @>N
+fundo	 [fundo] N M S <*2> @P<
+$,
+disse	 [dizer] V PS 3S IND VFIN <fmc> @FMV
+Simon	 [Simon] PROP M/F S @<SUBJ
+$.	 [$.] PU <<<
+$¶	 [$¶] PU <<<
+</s>
+</TEXT>
+$¶	 [$¶] PU <<<
+</DOC>

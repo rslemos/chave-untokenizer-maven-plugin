@@ -1,0 +1,91 @@
+<DOC>
+<DOCNO.valor=FSP940101-132>
+<DOCID.valor=FSP940101-132>
+<DATE.valor=940101>
+<TEXT>
+<s>
+A	 [o] DET F S <artd> @>N
+Pantera=Cor=De=Rosa=Volta	 [Pantera=Cor=De=Rosa=Volta] PROP F S @NPHR
+a	 [a] PRP <sam-> @ADVL
+os	 [o] DET M P <artd> <-sam> @>N
+Cinemas	 [cinema] <prop> N M P @P<
+$¶	 [$¶] PU <<<
+</s>
+<s>
+O	 [o] DET M S <artd> <*1> @>N
+Filho=da=Pantera=Cor=de=Rosa	 [Filho=da=Pantera=Cor=de=Rosa] PROP M S @SUBJ>
+$,
+com	 [com] PRP @N<PRED
+direção	 [direção] N F S @P<
+de	 [de] PRP @N<
+Blake=Edwards	 [Blake=Edwards] PROP M/F S @P<
+$,
+estréia	 [estrear] V PR 3S IND VFIN <fmc> @FMV
+hoje	 [hoje] ADV @<ADVL
+em	 [em] PRP <sam-> @<ADVL
+a	 [o] DET F S <artd> <-sam> @>N
+cidade	 [cidade] N F S @P<
+$.	 [$.] PU <<<
+$¶	 [$¶] PU <<<
+</s>
+<s>
+O	 [o] DET M S <artd> @>N
+filme	 [filme] N M S @SUBJ>
+mostra	 [mostrar] V PR 3S IND VFIN <fmc> @FMV
+as	 [o] DET F P <artd> @>N
+atrapalhadas	 [atrapalhado] ADJ F P @>N
+aventuras	 [aventura] N F P @<ACC
+de	 [de] PRP <sam-> @N<
+o	 [o] DET M S <artd> <-sam> @>N
+filho=ilegítimo	 [filho=ilegítimo] N M S @P<
+de	 [de] PRP <sam-> @N<
+o	 [o] DET M S <artd> <-sam> @>N
+inspetor	 [inspetor] N M S @P<
+Closeau	 [Closeau] PROP M S @N<
+$,
+em	 [em] PRP <sam-> @<ADVL
+a	 [o] DET F S <artd> <-sam> @>N
+investigação	 [investigação] N F S @P<
+de	 [de] PRP <sam-> @N<
+o	 [o] DET M S <artd> <-sam> @>N
+rapto	 [rapto] N M S @P<
+de	 [de] PRP @N<
+uma	 [um] DET F S <arti> @>N
+princesa	 [príncipe] N F S @P<
+$.	 [$.] PU <<<
+$¶	 [$¶] PU <<<
+</s>
+<s>
+Em	 [em] PRP <sam-> @ADVL
+o	 [o] DET M S <artd> <-sam> @>N
+papel	 [papel] N M S @P<
+principal	 [principal] ADJ M S <SUP> @N<
+o	 [o] DET M S <artd> @>N
+ator	 [ator] N M S @NPHR
+italiano	 [italiano] ADJ M S @N<
+Roberto=Benigni	 [Roberto=Benigni] PROP M S @N<
+$(	 [$(] PU
+foto	 [foto] N F S @N<PRED
+$)	 [$)] PU
+$.	 [$.] PU <<<
+$¶	 [$¶] PU <<<
+</s>
+<s>
+Em	 [em] PRP @ADVL>
+cartaz	 [cartaz] N M S @P<
+em	 [em] PRP <sam-> @N<
+os	 [o] DET M P <artd> <-sam> @>N
+cines	 [cine] N M P @P<
+Gemini	 [Gemini] PROP M/F S @N<
+1	 [1] NUM M/F S <card> @N<
+$,
+Belas=Artes	 [Belas=Artes] PROP M/F S @APP
+e	 [e] KC @CO
+circuito	 [circuitar] V PR 1S IND VFIN <fmc> @FMV
+$.	 [$.] PU <<<
+$¶	 [$¶] PU <<<
+</s>
+</TEXT>
+$¶	 [$¶] PU <<<
+</DOC>$START
+$¶	 [$¶] PU <<<

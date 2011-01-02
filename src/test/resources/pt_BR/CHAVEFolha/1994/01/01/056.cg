@@ -1,0 +1,346 @@
+<DOC>
+<DOCNO.valor=FSP940101-056>
+<DOCID.valor=FSP940101-056>
+<DATE.valor=940101>
+<TEXT>
+<s>
+De=Nova=York	 [De=Nova=York] PROP M/F S @NPHR
+$¶	 [$¶] PU <<<
+</s>
+<s>
+O	 [o] DET M S <artd> @>N
+combate	 [combate] N M S @SUBJ>
+a	 [a] PRP <sam-> @N<
+a	 [o] DET F S <artd> <-sam> @>N
+violência	 [violência] N F S @P<
+foi	 [ser] V PS 3S IND VFIN <fmc> @FMV
+o	 [o] DET M S <artd> @>N
+carro-chefe	 [carro-chefe] N M S @<SC
+de	 [de] PRP <sam-> @N<
+a	 [o] DET F S <artd> <-sam> @>N
+campanha	 [campanha] N F S @P<
+de	 [de] PRP @N<
+Rudolph=Giuliani	 [Rudolph=Giuliani] PROP M/F S @P<
+$.	 [$.] PU <<<
+$¶	 [$¶] PU <<<
+</s>
+<s>
+E	 [e] KC @CO
+agora	 [agora] ADV <kc> @ADVL>
+promete	 [prometer] V PR 3S IND VFIN <fmc> @FMV
+ser	 [ser] V INF @IMV @#ICL-<ACC
+seu	 [seu] DET M S <poss 3S> @>N
+maior	 [grande] ADJ M S <KOMP> @>N
+desafio	 [desafio] N M S @<SC
+$.	 [$.] PU <<<
+$¶	 [$¶] PU <<<
+</s>
+<s>
+Com	 [com] PRP @ADVL> @PRED>
+o	 [o] DET M S <artd> @>N
+crescimento	 [crescimento] N M S @P<
+de	 [de] PRP <sam-> @N<
+o	 [o] DET M S <artd> <-sam> @>N
+crime	 [crime] N M S @P<
+organizado	 [organizado] ADJ M S @N<
+e	 [e] KC @CO
+de	 [de] PRP <sam-> @N<
+o	 [o] DET M S <artd> <-sam> @>N
+tráfico	 [tráfico] N M S @P<
+de	 [de] PRP @N<
+drogas	 [droga] N F P @P<
+$,
+espalhou-	 [espalhar] V PS 3S IND VFIN <fmc> <hyfen> @FMV
+se	 [se] PERS M/F 3S ACC <refl> @<ACC
+também	 [também] ADV @>N
+a	 [o] DET F S <artd> @>N
+corrupção	 [corrupção] N F S @<SUBJ
+entre	 [entre] PRP @N< @<ADVL
+uma	 [um] DET F S <arti> @>N
+corporação	 [corporação] N F S @P<
+de	 [de] PRP @N<
+30	 [30] NUM M P <card> @>N
+mil	 [mil] NUM M P <card> @>N
+policiais	 [policial] N M P @P<
+$,
+a	 [o] DET F S <artd> @>N
+maior	 [grande] ADJ F S <KOMP> @>N
+força	 [força] N F S @APP
+policial	 [policial] ADJ F S @N<
+de	 [de] PRP @N<
+uma	 [um] DET F S <arti> @>N
+cidade	 [cidade] N F S @P<
+norte-americana	 [norte-americano] ADJ F S @N<
+$.	 [$.] PU <<<
+$¶	 [$¶] PU <<<
+</s>
+<s>
+Em	 [em] PRP @ADVL>
+relatório	 [relatório] N M S @P<
+divulgado	 [divulgar] V PCP M S @IMV @#ICL-N<
+esta	 [este] DET F S <dem> @>N
+semana	 [semana] N F S @<ADVL
+$,
+a	 [o] DET F S <artd> @>N
+Comissão=Mollen	 [Comissão=Mollen] PROP F S @SUBJ>
+$,
+instituída	 [instituir] V PCP F S @N<PRED
+para	 [para] PRP @<ADVL
+fazer	 [fazer] V INF @IMV @#ICL-P<
+um	 [um] DET M S <arti> @>N
+diagnóstico	 [diagnóstico] N M S @<ACC
+de	 [de] PRP <sam-> @N<
+a	 [o] DET F S <artd> <-sam> @>N
+corrupção	 [corrupção] N F S @P<
+em	 [em] PRP <sam-> @N<
+a	 [o] DET F S <artd> <-sam> @>N
+polícia	 [polícia] N F S @P<
+de	 [de] PRP @N<
+Nova=York	 [Nova=York] PROP F S @P<
+$,
+apontou	 [apontar] V PS 3S IND VFIN <fmc> @FMV
+a	 [o] DET F S <artd> @>N
+existência	 [existência] N F S @<ACC
+de	 [de] PRP @N<
+uma	 [um] DET F S <arti> <*1> @>N
+cultura	 [cultura] N F S @P<
+de	 [de] PRP @N<
+tolerância	 [tolerância] N F S @P<
+com	 [com] PRP @<ADVL
+a	 [o] DET F S <artd> @>N
+corrupção	 [corrupção] N F S @P<
+e	 [e] KC @CO
+com	 [com] PRP @<ADVL
+os	 [o] DET M P <artd> @>N
+procedimentos	 [procedimento] N M P @P<
+fora=de	 [fora=de] PRP <sam-> @<ADVL
+a	 [o] DET F S <-sam> <artd> @>N
+lei	 [lei] N F S <*2> @P<
+$.	 [$.] PU <<<
+$¶	 [$¶] PU <<<
+</s>
+<s>
+O	 [o] DET M S <artd> @>N
+relator	 [relator] N M S @SUBJ>
+sugeriu	 [sugerir] V PS 3S IND VFIN <fmc> @FMV
+a	 [o] DET F S <artd> @>N
+criação	 [criação] N F S @<ACC
+de	 [de] PRP @N<
+um	 [um] DET M S <arti> @>N
+órgão	 [órgão] N M S @P<
+de	 [de] PRP @N<
+fiscalização	 [fiscalização] N F S @P<
+independente	 [independente] ADJ F S @N<
+para	 [para] PRP @N<
+prevenir	 [prevenir] V INF @IMV @#ICL-P<
+e	 [e] <co-inf> KC @CO
+detectar	 [detectar] V INF @#ICL-P< @IMV
+más	 [má] ADJ F P @>N
+condutas	 [conduta] N F P @<ACC
+entre	 [entre] PRP @N< @<ADVL
+policiais	 [policial] N M P @P<
+$.	 [$.] PU <<<
+$¶	 [$¶] PU <<<
+</s>
+<s>
+Giuliani	 [Giuliani] PROP M/F S @SUBJ>
+já	 [já] ADV @ADVL>
+disse	 [dizer] V PS 3S IND VFIN <fmc> @FMV
+que	 [que] KS @SUB @#FS-<ACC
+prefere	 [preferir] V PR 3S IND VFIN @FMV
+a	 [o] DET F S <artd> @>N
+figura	 [figura] N F S @<ACC
+de	 [de] PRP @N<
+um	 [um] DET M S <arti> @>N
+inspetor-geral	 [inspetor-geral] N M S @P<
+$.	 [$.] PU <<<
+$¶	 [$¶] PU <<<
+</s>
+<s>
+O	 [o] DET M S <artd> @>N
+novo	 [novo] ADJ M S @>N
+prefeito	 [prefeito] N M S @SUBJ>
+de	 [de] PRP @N<
+Nova=York	 [Nova=York] PROP F S @P<
+construiu	 [construir] V PS 3S IND VFIN <fmc> @FMV
+sua	 [seu] DET F S <si> <poss 3S> @>N
+reputação	 [reputação] N F S @<ACC
+como	 [como] ADV @#AS-<ADVL <prp> <rel> @ADVL
+procurador	 [procurador] N M S @AS<
+federal	 [federal] ADJ M S @N<
+$,
+destacando-	 [destacar] V GER @#ICL-<ADVL <hyfen> @IMV
+se	 [se] PERS M 3S ACC <refl> @<ACC
+por	 [por] PRP <sam-> @<ADVL
+o	 [o] DET M S <artd> <-sam> @>N
+combate	 [combate] N M S @P<
+a	 [a] PRP <sam-> @N<
+o	 [o] DET M S <artd> <-sam> @>N
+crime	 [crime] N M S @P<
+organizado	 [organizado] ADJ M S @N<
+e	 [e] KC @CO
+a	 [a] PRP <sam-> @N<
+a	 [o] DET F S <artd> <-sam> @>N
+Máfia	 [máfia] <prop> N F S @P<
+$.	 [$.] PU <<<
+$¶	 [$¶] PU <<<
+</s>
+<s>
+Ele	 [ele] PERS M 3S NOM @SUBJ>
+marcou	 [marcar] V PS 3S IND VFIN <fmc> @FMV
+por	 [por] PRP @<ADVL
+um	 [um] DET M S <arti> @>N
+estilo	 [estilo] N M S @P<
+espetacular	 [espetacular] ADJ M S @N<
+$,
+que	 [que] SPEC M/F S @SUBJ> <rel> @#FS-N<
+incluía	 [incluir] V IMPF 3S IND VFIN @FMV
+determinar	 [determinar] V INF @IMV @#ICL-<ACC
+prisões	 [prisão] N F P @<SUBJ
+com	 [com] PRP @N<
+algemas	 [algema] N F P @P<
+e	 [e] KC @CO
+muita	 [muito] DET F S <quant> @>N
+publicidade	 [publicidade] N F S @<ACC
+$.	 [$.] PU <<<
+$¶	 [$¶] PU <<<
+</s>
+<s>
+Giuliani	 [Giuliani] PROP M S @SUBJ>
+disse	 [dizer] V PS 3S IND VFIN <fmc> @FMV
+ter	 [ter] V INF @IAUX @#ICL-<ACC
+ficado	 [ficar] V PCP @IMV @#ICL-AUX<
+chocado	 [chocar] V PCP M S @IMV @#ICL-<SC 
+com	 [com] PRP @<ADVL
+a	 [o] DET F S <artd> @>N
+negligência	 [negligência] N F S @P<
+de	 [de] PRP <sam-> @N<
+as	 [o] DET F P <artd> <-sam> @>N
+chefias	 [chefia] N F P @P<
+e	 [e] <co-fmc> <co-vfin> KC @CO
+escolheu	 [escolher] V PS 3S IND VFIN <fmc> @FMV
+para	 [para] PRP @<ADVL
+o	 [o] DET M S <artd> @>N
+cargo	 [cargo] N M S @P<
+de	 [de] PRP @N<
+comissário-chefe	 [comissário-chefe] N M S @P<
+de	 [de] PRP <sam-> @N<
+a	 [o] DET F S <artd> <-sam> @>N
+polícia	 [polícia] N F S @P<
+de	 [de] PRP @N<
+Nova=York	 [Nova=York] PROP F S @P<
+um	 [um] DET M S <arti> @>N
+estrangeiro	 [estrangeiro] N M S <*2> <*1> @<ACC
+com	 [com] PRP @<ADVL
+fama	 [fama] N F S @P<
+de	 [de] PRP @N<
+durão	 [durão] ADJ M S @P<
+$,
+William=Bratton	 [William=Bratton] PROP M/F S @APP
+$,
+ex-chefe	 [ex-chefe] N M/F S @APP
+de	 [de] PRP <sam-> @N<
+a	 [o] DET F S <artd> <-sam> @>N
+polícia	 [polícia] N F S @P<
+de	 [de] PRP @N<
+Boston	 [Boston] PROP M/F S @P<
+$,
+Massachusetts	 [Massachusetts] PROP M/F S @P< @APP
+$(	 [$(] PU
+também	 [também] ADV @>P
+em	 [em] PRP <sam-> @<ADVL
+a	 [o] DET F S <artd> <-sam> @>N
+Costa=Leste	 [Costa=Leste] PROP F S @P<
+$)	 [$)] PU
+$.	 [$.] PU <<<
+$¶	 [$¶] PU <<<
+</s>
+<s>
+Giuliani	 [Giuliani] PROP M/F S @SUBJ>
+acredita	 [acreditar] V PR 3S IND VFIN <fmc> @FMV
+que	 [que] KS @SUB @#FS-<ACC
+um	 [um] DET M S <arti> @>N
+xerife	 [xerife] N M S <*2> <*1> @SUBJ>
+sem	 [sem] PRP @N<
+vínculos	 [vínculo] N M P @P<
+anteriores	 [anterior] ADJ M P @N<
+com	 [com] PRP @N<
+seus	 [seu] DET M P <poss 3S> @>N
+próprios	 [próprio] ADJ M P @>N
+subordinados	 [subordinado] N M P @P<
+processará	 [processar] V FUT 3S IND VFIN @FMV
+a	 [o] DET F S <artd> @>N
+limpeza	 [limpeza] N F S <*2> <*1> @<ACC
+de	 [de] PRP <sam-> @N<
+os	 [o] DET M P <artd> <-sam> @>N
+corruptos	 [corrupto] <n> ADJ M P @P<
+com	 [com] PRP @<ADVL
+mais	 [muito] DET F S <KOMP> <quant> @>N
+eficácia	 [eficácia] N F S @P<
+$.	 [$.] PU <<<
+$¶	 [$¶] PU <<<
+</s>
+<s>
+Todas=as	 [todo=o] DET F P <quant> @>N
+pesquisas	 [pesquisa] N F P @SUBJ>
+de	 [de] PRP @N<
+opinião=pública	 [opinião=pública] N F S @P<
+têm	 [ter] V PR 3P IND VFIN <fmc> @FAUX
+apontado	 [apontar] V PCP @IMV @#ICL-AUX<
+a	 [o] DET F S <artd> @>N
+violência	 [violência] N F S @<ACC
+como	 [como] ADV @PRD <rel> @#AS-<OC
+a	 [o] DET F S <artd> @>N
+preocupação	 [preocupação] N F S @AS<
+número	 [número] N M S @N<
+um	 [um] NUM M S <card> @N<
+de	 [de] PRP <sam-> @N<
+os	 [o] DET M P <artd> <-sam> @>N
+cidadãos	 [cidadão] N M P @P<
+nova-iorquinos	 [nova-iorquino] ADJ M P @N<
+$.	 [$.] PU <<<
+$¶	 [$¶] PU <<<
+</s>
+<s>
+Os	 [o] DET M P <artd> @>N
+altos	 [alto] ADJ M P @>N
+índices	 [índice] N M P @SUBJ>
+de	 [de] PRP @N<
+criminalidade	 [criminalidade] N F S @P<
+são	 [ser] V PR 3P IND VFIN <fmc> @FAUX
+citados	 [citar] V PCP M P @IMV @#ICL-AUX<
+também	 [também] ADV @>P
+por	 [por] PRP <sam-> @<PASS
+as	 [o] DET F P <artd> <-sam> @>N
+pesquisas	 [pesquisa] N F P @P<
+como	 [como] ADV @COM <rel> @#AS-N<
+principal	 [principal] ADJ M S <SUP> @>N
+motivo	 [motivo] N M S @AS<
+para	 [para] PRP @N<
+o	 [o] DET M S <artd> @>N
+êxodo	 [êxodo] N M S @P<
+por	 [por] PRP @<ADVL
+aqueles	 [aquele] DET M P <dem> @P<
+que	 [que] SPEC M/F S @ACC> <rel> @#FS-N<
+têm	 [ter] V PR 3P IND VFIN @FAUX
+decidido	 [decidir] V PCP @IMV @#ICL-AUX<
+deixar	 [deixar] V INF @IMV @#ICL-<ACC
+a	 [o] DET F S <artd> @>N
+cidade	 [cidade] N F S @<ACC
+$,
+tanto	 [tanto] ADV <parkc-1> @>N
+indivíduos	 [indivíduo] N M P @<ACC
+como	 [como] <parkc-2> ADV @CO
+corporações	 [corporação] N F P @<ACC
+$.	 [$.] PU <<<
+$¶	 [$¶] PU <<<
+</s>
+<s>
+$(	 [$(] PU
+FG	 [FG] PROP M/F S @NPHR
+$)	 [$)] PU
+$¶	 [$¶] PU <<<
+</s>
+</TEXT>
+$¶	 [$¶] PU <<<
+</DOC>

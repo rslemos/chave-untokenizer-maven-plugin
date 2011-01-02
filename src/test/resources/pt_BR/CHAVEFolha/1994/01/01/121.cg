@@ -1,0 +1,159 @@
+<DOC>
+<DOCNO.valor=FSP940101-121>
+<DOCID.valor=FSP940101-121>
+<DATE.valor=940101>
+<TEXT>
+<s>
+Júpiter	 [Júpiter] PROP M S @SUBJ>
+traz	 [trazer] V PR 3S IND VFIN <fmc> @FMV
+proteção	 [proteção] N F S @<ACC
+e	 [e] KC @CO
+ordem	 [ordem] N F S @<ACC
+em	 [em] PRP <sam-> @<ADVL
+o	 [o] DET M S <artd> <-sam> @>N
+novo	 [novo] ADJ M S @>N
+ano	 [ano] N M S @P<
+$¶	 [$¶] PU <<<
+</s>
+<s>
+Claudia=Hollander	 [Claudia=Hollander] PROP F S @NPHR
+$¶	 [$¶] PU <<<
+</s>
+<s>
+Especial	 [especial] <n> ADJ M/F S @NPHR
+para	 [para] PRP @N<
+a	 [o] DET F S <artd> @>N
+Folha	 [Folha] PROP F S @P<
+$¶	 [$¶] PU <<<
+</s>
+<s>
+Durante	 [durante] PRP @ADVL>
+a	 [o] DET F S <artd> @>N
+maior	 [grande] ADJ F S <KOMP> @>N
+parte	 [parte] N F S @P<
+de	 [de] PRP <sam-> @N<
+o	 [o] DET M S <artd> <-sam> @>N
+ano	 [ano] N M S @P<
+de	 [de] PRP @N<
+1994	 [1994] NUM M P <card> @>N
+Júpiter	 [Júpiter] PROP M S @P<
+$,
+associado	 [associar] V PCP M S @IMV @#ICL-N<PRED
+a	 [a] PRP <sam-> @<PIV
+o	 [o] DET M S <artd> <-sam> @>N
+deus	 [deus] N M S @P<
+de	 [de] PRP <sam-> @N<
+os	 [o] DET M P <artd> <-sam> @>N
+deuses	 [deus] N M P @P<
+$,
+que	 [que] SPEC M/F S @SUBJ> <rel> @#FS-N<
+traz	 [trazer] V PR 3S IND VFIN @FMV
+proteção	 [proteção] N F S @<ACC
+e	 [e] <co-vfin> KC @CO
+ordem	 [ordem] N F S @<ACC
+$,
+estará	 [estar] V FUT 3S IND VFIN <fmc> @FAUX
+transitando	 [transitar] V GER @#ICL-AUX< @IMV
+por	 [por] PRP <sam-> @<PIV
+o	 [o] DET M S <artd> <-sam> @>N
+setor	 [setor] N M S @P<
+governamental	 [governamental] ADJ M S @N<
+de	 [de] PRP <sam-> @N<
+o	 [o] DET M S <artd> <-sam> @>N
+mapa	 [mapa] N M S @P<
+astral	 [astral] ADJ M S @N<
+de	 [de] PRP <sam-> @N<
+o	 [o] DET M S <artd> <-sam> @>N
+Brasil	 [Brasil] PROP M S @P<
+$,
+Escorpião	 [escorpião] N M S @N<PRED
+$,
+onde	 [onde] ADV @SUB <ks> <rel> @#FS-N<
+Plutão	 [Plutão] PROP M/F S @SUBJ>
+já	 [já] ADV @ADVL>
+se	 [se] PERS M/F 3S ACC <refl> @ACC>-PASS
+encontra	 [encontrar] V PR 3S IND VFIN @FMV
+há	 [há] PRP @<ADVL
+alguns	 [algum] DET M P <quant> @>N
+anos	 [ano] N M P @P<
+$,
+provocando	 [provocar] V GER @#ICL-<ADVL @IMV
+grandes	 [grande] ADJ F P @>N
+mudanças	 [mudança] N F P @<ACC
+$,
+para	 [para] PRP @<ADVL
+melhor	 [bom] ADJ M/F S <SUP> <KOMP> @P<
+$,
+em	 [em] PRP <sam-> @<ADVL
+as	 [o] DET F P <artd> <-sam> @>N
+estruturas	 [estrutura] N F P @P<
+de	 [de] PRP <sam-> @N<
+o	 [o] DET M S <artd> <-sam> @>N
+poder	 [poder] N M S @P<
+$.	 [$.] PU <<<
+$¶	 [$¶] PU <<<
+</s>
+<s>
+Os	 [o] DET M P <artd> @>N
+erros	 [erro] N M P @SUBJ>
+de	 [de] PRP <sam-> @N<
+o	 [o] DET M S <artd> <-sam> @>N
+passado	 [passado] N M S @P<
+vão	 [ir] V PR 3P IND VFIN <fmc> @FAUX
+continuar	 [continuar] V INF @IAUX @#ICL-AUX<
+vindo	 [vir] V GER @#ICL-AUX< @IMV
+a	 [a] PRP <sam-> @<ADVS
+a	 [o] DET F S <artd> <-sam> @>N
+tona	 [tona] N F S @P<
+$,
+mas	 [mas] <co-fmc> <co-vfin> KC @CO
+este	 [este] DET M S <dem> @>N
+processo	 [processo] N M S @SUBJ>
+é	 [ser] V PR 3S IND VFIN <fmc> @FMV
+imprescindível	 [imprescindível] <n> ADJ M S @<SC
+para	 [para] PRP @N<
+que	 [que] KS @SUB @#FS-P<
+haja	 [haver] V PR 3S SUBJ VFIN @FMV
+renovação	 [renovação] N F S @<ACC
+$.	 [$.] PU <<<
+$¶	 [$¶] PU <<<
+</s>
+<s>
+O	 [o] DET M S <artd> @>N
+momento	 [momento] N M S @SUBJ>
+é	 [ser] V PR 3S IND VFIN <fmc> @FMV
+excelente	 [excelente] <n> ADJ M S @<SC
+para	 [para] PRP @N<
+a	 [o] DET F S <artd> @>N
+gente	 [gente] N F S @P<
+$,
+em	 [em] PRP <sam-> @<ADVL
+este	 [este] DET M S <dem> <-sam> @>N
+Dia=Mundial=da=Paz	 [Dia=Mundial=da=Paz] PROP M S @P<
+$,
+mentalizar	 [mentalizar] V INF @#ICL-<SC @IMV
+um	 [um] DET M S <arti> @>N
+mundo	 [mundo] N M S @<ACC
+melhor	 [bom] ADJ M S <SUP> <KOMP> @N<
+$.	 [$.] PU <<<
+$¶	 [$¶] PU <<<
+</s>
+<s>
+Há	 [haver] V PR 3S IND VFIN <fmc> @FMV
+outras	 [outro] DET F P <KOMP> <diff> @>N
+mentes	 [mente] N F P @<ACC
+em	 [em] PRP <sam-> @<ADVL
+esta	 [este] DET F S <dem> <-sam> @>N
+sintonia	 [sintonia] N F S @P<
+$,
+formando	 [formar] V GER @#ICL-<ADVL @IMV
+uma	 [um] DET F S <arti> @>N
+corrente	 [corrente] N F S @<ACC
+incrivelmente	 [incrivelmente] ADV <quant> @>A
+poderosa	 [poderoso] ADJ F S @N<PRED
+$.	 [$.] PU <<<
+$¶	 [$¶] PU <<<
+</s>
+</TEXT>
+$¶	 [$¶] PU <<<
+</DOC>

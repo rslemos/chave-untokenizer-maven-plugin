@@ -1,0 +1,315 @@
+<DOC>
+<DOCNO.valor=FSP940101-068>
+<DOCID.valor=FSP940101-068>
+<DATE.valor=940101>
+<TEXT>
+<s>
+O	 [o] DET M S <artd> @>N
+prefeito	 [prefeito] N M S @SUBJ>
+de	 [de] PRP @N<
+Passo=Fundo	 [Passo=Fundo] PROP M S @P<
+$,
+Osvaldo=Gomes	 [Osvaldo=Gomes] PROP M S @APP
+$,
+e	 [e] KC @CO
+seu	 [seu] DET M S <poss 3S> @>N
+vice	 [vice] N M S @SUBJ>
+$,
+Júlio=Teixeira	 [Júlio=Teixeira] PROP M S @APP
+$,
+ambos	 [ambos] DET M P <quant> @SC>
+de	 [de] PRP <sam-> @N<
+o	 [o] DET M S <artd> <-sam> @>N
+PMDB	 [PMDB] PROP M S @P<
+$,
+divulgaram	 [divulgar] V PS/MQP 3P IND VFIN <fmc> @FMV
+nota	 [nota] N F S @<ACC
+informando	 [informar] V GER @IMV @#ICL-<ADVL
+que	 [que] KS @SUB @#FS-<ACC
+devolveram	 [devolver] V PS/MQP 3P IND VFIN @FMV
+a	 [o] DET F S <artd> @>N
+gratificação	 [gratificação] N F S @<ACC
+de	 [de] PRP @N<
+Natal	 [Natal] PROP M S @P<
+que	 [que] SPEC M/F S @SUBJ> <rel> @#FS-N<
+renderia	 [render] V COND 3S VFIN @FMV
+Cr$	 [cr$] <prop> N M S @<ACC
+716	 [716] NUM M/F P <card> @>N
+mil	 [mil] NUM M/F P <card> @N<
+a	 [a] PRP <sam-> @N<
+o	 [o] DET M S <artd> <-sam> @>N
+primeiro	 [primeiro] <n> ADJ M S <NUM-ord> @P<
+e	 [e] KC @CO
+Cr$	 [cr$] <prop> N M S @P<
+312	 [312] NUM M/F P <card> @>N
+mil	 [mil] NUM M/F P <card> @N<
+a	 [a] PRP <sam-> @N<
+o	 [o] DET M S <artd> <-sam> @>N
+segundo	 [segundo] <n> ADJ M S <NUM-ord> @P<
+$.	 [$.] PU <<<
+$¶	 [$¶] PU <<<
+</s>
+<s>
+A	 [o] DET F S <artd> @>N
+gratificação	 [gratificação] N F S @SUBJ>
+foi	 [ser] V PS 3S IND VFIN <fmc> @FAUX
+instituída	 [instituir] V PCP F S @IMV @#ICL-AUX<
+por	 [por] PRP <sam-> @<PASS
+a	 [o] DET F S <artd> <-sam> @>N
+Câmara=de=Vereadores	 [Câmara=de=Vereadores] PROP F S @P<
+$.	 [$.] PU <<<
+$¶	 [$¶] PU <<<
+</s>
+<s>
+Conforme	 [conforme] ADV @COM <prp> <rel> @#AS-ADVL>
+o	 [o] DET M S <artd> @>N
+prefeito	 [prefeito] N M S @AS<
+e	 [e] KC @CO
+o	 [o] DET M S <artd> @>N
+vice	 [vice] N M S @AS<
+$,
+a	 [o] DET F S <artd> @>N
+iniciativa	 [iniciativa] N F S @SUBJ>
+fere	 [ferir] V PR 3S IND VFIN <fmc> @FMV
+a	 [o] DET F S <artd> @>N
+Lei=Orgânica=do=Município	 [Lei=Orgânica=do=Município] PROP F S @<ACC
+$.	 [$.] PU <<<
+$¶	 [$¶] PU <<<
+</s>
+<s>
+Rio=Grande=do=Sul	 [Rio=Grande=do=Sul] PROP M S @NPHR
+2	 [2] NUM M/F P <card> @N<
+$¶	 [$¶] PU <<<
+</s>
+<s>
+A	 [o] DET F S <artd> @>N
+Secretaria=Municipal=de=Saúde	 [Secretaria=Municipal=de=Saúde] PROP F S @SUBJ>
+de	 [de] PRP @N<
+Porto=Alegre	 [Porto=Alegre] PROP M S @P<
+$,
+que	 [que] SPEC M/F S @SUBJ> <rel> @#FS-N<
+dispõe	 [dispor] V PR 3S IND VFIN @FMV
+de	 [de] PRP @<PIV
+89	 [89] NUM M P <card> @>N
+cães	 [cão] N M P @P<
+recolhidos	 [recolher] V PCP M P @IMV @#ICL-N<
+em	 [em] PRP <sam-> @<ADVL
+as	 [o] DET F P <artd> <-sam> @>N
+ruas	 [rua] N F P @P<
+durante	 [durante] PRP @<ADVL
+o	 [o] DET M S <artd> @>N
+ano	 [ano] N M S @P<
+$,
+está	 [estar] V PR 3S IND VFIN <fmc> @FMV
+em	 [em] PRP @<ADVS
+campanha	 [campanha] N F S @P<
+para	 [para] PRP @<ADVL
+doar	 [doar] V INF @IMV @#ICL-P<
+os	 [o] DET M P <artd> @>N
+animais	 [animal] N M P @<ACC
+$.	 [$.] PU <<<
+$¶	 [$¶] PU <<<
+</s>
+<s>
+Conforme	 [conforme] ADJ M/F S @PRED>
+a	 [o] DET F S <artd> @>N
+secretaria	 [secretaria] N F S @SUBJ>
+$,
+todos=os	 [todo=o] DET M P <quant> @>N
+cães	 [cão] N M P @SUBJ>
+foram	 [ser] V PS/MQP 3P IND VFIN <fmc> @FAUX
+vacinados	 [vacinar] V PCP M P @IMV @#ICL-AUX<
+contra	 [contra] PRP @<ADVL
+a	 [o] DET F S <artd> @>N
+raiva	 [raiva] N F S @P<
+e	 [e] <co-fmc> <co-vfin> KC @CO
+são	 [ser] V PR 3P IND VFIN <fmc> @FMV
+saudáveis	 [saudável] ADJ M P @<SC
+$.	 [$.] PU <<<
+$¶	 [$¶] PU <<<
+</s>
+<s>
+Quem	 [quem] SPEC M/F S @#FS-SUBJ> <rel> @SUBJ>
+desejar	 [desejar] V FUT 3S SUBJ VFIN @FMV
+adotar-	 [adotar] V INF @IMV <hyfen> @#ICL-<ACC
+los	 [eles] PERS M 3P ACC @<ACC
+deve	 [dever] V PR 3S IND VFIN <fmc> @FAUX
+procurar	 [procurar] V INF @IMV @#ICL-AUX<
+o	 [o] DET M S <artd> @>N
+Centro=de=Zoonoses	 [Centro=de=Zoonoses] PROP M S @<ACC
+$,
+em	 [em] PRP <sam-> @<ADVL
+a	 [o] DET F S <artd> <-sam> @>N
+avenida	 [avenida] N F S @P<
+João=Pessoa	 [João=Pessoa] PROP M S @N<
+$,
+325	 [325] NUM M/F P <card> @<ACC
+$.	 [$.] PU <<<
+$¶	 [$¶] PU <<<
+</s>
+<s>
+Um	 [um] DET M S <arti> @>N
+funcionário	 [funcionário] N M S @SUBJ>
+levará	 [levar] V FUT 3S IND VFIN <fmc> @FMV
+as	 [o] DET F P <artd> @>N
+pessoas	 [pessoa] N F P @<ACC
+interessadas	 [interessar] V PCP F P @N<
+a	 [a] PRP <sam-> @<PIV
+o	 [o] DET M S <artd> <-sam> @>N
+canil	 [canil] N M S @P<
+para	 [para] PRP @<ADVL
+que	 [que] KS @SUB @#FS-P<
+seja	 [ser] V PR 3S SUBJ VFIN @FAUX
+escolhido	 [escolher] V PCP M S @IMV @#ICL-AUX<
+o	 [o] DET M S <artd> @>N
+cão	 [cão] N M S @<SUBJ
+a	 [a] PRP @<ADVL
+ser	 [ser] V INF @IAUX @#ICL-P<
+adotado	 [adotar] V PCP M S @IMV @#ICL-AUX<
+$.	 [$.] PU <<<
+$¶	 [$¶] PU <<<
+</s>
+<s>
+Santa=Catarina	 [Santa=Catarina] PROP F S @NPHR
+1	 [1] NUM M/F S <card> @N<
+$¶	 [$¶] PU <<<
+</s>
+<s>
+A	 [o] DET F S <artd> @>N
+Vigilância=Sanitária	 [Vigilância=Sanitária] PROP F S @SUBJ>
+apreendeu	 [apreender] V PS 3S IND VFIN <fmc> @FMV
+650	 [650] NUM M P <card> @>N
+medicamentos	 [medicamento] N M P @<ACC
+com	 [com] PRP @<ADVL
+data	 [data] N F S @P<
+de	 [de] PRP @N<
+validade	 [validade] N F S @P<
+vencida	 [vencido] ADJ F S @N<
+$,
+depois	 [depois] ADV @<ADVL
+de	 [de] PRP @A<
+blitz	 [blitz] N F S @P<
+realizada	 [realizar] V PCP F S @IMV @#ICL-N<
+em	 [em] PRP @<ADVL
+Florianópolis	 [Florianópolis] PROP M S @P<
+$.	 [$.] PU <<<
+$¶	 [$¶] PU <<<
+</s>
+<s>
+Os	 [o] DET M P <artd> @>N
+fiscais	 [fiscal] N M P @SUBJ>
+também	 [também] ADV @ADVL>
+recolheram	 [recolher] V PS/MQP 3P IND VFIN <fmc> @FMV
+343	 [343] NUM M P <card> @>N
+medicamentos	 [medicamento] N M P @<ACC
+considerados	 [considerado] ADJ M P @N<PRED
+clandestinos	 [clandestino] ADJ M P @N<PRED
+$,
+de	 [de] PRP @N<PRED
+origem	 [origem] N F S @P<
+desconhecida	 [desconhecido] ADJ F S @N<
+$,
+principalmente	 [principalmente] ADV @>N
+bronzeadores	 [bronzeador] N M P @P< @<ACC
+e	 [e] KC @CO
+xampus	 [xampu] N M P @P< @<ACC
+$.	 [$.] PU <<<
+$¶	 [$¶] PU <<<
+</s>
+<s>
+Foram	 [ser] V PS/MQP 3P IND VFIN <fmc> @FAUX
+expedidos	 [expedir] V PCP M P @IMV @#ICL-AUX<
+14	 [14] NUM M P <card> @>N
+autos	 [auto] N M P @<SUBJ
+de	 [de] PRP @N<
+intimação	 [intimação] N F S @P<
+$,
+para	 [para] PRP @<ADVL
+que	 [que] KS @SUB @#FS-P<
+os	 [o] DET M P <artd> @>N
+proprietários	 [proprietário] N M P @SUBJ>
+justifiquem	 [justificar] V PR 3P SUBJ VFIN @FMV
+a	 [o] DET F S <artd> @>N
+venda	 [venda] N F S @<SUBJ
+irregular	 [irregular] ADJ F S @N<
+$.	 [$.] PU <<<
+$¶	 [$¶] PU <<<
+</s>
+<s>
+Santa=Catarina	 [Santa=Catarina] PROP F S @NPHR
+2	 [2] NUM M/F P <card> @N<
+$¶	 [$¶] PU <<<
+</s>
+<s>
+A	 [o] DET F S <artd> @>N
+Polícia=Militar	 [Polícia=Militar] PROP F S @SUBJ>
+terá	 [ter] V FUT 3S IND VFIN <fmc> @FMV
+a	 [o] DET F S <artd> @>N
+mesma	 [mesmo] DET F S <KOMP> <diff> @>N
+política	 [política] N F S @<ACC
+salarial	 [salarial] ADJ F S @N<
+de	 [de] PRP <sam-> @N<
+a	 [o] DET F S <artd> <-sam> @>N
+Polícia=Civil=do=Estado	 [Polícia=Civil=do=Estado] PROP F S @P<
+$.	 [$.] PU <<<
+$¶	 [$¶] PU <<<
+</s>
+<s>
+O	 [o] DET M S <artd> @>N
+projeto	 [projeto] N M S @SUBJ>
+de	 [de] PRP <sam-> @N<
+o	 [o] DET M S <artd> <-sam> @>N
+governo	 [governo] N M S @P<
+que	 [que] SPEC M/F S @SUBJ> <rel> @#FS-N<
+equipara	 [equiparar] V PR 3S IND VFIN @FMV
+as	 [o] DET F P <artd> @>N
+políticas	 [política] N F P @<ACC
+foi	 [ser] V PS 3S IND VFIN <fmc> @FAUX
+aprovado	 [aprovar] V PCP M S @IMV @#ICL-AUX<
+por	 [por] PRP <sam-> @<PASS
+a	 [o] DET F S <artd> <-sam> @>N
+Assembléia=Legislativa	 [Assembléia=Legislativa] PROP F S @P<
+$.	 [$.] PU <<<
+$¶	 [$¶] PU <<<
+</s>
+<s>
+A	 [o] DET F S <artd> @>N
+nova	 [novo] ADJ F S @>N
+lei	 [lei] N F S @SUBJ>
+institui	 [instituir] V PR 3S IND VFIN <fmc> @FMV
+uma	 [um] DET F S <arti> @>N
+indenização	 [indenização] N F S <*1> @<ACC
+policial	 [policial] ADJ F S @N<
+militar	 [militar] N M S <*2> @N<
+$,
+cujo	 [cujo] DET M S @>N <rel> @#FS-N<
+valor	 [valor] N M S @SUBJ>
+será	 [ser] V FUT 3S IND VFIN @FAUX
+definido	 [definir] V PCP M S @IMV @#ICL-AUX<
+por	 [por] PRP <sam-> @<PASS
+o	 [o] DET M S <artd> <-sam> @>N
+governador	 [governador] N M S @P<
+Vilson=Kleinubing	 [Vilson=Kleinubing] PROP M S @N<
+$(	 [$(] PU
+PFL	 [PFL] PROP M/F S @N<PRED
+$)	 [$)] PU
+$,
+em	 [em] PRP <sam-> @<ADVL
+o	 [o] DET M S <artd> <-sam> @>N
+lugar	 [lugar] N M S @P<
+de	 [de] PRP @N<
+duas	 [dois] NUM F P <card> @>N
+gratificações	 [gratificação] N F P @P<
+que	 [que] KS @SUB @#FS-<ACC
+vinham	 [vir] V IMPF 3P IND VFIN @FAUX
+sendo	 [ser] V GER @#ICL-AUX< @IAUX
+pagas	 [pagar] V PCP F P @IMV @#ICL-AUX<
+a	 [a] PRP <sam-> @<PIV
+a	 [o] DET F S <artd> <-sam> @>N
+PM	 [PM] PROP F S @P<
+$.	 [$.] PU <<<
+$¶	 [$¶] PU <<<
+</s>
+</TEXT>
+$¶	 [$¶] PU <<<
+</DOC>

@@ -1,0 +1,345 @@
+<DOC>
+<DOCNO.valor=FSP940101-057>
+<DOCID.valor=FSP940101-057>
+<DATE.valor=940101>
+<TEXT>
+<s>
+De	 [de] PRP <sam-> @ADVL
+as	 [o] DET F P <artd> <-sam> @>N
+agências=internacionais	 [agência=internacional] N F P @P<
+$¶	 [$¶] PU <<<
+</s>
+<s>
+Cinco	 [cinco] NUM M P <card> @>N
+homens	 [homem] N M P @SUBJ>
+armados	 [armar] V PCP M P @N<
+atacaram	 [atacar] V PS/MQP 3P IND VFIN <fmc> @FMV
+ontem	 [ontem] ADV @<ADVL
+a	 [a] PRP @<ADVL
+tiros	 [tiro] N M P @P<
+um	 [um] NUM M S <card> @>N
+bar	 [bar] N M S @<ACC
+em	 [em] PRP <sam-> @N<
+a	 [o] DET F S <artd> <-sam> @>N
+Cidade=do=Cabo	 [Cidade=do=Cabo] PROP F S @P<
+$(	 [$(] PU
+sudoeste	 [sudoeste] N M S @N<PRED
+de	 [de] PRP <sam-> @N<
+a	 [o] DET F S <artd> <-sam> @>N
+Africa=do=Sul	 [Africa=do=Sul] PROP F S @P<
+$)	 [$)] PU
+$,
+matando	 [matar] V GER @#ICL-<ADVL @IMV
+quatro	 [quatro] NUM F P <card> @>N
+pessoas	 [pessoa] N F P @<ACC
+e	 [e] <co-ger> KC @CO
+ferindo	 [ferir] V GER @#ICL-<ADVL @IMV
+outras	 [outro] DET F P <KOMP> <diff> @>N
+cinco	 [cinco] NUM F P <card> @<ACC
+$.	 [$.] PU <<<
+$¶	 [$¶] PU <<<
+</s>
+<s>
+O	 [o] DET M S <artd> @>N
+massacre	 [massacre] N M S @SUBJ>
+deixou	 [deixar] V PS 3S IND VFIN <fmc> @FMV
+o	 [o] DET M S <artd> @>N
+presidente	 [presidente] N M S @<ACC
+sul-africano	 [sul-africano] ADJ M S @<OC
+$,
+Frederik=de=Klerk	 [Frederik=de=Klerk] PROP M S @APP
+$,
+chocado	 [chocar] V PCP M S <*1> @N<PRED
+e	 [e] KC @CO
+horrorizado	 [horrorizar] V PCP M S <*2> @N<PRED
+$.	 [$.] PU <<<
+$¶	 [$¶] PU <<<
+</s>
+<s>
+Segundo	 [segundo] ADV @ADVL <prp> <rel> @#AS-ADVL>
+testemunhas	 [testemunha] N M/F P @AS<
+$,
+os	 [o] DET M P <artd> @>N
+pistoleiros	 [pistoleiro] N M P @SUBJ>
+eram	 [ser] V IMPF 3P IND VFIN <fmc> @FMV
+negros	 [negro] ADJ M P @<SC
+e	 [e] KC @CO
+todas=as	 [todo=o] DET F P <quant> @>N
+vítimas	 [vítima] N F P @<SC
+$,
+brancas	 [branco] ADJ F P @N<PRED
+$.	 [$.] PU <<<
+$¶	 [$¶] PU <<<
+</s>
+<s>
+A	 [o] DET F S <artd> @>N
+polícia	 [polícia] N F S @SUBJ>
+ofereceu	 [oferecer] V PS 3S IND VFIN <fmc> @FMV
+US$	 [US$] PROP M/F S @<ACC
+60	 [60] NUM M/F P <card> @>N
+mil	 [mil] NUM M/F P <card> @N<
+por	 [por] PRP @N<
+informações	 [informação] N F P @P<
+sobre	 [sobre] PRP @N<
+os	 [o] DET M P <artd> @>N
+assassinos	 [assassino] N M P @P<
+$.	 [$.] PU <<<
+$¶	 [$¶] PU <<<
+</s>
+<s>
+Pouco	 [pouco] ADV <quant> @>A
+depois	 [depois] ADV @ADVL>
+de	 [de] PRP <sam-> @A<
+o	 [o] DET M S <artd> <-sam> @>N
+ataque	 [ataque] N M S @P<
+$,
+um	 [um] DET M S <arti> @>N
+homem	 [homem] N M S @N<PRED @SUBJ>
+$,
+que	 [que] SPEC M/F S @ACC> <rel> @#FS-N<
+se	 [se] PERS M/F 3S ACC @SUBJ>
+identificou	 [identificar] V PS 3S IND VFIN @FMV
+como	 [como] ADV @PRD <rel> @#AS-<OC
+Zwaye=Mfeya	 [Zwaye=Mfeya] PROP M/F S @AS<
+$,
+telefonou	 [telefonar] V PS 3S IND VFIN <fmc> @FMV
+para	 [para] PRP @<PIV
+a	 [o] DET F S <artd> @>N
+Associação	 [associação] <prop> N F S @P<
+Sul-Africana	 [Sul-Africana] PROP F S @N<
+de	 [de] PRP @N<
+Imprensa	 [imprensa] N F S @P<
+$(	 [$(] PU
+Sapa	 [sapa] N F S @N<PRED
+$)	 [$)] PU
+e	 [e] <co-fmc> <co-vfin> KC @CO
+reivindicou	 [reivindicar] V PS 3S IND VFIN <fmc> @FMV
+a	 [o] DET F S <artd> @>N
+autoria	 [autoria] N F S @<ACC
+de	 [de] PRP <sam-> @N<
+o	 [o] DET M S <artd> <-sam> @>N
+atentado	 [atentado] N M S @P<
+$.	 [$.] PU <<<
+$¶	 [$¶] PU <<<
+</s>
+<s>
+Ele	 [ele] PERS M 3S NOM @SUBJ>
+disse	 [dizer] V PS 3S IND VFIN <fmc> @FMV
+ser	 [ser] V INF @IMV @#ICL-<ACC
+integrante	 [integrante] <n> ADJ M S @<SC
+de	 [de] PRP <sam-> @N<
+o	 [o] DET M S <artd> <-sam> @>N
+Exército=Popular=Azaniano=de=Libertação	 [Exército=Popular=Azaniano=de=Libertação] PROP M S @P<
+$,
+braço	 [braço] N M S @N<PRED
+armado	 [armar] V PCP M S @IMV @#ICL-N<
+de	 [de] PRP <sam-> @<PIV
+o	 [o] DET M S <artd> <-sam> @>N
+Congresso	 [congresso] <prop> N M S @P<
+Pan-Africano	 [Pan-Africano] PROP M S @N<
+$(	 [$(] PU
+PAC	 [PAC] PROP M/F S @N<PRED
+$)	 [$)] PU
+$	 [$] PU
+movimento	 [movimento] N M S @N<PRED
+negro	 [negro] ADJ M S @N<
+que	 [que] KS @SUB
+se	 [se] PERS M/F 3S ACC <refl> @ACC>
+recusa	 [recusar] V PR 3S IND VFIN <fmc> @FMV
+a	 [a] PRP @<PIV
+participar	 [participar] V INF @IMV @#ICL-P<
+de	 [de] PRP <sam-> @<PIV
+o	 [o] DET M S <artd> <-sam> @>N
+processo	 [processo] N M S @P<
+de	 [de] PRP @N<
+transição	 [transição] N F S @P<
+democrática	 [democrático] ADJ F S @N<
+$.	 [$.] PU <<<
+$¶	 [$¶] PU <<<
+</s>
+<s>
+Johnson=Mlambo	 [Johnson=Mlambo] PROP M S @SUBJ>
+$,
+vice-presidente	 [vice-presidente] N M S @APP
+de	 [de] PRP <sam-> @N<
+o	 [o] DET M S <artd> <-sam> @>N
+PAC	 [PAC] PROP M S @P<
+$,
+negou	 [negar] V PS 3S IND VFIN <fmc> @FMV
+qualquer	 [qualquer] DET F S <quant> @>N
+participação	 [participação] N F S @<ACC
+de	 [de] PRP <sam-> @N<
+o	 [o] DET M S <artd> <-sam> @>N
+grupo	 [grupo] N M S @P<
+em	 [em] PRP <sam-> @<ADVL
+o	 [o] DET M S <-sam> @P<
+que	 [que] SPEC M/F S @ACC> <rel> @#FS-N<
+chamou	 [chamar] V PS 3S IND VFIN @FMV
+de	 [de] PRP @<OC
+lamentável	 [lamentável] ADJ M S <*1> @>N
+incidente	 [incidente] N M S <*2> @P<
+$	 [$] PU
+cujas	 [cujo] DET F P @>N <rel> @#FS-N<
+características	 [característica] N F P @SUBJ>
+são	 [ser] V PR 3P IND VFIN @FMV
+semelhantes	 [semelhante] ADJ F P @<SC
+a	 [a] PRP <sam-> @A<
+as	 [o] DET F P <-sam> @P<
+de	 [de] PRP <sam-> @N<
+o	 [o] DET M S <artd> <-sam> @>N
+massacre	 [massacre] N M S @P<
+em	 [em] PRP @<ADVL
+uma	 [um] DET F S <arti> @>N
+igreja	 [igreja] N F S @P<
+de	 [de] PRP <sam-> @N<
+a	 [o] DET F S <artd> <-sam> @>N
+Cidade=do=Cabo	 [Cidade=do=Cabo] PROP F S @P<
+$,
+em	 [em] PRP @<ADVL
+julho	 [julho] N M S @P<
+$,
+cometido	 [cometer] V PCP M S @IMV @#ICL-N<PRED @#ICL-P<
+por	 [por] PRP <sam-> @<PASS
+os	 [o] DET M P <artd> <-sam> @>N
+guerrilheiros	 [guerrilheiro] N M P @P<
+de	 [de] PRP <sam-> @N<
+o	 [o] DET M S <artd> <-sam> @>N
+PAC	 [PAC] PROP M S @P<
+$.	 [$.] PU <<<
+$¶	 [$¶] PU <<<
+</s>
+<s>
+Não	 [não] ADV <*1> @ADVL>
+há	 [haver] V PR 3S IND VFIN <fmc> @FMV
+justificativa	 [justificativa] N F S @<ACC
+para	 [para] PRP @<ADVL
+este	 [este] DET M S <dem> @>N
+ato	 [ato] N M S @P<
+bárbaro	 [bárbaro] ADJ M S <*2> @N<PRED
+disse	 [dizer] V PS 3S IND VFIN <fmc> @FMV
+De=Klerk	 [De=Klerk] PROP M/F S @<SUBJ
+$.	 [$.] PU <<<
+$¶	 [$¶] PU <<<
+</s>
+<s>
+O	 [o] DET M S <artd> @>N
+ministro	 [ministro] N M S @SUBJ>
+de	 [de] PRP <sam-> @N<
+a	 [o] DET F S <artd> <-sam> @>N
+Lei	 [lei] <prop> N F S @P<
+e	 [e] KC @CO
+de	 [de] PRP <sam-> @N<
+a	 [o] DET F S <artd> <-sam> @>N
+Ordem	 [ordem] <prop> N F S @P<
+$,
+Hernus=Kriel	 [Hernus=Kriel] PROP M/F S @APP
+$,
+afirmou	 [afirmar] V PS 3S IND VFIN <fmc> @FMV
+que	 [que] KS @SUB @#FS-<ACC
+incidentes	 [incidente] N M P @SUBJ>
+de	 [de] PRP <sam-> @N<
+esse	 [esse] DET M S <dem> <-sam> @>N
+gênero	 [gênero] N M S @P<
+servem	 [servir] V PR 3P IND VFIN @FMV
+para	 [para] PRP @<PIV
+desestabilizar	 [desestabilizar] V INF @IMV <*1> @#ICL-P<
+o	 [o] DET M S <artd> @>N
+processo	 [processo] N M S @<ACC
+democrático	 [democrático] ADJ M S <*2> @N<
+$.	 [$.] PU <<<
+$¶	 [$¶] PU <<<
+</s>
+<s>
+Esses	 [esse] DET M P <dem> <*1> @>N
+atentados	 [atentado] N M P @SUBJ>
+devem	 [dever] V PR 3P IND VFIN <fmc> @FAUX
+ser	 [ser] V INF @IMV @#ICL-AUX<
+e	 [e] <co-fmc> <co-vfin> KC @CO
+serão	 [ser] V FUT 3P IND VFIN <fmc> @FAUX
+reprimidos	 [reprimir] V PCP M P @IMV @#ICL-AUX<
+$.	 [$.] PU <<<
+$"	 [$"] PU
+$¶	 [$¶] PU <<<
+</s>
+<s>
+O	 [o] DET M S <artd> @>N
+bar	 [bar] N M S @SUBJ>
+atacado	 [atacado] ADJ M S @N<
+$,
+chamado	 [chamado] ADJ M S @N<PRED
+Heidelberg=Tavern	 [Heidelberg=Tavern] PROP M/F S @APP
+$,
+é	 [ser] V PR 3S IND VFIN <fmc> @FAUX
+frequentado	 [frequentar] V PCP M S @IMV @#ICL-AUX<
+por	 [por] PRP @<PASS
+estudantes	 [estudante] N M/F P @P<
+de	 [de] PRP @N<
+todas=as	 [todo=o] DET F P <quant> @>N
+raças	 [raça] N F P @P<
+e	 [e] KC @CO
+de	 [de] PRP @N<
+várias	 [várias] DET F P <quant> @>N
+partes	 [parte] N F P @P<
+de	 [de] PRP <sam-> @N<
+o	 [o] DET M S <artd> <-sam> @>N
+mundo	 [mundo] N M S @P<
+$.	 [$.] PU <<<
+$¶	 [$¶] PU <<<
+</s>
+<s>
+Havia	 [haver] V IMPF 1/3S IND VFIN <fmc> @FMV
+cerca=de	 [cerca=de] ADV @>A
+cem	 [cem] NUM F P <card> @>N
+pessoas	 [pessoa] N F P @<ACC
+em	 [em] PRP <sam-> @<ADVL
+o	 [o] DET M S <artd> <-sam> @>N
+local	 [local] N M S @P<
+em	 [em] PRP <sam-> @<ADVL
+o	 [o] DET M S <artd> <-sam> @>N
+momento	 [momento] N M S @P<
+de	 [de] PRP <sam-> @N<
+o	 [o] DET M S <artd> <-sam> @>N
+atentado	 [atentado] N M S @P<
+$.	 [$.] PU <<<
+$¶	 [$¶] PU <<<
+</s>
+<s>
+Os	 [o] DET M P <artd> @>N
+pistoleiros	 [pistoleiro] N M P @SUBJ>
+primeiro	 [primeiro] ADV @ADVL>
+atiraram	 [atirar] V PS/MQP 3P IND VFIN <fmc> @FMV
+uma	 [um] DET F S <arti> @>N
+granada	 [granada] N F S @<ACC
+$	 [$] PU
+que	 [que] KS @SUB @#FS-<ACC
+não	 [não] ADV @ADVL>
+explodiu	 [explodir] V PS 3S IND VFIN @FMV
+$	 [$] PU
+e	 [e] <co-fmc> <co-vfin> KC @CO
+em=seguida	 [em=seguida] ADV @<ADVL
+abriram	 [abrir] V PS/MQP 3P IND VFIN <fmc> @FMV
+fogo	 [fogo] N M S @<ACC
+$.	 [$.] PU <<<
+$¶	 [$¶] PU <<<
+</s>
+<s>
+Dois	 [dois] NUM M/F P <card> @SUBJ>
+de	 [de] PRP <sam-> @N<
+os	 [o] DET M P <artd> <-sam> @>N
+mortos	 [morto] <n> ADJ M P @P<
+foram	 [ser] V PS/MQP 3P IND VFIN <fmc> @FAUX
+identificados	 [identificar] V PCP M P @IMV @#ICL-AUX<
+$:	 [$:] PU <<<
+o	 [o] DET M S <artd> @>N
+português	 [português] N M S @NPHR
+José=Cerqueira	 [José=Cerqueira] PROP M S @N<
+e	 [e] KC @CO
+a	 [o] DET F S <artd> @>N
+indiana	 [indiana] N F S @NPHR
+Rolanda=Palm	 [Rolanda=Palm] PROP F S @N<
+$.	 [$.] PU <<<
+$¶	 [$¶] PU <<<
+</s>
+</TEXT>
+$¶	 [$¶] PU <<<
+</DOC>

@@ -1,0 +1,361 @@
+<DOC>
+<DOCNO.valor=FSP940101-032>
+<DOCID.valor=FSP940101-032>
+<DATE.valor=940101>
+<TEXT>
+<s>
+Da=Reportagem=Local	 [Da=Reportagem=Local] PROP F S @NPHR
+$¶	 [$¶] PU <<<
+</s>
+<s>
+A	 [o] DET F S <artd> @>N
+dívida	 [dívida] N F S @SUBJ>
+de	 [de] PRP @N<
+US$	 [US$] PROP M/F S @P<
+28,9	 [28,9] NUM M P <card> @>N
+milhões	 [milhão] N M P @SUBJ>
+que	 [que] SPEC M/F S @ACC> <rel> @#FS-N<
+a	 [o] DET F S <artd> @>N
+prefeitura	 [prefeitura] N F S @SUBJ>
+tinha	 [ter] V IMPF 3S IND VFIN @FMV
+com	 [com] PRP @<ADVL
+a	 [o] DET F S <artd> @>N
+construtora	 [construtora] N F S @P<
+Andrade=Gutierrez	 [Andrade=Gutierrez] PROP F S @N<
+foi	 [ser] V PS 3S IND VFIN <fmc> @FAUX
+feita	 [fazer] V PCP F S @IMV @#ICL-AUX<
+por	 [por] PRP <sam-> @<PASS
+a	 [o] DET F S <artd> <-sam> @>N
+administração	 [administração] N F S @P<
+de	 [de] PRP <sam-> @N<
+o	 [o] DET M S <artd> <-sam> @>N
+ex-prefeito	 [ex-prefeito] N M S @P<
+Jânio=Quadros	 [Jânio=Quadros] PROP M S @N<
+e	 [e] <co-fmc> <co-vfin> KC @CO
+era	 [ser] V IMPF 3S IND VFIN <fmc> @FMV
+referente=a	 [referente=a] PRP <sam-> @<SC
+a	 [o] DET F S <-sam> <artd> @>N
+construção	 [construção] N F S @P<
+de	 [de] PRP <sam-> @N<
+o	 [o] DET M S <artd> <-sam> @>N
+minianel	 [minianel] N M S <DERP> @P<
+viário	 [viário] ADJ M S @N<
+e	 [e] KC @CO
+reurbanização	 [reurbanização] N F S @P< @<ACC
+de	 [de] PRP <sam-> @N<
+o	 [o] DET M S <artd> <-sam> @>N
+Vale=do=Anhangabaú	 [Vale=do=Anhangabaú] PROP M S @P<
+$.	 [$.] PU <<<
+$¶	 [$¶] PU <<<
+</s>
+<s>
+Em	 [em] PRP @ADVL>
+novembro	 [novembro] N M S @P<
+de	 [de] PRP @N<
+1986	 [1986] NUM M/F P <card> @P<
+$,
+a	 [o] DET F S <artd> @>N
+empreiteira	 [empreiteira] N F S @SUBJ>
+venceu	 [vencer] V PS 3S IND VFIN <fmc> @FMV
+a	 [o] DET F S <artd> @>N
+licitação	 [licitação] N F S @<ACC
+para	 [para] PRP @<ADVL
+o	 [o] DET M S <artd> @>N
+minianel	 [minianel] N M S <DERP> @P<
+viário	 [viário] ADJ M S @N<
+$.	 [$.] PU <<<
+$¶	 [$¶] PU <<<
+</s>
+<s>
+Em	 [em] PRP @ADVL>
+1989	 [1989] NUM M/F S <card> @P<
+$,
+as	 [o] DET F P <artd> @>N
+obras	 [obra] N F P @SUBJ>
+foram	 [ser] V PS/MQP 3P IND VFIN <fmc> @FAUX
+interrompidas	 [interromper] V PCP F P @IMV @#ICL-AUX<
+por	 [por] PRP <sam-> @<PASS
+a	 [o] DET F S <artd> <-sam> @>N
+prefeita	 [prefeita] N F S @P<
+Luiza=Erundina	 [Luiza=Erundina] PROP F S @N<
+$.	 [$.] PU <<<
+$¶	 [$¶] PU <<<
+</s>
+<s>
+Mas	 [mas] KC @CO
+o	 [o] DET M S <artd> @>N
+contrato	 [contrato] N M S @SUBJ>
+feito	 [fazer] V PCP M S @IMV @#ICL-N<
+com	 [com] PRP @<ADVL
+a	 [o] DET F S <artd> @>N
+administração	 [administração] N F S @P<
+Jânio=Quadros	 [Jânio=Quadros] PROP M S @N<
+foi	 [ser] V PS 3S IND VFIN <fmc> @FAUX
+renegociado	 [renegociar] V PCP M S @IMV @#ICL-AUX<
+$.	 [$.] PU <<<
+$¶	 [$¶] PU <<<
+</s>
+<s>
+Com	 [com] PRP @ADVL> @PRED>
+isso	 [isso] SPEC M S <dem> @P<
+$,
+a	 [o] DET F S <artd> @>N
+licitação	 [licitação] N F S @SUBJ>
+não	 [não] ADV @ADVL>
+perdeu	 [perder] V PS 3S IND VFIN <fmc> @FMV
+a	 [o] DET F S <artd> @>N
+validade	 [validade] N F S @<ACC
+em=razão=de	 [em=razão=de] PRP <sam-> @<ADVL
+o	 [o] DET M S <-sam> <artd> @>N
+tempo	 [tempo] N M S @P<
+e	 [e] <co-fmc> <co-vfin> KC @CO
+o	 [o] DET M S <artd> @>N
+prefeito	 [prefeito] N M S @SUBJ>
+Paulo=Maluf	 [Paulo=Maluf] PROP M S @N<
+pôde	 [poder] V PS 3S IND VFIN <fmc> @FAUX
+reiniciar	 [reiniciar] V INF @IMV @#ICL-AUX<
+as	 [o] DET F P <artd> @>N
+obras	 [obra] N F P @<ACC
+com	 [com] PRP @<ADVL
+base	 [base] N F S @P<
+em	 [em] PRP <sam-> @<ADVL
+o	 [o] DET M S <artd> <-sam> @>N
+novo	 [novo] ADJ M S @>N
+contrato	 [contrato] N M S @P<
+$.	 [$.] PU <<<
+$¶	 [$¶] PU <<<
+</s>
+<s>
+De=acordo	 [de=acordo] ADV @ADVL>
+com	 [com] PRP @A<
+o	 [o] DET M S <artd> @>N
+contrato	 [contrato] N M S @P<
+original	 [original] ADJ M S @N<
+$,
+a	 [o] DET F S <artd> @>N
+obra	 [obra] N F S @SUBJ>
+custaria	 [custar] V COND 3S VFIN <fmc> @FMV
+US$	 [US$] PROP M/F S @<ACC
+51,5	 [51,5] NUM M P <card> @>N
+milhões	 [milhão] N M P @<ADVS
+$.	 [$.] PU <<<
+$¶	 [$¶] PU <<<
+</s>
+<s>
+Até	 [até] ADV @>A
+1º.	 [1º.] ADJ M/F S <NUM-ord> @PRED>
+de	 [de] PRP @N<
+janeiro	 [janeiro] N M S @P<
+de	 [de] PRP @N<
+1989	 [1989] NUM M/F P <card> @P<
+$,
+apenas	 [apenas] ADV <rel> @>A
+20	 [20] NUM M/F P <card> @>N
+$%	 [%] N M P @SUBJ>	 [$%] PU
+de	 [de] PRP <sam-> @N<
+as	 [o] DET F P <artd> <-sam> @>N
+obras	 [obra] N F P @P<
+estavam	 [estar] V IMPF 3P IND VFIN <fmc> @FMV
+concluídas	 [concluir] V PCP F P @<SC
+$,
+mas	 [mas] <co-fmc> <co-vfin> KC @CO
+a	 [o] DET F S <artd> @>N
+prefeitura	 [prefeitura] N F S @SUBJ>
+já	 [já] ADV @ADVL>
+tinha	 [ter] V IMPF 3S IND VFIN <fmc> @FAUX
+pago	 [pagar] V PCP @IMV @#ICL-AUX<
+cerca=de	 [cerca=de] ADV @>A
+65	 [65] NUM M/F P <card> @>N
+$%	 [%] N M P @<ACC	 [$%] PU
+de	 [de] PRP <sam-> @N<
+o	 [o] DET M S <artd> <-sam> @>N
+contrato	 [contrato] N M S @P<
+e	 [e] <co-fmc> <co-vfin> KC @CO
+ainda	 [ainda] ADV @ADVL>
+acumulava	 [acumular] V IMPF 3S IND VFIN <fmc> @FMV
+uma	 [um] DET F S <arti> @>N
+dívida	 [dívida] N F S @<ACC
+de	 [de] PRP @N<
+cerca=de	 [cerca=de] PRP @P<
+US$	 [US$] PROP M/F S @P<
+20	 [20] NUM M P <card> @>N
+milhões	 [milhão] N M P @PRED>
+$.	 [$.] PU <<<
+$¶	 [$¶] PU <<<
+</s>
+<s>
+Com	 [com] PRP @ADVL> @PRED>
+a	 [o] DET F S <artd> @>N
+renegociação	 [renegociação] N F S @P<
+de	 [de] PRP <sam-> @N<
+o	 [o] DET M S <artd> <-sam> @>N
+contrato	 [contrato] N M S @P<
+$,
+a	 [o] DET F S <artd> @>N
+prefeitura	 [prefeitura] N F S @SUBJ>
+obteve	 [obter] V PS 3S IND VFIN <fmc> @FMV
+uma	 [um] DET F S <arti> @>N
+redução	 [redução] N F S @<ACC
+em	 [em] PRP <sam-> @<ADVL
+o	 [o] DET M S <artd> <-sam> @>N
+custo	 [custo] N M S @P<
+de	 [de] PRP <sam-> @N<
+a	 [o] DET F S <artd> <-sam> @>N
+obra	 [obra] N F S @P<
+de	 [de] PRP @N<
+aproximadamente	 [aproximadamente] ADV @<ADVL
+30	 [30] NUM M/F P <card> @>N
+$%	 [%] N M P @P<	 [$%] PU
+$,
+segundo	 [segundo] ADV @#AS-<ADVL <prp> <rel> @COM
+o	 [o] DET M S <artd> @>N
+ex-vice-presidente	 [ex-vice-presidente] N M S @AS<
+de	 [de] PRP <sam-> @N<
+a	 [o] DET F S <artd> <-sam> @>N
+Emurb	 [Emurb] PROP F S @P<
+$,
+Roberto=Macfaden	 [Roberto=Macfaden] PROP M S @APP @AS<
+$.	 [$.] PU <<<
+$¶	 [$¶] PU <<<
+</s>
+<s>
+Anhangabaú	 [Anhangabaú] PROP M/F S @NPHR
+$¶	 [$¶] PU <<<
+</s>
+<s>
+Para	 [para] PRP @ADVL>
+concluir	 [concluir] V INF @IMV @#ICL-P<
+as	 [o] DET F P <artd> @>N
+obras	 [obra] N F P @<ACC
+de	 [de] PRP @N<
+reurbanização	 [reurbanização] N F S @P<
+de	 [de] PRP <sam-> @N<
+o	 [o] DET M S <artd> <-sam> @>N
+Anhangabaú	 [Anhangabaú] PROP M S @P<
+$,
+a	 [o] DET F S <artd> @>N
+ex-prefeita	 [ex-prefeita] N F S @SUBJ>
+renegociou	 [renegociar] V PS 3S IND VFIN <fmc> @FMV
+os	 [o] DET M P <artd> @>N
+contratos	 [contrato] N M P @<ACC
+assinados	 [assinar] V PCP M P @IMV @#ICL-N<
+por	 [por] PRP @<PASS
+Jânio=Quadros	 [Jânio=Quadros] PROP M S @P<
+$.	 [$.] PU <<<
+$¶	 [$¶] PU <<<
+</s>
+<s>
+A	 [o] DET F S <artd> @>N
+concorrência	 [concorrência] N F S @SUBJ>
+também	 [também] ADV @ADVL>
+foi	 [ser] V PS 3S IND VFIN <fmc> @FAUX
+vencida	 [vencer] V PCP F S @IMV @#ICL-AUX<
+por	 [por] PRP <sam-> @<PASS
+a	 [o] DET F S <artd> <-sam> @>N
+Andrade=Gutierrez	 [Andrade=Gutierrez] PROP F S @P<
+em	 [em] PRP @<ADVL
+novembro	 [novembro] N M S @P<
+de	 [de] PRP @N<
+1986	 [1986] NUM M/F P <card> @P<
+$,
+e	 [e] KC @CO
+o	 [o] DET M S <artd> @>N
+contratro	 [contratro] ADJ M S <DERP> @>N
+assinado	 [assinado] N M S @PRED>
+em	 [em] PRP @N<
+5	 [5] NUM M/F P <card> @P<
+de	 [de] PRP @N<
+março	 [março] N M S @P<
+de	 [de] PRP <sam-> @N<
+o	 [o] DET M S <artd> <-sam> @>N
+ano	 [ano] N M S @P<
+seguinte	 [seguinte] ADJ M S @N<
+$.	 [$.] PU <<<
+$¶	 [$¶] PU <<<
+</s>
+<s>
+O	 [o] DET M S <artd> @>N
+valor	 [valor] N M S @SUBJ>
+inicial	 [inicial] ADJ M S @N<
+de	 [de] PRP <sam-> @N<
+a	 [o] DET F S <artd> <-sam> @>N
+obra	 [obra] N F S @P<
+era	 [ser] V IMPF 3S IND VFIN <fmc> @FMV
+de	 [de] PRP @<SC
+US$	 [US$] PROP M/F S @P<
+16,4	 [16,4] NUM M P <card> @>N
+milhões	 [milhão] N M P @PRED>
+$,
+mas	 [mas] <co-fmc> <co-vfin> KC @CO
+em	 [em] PRP @ADVL>
+junho	 [junho] N M S @P<
+de	 [de] PRP @N<
+1988	 [1988] NUM M/F P <card> @P<
+houve	 [haver] V PS 3S IND VFIN <fmc> @FMV
+um	 [um] DET M S <arti> @>N
+aditamento	 [aditamento] N M S @<ACC
+em	 [em] PRP <sam-> @<ADVL
+o	 [o] DET M S <artd> <-sam> @>N
+valor	 [valor] N M S @P<
+de	 [de] PRP @N<
+US$	 [US$] PROP M/F S @P<
+79,5	 [79,5] NUM M P <card> @>N
+milhões	 [milhão] N M P @PRED>
+$.	 [$.] PU <<<
+$¶	 [$¶] PU <<<
+</s>
+<s>
+Até	 [até] PRP @ADVL>
+janeiro	 [janeiro] N M S @P<
+de	 [de] PRP @N<
+1989	 [1989] NUM M/F P <card> @P<
+$,
+estavam	 [estar] V IMPF 3P IND VFIN <fmc> @FMV
+concluídos	 [concluir] V PCP M P @<SC
+apenas	 [apenas] ADV @>A
+40	 [40] NUM M/F P <card> @>N
+$%	 [%] N M P @<SUBJ	 [$%] PU
+de	 [de] PRP <sam-> @N<
+as	 [o] DET F P <artd> <-sam> @>N
+obras	 [obra] N F P @P<
+$,
+e	 [e] <co-fmc> <co-vfin> KC @CO
+a	 [o] DET F S <artd> @>N
+prefeitura	 [prefeitura] N F S @SUBJ>
+tinha	 [ter] V IMPF 3S IND VFIN <fmc> @FAUX
+pago	 [pagar] V PCP @IMV @#ICL-AUX<
+cerca=de	 [cerca=de] ADV @>A
+20	 [20] NUM M/F P <card> @>N
+$%	 [%] N M P @<ACC	 [$%] PU
+a=mais=de	 [a=mais=de] PRP <sam-> @<ADVL
+o	 [o] DET M S <-sam> <dem> @P<
+que	 [que] KS @SUB @#FS-<ACC
+estipulado	 [estipular] V PCP M S @IMV
+em	 [em] PRP @<ADVL
+contrato	 [contrato] N M S @P<
+$,
+que	 [que] SPEC M/F S @SUBJ> <rel> @#FS-N<
+foi	 [ser] V PS 3S IND VFIN @FAUX
+renegociado	 [renegociar] V PCP M S @IMV @#ICL-AUX<
+e	 [e] KC @CO
+a	 [o] DET F S <artd> @>N
+obra	 [obra] N F S @<ACC
+concluída	 [concluir] V PCP F S @N<
+$.	 [$.] PU <<<
+$¶	 [$¶] PU <<<
+</s>
+<s>
+Mas	 [mas] KC @CO
+restou	 [restar] V PS 3S IND VFIN <fmc> @FMV
+a	 [o] DET F S <artd> @>N
+dívida	 [dívida] N F S @<SUBJ
+de	 [de] PRP @N<
+US$	 [US$] PROP M/F S @P<
+8,9	 [8,9] NUM M P <card> @>N
+milhões	 [milhão] N M P @PRED>
+$.	 [$.] PU <<<
+$¶	 [$¶] PU <<<
+</s>
+</TEXT>
+$¶	 [$¶] PU <<<
+</DOC>

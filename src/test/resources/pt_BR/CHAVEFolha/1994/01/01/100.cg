@@ -1,0 +1,735 @@
+<DOC>
+<DOCNO.valor=FSP940101-100>
+<DOCID.valor=FSP940101-100>
+<DATE.valor=940101>
+<TEXT>
+<s>
+Marcelo=Damato	 [Marcelo=Damato] PROP M S @NPHR
+$¶	 [$¶] PU <<<
+</s>
+<s>
+Da=Reportagem=Local	 [Da=Reportagem=Local] PROP F S @NPHR
+$¶	 [$¶] PU <<<
+</s>
+<s>
+A	 [o] DET F S <artd> @>N
+rivalidade	 [rivalidade] N F S @SUBJ>
+entre	 [entre] PRP @N<
+São=Paulo	 [São=Paulo] PROP M S @P<
+$,
+Corinthians	 [Corinthians] PROP M/F S @P<
+e	 [e] KC @CO
+Palmeiras	 [Palmeiras] PROP M/F S @P<
+perde	 [perder] V PR 3S IND VFIN <fmc> @FMV
+força	 [força] N F S @<ACC
+em	 [em] PRP <sam-> @<ADVL
+a	 [o] DET F S <artd> <-sam> @>N
+parte	 [parte] N F S @P<
+de	 [de] PRP @N<
+fisiologia	 [fisiologia] N F S @P<
+$.	 [$.] PU <<<
+$¶	 [$¶] PU <<<
+</s>
+<s>
+Os	 [o] DET M P <artd> @>N
+quatro	 [quatro] NUM M P <card> @>N
+responsáveis	 [responsável] <n> ADJ M P @SUBJ>
+por	 [por] PRP <sam-> @A<
+a	 [o] DET F S <artd> <-sam> @>N
+orientação	 [orientação] N F S @P<
+de	 [de] PRP <sam-> @N<
+os	 [o] DET M P <artd> <-sam> @>N
+programas	 [programa] N M P @P<
+de	 [de] PRP @N<
+preparação	 [preparação] N F S @P<
+física	 [físico] ADJ F S @N<
+de	 [de] PRP <sam-> @N<
+os	 [o] DET M P <artd> <-sam> @>N
+três	 [três] NUM M P <card> @>N
+principais	 [principal] ADJ M P <SUP> @>N
+times	 [time] N M P @P<
+de	 [de] PRP <sam-> @N<
+o	 [o] DET M S <artd> <-sam> @>N
+Estado	 [estado] <prop> N M S @P<
+são	 [ser] V PR 3P IND VFIN <fmc> @FMV
+adversários	 [adversário] ADJ M P @<SC
+apenas	 [apenas] ADV @>P
+dentro=de	 [dentro=de] PRP @<ADVL
+campo	 [campo] N M S @P<
+$.	 [$.] PU <<<
+$¶	 [$¶] PU <<<
+</s>
+<s>
+Turíbio=Leite=de=Barros=Neto	 [Turíbio=Leite=de=Barros=Neto] PROP M S @VOK @SUBJ>
+$,
+43	 [43] NUM M/F P <card> @SUBJ>
+$,
+de	 [de] PRP <sam-> @N<PRED
+o	 [o] DET M S <artd> <-sam> @>N
+São=Paulo	 [São=Paulo] PROP M S @P<
+$,
+Renato=Moreira=Fraga=Lotufo	 [Renato=Moreira=Fraga=Lotufo] PROP M S @APP
+$,
+37	 [37] NUM M/F P <card> @SUBJ>
+$,
+de	 [de] PRP <sam-> @N<PRED
+o	 [o] DET M S <artd> <-sam> @>N
+Corinthians	 [Corinthians] PROP M S @P<
+$,
+e	 [e] KC @CO
+os	 [o] DET M P <artd> @>N
+palmeirenses	 [palmeirense] N M P @SUBJ>
+Ivan=Piçarro=da=Cruz	 [Ivan=Piçarro=da=Cruz] PROP M/F S @N<
+$,
+40	 [40] NUM M/F P <card> @SUBJ>
+$,
+e	 [e] KC @CO
+Paulo=Sérgio=Martino=Zogaib	 [Paulo=Sérgio=Martino=Zogaib] PROP M S @SUBJ>
+$,
+36	 [36] NUM M/F P <card> @P<
+$,
+mantêm	 [manter] V PR 3P IND VFIN <fmc> @FMV
+$,
+extrafutebol	 [extrafutebol] N M S <DERP> @<PRED
+$,
+fortes	 [forte] ADJ F P @>N
+ligações	 [ligação] N F P @<ACC
+pessoais	 [pessoal] ADJ F P @N<
+e	 [e] KC @CO
+profissionais	 [profissional] ADJ M/F P @N<PRED
+$.	 [$.] PU <<<
+$¶	 [$¶] PU <<<
+</s>
+<s>
+Os	 [o] DET M P <artd> @>N
+quatro	 [quatro] NUM M P <card> @SUBJ>
+são	 [ser] V PR 3P IND VFIN <fmc> @FMV
+professores	 [professor] N M P @<SC
+de	 [de] PRP <sam-> @N<
+a	 [o] DET F S <artd> <-sam> @>N
+Escola=Paulista=de=Medicina	 [Escola=Paulista=de=Medicina] PROP F S @P<
+$(	 [$(] PU
+EPM	 [EPM] PROP M/F S @N<PRED
+$)	 [$)] PU
+$,
+instituição	 [instituição] N F S @N<PRED
+federal	 [federal] ADJ F S @N<
+que	 [que] SPEC M/F S @SUBJ> <rel> @#FS-N<
+oferece	 [oferecer] V PR 3S IND VFIN @FMV
+um	 [um] NUM M S <card> @<ACC
+de	 [de] PRP <sam-> @N<
+os	 [o] DET M P <artd> <-sam> @>N
+cursos	 [curso] N M P @P<
+de	 [de] PRP @N<
+medicina	 [medicina] N F S @P<
+mais	 [mais] ADV <KOMP> <quant> @>A
+famosos	 [famoso] ADJ M P @N<PRED
+de	 [de] PRP <sam-> @KOMP<
+o	 [o] DET M S <artd> <-sam> @>N
+país	 [país] N M S @P<
+$.	 [$.] PU <<<
+$¶	 [$¶] PU <<<
+</s>
+<s>
+Lotufo	 [Lotufo] PROP M S @VOK @SUBJ>
+$,
+Zogaib	 [Zogaib] PROP M S @SUBJ>
+e	 [e] KC @CO
+Leite=de=Barros	 [Leite=de=Barros] PROP M S @SUBJ>
+também	 [também] ADV @ADVL>
+são	 [ser] V PR 3P IND VFIN <fmc> @FMV
+sócios	 [sócio] N M P @<SC
+em	 [em] PRP <sam-> @N<
+um	 [um] DET M S <arti> <-sam> @>N
+serviço	 [serviço] N M S @P<
+de	 [de] PRP @N<
+consultoria	 [consultoria] N F S @P<
+em	 [em] PRP @<ADVL
+fisiologia	 [fisiologia] N F S @P<
+de	 [de] PRP <sam-> @N<
+o	 [o] DET M S <artd> <-sam> @>N
+exercício	 [exercício] N M S @P<
+em	 [em] PRP @<ADVL
+duas	 [duas] NUM F S <card> @P<
+de	 [de] PRP <sam-> @N<
+as	 [o] DET F P <artd> <-sam> @>N
+mais	 [mais] ADV <KOMP> <quant> @>A
+modernas	 [moderno] ADJ F P @>N
+academias	 [academia] N F P @P<
+de	 [de] PRP <sam-> @N<
+a	 [o] DET F S <artd> <-sam> @>N
+cidade	 [cidade] N F S @P<
+de	 [de] PRP @N<
+São=Paulo	 [São=Paulo] PROP M S @P<
+$,
+a	 [o] DET F S <artd> @>N
+Physis	 [Physis] PROP F S @APP
+$,
+criada	 [criar] V PCP F S @IMV @#ICL-N<PRED
+em	 [em] PRP @<PIV
+1990	 [1990] NUM M/F P <card> @P<
+$,
+e	 [e] KC @CO
+a	 [o] DET F S <artd> @>N
+Fórmula	 [fórmula] <prop> N F S @PRED>
+$,
+inaugurada	 [inaugurar] V PCP F S @N<PRED
+em	 [em] PRP @<ADVL
+1993	 [1993] NUM M/F S <card> @P<
+$.	 [$.] PU <<<
+$¶	 [$¶] PU <<<
+</s>
+<s>
+Piçarro	 [Piçarro] PROP M/F S @SUBJ>
+e	 [e] KC @CO
+Leite=de=Barros	 [Leite=de=Barros] PROP M/F S @SUBJ>
+são	 [ser] V PR 3P IND VFIN <fmc> @FAUX
+cunhados	 [cunhar] V PCP M P @IMV @#ICL-AUX<
+$	 [$] PU
+este	 [este] DET M S <dem> @<OC
+é	 [ser] V PR 3S IND VFIN <fmc> @FAUX
+casado	 [casar] V PCP M S @IMV @#ICL-AUX<
+com	 [com] PRP @<PIV
+a	 [o] DET F S <artd> @>N
+irmã	 [irmã] N F S @P<
+de	 [de] PRP <sam-> @N<
+aquele	 [aquele] DET M S <dem> <-sam> @P<
+$.	 [$.] PU <<<
+$¶	 [$¶] PU <<<
+</s>
+<s>
+Além=de	 [além=de] PRP <sam-> @ADVL>
+isso	 [isso] SPEC M S <-sam> <dem> @P<
+$,
+são	 [ser] V PR 3P IND VFIN <fmc> @FMV
+todos	 [todo] DET M P <quant> @<PRED
+amigos	 [amigo] N M P @<SC
+$.	 [$.] PU <<<
+$¶	 [$¶] PU <<<
+</s>
+<s>
+Os	 [o] DET M P <artd> <*1> @>N
+nossos	 [nosso] DET M P <poss 1P> @>N
+métodos	 [método] N M P @SUBJ>
+de	 [de] PRP @N<
+trabalho	 [trabalho] N M S @P<
+são	 [ser] V PR 3P IND VFIN <fmc> @FMV
+quase	 [quase] ADV <quant> @>A
+iguais	 [igual] ADJ M P @<SC
+$,
+usamos	 [usar] V PR 1P IND VFIN <fmc> @FMV
+os	 [o] DET M P <artd> @>N
+mesmos	 [mesmo] DET M P <KOMP> <diff> @>N
+programas=de=computador	 [programa=de=computador] N M P @<ACC
+$,
+mas	 [mas] <co-fmc> <co-vfin> KC @CO
+$,
+é	 [ser] V PR 3S IND VFIN <fmc> @FMV
+claro	 [claro] ADJ M S @<SC
+$,
+ninguém	 [ninguém] SPEC M S @SUBJ>
+conta	 [contar] V PR 3S IND VFIN <fmc> @FMV
+para	 [para] PRP @<ADVL
+o	 [o] DET M S <artd> @>N
+outro	 [outro] DET M S <KOMP> <diff> @P<
+os	 [o] DET M P <artd> @>N
+resultados	 [resultado] N M P @<ACC
+de	 [de] PRP <sam-> @N<
+o	 [o] DET M S <artd> <-sam> @>N
+seu	 [seu] DET M S <poss 3S> @>N
+trabalho	 [trabalho] N M S @P<
+$.	 [$.] PU <<<
+$¶	 [$¶] PU <<<
+</s>
+<s>
+Aí	 [aí] ADV <kc> @ADVL>
+$,
+é	 [ser] V PR 3S IND VFIN @FMV @#FS-ACC>>
+cada=um	 [cada=um] SPEC M/F S @<SC
+por=si	 [por=si] ADV @<ADVL
+$"	 [$"] PU
+$,
+explica	 [explicar] V PR 3S IND VFIN <fmc> @FMV
+Renato=Lotufo	 [Renato=Lotufo] PROP M S @<SUBJ
+$,
+o	 [o] DET M S <artd> @>N
+calouro	 [calouro] N M S <*2> <*1> @APP
+de	 [de] PRP <sam-> @N<
+o	 [o] DET M S <artd> <-sam> @>N
+grupo	 [grupo] N M S @P<
+$.	 [$.] PU <<<
+$¶	 [$¶] PU <<<
+</s>
+<s>
+Lotufo	 [Lotufo] PROP M/F S @SUBJ>
+estreou	 [estrear] V PS 3S IND VFIN <fmc> <*2> <*1> @FMV
+em	 [em] PRP <sam-> @<ADVL
+o	 [o] DET M S <artd> <-sam> @>N
+Corinthians	 [Corinthians] PROP M S @P<
+em	 [em] PRP @<ADVL
+março	 [março] N M S @P<
+$,
+dentro=de	 [dentro=de] PRP <sam-> @<ADVL
+o	 [o] DET M S <-sam> <artd> @>N
+projeto	 [projeto] N M S @P<
+de	 [de] PRP @N<
+modernização	 [modernização] N F S @P<
+de	 [de] PRP <sam-> @N<
+o	 [o] DET M S <artd> <-sam> @>N
+departamento	 [departamento] N M S @P<
+de	 [de] PRP @N<
+futebol	 [futebol] N M S @P<
+implantado	 [implantar] V PCP M S @IMV @#ICL-N<
+por	 [por] PRP <sam-> @<PASS
+a	 [o] DET F S <artd> <-sam> @>N
+diretoria	 [diretoria] N F S @P<
+recém-eleita	 [recém-eleger] V PCP F S @N<
+$.	 [$.] PU <<<
+$¶	 [$¶] PU <<<
+</s>
+<s>
+Leite=de=Barros	 [Leite=de=Barros] PROP F S @SUBJ>
+é	 [ser] V PR 3S IND VFIN <fmc> @FMV
+uma	 [um] DET F S <arti> @>N
+espécie	 [espécie] N F S @<SC
+de	 [de] PRP @N<
+líder	 [líder] N M S @P<
+de	 [de] PRP <sam-> @N<
+o	 [o] DET M S <artd> <-sam> @>N
+grupo	 [grupo] N M S @P<
+$.	 [$.] PU <<<
+$¶	 [$¶] PU <<<
+</s>
+<s>
+Foi	 [ser] V PS 3S IND VFIN <fmc> @FMV
+o	 [o] DET M S <artd> @>N
+primeiro	 [primeiro] <n> <n> ADJ M S <NUM-ord> @<SC
+a	 [a] PRP @N<
+se	 [se] PERS M/F 3S ACC <refl> @ACC>
+especializar	 [especializar] V INF @IMV @#ICL-P<
+em	 [em] PRP @<PIV
+fisiologia	 [fisiologia] N F S @P<
+de	 [de] PRP <sam-> @N<
+o	 [o] DET M S <artd> <-sam> @>N
+exercício	 [exercício] N M S @P<
+$,
+a	 [o] DET F S <artd> @>N
+área	 [área] N F S @APP
+que	 [que] SPEC M/F S @SUBJ> <rel> @#FS-N<
+estuda	 [estudar] V PR 3S IND VFIN @FMV
+a	 [o] DET F S <artd> @>N
+influência	 [influência] N F S @<ACC
+de	 [de] PRP <sam-> @N<
+os	 [o] DET M P <artd> <-sam> @>N
+exercícios	 [exercício] N M P @P<
+sobre	 [sobre] PRP @<ADVL
+a	 [o] DET F S <artd> @>N
+atividade	 [atividade] N F S @P<
+cárdio- ALT cardio	 [cardio] EC @PREF
+respiratória	 [respiratório] ADJ F S @N<
+e	 [e] KC @CO
+muscular	 [muscular] ADJ M/F S @N<
+$.	 [$.] PU <<<
+$¶	 [$¶] PU <<<
+</s>
+<s>
+Também	 [também] ADV @ADVL>
+foi	 [ser] V PS 3S IND VFIN <fmc> @FMV
+o	 [o] DET M S <artd> @>N
+primeiro	 [primeiro] <n> <n> ADJ M S <NUM-ord> @<SC
+a	 [a] PRP @N<
+ser	 [ser] V INF @IAUX @#ICL-P<
+contratado	 [contratar] V PCP M S @IMV @#ICL-AUX<
+por	 [por] PRP @<PASS
+um	 [um] DET M S <arti> @>N
+clube	 [clube] N M S @P<
+$.	 [$.] PU <<<
+$¶	 [$¶] PU <<<
+</s>
+<s>
+Foi	 [ir] V PS 3S IND VFIN <fmc> @FMV
+para	 [para] PRP @<ADVS
+o	 [o] DET M S <artd> @>N
+São=Paulo	 [São=Paulo] PROP M S @P<
+em	 [em] PRP @<ADVL
+1986	 [1986] NUM M/F S <card> @P<
+$,
+quando	 [quando] ADV @ADVL> <ks> <rel> @#FS-N<
+o	 [o] DET M S <artd> @>N
+técnico	 [técnico] N M S @SUBJ>
+era	 [ser] V IMPF 3S IND VFIN @FMV
+Cilinho	 [Cilinho] PROP M S @<SC
+$.	 [$.] PU <<<
+$¶	 [$¶] PU <<<
+</s>
+<s>
+Zogaib	 [Zogaib] PROP M/F S @SUBJ>
+e	 [e] KC @CO
+Piçarro	 [Piçarro] PROP M/F S @SUBJ>
+estrearam	 [estrear] V PS/MQP 3P IND VFIN <fmc> @FMV
+em	 [em] PRP @<ADVL
+fevereiro	 [fevereiro] N M S @P<
+em	 [em] PRP <sam-> @<ADVL
+o	 [o] DET M S <artd> <-sam> @>N
+Palmeiras	 [palmeira] <prop> N F P @P<
+$.	 [$.] PU <<<
+$¶	 [$¶] PU <<<
+</s>
+<s>
+Turíbio=Leite	 [Turíbio=Leite] PROP M S @VOK @SUBJ>
+$,
+Zogaib	 [Zogaib] PROP M/F S @SUBJ>
+e	 [e] KC @CO
+Lotufo	 [Lotufo] PROP M/F S @SUBJ>
+fazem	 [fazer] V PR 3P IND VFIN <fmc> @FMV
+em	 [em] PRP <sam-> @<ADVL
+as	 [o] DET F P <artd> <-sam> @>N
+duas	 [dois] NUM F P <card> @>N
+academias	 [academia] N F P @P<
+o	 [o] DET M S <artd> @>N
+mesmo	 [mesmo] DET M S <KOMP> <diff> @>N
+trabalho	 [trabalho] N M S @<ACC
+que	 [que] SPEC M/F S @ACC> <rel> @#FS-N<
+realizam	 [realizar] V PR 3P IND VFIN @FMV
+em	 [em] PRP <sam-> @<ADVL
+o	 [o] DET M S <artd> <-sam> @>N
+São=Paulo	 [São=Paulo] PROP M S @P<
+$,
+Palmeiras	 [palmeira] N F P @<ACC
+e	 [e] KC @CO
+Corinthians	 [Corinthians] PROP M/F S @<ACC
+$.	 [$.] PU <<<
+$¶	 [$¶] PU <<<
+</s>
+<s>
+Entre	 [entre] PRP @ADVL>
+seus	 [seu] DET M P <si> <poss 3S> @>N
+clientes	 [cliente] N M P @P<
+$,
+estão	 [estar] V PR 3P IND VFIN <fmc> @FMV
+ou	 [ou] <co-vfin> KC @CO
+estiveram	 [estar] V PS/MQP 3P IND VFIN <fmc> @FMV
+times	 [time] N M P @<SC
+inteiros	 [inteiro] ADJ M P @N<
+de	 [de] PRP @N<
+futebol	 [futebol] N M S @P<
+$,
+vôlei	 [vôlei] N M S @P<
+e	 [e] KC @CO
+basquete	 [basquete] N M S @P<
+$,
+automobilistas	 [automobilista] ADJ M/F P @N<PRED
+e	 [e] KC @CO
+tenistas	 [tenista] <n> ADJ M/F P @<SC
+de	 [de] PRP @N<
+ponta	 [ponta] N F S @P<
+$,
+entre	 [entre] PRP @<ADVL
+outros	 [outro] DET M P <KOMP> <diff> @P<
+$.	 [$.] PU <<<
+$¶	 [$¶] PU <<<
+</s>
+<s>
+Ivan=Piçarro	 [Ivan=Piçarro] PROP M S @SUBJ>
+foi	 [ser] V PS 3S IND VFIN <fmc> @FMV
+o	 [o] DET M S <artd> @>N
+único	 [único] <n> ADJ M S @<SC
+que	 [que] SPEC M/F S @SUBJ> <rel> @#FS-N<
+não	 [não] ADV @ADVL>
+abandonou	 [abandonar] V PS 3S IND VFIN @FMV
+a	 [o] DET F S <artd> @>N
+pesquisa	 [pesquisa] N F S @<ACC
+acadêmica	 [acadêmico] ADJ F S @N<
+$.	 [$.] PU <<<
+$¶	 [$¶] PU <<<
+</s>
+<s>
+Ele	 [ele] PERS M 3S NOM @SUBJ>
+é	 [ser] V PR 3S IND VFIN <fmc> @FMV
+o	 [o] DET M S <artd> @>N
+chefe	 [chefe] N M S @<SC
+de	 [de] PRP <sam-> @N<
+o	 [o] DET M S <artd> <-sam> @>N
+laboratório	 [laboratório] N M S @P<
+de	 [de] PRP @N<
+Fisiologia=do=Exercício=Experimental	 [Fisiologia=do=Exercício=Experimental] PROP F S @P<
+de	 [de] PRP <sam-> @N<
+a	 [o] DET F S <artd> <-sam> @>N
+EPM	 [EPM] PROP F S @P<
+$.	 [$.] PU <<<
+$¶	 [$¶] PU <<<
+</s>
+<s>
+Ele	 [ele] PERS M 3S NOM @SUBJ>
+faz	 [fazer] V PR 3S IND VFIN <fmc> @FMV
+com	 [com] PRP @<ADVL
+animais	 [animal] N M P @P<
+$,
+especialmente	 [especialmente] ADV @<ADVL
+ratos	 [rato] N M P @N<PRED
+$,
+testes	 [teste] N M P @<ACC
+físicos	 [físico] ADJ M P @N<
+que	 [que] KS @SUB @#FS-<ACC
+podem	 [poder] V PR 3P IND VFIN @FAUX
+em	 [em] PRP <sam-> @ADVL>
+o	 [o] DET M S <artd> <-sam> @>N
+futuro	 [futuro] N M S @P<
+servir	 [servir] V INF @IMV @#ICL-AUX<
+de	 [de] PRP @<SC
+base	 [base] N F S @P<
+para	 [para] PRP @<ADVL
+ampliar	 [ampliar] V INF @IMV @#ICL-P<
+o	 [o] DET M S <artd> @>N
+conhecimento	 [conhecimento] N M S @<ACC
+em	 [em] PRP @<ADVL
+seres=humanos	 [ser=humano] N M P @P<
+$,
+atletas	 [atleta] N M/F P @N<PRED
+ou	 [ou] KC @CO
+não	 [não] ADV @<ADVL
+$.	 [$.] PU <<<
+$¶	 [$¶] PU <<<
+</s>
+<s>
+O	 [o] DET M S <artd> @>N
+início	 [início] N M S @SUBJ>
+de	 [de] PRP <sam-> @N<
+o	 [o] DET M S <artd> <-sam> @>N
+trabalho	 [trabalho] N M S @P<
+de	 [de] PRP <sam-> @N<
+o	 [o] DET M S <artd> <-sam> @>N
+grupo	 [grupo] N M S @P<
+começou	 [começar] V PS 3S IND VFIN <fmc> @FMV
+em	 [em] PRP @<ADVL
+1976	 [1976] NUM M/F S <card> @P<
+$,
+com	 [com] PRP @N<PRED @<ADVL
+o	 [o] DET M S <artd> @>N
+próprio	 [próprio] DET M S <ident> @>N
+São=Paulo	 [São=Paulo] PROP M S @P<
+$.	 [$.] PU <<<
+$¶	 [$¶] PU <<<
+</s>
+<s>
+Em	 [em] PRP <sam-> @ADVL>
+o	 [o] DET M S <artd> <-sam> @>N
+ano	 [ano] N M S @P<
+seguinte	 [seguinte] ADJ M S @N<
+$,
+Ivan=Piçarro	 [Ivan=Piçarro] PROP M S @SUBJ>
+defendeu	 [defender] V PS 3S IND VFIN <fmc> @FMV
+uma	 [um] DET F S <arti> @>N
+tese	 [tese] N F S @<ACC
+de	 [de] PRP @N<
+mestrado	 [mestrado] N M S @P<
+$,
+orientado	 [orientar] V PCP M S @IMV @#ICL-N<PRED
+por	 [por] PRP @<PASS
+Leite=de=Barros	 [Leite=de=Barros] PROP M/F S @P<
+$,
+com	 [com] PRP @N<PRED
+base	 [base] N F S @P<
+em	 [em] PRP <sam-> @<ADVL
+esse	 [esse] DET M S <dem> <-sam> @>N
+trabalho	 [trabalho] N M S @P<
+com	 [com] PRP @N<PRED @<ADVL
+os	 [o] DET M P <artd> @>N
+jogadores	 [jogador] N M P @P<
+são-paulinos	 [são-paulino] ADJ M P @N<
+$.	 [$.] PU <<<
+$¶	 [$¶] PU <<<
+</s>
+<s>
+Em	 [em] PRP <sam-> @ADVL>
+a	 [o] DET F S <artd> <-sam> @>N
+Escola=Paulista=de=Medicina	 [Escola=Paulista=de=Medicina] PROP F S @P<
+$,
+o	 [o] DET M S <artd> @>N
+grupo	 [grupo] N M S @SUBJ>
+fez	 [fazer] V PS 3S IND VFIN <fmc> @FMV
+trabalhos	 [trabalho] N M P @<ACC
+pioneiros	 [pioneiro] N M P @PRED>
+em	 [em] PRP <sam-> @N<
+o	 [o] DET M S <artd> <-sam> @>N
+futebol	 [futebol] N M S @P<
+$.	 [$.] PU <<<
+$¶	 [$¶] PU <<<
+</s>
+<s>
+O	 [o] DET M S <artd> @>N
+Projeto=Bolívia	 [Projeto=Bolívia] PROP M S @SUBJ>
+$,
+idealizado	 [idealizar] V PCP M S @IMV @#ICL-N<PRED
+por	 [por] PRP <sam-> @<PASS
+o	 [o] DET M S <artd> <-sam> @>N
+São=Paulo	 [São=Paulo] PROP M S @P<
+para	 [para] PRP @ADVL>
+jogar	 [jogar] V INF @IMV @#ICL-P<
+em	 [em] PRP <sam-> @<ADVO
+a	 [o] DET F S <artd> <-sam> @>N
+Taça=Libertadores=da=América	 [Taça=Libertadores=da=América] PROP F S @P<
+de	 [de] PRP <sam-> @N<
+o	 [o] DET M S <artd> <-sam> @>N
+ano	 [ano] N M S @P<
+passado	 [passado] ADJ M S @N<
+$,
+teve	 [ter] V PS 3S IND VFIN <fmc> @FMV
+como	 [como] ADV @#AS-<OC <rel> @PRD
+semente	 [semente] N F S @AS<
+um	 [um] DET M S <arti> @>N
+trabalho	 [trabalho] N M S @<ACC
+de	 [de] PRP @N<
+adaptação	 [adaptação] N F S @P<
+a	 [a] PRP <sam-> @N<
+a	 [o] DET F S <artd> <-sam> @>N
+altitude	 [altitude] N F S @P<
+coordenado	 [coordenar] V PCP M S @IMV @#ICL-N<
+por	 [por] PRP <sam-> @<PASS
+o	 [o] DET M S <artd> <-sam> @>N
+próprio	 [próprio] DET M S <ident> @>N
+Turíbio	 [Turíbio] PROP M S @P<
+em	 [em] PRP <sam-> @<ADVL
+a	 [o] DET F S <artd> <-sam> @>N
+EPM	 [EPM] PROP F S @P<
+$.	 [$.] PU <<<
+$¶	 [$¶] PU <<<
+</s>
+<s>
+O	 [o] DET M S <artd> @>N
+cliente	 [cliente] N M S @SUBJ>
+era	 [ser] V IMPF 3S IND VFIN <fmc> @FMV
+uma	 [um] DET F S <arti> @>N
+equipe	 [equipe] N F S @<SC
+treinada	 [treinar] V PCP F S @N<
+por	 [por] PRP @<ADVL
+Telê=Santana	 [Telê=Santana] PROP M S @P<
+$,
+hoje	 [hoje] ADV @<ADVL
+em	 [em] PRP <sam-> @<ADVL
+o	 [o] DET M S <artd> <-sam> @>N
+São=Paulo	 [São=Paulo] PROP M S @P<
+$:	 [$:] PU <<<
+a	 [o] DET F S <artd> @>N
+seleção	 [seleção] N F S @NPHR
+brasileira	 [brasileiro] ADJ F S @N<
+que	 [que] SPEC M/F S @SUBJ> <rel> @#FS-N<
+ia	 [ir] V IMPF 3S IND VFIN @FAUX
+disputar	 [disputar] V INF @IMV @#ICL-AUX<
+a	 [o] DET F S <artd> @>N
+Copa=do=Mundo=do=México	 [Copa=do=Mundo=do=México] PROP F S @<ACC
+$,
+em	 [em] PRP @<ADVL
+1986	 [1986] NUM M/F S <card> @P<
+$.	 [$.] PU <<<
+$¶	 [$¶] PU <<<
+</s>
+<s>
+Um	 [um] NUM M S <card> @SUBJ>
+de	 [de] PRP <sam-> @N<
+os	 [o] DET M P <artd> <-sam> @>N
+objetivos	 [objetivo] N M P @P<
+de	 [de] PRP <sam-> @N<
+esse	 [esse] DET M S <dem> <-sam> @>N
+projeto	 [projeto] N M S @P<
+era	 [ser] V IMPF 3S IND VFIN <fmc> @FMV
+ver	 [ver] V INF @IMV @#ICL-<SC
+como	 [como] ADV @ADVL> <interr> @#FS-<ACC
+cada	 [cada] DET M S <quant> @>N
+jogador	 [jogador] N M S @SUBJ>
+de	 [de] PRP <sam-> @N<
+a	 [o] DET F S <artd> <-sam> @>N
+seleção	 [seleção] N F S @P<
+se	 [se] PERS M/F 3S ACC <refl> @ACC>
+comportaria	 [comportar] V COND 3S VFIN @FMV
+com	 [com] PRP @<ADVL
+a	 [o] DET F S <artd> @>N
+sensação	 [sensação] N F S @P<
+de	 [de] PRP @N<
+falta	 [falta] N F S @P<
+de	 [de] PRP @N<
+ar	 [ar] N M S @P<
+que	 [que] SPEC M/F S @ACC> <rel> @#FS-N<
+eles	 [eles] PERS M 3P NOM @SUBJ>
+enfrentariam	 [enfrentar] V COND 3P VFIN @FMV
+em	 [em] PRP <sam-> @<ADVL
+a	 [o] DET F S <artd> <-sam> @>N
+Cidade=do=México	 [Cidade=do=México] PROP F S @P<
+$,
+a=mais=de	 [a=mais=de] PRP @<ADVL
+2.000	 [2.000] NUM M P <card> @>N
+m	 [m] N M S @P<
+de	 [de] PRP @N<
+altitude	 [altitude] N F S @P<
+$.	 [$.] PU <<<
+$¶	 [$¶] PU <<<
+</s>
+<s>
+Em	 [em] PRP <sam-> @ADVL>
+o	 [o] DET M S <artd> <-sam> @>N
+teste	 [teste] N M S @P<
+de	 [de] PRP @N<
+São=Paulo	 [São=Paulo] PROP M S @P<
+$,
+a	 [o] DET F S <artd> @>N
+solução	 [solução] N F S @SUBJ>
+foi	 [ser] V PS 3S IND VFIN <fmc> @FMV
+criar	 [criar] V INF @IMV @#ICL-<SC
+uma	 [um] DET F S <arti> @>N
+mistura	 [mistura] N F S @<ACC
+mais	 [mais] ADV <KOMP> <quant> @>A
+pobre	 [pobre] ADJ M/F S @N<PRED
+em	 [em] PRP @<PIV
+oxigênio	 [oxigênio] N M S @P<
+$	 [$] PU
+o	 [o] DET M S <artd> @>N
+nitrogênio	 [nitrogênio] N M S @SUBJ>
+$,
+por	 [por] PRP @<ADVL
+ser	 [ser] V INF @IMV @#ICL-P<
+inerte	 [inerte] ADJ M S @<SC
+$,
+não	 [não] ADV @ADVL>
+é	 [ser] V PR 3S IND VFIN <fmc> @FAUX
+percebido	 [perceber] V PCP M S @IMV <*2> <*1> @#ICL-AUX<
+por	 [por] PRP <sam-> @<PASS
+o	 [o] DET M S <artd> <-sam> @>N
+aparelho	 [aparelho] N M S @P<
+respiratório	 [respiratório] ADJ M S @N<
+humano	 [humano] ADJ M S @N<
+$.	 [$.] PU <<<
+$¶	 [$¶] PU <<<
+</s>
+<s>
+Um	 [um] NUM M S <card> @SUBJ>
+de	 [de] PRP <sam-> @N<
+os	 [o] DET M P <artd> <-sam> @>N
+cobaias	 [cobaia] N F P <*2> <*1> @P<
+de	 [de] PRP <sam-> @N<
+o	 [o] DET M S <artd> <-sam> @>N
+projeto	 [projeto] N M S @P<
+foi	 [ser] V PS 3S IND VFIN <fmc> @FMV
+Zogaib	 [Zogaib] PROP M S @<SC
+$.	 [$.] PU <<<
+$¶	 [$¶] PU <<<
+</s>
+<s>
+É	 [ser] V PR 3S IND VFIN <fmc> <*1> @FMV
+$,
+em	 [em] PRP <sam-> @ADVL>
+a	 [o] DET F S <artd> <-sam> @>N
+época	 [época] N F S @P<
+eu	 [eu] PERS M 1S NOM @SUBJ>
+era	 [ser] V IMPF 1S IND VFIN <fmc> @FMV
+aluno	 [aluno] N M S @<SC
+de	 [de] PRP @N<
+pós-graduação	 [pós-graduação] N F S <*2> @P<
+$,
+diz	 [dizer] V PR 3S IND VFIN <fmc> @FMV
+brincando	 [brincar] V GER @IMV @#ICL-<ADVL @#ICL-N<
+$.	 [$.] PU <<<
+$¶	 [$¶] PU <<<
+</s>
+</TEXT>
+$¶	 [$¶] PU <<<
+</DOC>

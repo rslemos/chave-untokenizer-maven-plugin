@@ -1,0 +1,435 @@
+<DOC>
+<DOCNO.valor=FSP940101-119>
+<DOCID.valor=FSP940101-119>
+<DATE.valor=940101>
+<TEXT>
+<s>
+Terceiro	 [terceiro] ADJ M S <NUM-ord> @>N
+livro	 [livro] N M S @SUBJ>
+de	 [de] PRP @N<
+Turow	 [Turow] PROP M/F S @P<
+não	 [não] ADV @ADVL>
+convence	 [convencer] V PR 3S IND VFIN <fmc> @FMV
+$¶	 [$¶] PU <<<
+</s>
+<s>
+Da=Reportagem=Local	 [Da=Reportagem=Local] PROP F S @NPHR
+$¶	 [$¶] PU <<<
+</s>
+<s>
+Scott=Turow	 [Scott=Turow] PROP M/F S @SUBJ>
+tem	 [ter] V PR 3S IND VFIN <fmc> @FMV
+pelo=menos	 [pelo=menos] ADV <quant> @>N
+uma	 [um] DET F S <arti> @>N
+virtude	 [virtude] N F S @<ACC
+$:	 [$:] PU <<<
+muda	 [mudar] V PR 3S IND VFIN <fmc> @FMV
+um=pouco	 [um=pouco] ADV <quant> @<ADVL
+a	 [o] DET F S <artd> @>N
+geografia	 [geografia] N F S @<ACC
+comum	 [comum] ADJ F S @N<
+de	 [de] PRP <sam-> @N<
+os	 [o] DET M P <artd> <-sam> @>N
+livros	 [livro] N M P @P<
+norte-americanos	 [norte-americano] ADJ M P @N<
+$.	 [$.] PU <<<
+$¶	 [$¶] PU <<<
+</s>
+<s>
+Em	 [em] PRP @ADVL>
+Declarando-se=Culpado	 [Declarando-se=Culpado] PROP M S <*2> <*1> @P<
+$(	 [$(] PU
+lançado	 [lançar] V PCP M S @IMV @#ICL-N<PRED
+por	 [por] PRP <sam-> @<PASS
+a	 [o] DET F S <artd> <-sam> @>N
+Record	 [record] <prop> N M S @P<
+$)	 [$)] PU
+$,
+de=novo	 [de=novo] ADV @ADVL>
+$,
+a	 [o] DET F S <artd> @>N
+história	 [história] N F S @SUBJ>
+acontece	 [acontecer] V PR 3S IND VFIN <fmc> @FMV
+em	 [em] PRP @<ADVL
+Chicago	 [Chicago] PROP M S @P<
+$.	 [$.] PU <<<
+$¶	 [$¶] PU <<<
+</s>
+<s>
+Basta	 [bastar] V PR 3S IND VFIN <fmc> @FMV
+de	 [de] PRP @<ADVL
+Nova=York	 [Nova=York] PROP F S @P<
+e	 [e] KC @CO
+sua	 [seu] DET F S <poss 3S> @>N
+estranha	 [estranho] ADJ F S @>N
+mistura	 [mistura] N F S @PRED>
+de	 [de] PRP @N<
+raças	 [raça] N F P @P<
+$.	 [$.] PU <<<
+$¶	 [$¶] PU <<<
+</s>
+<s>
+Em	 [em] PRP @ADVL>
+Chicago	 [Chicago] PROP M S @P<
+$,
+sim	 [sim] ADV @ADVL>
+$,
+estamos	 [estar] V PR 1P IND VFIN <fmc> @FMV
+em	 [em] PRP <sam-> @<ADVS
+os	 [o] DET M P <artd> <-sam> @>N
+Estados=Unidos	 [Estados=Unidos] PROP M P @P<
+$.	 [$.] PU <<<
+$¶	 [$¶] PU <<<
+</s>
+<s>
+É	 [ser] V PR 3S IND VFIN <fmc> @FMV
+verdade	 [verdade] N F S @<SC
+$,
+há	 [haver] V PR 3S IND VFIN <fmc> @FMV
+poloneses	 [polonês] N M P @<ACC
+$,
+italianos	 [italiano] N M P @<ACC
+$,
+judeus	 [judeu] N M P @<ACC
+$,
+alemães	 [alemão] N M P @<ACC
+$.	 [$.] PU <<<
+$¶	 [$¶] PU <<<
+</s>
+<s>
+Mas	 [mas] KC @CO
+todos	 [todo] DET M P @SC> <quant> @SUBJ>
+parecem	 [parecer] V PR 3P IND VFIN <fmc> @FMV
+há	 [haver] V PR 3S IND VFIN <fmc> @FMV
+gerações	 [geração] N F P @<ACC
+imbuídos	 [imbuído] ADJ M P @N<PRED
+de	 [de] PRP <sam-> @A<
+o	 [o] DET M S <artd> <-sam> @>N
+espírito	 [espírito] N M S @P<
+de	 [de] PRP @N<
+fazer	 [fazer] V INF @IMV <*1> @#ICL-P<
+a	 [o] DET F S <artd> @>N
+América	 [América] PROP F S <*2> @<ACC
+$.	 [$.] PU <<<
+$¶	 [$¶] PU <<<
+</s>
+<s>
+Os	 [o] DET M P <artd> @>N
+livros	 [livro] N M P @SUBJ>
+de	 [de] PRP @N<
+Turow	 [Turow] PROP M/F S @P<
+são	 [ser] V PR 3P IND VFIN <fmc> @FMV
+sobre	 [sobre] PRP @<SC
+isso	 [isso] SPEC M S <dem> @P<
+$:	 [$:] PU <<<
+a	 [o] DET F S <artd> @>N
+ambição	 [ambição] N F S @NPHR
+desmedida	 [desmedido] ADJ F S @N<
+$,
+essa	 [esse] DET F S <dem> @>N
+paixão	 [paixão] N F S @NPHR
+que	 [que] SPEC M/F S @ACC> <rel> @#FS-N<
+os	 [o] DET M P <artd> @>N
+Eua	 [Eua] PROP M S @SUBJ>
+encarnam	 [encarnar] V PR 3P IND VFIN @FMV
+com	 [com] PRP @<ADVL
+tanta	 [tanto] DET F S <KOMP> <quant> @>N
+força	 [força] N F S @P<
+$.	 [$.] PU <<<
+$¶	 [$¶] PU <<<
+</s>
+<s>
+Aqui	 [aqui] ADV @ADVL>
+também	 [também] ADV @>N
+o	 [o] DET M S <artd> @>N
+cenário	 [cenário] N M S @SUBJ>
+é	 [ser] V PR 3S IND VFIN <fmc> @FMV
+o	 [o] DET M S <artd> @>N
+mundo	 [mundo] N M S @<SC
+de	 [de] PRP <sam-> @N<
+os	 [o] DET M P <artd> <-sam> @>N
+advogados	 [advogado] N M P @P<
+$.	 [$.] PU <<<
+$¶	 [$¶] PU <<<
+</s>
+<s>
+Como	 [como] ADV @ADVL <prp> <rel> @#AS-ADVL>
+em	 [em] PRP @AS<
+Acima=de=Qualquer=Suspeita	 [Acima=de=Qualquer=Suspeita] PROP M S <*2> <*1> @P<
+e	 [e] KC @CO
+O=Onus=da=Prova	 [O=Onus=da=Prova] PROP M S <*2> <*1> @P<
+$,
+Turow	 [Turow] PROP M/F S @SUBJ>
+trata	 [tratar] V PR 3S IND VFIN <fmc> @FMV
+de	 [de] PRP @<PIV
+advogados	 [advogado] N M P @P<
+e	 [e] KC @CO
+seus	 [seu] DET M P <poss 3S> @>N
+defeitos	 [defeito] N M P @AS<
+$(	 [$(] PU
+e	 [e] KC @CO
+virtudes	 [virtude] N F P @AS<
+$,
+talvez	 [talvez] ADV @<ADVL
+$)	 [$)] PU
+$,
+treinados	 [treinar] V PCP M P @IMV @#ICL-N<PRED
+para=dizer=a=verdade	 [para=dizer=a=verdade] ADV @<ADVL
+sempre	 [sempre] ADV @<ADVL
+$,
+mesmo	 [mesmo] ADV <quant> @<ADVL
+que	 [que] KS @SUB @#FS-A<
+mentindo	 [mentir] V GER @#ICL-<ADVL @IMV
+descaradamente	 [descaradamente] ADV @<ADVL
+$.	 [$.] PU <<<
+$¶	 [$¶] PU <<<
+</s>
+<s>
+Um	 [um] DET M S <arti> @>N
+advogado	 [advogado] N M S @NPHR
+de	 [de] PRP <sam-> @N<
+a	 [o] DET F S <artd> <-sam> @>N
+poderosa	 [poderoso] <n> ADJ F S @P<
+$(	 [$(] PU
+evidentemente	 [evidentemente] ADV @ADVL
+$...	 [$...] PU
+$)	 [$)] PU
+$¶	 [$¶] PU <<<
+</s>
+<s>
+Gage=&=Griswell	 [Gage=&=Griswell] PROP M/F S @SUBJ>
+some	 [sumir] V PR 3S IND VFIN <fmc> @FMV
+com	 [com] PRP @<PIV
+US$	 [US$] PROP M/F S @P<
+5	 [5] NUM M P <card> @>N
+milhões	 [milhão] N M P @PRED>
+e	 [e] KC @CO
+alguns	 [algum] DET M P <quant> @>N
+trocados	 [trocado] N M P @P<
+$.	 [$.] PU <<<
+$¶	 [$¶] PU <<<
+</s>
+<s>
+O	 [o] DET M S <artd> @>N
+dinheiro	 [dinheiro] N M S @SUBJ>
+foi	 [ser] V PS 3S IND VFIN <fmc> @FAUX
+retirado	 [retirar] V PCP M S @IMV @#ICL-AUX<
+de	 [de] PRP <sam-> @<ADVL
+a	 [o] DET F S <artd> <-sam> @>N
+conta	 [conta] N F S @P<
+de	 [de] PRP @N<
+um	 [um] DET M S <arti> @>N
+cliente	 [cliente] N M S @P<
+trasnacional	 [trasnacional] ADJ M S <DERP> @N<
+$,
+um	 [um] DET M S <arti> @>N
+grande	 [grande] ADJ M S @>N
+conclomerado ALT xxxerado	 [conclomerado] N M S <DERS> @N<PRED
+$.	 [$.] PU <<<
+$¶	 [$¶] PU <<<
+</s>
+<s>
+Ninguém	 [ninguém] SPEC M S @SUBJ>
+em	 [em] PRP <sam-> @N<
+a	 [o] DET F S <artd> <-sam> @>N
+firma	 [firma] N F S @P<
+quer	 [querer] V PR 3S IND VFIN <fmc> @FMV
+fazer	 [fazer] V INF @IMV @#ICL-<ACC
+escândalo	 [escândalo] N M S @<ACC
+para	 [para] PRP @<ADVL
+não	 [não] ADV @ADVL>
+pegar	 [pegar] V INF @IMV @#ICL-P<
+mal	 [mal] ADV @<ADVL
+$.	 [$.] PU <<<
+$¶	 [$¶] PU <<<
+</s>
+<s>
+Aí	 [aí] ADV <kc> @ADVL>
+$,
+os	 [o] DET M P <artd> @>N
+sócios	 [sócio] N M P @SUBJ>
+principais	 [principal] ADJ M P <SUP> @N<
+pedem	 [pedir] V PR 3P IND VFIN <fmc> @FMV
+a	 [a] PRP @<PIV
+um	 [um] NUM M S <card> @P<
+de	 [de] PRP <sam-> @N<
+os	 [o] DET M P <artd> <-sam> @>N
+advogados	 [advogado] N M P @P<
+de	 [de] PRP <sam-> @N<
+o	 [o] DET M S <artd> <-sam> @>N
+estúdio	 [estúdio] N M S @P<
+$,
+um	 [um] DET M S <arti> @>N
+ex-policial	 [ex-policial] N M S @N<PRED
+$,
+ex-alcoólatra	 [ex-alcoólatra] N M/F S @N<PRED
+e	 [e] <co-vfin> KC @CO
+ex-quase	 [ex-quase] ADV <quant> @>A
+tudo	 [tudo] SPEC M S <quant> @<ACC
+$,
+McCormack=A.=Malloy	 [McCormack=A.=Malloy] PROP M S @APP
+$,
+que	 [que] KS @SUB @#FS-<ADVL
+descubra	 [descobrir] V PR 3S SUBJ VFIN @FMV
+o	 [o] DET M S <artd> @>N
+paradeiro	 [paradeiro] N M S @<ACC
+de	 [de] PRP <sam-> @N<
+o	 [o] DET M S <artd> <-sam> @>N
+ladrão	 [ladrão] N M S @P<
+$,
+palavra	 [palavra] N F S @N<PRED
+que	 [que] SPEC M/F S @ACC> <rel> @#FS-N<
+ninguém	 [ninguém] SPEC M S @SUBJ>
+usa	 [usar] V PR 3S IND VFIN @FMV
+$.	 [$.] PU <<<
+$¶	 [$¶] PU <<<
+</s>
+<s>
+Ele	 [ele] PERS M 3S NOM @SUBJ>
+acaba	 [acabar] V PR 3S IND VFIN <fmc> @FAUX
+descobrindo	 [descobrir] V GER @#ICL-AUX< @IMV
+que	 [que] KS @SUB @#FS-<ACC
+a	 [o] DET F S <artd> @>N
+história	 [história] N F S @SUBJ>
+não	 [não] ADV @ADVL>
+é	 [ser] V PR 3S IND VFIN @FMV
+tão	 [tão] ADV <quant> <dem> @>A
+simples	 [simples] ADJ F S @<SC
+$.	 [$.] PU <<<
+$¶	 [$¶] PU <<<
+</s>
+<s>
+Em	 [em] PRP <sam-> @ADVL>
+o	 [o] DET M S <artd> <-sam> @>N
+fim	 [fim] N M S @P<
+$,
+o	 [o] DET M S <artd> @>N
+sistema	 [sistema] N M S @SUBJ>
+continua	 [continuar] V PR 3S IND VFIN <fmc> @FMV
+$,
+e	 [e] <co-fmc> <co-vfin> KC @CO
+não	 [não] ADV @ADVL>
+se	 [se] PERS M/F 3S ACC @SUBJ>
+fala	 [falar] V PR 3S IND VFIN <fmc> @FMV
+mais	 [mais] ADV <kc> @<ADVL
+em	 [em] PRP <sam-> @<PIV
+isso	 [isso] SPEC M S <dem> <-sam> @P<
+$.	 [$.] PU <<<
+$¶	 [$¶] PU <<<
+</s>
+<s>
+Turow	 [Turow] PROP M/F S @SUBJ>
+desta=vez	 [desta=vez] ADV @ADVL>
+errou	 [errar] V PS 3S IND VFIN <fmc> @FMV
+a	 [o] DET F S <artd> @>N
+medida	 [medida] N F S @<ACC
+$.	 [$.] PU <<<
+$¶	 [$¶] PU <<<
+</s>
+<s>
+Acima	 [acima] ADV <*1> @ADVL>
+$...	 [$...] PU
+$"	 [$"] PU
+era	 [ser] V IMPF 1/3S IND VFIN <fmc> @FMV
+um	 [um] DET M S <arti> @>N
+bom	 [bom] ADJ M S @>N
+thriller	 [thriller] N M S @<SC
+e	 [e] <co-fmc> <co-vfin> KC @CO
+O=Onus...>	 [O=Onus... PROP M S <*1> @<SC
+$'	 [$'] PU
+até	 [até] PRP @<ADVL
+que	 [que] KS @SUB @#FS-P<
+não	 [não] ADV @ADVL>
+ía ALT ia	 [ir] V IMPF 1/3S IND VFIN @FMV
+tão	 [tão] ADV <quant> <dem> @<ADVL
+mal	 [mal] ADV @<ADVL
+em	 [em] PRP @<PIV
+tentar	 [tentar] V INF @IMV @#ICL-P<
+desvendar	 [desvendar] V INF @IMV @#ICL-<ACC
+a	 [o] DET F S <artd> @>N
+psicologia	 [psicologia] N F S @<ACC
+de	 [de] PRP <sam-> @N<
+os	 [o] DET M P <artd> <-sam> @>N
+personagens	 [personagem] N M P @P<
+$,
+mas	 [mas] <co-fmc> <co-vfin> KC @CO
+Declarando-se=Culpado	 [Declarando-se=Culpado] PROP M S <*2> <*1> @<ACC
+acaba	 [acabar] V PR 3S IND VFIN <fmc> @FAUX
+virando	 [virar] V GER @#ICL-AUX< @IMV
+uma	 [um] DET F S <arti> @>N
+confusão	 [confusão] N F S @<SC
+$,
+onde	 [onde] ADV @#AS-<ADVL <rel> @ADVL>
+os	 [o] DET M P <artd> @>N
+nomes	 [nome] N M P @AS<
+de	 [de] PRP @N<
+clientes	 [cliente] N M/F P @P<
+$,
+números	 [número] N M P @<SC @P< @N<PRED @SUBJ>
+de	 [de] PRP @N<
+contas	 [conta] N F P @P<
+e	 [e] <co-fmc> <co-vfin> KC @CO
+quantias	 [quantia] N F P @P<
+milionárias	 [milionário] ADJ F P @N<
+são	 [ser] V PR 3P IND VFIN <fmc> @FMV
+mais	 [mais] ADV <KOMP> <quant> @>A
+importantes	 [importante] ADJ M P @<SC
+do=que	 [do=que] KS @COM @#AS-KOMP<
+qualquer	 [qualquer] DET F S <quant> @>N
+coisa	 [coisa] N F S @AS<
+$.	 [$.] PU <<<
+$¶	 [$¶] PU <<<
+</s>
+<s>
+É	 [ser] V PR 3S IND VFIN <fmc> @FMV
+capaambém ALT xxx	 [capaambém] N M S @<SC
+vire	 [virar] V PR 1/3S SUBJ VFIN <fmc> @FMV
+filme	 [filme] N M S @<ACC
+$.	 [$.] PU <<<
+$¶	 [$¶] PU <<<
+</s>
+<s>
+Mas	 [mas] KC @CO
+não	 [não] ADV @ADVL>
+vai	 [ir] V PR 3S IND VFIN <fmc> @FAUX
+ser	 [ser] V INF @IMV @#ICL-AUX<
+fácil	 [fácil] ADJ M/F S @<SC
+$.	 [$.] PU <<<
+$¶	 [$¶] PU <<<
+</s>
+<s>
+$(	 [$(] PU
+Marco=Chiaretti	 [Marco=Chiaretti] PROP M S @NPHR
+$)	 [$)] PU
+$¶	 [$¶] PU <<<
+</s>
+<s>now
+Título	 [título] N M S @NPHR
+$:	 [$:] PU <<<
+Declarando-	 [declarar] V GER @#ICL-ADVL <hyfen> @IMV
+se	 [se] PERS M/F 3S ACC <obj> @<ACC
+Culpado	 [culpado] <prop> ADJ M S @<OC
+$¶	 [$¶] PU <<<
+</s>
+<s>
+Autor	 [autor] N M S @NPHR
+$:	 [$:] PU <<<
+Scott=Turow	 [Scott=Turow] PROP M/F S @NPHR
+$¶	 [$¶] PU <<<
+</s>
+<s>
+Editora	 [editora] N F S @NPHR
+$:	 [$:] PU <<<
+Record	 [record] N M S @NPHR
+$¶	 [$¶] PU <<<
+</s>
+<s>
+Quanto	 [quanto] DET M S <quant> <interr> @SC>
+$:	 [$:] PU <<<
+Cr$	 [cr$] N M S @NPHR
+7.371,00	 [7.371,00] NUM M/F P <card> @N<
+$¶	 [$¶] PU <<<
+</s>
+</TEXT>
+$¶	 [$¶] PU <<<
+</DOC>

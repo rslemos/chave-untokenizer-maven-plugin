@@ -1,0 +1,497 @@
+<DOC>
+<DOCNO.valor=FSP940101-027>
+<DOCID.valor=FSP940101-027>
+<DATE.valor=940101>
+<TEXT>
+<s>
+Da=Agência=Folha	 [Da=Agência=Folha] PROP F S @NPHR
+$,
+em	 [em] PRP @ADVL
+Monteiro	 [Monteiro] PROP M S @P<
+$¶	 [$¶] PU <<<
+</s>
+<s>
+Jailson=da=Silva	 [Jailson=da=Silva] PROP M S @SUBJ>
+tem	 [ter] V PR 3S IND VFIN <fmc> @FMV
+7	 [7] NUM M P <card> @>N
+anos	 [ano] N M P @<ACC
+$,
+menos=de	 [menos=de] ADV <quant> @>A
+um	 [um] NUM M S <card> @>N
+metro	 [metro] N M S @ADVS>
+de	 [de] PRP @N<
+altura	 [altura] N F S @P<
+e	 [e] <co-fmc> <co-vfin> KC @CO
+pesa	 [pesar] V PR 3S IND VFIN <fmc> @FMV
+13	 [13] NUM M P <card> @>N
+quilos	 [quilo] N M P @<ADVS
+$.	 [$.] PU <<<
+$¶	 [$¶] PU <<<
+</s>
+<s>
+Ele	 [ele] PERS M 3S NOM @SUBJ>
+e	 [e] KC @CO
+o	 [o] DET M S <artd> @>N
+irmão	 [irmão] N M S @SUBJ>
+Genilson	 [Genilson] PROP M S @N<
+$,
+8	 [8] NUM M/F P <card> @SUBJ>
+$,
+passam	 [passar] V PR 3P IND VFIN <fmc> @FMV
+o	 [o] DET M S <artd> @>N
+dia	 [dia] N M S @<ACC
+dormindo	 [dormir] V GER @#ICL-<ADVL @IMV
+para	 [para] PRP <*1> @<ADVL
+não	 [não] ADV @ADVL>
+sentir	 [sentir] V INF @IMV @#ICL-P<
+fome	 [fome] N F S <*2> @<ACC
+$,
+segundo	 [segundo] ADV @#AS-<ADVL <prp> <rel> @COM
+a	 [o] DET F S <artd> @>N
+mãe	 [mãe] N F S @AS<
+$,
+Maria=José=da=Silva	 [Maria=José=da=Silva] PROP F S @APP
+$,
+44	 [44] NUM M/F P <card> @<ACC
+$.	 [$.] PU <<<
+$¶	 [$¶] PU <<<
+</s>
+<s>
+Os	 [o] DET M P <artd> @>N
+dois	 [dois] NUM M P <card> @SUBJ>
+falam	 [falar] V PR 3P IND VFIN <fmc> @FMV
+com	 [com] PRP @<PIV
+dificuldade	 [dificuldade] N F S @P<
+e	 [e] <co-fmc> <co-vfin> KC @CO
+mal	 [mal] ADV @ADVL>
+se	 [se] PERS M/F 3S ACC <refl> @ACC>
+sustentam	 [sustentar] V PR 3P IND VFIN <fmc> @FMV
+de=pé	 [de=pé] ADV @<ADVL
+$.	 [$.] PU <<<
+$¶	 [$¶] PU <<<
+</s>
+<s>
+Maria=José	 [Maria=José] PROP F S @SUBJ>
+mora	 [morar] V PR 3S IND VFIN <fmc> @FMV
+em	 [em] PRP @<ADVS
+uma	 [um] DET F S <arti> @>N
+casa	 [casa] N F S @P<
+de	 [de] PRP @N<
+taipa	 [taipa] N F S @P<
+com	 [com] PRP @<ADVL
+dois	 [dois] NUM M/F P <card> @>N
+quartos	 [quarto] <n> ADJ M P <NUM-ord> @P<
+$,
+sala	 [sala] N F S @N<PRED
+e	 [e] KC @CO
+cozinha	 [cozinha] N F S @N<PRED
+em	 [em] PRP <sam-> @<ADVL
+o	 [o] DET M S <artd> <-sam> @>N
+sítio	 [sítio] N M S @P<
+Santa=Catarina	 [Santa=Catarina] PROP F S @N<
+$,
+município	 [município] N M S @APP
+de	 [de] PRP @N<
+Monteiro	 [Monteiro] PROP M S @P<
+$(	 [$(] PU
+PB	 [PB] PROP F S @N<PRED
+$)	 [$)] PU
+$,
+junto=com	 [junto=com] PRP @<ADVL
+seus	 [seu] DET M P <si> <poss 3S> @>N
+14	 [14] NUM M P <card> @>N
+filhos	 [filho] N M P @P<
+e	 [e] KC @CO
+cinco	 [cinco] NUM M P <card> @>N
+netos	 [neto] N M P @P<
+$.	 [$.] PU <<<
+$¶	 [$¶] PU <<<
+</s>
+<s>
+Onze	 [onze] NUM M P <card> @>N
+filhos	 [filho] N M P @SUBJ>
+têm	 [ter] V PR 3P IND VFIN <fmc> @FMV
+menos=de	 [menos=de] ADV <quant> @>A
+15	 [15] NUM M P <card> @>N
+anos	 [ano] N M P @<ACC
+e	 [e] KC @CO
+aparência	 [aparência] N F S @<ACC
+de	 [de] PRP @N<
+crianças	 [criança] N F P @P<
+famintas	 [faminto] ADJ F P @N<
+de	 [de] PRP <sam-> @A<
+a	 [o] DET F S <artd> <-sam> @>N
+Etiópia	 [Etiópia] PROP F S @P<
+$.	 [$.] PU <<<
+$¶	 [$¶] PU <<<
+</s>
+<s>
+Só	 [só] ADV @ADVL>
+têm	 [ter] V PR 3P IND VFIN <fmc> @FMV
+pele	 [pele] N F S @<ACC
+e	 [e] <co-vfin> KC @CO
+osso	 [osso] N M S @<ACC
+$,
+como	 [como] ADV @#FS-<ADVL <ks> <rel> @ADVL>
+se	 [se] PERS M/F 3S ACC @SUBJ>
+diz	 [dizer] V PR 3S IND VFIN @FMV
+em	 [em] PRP <sam-> @<ADVL
+a	 [o] DET F S <artd> <-sam> @>N
+região	 [região] N F S @P<
+$.	 [$.] PU <<<
+$¶	 [$¶] PU <<<
+</s>
+<s>
+As	 [o] DET F P <artd> @>N
+16	 [16] NUM F P <card> @>N
+h30	 [h30] PROP F S @SUBJ>
+de	 [de] PRP <sam-> @N<
+o	 [o] DET M S <artd> <-sam> @>N
+último	 [último] ADJ M S <NUM-ord> @>N
+dia	 [dia] N M S @P<
+2	 [2] NUM M/F P <card> @N<
+$,
+filhos	 [filho] N M P @SUBJ>
+e	 [e] KC @CO
+netos	 [neto] N M P @SUBJ>
+de	 [de] PRP @N<
+Maria=José	 [Maria=José] PROP F S @P<
+esperavam	 [esperar] V IMPF 3P IND VFIN <fmc> @FMV
+que	 [que] KS @SUB @#FS-<ACC
+ela	 [ela] PERS F 3S NOM @SUBJ>
+tirasse	 [tirar] V IMPF 3S SUBJ VFIN @FMV
+de	 [de] PRP <sam-> @<PIV
+o	 [o] DET M S <artd> <-sam> @>N
+fogo	 [fogo] N M S @P<
+de	 [de] PRP @N<
+lenha	 [lenha] N F S @P<
+$,
+dentro=de	 [dentro=de] PRP @<ADVL
+casa	 [casa] N F S @P<
+$,
+a	 [o] DET F S <artd> @>N
+primeira	 [primeiro] ADJ F S <NUM-ord> @>N
+e	 [e] KC @CO
+única	 [único] ADJ F S @>N
+refeição	 [refeição] N F S @<ACC
+de	 [de] PRP <sam-> @N<
+o	 [o] DET M S <artd> <-sam> @>N
+dia	 [dia] N M S @P<
+$:	 [$:] PU <<<
+cerca=de	 [cerca=de] ADV @>A
+300	 [300] NUM M/F P <card> @ACC>
+gramas	 [gramar] V PR 2S IND VFIN <fmc> @FMV
+de	 [de] PRP @<ADVL
+feijão	 [feijão] N M S @P<
+cozinhado	 [cozinhar] V PCP M S @N<
+com	 [com] PRP @N<
+água	 [água] N F S @P<
+e	 [e] KC @CO
+sal	 [sal] N M S @P<
+$.	 [$.] PU <<<
+$¶	 [$¶] PU <<<
+</s>
+<s>
+O	 [o] DET M S <artd> @>N
+feijão	 [feijão] N M S @SUBJ>
+era	 [ser] V IMPF 3S IND VFIN <fmc> @FMV
+o	 [o] DET M S <dem> @<SC
+que	 [que] SPEC M/F S @SUBJ> <rel> @#FS-N<
+sobrava	 [sobrar] V IMPF 3S IND VFIN @FMV
+de	 [de] PRP @<ADVL
+um	 [um] NUM M S <card> @>N
+quilo	 [quilo] N M S @P<
+que	 [que] SPEC M/F S @ACC> <rel> @#FS-N<
+seu	 [seu] DET M S <poss 3S> @>N
+pai	 [pai] N M S @SUBJ>
+mandou	 [mandar] V PS 3S IND VFIN @FMV
+dois	 [dois] NUM M P <card> @>N
+dias	 [dia] N M P @>A
+antes	 [antes] ADV @N< @<ADVL
+de	 [de] PRP @A<
+um	 [um] DET M S <arti> @>N
+sítio	 [sítio] N M S @P<
+em	 [em] PRP <sam-> @<ADVL
+o	 [o] DET M S <artd> <-sam> @>N
+município	 [município] N M S @P<
+de	 [de] PRP @N<
+Prata	 [prata] N F S @P<
+$,
+onde	 [onde] ADV @#FS-<ADVL <ks> <rel> @ADVS>
+mora	 [morar] V PR 3S IND VFIN @FMV
+$.	 [$.] PU <<<
+$¶	 [$¶] PU <<<
+</s>
+<s>
+Segundo	 [segundo] ADV @COM <prp> <rel> @#AS-ADVL>
+ela	 [ela] PERS F 3S NOM/PIV @AS<
+$,
+ainda	 [ainda] ADV <*1> @ADVL>
+é	 [ser] V PR 3S IND VFIN <fmc> @FMV
+muito	 [muito] DET M S <quant> <*2> @<SC
+$.	 [$.] PU <<<
+$¶	 [$¶] PU <<<
+</s>
+<s>
+Depois	 [depois] PRP @ADVL>
+que	 [que] KS @SUB @#FS-P<
+comessem	 [comer] V IMPF 3P SUBJ VFIN @FMV
+o	 [o] DET M S <artd> @>N
+feijão	 [feijão] N M S @<ACC
+$,
+as	 [o] DET F P <artd> @>N
+crianças	 [criança] N F P @SUBJ>
+iriam	 [ir] V COND 3P VFIN @FAUX @#FS-ACC>>
+todas	 [todo] DET F P @N<PRED <quant> @<ACC
+dormir	 [dormir] V INF @IMV @#ICL-AUX<
+$,
+afirmou	 [afirmar] V PS 3S IND VFIN <fmc> @FMV
+Maria=José	 [Maria=José] PROP F S @<SUBJ
+$,
+que	 [que] SPEC M/F S @SUBJ> <rel> @#FS-N<
+há	 [há] PRP @ADVL>
+três	 [três] NUM M P <card> @>N
+anos	 [ano] N M P @P<
+não	 [não] ADV @ADVL>
+come	 [comer] V PR 3S IND VFIN @FMV
+um	 [um] DET M S <arti> @>N
+pedaço	 [pedaço] N M S @<ACC
+de	 [de] PRP @N<
+carne	 [carne] N F S @P<
+$.	 [$.] PU <<<
+$¶	 [$¶] PU <<<
+</s>
+<s>
+A	 [o] DET F S <artd> @>N
+mãe	 [mãe] N F S @SUBJ>
+diz	 [dizer] V PR 3S IND VFIN <fmc> @FMV
+que	 [que] KS @SUB @#FS-<ACC
+sua	 [seu] DET F S <poss 3S> @>N
+maior	 [grande] ADJ F S <KOMP> @>N
+preocupação	 [preocupação] N F S @SUBJ>
+é	 [ser] V PR 3S IND VFIN @FMV
+encontrar	 [encontrar] V INF @IMV @#ICL-<SC
+uma	 [um] DET F S <arti> @>N
+maneira	 [maneira] N F S @<ACC
+de	 [de] PRP @N<
+dividir	 [dividir] V INF @IMV @#ICL-P<
+tão	 [tão] ADV <quant> <dem> @<ADVL
+pouco	 [pouco] DET M S <quant> @>N
+alimento	 [alimento] N M S @<ACC
+entre	 [entre] PRP @N< @<ADVL
+tanta	 [tanto] DET F S <KOMP> <quant> @>N
+gente	 [gente] N F S @P<
+faminta	 [faminto] ADJ F S @N<
+$.	 [$.] PU <<<
+$¶	 [$¶] PU <<<
+</s>
+<s>
+Meus	 [meu] DET M P <poss 1S> <*1> @>N
+filhos	 [filho] N M P @SUBJ>
+são	 [ser] V PR 3P IND VFIN <fmc> @FMV
+todos	 [todo] DET M P <quant> @<PRED
+magros	 [magro] ADJ M P @<SC
+e	 [e] <co-fmc> <co-vfin> KC @CO
+doentes	 [doente] ADJ M P @<SC
+de	 [de] PRP @A<
+tanto	 [tanto] ADV <KOMP> <quant> @ADVL>
+passar	 [passar] V INF @IMV @#ICL-P<
+fome	 [fome] N F S @SUBJ>
+e	 [e] <co-fmc> <co-vfin> KC @CO
+eu	 [eu] PERS M/F 1S NOM @SUBJ>
+não	 [não] ADV @ADVL>
+posso	 [poder] V PR 1S IND VFIN <fmc> @FAUX
+fazer	 [fazer] V INF @IMV @#ICL-AUX<
+nada	 [nada] SPEC M S <quant> <*2> @<ACC
+$,
+afirmou	 [afirmar] V PS 3S IND VFIN <fmc> @FMV
+$.	 [$.] PU <<<
+$¶	 [$¶] PU <<<
+</s>
+<s>
+O	 [o] DET M S <artd> @>N
+servente	 [servente] N M S @SUBJ>
+de	 [de] PRP @N<
+pedreiro	 [pedreiro] N M S @P<
+Manoel=Severino=da=Silva	 [Manoel=Severino=da=Silva] PROP M S @N<
+$,
+pai	 [pai] N M S @APP
+de	 [de] PRP <sam-> @N<
+as	 [o] DET F P <artd> <-sam> @>N
+crianças	 [criança] N F P @P<
+e	 [e] KC @CO
+marido	 [marido] N M S @PRED>
+de	 [de] PRP @N<
+Maria=José	 [Maria=José] PROP F S @P<
+$,
+saiu	 [sair] V PS 3S IND VFIN <fmc> @FMV
+de	 [de] PRP @<ADVS
+casa	 [casa] N F S @P<
+há	 [há] PRP @<ADVL
+cinco	 [cinco] NUM M P <card> @>N
+anos	 [ano] N M P @P<
+$.	 [$.] PU <<<
+$¶	 [$¶] PU <<<
+</s>
+<s>
+Viajou	 [viajar] V PS 3S IND VFIN <fmc> @FMV
+para	 [para] PRP @<ADVS
+São=Paulo	 [São=Paulo] PROP M S @P<
+$,
+onde	 [onde] ADV @ADVL> <ks> <rel> @#FS-N<
+iria	 [ir] V COND 1/3S VFIN @FAUX
+buscar	 [buscar] V INF @IMV @#ICL-AUX<
+dinheiro	 [dinheiro] N M S @<ACC
+para	 [para] PRP @<ADVL
+comprar	 [comprar] V INF @IMV @#ICL-P<
+o	 [o] DET M S <artd> @>N
+alimento	 [alimento] N M S @<ACC
+de	 [de] PRP <sam-> @N<
+os	 [o] DET M P <artd> <-sam> @>N
+filhos	 [filho] N M P @P<
+$.	 [$.] PU <<<
+$¶	 [$¶] PU <<<
+</s>
+<s>
+Segundo	 [segundo] ADV @COM <prp> <rel> @#AS-ADVL>
+Maria=José	 [Maria=José] PROP F S @AS<
+$,
+nunca	 [nunca] ADV @ADVL>
+mais	 [muito] DET M/F S <KOMP> <quant> @SUBJ>
+deu	 [dar] V PS 3S IND VFIN <fmc> @FMV
+notícias	 [notícia] N F P @<ACC
+$.	 [$.] PU <<<
+$¶	 [$¶] PU <<<
+</s>
+<s>
+Jailson	 [Jailson] PROP M/F S @SUBJ>
+deveria	 [dever] V COND 3S VFIN <fmc> @FAUX
+estar	 [estar] V INF @IAUX @#ICL-AUX<
+pesando	 [pesar] V GER @#ICL-AUX< @IMV
+22	 [22] NUM M P <card> @>N
+quilos	 [quilo] N M P @<ADVS
+$,
+de=acordo	 [de=acordo] ADV @<ADVL
+com	 [com] PRP @A<
+os	 [o] DET M P <artd> @>N
+médicos	 [médico] N M P @P<
+que	 [que] KS @SUB @#FS-<ACC
+o	 [ele] PERS M 3S ACC @ACC>
+atenderam	 [atender] V PS/MQP 3P IND VFIN @FMV
+há	 [há] PRP @<ADVL
+dois	 [dois] NUM M P <card> @>N
+meses	 [mês] N M P @P<
+$,
+quando	 [quando] ADV @ADVL> <ks> <rel> @#FS-N<
+teve	 [ter] V PS 3S IND VFIN @FAUX
+de	 [de] PRP @PRT-AUX<
+ser	 [ser] V INF @IAUX @#ICL-AUX<
+internado	 [internar] V PCP M S @IMV @#ICL-AUX<
+em	 [em] PRP @<ADVL
+estado	 [estado] N M S @P<
+grave	 [grave] ADJ M S @N<
+$,
+com	 [com] PRP @N<PRED @<ADVL
+diarréia	 [diarréia] N F S @P<
+$.	 [$.] PU <<<
+$¶	 [$¶] PU <<<
+</s>
+<s>
+O	 [o] DET M S <artd> <*1> @>N
+médico	 [médico] N M S @SUBJ>
+disse	 [dizer] V PS 3S IND VFIN @FMV @#FS-ACC>>
+que	 [que] KS @SUB @#FS-<ACC
+se	 [se] KS @#FS-ADVL> @SUB
+eu	 [eu] PERS M/F 1S NOM @SUBJ>
+desse	 [dar] V IMPF 1S SUBJ VFIN @FMV
+comida	 [comida] N F S @<ACC
+$,
+ele	 [ele] PERS M 3S NOM @SUBJ>
+melhorava	 [melhorar] V IMPF 3S IND VFIN <*2> @FMV
+$,
+afirmou	 [afirmar] V PS 3S IND VFIN <fmc> @FMV
+Maria=José	 [Maria=José] PROP F S @<SUBJ
+$,
+que	 [que] SPEC M/F S @SUBJ> <rel> @#FS-N<
+trabalha	 [trabalhar] V PR 3S IND VFIN @FMV
+em	 [em] PRP <sam-> @<PIV
+uma	 [um] DET F S <arti> <-sam> @>N
+frente	 [frente] N F S @P<
+de	 [de] PRP @N<
+emergência	 [emergência] N F S @P<
+e	 [e] KC @CO
+ganha	 [ganhar] V PCP F S @>N
+Cr$	 [cr$] <prop> N M S @P<
+3	 [3] NUM M/F P <card> @>N
+mil	 [mil] NUM M/F P <card> @N<
+por	 [por] PRP @<ADVL
+quinzena	 [quinzena] N F S @P<
+$.	 [$.] PU <<<
+$¶	 [$¶] PU <<<
+</s>
+<s>
+O	 [o] DET M S <artd> @>N
+pagamento	 [pagamento] N M S @SUBJ>
+de	 [de] PRP <sam-> @N<
+a	 [o] DET F S <artd> <-sam> @>N
+primeira	 [primeiro] ADJ F S <NUM-ord> @>N
+quinzena	 [quinzena] N F S @P<
+de	 [de] PRP @N<
+outubro	 [outubro] N M S @P<
+estava	 [estar] V IMPF 3S IND VFIN <fmc> @FMV
+um	 [um] DET M S <arti> @>N
+mês	 [mês] N M S @<ADVL
+atrasado	 [atrasado] ADJ M S @N<
+$.	 [$.] PU <<<
+$¶	 [$¶] PU <<<
+</s>
+<s>
+Em	 [em] PRP <sam-> @ADVL>
+a	 [o] DET F S <artd> <-sam> @>N
+esperança	 [esperança] N F S @P<
+de	 [de] PRP @N<
+alimentar	 [alimentar] V INF @IMV @#ICL-P<
+os	 [o] DET M P <artd> @>N
+filhos	 [filho] N M P @<ACC
+$,
+ela	 [ela] PERS F 3S NOM @SUBJ>
+matriculou	 [matricular] V PS 3S IND VFIN <fmc> @FMV
+sete	 [sete] NUM M/F P <card> @<ACC
+de	 [de] PRP <sam-> @N<
+eles	 [eles] PERS M 3P NOM/PIV <-sam> @P<
+em	 [em] PRP <sam-> @N<
+a	 [o] DET F S <artd> <-sam> @>N
+primeira	 [primeiro] ADJ F S <NUM-ord> @>N
+série	 [série] N F S @P<
+de	 [de] PRP <sam-> @N<
+a	 [o] DET F S <artd> <-sam> @>N
+escola	 [escola] N F S @P<
+rural	 [rural] ADJ F S @N<
+$,
+em	 [em] PRP <sam-> @<ADVL
+o	 [o] DET M S <artd> <-sam> @>N
+começo	 [começo] N M S @P<
+de	 [de] PRP <sam-> @N<
+o	 [o] DET M S <artd> <-sam> @>N
+ano	 [ano] N M S @P<
+$,
+mas	 [mas] <co-fmc> <co-vfin> KC @CO
+$,
+até	 [até] PRP @ADVL>
+o	 [o] DET M S <artd> @>N
+início	 [início] N M S @P<
+de	 [de] PRP @N<
+dezembro	 [dezembro] N M S @P<
+$,
+a	 [o] DET F S <artd> @>N
+escola	 [escola] N F S @SUBJ>
+não	 [não] ADV @ADVL>
+tinha	 [ter] V IMPF 3S IND VFIN <fmc> @FAUX
+recebido	 [receber] V PCP @IMV @#ICL-AUX<
+merenda	 [merenda] N F S @<ACC
+$.	 [$.] PU <<<
+$¶	 [$¶] PU <<<
+</s>
+</TEXT>
+$¶	 [$¶] PU <<<
+</DOC>

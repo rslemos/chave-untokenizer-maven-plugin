@@ -1,0 +1,371 @@
+<DOC>
+<DOCNO.valor=FSP940101-127>
+<DOCID.valor=FSP940101-127>
+<DATE.valor=940101>
+<TEXT>
+<s>
+Preço	 [preço] N M S @SUBJ>
+pode	 [poder] V PR 3S IND VFIN <fmc> @FAUX
+variar	 [variar] V INF @IMV @#ICL-AUX<
+muito	 [muito] ADV <quant> @<ADVL
+$¶	 [$¶] PU <<<
+</s>
+<s>
+Da=Reportagem=Local	 [Da=Reportagem=Local] PROP F S @NPHR
+$¶	 [$¶] PU <<<
+</s>
+<s>
+Sua	 [seu] DET F S <poss 3S> @>N
+decisão	 [decisão] N F S @SUBJ>
+de	 [de] PRP @N<
+ano	 [ano] N M S @P<
+novo	 [novo] ADJ M S @N<
+é	 [ser] V PR 3S IND VFIN <fmc> @FMV
+tornar-	 [tornar] V INF @IMV <hyfen> @#ICL-<SC
+se	 [se] PERS F 3S ACC <refl> @<ACC
+músico	 [músico] N M S @<OC
+ou	 [ou] <co-fmc> <co-vfin> KC @CO
+você	 [você] PERS M/F 3S NOM @SUBJ>
+passou	 [passar] V PS 3S IND VFIN <fmc> @FMV
+de	 [de] PRP @<PIV
+ano	 [ano] N M S @P<
+e	 [e] <co-fmc> <co-vfin> KC @CO
+agora	 [agora] ADV <kc> @ADVL>
+seu	 [seu] DET M S <poss 3S> @>N
+pai	 [pai] N M S @SUBJ>
+vai	 [ir] V PR 3S IND VFIN <fmc> @FAUX
+comprar	 [comprar] V INF @IMV @#ICL-AUX<
+aquela	 [aquele] DET F S <dem> @>N
+guitarra	 [guitarra] N F S @<ACC
+$?	 [$?] PU <<<
+$¶	 [$¶] PU <<<
+</s>
+<s>
+OK	 [OK] PROP M/F S @SUBJ>
+$,
+mas	 [mas] KC @CO
+vale	 [valer] V PR 3S IND VFIN <fmc> @FMV
+dar	 [dar] V INF @IMV @#ICL-<ACC
+uma	 [um] DET F S <arti> @>N
+olhadinha	 [olhadinha] N F S <DERS> @<ACC
+em	 [em] PRP <sam-> @<ADVL
+as	 [o] DET F P <artd> <-sam> @>N
+lojas	 [loja] N F P @P<
+para	 [para] PRP @<ADVL
+conseguir	 [conseguir] V INF @IMV @#ICL-P<
+um	 [um] DET M S <arti> @>N
+preço	 [preço] N M S @<ACC
+mais	 [mais] ADV <KOMP> <quant> @>A
+legal	 [legal] ADJ M/F S @N<
+$?	 [$?] PU <<<
+$¶	 [$¶] PU <<<
+</s>
+<s>
+É	 [ser] V PR 3S IND VFIN <fmc> @FMV
+fácil	 [fácil] ADJ M S @<SC
+encontrar	 [encontrar] V INF @IMV @#ICL-<SUBJ
+de	 [de] PRP @<ADVL
+tudo	 [tudo] SPEC M S <quant> @P<
+em	 [em] PRP @<ADVL
+São=Paulo	 [São=Paulo] PROP M S @P<
+$:	 [$:] PU <<<
+guitarras	 [guitarra] N F P @NPHR
+$,
+baixos	 [baixo] N M P @NPHR
+$,
+baterias	 [bateria] N F P @NPHR
+e	 [e] KC @CO
+teclados	 [teclado] N M P @NPHR
+nacionais	 [nacional] ADJ M P @N<
+e	 [e] KC @CO
+importados	 [importar] V PCP M P @N<
+$,
+além=de	 [além=de] PRP <sam-> @ADVL
+os	 [o] DET M P <-sam> <artd> @>N
+pedais	 [pedal] N M P @P<
+e	 [e] KC @CO
+amplificadores	 [amplificador] N M P @P<
+$.	 [$.] PU <<<
+$¶	 [$¶] PU <<<
+</s>
+<s>
+Com	 [com] PRP @ADVL>
+tanta	 [tanto] DET F S <KOMP> <quant> @>N
+variedade	 [variedade] N F S @P<
+$,
+os	 [o] DET M P <artd> @>N
+preços	 [preço] N M P @APP
+$,
+é	 [ser] V PR 3S IND VFIN <fmc> @FMV
+claro	 [claro] ADJ M S @<SC
+$,
+mudam	 [mudar] V PR 3P IND VFIN <fmc> @FMV
+muito	 [muito] DET M S <quant> @<ACC
+$.	 [$.] PU <<<
+$¶	 [$¶] PU <<<
+</s>
+<s>
+Uma	 [um] DET F S <arti> @>N
+bateria	 [bateria] N F S @SUBJ>
+Pearl	 [Pearl] PROP F S @N<
+$,
+sonho	 [sonho] N M S @N<PRED
+de	 [de] PRP @N<
+todo	 [todo] ADV <det> <quant> @>A
+aspirante	 [aspirante] N M S @P<
+a	 [a] PRP @ADVL>
+John=Bonham	 [John=Bonham] PROP M/F S @P<
+$,
+em	 [em] PRP <sam-> @ADVL>
+o	 [o] DET M S <artd> <-sam> @>N
+modelo	 [modelo] N M S @P<
+Forum	 [Forum] PROP M S @N<
+$(	 [$(] PU
+o	 [o] DET M S <artd> @>N
+mais	 [mais] ADV <KOMP> <quant> @>A
+simples	 [simples] ADJ M/F S @N<
+$)	 [$)] PU
+pode	 [poder] V PR 3S IND VFIN <fmc> @FAUX
+custar	 [custar] V INF @IMV @#ICL-AUX<
+entre	 [entre] PRP @<ADVL
+US$	 [US$] PROP M/F S @P<
+890	 [890] NUM M/F P <card> @N<
+$(	 [$(] PU
+em	 [em] PRP <sam-> @<ADVL
+a	 [o] DET F S <artd> <-sam> @>N
+Made	 [Made] PROP F S @P<
+in	 [in] PRP @N< @<ADVL
+Brazil	 [Brazil] PROP M/F S @P<
+$)	 [$)] PU
+e	 [e] KC @CO
+US$	 [US$] PROP M/F S @P<
+1.300	 [1.300] NUM M/F P <card> @N<
+$(	 [$(] PU
+em	 [em] PRP <sam-> @<ADVL
+a	 [o] DET F S <artd> <-sam> @>N
+Casa=Tommasi	 [Casa=Tommasi] PROP F S @P<
+$)	 [$)] PU
+$.	 [$.] PU <<<
+$¶	 [$¶] PU <<<
+</s>
+<s>
+Para	 [para] PRP @ADVL>
+quem	 [quem] SPEC M/F S @#FS-P< <rel> @SUBJ>
+está	 [estar] V PR 3S IND VFIN @FAUX
+iniciando	 [iniciar] V GER @#ICL-AUX< @IMV
+$,
+há	 [haver] V PR 3S IND VFIN <fmc> @FMV
+opções	 [opção] N F P @<ACC
+mais	 [mais] ADV <KOMP> <quant> @<ADVL
+em=conta	 [em=conta] ADV @<ADVL
+como	 [como] ADV @#AS-<ADVL <prp> <rel> @COM
+um	 [um] DET M S <arti> @>N
+kit	 [kit] N M S @AS<
+de	 [de] PRP @N<
+iniciação	 [iniciação] N F S @P<
+em	 [em] PRP @<ADVL
+bateria	 [bateria] N F S @P<
+importado	 [importar] V PCP M S @IMV @#ICL-N<
+por	 [por] PRP @<PASS
+US$	 [US$] PROP M/F S @P<
+250	 [250] NUM M/F P <card> @N<
+ou	 [ou] <parkc-1> KC @CO
+os	 [o] DET M P <artd> @>N
+modelos	 [modelo] N M P @P< @<ACC
+usados	 [usar] V PCP M P @N<
+de	 [de] PRP <sam-> @N<
+a	 [o] DET F S <artd> <-sam> @>N
+Mapex	 [Mapex] PROP F S @P<
+ou	 [ou] <parkc-2> KC @CO
+Tama	 [Tama] PROP M/F S @P< @<ACC
+por	 [por] PRP @<ADVL
+US$	 [US$] PROP M/F S @P<
+600	 [600] NUM M/F P <card> @N<
+$(	 [$(] PU
+Na=Matic=Instrumentos	 [Na=Matic=Instrumentos] PROP F S @AS<
+$)	 [$)] PU
+$.	 [$.] PU <<<
+$¶	 [$¶] PU <<<
+</s>
+<s>
+Fãs=de=Eric=Clapton	 [Fãs=de=Eric=Clapton] PROP M/F S @SUBJ>
+costumam	 [costumar] V PR 3P IND VFIN <fmc> @FAUX
+babar	 [babar] V INF @IMV @#ICL-AUX<
+a	 [a] PRP <sam-> @<ADVL
+o	 [o] DET M S <artd> <-sam> @>N
+ver	 [ver] V INF @IMV @#ICL-P<
+uma	 [um] DET F S <arti> @>N
+guitarra	 [guitarra] N F S @SUBJ>
+Fender	 [fender] V INF 3S @IMV @#ICL-<ACC
+$.	 [$.] PU <<<
+$¶	 [$¶] PU <<<
+</s>
+<s>
+Os	 [o] DET M P <artd> @>N
+preços	 [preço] N M P @NPHR
+$:	 [$:] PU <<<
+de	 [de] PRP @ADVL
+US$	 [US$] PROP M/F S @P<
+350	 [350] NUM M/F P <card> @N<
+$(	 [$(] PU
+Dois=Meia=Quatro	 [Dois=Meia=Quatro] PROP M S @NPHR
+$)	 [$)] PU
+a	 [o] DET F S <artd> @>N
+US$	 [US$] PROP F S @NPHR
+1.200	 [1.200] NUM M/F P <card> @N<
+$(	 [$(] PU
+Play=Tech	 [Play=Tech] PROP M/F S @NPHR
+$)	 [$)] PU
+$.	 [$.] PU <<<
+$¶	 [$¶] PU <<<
+</s>
+<s>
+Quem	 [quem] SPEC M/F S @#FS-SUBJ> <rel> @SUBJ>
+se	 [se] PERS M/F 3S ACC <refl> @ACC>
+dispuser	 [dispor] V FUT 3S SUBJ VFIN @FMV
+a	 [a] PRP @<PIV
+gastar	 [gastar] V INF @IMV @#ICL-P<
+mais	 [muito] DET M/F S <KOMP> <quant> @SUBJ>
+pode	 [poder] V PR 3S IND VFIN <fmc> @FAUX
+adquirir	 [adquirir] V INF @IMV @#ICL-AUX<
+uma	 [um] DET F S <arti> @>N
+Ibanez	 [Ibanez] PROP F S @<ACC
+de	 [de] PRP @N<
+US$	 [US$] PROP M/F S @P<
+1.300	 [1.300] NUM M/F P <card> @N<
+$(	 [$(] PU
+Casa=Tommasi	 [Casa=Tommasi] PROP F S @APP
+$)	 [$)] PU
+a	 [a] PRP @<ADVL
+US$	 [US$] PROP M/F S @P<
+1.750	 [1.750] NUM M/F P <card> @N<
+$(	 [$(] PU
+Gang	 [gang] N M S @N<PRED
+$)	 [$)] PU
+$.	 [$.] PU <<<
+$¶	 [$¶] PU <<<
+</s>
+<s>
+$(	 [$(] PU
+MLC	 [MLC] PROP M/F S @NPHR
+$)	 [$)] PU
+$¶	 [$¶] PU <<<
+</s>
+<s>
+Made	 [Made] PROP M/F S @NPHR
+in	 [in] PRP @N<
+Brazil	 [Brazil] PROP M/F S @P<
+$:	 [$:] PU <<<
+rua	 [rua] N F S @NPHR
+Teodoro=Sampaio	 [Teodoro=Sampaio] PROP F S @N<
+$,
+777/779	 [777/779] NUM M/F P <card> @P<
+$.	 [$.] PU <<<
+$¶	 [$¶] PU <<<
+</s>
+<s>
+$¶	 [$¶] PU <<<
+Tel.	 [tel.] N M S @NPHR
+$(	 [$(] PU
+011	 [011] NUM M/F P <card> @N<PRED
+$)	 [$)] PU
+851-2478	 [851-2478] NUM M/F P <card> @P<
+$¶	 [$¶] PU <<<
+</s>
+<s>
+Casa=Tommasi	 [Casa=Tommasi] PROP F S @NPHR
+$:	 [$:] PU <<<
+viaduto	 [viaduto] N M S @NPHR
+Santa=Ifigênia	 [Santa=Ifigênia] PROP M S @N<
+$,
+255	 [255] NUM M/F P <card> @P<
+$.	 [$.] PU <<<
+$¶	 [$¶] PU <<<
+</s>
+<s>
+$¶	 [$¶] PU <<<
+Tel.	 [tel.] N M S @NPHR
+$(	 [$(] PU
+011	 [011] NUM M/F P <card> @N<PRED
+$)	 [$)] PU
+228-1600	 [228-1600] NUM M/F P <card> @P<
+$¶	 [$¶] PU <<<
+</s>
+<s>
+Matic=Instrumentos	 [Matic=Instrumentos] PROP M/F S @NPHR
+$:	 [$:] PU <<<
+rua	 [rua] N F S @NPHR
+Teodoro=Sampaio	 [Teodoro=Sampaio] PROP F S @N<
+$,
+763	 [763] NUM M/F P <card> @P<
+$,
+loja	 [loja] N F S @N<PRED @NPHR
+11	 [11] NUM M/F P <card> @N<
+$¶	 [$¶] PU <<<
+</s>
+<s>
+Dois	 [dois] NUM F P <card> @>N
+Meia=Quatro	 [Meia=Quatro] PROP F S @NPHR
+$:	 [$:] PU <<<
+rua	 [rua] N F S @NPHR
+Santa=Ifigênia	 [Santa=Ifigênia] PROP F S @N<
+$,
+264	 [264] NUM M/F P <card> @P<
+$.	 [$.] PU <<<
+$¶	 [$¶] PU <<<
+</s>
+<s>
+$¶	 [$¶] PU <<<
+Tel.	 [tel.] N M S @NPHR
+$(	 [$(] PU
+011	 [011] NUM M/F P <card> @N<PRED
+$)	 [$)] PU
+223-9422	 [223-9422] NUM M/F P <card> @P<
+$¶	 [$¶] PU <<<
+</s>
+<s>
+Play=Tech	 [Play=Tech] PROP M/F S @NPHR
+$:	 [$:] PU <<<
+rua	 [rua] N F S @NPHR
+Santa=Ifigênia	 [Santa=Ifigênia] PROP F S @N<
+$,
+250	 [250] NUM M/F P <card> @P<
+$.	 [$.] PU <<<
+$¶	 [$¶] PU <<<
+</s>
+<s>
+$¶	 [$¶] PU <<<
+Tel.	 [tel.] N M S @NPHR
+$(	 [$(] PU
+011	 [011] NUM M/F P <card> @N<PRED
+$)	 [$)] PU
+220-1733	 [220-1733] NUM M/F P <card> @P<
+$¶	 [$¶] PU <<<
+</s>
+<s>
+Gang	 [gang] N M S @NPHR
+$:	 [$:] PU <<<
+rua	 [rua] N F S @NPHR
+Teodoro=Sampaio	 [Teodoro=Sampaio] PROP F S @N<
+$,
+826	 [826] NUM M/F P <card> @P<
+$.	 [$.] PU <<<
+$¶	 [$¶] PU <<<
+</s>
+<s>
+Tels	 [Tels] PROP M/F S @NPHR
+$.	 [$.] PU <<<
+$¶	 [$¶] PU <<<
+</s>
+<s>
+$(	 [$(] PU
+011	 [011] NUM M/F P <card> @<PRED
+$)	 [$)] PU
+883-1673	 [883-1673] NUM M/F P <card> @>N
+e	 [e] KC @CO
+881-7619	 [881-7619] NUM M/F P <card> @P<
+$¶	 [$¶] PU <<<
+</s>
+</TEXT>
+$¶	 [$¶] PU <<<
+</DOC>

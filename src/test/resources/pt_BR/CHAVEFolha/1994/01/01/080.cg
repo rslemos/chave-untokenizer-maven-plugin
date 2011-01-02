@@ -1,0 +1,256 @@
+<DOC>
+<DOCNO.valor=FSP940101-080>
+<DOCID.valor=FSP940101-080>
+<DATE.valor=940101>
+<TEXT>
+<s>
+Da=Reportagem=Local	 [Da=Reportagem=Local] PROP F S @NPHR
+$¶	 [$¶] PU <<<
+</s>
+<s>
+A	 [o] DET F S <artd> @>N
+polícia	 [polícia] N F S @SUBJ>
+instaurou	 [instaurar] V PS 3S IND VFIN <fmc> @FMV
+mais	 [mais] ADV <kc> @>A
+um	 [um] NUM M S <card> @>N
+inquérito	 [inquérito] N M S @<ACC
+contra	 [contra] PRP @<ADVL
+Bruno=César=Pasini	 [Bruno=César=Pasini] PROP M S @P<
+$,
+38	 [38] NUM M/F P <card> @<ACC
+$.	 [$.] PU <<<
+$¶	 [$¶] PU <<<
+</s>
+<s>
+Pasini	 [Pasini] PROP M S @SUBJ>
+é	 [ser] V PR 3S IND VFIN <fmc> @FMV
+suspeito	 [suspeito] ADJ M S @<SC
+de	 [de] PRP @A<
+ter	 [ter] V INF @IAUX @#ICL-P<
+assassinado	 [assassinar] V PCP @IMV @#ICL-AUX<
+sua	 [seu] DET F S <si> <poss 3S> @>N
+mulher	 [mulher] N F S @<ACC
+Gisele=Balesteiros=Ribeiro=Pasini	 [Gisele=Balesteiros=Ribeiro=Pasini] PROP F S @N<
+em	 [em] PRP @<ADVL
+junho	 [junho] N M S @P<
+passado	 [passado] ADJ M S @N<
+$.	 [$.] PU <<<
+$¶	 [$¶] PU <<<
+</s>
+<s>
+Ele	 [ele] PERS M 3S NOM @SUBJ>
+já	 [já] ADV @ADVL>
+é	 [ser] V PR 3S IND VFIN <fmc> @FAUX
+acusado	 [acusar] V PCP M S @IMV @#ICL-AUX<
+de	 [de] PRP @<PIV
+ser	 [ser] V INF @IMV @#ICL-P<
+um	 [um] DET M S <arti> @>N
+falso	 [falso] ADJ M S @>N
+médico	 [médico] N M S @<SC
+endocrinologista	 [endocrinologista] ADJ M S @N<
+e	 [e] KC @CO
+de	 [de] PRP @<SC
+traficar	 [traficar] V INF @IMV @#ICL-P<
+drogas	 [droga] N F P @<ACC
+$.	 [$.] PU <<<
+$¶	 [$¶] PU <<<
+</s>
+<s>
+Entre	 [entre] PRP @ADVL>
+os	 [o] DET M P <artd> @>N
+clientes	 [cliente] N M P @P<
+de	 [de] PRP @N<
+Pasini	 [Pasini] PROP M/F S @P<
+estava	 [estar] V IMPF 1/3S IND VFIN <fmc> @FMV
+o	 [o] DET M S <artd> @>N
+governador	 [governador] N M S @<SC
+Luiz=Antônio=Fleury=Filho	 [Luiz=Antônio=Fleury=Filho] PROP M S @N<
+$.	 [$.] PU <<<
+$¶	 [$¶] PU <<<
+</s>
+<s>
+Desta=vez	 [desta=vez] ADV @ADVL>
+$,
+Pasini	 [Pasini] PROP M S @SUBJ>
+é	 [ser] V PR 3S IND VFIN <fmc> @FMV
+suspeito	 [suspeito] ADJ M S @<SC
+de	 [de] PRP @A<
+estelionato	 [estelionato] N M S @P<
+$,
+falsificação	 [falsificação] N F S @N<PRED
+de	 [de] PRP @N<
+documentos	 [documento] N M P @P<
+e	 [e] KC @CO
+uso	 [uso] N M S @P<
+de	 [de] PRP @N<
+documentos	 [documento] N M P @P<
+falsos	 [falso] ADJ M P @N<
+$.	 [$.] PU <<<
+$¶	 [$¶] PU <<<
+</s>
+<s>
+Segundo	 [segundo] ADV @COM <prp> <rel> @#AS-ADVL>
+o	 [o] DET M S <artd> @>N
+delegado	 [delegado] N M S @AS<
+Waldomiro=Bueno=Filho	 [Waldomiro=Bueno=Filho] PROP M S @N<
+$,
+44	 [44] NUM M/F P <card> @P<
+$,
+de	 [de] PRP <sam-> @N<PRED
+a	 [o] DET F S <artd> <-sam> @>N
+Delegacia=de=Crimes=Contra=Fé=Pública	 [Delegacia=de=Crimes=Contra=Fé=Pública] PROP F S @P<
+$,
+ele	 [ele] PERS M 3S NOM @SUBJ>
+pode	 [poder] V PR 3S IND VFIN <fmc> @FAUX
+ter	 [ter] V INF @IAUX @#ICL-AUX<
+aplicado	 [aplicar] V PCP @IMV @#ICL-AUX<
+um	 [um] DET M S <arti> @>N
+golpe	 [golpe] N M S @<ACC
+para	 [para] PRP @N<
+adquirir	 [adquirir] V INF @IMV @#ICL-P<
+uma	 [um] DET F S <arti> @>N
+BMW=325i	 [BMW=325i] PROP F S @<ACC
+$.	 [$.] PU <<<
+$¶	 [$¶] PU <<<
+</s>
+<s>
+O	 [o] DET M S <artd> @>N
+inquérito	 [inquérito] N M S @SUBJ>
+181/93	 [181/93] NUM M/F P <card> @P<
+foi	 [ser] V PS 3S IND VFIN <fmc> @FAUX
+aberto	 [abrir] V PCP M S @IMV @#ICL-AUX<
+semana	 [semana] N F S @<SC
+passada	 [passado] ADJ F S @N<
+$.	 [$.] PU <<<
+$¶	 [$¶] PU <<<
+</s>
+<s>
+O	 [o] DET M S <artd> @>N
+carro	 [carro] N M S @SUBJ>
+teria	 [ter] V COND 3S VFIN <fmc> @FAUX
+sido	 [ser] V PCP @IAUX @#ICL-AUX<
+comprado	 [comprar] V PCP M S @IMV @#ICL-AUX<
+em	 [em] PRP @<ADVL
+janeiro	 [janeiro] N M S @P<
+de	 [de] PRP @N<
+93	 [93] NUM M/F P <card> @P<
+$.	 [$.] PU <<<
+$¶	 [$¶] PU <<<
+</s>
+<s>
+De=acordo	 [de=acordo] ADV @ADVL>
+com	 [com] PRP @A<
+o	 [o] DET M S <artd> @>N
+delegado	 [delegado] N M S @P<
+$,
+Pasini	 [Pasini] PROP M/F S @SUBJ>
+teria	 [ter] V COND 3S VFIN <fmc> @FAUX
+apresentado	 [apresentar] V PCP @IMV @#ICL-AUX<
+uma	 [um] DET F S <arti> @>N
+procuração	 [procuração] N F S @<ACC
+com	 [com] PRP @<ADVL
+a	 [o] DET F S <artd> @>N
+assinatura	 [assinatura] N F S @P<
+falsificada	 [falsificar] V PCP F S @N<PRED
+$.	 [$.] PU <<<
+$¶	 [$¶] PU <<<
+</s>
+<s>
+O	 [o] DET M S <artd> @>N
+carimbo	 [carimbo] N M S @SUBJ>
+de	 [de] PRP <sam-> @N<
+o	 [o] DET M S <artd> <-sam> @>N
+1º.	 [1º.] ADJ M S <NUM-ord> @>N
+cartório	 [cartório] N M S @P<
+de	 [de] PRP @N<
+Notas=de=Santo=André	 [Notas=de=Santo=André] PROP M/F S @P<
+$,
+também	 [também] ADV @ADVL>
+estaria	 [estar] V COND 3S VFIN <fmc> @FMV
+falsificado	 [falsificar] V PCP M S @<SC
+$.	 [$.] PU <<<
+$¶	 [$¶] PU <<<
+</s>
+<s>
+Em	 [em] PRP <sam-> @ADVL>
+o	 [o] DET M S <artd> <-sam> @>N
+começo	 [começo] N M S @P<
+de	 [de] PRP @N<
+dezembro	 [dezembro] N M S @P<
+$,
+a	 [o] DET F S <artd> @>N
+Justiça	 [justiça] <prop> N F S @SUBJ>
+determinou	 [determinar] V PS 3S IND VFIN <fmc> @FMV
+que	 [que] KS @SUB @#FS-<ACC
+Pasini	 [Pasini] PROP M/F S @SUBJ>
+perdesse	 [perder] V IMPF 3S SUBJ VFIN @FMV
+as	 [o] DET F P <artd> @>N
+mordomias	 [mordomia] N F P @<ACC
+que	 [que] SPEC M/F S @ACC> <rel> @#FS-N<
+tinha	 [ter] V IMPF 3S IND VFIN @FMV
+em	 [em] PRP <sam-> @<ADVL
+o	 [o] DET M S <artd> <-sam> @>N
+91º.	 [91º.] <n> ADJ M S <NUM-ord> @P<
+DP	 [DP] PROP M S @P<
+$,
+delegacia	 [delegacia] N F S @N<PRED
+reservada	 [reservar] V PCP F S @N<
+para	 [para] PRP @N<
+presos	 [preso] N M P @P<
+que	 [que] SPEC M/F S @ACC> <rel> @#FS-N<
+têm	 [ter] V PR 3P IND VFIN @FMV
+diploma	 [diploma] N M S @PRED>
+universitário	 [universitário] ADJ M S @N<
+$.	 [$.] PU <<<
+$¶	 [$¶] PU <<<
+</s>
+<s>
+Como	 [como] ADV @#FS-ADVL> <ks> <rel> @ADVL>
+Pasini	 [Pasini] PROP M/F S @SUBJ>
+não	 [não] ADV @ADVL>
+teria	 [ter] V COND 3S VFIN @FAUX
+concluído	 [concluir] V PCP @IMV @#ICL-AUX<
+o	 [o] DET M S <artd> @>N
+curso	 [curso] N M S @<ACC
+de	 [de] PRP @N<
+medicina	 [medicina] N F S @P<
+$,
+ele	 [ele] PERS M 3S NOM @SUBJ>
+foi	 [ser] V PS 3S IND VFIN <fmc> @FAUX
+transferido	 [transferir] V PCP M S @IMV @#ICL-AUX<
+para	 [para] PRP @<ADVL
+o	 [o] DET M S <artd> @>N
+COC	 [COC] PROP M S @P<
+$(	 [$(] PU
+Centro=de=Obeservação=Criminológica	 [Centro=de=Obeservação=Criminológica] PROP M S @N<PRED
+$)	 [$)] PU
+$.	 [$.] PU <<<
+$¶	 [$¶] PU <<<
+</s>
+<s>
+Ele	 [ele] PERS M 3S NOM @SUBJ>
+ocupa	 [ocupar] V PR 3S IND VFIN <fmc> @FMV
+uma	 [um] DET F S <arti> @>N
+cela	 [cela] N F S @<ACC
+individual	 [individual] ADJ F S @N<
+em	 [em] PRP @<ADVL
+um	 [um] DET M S <arti> @>N
+pavilhão	 [pavilhão] N M S @P<
+com	 [com] PRP @N<
+traficantes	 [traficante] N M/F P @P<
+$,
+assassinos	 [assassino] N M P @P<
+e	 [e] KC @CO
+ladrões	 [ladrão] N M P @P<
+$.	 [$.] PU <<<
+$¶	 [$¶] PU <<<
+</s>
+<s>
+$(	 [$(] PU
+Marcelo=Godoy	 [Marcelo=Godoy] PROP M S @NPHR
+$)	 [$)] PU
+$¶	 [$¶] PU <<<
+</s>
+</TEXT>
+$¶	 [$¶] PU <<<
+</DOC>

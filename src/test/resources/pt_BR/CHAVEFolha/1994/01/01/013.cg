@@ -1,0 +1,242 @@
+<DOC>
+<DOCNO.valor=FSP940101-013>
+<DOCID.valor=FSP940101-013>
+<DATE.valor=940101>
+<TEXT>
+<s>
+A	 [o] DET F S <artd> @>N
+então	 [então] ADJ F S @>N
+ministra	 [ministra] N F S @SUBJ>
+de	 [de] PRP <sam-> @N<
+o	 [o] DET M S <artd> <-sam> @>N
+Planejamento	 [planejamento] <prop> N M S @P<
+$,
+Yeda=Crusius	 [Yeda=Crusius] PROP F S @APP
+$,
+gostava	 [gostar] V IMPF 3S IND VFIN <fmc> @FMV
+de	 [de] PRP @<PIV
+ir	 [ir] V INF @IMV @#ICL-P<
+a	 [a] PRP <sam-> @<ADVS
+a	 [o] DET F S <artd> <-sam> @>N
+praia	 [praia] N F S @P<
+$.	 [$.] PU <<<
+$¶	 [$¶] PU <<<
+</s>
+<s>
+Sempre=que	 [sempre=que] ADV @#FS-ADVL> <ks> <rel> @ADVL>
+se	 [se] PERS M/F 3S ACC <refl> @ACC>
+encontrava	 [encontrar] V IMPF 1/3S IND VFIN @FMV
+em	 [em] PRP <sam-> @<ADVL
+uma	 [um] DET F S <arti> <-sam> @>N
+cidade	 [cidade] N F S @P<
+litorânea	 [litorâneo] ADJ F S @N<
+escapava	 [escapar] V IMPF 1/3S IND VFIN <fmc> @FMV
+de	 [de] PRP <sam-> @<PIV
+o	 [o] DET M S <artd> <-sam> @>N
+hotel	 [hotel] N M S @P<
+a	 [a] PRP <sam-> @<PIV
+as	 [o] DET F P <artd> <-sam> @>N
+7h	 [7h] N F P @P<
+$,
+quando	 [quando] ADV @ADVL> <ks> <rel> @#FS-N<
+supunha	 [supor] V IMPF 1/3S IND VFIN @FMV
+que	 [que] KS @SUB @#FS-<ACC
+os	 [o] DET M P <artd> @>N
+fotógrafos	 [fotógrafo] N M P @SUBJ>
+estavam	 [estar] V IMPF 3P IND VFIN @FAUX
+dormindo	 [dormir] V GER @#ICL-AUX< @IMV
+$,
+e	 [e] <co-fmc> <co-vfin> KC @CO
+se	 [se] PERS M/F 3S ACC @SUBJ>
+atirava	 [atirar] V IMPF 3S IND VFIN <fmc> @FMV
+em	 [em] PRP <sam-> @<PIV
+o	 [o] DET M S <artd> <-sam> @>N
+mar	 [mar] N M S @P<
+$.	 [$.] PU <<<
+$¶	 [$¶] PU <<<
+</s>
+<s>
+Seu	 [seu] DET M S <poss 3S> @>N
+assessor	 [assessor] N M S @SUBJ>
+de	 [de] PRP @N<
+imprensa	 [imprensa] N F S @P<
+entrava	 [entrar] V IMPF 3S IND VFIN <fmc> @FMV
+em	 [em] PRP @<ADVS
+pânico	 [pânico] N M S @P<
+e	 [e] <co-fmc> <co-vfin> KC @CO
+prevenia	 [prevenir] V IMPF 3S IND VFIN <fmc> @FMV
+$:	 [$:] PU <<<
+$¶	 [$¶] PU <<<
+</s>
+<s>
+$	 [$] PU
+Mais	 [mais] ADV <kc> @CO
+dia	 [dia] N M S @SUBJ>
+$,
+menos	 [pouco] DET M S <KOMP> <quant> @>N
+dia	 [dia] N M S @SUBJ>
+$,
+eles	 [eles] PERS M 3P NOM @SUBJ>
+vão	 [ir] V PR 3P IND VFIN <fmc> @FAUX
+descobrir	 [descobrir] V INF @IMV @#ICL-AUX<
+e	 [e] <co-inf> KC @CO
+fotografar	 [fotografar] V INF @IMV @#ICL-AUX<
+a	 [o] DET F S <artd> @>N
+senhora	 [senhora] N F S @<ACC
+$.	 [$.] PU <<<
+$¶	 [$¶] PU <<<
+</s>
+<s>
+Não	 [não] ADV @ADVL>
+deu	 [dar] V PS 3S IND VFIN <fmc> @FMV
+outra	 [outro] DET F S <KOMP> <diff> @<ACC
+$.	 [$.] PU <<<
+$¶	 [$¶] PU <<<
+</s>
+<s>
+Em	 [em] PRP <sam-> @ADVL>
+um	 [um] DET M S <arti> <-sam> @>N
+belo	 [belo] ADJ M S @>N
+dia	 [dia] N M S @P<
+$,
+os	 [o] DET M P <artd> @>N
+jornais	 [jornal] N M P @SUBJ>
+estamparam	 [estampar] V PS/MQP 3P IND VFIN <fmc> @FMV
+as	 [o] DET F P <artd> @>N
+fotos	 [foto] N F P @<ACC
+de	 [de] PRP <sam-> @N<
+a	 [o] DET F S <artd> <-sam> @>N
+ministra	 [ministra] N F S @P<
+de	 [de] PRP @N<
+maiô	 [maiô] N M S @P<
+$.	 [$.] PU <<<
+$¶	 [$¶] PU <<<
+</s>
+<s>
+Em	 [em] PRP @ADVL>
+Brasília	 [Brasília] PROP F S @P<
+$,
+o	 [o] DET M S <artd> @>N
+ministro=da=Fazenda	 [ministro=da=Fazenda] N M S @SUBJ>
+$,
+Paulo=Haddad	 [Paulo=Haddad] PROP M S @APP
+$,
+ficou	 [ficar] V PS 3S IND VFIN <fmc> @FAUX
+sabendo	 [saber] V GER @#ICL-AUX< @IMV
+de	 [de] PRP <sam-> @<PIV
+o	 [o] DET M S <artd> <-sam> @>N
+acontecido	 [acontecido] N M S @P<
+por=iniciativa=de	 [por=iniciativa=de] PRP @N< @<ADVL
+um	 [um] DET M S <arti> @>N
+assessor	 [assessor] N M S @P<
+$,
+quando	 [quando] ADV @#FS-<ADVL <ks> <rel> @ADVL>
+viajava	 [viajar] V IMPF 3S IND VFIN @FMV
+de	 [de] PRP @<ADVL
+carro	 [carro] N M S @P<
+de	 [de] PRP <sam-> @<ADVS
+o	 [o] DET M S <artd> <-sam> @>N
+ministério	 [ministério] N M S @P<
+para	 [para] PRP @<ADVL
+a	 [o] DET F S <artd> @>N
+Base=Aérea	 [Base=Aérea] PROP F S @P<
+$.	 [$.] PU <<<
+$¶	 [$¶] PU <<<
+</s>
+<s>
+Recebeu	 [receber] V PS 3S IND VFIN <fmc> @FMV
+a	 [o] DET F S <artd> @>N
+notícia	 [notícia] N F S @<ACC
+em	 [em] PRP @<ADVL
+silêncio	 [silêncio] N M S @P<
+e	 [e] <co-fmc> <co-vfin> KC @CO
+em	 [em] PRP @<ADVL
+silêncio	 [silêncio] N M S @P<
+ficou	 [ficar] V PS 3S IND VFIN <fmc> @FMV
+$,
+distraindo-	 [distrair] V GER @#ICL-<ADVL <hyfen> @IMV
+se	 [se] PERS M/F 3S ACC <obj> @<ACC
+com	 [com] PRP @<ADVL
+o	 [o] DET M S <artd> @>N
+costume	 [costume] N M S @P<
+de	 [de] PRP @N<
+mordiscar	 [mordiscar] V INF @IMV @#ICL-P<
+os	 [o] DET M P <artd> @>N
+lábios	 [lábio] N M P @<ACC
+$.	 [$.] PU <<<
+$¶	 [$¶] PU <<<
+</s>
+<s>
+Após	 [após] PRP @ADVL>
+dez	 [dez] NUM M P <card> @>N
+minutos	 [minuto] N M P @P<
+perguntou	 [perguntar] V PS 3S IND VFIN <fmc> @FMV
+$:	 [$:] PU <<<
+$¶	 [$¶] PU <<<
+</s>
+<s>
+$	 [$] PU
+Você	 [você] PERS M/F 3S NOM @SUBJ>
+viu	 [ver] V PS 3S IND VFIN <fmc> @FMV
+as	 [o] DET F P <artd> @>N
+fotos	 [foto] N F P @<ACC
+$?	 [$?] PU <<<
+$¶	 [$¶] PU <<<
+</s>
+<s>
+O	 [o] DET M S <artd> @>N
+assessor	 [assessor] N M S @SUBJ>
+disse	 [dizer] V PS 3S IND VFIN <fmc> @FMV
+que	 [que] KS @SUB @#FS-<ACC
+sim	 [sim] ADV @<ADVL
+$.	 [$.] PU <<<
+$¶	 [$¶] PU <<<
+</s>
+<s>
+Mais	 [mais] ADV <kc> @CO
+dois	 [dois] NUM M P <card> @>N
+minutos	 [minuto] N M P @PRED>
+de	 [de] PRP @N<
+silêncio	 [silêncio] N M S @P<
+e	 [e] KC @CO
+o	 [o] DET M S <artd> @>N
+ministro	 [ministro] N M S @SUBJ>
+retomou	 [retomar] V PS 3S IND VFIN <fmc> @FMV
+$:	 [$:] PU <<<
+$¶	 [$¶] PU <<<
+</s>
+<s>
+$	 [$] PU
+E	 [e] KC @CO
+que	 [que] SPEC M/F S <interr> @SC>	 [que] DET M/F S <interr> @SC>
+tal	 [tal] DET M/F S <diff> @NPHR	 [tal] ADV <quant> <dem> @ADVL
+$?	 [$?] PU <<<
+$¶	 [$¶] PU <<<
+</s>
+<s>
+O	 [o] DET M S <artd> @>N
+assessor	 [assessor] N M S @SUBJ>
+foi	 [ser] V PS 3S IND VFIN <fmc> @FMV
+sincero	 [sincero] ADJ M S @<SC
+$:	 [$:] PU <<<
+$¶	 [$¶] PU <<<
+</s>
+<s>
+$	 [$] PU
+Se	 [se] KS @#FS-ADVL> @SUB
+ela	 [ela] PERS F 3S NOM @SUBJ>
+fosse	 [ser] V IMPF 3S SUBJ VFIN @FMV
+em	 [em] PRP <sam-> @<SC
+o	 [o] DET M S <artd> <-sam> @>N
+horário	 [horário] N M S @P<
+de	 [de] PRP <sam-> @N<
+as	 [o] DET F P <artd> <-sam> @>N
+dez	 [dez] NUM F P <card> @P<
+seria	 [ser] V COND 3S VFIN <fmc> @FAUX
+aplaudida	 [aplaudir] V PCP F S @IMV @#ICL-AUX<
+$.	 [$.] PU <<<
+$¶	 [$¶] PU <<<
+</s>
+</TEXT>
+$¶	 [$¶] PU <<<
+</DOC>

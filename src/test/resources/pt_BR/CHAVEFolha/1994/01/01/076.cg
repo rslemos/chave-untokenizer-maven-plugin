@@ -1,0 +1,263 @@
+<DOC>
+<DOCNO.valor=FSP940101-076>
+<DOCID.valor=FSP940101-076>
+<DATE.valor=940101>
+<TEXT>
+<s>
+Da=Reportagem=Local	 [Da=Reportagem=Local] PROP F S @NPHR
+$¶	 [$¶] PU <<<
+</s>
+<s>
+O	 [o] DET M S <artd> @>N
+Sesc=Pinheiros	 [Sesc=Pinheiros] PROP M S @SUBJ>
+$,
+que	 [que] SPEC M/F S @SUBJ> <rel> @#FS-N<
+começou	 [começar] V PS 3S IND VFIN @FAUX
+a	 [a] PRP @PRT-AUX<
+funcionar	 [funcionar] V INF @IMV @#ICL-AUX<
+em	 [em] PRP @<ADVL
+novembro	 [novembro] N M S @P<
+$,
+já	 [já] ADV @ADVL>
+abriu	 [abrir] V PS 3S IND VFIN <fmc> @FMV
+inscrições	 [inscrição] N F P @<ACC
+para	 [para] PRP @<ADVL
+nove	 [nove] NUM M P <card> @>N
+cursos	 [curso] N M P @P<
+de	 [de] PRP @N<
+férias	 [féria] N F P @P<
+$.	 [$.] PU <<<
+$¶	 [$¶] PU <<<
+</s>
+<s>
+Também	 [também] ADV @ADVL>
+estão	 [estar] V PR 3P IND VFIN <fmc> @FMV
+programadas	 [programar] V PCP F P @<SC
+duas	 [dois] NUM F P <card> @<SUBJ
+mostras	 [mostrar] V PR 2S IND VFIN <fmc> @FMV
+de	 [de] PRP @<ADVL
+vídeo	 [vídeo] N M S @P<
+e	 [e] KC @CO
+dois	 [dois] NUM M P <card> @>N
+shows	 [show] N M P @<ACC
+musicais	 [musical] ADJ M P @N<
+em	 [em] PRP <sam-> @N<
+o	 [o] DET M S <artd> <-sam> @>N
+mês	 [mês] N M S @P<
+de	 [de] PRP @N<
+janeiro	 [janeiro] N M S @P<
+$.	 [$.] PU <<<
+$¶	 [$¶] PU <<<
+</s>
+<s>
+Todas=as	 [todo=o] DET F P <quant> @>N
+atividades	 [atividade] N F P @SUBJ>
+são	 [ser] V PR 3P IND VFIN <fmc> @FAUX
+abertas	 [abrir] V PCP F P @IMV @#ICL-AUX<
+mesmo	 [mesmo] ADV <quant> @>P
+para	 [para] PRP @<PIV
+quem	 [quem] SPEC M S @#FS-P< <rel> @SUBJ>
+não	 [não] ADV @ADVL>
+é	 [ser] V PR 3S IND VFIN @FMV
+comerciário	 [comerciário] N M S @<SC
+ou	 [ou] KC @CO
+sócio	 [sócio] N M S @<SC
+de	 [de] PRP <sam-> @N<
+o	 [o] DET M S <artd> <-sam> @>N
+Sesc	 [Sesc] PROP M S @P<
+$.	 [$.] PU <<<
+$¶	 [$¶] PU <<<
+</s>
+<s>
+Os	 [o] DET M P <artd> @>N
+cursos	 [curso] N M P @SUBJ>
+serão	 [ser] V FUT 3P IND VFIN <fmc> @FAUX
+realizados	 [realizar] V PCP M P @IMV @#ICL-AUX<
+entre	 [entre] PRP @<ADVL
+os	 [o] DET M P <artd> @>N
+dias	 [dia] N M P @P<
+10	 [10] NUM M/F P <card> @N<
+e	 [e] KC @CO
+30	 [30] NUM M/F P <card> @N<
+de	 [de] PRP @N<
+janeiro	 [janeiro] N M S @P<
+$.	 [$.] PU <<<
+$¶	 [$¶] PU <<<
+</s>
+<s>
+As	 [o] DET F P <artd> @>N
+opções	 [opção] N F P @SUBJ>
+são	 [ser] V PR 3P IND VFIN <fmc> @FMV
+$:	 [$:] PU <<<
+ginástica	 [ginástica] N F S @TOP
+voluntária	 [voluntário] ADJ F S @N<
+$,
+massagem	 [massagem] N F S @N<PRED
+psíquica	 [psíquico] ADJ F S @N<
+e	 [e] KC @CO
+quiroprática	 [quiroprática] N F S <DERP> @N<PRED
+$,
+radiestesia	 [radiestesia] N F S <DERP> @N<PRED
+e	 [e] KC @CO
+comportamento	 [comportamento] N M S @PRED>
+energético	 [energético] ADJ M S @N<
+$,
+massagem	 [massagem] N F S @N<PRED
+para	 [para] PRP @ADVL>
+gestantes	 [gestante] N F P @P<
+$,
+automassagem	 [automassagem] N F S <DERP> @PRED>
+$,
+thai ALT xxxi	 [thaer] V PS 1S IND VFIN <fmc> @FMV
+chi ALT xxx	 [chi] N M S @<ACC
+qi	 [qi] N M/F S @PRED>
+gong ALT xxx	 [gong] N M S @<SUBJ
+$,
+eutonia	 [eutonia] N F S <DERS> <DERS> @<ACC
+$,
+dança	 [dança] N F S @<ACC
+negra	 [negro] ADJ F S @N<
+contemporânea	 [contemporâneo] ADJ F S @PRED>
+e	 [e] KC @CO
+consciência	 [consciência] N F S @<ACC
+por	 [por] PRP <sam-> @N<
+o	 [o] DET M S <artd> <-sam> @>N
+movimento	 [movimento] N M S @P<
+$.	 [$.] PU <<<
+$¶	 [$¶] PU <<<
+</s>
+<s>
+Os	 [o] DET M P <artd> @>N
+preços	 [preço] N M P @SUBJ>
+variam	 [variar] V PR 3P IND VFIN <fmc> @FMV
+de	 [de] PRP @<PIV
+Cr$	 [cr$] N M S @P<
+2.500,00	 [2.500,00] NUM M/F P <card> @N<
+a	 [o] DET F S <artd> @>N
+Cr$	 [cr$] <prop> N M S @PRED>
+5.000,00	 [5.000,00] NUM M/F P <card> @N<
+para	 [para] PRP @N<
+comerciários	 [comerciário] N M P @P<
+$,
+e	 [e] KC @CO
+de	 [de] PRP @<ADVL
+Cr$	 [cr$] N M S @P<
+5.300,00	 [5.300,00] NUM M/F P <card> @N<
+a	 [o] DET F S <artd> @>N
+Cr$	 [cr$] <prop> N M S @APP
+10	 [10] NUM M/F P <card> @>N
+mil	 [mil] NUM M/F P <card> @N<
+para	 [para] PRP @N<
+usuários	 [usuário] N M P @P<
+$,
+dependendo	 [depender] V GER @#ICL-<ADVL @IMV
+de	 [de] PRP <sam-> @<PIV
+o	 [o] DET M S <artd> <-sam> @>N
+número	 [número] N M S @P<
+de	 [de] PRP @N<
+aulas	 [aula] N F P @P<
+dadas	 [dar] V PCP F P @N<
+por	 [por] PRP @<ADVL
+semana	 [semana] N F S @P<
+$.	 [$.] PU <<<
+$¶	 [$¶] PU <<<
+</s>
+<s>
+Cada	 [cada] DET F S <quant> @>N
+turma	 [turma] N F S @SUBJ>
+terá	 [ter] V FUT 3S IND VFIN <fmc> @FMV
+$,
+no=máximo	 [no=máximo] ADV @<ADVL
+$,
+20	 [20] NUM M P <card> @>N
+alunos	 [aluno] N M P @<ACC
+$.	 [$.] PU <<<
+$¶	 [$¶] PU <<<
+</s>
+<s>
+A	 [o] DET F S <artd> @>N
+mostra	 [mostra] N F S @SUBJ>
+de	 [de] PRP @N<
+vídeo	 [vídeo] N M S @P<
+Aventuras=Fantásticas	 [Aventuras=Fantásticas] PROP M S <*2> <*1> @N<
+vai	 [ir] V PR 3S IND VFIN <fmc> @FAUX
+exibir	 [exibir] V INF @IMV @#ICL-AUX<
+$,
+a	 [a] PRP <sam-> @<ADVL
+as	 [o] DET F P <artd> <-sam> @>N
+quartas	 [quarto] <n> ADJ F P <NUM-ord> @P<
+e	 [e] KC @CO
+quintas-feiras	 [quinta-feira] N F P @P<
+$,
+filmes	 [filme] N M P @<ACC
+como	 [como] ADV @COM <rel> @#AS-N<
+Os=Caçadores=da=Arca=Perdida	 [Os=Caçadores=da=Arca=Perdida] PROP M S <*2> <*1> @AS<
+$,
+de	 [de] PRP <sam-> @N<PRED
+o	 [o] DET M S <artd> <-sam> @>N
+cineasta	 [cineasta] N M S @P<
+norte-americano	 [norte-americano] ADJ M S @N<
+Steven=Spielberg	 [Steven=Spielberg] PROP M S @N<
+$.	 [$.] PU <<<
+$¶	 [$¶] PU <<<
+</s>
+<s>
+As	 [o] DET F P <artd> @>N
+segundas	 [segundo] <n> ADJ F P <NUM-ord> @SC>
+e	 [e] KC @CO
+terças-feiras	 [terça-feira] N F P @SUBJ>
+$,
+serão	 [ser] V FUT 3P IND VFIN <fmc> @FAUX
+exibidos	 [exibir] V PCP M P @IMV @#ICL-AUX<
+desenhos=animados	 [desenhos=animados] N M P @<SUBJ
+em	 [em] PRP <sam-> @<ADVL
+o	 [o] DET M S <artd> <-sam> @>N
+Ciclo=de=Laser=Vídeo	 [Ciclo=de=Laser=Vídeo] PROP M S <*2> <*1> @P<
+$.	 [$.] PU <<<
+$¶	 [$¶] PU <<<
+</s>
+<s>
+A	 [o] DET F S <artd> @>N
+entrada	 [entrada] N F S @SUBJ>
+é	 [ser] V PR 3S IND VFIN <fmc> @FMV
+gratuita	 [gratuito] ADJ F S @<SC
+$.	 [$.] PU <<<
+$¶	 [$¶] PU <<<
+</s>
+<s>
+Sesc=Pinheiros-Av.	 [Sesc=Pinheiros-Av.] PROP M/F S @NPHR
+$.	 [$.] PU <<<
+Rebouças	 [Rebouças] PROP M/F S @NPHR
+$,
+2876	 [2876] NUM M/F P <card> @P<
+$.	 [$.] PU <<<
+$¶	 [$¶] PU <<<
+</s>
+<s>
+Inscrições	 [inscrição] N F P @NPHR
+em	 [em] PRP <sam-> @N<
+o	 [o] DET M S <artd> <-sam> @>N
+setor	 [setor] N M S @P<
+de	 [de] PRP @N<
+recepção	 [recepção] N F S @P<
+de	 [de] PRP <sam-> @N<
+as	 [o] DET F P <artd> <-sam> @>N
+8h	 [8h] N F P @P<
+a	 [a] PRP <sam-> @ADVL>
+as	 [o] DET F P <artd> <-sam> @>N
+19	 [19] NUM F P <card> @>N
+h30	 [h30] PROP F S @P<
+$.	 [$.] PU <<<
+$¶	 [$¶] PU <<<
+</s>
+<s>
+Telefones	 [telefone] N M P @NPHR
+$:	 [$:] PU <<<
+211-8865	 [211-8865] NUM M/F P <card> @>N
+e	 [e] KC @CO
+211-8602	 [211-8602] NUM M/F P <card> @P<
+$¶	 [$¶] PU <<<
+</s>
+</TEXT>
+$¶	 [$¶] PU <<<
+</DOC>

@@ -1,0 +1,214 @@
+<DOC>
+<DOCNO.valor=FSP940101-037>
+<DOCID.valor=FSP940101-037>
+<DATE.valor=940101>
+<TEXT>
+<s>
+Da=Reportagem=Local	 [Da=Reportagem=Local] PROP F S @NPHR
+$¶	 [$¶] PU <<<
+</s>
+<s>
+A	 [o] DET F S <artd> @>N
+indústria	 [indústria] N F S @SUBJ>
+de	 [de] PRP @N<
+brinquedos	 [brinquedo] N M P @P<
+$,
+que	 [que] SPEC M/F S @SUBJ> <rel> @#FS-N<
+vive	 [viver] V PR 3S IND VFIN @FMV
+de	 [de] PRP @<PIV
+tirar	 [tirar] V INF @IMV @#ICL-P<
+produtos	 [produto] N M P @<ACC
+de	 [de] PRP @<PIV
+linha	 [linha] N F S @P<
+e	 [e] <co-inf> KC @CO
+lançar	 [lançar] V INF @#ICL-P< @IMV
+novos	 [novo] ADJ M P @<PRED
+$,
+promete	 [prometer] V PR 3S IND VFIN <fmc> @FMV
+laçar	 [laçar] V INF @IMV @#ICL-<ACC
+também	 [também] ADV @>N
+gente=grande	 [gente=grande] N F S @<ACC
+$.	 [$.] PU <<<
+$¶	 [$¶] PU <<<
+</s>
+<s>
+A	 [o] DET F S <artd> @>N
+Tec=Toy	 [Tec=Toy] PROP F S @SUBJ>
+$,
+empresa	 [empresa] N F S @N<PRED
+que	 [que] SPEC M/F S @SUBJ> <rel> @#FS-N<
+tem	 [ter] V PR 3S IND VFIN @FMV
+a	 [o] DET F S <artd> @>N
+marca	 [marca] N F S @<ACC
+de	 [de] PRP @N<
+videogames	 [videogame] N M P @P<
+japonesa	 [japonês] ADJ F S @N<
+Sega	 [Sega] PROP F S @SUBJ>
+$,
+vai	 [ir] V PR 3S IND VFIN <fmc> @FAUX
+fabricar	 [fabricar] V INF @IMV @#ICL-AUX<
+em	 [em] PRP <sam-> @<ADVL
+o	 [o] DET M S <artd> <-sam> @>N
+Brasil	 [Brasil] PROP M S @P<
+o	 [o] DET M S <artd> @>N
+Sega=VR	 [Sega=VR] PROP F S @<ACC
+$(	 [$(] PU
+de	 [de] PRP @N<PRED
+Virtual=Reality	 [Virtual=Reality] PROP M S <*2> <*1> @P<
+$)	 [$)] PU
+$,
+acessório	 [acessório] ADJ M S @N<PRED @P<
+para	 [para] PRP @<ADVL
+o	 [o] DET M S <artd> @>N
+Mega=Drive	 [Mega=Drive] PROP M S @P<
+que	 [que] SPEC M/F S @SUBJ> <rel> @#FS-N<
+põe	 [pôr] V PR 3S IND VFIN @FMV
+o	 [o] DET M S <artd> @>N
+jogador	 [jogador] N M S @<ACC
+dentro	 [dentro] ADV <*2> <*1> @<ADVL
+de	 [de] PRP <sam-> @A<
+o	 [o] DET M S <artd> <-sam> @>N
+game	 [game] N M S @P<
+$.	 [$.] PU <<<
+$¶	 [$¶] PU <<<
+</s>
+<s>
+O	 [o] DET M S <artd> @>N
+acessório	 [acessório] N M S @SUBJ>
+$,
+misto	 [misturar] V PCP M S @N<PRED
+de	 [de] PRP @<ADVL
+óculos	 [óculo] N M P @P<
+e	 [e] KC @CO
+capacete	 [capacete] N M S @N<PRED
+$,
+virá	 [vir] V FUT 3S IND VFIN <fmc> @FMV
+junto=com	 [junto=com] PRP @<ADVL
+jogos	 [jogo] N M P @P<
+especiais	 [especial] ADJ M P @N<
+$.	 [$.] PU <<<
+$¶	 [$¶] PU <<<
+</s>
+<s>
+Dependendo	 [depender] V GER @IMV <*1> @#ICL-ADVL>
+de	 [de] PRP <sam-> @<PIV
+o	 [o] DET M S <artd> <-sam> @>N
+game	 [game] N M S @P<
+$,
+poderá	 [poder] V FUT 3S IND VFIN @FAUX @#FS-ACC>>
+ser	 [ser] V INF @IAUX @#ICL-AUX<
+utilizado	 [utilizar] V PCP M S @IMV @#ICL-AUX<
+por	 [por] PRP @<PASS
+crianças	 [criança] N F P @P<
+ou	 [ou] <co-vfin> KC @CO
+adultos	 [adulto] N M P <*2> @P<
+$,
+explica	 [explicar] V PR 3S IND VFIN <fmc> @FMV
+Stefano=Arnhold	 [Stefano=Arnhold] PROP M S @<SUBJ
+$,
+39	 [39] NUM M P <card> @<ACC
+$,
+vice-presidente	 [vice-presidente] N M S @N<PRED
+de	 [de] PRP <sam-> @N<
+a	 [o] DET F S <artd> <-sam> @>N
+empresa	 [empresa] N F S @P<
+$.	 [$.] PU <<<
+$¶	 [$¶] PU <<<
+</s>
+<s>
+O	 [o] DET M S <artd> @>N
+aparelho	 [aparelho] N M S @SUBJ>
+estará	 [estar] V FUT 3S IND VFIN <fmc> @FMV
+disponível	 [disponível] <n> ADJ M S @<SC
+em	 [em] PRP <sam-> @N<
+o	 [o] DET M S <artd> <-sam> @>N
+segundo	 [segundo] ADJ M S <NUM-ord> @>N
+semestre	 [semestre] N M S @P<
+e	 [e] <co-fmc> <co-vfin> KC @CO
+custará	 [custar] V FUT 3S IND VFIN <fmc> @FMV
+cerca=de	 [cerca=de] PRP @<ADVL
+US$	 [US$] PROP M/F S @P<
+300	 [300] NUM M/F P <card> @N<
+$.	 [$.] PU <<<
+$¶	 [$¶] PU <<<
+</s>
+<s>
+Antes	 [antes] ADV @ADVL>
+de	 [de] PRP <sam-> @A<
+isso	 [isso] SPEC M S <dem> <-sam> @P<
+$,
+a	 [o] DET F S <artd> @>N
+Tec=Toy	 [Tec=Toy] PROP F S @SUBJ>
+lança	 [lançar] V PR 3S IND VFIN <fmc> @FMV
+o	 [o] DET M S <artd> @>N
+Activator	 [Activator] PROP M S @<ACC
+$,
+acessório	 [acessório] N M S @N<PRED
+para	 [para] PRP @<ADVL
+o	 [o] DET M S <artd> @>N
+Mega=Drive	 [Mega=Drive] PROP M S @P<
+que	 [que] SPEC M/F S @SUBJ> <rel> @#FS-N<
+torna	 [tornar] V PR 3S IND VFIN @FMV
+o	 [o] DET M S <artd> @>N
+game	 [game] N M S @<ACC
+interativo	 [interativo] ADJ M S @<OC
+$.	 [$.] PU <<<
+$¶	 [$¶] PU <<<
+</s>
+<s>
+A	 [o] DET F S <artd> @>N
+Playtronic	 [Playtronic] PROP F S @SUBJ>
+$,
+que	 [que] SPEC M/F S @SUBJ> <rel> @#FS-N<
+traz	 [trazer] V PR 3S IND VFIN @FMV
+os	 [o] DET M P <artd> @>N
+games	 [game] N M P @<ACC
+de	 [de] PRP <sam-> @N<
+a	 [o] DET F S <artd> <-sam> @>N
+Nintendo	 [Nintendo] PROP F S @P<
+$,
+faz	 [fazer] V PR 3S IND VFIN <fmc> @FMV
+três	 [três] NUM M P <card> @>N
+lançamentos	 [lançamento] N M P @<ACC
+$:	 [$:] PU <<<
+o	 [o] DET M S <artd> @>N
+We	 [We] PROP M S @NPHR
+$'	 [$'] PU
+re ALT ré	 [réu] N F S @NPHR
+Back	 [Back] PROP F S @N<
+$,
+com	 [com] PRP @ADVL
+o	 [o] DET M S <artd> @>N
+tiranossauro	 [tiranossauro] N M S @P<
+rex ALT xxx	 [rex] N M S @NPHR
+$;	 [$;] PU <<<
+o	 [o] DET M S <artd> @>N
+Daffy=Duck	 [Daffy=Duck] PROP M S @NPHR
+e	 [e] KC @CO
+Mortal=Kombat	 [Mortal=Kombat] PROP M S @NPHR
+$.	 [$.] PU <<<
+$¶	 [$¶] PU <<<
+</s>
+<s>
+Os	 [o] DET M P <artd> @>N
+preços	 [preço] N M P @SUBJ>
+serão	 [ser] V FUT 3P IND VFIN <fmc> @FMV
+equivalentes	 [equivalente] ADJ M P @<SC
+a	 [o] DET F S <artd> @>N
+US$	 [US$] PROP M S @<SC
+80	 [80] NUM M/F P <card> @N<
+a	 [o] DET F S <artd> @>N
+US$	 [US$] PROP F S @APP
+100	 [100] NUM M/F P <card> @N<
+$.	 [$.] PU <<<
+$¶	 [$¶] PU <<<
+</s>
+<s>
+$(	 [$(] PU
+Fs	 [f] N M P @NPHR
+$)	 [$)] PU
+$¶	 [$¶] PU <<<
+</s>
+</TEXT>
+$¶	 [$¶] PU <<<
+</DOC>

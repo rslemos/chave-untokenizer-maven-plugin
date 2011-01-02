@@ -1,0 +1,366 @@
+<DOC>
+<DOCNO.valor=FSP940101-023>
+<DOCID.valor=FSP940101-023>
+<DATE.valor=940101>
+<TEXT>
+<s>
+Tales=Faria	 [Tales=Faria] PROP M/F S @NPHR
+$¶	 [$¶] PU <<<
+</s>
+<s>
+Da=Sucursal=de=Brasília	 [Da=Sucursal=de=Brasília] PROP F S @NPHR
+$¶	 [$¶] PU <<<
+</s>
+<s>
+O	 [o] DET M S <artd> @>N
+presidente	 [presidente] N M S @SUBJ>
+Itamar=Franco	 [Itamar=Franco] PROP M S @N<
+disse	 [dizer] V PS 3S IND VFIN <fmc> @FMV
+a	 [a] PRP <sam-> @<PIV
+o	 [o] DET M S <artd> <-sam> @>N
+líder	 [líder] N M S @P<
+de	 [de] PRP <sam-> @N<
+o	 [o] DET M S <artd> <-sam> @>N
+governo	 [governo] N M S @P<
+em	 [em] PRP <sam-> @<ADVL
+o	 [o] DET M S <artd> <-sam> @>N
+Senado	 [senado] <prop> N M S @P<
+$,
+Pedro=Simon	 [Pedro=Simon] PROP M S @APP
+$(	 [$(] PU
+PMDB-RS	 [PMDB-RS] PROP M/F S @N<PRED
+$)	 [$)] PU
+$,
+que	 [que] KS @SUB @#FS-<ACC
+pretende	 [pretender] V PR 3S IND VFIN @FMV
+concluir	 [concluir] V INF @IMV @#ICL-<ACC
+até	 [até] PRP @<ADVL
+o	 [o] DET M S <artd> @>N
+próximo	 [próximo] ADJ M S @>N
+dia	 [dia] N M S @P<
+10	 [10] NUM M/F P <card> @N<
+a	 [o] DET F S <artd> @>N
+reforma	 [reforma] N F S @<ACC
+ministerial	 [ministerial] ADJ F S @N<
+$.	 [$.] PU <<<
+$¶	 [$¶] PU <<<
+</s>
+<s>
+Em	 [em] PRP <sam-> @ADVL>
+a	 [o] DET F S <artd> <-sam> @>N
+segunda-feira	 [segunda-feira] N F S @P<
+$,
+Itamar	 [Itamar] PROP M S @P<
+e	 [e] KC @CO
+Simon	 [Simon] PROP M/F S @P<
+se	 [se] PERS M/F 3S ACC <coll> <refl> @ACC>
+reúnem	 [reunir] V PR 3P IND VFIN <fmc> @FMV
+em	 [em] PRP <sam-> @<ADVL
+o	 [o] DET M S <artd> <-sam> @>N
+Palácio=do=Planalto	 [Palácio=do=Planalto] PROP M S @P<
+para	 [para] PRP @<ADVL
+retomar	 [retomar] V INF @IMV @#ICL-P<
+a	 [o] DET F S <artd> @>N
+discussão	 [discussão] N F S @<ACC
+sobre	 [sobre] PRP @N<
+a	 [o] DET F S <artd> @>N
+nova	 [novo] ADJ F S @>N
+composição	 [composição] N F S @P<
+de	 [de] PRP <sam-> @N<
+o	 [o] DET M S <artd> <-sam> @>N
+ministério	 [ministério] N M S @P<
+$.	 [$.] PU <<<
+$¶	 [$¶] PU <<<
+</s>
+<s>
+Simon	 [Simon] PROP M/F S @P<
+se	 [se] PERS M/F 3S ACC @SUBJ>
+disse	 [dizer] V PS 3S IND VFIN <fmc> @FMV
+ontem	 [ontem] ADV @<ADVL
+surpreso	 [surpreso] ADJ M S <*2> <*1> @<OC
+com	 [com] PRP @A<
+o	 [o] DET M S <artd> @>N
+fato	 [fato] N M S @P<
+de	 [de] PRP @N<
+o	 [o] DET M S <artd> @>N
+presidente	 [presidente] N M S @SUBJ>
+ter	 [ter] V INF 3S @#ICL-P< @IAUX
+divulgado	 [divulgar] V PCP @IMV @#ICL-AUX<
+que	 [que] KS @SUB @#FS-<ACC
+pretende	 [pretender] V PR 3S IND VFIN @FMV
+dar	 [dar] V INF @IMV @#ICL-<ACC
+o	 [o] DET M S <artd> @>N
+comando	 [comando] N M S @<ACC
+de	 [de] PRP <sam-> @N<
+o	 [o] DET M S <artd> <-sam> @>N
+Ministério=das=Comunicações	 [Ministério=das=Comunicações] PROP M S @P<
+para	 [para] PRP @<ADVL
+um	 [um] DET M S <arti> @>N
+técnico	 [técnico] N M S @P<
+$.	 [$.] PU <<<
+$¶	 [$¶] PU <<<
+</s>
+<s>
+A	 [o] DET F S <artd> @>N
+expectativa	 [expectativa] N F S @SUBJ>
+era	 [ser] V IMPF 3S IND VFIN <fmc> @FMV
+de	 [de] PRP @<SC
+que	 [que] KS @SUB @#FS-P<
+o	 [o] DET M S <artd> @>N
+cargo	 [cargo] N M S @SUBJ>
+fosse	 [ser] V IMPF 3S SUBJ VFIN @FAUX
+ocupado	 [ocupar] V PCP M S @IMV @#ICL-AUX<
+por	 [por] PRP <sam-> @<PASS
+o	 [o] DET M S <artd> <-sam> @>N
+senador	 [senador] N M S @P<
+Élcio=Alvares	 [Élcio=Alvares] PROP M S @N<
+$(	 [$(] PU
+PFL-ES	 [PFL-ES] PROP M/F S @N<PRED
+$)	 [$)] PU
+$,
+vice-líder	 [vice-líder] N M S @N<PRED @<SUBJ
+de	 [de] PRP <sam-> @N<
+o	 [o] DET M S <artd> <-sam> @>N
+governo	 [governo] N M S @P<
+em	 [em] PRP <sam-> @<ADVL
+o	 [o] DET M S <artd> <-sam> @>N
+Senado	 [senado] <prop> N M S @P<
+$.	 [$.] PU <<<
+$¶	 [$¶] PU <<<
+</s>
+<s>
+O	 [o] DET M S <artd> @>N
+fato	 [fato] N M S @SUBJ>
+de	 [de] PRP @N<
+Itamar	 [Itamar] PROP M S @SUBJ>
+ter	 [ter] V INF 3S @#ICL-P< @IAUX
+anunciado	 [anunciar] V PCP @IMV @#ICL-AUX<
+anteontem	 [anteontem] ADV @<ADVL
+que	 [que] KS @SUB @#FS-<ACC
+nomeará	 [nomear] V FUT 3S IND VFIN @FMV
+um	 [um] DET M S <arti> @>N
+técnico	 [técnico] N M S @<ACC
+para	 [para] PRP @<PIV
+a	 [o] DET F S <artd> @>N
+pasta	 [pasta] N F S @P<
+leva	 [levar] V PR 3S IND VFIN <fmc> @FMV
+os	 [o] DET M P <artd> @>N
+articuladores	 [articulador] N M P @<ACC
+políticos	 [político] ADJ M P @N<
+de	 [de] PRP <sam-> @N<
+o	 [o] DET M S <artd> <-sam> @>N
+governo	 [governo] N M S @P<
+a	 [a] PRP @<PIV
+temerem	 [temer] V INF 3P @IMV @#ICL-P<
+que	 [que] KS @SUB @#FS-<ACC
+o	 [o] DET M S <artd> @>N
+presidente	 [presidente] N M S @SUBJ>
+insista	 [insistir] V PR 3S SUBJ VFIN @FMV
+em	 [em] PRP @<PIV
+ignorar	 [ignorar] V INF @IMV @#ICL-P<
+os	 [o] DET M P <artd> @>N
+partidos	 [partido] N M P @<ACC
+de	 [de] PRP <sam-> @N<
+a	 [o] DET F S <artd> <-sam> @>N
+base	 [base] N F S @P<
+de	 [de] PRP @N<
+sustentação	 [sustentação] N F S @P<
+de	 [de] PRP <sam-> @N<
+o	 [o] DET M S <artd> <-sam> @>N
+governo	 [governo] N M S @P<
+em	 [em] PRP <sam-> @<ADVL
+o	 [o] DET M S <artd> <-sam> @>N
+Congresso	 [congresso] <prop> N M S @P<
+em	 [em] PRP <sam-> @N<
+a	 [o] DET F S <artd> <-sam> @>N
+nova	 [novo] ADJ F S @>N
+composição	 [composição] N F S @P<
+de	 [de] PRP @N<
+seu	 [seu] DET M S <poss 3S> @>N
+governo	 [governo] N M S @P<
+$.	 [$.] PU <<<
+$¶	 [$¶] PU <<<
+</s>
+<s>
+Alvares	 [Alvares] PROP M/F S @SUBJ>
+integrava	 [integrar] V IMPF 3S IND VFIN <fmc> @FMV
+uma	 [um] DET F S <arti> @>N
+lista	 [lista] N F S @<ACC
+entregue	 [entregar] V PCP M S @IMV @#ICL-N<PRED
+por	 [por] PRP @<PASS
+Simon	 [Simon] PROP M/F S @P<
+a	 [a] PRP @<PIV
+Itamar	 [Itamar] PROP M S @P<
+$,
+que	 [que] SPEC M/F S @SUBJ> <rel> @#FS-N<
+previa	 [prever] V IMPF 3S IND VFIN @FMV
+ainda	 [ainda] ADV @>N
+a	 [o] DET F S <artd> @>N
+ocupação	 [ocupação] N F S @<ACC
+de	 [de] PRP <sam-> @N<
+o	 [o] DET M S <artd> <-sam> @>N
+ministério	 [ministério] N M S @P<
+por	 [por] PRP <sam-> @<ADVL
+os	 [o] DET M P <artd> <-sam> @>N
+senadores	 [senador] N M P @P<
+Beni=Veras	 [Beni=Veras] PROP M/F S @N<
+$(	 [$(] PU
+PSDB-CE	 [PSDB-CE] PROP M/F S @N<PRED
+$)	 [$)] PU
+$,
+Antônio=Mariz	 [Antônio=Mariz] PROP M S @P< @APP
+$(	 [$(] PU
+PMDB-PB	 [PMDB-PB] PROP M/F S @N<PRED
+$)	 [$)] PU
+e	 [e] KC @CO
+Josaphat=Marinho	 [Josaphat=Marinho] PROP M S @P< @<ACC
+$(	 [$(] PU
+PFL-BA	 [PFL-BA] PROP M/F S @N<PRED
+$)	 [$)] PU
+$.	 [$.] PU <<<
+$¶	 [$¶] PU <<<
+</s>
+<s>
+Veras	 [vera] N F P @SUBJ>
+ocuparia	 [ocupar] V COND 3S VFIN <fmc> @FMV
+a	 [o] DET F S <artd> @>N
+Indústria	 [indústria] <prop> N F S @<ACC
+e	 [e] <co-vfin> KC @CO
+Comércio	 [comércio] <prop> N M S @<ACC
+ou	 [ou] <co-vfin> KC @CO
+o	 [o] DET M S <artd> @>N
+Ministério=das=Minas	 [Ministério=das=Minas] PROP M S @<ACC
+e	 [e] <co-vfin> KC @CO
+Energia	 [Energia] PROP M/F S @<ACC
+$,
+para	 [para] PRP @ADVL>
+o=qual	 [o=qual] SPEC M S @P< <rel> @#FS-N<
+também	 [também] ADV @ADVL>
+poderia	 [poder] V COND 3S VFIN @FAUX
+ser	 [ser] V INF @IAUX @#ICL-AUX<
+nomeado	 [nomear] V PCP M S @IMV @#ICL-AUX<
+Antônio=Mariz	 [Antônio=Mariz] PROP M S @<SC
+$.	 [$.] PU <<<
+$¶	 [$¶] PU <<<
+</s>
+<s>
+O	 [o] DET M S <artd> @>N
+senador	 [senador] N M S @SUBJ>
+paraibano	 [paraibano] ADJ M S @N<
+seria	 [ser] V COND 3S VFIN <fmc> @FMV
+ainda	 [ainda] ADV @>N
+opção	 [opção] N F S @<SC
+para	 [para] PRP @N<
+a	 [o] DET F S <artd> @>N
+pasta	 [pasta] N F S @P<
+de	 [de] PRP <sam-> @N<
+a	 [o] DET F S <artd> <-sam> @>N
+Agricultura	 [agricultura] <prop> N F S @P<
+$.	 [$.] PU <<<
+$¶	 [$¶] PU <<<
+</s>
+<s>
+Josaphat=Marinho	 [Josaphat=Marinho] PROP M S @SUBJ>
+já	 [já] ADV @ADVL>
+foi	 [ser] V PS 3S IND VFIN <fmc> @FAUX
+descartado	 [descartar] V PCP M S @IMV @#ICL-AUX<
+$.	 [$.] PU <<<
+$¶	 [$¶] PU <<<
+</s>
+<s>
+Era	 [ser] V IMPF 1/3S IND VFIN <fmc> @FMV
+alternativa	 [alternativo] ADJ F S @<SC
+somente	 [somente] ADV @<ADVL
+se	 [se] KS @#FS-<SUBJ @#AS-N< @SUB
+o	 [o] DET M S <artd> @>N
+ministro	 [ministro] N M S @SUBJ>
+de	 [de] PRP <sam-> @N<
+a	 [o] DET F S <artd> <-sam> @>N
+Justiça	 [justiça] <prop> N F S @P<
+$,
+Maurício=Corrêa	 [Maurício=Corrêa] PROP M S @APP
+$,
+deixasse	 [deixar] V IMPF 3S SUBJ VFIN @FMV
+o	 [o] DET M S <artd> @>N
+cargo	 [cargo] N M S @<ACC
+$.	 [$.] PU <<<
+$¶	 [$¶] PU <<<
+</s>
+<s>
+Está	 [estar] V PR 3S IND VFIN <fmc> @FMV
+previsto	 [prever] <n> V PCP M S @<SC
+para	 [para] PRP @N<
+quarta-feira	 [quarta-feira] N F S @<ADVL
+um	 [um] DET M S <arti> @>N
+encontro	 [encontro] N M S @SUBJ>
+de	 [de] PRP @N<
+Itamar=Franco	 [Itamar=Franco] PROP M S @P<
+com	 [com] PRP @N<
+o	 [o] DET M S <artd> @>N
+presidente	 [presidente] N M S @P<
+de	 [de] PRP <sam-> @N<
+o	 [o] DET M S <artd> <-sam> @>N
+PMDB	 [PMDB] PROP M S @P<
+$,
+deputado	 [deputado] N M S @APP
+Luiz=Henrique	 [Luiz=Henrique] PROP M S @N<
+$,
+a=fim=de	 [a=fim=de] PRP @<ADVL
+decidir	 [decidir] V INF @IMV @#ICL-P<
+a	 [o] DET F S <artd> @>N
+participação	 [participação] N F S @<ACC
+de	 [de] PRP <sam-> @N<
+o	 [o] DET M S <artd> <-sam> @>N
+partido	 [partido] N M S @P<
+em	 [em] PRP <sam-> @N<
+o	 [o] DET M S <artd> <-sam> @>N
+ministério	 [ministério] N M S @P<
+e	 [e] <co-vfin> KC @CO
+também	 [também] ADV @>N
+o	 [o] DET M S <artd> @>N
+nome	 [nome] N M S @<ACC
+que	 [que] SPEC M/F S @SUBJ> <rel> @#FS-N<
+irá	 [ir] V FUT 3S IND VFIN @FAUX
+comandar	 [comandar] V INF @IMV @#ICL-AUX<
+a	 [o] DET F S <artd> @>N
+liderança	 [liderança] N F S @<ACC
+de	 [de] PRP <sam-> @N<
+o	 [o] DET M S <artd> <-sam> @>N
+governo	 [governo] N M S @P<
+em	 [em] PRP <sam-> @<ADVL
+a	 [o] DET F S <artd> <-sam> @>N
+Câmara	 [câmara] <prop> N F S @P<
+$.	 [$.] PU <<<
+$¶	 [$¶] PU <<<
+</s>
+<s>
+A	 [o] DET F S <artd> @>N
+bancada	 [bancada] N F S @SUBJ>
+de	 [de] PRP @N<
+deputados	 [deputado] N M P @P<
+de	 [de] PRP <sam-> @N<
+o	 [o] DET M S <artd> <-sam> @>N
+PMDB	 [PMDB] PROP M S @P<
+é	 [ser] V PR 3S IND VFIN <fmc> @FMV
+contrária	 [contrário] ADJ F S @<SC
+a	 [a] PRP @A<
+que	 [que] KS @SUB @#FS-<ACC
+um	 [um] DET M S <arti> @>N
+peemedebista	 [peemedebista] <n> ADJ M S @SUBJ>
+ocupe	 [ocupar] V PR 3S SUBJ VFIN @FMV
+o	 [o] DET M S <artd> @>N
+cargo	 [cargo] N M S @<ACC
+$,
+segundo	 [segundo] ADV @#AS-<ADVL <prp> <rel> @COM
+o	 [o] DET M S <artd> @>N
+líder	 [líder] N M S @AS<
+Tarcísio=Delgado	 [Tarcísio=Delgado] PROP M S @N<
+$(	 [$(] PU
+MG	 [mG] N M S @N<PRED
+$)	 [$)] PU
+$.	 [$.] PU <<<
+$¶	 [$¶] PU <<<
+</s>
+</TEXT>
+$¶	 [$¶] PU <<<
+</DOC>

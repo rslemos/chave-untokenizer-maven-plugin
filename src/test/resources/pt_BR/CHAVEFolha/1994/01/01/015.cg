@@ -1,0 +1,312 @@
+<DOC>
+<DOCNO.valor=FSP940101-015>
+<DOCID.valor=FSP940101-015>
+<DATE.valor=940101>
+<TEXT>
+<s>
+Livro	 [livro] N M S @SUBJ>
+diz	 [dizer] V PR 3S IND VFIN <fmc> @FMV
+que	 [que] KS @SUB @#FS-<ACC
+direito	 [direito] <n> ADJ M S @SUBJ>	 [direito] ADV @ADVL>
+de	 [de] PRP @N<
+defesa	 [defesa] N F S @P<
+atrasa	 [atrasar] V PR 3S IND VFIN @FMV
+o	 [o] DET M S <artd> @>N
+processo	 [processo] N M S @<ACC
+$¶	 [$¶] PU <<<
+</s>
+<s>
+Da=Sucursal=de=Brasília	 [Da=Sucursal=de=Brasília] PROP F S @NPHR
+$¶	 [$¶] PU <<<
+</s>
+<s>
+Se	 [se] KS @#FS-ADVL> @SUB
+depender	 [depender] V FUT 1/3S SUBJ VFIN @FMV
+de	 [de] PRP <sam-> @<PIV
+o	 [o] DET M S <artd> <-sam> @>N
+presente	 [presente] N M S @P<
+de	 [de] PRP <sam-> @N<
+o	 [o] DET M S <artd> <-sam> @>N
+presidente	 [presidente] N M S @P<
+de	 [de] PRP <sam-> @N<
+a	 [o] DET F S <artd> <-sam> @>N
+CPI	 [cPI] <prop> N F S @P<
+$,
+senador	 [senador] N M S @N<PRED
+Jarbas=Passarinho	 [Jarbas=Passarinho] PROP M S @N<
+$(	 [$(] PU
+PPR-PA	 [PPR-PA] PROP M/F S @N<PRED
+$)	 [$)] PU
+$,
+o	 [o] DET M S <artd> @>N
+deputado	 [deputado] N M S @SUBJ>
+José=Genoino	 [José=Genoino] PROP M S @N<
+$(	 [$(] PU
+PT-SP	 [PT-SP] PROP M/F S @N<PRED
+$)	 [$)] PU
+terá	 [ter] V FUT 3S IND VFIN <fmc> @FMV
+mais	 [muito] DET M S <KOMP> <quant> @>N
+argumentos	 [argumento] N M P @<ACC
+para	 [para] PRP @N<
+fazer	 [fazer] V INF @IMV @#ICL-P<
+perguntas	 [pergunta] N F P @<ACC
+duras	 [duro] ADJ F P @N<
+em	 [em] PRP <sam-> @<ADVL
+os	 [o] DET M P <artd> <-sam> @>N
+depoimentos	 [depoimento] N M P @P<
+em	 [em] PRP <sam-> @N<
+a	 [o] DET F S <artd> <-sam> @>N
+comissão	 [comissão] PROP F S @P<
+$.	 [$.] PU <<<
+$¶	 [$¶] PU <<<
+</s>
+<s>
+Passarinho	 [passarinho] N M S @SUBJ>
+comprou	 [comprar] V PS 3S IND VFIN <fmc> @FMV
+para	 [para] PRP @<ADVL
+o	 [o] DET M S <artd> @>N
+deputado	 [deputado] N M S @P<
+o	 [o] DET M S <artd> @>N
+livro	 [livro] N M S @<ACC
+Manual=dos=Inquisidores	 [Manual=dos=Inquisidores] PROP M S <*2> <*1> @N<
+como	 [como] ADV @COM <prp> <rel> @#AS-<ADVL
+presente	 [presente] N M S @AS<
+de	 [de] PRP @N<
+fim-de-ano	 [fim-de-ano] N M S @P<
+$.	 [$.] PU <<<
+$¶	 [$¶] PU <<<
+</s>
+<s>
+O	 [o] DET M S <artd> @>N
+senador	 [senador] N M S @SUBJ>
+quis	 [querer] V PS 3S IND VFIN <fmc> @FMV
+fazer	 [fazer] V INF @IMV @#ICL-<ACC
+uma	 [um] DET F S <arti> @>N
+provocação	 [provocação] N F S @<ACC
+a	 [a] PRP <sam-> @<ADVL
+o	 [o] DET M S <artd> <-sam> @>N
+deputado	 [deputado] N M S @P<
+$.	 [$.] PU <<<
+$¶	 [$¶] PU <<<
+</s>
+<s>
+Aproveitou	 [aproveitar] V PS 3S IND VFIN <fmc> @FMV
+o	 [o] DET M S <artd> @>N
+dia=de=folga	 [dia=de=folga] N M S @<ACC
+e	 [e] <co-fmc> <co-vfin> KC @CO
+foi	 [ir] V PS 3S IND VFIN <fmc> @FMV
+até	 [até] PRP @<ADVS
+a	 [o] DET F S <artd> @>N
+livraria	 [livraria] N F S @P<
+Sodiler	 [Sodiler] PROP F S @N<
+$,
+em	 [em] PRP <sam-> @<ADVL
+um	 [um] DET M S <-sam> @P<
+de	 [de] PRP <sam-> @N<
+os	 [o] DET M P <artd> <-sam> @>N
+shoppings	 [shopping] N M P @P<
+mais	 [mais] ADV <KOMP> <quant> @>A
+movimentados	 [movimentar] V PCP M P @N<
+de	 [de] PRP @N<
+Brasília	 [Brasília] PROP F S @P<
+$.	 [$.] PU <<<
+$¶	 [$¶] PU <<<
+</s>
+<s>
+O	 [o] DET M S <artd> @>N
+objetivo	 [objetivo] N M S @SUBJ>
+de	 [de] PRP @N<
+Passarinho	 [passarinho] N M S @P<
+era	 [ser] V IMPF 3S IND VFIN <fmc> @FMV
+comprar	 [comprar] V INF @IMV @#ICL-<SC
+um	 [um] DET M S <arti> @>N
+livro	 [livro] N M S @<ACC
+que	 [que] SPEC M/F S @ACC> <rel> @#FS-N<
+tratasse	 [tratar] V IMPF 3S SUBJ VFIN @FMV
+sobre	 [sobre] PRP @<PIV @<ADVL
+o	 [o] DET M S <artd> @>N
+pós-marxismo	 [pós-marxismo] N M S @P<
+$,
+mas	 [mas] <co-fmc> <co-vfin> KC @CO
+em	 [em] PRP @ADVL>
+uma	 [um] DET F S <arti> @>N
+olhada	 [olhada] N F S @P<
+por	 [por] PRP <sam-> @ADVL>
+as	 [o] DET F P <artd> <-sam> @>N
+prateleiras	 [prateleira] N F P @P<
+acabou	 [acabar] V PS 3S IND VFIN <fmc> @FAUX
+se	 [se] PERS M/F 3S ACC <refl> @ACC>-PASS
+fixando	 [fixar] V GER @#ICL-AUX< @IMV
+em	 [em] PRP <sam-> @<PIV
+um	 [um] DET M S <arti> <-sam> @>N
+livro	 [livro] N M S @P<
+próprio	 [próprio] ADJ M S @N<
+para	 [para] PRP @A<
+o	 [o] DET M S <artd> @>N
+momento	 [momento] N M S @P<
+$.	 [$.] PU <<<
+$¶	 [$¶] PU <<<
+</s>
+<s>
+Conhecido	 [conhecer] V PCP M S @IMV @#ICL-PRED>
+por	 [por] PRP @<PASS
+conduzir	 [conduzir] V INF @IMV @#ICL-P<
+os	 [o] DET M P <artd> @>N
+trabalhos	 [trabalho] N M P @<ACC
+de	 [de] PRP <sam-> @N<
+a	 [o] DET F S <artd> <-sam> @>N
+CPI	 [cPI] <prop> N F S @P<
+sem	 [sem] PRP @N<
+agressividade	 [agressividade] N F S @P<
+$,
+Passarinho	 [passarinho] N M S @SUBJ>
+acabou	 [acabar] V PS 3S IND VFIN <fmc> @FAUX
+dando	 [dar] V GER @#ICL-AUX< @IMV
+um	 [um] DET M S <quant> @<ACC
+fora	 [fora] IN @ADVL
+em	 [em] PRP @<ADVL
+sua	 [seu] DET F S <si> <poss 3S> @>N
+escolha	 [escolha] N F S @P<
+literária	 [literário] ADJ F S @N<
+$.	 [$.] PU <<<
+$¶	 [$¶] PU <<<
+</s>
+<s>
+Ao=contrário=de	 [ao=contrário=de] PRP <sam-> @ADVL>
+o	 [o] DET M S <-sam> <dem> @P<
+que	 [que] SPEC M/F S @ACC> <rel> @#FS-N<
+prega	 [pregar] V PR 3S IND VFIN @FMV
+em	 [em] PRP <sam-> @<ADVO
+a	 [o] DET F S <artd> <-sam> @>N
+CPI	 [cPI] <prop> N F S @P<
+$,
+o	 [o] DET M S <artd> @>N
+livro	 [livro] N M S @SUBJ>
+Manual=dos=Inquisidores	 [Manual=dos=Inquisidores] PROP M S <*2> <*1> @N<
+defende	 [defender] V PR 3S IND VFIN <fmc> @FMV
+a	 [o] DET F S <artd> @>N
+prática	 [prática] N F S @<ACC
+de	 [de] PRP <sam-> @<PIV
+a	 [o] DET F S <artd> <-sam> @>N
+tortura	 [tortura] N F S @P<
+$:	 [$:] PU <<<
+Tortura-	 [torturar] V PR 3S IND VFIN <fmc> <hyfen> <*1> @FMV
+se	 [se] PERS M/F 3S ACC @<SUBJ
+o	 [o] DET M S <artd> @>N
+acusado	 [acusado] N M S @<ACC
+que	 [que] SPEC M/F S @SUBJ> <rel> @#FS-N<
+vacilar	 [vacilar] V FUT 3S SUBJ VFIN @FMV
+em	 [em] PRP <sam-> @<ADVL
+as	 [o] DET F P <artd> <-sam> @>N
+respostas	 [resposta] N F P @P<
+$.	 [$.] PU <<<
+$"	 [$"] PU
+$¶	 [$¶] PU <<<
+</s>
+<s>
+Genoino	 [Genoino] PROP M/F S @SUBJ>
+foi	 [ser] V PS 3S IND VFIN <fmc> @FAUX
+torturado	 [torturar] V PCP M S @IMV @#ICL-AUX<
+durante	 [durante] PRP @<ADVL
+os	 [o] DET M P <artd> @>N
+governos	 [governo] N M P @P<
+militares	 [militar] ADJ M P @N<
+$.	 [$.] PU <<<
+$¶	 [$¶] PU <<<
+</s>
+<s>
+O	 [o] DET M S <artd> @>N
+livro	 [livro] N M S @SUBJ>
+questiona	 [questionar] V PR 3S IND VFIN <fmc> @FMV
+também	 [também] ADV @>N
+o	 [o] DET M S <artd> @>N
+direito	 [direito] N M S @<ACC
+de	 [de] PRP @N<
+defesa	 [defesa] N F S @P<
+$:	 [$:] PU <<<
+O	 [o] DET M S <artd> <*1> @>N
+direito	 [direito] N M S @SUBJ>
+de	 [de] PRP @N<
+defesa	 [defesa] N F S @P<
+deve	 [dever] V PR 3S IND VFIN <fmc> @FAUX
+ser	 [ser] V INF @IAUX @#ICL-AUX<
+concedido	 [conceder] V PCP M S @IMV @#ICL-AUX<
+algumas	 [algum] DET F P <quant> @>N
+vezes	 [vez] N F P @<ADVL
+porque	 [porque] KS @SUB @#FS-<ADVL
+em	 [em] PRP @ADVL>
+outros	 [outro] DET M P <KOMP> <diff> @>N
+casos	 [caso] N M P @P<
+atrasa	 [atrasar] V PR 3S IND VFIN @FMV
+o	 [o] DET M S <artd> @>N
+processo	 [processo] N M S <*2> @<ACC
+$,
+aconselha	 [aconselhar] V PR 3S IND VFIN <fmc> @FMV
+$.	 [$.] PU <<<
+$¶	 [$¶] PU <<<
+</s>
+<s>
+O	 [o] DET M S <artd> @>N
+Manual=dos=Inquisidores	 [Manual=dos=Inquisidores] PROP M S <*2> <*1> @SUBJ>
+foi	 [ser] V PS 3S IND VFIN <fmc> @FAUX
+escrito	 [escrever] V PCP M S @IMV @#ICL-AUX<
+em	 [em] PRP @<ADVL
+1376	 [1376] NUM M/F S <card> @P<
+por	 [por] PRP @<ADVL
+Nicolau=Eymerich	 [Nicolau=Eymerich] PROP M/F S @P<
+e	 [e] <co-pcv> KC @CO
+revisto	 [rever] V PCP M S @#ICL-AUX< @P< @IMV
+e	 [e] <co-pcv> KC @CO
+ampliado	 [ampliar] V PCP M S @#ICL-AUX< @P< @IMV
+por	 [por] PRP @<PASS
+Francisco=de=La=Pena	 [Francisco=de=La=Pena] PROP M S @P<
+em	 [em] PRP @<ADVL
+1578	 [1578] NUM M/F S <card> @P<
+$.	 [$.] PU <<<
+$¶	 [$¶] PU <<<
+</s>
+<s>
+Vou	 [ir] V PR 1S IND VFIN @FAUX <*1> @#FS-ACC>>
+levar	 [levar] V INF @IMV @#ICL-AUX<
+este	 [este] DET M S <dem> @>N
+livro	 [livro] N M S @<ACC
+para	 [para] PRP @<ADVL
+um	 [um] DET M S <arti> @>N
+rapaz	 [rapaz] N M S @P<
+que	 [que] SPEC M/F S @ACC> <rel> @#FS-N<
+está	 [estar] V PR 3S IND VFIN @FAUX
+fazendo	 [fazer] V GER @#ICL-AUX< @IMV
+inquisições	 [inquisição] N F P <*2> @<ADVL
+$,
+disse	 [dizer] V PS 3S IND VFIN <fmc> @FMV
+Passarinho	 [passarinho] <prop> N M S @<SUBJ
+a	 [a] PRP <sam-> @<PIV
+a	 [o] DET F S <artd> <-sam> @>N
+vendedora	 [vendedora] N F S @P<
+$.	 [$.] PU <<<
+$¶	 [$¶] PU <<<
+</s>
+<s>
+O	 [o] DET M S <artd> @>N
+preço	 [preço] N M S @SUBJ>
+de	 [de] PRP <sam-> @N<
+o	 [o] DET M S <artd> <-sam> @>N
+livro	 [livro] N M S @P<
+$(	 [$(] PU
+Cr$	 [cr$] N M S @N<PRED
+5,650	 [5,650] NUM M/F P <card> @N<
+$)	 [$)] PU
+surpreendeu	 [surpreender] V PS 3S IND VFIN <fmc> @FMV
+o	 [o] DET M S <artd> @>N
+senador	 [senador] N M S @<ACC
+$:	 [$:] PU <<<
+Como	 [como] ADV @#FS-ADVL <ks> <rel> <*1> @ADVL>
+está	 [estar] V PR 3S IND VFIN @FMV
+caro	 [caro] ADJ M S @<SC
+$.	 [$.] PU <<<
+$"	 [$"] PU
+$¶	 [$¶] PU <<<
+</s>
+</TEXT>
+$¶	 [$¶] PU <<<
+</DOC>

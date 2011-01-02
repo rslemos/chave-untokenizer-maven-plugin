@@ -1,0 +1,266 @@
+<DOC>
+<DOCNO.valor=FSP940101-060>
+<DOCID.valor=FSP940101-060>
+<DATE.valor=940101>
+<TEXT>
+<s>
+Vereador	 [vereador] N M S @SUBJ>
+quer	 [querer] V PR 3S IND VFIN <fmc> @FMV
+acabar	 [acabar] V INF @IMV @#ICL-<ACC
+com	 [com] PRP @<PIV
+painel	 [painel] N M S @P<
+de	 [de] PRP @N<
+ônibus	 [ônibus] N M S @P<
+$¶	 [$¶] PU <<<
+</s>
+<s>
+O	 [o] DET M S <artd> @>N
+vereador	 [vereador] N M S @SUBJ>
+Devanir=Ribeiro	 [Devanir=Ribeiro] PROP M S @N<
+$(	 [$(] PU
+foto	 [foto] N F S @N<PRED
+$)	 [$)] PU
+$,
+de	 [de] PRP <sam-> @N<PRED
+o	 [o] DET M S <artd> <-sam> @>N
+PT-SP	 [PT-SP] PROP M S @P<
+$,
+acionou	 [acionar] V PS 3S IND VFIN <fmc> @FMV
+o	 [o] DET M S <artd> @>N
+Ministério=Público=Estadual	 [Ministério=Público=Estadual] PROP M S @<ACC
+solicitando	 [solicitar] V GER @#ICL-<ADVL @IMV
+que	 [que] KS @SUB
+sejam	 [ser] V PR 3P SUBJ VFIN <fmc> @FAUX
+retiradas	 [retirar] V PCP F P @IMV @#ICL-AUX<
+as	 [o] DET F P <artd> @>N
+propagandas	 [propaganda] N F P @<SUBJ
+de	 [de] PRP <sam-> @N<
+os	 [o] DET M P <artd> <-sam> @>N
+vidros	 [vidro] N M P @P<
+traseiros	 [traseiro] ADJ M P @N<
+de	 [de] PRP <sam-> @N<
+os	 [o] DET M P <artd> <-sam> @>N
+ônibus	 [ônibus] N M S @P<
+$.	 [$.] PU <<<
+$¶	 [$¶] PU <<<
+</s>
+<s>
+Segundo	 [segundo] ADV @COM <prp> <rel> @#AS-ADVL>
+o	 [o] DET M S <artd> @>N
+vereador	 [vereador] N M S @AS<
+$,
+a	 [o] DET F S <artd> @>N
+propaganda	 [propaganda] N F S @SUBJ>
+desvia	 [desviar] V PR 3S IND VFIN <fmc> <*1> @FMV
+a	 [o] DET F S <artd> @>N
+atenção	 [atenção] N F S @<ACC
+de	 [de] PRP <sam-> @N<
+os	 [o] DET M P <artd> <-sam> @>N
+demais	 [demais] DET M S @>N
+condutores	 [condutor] N M P @P<
+para	 [para] PRP @<ADVL
+a	 [o] DET F S <artd> @>N
+leitura	 [leitura] N F S @P<
+de	 [de] PRP @N<
+anúncios	 [anúncio] N M P @P<
+$,
+podendo	 [poder] V GER @#ICL-<ADVL @IAUX
+provocar	 [provocar] V INF @IMV @#ICL-AUX<
+acidentes	 [acidente] N M P <*2> @<ACC
+$.	 [$.] PU <<<
+$¶	 [$¶] PU <<<
+</s>
+<s>
+Criança	 [criança] N F S @SUBJ>
+brinca	 [brincar] V PR 3S IND VFIN <fmc> @FMV
+com	 [com] PRP @<PIV
+arma	 [arma] N F S @P<
+e	 [e] KC @CO
+mata	 [mata] N F S @P<
+amiga	 [amigo] ADJ F S @N<PRED
+$¶	 [$¶] PU <<<
+</s>
+<s>
+Um	 [um] DET M S <arti> @>N
+acidente	 [acidente] N M S @SUBJ>
+com	 [com] PRP @N<
+revólver	 [revólver] N M S @P<
+matou	 [matar] V PS 3S IND VFIN <fmc> @FMV
+ontem	 [ontem] ADV @<ADVL
+a	 [a] PRP <sam-> @<ADVL
+a	 [o] DET F S <artd> <-sam> @>N
+noite	 [noite] N F S @P<
+a	 [a] PRP @<ADVL
+estudante	 [estudante] N M/F S @P<
+Gislene=da=Silva=Cruz	 [Gislene=da=Silva=Cruz] PROP M/F S @N<
+$,
+15	 [15] NUM M/F P <card> @<SC
+$,
+em	 [em] PRP <sam-> @<ADVL
+o	 [o] DET M S <artd> <-sam> @>N
+Jardim=Itaoca	 [Jardim=Itaoca] PROP M S @P<
+$(	 [$(] PU
+zona	 [zona] N F S @N<PRED
+sul	 [sul] N M S @N<
+de	 [de] PRP @N<
+São=Paulo	 [São=Paulo] PROP M S @P<
+$)	 [$)] PU
+$.	 [$.] PU <<<
+$¶	 [$¶] PU <<<
+</s>
+<s>
+Segundo	 [segundo] ADV @COM <prp> <rel> @#AS-ADVL>
+a	 [o] DET F S <artd> @>N
+polícia	 [polícia] N F S @AS<
+$,
+o	 [o] DET M S <artd> @>N
+menor	 [pequeno] <n> ADJ M S <KOMP> @APP
+M.F.S.	 [M.F.S.] PROP M S @SUBJ>
+$,
+15	 [15] NUM M/F P <card> @P<
+$,
+estava	 [estar] V IMPF 3S IND VFIN <fmc> @FAUX
+brincando	 [brincar] V GER @#ICL-AUX< @IMV
+com	 [com] PRP @<PIV
+o	 [o] DET M S <artd> @>N
+tambor	 [tambor] N M S @P<
+de	 [de] PRP @N<
+um	 [um] DET M S <arti> @>N
+revólver	 [revólver] N M S @P<
+38	 [38] NUM M/F P <card> @<SC
+$,
+quando	 [quando] ADV @ADVL> @#FS-<ADVL <ks> <rel> @#FS-N<
+a	 [o] DET F S <artd> @>N
+arma	 [arma] N F S @SUBJ>
+disparou	 [disparar] V PS 3S IND VFIN @FMV
+e	 [e] <co-vfin> KC @CO
+atingiu	 [atingir] V PS 3S IND VFIN <fmc> @FMV
+Gislene	 [Gislene] PROP M/F S @<ACC
+$.	 [$.] PU <<<
+$¶	 [$¶] PU <<<
+</s>
+<s>
+A	 [o] DET F S <artd> @>N
+estudante	 [estudante] N F S @SUBJ>
+foi	 [ser] V PS 3S IND VFIN <fmc> @FAUX
+levada	 [levar] V PCP F S @IMV @#ICL-AUX<
+para	 [para] PRP @<ADVL
+o	 [o] DET M S <artd> @>N
+pronto-socorro	 [pronto-socorro] N M S @P<
+de	 [de] PRP @N<
+Campo=Limpo	 [Campo=Limpo] PROP M S @P<
+$(	 [$(] PU
+zona	 [zona] N F S @N<PRED
+sul	 [sul] N M S @N<
+$)	 [$)] PU
+$,
+onde	 [onde] ADV @ADVL> <ks> <rel> @#FS-N<
+chegou	 [chegar] V PS 3S IND VFIN @FMV
+morta	 [morto] ADJ F S @<PRED
+$.	 [$.] PU <<<
+$¶	 [$¶] PU <<<
+</s>
+<s>
+M.F.S	 [M.F.S] PROP M/F S @SUBJ>
+foi	 [ser] V PS 3S IND VFIN <fmc> @FAUX
+encaminhado	 [encaminhar] V PCP M S @IMV @#ICL-AUX<
+para	 [para] PRP @<PIV
+o	 [o] DET M S <artd> @>N
+SOS	 [SOS] PROP M S @P<
+Criança	 [criança] <prop> N F S @N<
+$.	 [$.] PU <<<
+$¶	 [$¶] PU <<<
+</s>
+<s>
+Caminhão	 [caminhão] N M S @SUBJ>
+de	 [de] PRP @N<
+ovos	 [ovo] N M P @P<
+perde	 [perder] V PR 3S IND VFIN <fmc> @FMV
+freio	 [freio] N M S @<ACC
+e	 [e] <co-fmc> <co-vfin> KC @CO
+bate	 [bater] V PR 3S IND VFIN <fmc> @FMV
+$¶	 [$¶] PU <<<
+</s>
+<s>
+Um	 [um] DET M S <arti> @>N
+caminhão	 [caminhão] N M S @SUBJ>
+Mercedes=Benz	 [Mercedes=Benz] PROP M S @N<
+$,
+carregado	 [carregar] V PCP M S @IMV @#ICL-N<PRED
+de	 [de] PRP @<PIV
+ovos	 [ovo] N M P @P<
+$,
+perdeu	 [perder] V PS 3S IND VFIN <fmc> @FMV
+o	 [o] DET M S <artd> @>N
+freio	 [freio] N M S @<ACC
+e	 [e] <co-fmc> <co-vfin> KC @CO
+entrou	 [entrar] V PS 3S IND VFIN <fmc> @FMV
+em	 [em] PRP <sam-> @<ADVS
+a	 [o] DET F S <artd> <-sam> @>N
+portaria	 [portar] V COND 3S VFIN <fmc> @FMV
+de	 [de] PRP @<ADVL
+um	 [um] DET M S <arti> @>N
+prédio	 [prédio] N M S @P<
+$,
+em	 [em] PRP <sam-> @<ADVL
+a	 [o] DET F S <artd> <-sam> @>N
+rua	 [rua] N F S @P<
+Peixoto=Gomide	 [Peixoto=Gomide] PROP F S @N<
+$,
+Cerqueira=César	 [Cerqueira=César] PROP F S @<ACC
+$(	 [$(] PU
+zona	 [zona] N F S @N<PRED
+oeste	 [oeste] N M S @N<
+$)	 [$)] PU
+$.	 [$.] PU <<<
+$¶	 [$¶] PU <<<
+</s>
+<s>
+Antes	 [antes] ADV @ADVL>
+de	 [de] PRP @A<
+chocar-	 [chocar] V INF @IMV <hyfen> @#ICL-P<
+se	 [se] PERS M/F 3S ACC @<ACC-PASS
+contra	 [contra] PRP @<PIV @<ADVL
+o	 [o] DET M S <artd> @>N
+prédio	 [prédio] N M S @P<
+$,
+o	 [o] DET M S <artd> @>N
+caminhão	 [caminhão] N M S @SUBJ>
+desgovernado	 [desgovernado] ADJ M S @N<PRED
+atingiu	 [atingir] V PS 3S IND VFIN <fmc> @FMV
+um	 [um] DET M S <arti> @>N
+Santana	 [Santana] PROP F S @<ACC
+$,
+que	 [que] SPEC M S @SUBJ> <rel> @#FS-N<
+estava	 [estar] V IMPF 3S IND VFIN @FMV
+parado	 [parar] V PCP M S @IMV @#ICL-<SC
+em	 [em] PRP <sam-> @<ADVL
+o	 [o] DET M S <artd> <-sam> @>N
+sinal	 [sinal] N M S @P<
+$,
+um	 [um] DET M S <arti> @>N
+poste	 [poste] N M S @<ACC
+e	 [e] KC @CO
+a	 [o] DET F S <artd> @>N
+porta	 [porta] N F S @<ACC
+de	 [de] PRP @N<
+um	 [um] NUM M S <card> @>N
+bar	 [bar] N M S @P<
+$.	 [$.] PU <<<
+$¶	 [$¶] PU <<<
+</s>
+<s>
+O	 [o] DET M S <artd> @>N
+motorista	 [motorista] N M S @SUBJ>
+e	 [e] KC @CO
+o	 [o] DET M S <artd> @>N
+ajudante	 [ajudante] N M S @SUBJ>
+tiveram	 [ter] V PS/MQP 3P IND VFIN <fmc> @FMV
+ferimentos	 [ferimento] N M P @<ACC
+leves	 [leve] ADJ M P @N<
+$.	 [$.] PU <<<
+$¶	 [$¶] PU <<<
+</s>
+</TEXT>
+$¶	 [$¶] PU <<<
+</DOC>

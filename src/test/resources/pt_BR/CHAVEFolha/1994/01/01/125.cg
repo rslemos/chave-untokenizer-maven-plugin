@@ -1,0 +1,450 @@
+<DOC>
+<DOCNO.valor=FSP940101-125>
+<DOCID.valor=FSP940101-125>
+<DATE.valor=940101>
+<TEXT>
+<s>
+Músicos	 [músico] N M P @PRED>
+se	 [se] PERS M/F 3S ACC @SUBJ>
+vêem	 [ver] V PR 3P IND VFIN <fmc> @FMV
+em	 [em] PRP @<ADVO
+lojas	 [loja] N F P @P<
+de	 [de] PRP @N<
+instrumentos	 [instrumento] N M P @P<
+$¶	 [$¶] PU <<<
+</s>
+<s>
+Adolescentes	 [adolescente] N M/F P @SUBJ>
+batem	 [bater] V PR 3P IND VFIN <fmc> @FMV
+perna	 [perna] N F S @<ACC
+em	 [em] PRP @<ADVL
+Pinheiros	 [pinheiro] N M P @P<
+e	 [e] <co-fmc> <co-vfin> KC @CO
+em	 [em] PRP <sam-> @<ADVL
+o	 [o] DET M S <artd> <-sam> @>N
+centro	 [centro] N M S @P<
+atrás=de	 [atrás=de] PRP <sam-> @<ADVL
+as	 [o] DET F P <-sam> <artd> @>N
+ofertas	 [oferta] N F P @P<
+e	 [e] <co-fmc> <co-vfin> KC @CO
+$'	 [$'] PU
+babam	 [babar] V PR 3P IND VFIN <fmc> @FMV
+$'	 [$'] PU
+diante=de	 [diante=de] PRP <sam-> @<ADVL
+as	 [o] DET F P <-sam> <artd> @>N
+grandes	 [grande] ADJ F P @>N
+marcas	 [marca] N F P @P<
+$¶	 [$¶] PU <<<
+</s>
+<s>
+Maria=Luísa=Cavalcanti	 [Maria=Luísa=Cavalcanti] PROP F S @NPHR
+$¶	 [$¶] PU <<<
+</s>
+<s>
+Da=Reportagem=Local	 [Da=Reportagem=Local] PROP F S @NPHR
+$¶	 [$¶] PU <<<
+</s>
+<s>
+Futuros	 [futuro] ADJ M P @>N
+músicos	 [músico] N M P @TOP
+$,
+uni-	 [unir] V PS 1S IND VFIN <fmc> <hyfen> @FMV
+vos	 [vós] PERS M/F 2P ACC @<ACC
+$...	 [$...] PU
+em	 [em] PRP <sam-> @<ADVL
+as	 [o] DET F P <artd> <-sam> @>N
+lojas	 [loja] N F P @P<
+de	 [de] PRP @N<
+instrumentos	 [instrumento] N M P @P<
+musicais	 [musical] ADJ M P @N<
+$.	 [$.] PU <<<
+$¶	 [$¶] PU <<<
+</s>
+<s>
+As	 [o] DET F P <artd> @>N
+ruas	 [rua] N F P @SUBJ>
+Santa=Ifigênia	 [Santa=Ifigênia] PROP F S @N<
+$(	 [$(] PU
+centro	 [centro] N M S @N<PRED
+de	 [de] PRP @N<
+São=Paulo	 [São=Paulo] PROP M S @P<
+$)	 [$)] PU
+e	 [e] KC @CO
+Teodoro=Sampaio	 [Teodoro=Sampaio] PROP M S @P< @SUBJ>
+$,
+em	 [em] PRP @ADVL>
+Pinheiros	 [pinheiro] N M P @P<
+$(	 [$(] PU
+zona	 [zona] N F S @N<PRED
+oeste	 [oeste] N M S @N<
+$)	 [$)] PU
+$,
+são	 [ser] V PR 3P IND VFIN <fmc> @FMV
+os	 [o] DET M P <artd> @>N
+points	 [point] N M P @<SC
+de	 [de] PRP @N<
+quem	 [quem] SPEC M/F S @#FS-P< <rel> @SUBJ>
+curte	 [curtir] V PR 3S IND VFIN @FMV
+tocar	 [tocar] V INF @IMV @#ICL-<ACC
+$.	 [$.] PU <<<
+$¶	 [$¶] PU <<<
+</s>
+<s>
+As	 [o] DET F P <artd> @>N
+lojas	 [loja] N F P @SUBJ>
+ficam	 [ficar] V PR 3P IND VFIN <fmc> @FMV
+grudadinhas	 [grudadinhas] ADJ F P <DERS> <DERS> @<SC
+umas	 [um] DET F P <quant> @SC>
+em	 [em] PRP <sam-> @N<
+as	 [o] DET F P <artd> <-sam> @>N
+outras	 [outro] DET F P <KOMP> <diff> @P<
+e	 [e] <co-fmc> <co-vfin> KC @CO
+os	 [o] DET M P <artd> @>N
+clientes	 [cliente] N M P @SUBJ>
+de=carteirinha	 [de=carteirinha] ADJ @N<
+estão	 [estar] V PR 3P IND VFIN <fmc> @FAUX
+sempre	 [sempre] ADV @ADVL>
+rondando	 [rondar] V GER @#ICL-AUX< @IMV
+atrás=de	 [atrás=de] PRP <sam-> @<ADVL
+os	 [o] DET M P <-sam> <artd> @>N
+lançamentos	 [lançamento] N M P @P<
+e	 [e] KC @CO
+de	 [de] PRP <sam-> @<ADVL
+as	 [o] DET F P <artd> <-sam> @>N
+promoções	 [promoção] N F P @P<
+$.	 [$.] PU <<<
+$¶	 [$¶] PU <<<
+</s>
+<s>
+O	 [o] DET M S <artd> @>N
+pessoal	 [pessoal] N M S @SUBJ>
+faz	 [fazer] V PR 3S IND VFIN <fmc> @FMV
+ponto	 [ponto] N M S @<ACC
+mesmo	 [mesmo] DET M S <ident> @N<
+$,
+remexendo	 [remexer] V GER @#ICL-<ADVL @IMV
+$,
+fuçando	 [fuçar] V GER @#ICL-<ADVL @IMV
+e	 [e] <co-ger> KC @CO
+testando	 [testar] V GER @#ICL-<ADVL @IMV
+tudo	 [tudo] SPEC M S <quant> @<ACC
+$.	 [$.] PU <<<
+$¶	 [$¶] PU <<<
+</s>
+<s>
+Mas	 [mas] KC @CO
+é	 [é] ADV <foc> @FOC>
+em	 [em] PRP <sam-> @ADVL>
+o	 [o] DET M S <artd> <-sam> @>N
+sábado	 [sábado] N M S @P<
+que	 [que] ADV <foc> @<FOC
+o	 [o] DET M S <artd> @>N
+pai	 [pai] N M S @SUBJ>
+aparece	 [aparecer] V PR 3S IND VFIN <fmc> @FMV
+para	 [para] PRP @<ADVL
+pagar	 [pagar] V INF @IMV @#ICL-P<
+$.	 [$.] PU <<<
+$¶	 [$¶] PU <<<
+</s>
+<s>
+O	 [o] DET M S <artd> @>N
+estudante	 [estudante] N M S @SUBJ>
+e	 [e] KC @CO
+guitarrista	 [guitarrista] N M/F S @SUBJ>
+Fernando=Mattar=Cardoso=dos=Reis	 [Fernando=Mattar=Cardoso=dos=Reis] PROP M S @N<
+$,
+16	 [16] NUM M/F P <card> @N<PRED
+$,
+conseguiu	 [conseguir] V PS 3S IND VFIN <fmc> @FMV
+arrastar	 [arrastar] V INF @IMV @#ICL-<ACC
+a	 [o] DET F S <artd> @>N
+mãe	 [mãe] N F S @<ACC
+$,
+Elisabeth	 [Elisabeth] PROP F S @APP
+$,
+para	 [para] PRP @<ADVL
+Pinheiros	 [pinheiro] N M P @P<
+em	 [em] PRP @<ADVL
+plena	 [pleno] ADJ F S @>N
+tarde	 [tarde] N F S @P<
+de	 [de] PRP @N<
+quarta-feira	 [quarta-feira] N F S @P<
+$.	 [$.] PU <<<
+$¶	 [$¶] PU <<<
+</s>
+<s>
+E	 [e] KC @CO
+saiu	 [sair] V PS 3S IND VFIN <fmc> @FMV
+lucrando	 [lucrar] V GER @#ICL-<SC @IMV
+$:	 [$:] PU <<<
+acabei	 [acabar] V PS 1S IND VFIN <fmc> <*1> @FAUX
+de	 [de] PRP @PRT-AUX<
+comprar	 [comprar] V INF @IMV @#ICL-AUX<
+um	 [um] DET M S <arti> @>N
+zoom	 [zoom] N M S <*2> @<ACC
+$,
+conta	 [contar] V PR 3S IND VFIN <fmc> @FMV
+$.	 [$.] PU <<<
+$¶	 [$¶] PU <<<
+</s>
+<s>
+A	 [o] DET F S <artd> @>N
+mãe	 [mãe] N F S @SUBJ>
+não	 [não] ADV @ADVL>
+pareceu	 [parecer] V PS 3S IND VFIN <fmc> @FMV
+preocupada	 [preocupado] ADJ F S @<SC
+com	 [com] PRP @A<
+os	 [o] DET M P <artd> @>N
+US$	 [US$] PROP M S @P<
+420	 [420] NUM M/F P <card> @N<
+que	 [que] SPEC M/F S @ACC> <rel> @#FS-N<
+desembolsou	 [desembolsar] V PS 3S IND VFIN @FMV
+$.	 [$.] PU <<<
+$¶	 [$¶] PU <<<
+</s>
+<s>
+Vale	 [valer] V PR 3S IND VFIN <fmc> <*1> @FMV
+a	 [o] DET F S <artd> @>N
+pena	 [pena] N F S @<ACC @SUBJ>
+investir	 [investir] V INF 3S @#ICL-<SUBJ @#ICL-<ACC @IMV
+em	 [em] PRP @<ADVL
+música	 [música] N F S @P<
+$.	 [$.] PU <<<
+$¶	 [$¶] PU <<<
+</s>
+<s>
+Eu	 [eu] PERS F 1S NOM @SUBJ>
+curto	 [curtir] V PR 1S IND VFIN <fmc> @FMV
+$,
+é	 [ser] V PR 3S IND VFIN <fmc> @FMV
+arte	 [arte] N F S @<SC
+$.	 [$.] PU <<<
+$¶	 [$¶] PU <<<
+</s>
+<s>
+E	 [e] KC @CO
+nós	 [nós] PERS M/F 1P NOM @SUBJ>
+procuramos	 [procurar] V PR 1P IND VFIN <fmc> @FMV
+o	 [o] DET M S <artd> @>N
+melhor	 [bom] ADJ M S <SUP> <KOMP> @>N
+preço	 [preço] N M S <*2> @<ACC
+$,
+justifica	 [justificar] V PR 3S IND VFIN <fmc> @FMV
+$.	 [$.] PU <<<
+$¶	 [$¶] PU <<<
+</s>
+<s>
+Tem	 [ter] V PR 3S IND VFIN <fmc> @FMV
+gente	 [gente] N F S @<ACC
+que	 [que] SPEC M/F S @SUBJ> <rel> @#FS-N<
+também	 [também] ADV @ADVL>
+bateu	 [bater] V PS 3S IND VFIN @FMV
+perna	 [perna] N F S @<ACC
+para	 [para] PRP @<ADVL
+gastar	 [gastar] V INF @IMV @#ICL-P<
+bem	 [bem] ADV <quant> @<ADVL
+gasto	 [gastar] V PR 1S IND VFIN <fmc> @FMV
+o	 [o] DET M S <artd> @>N
+dinheiro	 [dinheiro] N M S @<ACC
+economizado	 [economizar] V PCP M S @N<
+durante	 [durante] PRP @<ADVL
+o	 [o] DET M S <artd> @>N
+ano	 [ano] N M S @P<
+$.	 [$.] PU <<<
+$¶	 [$¶] PU <<<
+</s>
+<s>
+Os	 [o] DET M P <artd> @>N
+irmãos	 [irmão] N M P @SUBJ>
+Daniel	 [Daniel] PROP M/F S @N<
+$,
+14	 [14] NUM M/F P <card> @SUBJ>
+$,
+e	 [e] KC @CO
+Matheus=Giavanotti	 [Matheus=Giavanotti] PROP M/F S @SUBJ>
+$,
+17	 [17] NUM M/F P <card> @N<PRED
+$,
+mostravam	 [mostrar] V IMPF 3P IND VFIN <fmc> @FMV
+o	 [o] DET M S <artd> @>N
+prato	 [prato] N M S @<ACC
+de	 [de] PRP @N<
+bateria	 [bateria] N F S @P<
+que	 [que] SPEC M/F S @ACC> <rel> @#FS-N<
+compraram	 [comprar] V PS/MQP 3P IND VFIN @FMV
+$.	 [$.] PU <<<
+$¶	 [$¶] PU <<<
+</s>
+<s>
+As	 [o] DET F P <artd> <*1> @>N
+tias	 [tia] N F P @SUBJ>
+sempre	 [sempre] ADV @ADVL>
+dão	 [dar] V PR 3P IND VFIN <fmc> @FMV
+uma	 [um] DET F S <arti> @>N
+grana	 [grana] N F S @<ACC
+para	 [para] PRP <sam-> @<ADVL
+a	 [a] DET F S <artd> <-sam> @>N
+gente	 [gente] N F S @SUBJ>
+comprar	 [comprar] V INF 3S @#ICL-P< @IMV
+meia	 [meia] NUM @>N
+e	 [e] N M S @<ACC
+cueca	 [cueca] N F S @PRED>
+$.	 [$.] PU <<<
+$¶	 [$¶] PU <<<
+</s>
+<s>
+Preferimos	 [preferir] V PR 1P IND VFIN <fmc> @FMV
+o	 [o] DET M S <artd> @>N
+prato	 [prato] N M S @<ACC
+$.	 [$.] PU <<<
+$"	 [$"] PU
+$¶	 [$¶] PU <<<
+</s>
+<s>
+O	 [o] DET M S <artd> @>N
+guitarrista	 [guitarrista] N M S @SUBJ>
+Vicente=Zaragoza=Escrich	 [Vicente=Zaragoza=Escrich] PROP M S @N<
+$,
+13	 [13] NUM M/F P <card> @>N
+$,
+não	 [não] ADV @ADVL>
+passa	 [passar] V PR 3S IND VFIN <fmc> @FMV
+um	 [um] NUM M S <card> @>N
+mês	 [mês] N M S @<ACC
+inteiro	 [inteiro] ADJ M S @N<
+sem	 [sem] PRP @<ADVL
+ir	 [ir] V INF @IMV @#ICL-P<
+a	 [a] PRP <sam-> @<ADVS
+as	 [o] DET F P <artd> <-sam> @>N
+lojas	 [loja] N F P @P<
+de	 [de] PRP @N<
+instrumentos	 [instrumento] N M P @P<
+$.	 [$.] PU <<<
+$¶	 [$¶] PU <<<
+</s>
+<s>
+Não	 [não] ADV <*1> @ADVL>
+dá	 [dar] V PR 3S IND VFIN <fmc> @FMV
+pra	 [pra] PRP @<PIV
+comprar	 [comprar] V INF @IMV @#ICL-P<
+nada	 [nada] SPEC M S <quant> @<ACC
+$,
+mas	 [mas] <co-fmc> <co-vfin> KC @CO
+eu	 [eu] PERS M/F 1S NOM @SUBJ>
+sempre	 [sempre] ADV @ADVL>
+testo	 [testar] V PR 1S IND VFIN <fmc> @FMV
+e	 [e] <co-vfin> KC @CO
+mexo	 [mexer] V PR 1S IND VFIN <fmc> @FMV
+em	 [em] PRP <sam-> @<PIV
+as	 [o] DET F P <artd> <-sam> @>N
+coisas	 [coisa] N F P <*2> @P<
+$.	 [$.] PU <<<
+$¶	 [$¶] PU <<<
+</s>
+<s>
+De	 [de] PRP <sam-> @ADVL>
+essa	 [esse] DET F S <dem> <-sam> @>N
+vez	 [vez] N F S @P<
+ele	 [ele] PERS M 3S NOM @SUBJ>
+levou	 [levar] V PS 3S IND VFIN <fmc> @FMV
+uma	 [um] DET F S <arti> @>N
+guitarra	 [guitarra] N F S @<ACC
+por	 [por] PRP @<ADVL
+Cr$	 [cr$] N M S @P<
+100	 [100] NUM M/F P <card> @>N
+mil	 [mil] NUM M/F P <card> @N<
+$.	 [$.] PU <<<
+$¶	 [$¶] PU <<<
+</s>
+<s>
+Os	 [o] DET M P <artd> @>N
+frequentadores	 [frequentador] N M P @SUBJ>
+dão	 [dar] V PR 3P IND VFIN <fmc> @FMV
+as	 [o] DET F P <artd> @>N
+dicas	 [dica] N F P @<ACC
+para	 [para] PRP @<ADVL
+quem	 [quem] SPEC M/F S @#FS-P< <rel> @SUBJ>
+quer	 [querer] V PR 3S IND VFIN @FMV
+levar	 [levar] V INF @IMV @#ICL-<ACC
+a	 [o] DET F S <artd> @>N
+melhor	 [bom] <n> ADJ F S <SUP> <KOMP> @<ACC
+a	 [a] PRP <sam-> @<ADVL
+o	 [o] DET M S <artd> <-sam> @>N
+fazer	 [fazer] V INF @IMV @#ICL-P<
+a	 [o] DET F S <artd> @>N
+razão	 [razão] N F S @<ACC
+preço	 [preço] N M S @<OC
+$/	 [$/] PU	 [$/] KC @CO
+qualidade	 [qualidade] N F S @<OC
+$.	 [$.] PU <<<
+$¶	 [$¶] PU <<<
+</s>
+<s>
+Ande	 [andar] V PR 1/3S SUBJ VFIN <fmc> <*1> @FMV
+muito	 [muito] DET M S <quant> @<SC
+e	 [e] <co-fmc> <co-vfin> KC @CO
+verifique	 [verificar] V PR 1/3S SUBJ VFIN <fmc> @FMV
+todos=os	 [todo=o] DET M P <quant> @>N
+preços	 [preço] N M P @<ACC
+$.	 [$.] PU <<<
+$¶	 [$¶] PU <<<
+</s>
+<s>
+Troque	 [trocar] V PR 3S SUBJ VFIN @FMV @#FS-ACC>>
+seu	 [seu] DET M S <poss 3S> @>N
+usado	 [usar] <n> V PCP M S @<ACC
+por	 [por] PRP @<PASS
+um	 [um] DET M S <arti> @>N
+novo	 [novo] <n> ADJ M S @P<
+$,
+ou	 [ou] <co-vfin> KC @CO
+compre	 [comprar] V PR 3S SUBJ VFIN @#FS-ACC>> @FMV
+um	 [um] DET M S <arti> @>N
+usado	 [usar] <n> V PCP M S <*2> @<ACC
+$,
+diz	 [dizer] V PR 3S IND VFIN <fmc> @FMV
+Helvio=Kanamaru	 [Helvio=Kanamaru] PROP M S @<SUBJ
+$,
+17	 [17] NUM M P <card> @<ACC
+$,
+dono	 [dono] N M S @N<PRED
+de	 [de] PRP @N<
+uma	 [um] DET F S <arti> @>N
+recém-adquirida	 [recém-adquirir] V PCP F S @>N
+guitarra	 [guitarra] N F S @P<
+e	 [e] KC @CO
+de	 [de] PRP @N<
+um	 [um] DET M S <arti> @>N
+estojo	 [estojo] N M S @P<
+rígido	 [rígido] ADJ M S @N<
+novinho	 [novinho] ADJ M S <DERS> @N<
+$.	 [$.] PU <<<
+$¶	 [$¶] PU <<<
+</s>
+<s>
+Outra	 [outro] DET F S <KOMP> <diff> <*1> @>N
+boa	 [bom] <n> ADJ F S @SUBJ>
+é	 [ser] V PR 3S IND VFIN @FMV @#FS-ACC>>
+comprar	 [comprar] V INF @IMV @#ICL-<SC
+uma	 [um] DET F S <arti> @>N
+base	 [base] N F S @<ACC
+nacional	 [nacional] ADJ F S @N<
+de	 [de] PRP @N<
+qualquer	 [qualquer] DET M S <quant> @>N
+instrumento	 [instrumento] N M S @P<
+e	 [e] <co-inf> KC @CO
+ir	 [ir] V INF @#ICL-<SC @IAUX
+trocando	 [trocar] V GER @#ICL-AUX< @IMV
+as	 [o] DET F P <artd> @>N
+peças	 [peça] N F P @<ACC
+por	 [por] PRP @<PIV
+importados	 [importar] V PCP M P <*2> @P<
+$,
+conta	 [contar] V PR 3S IND VFIN <fmc> @FMV
+Matheus=Giovanotti	 [Matheus=Giovanotti] PROP M/F S @<SUBJ
+$.	 [$.] PU <<<
+$¶	 [$¶] PU <<<
+</s>
+</TEXT>
+$¶	 [$¶] PU <<<
+</DOC>

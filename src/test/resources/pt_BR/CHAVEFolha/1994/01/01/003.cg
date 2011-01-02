@@ -1,0 +1,785 @@
+<DOC>
+<DOCNO.valor=FSP940101-003>
+<DOCID.valor=FSP940101-003>
+<DATE.valor=940101>
+<TEXT>
+<s>
+O	 [o] DET M S <artd> @>N
+ano	 [ano] N M S @ADVL> @SUBJ>
+que	 [que] SPEC M/F S @ACC> <rel> @#FS-N<
+se	 [se] PERS M/F 3S ACC @SUBJ>
+encerrou	 [encerrar] V PS 3S IND VFIN @FMV
+não	 [não] ADV @<ADVL
+trouxe	 [trazer] V PS 3S IND VFIN <fmc> @FMV
+a	 [o] DET F S <artd> @>N
+tão	 [tão] ADV <quant> <dem> @>A
+desejada	 [desejar] V PCP F S @>N
+estabilização	 [estabilização] N F S @<ACC
+de	 [de] PRP <sam-> @N<
+a	 [o] DET F S <artd> <-sam> @>N
+economia	 [economia] N F S @P<
+$.	 [$.] PU <<<
+$¶	 [$¶] PU <<<
+</s>
+<s>
+De=fato	 [de=fato] ADV @ADVL>
+$,
+a	 [o] DET F S <artd> @>N
+taxa	 [taxa] N F S @SUBJ>
+de	 [de] PRP @N<
+inflação	 [inflação] N F S @P<
+para	 [para] PRP @N<
+dezembro	 [dezembro] N M S @P<
+ficou	 [ficar] V PS 3S IND VFIN <fmc> @FMV
+próxima	 [próximo] ADJ F S @<SC
+de	 [de] PRP @A<
+38	 [38] NUM M/F P <card> @>N
+$%	 [%] N M P @P<	 [$%] PU
+$,
+com	 [com] PRP @<ADVL
+o	 [o] DET M S <dem> @P<
+que	 [que] SPEC M/F S @ACC> <rel> @#FS-N<
+1993	 [1993] NUM M/F S <card> @SUBJ>
+terminou	 [terminar] V PS 3S IND VFIN @FMV
+com	 [com] PRP @<PIV
+o	 [o] DET M S <artd> @>N
+recorde	 [recorde] N M S @P<
+de	 [de] PRP @N<
+todos=os	 [todo=o] DET M P <quant> @>N
+tempos	 [tempo] N M P @P<
+em	 [em] PRP @N<
+matéria	 [matéria] N F S @P<
+de	 [de] PRP @N<
+alta	 [alta] N F S @P<
+anual	 [anual] ADJ F S @N<
+de	 [de] PRP @N<
+preços	 [preço] N M P @P<
+$.	 [$.] PU <<<
+$¶	 [$¶] PU <<<
+</s>
+<s>
+Esse	 [esse] DET M S <dem> @>N
+malogro	 [malogro] N M S @SUBJ>
+lamentável	 [lamentável] ADJ M S @N<
+ofusca	 [ofuscar] V PR 3S IND VFIN <fmc> @FMV
+alguns	 [algum] DET M P <quant> @<ACC
+de	 [de] PRP <sam-> @N<
+os	 [o] DET M P <artd> <-sam> @>N
+avanços	 [avanço] N M P @P<
+obtidos	 [obter] V PCP M P @IMV @#ICL-N<
+em	 [em] PRP <sam-> @<ADVL
+o	 [o] DET M S <artd> <-sam> @>N
+campo	 [campo] N M S @P<
+econômico	 [econômico] ADJ M S @N<
+$,
+como	 [como] ADV @#AS-<ADVL <prp> <rel> @COM
+por=exemplo	 [por=exemplo] ADV @>N
+o	 [o] DET M S <artd> @>N
+crescimento	 [crescimento] N M S @AS<
+próximo=a	 [próximo=a] PRP @N< @<ADVL
+4,5	 [4,5] NUM M/F P <card> @>N
+$%	 [%] N M P @P<	 [$%] PU
+$.	 [$.] PU <<<
+$¶	 [$¶] PU <<<
+</s>
+<s>
+Há	 [haver] V PR 3S IND VFIN <fmc> @FMV
+ângulos	 [ângulo] N M P @<ACC
+setoriais	 [setorial] ADJ M P @N<
+que	 [que] SPEC M/F S @ACC> <rel> @#FS-N<
+merecem	 [merecer] V PR 3P IND VFIN @FMV
+comemoração	 [comemoração] N F S @PRED>
+$.	 [$.] PU <<<
+$¶	 [$¶] PU <<<
+</s>
+<s>
+O	 [o] DET M S <artd> @>N
+setor	 [setor] N M S @SUBJ>
+externo	 [externo] ADJ M S @N<
+teve	 [ter] V PS 3S IND VFIN <fmc> @FMV
+um	 [um] DET M S <arti> @>N
+desempenho	 [desempenho] N M S @<ACC
+muito	 [muito] ADV <quant> @>A
+bom	 [bom] ADJ M S @N<
+$.	 [$.] PU <<<
+$¶	 [$¶] PU <<<
+</s>
+<s>
+O	 [o] DET M S <artd> @>N
+saldo	 [saldo] N M S @SUBJ>
+de	 [de] PRP <sam-> @N<
+a	 [o] DET F S <artd> <-sam> @>N
+balança=comercial	 [balança=comercial] N F S @P<
+será	 [ser] V FUT 3S IND VFIN <fmc> @FMV
+de	 [de] PRP @<SC
+quase	 [quase] ADV <quant> @>A
+US$	 [US$] PROP M/F S @P<
+14	 [14] NUM M P <card> @>N
+bilhões	 [bilhão] N M P @PRED>
+$,
+um	 [um] DET M S <quant> @N<PRED
+de	 [de] PRP <sam-> @N<
+os	 [o] DET M P <artd> <-sam> @>N
+maiores	 [maior] N M P @P<
+de	 [de] PRP <sam-> @N<
+o	 [o] DET M S <artd> <-sam> @>N
+mundo	 [mundo] N M S @P<
+$.	 [$.] PU <<<
+$¶	 [$¶] PU <<<
+</s>
+<s>
+Aliado	 [aliar] V PCP M S @PRED>
+a	 [a] PRP <sam-> @N<
+o	 [o] DET M S <artd> <-sam> @>N
+afluxo	 [afluxo] N M S @P<
+de	 [de] PRP @N<
+capitais	 [capital] N M P @P<
+especulativos	 [especulativo] ADJ M P @N<
+$,
+isso	 [isso] SPEC M S <dem> @SUBJ>
+permitiu	 [permitir] V PS 3S IND VFIN <fmc> @FMV
+a	 [a] PRP <sam-> @<ACC
+o	 [o] DET M S <artd> <-sam> @>N
+governo	 [governo] N M S @SUBJ>
+acumular	 [acumular] V INF 3S @IMV
+um	 [um] DET M S <arti> @>N
+alto	 [alto] ADJ M S @>N
+nível	 [nível] N M S @<ACC
+de	 [de] PRP @N<
+reservas	 [reserva] N F P @P<
+$(	 [$(] PU
+US$	 [US$] PROP M/F S @APP
+29	 [29] NUM M P <card> @>N
+bilhões	 [bilhão] N M P @N<PRED
+em	 [em] PRP @<ADVL
+outubro	 [outubro] N M S @P<
+$)	 [$)] PU
+$,
+o	 [o] DET M S <artd> @>N
+que	 [que] SPEC M/F S @SUBJ> @#FS-S< <rel>
+diminui	 [diminuir] V PR 3S IND VFIN @FMV
+o	 [o] DET M S <artd> @>N
+risco	 [risco] N M S @<ACC
+de	 [de] PRP @<PIV
+dificuldade	 [dificuldade] N F S @P<
+em	 [em] PRP <sam-> @N<
+o	 [o] DET M S <artd> <-sam> @>N
+balanço	 [balanço] N M S @P<
+de	 [de] PRP @N<
+pagamentos	 [pagamento] N M P @P<
+$.	 [$.] PU <<<
+$¶	 [$¶] PU <<<
+</s>
+<s>
+Além=de	 [além=de] PRP <sam-> @ADVL>
+isso	 [isso] SPEC M S <-sam> <dem> @P<
+$,
+o	 [o] DET M S <artd> @>N
+governo	 [governo] N M S @SUBJ>
+fechou	 [fechar] V PS 3S IND VFIN <fmc> @FMV
+um	 [um] DET M S <arti> @>N
+acordo	 [acordo] N M S @<ACC
+com	 [com] PRP @N<
+os	 [o] DET M P <artd> @>N
+bancos	 [banco] N M P @P<
+estrangeiros	 [estrangeiro] ADJ M P @N<
+e	 [e] <co-fmc> <co-vfin> KC @CO
+$,
+com	 [com] PRP @ADVL> @PRED>
+isso	 [isso] SPEC M S <dem> @P<
+$,
+regularizou	 [regularizar] V PS 3S IND VFIN <fmc> @FMV
+parcialmente	 [parcialmente] ADV <quant> @<ADVL
+sua	 [seu] DET F S <si> <poss 3S> @>N
+situação	 [situação] N F S @<ACC
+com	 [com] PRP @<ADVL
+a	 [o] DET F S <artd> @>N
+comunidade	 [comunidade] N F S @P<
+financeira	 [financeiro] ADJ F S @N<
+internacional	 [internacional] ADJ F S @N<
+$.	 [$.] PU <<<
+$¶	 [$¶] PU <<<
+</s>
+<s>
+Falta	 [faltar] V PR 3S IND VFIN <fmc> @FMV
+fechar	 [fechar] V INF @IMV @#ICL-<SUBJ
+o	 [o] DET M S <artd> @>N
+acerto	 [acerto] N M S @<ACC
+com	 [com] PRP @<ADVL
+o	 [o] DET M S <artd> @>N
+Fundo=Monetário=Internacional	 [Fundo=Monetário=Internacional] PROP M S @P<
+$,
+para	 [para] PRP @ADVL>
+o=qual	 [o=qual] SPEC M S @P< <rel> @#FS-N<
+$,
+de	 [de] PRP @N<PRED
+todo=o	 [todo=o] DET M S <quant> @>N
+modo	 [modo] N M S @P<
+$,
+a	 [o] DET F S <artd> @>N
+negociação	 [negociação] N F S @SUBJ>
+já	 [já] ADV @ADVL>
+está	 [estar] V PR 3S IND VFIN @FMV
+avançada	 [avançar] V PCP F S @<SC
+$.	 [$.] PU <<<
+$¶	 [$¶] PU <<<
+</s>
+<s>
+Foram	 [ser] V PS/MQP 3P IND VFIN <fmc> @FAUX
+dados	 [dar] V PCP M P @IMV @#ICL-AUX<
+$,
+igualmente	 [igualmente] ADV <quant> @<ADVL
+$,
+passos	 [passo] N M P @<PRED @<SUBJ
+importantes	 [importante] ADJ M P @N<
+em	 [em] PRP <sam-> @N<
+o	 [o] DET M S <artd> <-sam> @>N
+rumo	 [rumo] N M S @P<
+de	 [de] PRP @N<
+uma	 [um] DET F S <arti> @>N
+liberalização	 [liberalização] N F S @P<
+cambial	 [cambial] ADJ F S @N<
+$.	 [$.] PU <<<
+$¶	 [$¶] PU <<<
+</s>
+<s>
+Em	 [em] PRP <sam-> @ADVL>
+o	 [o] DET M S <artd> <-sam> @>N
+campo	 [campo] N M S @P<
+de	 [de] PRP <sam-> @N<
+a	 [o] DET F S <artd> <-sam> @>N
+abertura	 [abertura] N F S @P<
+de	 [de] PRP <sam-> @N<
+a	 [o] DET F S <artd> <-sam> @>N
+economia	 [economia] N F S @P<
+$,
+efetivou-	 [efetivar] V PS 3S IND VFIN <fmc> <hyfen> @FMV
+se	 [se] PERS M/F 3S ACC @<SUBJ
+$,
+em	 [em] PRP @<ADVL
+julho	 [julho] N M S @P<
+$,
+a	 [o] DET F S <artd> @>N
+última	 [último] ADJ F S <NUM-ord> @>N
+rodada	 [rodada] N F S @APP
+de	 [de] PRP @N<
+redução	 [redução] N F S @P<
+de	 [de] PRP @N<
+alíquotas	 [alíquota] N F P @P<
+de	 [de] PRP @N<
+importação	 [importação] N F S @P<
+dentro=de	 [dentro=de] PRP @N< <sam-> @<ADVL
+o	 [o] DET M S <-sam> <artd> @>N
+cronograma	 [cronograma] N M S @P<
+herdado	 [herdar] V PCP M S @N<
+de	 [de] PRP <sam-> @N<
+o	 [o] DET M S <artd> <-sam> @>N
+governo	 [governo] N M S @P<
+Collor	 [Collor] PROP M S @N<
+$.	 [$.] PU <<<
+$¶	 [$¶] PU <<<
+</s>
+<s>
+Com	 [com] PRP @ADVL> @PRED>
+isso	 [isso] SPEC M S <dem> @P<
+$,
+a	 [o] DET F S <artd> @>N
+tarifa	 [tarifa] N F S @SUBJ>
+média	 [médio] ADJ F S @N<
+caiu	 [cair] V PS 3S IND VFIN <fmc> @FMV
+de	 [de] PRP @<ADVL
+32,2	 [32,2] NUM M/F P <card> @>N
+$%	 [%] N M P @P<	 [$%] PU
+em	 [em] PRP @N<
+90=para=14,2	 [90=para=14,2] NUM M/F P <card> @>N
+$%	 [%] N M P @P<	 [$%] PU
+e	 [e] KC @CO
+a	 [o] DET F S <artd> @>N
+tarifa	 [tarifa] N F S @PRED>
+máxima	 [grande] ADJ F S <SUP> @N<
+$,
+de	 [de] PRP @N<PRED
+85	 [85] NUM M/F P <card> @>N
+$%	 [%] N M P @P<	 [$%] PU
+para	 [para] PRP @N<
+35	 [35] NUM M/F P <card> @>N
+$%	 [%] N M P @P<	 [$%] PU
+$.	 [$.] PU <<<
+$¶	 [$¶] PU <<<
+</s>
+<s>
+Essa	 [esse] DET F S <dem> @>N
+mudança	 [mudança] N F S @SUBJ>
+é	 [ser] V PR 3S IND VFIN <fmc> @FMV
+importante	 [importante] <n> ADJ F S @<SC
+em	 [em] PRP <sam-> @N<
+o	 [o] DET M S <artd> <-sam> @>N
+sentido	 [sentido] N M S @P<
+de	 [de] PRP @N<
+colocar	 [colocar] V INF @IMV @#ICL-P<
+a	 [o] DET F S <artd> @>N
+produção	 [produção] N F S @<ACC
+nacional	 [nacional] ADJ F S @N<
+sob	 [sob] PRP @<ADVO
+competição	 [competição] N F S @P<
+externa	 [externo] ADJ F S @N<
+e	 [e] <co-inf> KC @CO
+estimular	 [estimular] V INF @#ICL-P< @IMV
+um	 [um] DET M S <arti> @>N
+aumento	 [aumento] N M S @<ACC
+de	 [de] PRP <sam-> @N<
+a	 [o] DET F S <artd> <-sam> @>N
+eficiência	 [eficiência] N F S @P<
+de	 [de] PRP <sam-> @N<
+as	 [o] DET F P <artd> <-sam> @>N
+empresas	 [empresa] N F P @P<
+$.	 [$.] PU <<<
+$¶	 [$¶] PU <<<
+</s>
+<s>
+O	 [o] DET M S <artd> @>N
+governo	 [governo] N M S @SUBJ>
+fechou	 [fechar] V PS 3S IND VFIN <fmc> @FMV
+ainda	 [ainda] ADV @>N
+um	 [um] DET M S <arti> @>N
+acordo	 [acordo] N M S @<ACC
+sobre	 [sobre] PRP @<ADVL
+as	 [o] DET F P <artd> @>N
+dívidas	 [dívida] N F P @P<
+de	 [de] PRP @N<
+Estados	 [estado] N M P @P<
+e	 [e] KC @CO
+municípios	 [município] N M P @P<
+com	 [com] PRP @<ADVL
+a	 [o] DET F S <artd> @>N
+União	 [união] <prop> N F S @P<
+$,
+colocando	 [colocar] V GER @#ICL-<ADVL @IMV
+em	 [em] PRP <sam-> @<ADVO
+o	 [o] DET M S <artd> <-sam> @>N
+horizonte	 [horizonte] N M S @P<
+um	 [um] DET M S <arti> @>N
+fluxo	 [fluxo] N M S @<ACC
+regular	 [regular] ADJ M S @N<
+de	 [de] PRP @N<
+pagamentos	 [pagamento] N M P @P<
+para	 [para] PRP @<ADVL
+o	 [o] DET M S <artd> @>N
+Tesouro	 [tesouro] <prop> N M S @P<
+$.	 [$.] PU <<<
+$¶	 [$¶] PU <<<
+</s>
+<s>
+Resta	 [restar] V PR 3S IND VFIN <fmc> @FMV
+definir	 [definir] V FUT 1/3S SUBJ VFIN <fmc> @FMV
+$,
+porém	 [porém] ADV <kc> @<ADVL
+$,
+a	 [o] DET F S <artd> @>N
+principal	 [principal] ADJ F S <SUP> @>N
+questão	 [questão] N F S @<ACC
+$:	 [$:] PU <<<
+o	 [o] DET M S <artd> @>N
+limite	 [limite] N M S @NPHR
+de	 [de] PRP @N<
+comprometimento	 [comprometimento] N M S @P<
+de	 [de] PRP <sam-> @N<
+a	 [o] DET F S <artd> <-sam> @>N
+receita	 [receita] N F S @P<
+de	 [de] PRP <sam-> @N<
+os	 [o] DET M P <artd> <-sam> @>N
+governos	 [governo] N M P @P<
+estaduais	 [estadual] ADJ M P @N<
+e	 [e] KC @CO
+municipais	 [municipal] ADJ M/F P @N<
+$.	 [$.] PU <<<
+$¶	 [$¶] PU <<<
+</s>
+<s>
+Quanto=a	 [quanto=a] PRP <sam-> @ADVL>
+as	 [o] DET F P <artd> <-sam> @>N
+privatizações	 [privatização] N F P @P<
+$,
+não	 [não] ADV @ADVL>
+há	 [haver] V PR 3S IND VFIN <fmc> @FMV
+muito	 [muito] ADV <quant> @<ADVL
+o	 [o] DET M S <artd> @>N
+que	 [que] SPEC M/F S @ACC> @#FS-<ACC <rel>
+comemorar	 [comemorar] V FUT 1/3S SUBJ VFIN @FMV
+em	 [em] PRP @<ADVL
+93	 [93] NUM M/F S <card> @P<
+$.	 [$.] PU <<<
+$¶	 [$¶] PU <<<
+</s>
+<s>
+É	 [é] ADV <foc> @FOC>
+verdade	 [verdade] N F S @PRED>
+que	 [que] ADV <foc> @<FOC
+o	 [o] DET M S <artd> @>N
+cronograma	 [cronograma] N M S @SUBJ>
+de	 [de] PRP @N<
+leilões	 [leilão] N M P @P<
+$,
+bem	 [bem] ADV <quant> @ADVL>
+ou	 [ou] KC @CO
+mal	 [mal] ADV @ADVL>
+$,
+acabou	 [acabar] V PS 3S IND VFIN <fmc> @FAUX
+sendo	 [ser] V GER @#ICL-AUX< @IAUX
+cumprido	 [cumprir] V PCP M S @IMV @#ICL-AUX<
+$,
+mas	 [mas] <co-fmc> <co-vfin> KC @CO
+$,
+em=contrapartida	 [em=contrapartida] ADV @ADVL>
+$,
+nada	 [nada] SPEC M S <quant> @SUBJ>
+se	 [se] PERS M/F 3S ACC @ACC>-PASS
+avançou	 [avançar] V PS 3S IND VFIN <fmc> @FMV
+em	 [em] PRP <sam-> @<ADVL
+a	 [o] DET F S <artd> <-sam> @>N
+abertura	 [abertura] N F S @P<
+de	 [de] PRP @N<
+novos	 [novo] ADJ M P @>N
+setores	 [setor] N M P @P<
+a	 [a] PRP <sam-> @<ADVL
+a	 [o] DET F S <artd> <-sam> @>N
+desestatização	 [desestatização] N F S @P<
+$.	 [$.] PU <<<
+$¶	 [$¶] PU <<<
+</s>
+<s>
+Em	 [em] PRP @ADVL>
+todo	 [todo] DET M S <quant> @>N
+caso	 [caso] N M S @P<
+$,
+o	 [o] DET M S <artd> @>N
+ano	 [ano] N M S @SUBJ>
+passado	 [passado] ADJ M S @N<
+marcou	 [marcar] V PS 3S IND VFIN <fmc> @FMV
+o	 [o] DET M S <artd> @>N
+fim	 [fim] N M S @<ACC
+de	 [de] PRP <sam-> @N<
+a	 [o] DET F S <artd> <-sam> @>N
+presença	 [presença] N F S @P<
+estatal	 [estatal] ADJ F S @N<
+em	 [em] PRP <sam-> @N<
+a	 [o] DET F S <artd> <-sam> @>N
+siderurgia	 [siderurgia] N F S @P<
+$,
+mas	 [mas] <co-fmc> <co-vfin> KC @CO
+é	 [é] ADV <foc> @FOC>
+necessário	 [necessário] ADJ M S @<ACC
+que	 [que] ADV <foc> @<FOC
+o	 [o] DET M S <artd> @>N
+processo	 [processo] N M S @SUBJ>
+seja	 [ser] V PR 3S SUBJ VFIN <fmc> @FAUX
+acelerado	 [acelerar] V PCP M S @IMV @#ICL-AUX<
+e	 [e] <co-pcv> KC @CO
+ampliado	 [ampliar] V PCP M S @#ICL-AUX< @IMV
+em	 [em] PRP <sam-> @<ADVL
+o	 [o] DET M S <artd> <-sam> @>N
+ano	 [ano] N M S @P<
+que	 [que] SPEC M/F S @SUBJ> <rel> @#FS-N<
+começa	 [começar] V PR 3S IND VFIN @FMV
+$.	 [$.] PU <<<
+$¶	 [$¶] PU <<<
+</s>
+<s>
+Esses	 [esse] DET M P <dem> @>N
+avanços	 [avanço] N M P @SUBJ>
+setoriais	 [setorial] ADJ M P @N<
+são	 [ser] V PR 3P IND VFIN <fmc> @FMV
+$,
+no=entanto	 [no=entanto] ADV <kc> @<ADVL
+$,
+ofuscados	 [ofuscar] V PCP M P @IMV @#ICL-<SC
+por	 [por] PRP <sam-> @<PASS
+a	 [o] DET F S <artd> <-sam> @>N
+crise	 [crise] N F S @P<
+social	 [social] ADJ F S @N<
+e	 [e] <co-vfin> KC @CO
+por	 [por] PRP <sam-> @<PASS
+a	 [o] DET F S <artd> <-sam> @>N
+aceleração	 [aceleração] N F S @P<
+inflacionária	 [inflacionário] ADJ F S @N<
+$,
+que	 [que] SPEC M/F S @SUBJ> <rel> @#FS-N<
+agrava	 [agravar] V PR 3S IND VFIN @FMV
+a	 [a] PRP <sam-> @<ADVL
+o	 [o] DET M S <artd> <-sam> @>N
+extremo	 [extremo] N M S @P<
+as	 [o] DET F P <artd> @>N
+dificuldades	 [dificuldade] N F P @<ACC
+de	 [de] PRP <sam-> @N<
+as	 [o] DET F P <artd> <-sam> @>N
+camadas	 [camada] N F P @P<
+mais	 [mais] ADV <KOMP> <quant> @>A
+pobres	 [pobre] ADJ M/F P @N<
+$.	 [$.] PU <<<
+$¶	 [$¶] PU <<<
+</s>
+<s>
+De=fato	 [de=fato] ADV @ADVL>
+$,
+todos=os	 [todo=o] DET M P <quant> @>N
+esforços	 [esforço] N M P @SUBJ>
+já	 [já] ADV @ADVL>
+feitos	 [fazer] V PCP M P @IMV @#ICL-N<
+podem	 [poder] V PR 3P IND VFIN <fmc> @FAUX
+se	 [se] PERS M/F 3S ACC <refl> @ACC>
+mostrar	 [mostrar] V INF @IMV @#ICL-AUX<
+infrutíferos	 [infrutífero] ADJ M P @<OC
+se	 [se] KS @#FS-<ACC @#FS-<ADVL @SUB
+o	 [o] DET M S <artd> @>N
+país	 [país] N M S @SUBJ>
+não	 [não] ADV @ADVL>
+conseguir	 [conseguir] V FUT 3S SUBJ VFIN @FMV
+reduzir	 [reduzir] V INF @IMV @#ICL-<ACC
+$	 [$] PU
+e	 [e] KC @CO
+muito	 [muito] DET M S <quant> @<ACC
+$	 [$] PU
+a	 [o] DET F S <artd> @>N
+taxa	 [taxa] N F S @PRED>
+de	 [de] PRP @N<
+aumento	 [aumento] N M S @P<
+de	 [de] PRP @N<
+preços	 [preço] N M P @P<
+$.	 [$.] PU <<<
+$¶	 [$¶] PU <<<
+</s>
+<s>
+Em	 [em] PRP <sam-> @ADVL>
+esse	 [esse] DET M S <dem> <-sam> @>N
+aspecto	 [aspecto] N M S @P<
+$,
+é	 [ser] V PR 3S IND VFIN <fmc> @FMV
+preciso	 [preciso] ADJ M S @<SC
+lembrar	 [lembrar] V INF @IMV @#ICL-<SUBJ
+que	 [que] KS @SUB @#FS-<ACC
+uma	 [um] DET F S <arti> @>N
+profunda	 [profundo] ADJ F S @>N
+reforma	 [reforma] N F S @SUBJ>
+de	 [de] PRP <sam-> @N<
+o	 [o] DET M S <artd> <-sam> @>N
+Estado	 [estado] <prop> N M S @P<
+se	 [se] PERS M/F 3S ACC <refl> @ACC>
+faz	 [fazer] V PR 3S IND VFIN @FMV
+necessária	 [necessário] <n> ADJ F S @<OC
+a=fim=de	 [a=fim=de] PRP @N<
+produzir	 [produzir] V INF @IMV @#ICL-P<
+um	 [um] DET M S <arti> @>N
+ajuste	 [ajuste] N M S @<ACC
+fiscal	 [fiscal] ADJ M S @N<
+duradouro	 [duradouro] ADJ M S @N<
+$.	 [$.] PU <<<
+$¶	 [$¶] PU <<<
+</s>
+<s>
+Sem	 [sem] PRP @ADVL> @PRED>
+isso	 [isso] SPEC M S <dem> @P<
+$,
+a	 [o] DET F S <artd> @>N
+queda	 [queda] N F S @SUBJ>
+definitiva	 [definitivo] ADJ F S @N<
+de	 [de] PRP <sam-> @N<
+a	 [o] DET F S <artd> <-sam> @>N
+inflação	 [inflação] N F S @P<
+é	 [ser] V PR 3S IND VFIN <fmc> @FMV
+impensável	 [impensável] ADJ F S @<SC
+$.	 [$.] PU <<<
+$¶	 [$¶] PU <<<
+</s>
+<s>
+E	 [e] KC @CO
+o	 [o] DET M S <artd> @>N
+melhor	 [bom] ADJ M S <SUP> <KOMP> @>N
+foro	 [foro] N M S @SUBJ>
+para	 [para] PRP @N<
+se	 [se] PERS M/F 3S ACC @ACC>-PASS
+avançar	 [avançar] V INF 3S @IMV @#ICL-P<
+em	 [em] PRP <sam-> @<ADVL
+a	 [o] DET F S <artd> <-sam> @>N
+questão	 [questão] N F S @P<
+de	 [de] PRP <sam-> @N<
+o	 [o] DET M S <artd> <-sam> @>N
+Estado	 [estado] <prop> N M S @P<
+é	 [ser] V PR 3S IND VFIN <fmc> @FMV
+a	 [o] DET F S <artd> @>N
+revisão	 [revisão] N F S @<SC
+constitucional	 [constitucional] ADJ F S @N<
+$,
+cuja	 [cujo] DET F S @>N <rel> @#FS-N<
+realização	 [realização] N F S @SUBJ>
+é	 [ser] V PR 3S IND VFIN @FMV
+incerta	 [incerto] ADJ F S @<SC
+$.	 [$.] PU <<<
+$¶	 [$¶] PU <<<
+</s>
+<s>
+É	 [ser] V PR 3S IND VFIN <fmc> @FMV
+preciso	 [preciso] ADJ M S @<SC
+ressaltar	 [ressaltar] V INF @IMV @#ICL-<SUBJ
+que	 [que] KS @SUB @#FS-<ACC
+a	 [o] DET F S <artd> @>N
+maior	 [grande] ADJ F S <KOMP> @>N
+parte	 [parte] N F S @PRED>
+de	 [de] PRP <sam-> @N<
+o	 [o] DET M S <artd> <-sam> @>N
+pouco	 [pouco] DET M S <quant> @P<
+que	 [que] SPEC M/F S @ACC> <rel> @#FS-N<
+há	 [haver] V PR 3S IND VFIN @FMV
+a	 [a] PRP @<ADVL
+comemorar	 [comemorar] V INF @IMV @#ICL-P<
+em	 [em] PRP @<ADVL
+93	 [93] NUM M/F S <card> @P<
+em	 [em] PRP <sam-> @<ADVL
+o	 [o] DET M S <artd> <-sam> @>N
+campo	 [campo] N M S @P<
+econômico	 [econômico] ADJ M S @N<
+não	 [não] ADV @<ADVL
+se	 [se] KS @#FS-<ACC @#FS-<ADVL @SUB
+deveu	 [dever] V PS 3S IND VFIN @FMV
+a	 [a] PRP @<PIV
+esforços	 [esforço] N M P @P<
+de	 [de] PRP <sam-> @N<
+o	 [o] DET M S <artd> <-sam> @>N
+presidente	 [presidente] N M S @P<
+$.	 [$.] PU <<<
+$¶	 [$¶] PU <<<
+</s>
+<s>
+Em	 [em] PRP <sam-> @ADVL>
+a	 [o] DET F S <artd> <-sam> @>N
+verdade	 [verdade] N F S @P<
+$,
+as	 [o] DET F P <artd> @>N
+questões	 [questão] N F P @PRED>
+levantadas	 [levantado] ADJ F P @N<
+ou	 [ou] <parkc-1> KC @CO
+já	 [já] ADV @ADVL>
+estavam	 [estar] V IMPF 3P IND VFIN <fmc> @FMV
+em	 [em] PRP <sam-> @<ADVS
+a	 [o] DET F S <artd> <-sam> @>N
+agenda	 [agenda] N F S @P<
+política	 [político] ADJ F S @N<
+há	 [há] PRP @<ADVL
+muito	 [muito] DET M S <quant> @P<
+ou	 [ou] <parkc-2> <co-vfin> KC @CO
+se	 [se] KS @#FS-<ADVL @SUB
+devem	 [dever] V PR 3P IND VFIN @FMV
+exclusivamente	 [exclusivamente] ADV @<ADVL
+a	 [a] PRP <sam-> @<PIV
+o	 [o] DET M S <artd> <-sam> @>N
+setor	 [setor] N M S @P<
+privado	 [privado] ADJ M S @N<
+$.	 [$.] PU <<<
+$¶	 [$¶] PU <<<
+</s>
+<s>
+A	 [a] PRP <sam-> @ADVL>
+o	 [o] DET M S <artd> <-sam> @>N
+atual	 [atual] ADJ M S @>N
+governo	 [governo] N M S @P<
+$,
+coube	 [caber] V PS 3S IND VFIN <fmc> @FMV
+mais	 [mais] ADV <KOMP> <quant> @<ADVL
+o	 [o] DET M S <artd> @>N
+papel	 [papel] N M S @<SUBJ
+de	 [de] PRP @N<
+espectador	 [espectador] N M S @P<
+$,
+quando=não	 [quando=não] ADV <kc> @<ADVL
+o	 [o] DET M S <dem> @<OC
+de	 [de] PRP @N<
+complicador	 [complicador] N M S @P<
+$.	 [$.] PU <<<
+$¶	 [$¶] PU <<<
+</s>
+<s>
+É	 [ser] V PR 3S IND VFIN <fmc> @FMV
+um	 [um] DET M S <arti> @>N
+papel	 [papel] N M S @<SC
+que	 [que] SPEC M/F S @ACC> <rel> @#FS-N<
+não	 [não] ADV @ADVL>
+pode	 [poder] V PR 3S IND VFIN @FAUX
+se	 [se] PERS M/F 3S ACC @SUBJ>
+repetir	 [repetir] V INF 3S @IMV @#ICL-AUX<
+em	 [em] PRP @<ADVL
+94	 [94] NUM M/F S <card> @P<
+$,
+pois	 [pois] KS @ADVL>
+a	 [o] DET F S <artd> @>N
+questão	 [questão] N F S @SUBJ>
+central	 [central] ADJ F S @N<
+$	 [$] PU
+a	 [o] DET F S <artd> @>N
+inflação	 [inflação] N F S @SUBJ>
+$	 [$] PU
+não	 [não] ADV @ADVL>
+pode	 [poder] V PR 3S IND VFIN <fmc> @FAUX
+ser	 [ser] V INF @IAUX @#ICL-AUX<
+enfrentada	 [enfrentar] V PCP F S @IMV @#ICL-AUX<
+a	 [a] PRP <sam-> @<ADVL
+a	 [o] DET F S <artd> <-sam> @>N
+revelia	 [revelia] N F S @P<
+de	 [de] PRP <sam-> @N<
+o	 [o] DET M S <artd> <-sam> @>N
+governo	 [governo] N M S @P<
+$.	 [$.] PU <<<
+$¶	 [$¶] PU <<<
+</s>
+<s>
+A	 [o] DET F S <artd> @>N
+equipe	 [equipe] N F S @SUBJ>
+econômica	 [econômico] ADJ F S @N<
+divulgou	 [divulgar] V PS 3S IND VFIN <fmc> @FMV
+o	 [o] DET M S <artd> @>N
+seu	 [seu] DET M S <si> <poss 3S> @>N
+plano	 [plano] N M S @<ACC
+$.	 [$.] PU <<<
+$¶	 [$¶] PU <<<
+</s>
+<s>
+Resta	 [restar] V PR 3S IND VFIN <fmc> @FMV
+$,
+agora	 [agora] ADV <kc> @<ADVL
+$,
+que	 [que] KS @SUB @#FS-<ADVL
+o	 [o] DET M S <artd> @>N
+conjunto	 [conjunto] N M S @SUBJ>
+de	 [de] PRP <sam-> @N<
+o	 [o] DET M S <artd> <-sam> @>N
+Executivo	 [executivo] <prop> N M S @P<
+abandone	 [abandonar] V PR 3S SUBJ VFIN @FMV
+as	 [o] DET F P <artd> @>N
+arquibancadas	 [arquibancada] N F P @<ACC
+e	 [e] KC @CO
+passe	 [passe] N M S @<ACC
+a	 [a] PRP @<ADVL
+jogar	 [jogar] V INF @IMV @#ICL-P<
+pesadamente	 [pesadamente] ADV @<ADVL
+contra	 [contra] PRP @<ADVL
+a	 [o] DET F S <artd> @>N
+inflação	 [inflação] N F S @P<
+$.	 [$.] PU <<<
+$¶	 [$¶] PU <<<
+</s>
+<s>
+Só	 [só] ADV @>A
+assim	 [assim] ADV <kc> @ADVL>
+se	 [se] PERS M/F 3S ACC @SUBJ>
+evitará	 [evitar] V FUT 3S IND VFIN <fmc> @FMV
+que	 [que] KS @SUB @#FS-<ACC
+94	 [94] NUM M S <card> @SUBJ>
+seja	 [ser] V PR 3S SUBJ VFIN @FMV
+tão	 [tão] ADV <KOMP> <quant> @>A
+insatisfatório	 [insatisfatório] ADJ M S @<SC
+como	 [como] ADV @COM <prp> <rel> @#AS-KOMP<
+93	 [93] NUM M/F P <card> @<SUBJ
+$.	 [$.] PU <<<
+$¶	 [$¶] PU <<<
+</s>
+</TEXT>
+$¶	 [$¶] PU <<<
+</DOC>

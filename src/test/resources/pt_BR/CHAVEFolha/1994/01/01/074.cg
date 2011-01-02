@@ -1,0 +1,187 @@
+<DOC>
+<DOCNO.valor=FSP940101-074>
+<DOCID.valor=FSP940101-074>
+<DATE.valor=940101>
+<TEXT>
+<s>
+Da=Reportagem=Local	 [Da=Reportagem=Local] PROP F S @NPHR
+$¶	 [$¶] PU <<<
+</s>
+<s>
+O	 [o] DET M S <artd> @>N
+shopping	 [shopping] N M S @SUBJ>
+Center=Norte	 [Center=Norte] PROP M S @N<
+vai	 [ir] V PR 3S IND VFIN <fmc> @FAUX
+sortear	 [sortear] V INF @IMV @#ICL-AUX<
+uma	 [um] DET F S <arti> @>N
+viagem	 [viagem] N F S @<ACC
+a	 [a] PRP <sam-> @N<
+o	 [o] DET M S <artd> <-sam> @>N
+Caribe	 [Caribe] PROP M S @P<
+$.	 [$.] PU <<<
+$¶	 [$¶] PU <<<
+</s>
+<s>
+Para	 [para] PRP @ADVL>
+concorrer	 [concorrer] V INF @IMV @#ICL-P<
+$,
+é	 [ser] V PR 3S IND VFIN <fmc> @FMV
+preciso	 [preciso] ADJ M S @<SC
+trocar	 [trocar] V INF @IMV @#ICL-<SUBJ
+notas=fiscais	 [nota=fiscal] N F P @<ACC
+recebidas	 [receber] V PCP F P @N<
+durante	 [durante] PRP @<ADVL
+as	 [o] DET F P <artd> @>N
+compras	 [compra] N F P @P<
+em	 [em] PRP @<ADVL
+lojas	 [loja] N F P @P<
+de	 [de] PRP <sam-> @N<
+o	 [o] DET M S <artd> <-sam> @>N
+shopping	 [shopping] N M S @P<
+por	 [por] PRP @<PIV
+cupons	 [cupom] N M P @P<
+$.	 [$.] PU <<<
+$¶	 [$¶] PU <<<
+</s>
+<s>
+Cada	 [cada] DET M S <quant> @>N
+Cr$	 [cr$] <prop> N M S @SUBJ>
+5.000,00	 [5.000,00] NUM M/F P <card> @N<
+em	 [em] PRP @N<
+notas	 [noto] ADJ F P @P<
+vale	 [valer] V PR 3S IND VFIN <fmc> @FMV
+um	 [um] DET M S <arti> @>N
+cupom	 [cupom] N M S @<ACC
+$,
+que	 [que] SPEC M S @SUBJ> <rel> @#FS-N<
+ficará	 [ficar] V FUT 3S IND VFIN @FMV
+depositado	 [depositar] V PCP M S @IMV @#ICL-<SC
+em	 [em] PRP <sam-> @<ADVL
+a	 [o] DET F S <artd> <-sam> @>N
+urna	 [urna] N F S @P<
+de	 [de] PRP <sam-> @N<
+o	 [o] DET M S <artd> <-sam> @>N
+shopping	 [shopping] N M S @P<
+até	 [até] PRP @<ADVL
+as	 [o] DET F P <artd> @>N
+18h	 [18h] N F P @P<
+de	 [de] PRP <sam-> @N<
+o	 [o] DET M S <artd> <-sam> @>N
+dia	 [dia] N M S @P<
+30	 [30] NUM M/F P <card> @N<
+de	 [de] PRP @N<
+janeiro	 [janeiro] N M S @P<
+$,
+quando	 [quando] ADV @ADVL> @#FS-<ADVL <ks> <rel> @#FS-N<
+acontece	 [acontecer] V PR 3S IND VFIN @FMV
+o	 [o] DET M S <artd> @>N
+sorteio	 [sorteio] N M S @<SUBJ
+$.	 [$.] PU <<<
+$¶	 [$¶] PU <<<
+</s>
+<s>
+O	 [o] DET M S <artd> @>N
+prêmio	 [prêmio] N M S @SUBJ>
+é	 [ser] V PR 3S IND VFIN <fmc> @FMV
+um	 [um] DET M S <arti> @>N
+cruzeiro	 [cruzeiro] N M S @<SC
+por	 [por] PRP <sam-> @N<
+o	 [o] DET M S <artd> <-sam> @>N
+Caribe	 [Caribe] PROP M S @P<
+$,
+com	 [com] PRP @N<PRED
+direito	 [direito] N M S @P<
+a	 [a] PRP @N<
+um	 [um] DET M S <arti> @>N
+acompanhante	 [acompanhante] N M S @P<
+e	 [e] KC @CO
+todas=as	 [todo=o] DET F P <quant> @>N
+despesas	 [despesa] N F P @<SC
+pagas	 [pagar] V PCP F P @N<
+$.	 [$.] PU <<<
+$¶	 [$¶] PU <<<
+</s>
+<s>
+O	 [o] DET M S <artd> @>N
+slogan	 [slogan] N M S @SUBJ>
+de	 [de] PRP <sam-> @N<
+a	 [o] DET F S <artd> <-sam> @>N
+promoção	 [promoção] N F S @P<
+é	 [ser] V PR 3S IND VFIN <fmc> @FMV
+Que=tal=catar=coquinho=no=Caribe?	 [Que=tal=catar=coquinho=no=Caribe?] PROP M S <*2> <*1> @<SC
+$¶	 [$¶] PU <<<
+</s>
+<s>
+Essa	 [esse] DET F S <dem> @SUBJ>
+é	 [ser] V PR 3S IND VFIN <fmc> @FMV
+a	 [o] DET F S <artd> @>N
+última	 [último] ADJ F S <NUM-ord> @>N
+viagem	 [viagem] N F S @<SC
+sorteada	 [sortear] V PCP F S @N<
+por	 [por] PRP <sam-> @<ADVL
+o	 [o] DET M S <artd> <-sam> @>N
+shopping	 [shopping] N M S @P<
+$.	 [$.] PU <<<
+$¶	 [$¶] PU <<<
+</s>
+<s>
+Todos=os	 [todo=o] DET M P <quant> @>N
+meses	 [mês] N M P @ADVL>
+$,
+desde	 [desde] PRP @ADVL>
+junho	 [junho] N M S @P<
+$,
+o	 [o] DET M S <artd> @>N
+Center=Norte	 [Center=Norte] PROP M S @SUBJ>
+dá	 [dar] V PR 3S IND VFIN <fmc> @FMV
+como	 [como] ADV @#AS-<OC <rel> @PRD
+prêmio	 [prêmio] N M S @AS<
+uma	 [um] DET F S <arti> @>N
+viagem	 [viagem] N F S @<ACC
+internacional	 [internacional] ADJ F S @N<
+a	 [a] PRP @N<
+seus	 [seu] DET M P <poss 3S> @>N
+frequentadores	 [frequentador] N M P @P<
+$.	 [$.] PU <<<
+$¶	 [$¶] PU <<<
+</s>
+<s>
+A	 [o] DET F S <artd> @>N
+promoção	 [promoção] N F S @SUBJ>
+vale	 [valer] V PR 3S IND VFIN <fmc> @FMV
+para	 [para] PRP @<ADVL
+as	 [o] DET F P <artd> @>N
+compras	 [compra] N F P @P<
+feitas	 [fazer] V PCP F P @N<
+a=partir=de	 [a=partir=de] PRP @N<
+segunda-feira	 [segunda-feira] N F S @P<
+$.	 [$.] PU <<<
+$¶	 [$¶] PU <<<
+</s>
+<s>
+Os	 [o] DET M P <artd> @>N
+cupons	 [cupom] N M P @SUBJ>
+serão	 [ser] V FUT 3P IND VFIN <fmc> @FAUX
+trocados	 [trocar] V PCP M P @IMV @#ICL-AUX<
+em	 [em] PRP <sam-> @<ADVL
+o	 [o] DET M S <artd> <-sam> @>N
+posto	 [pôr] <n> V PCP M S @P<
+de	 [de] PRP <sam-> @<ADVL
+o	 [o] DET M S <artd> <-sam> @>N
+shopping	 [shopping] N M S @P<
+apenas	 [apenas] ADV @>P
+até	 [até] PRP @<ADVL
+o	 [o] DET M S <artd> @>N
+dia	 [dia] N M S @P<
+29	 [29] NUM M/F P <card> @N<
+$,
+véspera	 [véspera] N F S @N<PRED
+de	 [de] PRP <sam-> @N<
+o	 [o] DET M S <artd> <-sam> @>N
+sorteio	 [sorteio] N M S @P<
+$.	 [$.] PU <<<
+$¶	 [$¶] PU <<<
+</s>
+</TEXT>
+$¶	 [$¶] PU <<<
+</DOC>

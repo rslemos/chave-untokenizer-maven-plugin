@@ -1,0 +1,188 @@
+<DOC>
+<DOCNO.valor=FSP940101-085>
+<DOCID.valor=FSP940101-085>
+<DATE.valor=940101>
+<TEXT>
+<s>
+Da=Reportagem=Local	 [Da=Reportagem=Local] PROP F S @NPHR
+$¶	 [$¶] PU <<<
+</s>
+<s>
+Para	 [para] PRP @ADVL>
+este	 [este] DET M S <dem> @>N
+ano	 [ano] N M S @P<
+a	 [o] DET F S <artd> @>N
+maior	 [grande] ADJ F S <KOMP> @>N
+novidade	 [novidade] N F S @SUBJ>
+em	 [em] PRP <sam-> @N<
+o	 [o] DET M S <artd> <-sam> @>N
+setor	 [setor] N M S @P<
+de	 [de] PRP <sam-> @N<
+os	 [o] DET M P <artd> <-sam> @>N
+transportes	 [transporte] N M P @P<
+em	 [em] PRP <sam-> @N<
+o	 [o] DET M S <artd> <-sam> @>N
+município	 [município] N M S @P<
+deve	 [dever] V PR 3S IND VFIN <fmc> @FAUX
+ser	 [ser] V INF @IMV @#ICL-AUX<
+a	 [o] DET F S <artd> @>N
+introdução	 [introdução] N F S @<SC
+de	 [de] PRP <sam-> @N<
+o	 [o] DET M S <artd> <-sam> @>N
+sistema	 [sistema] N M S @P<
+de	 [de] PRP @N<
+catracas	 [catraca] N F P @P<
+eletrônicas	 [eletrônico] ADJ F P @N<
+$,
+que	 [que] SPEC M/F S @SUBJ> <rel> @#FS-N<
+poderá	 [poder] V FUT 3S IND VFIN @FAUX
+gerar	 [gerar] V INF @IMV @#ICL-AUX<
+demissões	 [demissão] N F P @<ACC
+em	 [em] PRP <sam-> @N<
+as	 [o] DET F P <artd> <-sam> @>N
+empresas	 [empresa] N F P @P<
+de	 [de] PRP @N<
+transporte	 [transporte] N M S @P<
+$,
+já=que	 [já=que] KS @SUB @#FS-<ADVL
+os	 [o] DET M P <artd> @>N
+cobradores	 [cobrador] N M P @SUBJ>
+não	 [não] ADV @ADVL>
+serão	 [ser] V FUT 3P IND VFIN @FMV
+mais	 [mais] ADV <kc> @<ADVL
+necessários	 [necessário] ADJ M P @<SC
+$.	 [$.] PU <<<
+$¶	 [$¶] PU <<<
+</s>
+<s>
+O	 [o] DET M S <artd> @>N
+sindicato	 [sindicato] N M S @SUBJ>
+de	 [de] PRP <sam-> @N<
+os	 [o] DET M P <artd> <-sam> @>N
+condutores	 [condutor] N M P @P<
+é	 [ser] V PR 3S IND VFIN <fmc> @FMV
+contra	 [contra] PRP @<SC
+a	 [o] DET F S <artd> @>N
+medida	 [medida] N F S @P<
+e	 [e] <co-fmc> <co-vfin> KC @CO
+$,
+em	 [em] PRP <sam-> @ADVL>
+o	 [o] DET M S <artd> <-sam> @>N
+ano	 [ano] N M S @P<
+passado	 [passado] ADJ M S @N<
+$,
+ameaçou	 [ameaçar] V PS 3S IND VFIN <fmc> @FMV
+fazer	 [fazer] V INF @IMV @#ICL-<ACC
+greves	 [greve] N F P @<ACC
+em	 [em] PRP @<ADVL
+protesto	 [protesto] N M S @P<
+$.	 [$.] PU <<<
+$¶	 [$¶] PU <<<
+</s>
+<s>
+Com	 [com] PRP @ADVL>
+a	 [o] DET F S <artd> @>N
+catraca	 [catraca] N F S @P<
+eletrônica	 [eletrônico] ADJ F S @N<
+$,
+a	 [o] DET F S <artd> @>N
+compra	 [compra] N F S @SUBJ>
+de	 [de] PRP @N<
+bilhetes	 [bilhete] N M P @P<
+poderia	 [poder] V COND 3S VFIN <fmc> @FAUX
+ser	 [ser] V INF @IAUX @#ICL-AUX<
+antecipada	 [antecipar] V PCP F S @IMV @#ICL-AUX<
+$,
+como	 [como] ADV <interr> @#FS-<ACC
+em	 [em] PRP <sam-> @<ADVL
+o	 [o] DET M S <artd> <-sam> @>N
+Metrô	 [metrô] <prop> N M S @P<
+$,
+e	 [e] <co-vfin> KC @CO
+também	 [também] ADV @ADVL>
+permitiria	 [permitir] V COND 3S VFIN @FMV
+integração	 [integração] N F S @<ACC
+gratuita	 [gratuito] ADJ F S @N<
+entre	 [entre] PRP @N< @<ADVL
+uma	 [uma] NUM F S <card> @>N
+linha	 [linha] N F S @P<
+e	 [e] KC @CO
+outra	 [outro] DET F S <KOMP> <diff> @P<
+$.	 [$.] PU <<<
+$¶	 [$¶] PU <<<
+</s>
+<s>
+O	 [o] DET M S <artd> @>N
+programa	 [programa] N M S @SUBJ>
+de	 [de] PRP @N<
+corredores	 [corredor] N M P @P<
+$,
+outra	 [outro] DET F S <KOMP> <diff> @>N
+promessa	 [promessa] N F S @N<PRED
+para	 [para] PRP @ADVL>
+este	 [este] DET M S <dem> @>N
+ano	 [ano] N M S @P<
+$,
+teve	 [ter] V PS 3S IND VFIN <fmc> @FMV
+as	 [o] DET F P <artd> @>N
+primeiras	 [primeiro] ADJ F P <NUM-ord> @>N
+licitações	 [licitação] N F P @<ACC
+lançadas	 [lançar] V PCP F P @IMV @#ICL-N<
+em	 [em] PRP <sam-> @<ADVL
+o	 [o] DET M S <artd> <-sam> @>N
+final	 [final] N M S @P<
+de	 [de] PRP <sam-> @N<
+o	 [o] DET M S <artd> <-sam> @>N
+ano	 [ano] N M S @P<
+passado	 [passado] ADJ M S @N<
+$.	 [$.] PU <<<
+$¶	 [$¶] PU <<<
+</s>
+<s>
+Vai	 [ir] V PR 3S IND VFIN <fmc> @FAUX
+permitir	 [permitir] V INF @IMV @#ICL-AUX<
+a	 [o] DET F S <artd> @>N
+integração	 [integração] N F S @<ACC
+mais	 [mais] ADV <KOMP> <quant> @>A
+rápida	 [rápido] ADJ F S @N<
+de	 [de] PRP <sam-> @N<
+os	 [o] DET M P <artd> <-sam> @>N
+bairros	 [bairro] N M P @P<
+através	 [através] ADV @<ADVL
+de	 [de] PRP <sam-> @A<
+a	 [o] DET F S <artd> <-sam> @>N
+circulação	 [circulação] N F S @P<
+de	 [de] PRP <sam-> @N<
+os	 [o] DET M P <artd> <-sam> @>N
+ônibus	 [ônibus] N M S @P<
+em	 [em] PRP @<ADVL
+faixas	 [faixa] N F P @P<
+exclusivas	 [exclusivo] ADJ F P @N<
+$.	 [$.] PU <<<
+$¶	 [$¶] PU <<<
+</s>
+<s>
+Se	 [se] KS @#FS-ADVL> @SUB
+tudo	 [tudo] SPEC M S <quant> @ACC>
+der	 [dar] V FUT 1/3S SUBJ VFIN @FMV
+certo	 [certo] ADJ M S @<PRED
+$,
+os	 [o] DET M P <artd> @>N
+corredores	 [corredor] N M P @SUBJ>
+devem	 [dever] V PR 3P IND VFIN <fmc> @FAUX
+começar	 [começar] V INF @IAUX @#ICL-AUX<
+a	 [a] PRP @PRT-AUX<
+ser	 [ser] V INF @IAUX @#ICL-AUX<
+implantados	 [implantar] V PCP M P @IMV @#ICL-AUX<
+em	 [em] PRP <sam-> @<ADVL
+o	 [o] DET M S <artd> <-sam> @>N
+final	 [final] N M S @P<
+de	 [de] PRP <sam-> @N<
+o	 [o] DET M S <artd> <-sam> @>N
+ano	 [ano] N M S @P<
+$.	 [$.] PU <<<
+$¶	 [$¶] PU <<<
+</s>
+</TEXT>
+$¶	 [$¶] PU <<<
+</DOC>

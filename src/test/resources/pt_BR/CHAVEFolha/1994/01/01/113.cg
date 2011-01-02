@@ -1,0 +1,351 @@
+<DOC>
+<DOCNO.valor=FSP940101-113>
+<DOCID.valor=FSP940101-113>
+<DATE.valor=940101>
+<TEXT>
+<s>
+Brasileiros	 [brasileiro] N M P @SUBJ>
+defendem	 [defender] V PR 3P IND VFIN <fmc> @FMV
+reserva	 [reserva] N F S @<ACC
+de	 [de] PRP @N<
+mercado	 [mercado] N M S @P<
+$¶	 [$¶] PU <<<
+</s>
+<s>
+Da=Reportagem=Local	 [Da=Reportagem=Local] PROP F S @NPHR
+$¶	 [$¶] PU <<<
+</s>
+<s>
+A	 [o] DET F S <artd> @>N
+briga	 [briga] N F S @SUBJ>
+de	 [de] PRP <sam-> @N<
+os	 [o] DET M P <artd> <-sam> @>N
+europeus	 [europeu] N M P @P<
+para	 [para] PRP @ADVL>
+defender	 [defender] V INF @IMV @#ICL-P<
+seu	 [seu] DET M S <poss 3S> @>N
+mercado	 [mercado] N M S @<SUBJ
+de	 [de] PRP <sam-> @N<
+a	 [o] DET F S <artd> <-sam> @>N
+invasão	 [invasão] N F S @P<
+audiovisual	 [audiovisual] ADJ F S @N<
+americana	 [americano] ADJ F S @N<
+reacendeu	 [reacender] V PS 3S IND VFIN <fmc> @FMV
+$,
+em	 [em] PRP <sam-> @<ADVL
+o	 [o] DET M S <artd> <-sam> @>N
+Brasil	 [Brasil] PROP M S @P<
+$,
+a	 [o] DET F S <artd> @>N
+discussão	 [discussão] N F S @<ACC
+sobre	 [sobre] PRP @N<
+a	 [o] DET F S <artd> @>N
+conveniência	 [conveniência] N F S @P<
+de	 [de] PRP <sam-> @N<
+a	 [o] DET F S <artd> <-sam> @>N
+reserva	 [reserva] N F S @P<
+de	 [de] PRP @N<
+mercado	 [mercado] N M S @P<
+para	 [para] PRP @<ADVL
+o	 [o] DET M S <artd> @>N
+cinema	 [cinema] N M S @P<
+nacional	 [nacional] ADJ M S @N<
+$.	 [$.] PU <<<
+$¶	 [$¶] PU <<<
+</s>
+<s>
+A	 [o] DET F S <artd> @>N
+lei	 [lei] N F S @SUBJ>
+de	 [de] PRP <sam-> @N<
+a	 [o] DET F S <artd> <-sam> @>N
+obrigatoriedade	 [obrigatoriedade] N F S @P<
+de	 [de] PRP <sam-> @N<
+a	 [o] DET F S <artd> <-sam> @>N
+exibição	 [exibição] N F S @P<
+de	 [de] PRP @N<
+filmes	 [filme] N M P @P<
+brasileiros	 [brasileiro] ADJ M P @N<
+durante	 [durante] PRP @N<
+um	 [um] DET M S <arti> @>N
+determinado	 [determinar] V PCP M S @>N
+número	 [número] N M S @P<
+de	 [de] PRP @N<
+dias	 [dia] N M P @P<
+$(	 [$(] PU
+fixado	 [fixar] V PCP M S @N<PRED
+anualmente	 [anualmente] ADV @ADVL>
+$)	 [$)] PU
+continua	 [continuar] V PR 3S IND VFIN <fmc> @FMV
+em=vigor	 [em=vigor] ADJ @<SC
+$,
+mas	 [mas] <co-fmc> <co-vfin> KC @CO
+não	 [não] ADV @ADVL>
+é	 [ser] V PR 3S IND VFIN <fmc> @FAUX
+cumprida	 [cumprir] V PCP F S @IMV @#ICL-AUX<
+desde	 [desde] PRP @<ADVL
+o	 [o] DET M S <artd> @>N
+governo	 [governo] N M S @P<
+Sarney	 [Sarney] PROP M S @N<
+$	 [$] PU
+um=pouco	 [um=pouco] SPEC <quant> @<ACC
+por	 [por] PRP @<ADVL
+falta	 [falta] N F S @P<
+de	 [de] PRP @N<
+filmes	 [filme] N M P @P<
+$,
+um=pouco	 [um=pouco] ADV @<ADVL <quant> @>A	 [um=pouco] SPEC <quant> @<ACC
+por	 [por] PRP @<ADVL
+falta	 [falta] N F S @P<
+de	 [de] PRP @N<
+fiscalização	 [fiscalização] N F S @P<
+e	 [e] <co-fmc> <co-vfin> KC @CO
+muito	 [muito] DET M S <quant> @P<
+por=causa=de	 [por=causa=de] PRP <sam-> @<ADVL
+o	 [o] DET M S <-sam> <artd> @>N
+poder	 [poder] N M S @P<
+de	 [de] PRP @N<
+um	 [um] DET M S <arti> @>N
+punhado	 [punhado] N M S @P<
+de	 [de] PRP @N<
+grandes	 [grande] ADJ F P @>N
+distribuidoras	 [distribuidora] N F P @P<
+$(	 [$(] PU
+UIP	 [UIP] PROP M/F S @APP
+$,
+Warner	 [Warner] PROP M/F S @APP
+$,
+Columbia	 [Columbia] PROP M/F S @APP
+$,
+Fox	 [Fox] PROP M/F S @APP
+$)	 [$)] PU
+que	 [que] ADV <interr> <quant> @>A
+virtualmente	 [virtualmente] ADV @ADVL>
+monopolizam	 [monopolizar] V PR 3P IND VFIN <fmc> @FMV
+o	 [o] DET M S <artd> @>N
+mercado	 [mercado] N M S @<ACC
+exibidor	 [exibidor] N M S @N<
+$.	 [$.] PU <<<
+$¶	 [$¶] PU <<<
+</s>
+<s>
+A	 [o] DET F S <artd> @>N
+maioria	 [maioria] N F S @SUBJ>
+de	 [de] PRP <sam-> @N<
+os	 [o] DET M P <artd> <-sam> @>N
+cineastas	 [cineasta] N M P @P<
+e	 [e] KC @CO
+produtores	 [produtor] N M P @P<
+brasileiros	 [brasileiro] ADJ M P @N<
+considera	 [considerar] V PR 3S IND VFIN <fmc> @FMV
+a	 [o] DET F S <artd> @>N
+lei	 [lei] N F S @<ACC
+de	 [de] PRP <sam-> @N<
+a	 [o] DET F S <artd> <-sam> @>N
+obrigatoriedade	 [obrigatoriedade] N F S @P<
+$(	 [$(] PU
+a	 [o] DET F S <artd> @>N
+chamada	 [chamado] ADJ F S @>N
+quota	 [quota] N F S <*1> @N<PRED
+de	 [de] PRP @N<
+tela	 [tela] N F S <*2> @P<
+$)	 [$)] PU
+uma	 [um] DET F S <arti> @>N
+espécie	 [espécie] N F S @N<PRED
+de	 [de] PRP @N<
+mal	 [mal] ADV @P<
+necessário	 [necessário] ADJ M S @<OC
+$,
+pelo=menos	 [pelo=menos] ADV <quant> @<ADVL
+enquanto	 [enquanto] ADV @ADVL> @#FS-<ADVL <ks> <rel> @#FS-N<
+a	 [o] DET F S <artd> @>N
+produção	 [produção] N F S @SUBJ>
+brasileira	 [brasileiro] ADJ F S @N<
+não	 [não] ADV @ADVL>
+for	 [ser] V FUT 3S SUBJ VFIN @FMV
+capaz	 [capaz] ADJ F S @<SC
+de	 [de] PRP @A<
+se	 [se] PERS M/F 3S ACC <refl> @ACC>
+impor	 [impor] V INF @IMV @#ICL-P<
+em	 [em] PRP <sam-> @<ADVL
+o	 [o] DET M S <artd> <-sam> @>N
+mercado	 [mercado] N M S @P<
+com	 [com] PRP @<ADVL
+as	 [o] DET F P <artd> @>N
+próprias	 [próprio] ADJ F P @>N
+pernas	 [perna] N F P @P<
+$.	 [$.] PU <<<
+$¶	 [$¶] PU <<<
+</s>
+<s>
+Em	 [em] PRP <sam-> <*1> @ADVL>
+o	 [o] DET M S <artd> <-sam> @>N
+dia	 [dia] N M S @P<
+em	 [em] PRP @ADVS>
+que	 [que] KS @SUB @#FS-<ACC
+a	 [o] DET F S <artd> @>N
+economia	 [economia] N F S @SUBJ>
+de	 [de] PRP <sam-> @N<
+o	 [o] DET M S <artd> <-sam> @>N
+cinema	 [cinema] N M S @P<
+brasileiro	 [brasileiro] ADJ M S @N<
+estiver	 [estar] V FUT 3S SUBJ VFIN @FMV
+integrada	 [integrar] <n> V PCP F S @<SC
+com	 [com] PRP @N<
+a	 [o] DET F S <artd> @>N
+economia	 [economia] N F S @P<
+de	 [de] PRP <sam-> @N<
+a	 [o] DET F S <artd> <-sam> @>N
+TV	 [tV] <prop> N F S @P<
+e	 [e] <co-vfin> KC @CO
+contar	 [contar] V FUT 3S SUBJ VFIN <fmc> @FMV
+com	 [com] PRP @<PIV
+mecanismos	 [mecanismo] N M P @P<
+de	 [de] PRP @N<
+captação	 [captação] N F S @P<
+de	 [de] PRP @N<
+investimentos	 [investimento] N M P @P<
+externos	 [externo] ADJ M P @N<
+$,
+essas	 [esse] DET F P <dem> @>N
+medidas	 [medida] N F P @SUBJ>
+protecionistas	 [protecionista] ADJ F P @N<
+serão	 [ser] V FUT 3P IND VFIN @FMV @#FS-ACC>>
+desnecessárias	 [desnecessário] ADJ F P <*2> @<SC
+$,
+define	 [definir] V PR 3S IND VFIN <fmc> @FMV
+Cacá=Diegues	 [Cacá=Diegues] PROP M/F S @<SUBJ
+$.	 [$.] PU <<<
+$¶	 [$¶] PU <<<
+</s>
+<s>
+O	 [o] DET M S <artd> @>N
+produtor	 [produtor] N M S @SUBJ>
+Aníbal=Massaini=Neto	 [Aníbal=Massaini=Neto] PROP M S @N<
+$,
+presidente	 [presidente] N M S @N<PRED
+de	 [de] PRP <sam-> @N<
+o	 [o] DET M S <artd> <-sam> @>N
+Sindicato=da=Indústria=Cinematográfica	 [Sindicato=da=Indústria=Cinematográfica] PROP M S @P<
+de	 [de] PRP @N<
+São=Paulo	 [São=Paulo] PROP M S @P<
+$,
+considera	 [considerar] V PR 3S IND VFIN <fmc> @FMV
+a	 [o] DET F S <artd> @>N
+reserva	 [reserva] N F S @<ACC
+uma	 [um] DET F S <arti> @>N
+contrapartida	 [contrapartida] N F S @<OC
+a	 [a] PRP <sam-> @<ADVL
+a	 [o] DET F S <artd> <-sam> @>N
+ausência	 [ausência] N F S @P<
+de	 [de] PRP @N<
+taxação	 [taxação] N F S @P<
+de	 [de] PRP <sam-> @N<
+os	 [o] DET M P <artd> <-sam> @>N
+filmes	 [filme] N M P @P<
+estrangeiros	 [estrangeiro] ADJ M P @N<
+$,
+que	 [que] KS @SUB @#FS-<ADVL
+entram	 [entrar] V PR 3P IND VFIN @FMV
+em	 [em] PRP <sam-> @<ADVS
+o	 [o] DET M S <artd> <-sam> @>N
+país	 [país] N M S @P<
+como	 [como] ADV @COM <prp> <rel> @#AS-<ADVL
+bens	 [bem] N M P @AS<
+culturais	 [cultural] ADJ M P @N<
+isentos	 [isento] ADJ M P @<SUBJ
+de	 [de] PRP @A<
+impostos	 [imposto] N M P @P<
+$.	 [$.] PU <<<
+$¶	 [$¶] PU <<<
+</s>
+<s>
+Para	 [para] PRP @ADVL>
+Adhemar=de=Oliveira	 [Adhemar=de=Oliveira] PROP M S @P<
+$,
+diretor	 [diretor] N M S @N<PRED
+de	 [de] PRP <sam-> @N<
+a	 [o] DET F S <artd> <-sam> @>N
+distribuidora	 [distribuidora] N F S @P<
+Filmes=do=Estação	 [Filmes=do=Estação] PROP F S @N<
+e	 [e] KC @CO
+programador	 [programador] N M S @N<PRED
+de	 [de] PRP <sam-> @N<
+o	 [o] DET M S <artd> <-sam> @>N
+Espaço=Banco=Nacional=de=Cinema	 [Espaço=Banco=Nacional=de=Cinema] PROP M S @P<
+$,
+de	 [de] PRP @N<PRED
+São=Paulo	 [São=Paulo] PROP M S @P<
+$,
+o	 [o] DET M S <artd> @>N
+cinema	 [cinema] N M S @SUBJ>
+brasileiro	 [brasileiro] ADJ M S @N<
+perdeu	 [perder] V PS 3S IND VFIN <fmc> @FMV
+o	 [o] DET M S <artd> @>N
+mercado	 [mercado] N M S @<ACC
+em=grande=parte	 [em=grande=parte] ADV @<ADVL
+graças=a	 [graças=a] PRP <sam-> @<ADVL
+a	 [o] DET F S <-sam> <artd> @>N
+ausência	 [ausência] N F S @P<
+de	 [de] PRP @N<
+uma	 [um] DET F S <arti> @>N
+política	 [política] N F S @P<
+de	 [de] PRP @N<
+exibição	 [exibição] N F S @P<
+$.	 [$.] PU <<<
+$¶	 [$¶] PU <<<
+</s>
+<s>
+Ele	 [ele] PERS M 3S NOM @SUBJ>
+dá	 [dar] V PR 3S IND VFIN <fmc> @FMV
+como	 [como] ADV @#AS-<OC <rel> @PRD
+exemplo	 [exemplo] N M S @AS<
+o	 [o] DET M S <artd> @>N
+Conselho=Nacional=de=Cinema=da=França	 [Conselho=Nacional=de=Cinema=da=França] PROP M S @<ACC
+$,
+que	 [que] SPEC M/F S @SUBJ> <rel> @#FS-N<
+estabelece	 [estabelecer] V PR 3S IND VFIN @FMV
+uma	 [um] DET F S <arti> @>N
+política	 [política] N F S @<ACC
+para	 [para] PRP @<ADVL
+todas=as	 [todo=o] DET F P <quant> @>N
+áreas	 [área] N F P @P<
+de	 [de] PRP <sam-> @N<
+a	 [o] DET F S <artd> <-sam> @>N
+atividade	 [atividade] N F S @P<
+cinematográfica	 [cinematográfico] ADJ F S @N<
+$,
+chegando	 [chegar] V GER @#ICL-<ADVL @IAUX
+a	 [a] PRP @PRT-AUX<
+dar	 [dar] V INF @IMV @#ICL-AUX<
+dinheiro	 [dinheiro] N M S @<ACC
+para	 [para] PRP @<ADVL
+reforma	 [reforma] N F S @P<
+de	 [de] PRP @N<
+salas	 [sala] N F P @P<
+e	 [e] KC @CO
+para	 [para] PRP @<ADVL
+as	 [o] DET F P <artd> @>N
+pequenas	 [pequeno] ADJ F P @>N
+distribuidoras	 [distribuidora] N F P @SUBJ>
+legendarem	 [legendar] V INF 3P @#ICL-P< @IMV
+filmes	 [filme] N M P @<ACC
+franceses	 [francês] ADJ M P @N<
+em	 [em] PRP @N<
+outras	 [outro] DET F P <KOMP> <diff> @>N
+línguas	 [língua] N F P @P<
+$,
+visando	 [visar] V GER @#ICL-<ADVL @IMV
+a	 [o] DET F S <artd> @>N
+exportação	 [exportação] N F S @<ACC
+$.	 [$.] PU <<<
+$¶	 [$¶] PU <<<
+</s>
+<s>
+$(	 [$(] PU
+JGC	 [JGC] PROP M/F S @NPHR
+$)	 [$)] PU
+$¶	 [$¶] PU <<<
+</s>
+</TEXT>
+$¶	 [$¶] PU <<<
+</DOC>

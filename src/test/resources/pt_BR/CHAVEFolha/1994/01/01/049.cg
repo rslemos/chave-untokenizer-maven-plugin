@@ -1,0 +1,87 @@
+<DOC>
+<DOCNO.valor=FSP940101-049>
+<DOCID.valor=FSP940101-049>
+<DATE.valor=940101>
+<TEXT>
+<s>
+A	 [o] DET F S <artd> @>N
+resposta	 [resposta] N F S @SUBJ>
+de	 [de] PRP <sam-> @N<
+a	 [o] DET F S <artd> <-sam> @>N
+OLP	 [OLP] PROP F S @P<
+a	 [a] PRP <sam-> @N<
+as	 [o] DET F P <artd> <-sam> @>N
+propostas	 [proposta] N F P @P<
+de	 [de] PRP @N<
+Israel	 [Israel] PROP M S @P<
+formuladas	 [formular] V PCP F P @IMV @#ICL-N<
+em	 [em] PRP <sam-> @<ADVL
+as	 [o] DET F P <artd> <-sam> @>N
+negociações	 [negociação] N F P @P<
+de	 [de] PRP <sam-> @N<
+o	 [o] DET M S <artd> <-sam> @>N
+Cairo	 [Cairo] PROP M S @P<
+$(	 [$(] PU
+Egito	 [Egito] PROP M S @N<PRED
+$)	 [$)] PU
+$,
+quarta-feira	 [quarta-feira] N F S @N<PRED
+passada	 [passado] ADJ F S @N<
+$,
+não	 [não] ADV @ADVL>
+agradou	 [agradar] V PS 3S IND VFIN <fmc> @FMV
+os	 [o] DET M P <artd> @>N
+israelenses	 [israelense] N M P @<ACC
+$.	 [$.] PU <<<
+$¶	 [$¶] PU <<<
+</s>
+<s>
+Sem	 [sem] PRP @ADVL>
+dar	 [dar] V INF @IMV @#ICL-P<
+detalhes	 [detalhe] N M P @<ACC
+$,
+as	 [a] N M P @SUBJ>
+autoridades	 [autoridade] N F P @PRED>
+disseram	 [dizer] V PS/MQP 3P IND VFIN <fmc> @FMV
+ontem	 [ontem] ADV @<ADVL
+que	 [que] KS @SUB @#FS-<ACC
+a	 [o] DET F S <artd> @>N
+resposta	 [resposta] N F S @SUBJ>
+não	 [não] ADV <*1> @ADVL>
+é	 [ser] V PR 3S IND VFIN @FMV
+razoável	 [razoável] ADJ F S <*2> @<SC
+$.	 [$.] PU <<<
+$¶	 [$¶] PU <<<
+</s>
+<s>
+Assim	 [assim] ADV <kc> @ADVL>
+$,
+o	 [o] DET M S <artd> @>N
+impasse	 [impasse] N M S @SUBJ>
+continua	 [continuar] V PR 3S IND VFIN <fmc> @FMV
+$.	 [$.] PU <<<
+$¶	 [$¶] PU <<<
+</s>
+<s>
+Também	 [também] ADV @>A
+ontem	 [ontem] ADV @ADVL>
+$,
+Israel	 [Israel] PROP M S @SUBJ>
+confirmou	 [confirmar] V PS 3S IND VFIN <fmc> @FMV
+que	 [que] KS @SUB @#FS-<ACC
+seus	 [seu] DET M P <poss 3S> @>N
+delegados	 [delegado] N M P @SUBJ>
+mantiveram	 [manter] V PS/MQP 3P IND VFIN @FMV
+encontros	 [encontro] N M P @<ACC
+informais	 [informal] ADJ M P @N<
+com	 [com] PRP @N<
+sírios	 [sírio] N M P @P<
+em	 [em] PRP <sam-> @N<PRED
+a	 [o] DET F S <artd> <-sam> @>N
+Europa	 [Europa] PROP F S @P<
+$.	 [$.] PU <<<
+$¶	 [$¶] PU <<<
+</s>
+</TEXT>
+$¶	 [$¶] PU <<<
+</DOC>

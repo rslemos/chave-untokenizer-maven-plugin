@@ -1,0 +1,434 @@
+<DOC>
+<DOCNO.valor=FSP940101-071>
+<DOCID.valor=FSP940101-071>
+<DATE.valor=940101>
+<TEXT>
+<s>
+O	 [o] DET M S <artd> @>N
+Serviço=de=Salvamento=Marítimo=de=Salvador	 [Serviço=de=Salvamento=Marítimo=de=Salvador] PROP M S @SUBJ>
+$(	 [$(] PU
+Salvamar	 [Salvamar] PROP M/F S @N<PRED
+$)	 [$)] PU
+realizou	 [realizar] V PS 3S IND VFIN <fmc> @FMV
+790	 [790] NUM M P <card> @>N
+salvamentos	 [salvamento] N M P @<ACC
+em	 [em] PRP @N<
+1993	 [1993] NUM M/F P <card> @P<
+$.	 [$.] PU <<<
+$¶	 [$¶] PU <<<
+</s>
+<s>
+Segundo	 [segundo] ADV @COM <prp> <rel> @#AS-ADVL>
+um	 [um] DET M S <arti> @>N
+levantamento	 [levantamento] N M S @PRED>
+de	 [de] PRP <sam-> @N<
+o	 [o] DET M S <artd> <-sam> @>N
+órgão	 [órgão] N M S @P<
+$,
+o	 [o] DET M S <artd> @>N
+serviço	 [serviço] N M S @SUBJ>
+alcançou	 [alcançar] V PS 3S IND VFIN <fmc> @FMV
+um	 [um] DET M S <arti> @>N
+índice	 [índice] N M S @<ACC
+de	 [de] PRP @N<
+segurança	 [segurança] N F S @P<
+de	 [de] PRP @N<
+92	 [92] NUM M/F P <card> @>N
+$%	 [%] N M P @P<	 [$%] PU
+em	 [em] PRP <sam-> @N<
+as	 [o] DET F P <artd> <-sam> @>N
+praias	 [praia] N F P @P<
+onde	 [onde] ADV @ADVL> <ks> <rel> @#FS-N<
+os	 [o] DET M P <artd> @>N
+salva-vidas	 [salva-vidas] N M S @SUBJ>
+trabalharam	 [trabalhar] V PS/MQP 3P IND VFIN @FMV
+$.	 [$.] PU <<<
+$¶	 [$¶] PU <<<
+</s>
+<s>
+Em	 [em] PRP @ADVL>
+1993	 [1993] NUM M/F S <card> @P<
+$,
+foram	 [ser] V PS/MQP 3P IND VFIN <fmc> @FMV
+20	 [20] NUM M P <card> @>N
+afogamentos	 [afogamento] N M P @<SC
+$.	 [$.] PU <<<
+$¶	 [$¶] PU <<<
+</s>
+<s>
+Ceará	 [Ceará] PROP M S @NPHR
+$¶	 [$¶] PU <<<
+</s>
+<s>
+Uma	 [um] DET F S <arti> @>N
+pesquisa	 [pesquisa] N F S @SUBJ>
+de	 [de] PRP <sam-> @N<
+a	 [o] DET F S <artd> <-sam> @>N
+Secretaria=de=Ação=Social=do=Ceará	 [Secretaria=de=Ação=Social=do=Ceará] PROP F S @P<
+revela	 [revelar] V PR 3S IND VFIN <fmc> @FMV
+que	 [que] KS @SUB @#FS-<ACC
+existem	 [existir] V PR 3P IND VFIN @FMV
+6.146	 [6.146] NUM M P <card> @>N
+meninos	 [menino] N M P @<SUBJ
+de	 [de] PRP @N<
+rua	 [rua] N F S @P<
+em	 [em] PRP @N<
+Fortaleza	 [fortaleza] N F S @P<
+$.	 [$.] PU <<<
+$¶	 [$¶] PU <<<
+</s>
+<s>
+De	 [de] PRP <sam-> @ADVL>
+este	 [este] DET M S <dem> <-sam> @>N
+total	 [total] N M S @P<
+$,
+184	 [184] NUM M/F P <card> @SUBJ>
+perderam	 [perder] V PS/MQP 3P IND VFIN <fmc> @FMV
+totalmente	 [totalmente] ADV <quant> @<ADVL
+o	 [o] DET M S <artd> @>N
+vínculo	 [vínculo] N M S @<ACC
+com	 [com] PRP @<ADVL
+suas	 [seu] DET F P <si> <poss 3S> @>N
+famílias	 [família] N F P @P<
+$.	 [$.] PU <<<
+$¶	 [$¶] PU <<<
+</s>
+<s>
+A	 [o] DET F S <artd> @>N
+pesquisa	 [pesquisa] N F S @SUBJ>
+foi	 [ser] V PS 3S IND VFIN <fmc> @FAUX
+feita	 [fazer] V PCP F S @IMV @#ICL-AUX<
+através	 [através] ADV @<ADVL
+de	 [de] PRP <sam-> @A<
+a	 [o] DET F S <artd> <-sam> @>N
+aplicação	 [aplicação] N F S @P<
+de	 [de] PRP @N<
+questionários	 [questionário] N M P @P<
+em	 [em] PRP @<ADVL
+170	 [170] NUM M P <card> @>N
+pontos	 [ponto] N M P @P<
+de	 [de] PRP <sam-> @N<
+a	 [o] DET F S <artd> <-sam> @>N
+cidade	 [cidade] N F S @P<
+$.	 [$.] PU <<<
+$¶	 [$¶] PU <<<
+</s>
+<s>
+Piauí	 [Piauí] PROP M S @NPHR
+$¶	 [$¶] PU <<<
+</s>
+<s>
+A	 [o] DET F S <artd> @>N
+Prefeitura=de=Teresina	 [Prefeitura=de=Teresina] PROP F S @SUBJ>
+firmou	 [firmar] V PS 3S IND VFIN <fmc> @FMV
+convênio	 [convênio] N M S @<ACC
+com	 [com] PRP @<ADVL
+os	 [o] DET M P <artd> @>N
+cartórios	 [cartório] N M P @P<
+e	 [e] KC @CO
+a	 [o] DET F S <artd> @>N
+Legião=Brasileira=de=Assistência	 [Legião=Brasileira=de=Assistência] PROP F S @P<
+para	 [para] PRP @<ADVL
+fornecer	 [fornecer] V INF @IMV @#ICL-P<
+certidões	 [certidão] N F P @<ACC
+de	 [de] PRP @<PIV
+nascimento	 [nascimento] N M S @P<
+gratuitamente	 [gratuitamente] ADV @<ADVL
+$.	 [$.] PU <<<
+$¶	 [$¶] PU <<<
+</s>
+<s>
+Segundo	 [segundo] ADV @COM <prp> <rel> @#AS-ADVL>
+a	 [o] DET F S <artd> @>N
+Secretaria=Municipal=de=Planejamento	 [Secretaria=Municipal=de=Planejamento] PROP F S @AS<
+$,
+a	 [o] DET F S <artd> @>N
+medida	 [medida] N F S @SUBJ>
+visa	 [visar] V PR 3S IND VFIN <fmc> @FMV
+facilitar	 [facilitar] V INF @IMV @#ICL-<ACC
+a	 [o] DET F S <artd> @>N
+matrícula	 [matrícula] N F S @<ACC
+em	 [em] PRP <sam-> @N<
+a	 [o] DET F S <artd> <-sam> @>N
+rede	 [rede] N F S @P<
+pública	 [público] ADJ F S @N<
+$.	 [$.] PU <<<
+$¶	 [$¶] PU <<<
+</s>
+<s>
+Sergipe	 [Sergipe] PROP M S @NPHR
+$¶	 [$¶] PU <<<
+</s>
+<s>
+O	 [o] DET M S <artd> @>N
+Departamento=de=Assistência=Judiciária=Gratuita	 [Departamento=de=Assistência=Judiciária=Gratuita] PROP M S @P<
+de	 [de] PRP <sam-> @N<
+a	 [o] DET F S <artd> <-sam> @>N
+Secretaria	 [secretaria] <prop> N F S @P<
+de	 [de] PRP @N<
+Estado	 [estar] V PCP M S @P<
+de	 [de] PRP <sam-> @<ADVL
+a	 [o] DET F S <artd> <-sam> @>N
+Justiça	 [justiça] <prop> N F S @P<
+atendeu	 [atender] V PS 3S IND VFIN <fmc> @FMV
+$,
+em	 [em] PRP @<ADVL
+1993	 [1993] NUM M/F S <card> @P<
+$,
+5.349	 [5.349] NUM F P <card> @>N
+pessoas	 [pessoa] N F P @<ACC
+carentes	 [carente] ADJ F P @N<
+$,
+que	 [que] KS @SUB @#FS-<ACC
+precisaram	 [precisar] V PS/MQP 3P IND VFIN @FMV
+de	 [de] PRP <sam-> @<PIV
+os	 [o] DET M P <artd> <-sam> @>N
+trabalhos	 [trabalho] N M P @P<
+de	 [de] PRP <sam-> @N<
+a	 [o] DET F S <artd> <-sam> @>N
+Defensoria=Pública	 [Defensoria=Pública] PROP F S @P<
+$.	 [$.] PU <<<
+$¶	 [$¶] PU <<<
+</s>
+<s>
+De	 [de] PRP <sam-> @ADVL>
+este	 [este] DET M S <dem> <-sam> @>N
+total	 [total] N M S @P<
+$,
+3.242	 [3.242] NUM F P <card> @>N
+ações	 [ação] N F P @SUBJ>
+foram	 [ser] V PS/MQP 3P IND VFIN <fmc> @FAUX
+ajuizadas	 [ajuizar] V PCP F P @IMV @#ICL-AUX<
+$.	 [$.] PU <<<
+$¶	 [$¶] PU <<<
+</s>
+<s>
+Participaram	 [participar] V PS/MQP 3P IND VFIN <fmc> @FMV
+42	 [42] NUM M P <card> @>N
+defensores	 [defensor] N M P @<SUBJ
+$.	 [$.] PU <<<
+$¶	 [$¶] PU <<<
+</s>
+<s>
+Alagoas	 [Alagoas] PROP M S @NPHR
+1	 [1] NUM M/F S <card> @N<
+$¶	 [$¶] PU <<<
+</s>
+<s>
+O	 [o] DET M S <artd> @>N
+Maceió=Fest	 [Maceió=Fest] PROP M S @SUBJ>
+$,
+um	 [um] DET M S <arti> @>N
+Carnaval	 [Carnaval] PROP M S @APP
+que	 [que] SPEC M/F S @SUBJ> <rel> @#FS-N<
+acontece	 [acontecer] V PR 3S IND VFIN @FMV
+entre	 [entre] PRP @<ADVL
+os	 [o] DET M P <artd> @>N
+dias	 [dia] N M P @P<
+6	 [6] NUM M/F P <card> @N<
+e	 [e] <co-vfin> KC @CO
+9	 [9] NUM M/F P <card> @N<
+de	 [de] PRP @N<
+janeiro	 [janeiro] N M S @P<
+em	 [em] PRP @<ADVL
+Maceió	 [Maceió] PROP M S @P<
+$,
+já	 [já] ADV @ADVL>
+está	 [estar] V PR 3S IND VFIN <fmc> @FAUX
+tirando	 [tirar] V GER @#ICL-AUX< @IMV
+o	 [o] DET M S <artd> @>N
+sono	 [sono] N M S @<ACC
+de	 [de] PRP <sam-> @<PIV
+os	 [o] DET M P <artd> <-sam> @>N
+moradores	 [morador] N M P @P<
+de	 [de] PRP <sam-> @N<
+a	 [o] DET F S <artd> <-sam> @>N
+orla	 [orla] N F S @P<
+marítima	 [marítimo] ADJ F S @N<
+de	 [de] PRP <sam-> @N<
+a	 [o] DET F S <artd> <-sam> @>N
+cidade	 [cidade] N F S @P<
+$.	 [$.] PU <<<
+$¶	 [$¶] PU <<<
+</s>
+<s>
+Com	 [com] PRP @ADVL> @PRED>
+mais=de	 [mais=de] ADV <quant> @>A
+duas	 [dois] NUM F P <card> @>N
+mil	 [mil] NUM F P <card> @>N
+assinaturas	 [assinatura] N F P @P<
+$,
+os	 [o] DET M P <artd> @>N
+moradores	 [morador] N M P @SUBJ>
+tentaram	 [tentar] V PS/MQP 3P IND VFIN <fmc> @FMV
+barrar	 [barrar] V INF @IMV @#ICL-<ACC
+a	 [o] DET F S <artd> @>N
+realização	 [realização] N F S @<ACC
+de	 [de] PRP <sam-> @N<
+o	 [o] DET M S <artd> <-sam> @>N
+evento	 [evento] N M S @P<
+$.	 [$.] PU <<<
+$¶	 [$¶] PU <<<
+</s>
+<s>
+Alagoas	 [Alagoas] PROP M S @NPHR
+2	 [2] NUM M/F P <card> @N<
+$¶	 [$¶] PU <<<
+</s>
+<s>
+Após	 [após] PRP @ADVL>
+uma	 [um] DET F S <arti> @>N
+reunião	 [reunião] N F S @P<
+entre	 [entre] PRP @N<
+uma	 [um] DET F S <arti> @>N
+comissão	 [comissão] PROP F S @P<
+de	 [de] PRP @N<
+moradores	 [morador] N M P @P<
+e	 [e] KC @CO
+a	 [o] DET F S <artd> @>N
+prefeitura	 [prefeitura] N F S @P<
+$,
+ficou	 [ficar] V PS 3S IND VFIN <fmc> @FMV
+assegurada	 [assegurar] V PCP F S @<SC
+a	 [o] DET F S <artd> @>N
+realização	 [realização] N F S @<SUBJ
+de	 [de] PRP <sam-> @N<
+a	 [o] DET F S <artd> <-sam> @>N
+festa	 [festa] N F S @P<
+$.	 [$.] PU <<<
+$¶	 [$¶] PU <<<
+</s>
+<s>
+Mas	 [mas] KC @CO
+os	 [o] DET M P <artd> @>N
+moradores	 [morador] N M P @SUBJ>
+conseguiram	 [conseguir] V PS/MQP 3P IND VFIN <fmc> @FMV
+limitar	 [limitar] V INF @IMV @#ICL-<ACC
+o	 [o] DET M S <artd> @>N
+horário	 [horário] N M S @<ACC
+de	 [de] PRP <sam-> @N<
+o	 [o] DET M S <artd> <-sam> @>N
+Carnaval	 [Carnaval] PROP M S @P<
+e	 [e] KC @CO
+placas	 [placa] N F P @<ACC
+de	 [de] PRP @N<
+trânsito	 [trânsito] N M S @P<
+livre	 [livre] ADJ M S @N<
+para	 [para] PRP @<ADVL
+circular	 [circular] V INF @IMV @#ICL-P<
+de	 [de] PRP @<ADVL
+carro	 [carro] N M S @P<
+em	 [em] PRP <sam-> @<ADVL
+a	 [o] DET F S <artd> <-sam> @>N
+orla	 [orla] N F S @P<
+marítima	 [marítimo] ADJ F S @N<
+$.	 [$.] PU <<<
+$¶	 [$¶] PU <<<
+</s>
+<s>
+Paraíba	 [Paraíba] PROP F S @NPHR
+1	 [1] NUM M/F S <card> @N<
+$¶	 [$¶] PU <<<
+</s>
+<s>
+O	 [o] DET M S <artd> @>N
+INSS	 [INSS] PROP M S @SUBJ>
+inicia	 [iniciar] V PR 3S IND VFIN <fmc> @FMV
+em	 [em] PRP <sam-> @<PIV
+a	 [o] DET F S <artd> <-sam> @>N
+próxima	 [próximo] ADJ F S @>N
+semana	 [semana] N F S @P<
+uma	 [um] DET F S <arti> @>N
+operação	 [operação] N F S @<ACC
+para	 [para] PRP @<ADVL
+identificar	 [identificar] V INF @IMV @#ICL-P<
+as	 [o] DET F P <artd> @>N
+6.558	 [6.558] NUM F P <card> @>N
+pessoas	 [pessoa] N F P @<ACC
+com	 [com] PRP @<ADVL
+nomes	 [nome] N M P @P<
+iguais	 [igual] ADJ M P @N<
+entre	 [entre] PRP @N<PRED
+os	 [o] DET M P <artd> @>N
+aposentados	 [aposentado] <n> ADJ M P @P<
+e	 [e] KC @CO
+pensionistas	 [pensionista] N M/F P @P<
+de	 [de] PRP <sam-> @N<
+o	 [o] DET M S <artd> <-sam> @>N
+Estado	 [estado] <prop> N M S @P<
+$.	 [$.] PU <<<
+$¶	 [$¶] PU <<<
+</s>
+<s>
+O	 [o] DET M S <artd> @>N
+diretor	 [diretor] N M S @SUBJ>
+de	 [de] PRP <sam-> @N<
+o	 [o] DET M S <artd> <-sam> @>N
+órgão	 [órgão] N M S @P<
+$,
+Telmano=Japiassú	 [Telmano=Japiassú] PROP M S @APP
+$,
+suspeita	 [suspeitar] V PR 3S IND VFIN <fmc> @FMV
+que	 [que] KS @SUB @#FS-<ACC
+há	 [haver] V PR 3S IND VFIN @FMV
+pessoas	 [pessoa] N F P @<ACC
+que	 [que] SPEC M/F S @ACC> <rel> @#FS-N<
+recebem	 [receber] V PR 3P IND VFIN @FMV
+várias	 [várias] DET F P <quant> @>N
+aposentadorias	 [aposentadoria] N F P @<SUBJ
+$.	 [$.] PU <<<
+$¶	 [$¶] PU <<<
+</s>
+<s>
+Paraíba	 [Paraíba] PROP F S @NPHR
+2	 [2] NUM M/F P <card> @N<
+$¶	 [$¶] PU <<<
+</s>
+<s>
+Telmano=Japiassú	 [Telmano=Japiassú] PROP M S @SUBJ>
+$,
+de	 [de] PRP <sam-> @N<PRED
+o	 [o] DET M S <artd> <-sam> @>N
+INSS	 [INSS] PROP M S @P<
+$,
+disse	 [dizer] V PS 3S IND VFIN <fmc> @FMV
+que	 [que] KS @SUB @#FS-<ACC
+criou	 [criar] V PS 3S IND VFIN @FMV
+uma	 [um] DET F S <arti> @>N
+comissão	 [comissão] PROP F S @<ACC
+que	 [que] SPEC M/F S @SUBJ> <rel> @#FS-N<
+vai	 [ir] V PR 3S IND VFIN @FAUX
+fazer	 [fazer] V INF @IMV @#ICL-AUX<
+o	 [o] DET M S <artd> @>N
+levantamento	 [levantamento] N M S @<ACC
+para	 [para] PRP @<ADVL
+saber	 [saber] V INF @IMV @#ICL-P<
+quantos	 [quanto] DET M P @>N <quant> <interr> @#FS-<ACC
+homônimos	 [homônimo] N M P @SUBJ>
+realmente	 [realmente] ADV @ADVL>
+existem	 [existir] V PR 3P IND VFIN @FMV
+$.	 [$.] PU <<<
+$¶	 [$¶] PU <<<
+</s>
+<s>
+Segundo	 [segundo] ADV @COM <prp> <rel> @#AS-ADVL>
+ele	 [ele] PERS M 3S NOM @SUBJ>
+$,
+os	 [o] DET M P <artd> @>N
+6.558	 [6.558] NUM M P <card> @>N
+homônimos	 [homônimo] N M P @SUBJ>
+aposentados	 [aposentado] ADJ M P @N<
+e	 [e] KC @CO
+pensionistas	 [pensionista] N M/F P @SUBJ>
+serão	 [ser] V FUT 3P IND VFIN <fmc> @FAUX
+chamados	 [chamar] V PCP M P @IMV @#ICL-AUX<
+para	 [para] PRP @<PIV
+apresentar	 [apresentar] V INF @IMV @#ICL-P<
+a	 [o] DET F S <artd> @>N
+documentação	 [documentação] N F S @<ACC
+$.	 [$.] PU <<<
+$¶	 [$¶] PU <<<
+</s>
+</TEXT>
+$¶	 [$¶] PU <<<
+</DOC>

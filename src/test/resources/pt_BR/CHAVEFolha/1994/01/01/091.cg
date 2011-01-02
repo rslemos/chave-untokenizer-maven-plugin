@@ -1,0 +1,69 @@
+<DOC>
+<DOCNO.valor=FSP940101-091>
+<DOCID.valor=FSP940101-091>
+<DATE.valor=940101>
+<TEXT>
+<s>
+Da=Sucursal=do=Rio	 [Da=Sucursal=do=Rio] PROP F S @NPHR
+$¶	 [$¶] PU <<<
+</s>
+<s>
+O	 [o] DET M S <artd> @>N
+delegado	 [delegado] N M S @SUBJ>
+Luis=Mariano=dos=Santos	 [Luis=Mariano=dos=Santos] PROP M S @N<
+$,
+de	 [de] PRP <sam-> @N<PRED
+a	 [o] DET F S <artd> <-sam> @>N
+Polinter	 [Polinter] PROP F S @P<
+$,
+vai	 [ir] V PR 3S IND VFIN <fmc> @FAUX
+investigar	 [investigar] V INF @IMV @#ICL-AUX<
+as	 [o] DET F P <artd> @>N
+denúncias	 [denúncia] N F P @<ACC
+de	 [de] PRP @N<
+corrupção	 [corrupção] N F S @P<
+por	 [por] PRP @<ADVL
+determinação	 [determinação] N F S @P<
+de	 [de] PRP <sam-> @N<
+o	 [o] DET M S <artd> <-sam> @>N
+secretário	 [secretário] N M S @P<
+de	 [de] PRP @N<
+Polícia=Civil	 [Polícia=Civil] PROP F S @P<
+$,
+Nilo=Batista	 [Nilo=Batista] PROP M S @APP
+$.	 [$.] PU <<<
+$¶	 [$¶] PU <<<
+</s>
+<s>
+A	 [o] DET F S <artd> @>N
+investigação	 [investigação] N F S @SUBJ>
+começa	 [começar] V PR 3S IND VFIN <fmc> @FMV
+com	 [com] PRP @<ADVL
+os	 [o] DET M P <artd> @>N
+depoimentos	 [depoimento] N M P @P<
+de	 [de] PRP <sam-> @N<
+os	 [o] DET M P <artd> <-sam> @>N
+árbitros	 [árbitro] N M P @P<
+Cláudio=Cerdeira	 [Cláudio=Cerdeira] PROP M S @N<
+$,
+autor	 [autor] N M S @N<PRED
+de	 [de] PRP <sam-> @N<
+as	 [o] DET F P <artd> <-sam> @>N
+primeiras	 [primeiro] ADJ F P <NUM-ord> @>N
+denúncias	 [denúncia] N F P @P<
+$,
+e	 [e] <co-vfin> KC @CO
+Reginaldo=Matias	 [Reginaldo=Matias] PROP M S @APP
+$,
+que	 [que] SPEC M/F S @SUBJ> <rel> @#FS-N<
+prometeu	 [prometer] V PS 3S IND VFIN @FMV
+uma	 [um] DET F S <arti> @>N
+lista	 [lista] N F S @<ACC
+de	 [de] PRP @N<
+corruptos	 [corrupto] ADJ M P @P<
+$.	 [$.] PU <<<
+$¶	 [$¶] PU <<<
+</s>
+</TEXT>
+$¶	 [$¶] PU <<<
+</DOC>

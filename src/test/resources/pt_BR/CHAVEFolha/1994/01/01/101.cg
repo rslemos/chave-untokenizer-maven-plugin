@@ -1,0 +1,313 @@
+<DOC>
+<DOCNO.valor=FSP940101-101>
+<DOCID.valor=FSP940101-101>
+<DATE.valor=940101>
+<TEXT>
+<s>
+Da=Reportagem=Local	 [Da=Reportagem=Local] PROP F S @NPHR
+$¶	 [$¶] PU <<<
+</s>
+<s>
+A	 [o] DET F S <artd> @>N
+congregação	 [congregação] N F S @SUBJ>
+de	 [de] PRP <sam-> @N<
+a	 [o] DET F S <artd> <-sam> @>N
+Escola=Paulista=de=Medicina	 [Escola=Paulista=de=Medicina] PROP F S @P<
+deve	 [dever] V PR 3S IND VFIN <fmc> @FAUX
+votar	 [votar] V INF @IMV @#ICL-AUX<
+em	 [em] PRP <sam-> @<PIV
+este	 [este] DET M S <dem> <-sam> @>N
+mês	 [mês] N M S @P<
+a	 [o] DET F S <artd> @>N
+proposta	 [proposta] N F S @PRED>
+de=criação	 [de=criação] ADJ @N<
+de	 [de] PRP <sam-> @N<
+o	 [o] DET M S <artd> <-sam> @>N
+Centro=de=Fisiologia=da=Atividade=Física	 [Centro=de=Fisiologia=da=Atividade=Física] PROP M S @P<
+$,
+que	 [que] SPEC M/F S @ACC> <rel> @#FS-N<
+tem	 [ter] V PR 3S IND VFIN @FMV
+entre	 [entre] PRP @<ADVL
+seus	 [seu] DET M P <si> <poss 3S> @>N
+idealizadores	 [idealizador] N M P @P<
+Turíbio	 [Turíbio] PROP M/F S @N<
+$,
+Piçarro	 [Piçarro] PROP M/F S @P<
+$,
+Lotufo	 [Lotufo] PROP M/F S @P<
+e	 [e] KC @CO
+Zogaib	 [Zogaib] PROP M/F S @P<
+$.	 [$.] PU <<<
+$¶	 [$¶] PU <<<
+</s>
+<s>
+Se	 [se] KS @#FS-ADVL> @SUB
+for	 [ser] V FUT 3S SUBJ VFIN @FAUX
+aprovada	 [aprovar] V PCP F S @IMV @#ICL-AUX<
+a	 [o] DET F S <artd> @>N
+criação	 [criação] N F S @<SUBJ
+$,
+o	 [o] DET M S <artd> @>N
+centro	 [centro] N M S @SUBJ>
+será	 [ser] V FUT 3S IND VFIN <fmc> @FAUX
+subordinado	 [subordinar] V PCP M S @IMV @#ICL-AUX<
+a	 [a] PRP <sam-> @<ADVL
+a	 [o] DET F S <artd> <-sam> @>N
+diretoria	 [diretoria] N F S @P<
+de	 [de] PRP <sam-> @N<
+a	 [o] DET F S <artd> <-sam> @>N
+escola	 [escola] N F S <*2> <*1> @P<
+$,
+como	 [como] ADV @#FS-<ADVL <ks> <rel> @ADVL>
+é	 [ser] V PR 3S IND VFIN @FAUX
+chamada	 [chamar] V PCP F S @IMV @#ICL-AUX<
+por	 [por] PRP <sam-> @<PASS
+os	 [o] DET M P <artd> <-sam> @>N
+professores	 [professor] N M P @P<
+$.	 [$.] PU <<<
+$¶	 [$¶] PU <<<
+</s>
+<s>
+Turíbio=Leite=de=Barros	 [Turíbio=Leite=de=Barros] PROP M S @SUBJ>
+diz	 [dizer] V PR 3S IND VFIN <fmc> @FMV
+que	 [que] KS @SUB @#FS-<ACC
+o	 [o] DET M S <artd> @>N
+nome	 [nome] N M S @SUBJ>
+Fisiologia=da=Atividade=Física	 [Fisiologia=da=Atividade=Física] PROP M S <*2> <*1> @N<
+foi	 [ser] V PS 3S IND VFIN @FAUX
+escolhido	 [escolher] V PCP M S @IMV @#ICL-AUX<
+porque	 [porque] KS @SUB @#FS-<ADVL
+os	 [o] DET M P <artd> @>N
+esportistas	 [esportista] N M P @SUBJ>
+de	 [de] PRP @N<
+alto	 [alto] ADJ M S @>N
+nível	 [nível] N M S @P<
+não	 [não] ADV @ADVL>
+são	 [ser] V PR 3P IND VFIN @FMV
+o	 [o] DET M S <artd> @>N
+único	 [único] ADJ M S @>N
+público-alvo	 [público-alvo] N M S @<SC
+de	 [de] PRP <sam-> @N<
+o	 [o] DET M S <artd> <-sam> @>N
+centro	 [centro] N M S @P<
+que	 [que] SPEC M/F S @SUBJ> <rel> @#FS-N<
+está	 [estar] V PR 3S IND VFIN @FMV
+em	 [em] PRP @<ADVS
+discussão	 [discussão] N F S @P<
+$.	 [$.] PU <<<
+$¶	 [$¶] PU <<<
+</s>
+<s>
+Pessoas	 [pessoa] N F P @SUBJ>
+que	 [que] SPEC M/F S @ACC> <rel> @#FS-N<
+fazem	 [fazer] V PR 3P IND VFIN @FMV
+ou	 [ou] <co-vfin> KC @CO
+querem	 [querer] V PR 3P IND VFIN <fmc> @FMV
+fazer	 [fazer] V INF @IMV @#ICL-<ACC
+atividade	 [atividade] N F S @<ACC
+física	 [físico] ADJ F S @N<
+$,
+por	 [por] PRP @<ADVL
+qualquer	 [qualquer] DET M S <quant> @>N
+motivo	 [motivo] N M S @P<
+$,
+também	 [também] ADV @ADVL>
+serão	 [ser] V FUT 3P IND VFIN <fmc> @FAUX
+atendidas	 [atender] V PCP F P @IMV @#ICL-AUX<
+$,
+se	 [se] KS @#FS-<ACC @#FS-<ADVL @SUB
+a	 [o] DET F S <artd> @>N
+congregação	 [congregação] N F S @SUBJ>
+de	 [de] PRP <sam-> @N<
+a	 [o] DET F S <artd> <-sam> @>N
+EPM	 [EPM] PROP F S @P<
+acolher	 [acolher] V FUT 3S SUBJ VFIN @FMV
+a	 [o] DET F S <artd> @>N
+proposta	 [proposta] N F S @<ACC
+$.	 [$.] PU <<<
+$¶	 [$¶] PU <<<
+</s>
+<s>
+A	 [o] DET F S <artd> @>N
+proposta	 [proposta] N F S @SUBJ>
+de=criação	 [de=criação] ADJ @N<
+propõe	 [propor] V PR 3S IND VFIN <fmc> @FMV
+três	 [três] NUM M P <card> @>N
+setores	 [setor] N M P @<SUBJ
+para	 [para] PRP @<ADVL
+o	 [o] DET M S <artd> @>N
+centro	 [centro] N M S @P<
+$:	 [$:] PU <<<
+ensino	 [ensino] N M S @NPHR
+e	 [e] KC @CO
+pesquisa	 [pesquisa] N F S @NPHR
+$;	 [$;] PU <<<
+consultoria	 [consultoria] N F S @NPHR
+e	 [e] KC @CO
+planejamento	 [planejamento] N M S @NPHR
+e	 [e] KC @CO
+assistência	 [assistência] N F S @NPHR
+ambulatorial	 [ambulatorial] ADJ F S @N<
+$.	 [$.] PU <<<
+$¶	 [$¶] PU <<<
+</s>
+<s>
+O	 [o] DET M S <artd> @>N
+primeiro	 [primeiro] ADJ M S <NUM-ord> @>N
+setor	 [setor] N M S @SUBJ>
+será	 [ser] V FUT 3S IND VFIN <fmc> @FAUX
+encarregado	 [encarregar] V PCP M S @IMV @#ICL-AUX<
+de	 [de] PRP @<PIV
+dar	 [dar] V INF @IMV @#ICL-P<
+cursos	 [curso] N M P @<ACC
+de	 [de] PRP @N<
+estensão	 [estensão] N F S <DERP> @P<
+universitária	 [universitário] ADJ F S @N<
+$,
+com	 [com] PRP @N<PRED @<ADVL
+habilitações	 [habilitação] N F P @P<
+em	 [em] PRP @N<PRED
+áreas	 [área] N F P @P<
+específicas	 [específico] ADJ F P @N<
+$,
+como	 [como] ADV @#AS-<ADVL <prp> <rel> @COM
+exercícios	 [exercício] N M P @AS<
+para	 [para] PRP @<ADVL
+gestantes	 [gestante] N F P @P<
+$,
+doping	 [doping] N M S @P< @AS<
+e	 [e] KC @CO
+ginástica	 [ginástica] N F S @P< @AS<
+infantil	 [infantil] ADJ F S @N<
+$.	 [$.] PU <<<
+$¶	 [$¶] PU <<<
+</s>
+<s>
+A	 [o] DET F S <artd> <*1> @>N
+universidade	 [universidade] N F S @SUBJ>
+não	 [não] ADV @ADVL>
+pode	 [poder] V PR 3S IND VFIN <fmc> @FAUX
+ficar	 [ficar] V INF @IMV @#ICL-AUX<
+preocupada	 [preocupado] ADJ F S @<SC
+com	 [com] PRP @A<
+os	 [o] DET M P <artd> @>N
+cursos	 [curso] N M P @P<
+de	 [de] PRP @N<
+estrito	 [estrito] ADJ M S @>N
+senso	 [senso] N M S @P<
+$.	 [$.] PU <<<
+$¶	 [$¶] PU <<<
+</s>
+<s>
+Existe	 [existir] V PR 3S IND VFIN @FMV @#FS-ACC>>
+um	 [um] DET M S <arti> @>N
+corpo	 [corpo] N M S @<PRED @<SUBJ
+enorme	 [enorme] ADJ M S @N<
+de	 [de] PRP @N<
+profissionais	 [profissional] N M/F P @P<
+que	 [que] KS @SUB @#FS-<ACC
+precisam	 [precisar] V PR 3P IND VFIN @FMV
+ser	 [ser] V INF @IAUX @#ICL-<ACC
+capacitados	 [capacitar] V PCP M P @IMV <*2> @#ICL-AUX<
+$,
+diz	 [dizer] V PR 3S IND VFIN <fmc> @FMV
+Ivan=Piçarro	 [Ivan=Piçarro] PROP M S @<SUBJ
+$.	 [$.] PU <<<
+$¶	 [$¶] PU <<<
+</s>
+<s>
+A	 [o] DET F S <artd> @>N
+área	 [área] N F S @SUBJ>
+de	 [de] PRP @N<
+consultoria	 [consultoria] N F S @P<
+pretende	 [pretender] V PR 3S IND VFIN <fmc> @FMV
+ter	 [ter] V INF @IMV @#ICL-<ACC
+como	 [como] ADV @COM <prp> <rel> @#AS-<ADVL
+público	 [público] ADJ M S @>N
+academias	 [academia] N F P @AS<
+e	 [e] KC @CO
+empresas	 [empresa] N F P @AS<
+de	 [de] PRP @N<
+um	 [um] DET M S <arti> @>N
+modo	 [modo] N M S @P<
+geral	 [geral] ADJ M S @N<
+$.	 [$.] PU <<<
+$¶	 [$¶] PU <<<
+</s>
+<s>
+Se	 [se] KS @#FS-SUBJ> <*1> @SUB
+uma	 [um] DET F S <arti> @>N
+empresa	 [empresa] N F S @SUBJ>
+nos	 [nós] PERS M/F 1P ACC @ACC>
+procurasse	 [procurar] V IMPF 3S SUBJ VFIN @FMV
+para	 [para] PRP @<ADVL
+elaborarmos	 [elaborar] V INF 1P @IMV @#ICL-P<
+um	 [um] DET M S <arti> @>N
+programa	 [programa] N M S @<ACC
+de	 [de] PRP @N<
+exercícios	 [exercício] N M P @P<
+para	 [para] PRP @<ADVL
+seus	 [seu] DET M P <poss 3S> @>N
+executivos	 [executivo] N M P @P<
+$,
+esse	 [esse] DET M S <dem> @>N
+setor	 [setor] N M S @SUBJ>
+seria	 [ser] V COND 3S VFIN @FMV @#FS-ACC>>
+o	 [o] DET M S <artd> @>N
+responsável	 [responsável] <n> ADJ M S <*2> @<ACC
+$,
+diz	 [dizer] V PR 3S IND VFIN <fmc> @FMV
+Turíbio	 [Turíbio] PROP M/F S @<SUBJ
+$.	 [$.] PU <<<
+$¶	 [$¶] PU <<<
+</s>
+<s>
+O	 [o] DET M S <artd> @>N
+último	 [último] ADJ M S <NUM-ord> @>N
+setor	 [setor] N M S @SUBJ>
+visa	 [visar] V PR 3S IND VFIN <fmc> @FMV
+criar	 [criar] V INF @IMV @#ICL-<ACC
+um	 [um] DET M S <arti> @>N
+atendimento	 [atendimento] N M S @<ACC
+para	 [para] PRP @<ADVL
+pessoas	 [pessoa] N F P @P<
+que	 [que] SPEC M/F S @ACC> <rel> @#FS-N<
+querem	 [querer] V PR 3P IND VFIN @FMV
+ou	 [ou] <co-vfin> KC @CO
+precisam	 [precisar] V PR 3P IND VFIN <fmc> @FMV
+de	 [de] PRP @<PIV
+programas	 [programa] N M P @P<
+de	 [de] PRP @N<
+exercícios	 [exercício] N M P @P<
+físicos	 [físico] ADJ M P @N<
+$.	 [$.] PU <<<
+$¶	 [$¶] PU <<<
+</s>
+<s>
+A	 [o] DET F S <artd> <*1> @>N
+pessoa	 [pessoa] N F S @SUBJ>
+vem	 [vir] V PR 3S IND VFIN @FMV @#FS-ACC>>
+a	 [a] PRP <sam-> @<ADVS
+o	 [o] DET M S <artd> <-sam> @>N
+ambulatório	 [ambulatório] N M S @P<
+e	 [e] <co-vfin> KC @CO
+nós	 [nós] PERS M/F 1P NOM @SUBJ>
+fazemos	 [fazer] V PR 1P IND VFIN <fmc> @FMV
+uma	 [um] DET F S <arti> @>N
+avaliação	 [avaliação] N F S @<ACC
+física	 [físico] ADJ F S <*2> @N<
+$,
+explica	 [explicar] V PR 3S IND VFIN <fmc> @FMV
+Turíbio	 [Turíbio] PROP M/F S @<SUBJ
+$.	 [$.] PU <<<
+$¶	 [$¶] PU <<<
+</s>
+<s>
+$(	 [$(] PU
+Md	 [md] N M S @NPHR
+$)	 [$)] PU
+$¶	 [$¶] PU <<<
+</s>
+</TEXT>
+$¶	 [$¶] PU <<<
+</DOC>

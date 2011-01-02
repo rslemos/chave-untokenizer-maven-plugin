@@ -1,0 +1,177 @@
+<DOC>
+<DOCNO.valor=FSP940101-024>
+<DOCID.valor=FSP940101-024>
+<DATE.valor=940101>
+<TEXT>
+<s>
+Da=Sucursal=de=Brasília	 [Da=Sucursal=de=Brasília] PROP F S @NPHR
+$¶	 [$¶] PU <<<
+</s>
+<s>
+O	 [o] DET M S <artd> @>N
+presidente	 [presidente] N M S @SUBJ>
+Itamar=Franco	 [Itamar=Franco] PROP M S @N<
+conseguiu	 [conseguir] V PS 3S IND VFIN <fmc> @FMV
+$,
+mais=uma=vez	 [mais=uma=vez] ADV @<ADVL
+$,
+driblar	 [driblar] V INF @#ICL-<ACC @IMV
+a	 [o] DET F S <artd> @>N
+imprensa	 [imprensa] N F S @<ACC
+$.	 [$.] PU <<<
+$¶	 [$¶] PU <<<
+</s>
+<s>
+Sumiu	 [sumir] V PS 3S IND VFIN <fmc> @FMV
+desde	 [desde] PRP @<ADVL
+a	 [o] DET F S <artd> @>N
+noite	 [noite] N F S @P<
+de	 [de] PRP @N<
+quinta-feira	 [quinta-feira] N F S @P<
+passada	 [passado] ADJ F S @N<
+e	 [e] <co-fmc> <co-vfin> KC @CO
+até	 [até] PRP @<ADVL
+ontem	 [ontem] ADV @P<
+a	 [a] PRP <sam-> @<ADVL
+a	 [o] DET F S <artd> <-sam> @>N
+tarde	 [tarde] N F S @P<
+seu	 [seu] DET M S <poss 3S> @>N
+esconderijo	 [esconderijo] N M S @SUBJ>
+era	 [ser] V IMPF 3S IND VFIN <fmc> @FMV
+um	 [um] DET M S <arti> @>N
+mistério	 [mistério] N M S @<SC
+$.	 [$.] PU <<<
+$¶	 [$¶] PU <<<
+</s>
+<s>
+Nenhum	 [nenhum] DET M S <quant> @SUBJ>
+de	 [de] PRP @N<
+seus	 [seu] DET M P <poss 3S> @>N
+assessores	 [assessor] N M P @P<
+e	 [e] KC @CO
+amigos	 [amigo] N M P @P<
+revelou	 [revelar] V PS 3S IND VFIN <fmc> @FMV
+onde	 [onde] ADV @#FS-<ADVL <ks> <rel> @ADVS>
+Itamar	 [Itamar] PROP M S @SUBJ>
+passaria	 [passar] V COND 3S VFIN @FMV
+o	 [o] DET M S <artd> @>N
+Réveillon	 [Réveillon] PROP M S @<ACC
+$.	 [$.] PU <<<
+$¶	 [$¶] PU <<<
+</s>
+<s>
+O	 [o] DET M S <artd> @>N
+secretário-geral	 [secretário-geral] N M S @SUBJ>
+de	 [de] PRP <sam-> @N<
+a	 [o] DET F S <artd> <-sam> @>N
+Presidência	 [presidência] <prop> N F S @P<
+$,
+Mauro=Durante	 [Mauro=Durante] PROP M S @APP
+$,
+afirmou	 [afirmar] V PS 3S IND VFIN <fmc> @FMV
+a	 [a] PRP <sam-> @<PIV
+o	 [o] DET M S <artd> <-sam> @>N
+porta-voz	 [porta-voz] N M S @P<
+interino	 [interino] ADJ M S @N<
+$,
+Fernando=Costa	 [Fernando=Costa] PROP M S @APP
+$,
+que	 [que] SPEC M/F S @ACC> <rel> @#FS-N<
+Itamar	 [Itamar] PROP M S @SUBJ>
+comemoraria	 [comemorar] V COND 3S VFIN @FMV
+a	 [o] DET F S <artd> @>N
+passagem	 [passagem] N F S @<ACC
+de	 [de] PRP @N<
+ano	 [ano] N M S @P<
+com	 [com] PRP @N<
+amigos	 [amigo] N M P @P<
+e	 [e] <co-fmc> <co-vfin> KC @CO
+só	 [só] ADV @ADVL>
+reapareceria	 [reaparecer] V COND 3S VFIN <fmc> @FMV
+em	 [em] PRP <sam-> @<ADVL
+a	 [o] DET F S <artd> <-sam> @>N
+segunda-feira	 [segunda-feira] N F S @P<
+$.	 [$.] PU <<<
+$¶	 [$¶] PU <<<
+</s>
+<s>
+O	 [o] DET M S <artd> @>N
+presidente	 [presidente] N M S @SUBJ>
+começou	 [começar] V PS 3S IND VFIN <fmc> @FAUX
+a	 [a] PRP @PRT-AUX<
+despistar	 [despistar] V INF @IMV @#ICL-AUX<
+a	 [o] DET F S <artd> @>N
+imprensa	 [imprensa] N F S @<ACC
+há	 [há] PRP @<ADVL
+dois	 [dois] NUM M P <card> @>N
+dias	 [dia] N M P @P<
+$.	 [$.] PU <<<
+$¶	 [$¶] PU <<<
+</s>
+<s>
+Até=então	 [até=então] ADV @ADVL>
+$,
+embora	 [embora] KS @#FS-ADVL> @SUB
+não	 [não] ADV @ADVL>
+houvesse	 [haver] V IMPF 1/3S SUBJ VFIN @FMV
+confirmação	 [confirmação] N F S @<ACC
+oficial	 [oficial] ADJ F S @N<
+$,
+tudo	 [tudo] SPEC M S <quant> @ACC>
+indicava	 [indicar] V IMPF 1/3S IND VFIN <fmc> @FMV
+que	 [que] KS @SUB @#FS-<SUBJ
+o	 [o] DET M S <artd> @>N
+seu	 [seu] DET M S <poss 3S> @>N
+Réveillon	 [Réveillon] PROP M S @SUBJ>
+seria	 [ser] V COND 3S VFIN @FMV
+em	 [em] PRP <sam-> @<SC
+o	 [o] DET M S <artd> <-sam> @>N
+Rio=de=Janeiro	 [Rio=de=Janeiro] PROP M S @P<
+$.	 [$.] PU <<<
+$¶	 [$¶] PU <<<
+</s>
+<s>
+Havia	 [haver] V IMPF 1/3S IND VFIN <fmc> @FMV
+três	 [três] NUM M P <card> @>N
+apartamentos	 [apartamento] N M P @<ACC
+reservados	 [reservar] V PCP M P @N<
+para	 [para] PRP @<ADVL
+ele	 [ele] PERS M 3S NOM/PIV @P<
+e	 [e] KC @CO
+sua	 [seu] DET F S <si> <poss 3S> @>N
+comitiva	 [comitiva] N F S @<ACC
+em	 [em] PRP <sam-> @<ADVL
+o	 [o] DET M S <artd> <-sam> @>N
+Copacabana=Palace	 [Copacabana=Palace] PROP M S @P<
+$.	 [$.] PU <<<
+$¶	 [$¶] PU <<<
+</s>
+<s>
+Em	 [em] PRP <sam-> @ADVL>
+a	 [o] DET F S <artd> <-sam> @>N
+última	 [último] ADJ F S <NUM-ord> @>N
+hora	 [hora] N F S @P<
+$,
+foi	 [ser] V PS 3S IND VFIN <fmc> @FAUX
+cancelada	 [cancelar] V PCP F S @IMV @#ICL-AUX<
+a	 [o] DET F S <artd> @>N
+viagem	 [viagem] N F S @<SUBJ
+de	 [de] PRP <sam-> @N<
+o	 [o] DET M S <artd> <-sam> @>N
+escalão	 [escalão] N M S @P<
+de	 [de] PRP @N<
+apoio	 [apoio] N M S @P<
+$,
+marcada	 [marcar] V PCP F S @N<PRED @P<
+para	 [para] PRP @<ADVL
+a	 [a] PRP <sam-> @ADVL>
+as	 [o] DET F P <artd> <-sam> @>N
+17h	 [17h] N F P @P<
+de	 [de] PRP @N<
+quinta-feira	 [quinta-feira] N F S @P<
+$.	 [$.] PU <<<
+$¶	 [$¶] PU <<<
+</s>
+</TEXT>
+$¶	 [$¶] PU <<<
+</DOC>

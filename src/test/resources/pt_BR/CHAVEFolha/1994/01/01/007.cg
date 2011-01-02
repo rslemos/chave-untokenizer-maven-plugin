@@ -1,0 +1,783 @@
+<DOC>
+<DOCNO.valor=FSP940101-007>
+<DOCID.valor=FSP940101-007>
+<DATE.valor=940101>
+<TEXT>
+<s>
+Luciano=Mendes=de=Almeida	 [Luciano=Mendes=de=Almeida] PROP M S @NPHR
+$¶	 [$¶] PU <<<
+</s>
+<s>
+Todo	 [todo] DET M S <quant> @>N
+dia	 [dia] N M S @SUBJ>
+é	 [ser] V PR 3S IND VFIN <fmc> @FMV
+convite	 [convite] N M S @<SC
+para	 [para] PRP @N<
+continuar	 [continuar] V INF @IAUX @#ICL-P<
+a	 [a] PRP @PRT-AUX<
+viver	 [viver] V INF @IMV @#ICL-AUX<
+$,
+superando	 [superar] V GER @#ICL-<ADVL @IMV
+desafios	 [desafio] N M P @<ACC
+e	 [e] KC @CO
+fazendo	 [fazer] V GER @IMV
+o	 [o] DET M S <artd> @>N
+bem	 [bem] ADV <quant> @<ADVL
+$.	 [$.] PU <<<
+$¶	 [$¶] PU <<<
+</s>
+<s>
+O	 [o] DET M S <artd> @>N
+primeiro	 [primeiro] ADJ M S <NUM-ord> @>N
+dia	 [dia] N M S @ADVL>
+de	 [de] PRP <sam-> @N<
+o	 [o] DET M S <artd> <-sam> @>N
+ano	 [ano] N M S @P<
+oferece	 [oferecer] V PR 3S IND VFIN <fmc> @FMV
+$,
+no=entanto	 [no=entanto] ADV <kc> @<ADVL
+$,
+a	 [o] DET F S <artd> @>N
+oportunidade	 [oportunidade] N F S @<ACC
+de	 [de] PRP @N<
+uma	 [um] DET F S <arti> @>N
+avaliação	 [avaliação] N F S @P<
+de	 [de] PRP <sam-> @N<
+o	 [o] DET M S <artd> <-sam> @>N
+caminho	 [caminho] N M S @P<
+percorrido	 [percorrer] V PCP M S @IMV @#ICL-N<
+em	 [em] PRP @<ADVL
+1993	 [1993] NUM M/F P <card> @P<
+$,
+percebendo	 [perceber] V GER @#ICL-<ADVL @IMV
+omissões	 [omissão] N F P @<ACC
+$,
+faltas	 [falta] N F P @<ACC
+cometidas	 [cometer] V PCP F P @N<
+e	 [e] <co-vfin> KC @CO
+as	 [o] DET F P <artd> @>N
+boas	 [bom] ADJ F P @>N
+ações	 [ação] N F P @<ACC
+que	 [que] SPEC M/F S @ACC> <rel> @#FS-N<
+$,
+apesar=de	 [apesar=de] PRP @ADVL>
+nossas	 [nosso] DET F P <poss 1P> @>N
+limitações	 [limitação] N F P @P<
+$,
+pudemos	 [poder] V PS 1P IND VFIN @FAUX
+praticar	 [praticar] V INF @IMV @#ICL-AUX<
+$.	 [$.] PU <<<
+$¶	 [$¶] PU <<<
+</s>
+<s>
+Em	 [em] PRP <sam-> @ADVL>
+a	 [o] DET F S <artd> <-sam> @>N
+passagem	 [passagem] N F S @P<
+de	 [de] PRP <sam-> @N<
+o	 [o] DET M S <artd> <-sam> @>N
+ano	 [ano] N M S @P<
+$,
+cabe	 [caber] V PR 3S IND VFIN <fmc> @FMV
+um	 [um] DET M S <arti> @>N
+tempo	 [tempo] N M S @<SUBJ
+maior	 [grande] ADJ M S <KOMP> @N<
+de	 [de] PRP @N<
+meditação	 [meditação] N F S @P<
+$.	 [$.] PU <<<
+$¶	 [$¶] PU <<<
+</s>
+<s>
+Vamos	 [ir] V PR 1P SUBJ VFIN <fmc> @FMV
+$,
+em	 [em] PRP <sam-> @<ADVL
+a	 [o] DET F S <artd> <-sam> @>N
+memória	 [memória] N F S @P<
+$,
+virando	 [virar] V GER @#ICL-<ADVL @IMV
+as	 [o] DET F P <artd> @>N
+páginas	 [página] N F P @<ACC
+de	 [de] PRP @N<
+nosso	 [nosso] DET M S <poss 1P> @>N
+álbum	 [álbum] N M S @P<
+de	 [de] PRP @N<
+fotografias	 [fotografia] N F P @P<
+$,
+revivendo	 [reviver] V GER @#ICL-<ADVL @IMV
+dificuldades	 [dificuldade] N F P @<ACC
+$,
+quedas	 [queda] N F P @<ACC
+e	 [e] <co-vfin> KC @CO
+vitórias	 [vitória] N F P @<ACC
+$,
+para	 [para] PRP @<ADVL
+entrarmos	 [entrar] V INF 1P @IMV @#ICL-P<
+$,
+com	 [com] PRP @<PRED @<ADVL
+coragem	 [coragem] N F S @P<
+$,
+em	 [em] PRP <sam-> @<ADVL
+o	 [o] DET M S <artd> <-sam> @>N
+ano	 [ano] N M S @P<
+que	 [que] SPEC M/F S @SUBJ> <rel> @#FS-N<
+começa	 [começar] V PR 3S IND VFIN @FMV
+$.	 [$.] PU <<<
+$¶	 [$¶] PU <<<
+</s>
+<s>
+Há	 [haver] V PR 3S IND VFIN <fmc> @FMV
+$,
+no=entanto	 [no=entanto] ADV <kc> @<ADVL
+$,
+um	 [um] DET M S <arti> @>N
+modo	 [modo] N M S @<PRED @<ACC
+melhor	 [bom] ADJ M S <SUP> <KOMP> @N<
+de	 [de] PRP @N<
+contemplar	 [contemplar] V INF @IMV @#ICL-P<
+o	 [o] DET M S <artd> @>N
+ano	 [ano] N M S @<ACC
+que	 [que] SPEC M/F S @ACC> <rel> @#FS-N<
+passou	 [passar] V PS 3S IND VFIN @FMV
+$.	 [$.] PU <<<
+$¶	 [$¶] PU <<<
+</s>
+<s>
+É	 [ser] V PR 3S IND VFIN <fmc> @FMV
+a	 [o] DET F S <artd> @>N
+atitude	 [atitude] N F S @<SC
+de	 [de] PRP @N<
+quem	 [quem] SPEC M/F S @#FS-P< <rel> @SUBJ>
+$,
+com	 [com] PRP @ADVL> @N<PRED
+humildade	 [humildade] N F S @P<
+$,
+se	 [se] PERS M/F 3S ACC <refl> @ACC>-PASS
+coloca	 [colocar] V PR 3S IND VFIN @FMV
+na=presença=de	 [na=presença=de] PRP @<ADVL
+Deus	 [Deus] PROP M S @P<
+e	 [e] <co-fmc> <co-vfin> KC @CO
+fala	 [falar] V PR 3S IND VFIN <fmc> @FMV
+a	 [a] PRP @<ADVL
+Ele	 [ele] PERS M 3S NOM/PIV @P<
+$,
+revendo	 [rever] V GER @#ICL-<ADVL @IMV
+os	 [o] DET M P <artd> @>N
+próprios	 [próprio] ADJ M P @>N
+atos	 [ato] N M P @<ACC
+$.	 [$.] PU <<<
+$¶	 [$¶] PU <<<
+</s>
+<s>
+Jesus=Cristo	 [Jesus=Cristo] PROP M S @SUBJ>
+estava	 [estar] V IMPF 3S IND VFIN <fmc> @FMV
+em	 [em] PRP @<ADVS
+contínua	 [contínuo] ADJ F S @>N
+oração	 [oração] N F S @P<
+e	 [e] <co-fmc> <co-vfin> KC @CO
+nos	 [nós] PERS M/F 1P DAT <refl> @DAT>
+ensinou	 [ensinar] V PS 3S IND VFIN <fmc> @FMV
+o	 [o] DET M S <artd> @>N
+diálogo	 [diálogo] N M S @<ACC
+filial	 [filial] ADJ M S @N<
+com	 [com] PRP @<ADVL
+o	 [o] DET M S <artd> @>N
+Pai	 [pai] <prop> N M S @P<
+$,
+em	 [em] PRP @ADVL>
+quem	 [quem] SPEC M/F S <interr> @P<	 [quem] SPEC M/F S @P< <rel> @#FS-N<
+devemos	 [dever] V PR 1P IND VFIN @FAUX
+sempre	 [sempre] ADV @ADVL>
+confiar	 [confiar] V INF @IMV @#ICL-AUX<
+$.	 [$.] PU <<<
+$¶	 [$¶] PU <<<
+</s>
+<s>
+O	 [o] DET M S <artd> @>N
+exame	 [exame] N M S @SUBJ>
+de	 [de] PRP @N<
+consciência	 [consciência] N F S @P<
+se	 [se] PERS M/F 3S ACC <refl> @ACC>
+transforma	 [transformar] V PR 3S IND VFIN <fmc> @FMV
+$,
+assim	 [assim] ADV <kc> @<ADVL
+$,
+em	 [em] PRP <sam-> @<PIV
+uma	 [um] DET F S <arti> <-sam> @>N
+conversa	 [conversa] N F S @P<
+amiga	 [amigo] ADJ F S @N<PRED
+com	 [com] PRP @N<
+o	 [o] DET M S <artd> @>N
+Pai	 [pai] <prop> N M S @P<
+que	 [que] SPEC M/F S @SUBJ> <rel> @#FS-N<
+nos	 [nós] PERS M/F 1P ACC @ACC>
+ama	 [amar] V PR 3S IND VFIN @FMV
+$,
+conhece	 [conhecer] V PR 3S IND VFIN <fmc> @FMV
+nossa	 [nosso] DET F S <poss 1P> @>N
+consciência	 [consciência] N F S @<ACC
+e	 [e] <co-fmc> <co-vfin> KC @CO
+nos	 [nós] PERS M/F 1P ACC @ACC>
+ajuda	 [ajudar] V PR 3S IND VFIN <fmc> @FMV
+a	 [a] PRP @<ADVL
+ver	 [ver] V INF @IMV @#ICL-P<
+melhor	 [bom] <mente> ADJ M/F S <SUP> <KOMP> @<OC	 [melhor] ADV <SUP> <KOMP> @<ADVL
+o	 [o] DET M S <artd> @>N
+livro	 [livro] N M S @<ACC
+de	 [de] PRP <sam-> @N<
+a	 [o] DET F S <artd> <-sam> @>N
+vida	 [vida] N F S @P<
+$.	 [$.] PU <<<
+$¶	 [$¶] PU <<<
+</s>
+<s>
+Podemos	 [poder] V PR 1P IND VFIN <fmc> @FAUX
+$,
+então	 [então] ADV <kc> @ADVL>
+$,
+reconhecer	 [reconhecer] V INF @IMV @#ICL-AUX<
+as	 [o] DET F P <artd> @>N
+nossas	 [nosso] DET F P <poss 1P> @>N
+culpas	 [culpa] N F P @<ACC
+e	 [e] <co-inf> KC @CO
+pedir	 [pedir] V INF @IMV @#ICL-AUX<
+perdão	 [perdão] IN @<ACC
+em	 [em] PRP <sam-> @<ADVL
+a	 [o] DET F S <artd> <-sam> @>N
+certaza ALT xxxa	 [certaza] N F S @P<
+de	 [de] PRP @N<
+sermos	 [ser] V INF 1P @IAUX @#ICL-P<
+atendidos	 [atender] V PCP M P @IMV @#ICL-AUX<
+e	 [e] <co-pcv> KC @CO
+auxiliados	 [auxiliar] V PCP M P @#ICL-AUX< @IMV
+a	 [a] PRP @<ADVL
+nos	 [nós] PERS M/F 1P ACC <refl> @ACC>
+corrigir	 [corrigir] V INF @IMV @#ICL-P<
+$.	 [$.] PU <<<
+$¶	 [$¶] PU <<<
+</s>
+<s>
+Em	 [em] PRP <sam-> @ADVL>
+a	 [o] DET F S <artd> <-sam> @>N
+oração	 [oração] N F S @P<
+filial	 [filial] ADJ F S @N<
+$,
+somos	 [ser] V PR 1P IND VFIN <fmc> @FMV
+capazes	 [capaz] ADJ M/F P @<SC
+de	 [de] PRP @A<
+constatar	 [constatar] V INF @IMV @#ICL-P<
+algum	 [algum] DET M S @<ACC <quant> @>N
+bem	 [bem] ADV <quant> @>A
+realizado	 [realizar] V PCP M S @N<PRED
+$,
+mas	 [mas] KC @CO
+atribuindo	 [atribuir] V GER @IMV
+a	 [a] PRP <sam-> @<ADVL
+a	 [o] DET F S <artd> <-sam> @>N
+graça	 [graça] N F S @P<
+divina	 [divino] ADJ F S @N<
+os	 [o] DET M P <artd> @>N
+benefícios	 [benefício] N M P @<ACC
+recebidos	 [recebido] ADJ M P @N<
+$.	 [$.] PU <<<
+$¶	 [$¶] PU <<<
+</s>
+<s>
+Diante=de	 [diante=de] PRP <sam-> @ADVL>
+o	 [o] DET M S <-sam> <artd> @>N
+passado	 [passado] N M S @P<
+$,
+renasce	 [renascer] V PR 3S IND VFIN <fmc> @FMV
+a	 [o] DET F S <artd> @>N
+paz	 [paz] N F S @<SUBJ
+$,
+sabendo	 [saber] V GER @#ICL-<ADVL @IMV
+que	 [que] KS @SUB @#FS-<ACC
+tudo	 [tudo] SPEC M S <quant> <*1> @SC>
+coopera	 [cooperar] V PR 3S IND VFIN @FMV
+para	 [para] PRP @<PIV
+o	 [o] DET M S <artd> @>N
+bem	 [bem] N M S @P<
+à=luz=de	 [à=luz=de] PRP <sam-> @<ADVL
+o	 [o] DET M S <-sam> <artd> @>N
+amor=de=Deus	 [amor=de=Deus] N M S @P<
+$"	 [$"] PU
+$(	 [$(] PU
+Rm	 [Rm] PROP M/F S @APP
+8	 [8] NUM M/F P <card> @N<
+$,
+28	 [28] NUM M/F P <card> @<ACC
+$)	 [$)] PU
+$.	 [$.] PU <<<
+$¶	 [$¶] PU <<<
+</s>
+<s>
+Cresce	 [crescer] V PR 3S IND VFIN <fmc> @FMV
+a	 [o] DET F S <artd> @>N
+atitude	 [atitude] N F S @<SUBJ
+de	 [de] PRP @N<
+abandono	 [abandono] N M S @P<
+frente=a	 [frente=a] PRP @N< <sam-> @<ADVL
+o	 [o] DET M S <artd> <-sam> @>N
+futuro	 [futuro] N M S @P<
+$,
+esperando	 [esperar] V GER @#ICL-<ADVL @IMV
+$,
+aos=poucos	 [aos=poucos] ADV @<ADVL
+$,
+melhorar	 [melhorar] V INF @#ICL-<ACC @IMV
+nossa	 [nosso] DET F S <poss 1P> @>N
+conduta	 [conduta] N F S @<ACC
+e	 [e] <co-inf> KC @CO
+contribuir	 [contribuir] V INF @#ICL-<ACC @IMV
+para	 [para] PRP @<PIV
+o	 [o] DET M S <artd> @>N
+bem	 [bem] N M S @P<
+de	 [de] PRP <sam-> @N<
+o	 [o] DET M S <artd> <-sam> @>N
+próximo	 [próximo] <n> ADJ M S @P<
+$.	 [$.] PU <<<
+$¶	 [$¶] PU <<<
+</s>
+<s>
+Em	 [em] PRP <sam-> @ADVL>
+o	 [o] DET M S <artd> <-sam> @>N
+mesmo	 [mesmo] DET M S <KOMP> <diff> @>N
+clima	 [clima] N M S @P<
+de	 [de] PRP @N<
+oração	 [oração] N F S @P<
+$,
+poderemos	 [poder] V FUT 1P IND VFIN <fmc> @FAUX
+penetrar	 [penetrar] V INF @IMV @#ICL-AUX<
+mais	 [mais] ADV <KOMP> <quant> @<ADVL
+em	 [em] PRP <sam-> @<ADVL
+os	 [o] DET M P <artd> <-sam> @>N
+desígnios	 [desígnio] N M P @P<
+de	 [de] PRP @N<
+Deus	 [Deus] PROP M S @P<
+e	 [e] <co-inf> <co-fmc> KC @CO
+descobrir	 [descobrir] V INF @IMV @#ICL-AUX<
+que	 [que] KS @COM @#AS-KOMP<
+$,
+até	 [até] PRP @ADVL>
+no=meio=de	 [no=meio=de] PRP <sam-> @ADVL>
+as	 [o] DET F P <-sam> <artd> @>N
+provações	 [provação] N F P @P<
+e	 [e] <co-fmc> <co-vfin> KC @CO
+sofrimentos	 [sofrimento] N M P @P<
+de	 [de] PRP <sam-> @N<
+o	 [o] DET M S <artd> <-sam> @>N
+ano	 [ano] N M S @P<
+que	 [que] SPEC M/F S @ACC> <rel> @#FS-N<
+passou	 [passar] V PS 3S IND VFIN @FMV
+$,
+há	 [haver] V PR 3S IND VFIN <fmc> @FMV
+valores	 [valor] N M P @<ACC
+que	 [que] SPEC M/F S @ACC> <rel> @#FS-N<
+nem	 [nem] ADV @>A
+sempre	 [sempre] ADV @ADVL>
+percebemos	 [perceber] V PR 1P IND VFIN @FMV
+$.	 [$.] PU <<<
+$¶	 [$¶] PU <<<
+</s>
+<s>
+Assim	 [assim] ADV <kc> @ADVL
+$,
+a	 [o] DET F S <artd> @>N
+dedicação	 [dedicação] N F S @NPHR
+de	 [de] PRP <sam-> @N<
+a	 [o] DET F S <artd> <-sam> @>N
+mãe	 [mãe] N F S @P<
+a	 [a] PRP <sam-> @ADVL
+o	 [o] DET M S <artd> <-sam> @>N
+filho	 [filho] N M S @P<
+portador	 [portador] ADJ M S @N<
+de	 [de] PRP @A<
+deficiência	 [deficiência] N F S @P<
+$,
+a	 [o] DET F S <artd> @>N
+fidelidade	 [fidelidade] N F S @NPHR
+generosa	 [generoso] ADJ F S @N<
+de	 [de] PRP <sam-> @N<
+o	 [o] DET M S <artd> <-sam> @>N
+marido	 [marido] N M S @P<
+a	 [a] PRP <sam-> @ADVL
+a	 [o] DET F S <artd> <-sam> @>N
+esposa	 [esposa] N F S @P<
+acidentada	 [acidentado] ADJ F S @N<
+$,
+a	 [o] DET F S <artd> @>N
+união	 [união] N F S @NPHR
+de	 [de] PRP <sam-> @N<
+os	 [o] DET M P <artd> <-sam> @>N
+familiares	 [familiar] N M P @P<
+em	 [em] PRP <sam-> @ADVL>
+o	 [o] DET M S <artd> <-sam> @>N
+falecimento	 [falecimento] N M S @P<
+de	 [de] PRP <sam-> @N<
+o	 [o] DET M S <artd> <-sam> @>N
+ente	 [ente] N M S @P<
+querido	 [querido] ADJ M S @N<
+$,
+os	 [o] DET M P <artd> @>N
+voluntários	 [voluntário] N M P @NPHR
+a	 [a] PRP @N<
+serviço	 [serviço] N M S @P<
+em	 [em] PRP <sam-> @N<
+as	 [o] DET F P <artd> <-sam> @>N
+instituições	 [instituição] N F P @P<
+de	 [de] PRP @N<
+caridade	 [caridade] N F S @P<
+e	 [e] KC @CO
+a	 [o] DET F S <artd> @>N
+surpreendente	 [surpreendente] ADJ F S @>N
+solidariedade	 [solidariedade] N F S @NPHR
+de	 [de] PRP <sam-> @N<
+o	 [o] DET M S <artd> <-sam> @>N
+povo	 [povo] N M S @P<
+em	 [em] PRP <sam-> @ADVL>
+as	 [o] DET F P <artd> <-sam> @>N
+catástrofes	 [catástrofe] N F P @P<
+$.	 [$.] PU <<<
+$¶	 [$¶] PU <<<
+</s>
+<s>
+São	 [ser] V PR 3P IND VFIN <fmc> @FMV
+valores	 [valor] N M P @<SC
+muito	 [muito] ADV <quant> @>A
+mais	 [mais] ADV <KOMP> <quant> @>A
+preciosos	 [precioso] ADJ M P @N<
+do=que	 [do=que] KS @COM @#AS-KOMP<
+o	 [o] DET M S <artd> @>N
+bem	 [bem] ADV <quant> @ADVL>
+estar	 [estar] V INF @IMV @#ICL-AS<
+superficial	 [superficial] <n> ADJ M/F S @<SC
+de	 [de] PRP <sam-> @N<
+os	 [o] DET M P <-sam> @P<
+que	 [que] SPEC M/F S @ACC> <rel> @#FS-N<
+$,
+em	 [em] PRP @ADVL>
+1993	 [1993] NUM M/F S <card> @P<
+$,
+não	 [não] ADV @ADVL>
+tiveram	 [ter] V PS/MQP 3P IND VFIN @FMV
+problemas	 [problema] N M P @<ACC
+$,
+nem	 [nem] KC @CO
+ocasião	 [ocasião] N F S @N<PRED
+de	 [de] PRP @N<
+se	 [se] PERS M/F 3S DAT <refl> @DAT>
+devotar	 [devotar] V INF @IMV @#ICL-P<
+a	 [a] PRP <sam-> @<ADVL
+o	 [o] DET M S <artd> <-sam> @>N
+próximo	 [próximo] <n> ADJ M S @P<
+$.	 [$.] PU <<<
+$¶	 [$¶] PU <<<
+</s>
+<s>
+Tudo=isso	 [tudo=isso] SPEC M S <quant> @SUBJ>
+a	 [o] DET F S <artd> @>N
+oração	 [oração] N F S @SUBJ>
+vai	 [ir] V PR 3S IND VFIN <fmc> @FAUX
+nos	 [nós] PERS M/F 1P ACC <refl> @ACC>
+revelando	 [revelar] V GER @#ICL-AUX< @IMV
+$.	 [$.] PU <<<
+$¶	 [$¶] PU <<<
+</s>
+<s>
+O	 [o] DET M S <artd> @>N
+diálogo	 [diálogo] N M S @SUBJ>
+filial	 [filial] ADJ M S @N<
+com	 [com] PRP @N<
+Deus	 [Deus] PROP M S @P<
+poderá	 [poder] V FUT 3S IND VFIN <fmc> @FAUX
+se	 [se] PERS M/F 3S ACC @ACC>-PASS
+intensificar	 [intensificar] V INF @IMV @#ICL-AUX<
+e	 [e] <co-inf> KC @CO
+fazer-	 [fazer] V INF @IMV <hyfen> @#ICL-AUX<
+nos	 [nós] PERS M/F 1P ACC @SUBJ>
+captar	 [captar] V INF 3S @IMV @#ICL-<ACC
+o	 [o] DET M S <artd> @>N
+verdadeiro	 [verdadeiro] ADJ M S @>N
+sentido	 [sentido] N M S @<ACC
+de	 [de] PRP <sam-> @N<
+os	 [o] DET M P <artd> <-sam> @>N
+acontecimentos	 [acontecimento] N M P @P<
+$.	 [$.] PU <<<
+$¶	 [$¶] PU <<<
+</s>
+<s>
+Encontraremos	 [encontrar] V FUT 1P IND VFIN <fmc> @FMV
+$,
+em	 [em] PRP <sam-> @<ADVL
+o	 [o] DET M S <artd> <-sam> @>N
+fundo	 [fundo] N M S @P<
+de	 [de] PRP @N<
+nós	 [nós] PERS M/F 1P NOM/PIV @P<
+mesmos	 [mesmo] DET M S <ident> @N<
+$,
+escondida	 [esconder] V PCP F S @IMV @#ICL-N<PRED
+em	 [em] PRP <sam-> @<ADVL
+a	 [o] DET F S <artd> <-sam> @>N
+ostra	 [ostra] N F S @P<
+$,
+a	 [o] DET F S <artd> @>N
+pérola	 [pérola] N F S @<ACC
+preciosa	 [precioso] ADJ F S @N<
+$.	 [$.] PU <<<
+$¶	 [$¶] PU <<<
+</s>
+<s>
+Em	 [em] PRP <sam-> @ADVL>
+o	 [o] DET M S <artd> <-sam> @>N
+emaranhado	 [emaranhar] <n> <n> V PCP M S @P<
+de	 [de] PRP <sam-> @N<
+as	 [o] DET F P <artd> <-sam> @>N
+linhas	 [linha] N F P @P<
+cruzadas	 [cruzado] ADJ F P @N<
+$,
+virando	 [virar] V GER @IMV @#ICL-ADVL>
+para=cima	 [para=cima] ADV @<ADVL
+a	 [o] DET F S <artd> @>N
+tela	 [tela] N F S @<ACC
+$,
+descobriremos	 [descobrir] V FUT 1P IND VFIN <fmc> @FMV
+de	 [de] PRP <sam-> @<ADVL
+o	 [o] DET M S <artd> <-sam> @>N
+outro	 [outro] DET M S <KOMP> <diff> @>N
+lado	 [lado] N M S @P<
+a	 [o] DET F S <artd> @>N
+arte	 [arte] N F S @<ACC
+de	 [de] PRP <sam-> @N<
+o	 [o] DET M S <artd> <-sam> @>N
+bordado	 [bordado] N M S @P<
+$.	 [$.] PU <<<
+$¶	 [$¶] PU <<<
+</s>
+<s>
+São	 [ser] V PR 3P IND VFIN <fmc> @FMV
+momentos	 [momento] N M P @<SC
+de	 [de] PRP @N<
+luz	 [luz] N F S @P<
+$,
+em	 [em] PRP @PIV>
+que	 [que] KS @SUB @#FS-<ACC
+as	 [o] DET F P <artd> @>N
+próprias	 [próprio] ADJ F P @>N
+faltas	 [falta] N F P @SUBJ>
+de	 [de] PRP <sam-> @N<
+o	 [o] DET M S <artd> <-sam> @>N
+ano	 [ano] N M S @P<
+que	 [que] SPEC M/F S @ACC> <rel> @#FS-N<
+passou	 [passar] V PS 3S IND VFIN @FMV
+$,
+perdoadas	 [perdoar] V PCP F P @<PRED
+e	 [e] <co-vfin> KC @CO
+corrigidas	 [corrigir] V PCP F P @<PRED
+$,
+tornam-	 [tornar] V PR 3P IND VFIN <hyfen> @FMV
+se	 [se] PERS M/F 3S ACC <refl> @<ACC
+sementes	 [semente] N F P @<OC
+de	 [de] PRP @N<
+conversão	 [conversão] N F S @P<
+e	 [e] KC @CO
+crescimento	 [crescimento] N M S @P<
+espiritual	 [espiritual] ADJ M S @N<
+$.	 [$.] PU <<<
+$¶	 [$¶] PU <<<
+</s>
+<s>
+Pedro	 [Pedro] PROP M S @SUBJ>
+$,
+que	 [que] SPEC M/F S @SUBJ> <rel> @#FS-N<
+negou	 [negar] V PS 3S IND VFIN @FMV
+a	 [a] PRP @<ADVL
+Cristo	 [Cristo] PROP M S @P<
+$,
+foi-	 [ir] V PS 3S IND VFIN <fmc> <hyfen> @FMV
+lhe	 [ele] PERS M/F 3S DAT @<DAT
+fiel	 [fiel] ADJ M/F S @<PRED
+até	 [até] PRP @<ADVL
+o	 [o] DET M S <artd> @>N
+martírio	 [martírio] N M S @P<
+$.	 [$.] PU <<<
+$¶	 [$¶] PU <<<
+</s>
+<s>
+Inácio=de=Loyola	 [Inácio=de=Loyola] PROP M S @SUBJ>
+e	 [e] KC @CO
+tantos	 [tanto] DET M P <KOMP> <quant> @>N
+outros	 [outro] DET M P <KOMP> <diff> @SUBJ>
+encontraram	 [encontrar] V PS/MQP 3P IND VFIN <fmc> @FMV
+em	 [em] PRP <sam-> @<ADVL
+as	 [o] DET F P <artd> <-sam> @>N
+faltas	 [falta] N F P @P<
+perdoadas	 [perdoar] V PCP F P @N<
+a	 [o] DET F S <artd> @>N
+infinita	 [infinito] ADJ F S @>N
+misericórdia	 [misericórdia] N F S @<ACC
+de	 [de] PRP @N<
+Deus	 [Deus] PROP M S @P<
+e	 [e] <co-fmc> <co-vfin> KC @CO
+entregaram-	 [entregar] V PS/MQP 3P IND VFIN <fmc> <hyfen> @FMV
+se	 [se] PERS M 3S ACC <refl> @<ACC
+totalmente	 [totalmente] ADV <quant> @<ADVL
+$,
+por	 [por] PRP @<ADVL
+amor	 [amor] N M S @P<
+$,
+a	 [a] PRP <sam-> @<PIV
+o	 [o] DET M S <artd> <-sam> @>N
+serviço	 [serviço] N M S @P<
+de	 [de] PRP <sam-> @N<
+os	 [o] DET M P <artd> <-sam> @>N
+presos	 [preso] N M P @P<
+$,
+de	 [de] PRP <sam-> @N<
+os	 [o] DET M P <artd> <-sam> @>N
+pobres	 [pobre] <n> ADJ M P @P<
+$,
+de	 [de] PRP <sam-> @N<
+os	 [o] DET M P <artd> <-sam> @>N
+excluídos	 [excluir] <n> V PCP M P @P<
+e	 [e] <co-vfin> KC @CO
+$,
+em	 [em] PRP @<ADVL
+especial	 [especial] ADJ M/F S @P<
+$,
+de	 [de] PRP <sam-> @<ADVL
+os	 [o] DET M P <-sam> @P<
+que	 [que] KS @SUB @#FS-<ACC
+estavam	 [estar] V IMPF 3P IND VFIN @FMV
+longe	 [longe] ADV @<ADVS
+de	 [de] PRP @<ADVL
+Deus	 [Deus] PROP M S @P<
+$.	 [$.] PU <<<
+$¶	 [$¶] PU <<<
+</s>
+<s>
+Quem	 [quem] SPEC M/F S @#FS-ACC> <rel> @SUBJ>
+sabe	 [saber] V PR 3S IND VFIN @FMV
+$,
+também	 [também] ADV @>N
+nós	 [nós] PERS M/F 1P NOM @SUBJ>
+$,
+em	 [em] PRP <sam-> @ADVL>
+a	 [o] DET F S <artd> <-sam> @>N
+avaliação	 [avaliação] N F S @P<
+de	 [de] PRP <sam-> @N<
+o	 [o] DET M S <artd> <-sam> @>N
+ano	 [ano] N M S @P<
+$,
+poderemos	 [poder] V FUT 1P IND VFIN <fmc> @FAUX
+descobrir	 [descobrir] V INF @IMV @#ICL-AUX<
+a	 [o] DET F S <artd> @>N
+pérola	 [pérola] N F S @<ACC
+de	 [de] PRP <sam-> @N<
+a	 [o] DET F S <artd> <-sam> @>N
+conversão	 [conversão] N F S @P<
+e	 [e] <co-inf> KC @CO
+entender	 [entender] V INF @IMV @#ICL-AUX<
+em	 [em] PRP <sam-> @<PIV
+os	 [o] DET M P <artd> <-sam> @>N
+reveses	 [revés] N M P @P<
+de	 [de] PRP <sam-> @N<
+a	 [o] DET F S <artd> <-sam> @>N
+vida	 [vida] N F S @P<
+a	 [o] DET F S <artd> @>N
+misteriosa	 [misterioso] ADJ F S @>N
+beleza	 [beleza] N F S @<SUBJ
+de	 [de] PRP <sam-> @N<
+os	 [o] DET M P <artd> <-sam> @>N
+caminhos	 [caminho] N M P @P<
+de	 [de] PRP @N<
+Deus	 [Deus] PROP M S @P<
+$,
+conduzindo-	 [conduzir] V GER @#ICL-<ADVL <hyfen> @IMV
+nos	 [nós] PERS M/F 1P ACC <refl> @<ACC
+por	 [por] PRP <sam-> @<ADVL
+as	 [o] DET F P <artd> <-sam> @>N
+desilusões	 [desilusão] N F P @P<
+de	 [de] PRP <sam-> @N<
+o	 [o] DET M S <artd> <-sam> @>N
+egoísmo	 [egoísmo] N M S @P<
+até	 [até] ADV @>N
+a	 [o] DET F S <artd> @>N
+alegria	 [alegria] N F S @<SUBJ
+de	 [de] PRP <sam-> @N<
+o	 [o] DET M S <artd> <-sam> @>N
+dom	 [dom] N M S @P<
+de	 [de] PRP @N<
+si	 [se] PERS M/F 3S PIV <refl> @P<
+a	 [a] PRP <sam-> @<ADVL
+os	 [o] DET M P <artd> <-sam> @>N
+outros	 [outro] DET M P <KOMP> <diff> @P<
+$.	 [$.] PU <<<
+$¶	 [$¶] PU <<<
+</s>
+<s>
+A	 [o] DET F S <artd> @>N
+oração	 [oração] N F S @SUBJ>
+confiante	 [confiante] ADJ F S @N<
+em	 [em] PRP @N<
+Deus	 [Deus] PROP M S @P<
+ajude-	 [ajudar] V PR 3S SUBJ VFIN <fmc> <hyfen> @FMV
+nos	 [nós] PERS M/F 1P ACC @<ACC
+a	 [a] PRP @<ADVL
+entrar	 [entrar] V INF @IMV @#ICL-P<
+em	 [em] PRP @<ADVS
+1994	 [1994] NUM M/F P <card> @P<
+em	 [em] PRP <sam-> @<ADVL
+a	 [o] DET F S <artd> <-sam> @>N
+certeza	 [certeza] N F S @P<
+de	 [de] PRP @N<
+que	 [que] KS @SUB @#FS-P<
+o	 [o] DET M S <artd> @>N
+ano	 [ano] N M S @SUBJ>
+novo	 [novo] ADJ M S @N<
+há	 [haver] V PR 3S IND VFIN @FAUX
+de	 [de] PRP @PRT-AUX<
+reservar	 [reservar] V INF @IMV @#ICL-AUX<
+para	 [para] PRP @<ADVL
+muitos	 [muito] DET M P <quant> @P<
+a	 [o] DET F S <artd> @>N
+esperança	 [esperança] N F S @<ACC
+de	 [de] PRP <sam-> @N<
+a	 [o] DET F S <artd> <-sam> @>N
+reconciliação	 [reconciliação] N F S @P<
+$,
+de	 [de] PRP <sam-> @N<
+o	 [o] DET M S <artd> <-sam> @>N
+lar	 [lar] N M S @P<
+refeito	 [refeito] ADJ M S @N<
+$,
+de	 [de] PRP <sam-> @N<
+a	 [o] DET F S <artd> <-sam> @>N
+fé	 [fé] N F S @P<
+reencontrada	 [reencontrar] V PCP F S @N<
+$.	 [$.] PU <<<
+$¶	 [$¶] PU <<<
+</s>
+<s>
+E	 [e] KC @CO
+para	 [para] PRP @ADVL
+todos	 [todo] DET M P <quant> @P<
+$,
+muita	 [muito] DET F S <quant> @>N
+paz	 [paz] N F S @NPHR
+$.	 [$.] PU <<<
+$¶	 [$¶] PU <<<
+</s>
+<s>
+D.=Luciano=Mendes=de=Almeida	 [D.=Luciano=Mendes=de=Almeida] PROP M/F S @SUBJ>
+escreve	 [escrever] V PR 3S IND VFIN <fmc> @FMV
+a	 [a] PRP <sam-> @<ADVL
+os	 [o] DET M P <artd> <-sam> @>N
+sábados	 [sábado] N M P @P<
+em	 [em] PRP <sam-> @<ADVL
+esta	 [este] DET F S <dem> <-sam> @>N
+coluna	 [coluna] N F S @P<
+$.	 [$.] PU <<<
+$¶	 [$¶] PU <<<
+</s>
+</TEXT>
+$¶	 [$¶] PU <<<
+</DOC>

@@ -1,0 +1,214 @@
+<DOC>
+<DOCNO.valor=FSP940101-092>
+<DOCID.valor=FSP940101-092>
+<DATE.valor=940101>
+<TEXT>
+<s>
+Da=Sucursal=do=Rio	 [Da=Sucursal=do=Rio] PROP F S @NPHR
+$¶	 [$¶] PU <<<
+</s>
+<s>
+O	 [o] DET M S <artd> @>N
+inquérito	 [inquérito] N M S @SUBJ>
+policial	 [policial] ADJ M S @N<
+para	 [para] PRP @N<
+investigar	 [investigar] V INF 3S @IMV @#ICL-P<
+as	 [o] DET F P <artd> @>N
+denúncias	 [denúncia] N F P @<ACC
+de	 [de] PRP @N<
+corrupção	 [corrupção] N F S @P<
+em	 [em] PRP <sam-> @<ADVL
+o	 [o] DET M S <artd> <-sam> @>N
+futebol	 [futebol] N M S @P<
+de	 [de] PRP <sam-> @N<
+o	 [o] DET M S <artd> <-sam> @>N
+Rio	 [Rio] PROP M S @P<
+foi	 [ser] V PS 3S IND VFIN <fmc> @FAUX
+instaurado	 [instaurar] V PCP M S @IMV @#ICL-AUX<
+a=pedido	 [a=pedido] ADV @<ADVL @<ADVL
+de	 [de] PRP <sam-> @A<
+o	 [o] DET M S <artd> <-sam> @>N
+deputado	 [deputado] N M S @P<
+estadual	 [estadual] ADJ M S @N<
+Sérgio=Cabral=Filho	 [Sérgio=Cabral=Filho] PROP M S @N<
+$(	 [$(] PU
+PSDB	 [pSDB] N M S @N<PRED
+$)	 [$)] PU
+$.	 [$.] PU <<<
+$¶	 [$¶] PU <<<
+</s>
+<s>
+Estou	 [estar] V PR 1S IND VFIN @FMV <*1> @#FS-ACC>>
+esperançoso	 [esperançoso] ADJ M S @<SC
+$,
+mas	 [mas] <co-vfin> KC @CO
+só	 [só] ADV @ADVL>
+lamento	 [lamentar] V PR 1S IND VFIN @FMV @#FS-ACC>>
+que	 [que] KS @SUB @#FS-<ACC
+a	 [o] DET F S <artd> @>N
+Assembléia=Legislativa	 [Assembléia=Legislativa] PROP F S @SUBJ>
+não	 [não] ADV @ADVL>
+tenha	 [ter] V PR 3S SUBJ VFIN @FAUX
+entrado	 [entrar] V PCP @IMV @#ICL-AUX<
+em	 [em] PRP <sam-> @<ADVS
+esta	 [este] DET F S <dem> <-sam> @>N
+apuração	 [apuração] N F S <*2> @P<
+$,
+disse	 [dizer] V PS 3S IND VFIN <fmc> @FMV
+o	 [o] DET M S <artd> @>N
+autor	 [autor] N M S @<SUBJ
+de	 [de] PRP <sam-> @N<
+o	 [o] DET M S <artd> <-sam> @>N
+projeto	 [projeto] N M S @P<
+de=criação	 [de=criação] ADJ @N<
+de	 [de] PRP <sam-> @N<
+a	 [o] DET F S <artd> <-sam> @>N
+chamada	 [chamado] <n> ADJ F S @P< @<ACC
+CPI=do=apito	 [CPI=do=apito] PROP M S <*2> <*1> @P<
+$.	 [$.] PU <<<
+$¶	 [$¶] PU <<<
+</s>
+<s>
+Com	 [com] PRP @ADVL> @PRED>
+a	 [o] DET F S <artd> @>N
+instauração	 [instauração] N F S @P<
+de	 [de] PRP <sam-> @N<
+o	 [o] DET M S <artd> <-sam> @>N
+inquérito	 [inquérito] N M S @P<
+por	 [por] PRP <sam-> @ADVL>
+a	 [o] DET F S <artd> <-sam> @>N
+polícia	 [polícia] N F S @P<
+de	 [de] PRP <sam-> @N<
+o	 [o] DET M S <artd> <-sam> @>N
+Rio	 [Rio] PROP M S @P<
+$,
+as	 [o] DET F P <artd> @>N
+investigações	 [investigação] N F P @SUBJ>
+de	 [de] PRP @N<
+supostas	 [supor] V PCP F P @>N
+irregularidades	 [irregularidade] N F P @P<
+em	 [em] PRP <sam-> @N<
+o	 [o] DET M S <artd> <-sam> @>N
+futebol	 [futebol] N M S @P<
+fluminense	 [fluminense] ADJ M S @N<
+se	 [se] PERS M/F 3S ACC @ACC>-PASS
+ampliam	 [ampliar] V PR 3P IND VFIN <fmc> @FMV
+$.	 [$.] PU <<<
+$¶	 [$¶] PU <<<
+</s>
+<s>
+Também	 [também] ADV @ADVL>
+a=pedido	 [a=pedido] ADV @ADVL>
+de	 [de] PRP @A<
+Cabral=Filho	 [Cabral=Filho] PROP M S @P<
+$,
+o	 [o] DET M S <artd> @>N
+Ministério=Público=do=Estado	 [Ministério=Público=do=Estado] PROP M S @SUBJ>
+está	 [estar] V PR 3S IND VFIN <fmc> @FAUX
+investigando	 [investigar] V GER @#ICL-AUX< @IMV
+as	 [o] DET F P <artd> @>N
+denúncias	 [denúncia] N F P @<ACC
+envolvendo	 [envolver] V GER @#ICL-<ADVL @IMV
+o	 [o] DET M S <artd> @>N
+diretor	 [diretor] N M S @<ACC
+de	 [de] PRP <sam-> @N<
+a	 [o] DET F S <artd> <-sam> @>N
+Comissão=de=Arbitros	 [Comissão=de=Arbitros] PROP F S @P<
+$,
+Wagner=Canazaro	 [Wagner=Canazaro] PROP M S @APP
+$,
+e	 [e] KC @CO
+o	 [o] DET M S <artd> @>N
+presidente	 [presidente] N M S @<ACC
+de	 [de] PRP <sam-> @N<
+a	 [o] DET F S <artd> <-sam> @>N
+Federação	 [federação] <prop> N F S @P<
+$,
+Eduardo=Vianna	 [Eduardo=Vianna] PROP M S @APP
+$.	 [$.] PU <<<
+$¶	 [$¶] PU <<<
+</s>
+<s>
+De=acordo	 [de=acordo] ADV @ADVL>
+com	 [com] PRP @A<
+as	 [o] DET F P <artd> @>N
+denúncias	 [denúncia] N F P @P<
+de	 [de] PRP <sam-> @N<
+os	 [o] DET M P <artd> <-sam> @>N
+árbitros	 [árbitro] N M P @P<
+$,
+o	 [o] DET M S <artd> @>N
+esquema	 [esquema] N M S @NPHR
+que	 [que] SPEC M/F S @SUBJ> <rel> @#FS-N<
+seria	 [ser] V COND 3S VFIN @FAUX
+coordenado	 [coordenar] V PCP M S @IMV @#ICL-AUX<
+por	 [por] PRP @<PASS
+Canazaro	 [Canazaro] PROP M/F S @P<
+e	 [e] <co-vfin> KC @CO
+Vianna	 [Vianna] PROP M/F S @P<
+favoreceria	 [favorecer] V COND 3S VFIN <fmc> @FMV
+clubes	 [clube] N M P @<ACC
+ligados	 [ligar] V PCP M P @IMV @#ICL-N<
+a	 [a] PRP <sam-> @<PIV
+os	 [o] DET M P <artd> <-sam> @>N
+dois	 [dois] NUM M P <card> @P<
+$.	 [$.] PU <<<
+$¶	 [$¶] PU <<<
+</s>
+<s>
+A	 [o] DET F S <artd> @>N
+criação	 [criação] N F S @SUBJ>
+de	 [de] PRP <sam-> @N<
+a	 [o] DET F S <artd> <-sam> @>N
+CPI=do=Apito	 [CPI=do=Apito] PROP F S <*2> <*1> @P<
+foi	 [ser] V PS 3S IND VFIN <fmc> @FAUX
+adiada	 [adiar] V PCP F S @IMV @#ICL-AUX<
+depois	 [depois] PRP @<ADVL
+que	 [que] KS @SUB @#FS-P<
+dois	 [dois] NUM M P <card> @>N
+deputados	 [deputado] N M P @SUBJ>
+ligados	 [ligar] V PCP M P @IMV @#ICL-N<
+a	 [a] PRP @<PIV
+Vianna	 [Vianna] PROP M/F S @P<
+$,
+Almir=Rangel	 [Almir=Rangel] PROP M/F S @P< @APP
+$(	 [$(] PU
+PSC	 [PSC] PROP M/F S @N<PRED
+$)	 [$)] PU
+e	 [e] <co-vfin> KC @CO
+Albano=Reis	 [Albano=Reis] PROP M S @P<
+$(	 [$(] PU
+sem	 [sem] PRP @N<PRED
+partido	 [partido] N M S @P<
+$)	 [$)] PU
+$,
+apresentaram	 [apresentar] V PS/MQP 3P IND VFIN @FMV
+emendas	 [emenda] N F P @<ACC
+a	 [a] PRP <sam-> @<PIV
+o	 [o] DET M S <artd> <-sam> @>N
+projeto	 [projeto] N M S @P<
+$.	 [$.] PU <<<
+$¶	 [$¶] PU <<<
+</s>
+<s>
+Dependendo	 [depender] V GER @IMV @#ICL-ADVL>
+de	 [de] PRP <sam-> @<PIV
+o	 [o] DET M S <artd> <-sam> @>N
+calendário	 [calendário] N M S @P<
+$,
+a	 [o] DET F S <artd> @>N
+decisão	 [decisão] N F S @SUBJ>
+ficará	 [ficar] V FUT 3S IND VFIN <fmc> @FMV
+para	 [para] PRP @<SC
+fevereiro	 [fevereiro] N M S @P<
+$,
+após	 [após] PRP @<ADVL
+o	 [o] DET M S <artd> @>N
+recesso	 [recesso] N M S @P<
+parlamentar	 [parlamentar] ADJ M S @N<
+$.	 [$.] PU <<<
+$¶	 [$¶] PU <<<
+</s>
+</TEXT>
+$¶	 [$¶] PU <<<
+</DOC>

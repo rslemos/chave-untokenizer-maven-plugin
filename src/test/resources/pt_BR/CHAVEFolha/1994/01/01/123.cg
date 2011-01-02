@@ -1,0 +1,160 @@
+<DOC>
+<DOCNO.valor=FSP940101-123>
+<DOCID.valor=FSP940101-123>
+<DATE.valor=940101>
+<TEXT>
+<s>
+Abc	 [abc] N M S @NPHR
+de	 [de] PRP <sam-> @N<
+a	 [o] DET F S <artd> <-sam> @>N
+Fotografia	 [fotografia] <prop> N F S @P<
+$¶	 [$¶] PU <<<
+</s>
+<s>
+A	 [o] DET F S <artd> @>N
+fotografia	 [fotografia] N F S @SUBJ>
+realista	 [realista] ADJ F S @N<
+substituiu	 [substituir] V PS 3S IND VFIN <fmc> @FMV
+a	 [o] DET F S <artd> @>N
+imagem	 [imagem] N F S @<ACC
+glamourizada	 [glamourizar] V PCP F S @N<
+de	 [de] PRP <sam-> @N<
+a	 [o] DET F S <artd> <-sam> @>N
+década	 [década] N F S @P<
+de	 [de] PRP @N<
+80	 [80] NUM M/F P <card> @P<
+e	 [e] <co-fmc> <co-vfin> KC @CO
+por=enquanto	 [por=enquanto] ADV @<ADVL
+se	 [se] PERS M/F 3S ACC <refl> @ACC>
+estabelece	 [estabelecer] V PR 3S IND VFIN <fmc> @FMV
+como	 [como] ADV @COM <prp> <rel> @#AS-<ADVL
+a	 [o] DET F S <artd> @>N
+cara	 [cara] N F S @AS<
+de	 [de] PRP <sam-> @N<
+os	 [o] DET M P <artd> <-sam> @>N
+anos	 [ano] N M P @P<
+90	 [90] NUM M/F P <card> @N<
+$.	 [$.] PU <<<
+$¶	 [$¶] PU <<<
+</s>
+<s>
+Como	 [como] KS @SUB @#FS-<ADVL
+realismo	 [realismo] N M S @PRED>
+$,
+entenda-	 [entender] V PR 3S SUBJ VFIN <hyfen> @FMV
+se	 [se] PERS M/F 3S ACC @<SUBJ
+a	 [o] DET F S <artd> @>N
+intenção	 [intenção] N F S @<ACC
+de	 [de] PRP @N<
+retratar	 [retratar] V INF @IMV @#ICL-P<
+poses	 [pose] N F P @<ACC
+mais	 [mais] ADV <KOMP> <quant> @>A
+naturais	 [natural] ADJ M P @N<
+e	 [e] KC @CO
+espontâneas	 [espontâneo] ADJ F P @<ACC
+$,
+incluindo	 [incluir] V GER @#ICL-<ADVL @IMV
+pernas	 [perna] N F P @<ACC
+tortas	 [torto] ADJ F P @N<
+$,
+costas	 [costa] N F P @N<PRED
+encurvadas	 [encurvar] V PCP F P @N<
+$,
+em	 [em] PRP @<ADVL
+cenários	 [cenário] N M P @P<
+domésticos	 [doméstico] ADJ M P @N<
+$	 [$] PU
+quando=não	 [quando=não] ADV <kc> @<ADVL
+o	 [o] DET M S <artd> @>N
+fundo	 [fundo] N M S @<ACC
+branco	 [branco] ADJ M S @N<
+de	 [de] PRP <sam-> @N<
+os	 [o] DET M P <artd> <-sam> @>N
+estúdios	 [estúdio] N M P @P<
+$.	 [$.] PU <<<
+$¶	 [$¶] PU <<<
+</s>
+<s>
+Alguns	 [algum] DET M P <quant> @>N
+itens	 [item] N M P @SUBJ>
+caracterizam	 [caracterizar] V PR 3P IND VFIN <fmc> @FMV
+a	 [o] DET F S <artd> @>N
+nova	 [novo] ADJ F S @>N
+estética	 [estética] N F S @<ACC
+realista	 [realista] ADJ F S @N<
+$:	 [$:] PU <<<
+cabelos	 [cabelo] N M P @NPHR
+desalinhados	 [desalinhado] ADJ M P @N<
+e	 [e] KC @CO
+sebentos	 [sebento] ADJ M P <*2> <*1> @N<
+$,
+pés	 [pé] N M P @NPHR
+descalços	 [descalço] ADJ M P @N<
+$,
+modelos	 [modelo] N M/F P @NPHR
+de	 [de] PRP @N<
+maquiagem	 [maquiagem] N F S @P<
+borrada	 [borrar] V PCP F S @N<
+$,
+às=vezes	 [às=vezes] ADV @ADVL
+com	 [com] PRP @ADVL
+a	 [o] DET F S <artd> @>N
+pele	 [pele] N F S @SUBJ>
+brilhando	 [brilhar] V GER @IMV @#ICL-P<
+$,
+roupas	 [roupa] N F P @<PRED
+de	 [de] PRP @N<
+corte	 [corte] N M S @P<	 [corte] N F S @P<
+simples	 [simples] ADJ M/F S @N<
+$,
+animais	 [animal] N M P @N<PRED @P<
+de=estimação	 [de=estimação] ADJ @N<
+e	 [e] KC @CO
+objetos	 [objeto] N M P @N<PRED @P<
+de	 [de] PRP @N<
+casa	 [casa] N F S @P<
+como	 [como] ADV @COM <prp> <rel> @#AS-ADVL
+geladeiras	 [geladeira] N F P @AS<
+$,
+televisão	 [televisão] N F S @AS< @N<PRED
+$,
+carpetes	 [carpete] N M P @AS< @N<PRED
+$.	 [$.] PU <<<
+$¶	 [$¶] PU <<<
+</s>
+<s>
+Com	 [com] PRP @PRED>
+a	 [o] DET F S <artd> @>N
+difusão	 [difusão] N F S @P<
+de	 [de] PRP <sam-> @N<
+esses	 [esse] DET M P <dem> <-sam> @>N
+recursos	 [recurso] N M P @P<
+$,
+o	 [o] DET M S <artd> @>N
+risco	 [risco] N M S @SUBJ>
+agora	 [agora] ADV <kc> @ADVL>
+é	 [ser] V PR 3S IND VFIN <fmc> @FMV
+a	 [o] DET F S <artd> @>N
+banalização	 [banalização] N F S @<SC
+$.	 [$.] PU <<<
+$¶	 [$¶] PU <<<
+</s>
+<s>
+Mais	 [mais] ADV <kc> @CO
+um	 [um] NUM M S <card> @>N
+desafio	 [desafio] N M S @NPHR
+para	 [para] PRP @N<
+os	 [o] DET M P <artd> @>N
+bons	 [bom] <n> ADJ M P @P<
+$.	 [$.] PU <<<
+$¶	 [$¶] PU <<<
+</s>
+<s>
+$(	 [$(] PU
+Erika=Palomino	 [Erika=Palomino] PROP F S @NPHR
+$)	 [$)] PU
+$¶	 [$¶] PU <<<
+</s>
+</TEXT>
+$¶	 [$¶] PU <<<
+</DOC>

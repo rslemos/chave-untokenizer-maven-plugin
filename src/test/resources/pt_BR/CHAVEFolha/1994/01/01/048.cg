@@ -1,0 +1,85 @@
+<DOC>
+<DOCNO.valor=FSP940101-048>
+<DOCID.valor=FSP940101-048>
+<DATE.valor=940101>
+<TEXT>
+<s>
+A	 [o] DET F S <artd> @>N
+neta	 [neta] N F S @SUBJ>
+de	 [de] PRP @N<
+Fidel=Castro	 [Fidel=Castro] PROP M S @P<
+$,
+Alina=Maria=Fernandez	 [Alina=Maria=Fernandez] PROP F S @APP
+$,
+comprou	 [comprar] V PS 3S IND VFIN <fmc> @FMV
+passagem	 [passagem] N F S @<ACC
+ontem	 [ontem] ADV @<ADVL
+para	 [para] PRP @<ADVL
+se	 [se] PERS M/F 3S ACC <coll> <refl> @ACC>
+juntar	 [juntar] V INF @IMV @#ICL-P<
+a	 [a] PRP <sam-> @<PIV
+a	 [o] DET F S <artd> <-sam> @>N
+mãe	 [mãe] N F S @P<
+$,
+Alina=Fernandez=Revuelta	 [Alina=Fernandez=Revuelta] PROP F S @APP
+$,
+em	 [em] PRP <sam-> @<ADVL
+os	 [o] DET M P <artd> <-sam> @>N
+Estados=Unidos	 [Estados=Unidos] PROP M P @P<
+$.	 [$.] PU <<<
+$¶	 [$¶] PU <<<
+</s>
+<s>
+Alina=Fernandez=Revuelta	 [Alina=Fernandez=Revuelta] PROP F S @SUBJ>
+$,
+filha	 [filha] N F S @APP
+de	 [de] PRP @N<
+Fidel=Castro	 [Fidel=Castro] PROP M S @P<
+$,
+fugiu	 [fugir] V PS 3S IND VFIN <fmc> @FMV
+de	 [de] PRP @<ADVS
+Cuba	 [Cuba] PROP F S @P<
+em	 [em] PRP <sam-> @<ADVL
+a	 [o] DET F S <artd> <-sam> @>N
+semana	 [semana] N F S @P<
+passada	 [passado] ADJ F S @N<
+e	 [e] <co-fmc> <co-vfin> KC @CO
+recebeu	 [receber] V PS 3S IND VFIN <fmc> @FMV
+asilo	 [asilo] N M S @<ACC
+em	 [em] PRP <sam-> @<ADVL
+os	 [o] DET M P <artd> <-sam> @>N
+Eua	 [Eua] PROP M S @P<
+$.	 [$.] PU <<<
+$¶	 [$¶] PU <<<
+</s>
+<s>
+Em	 [em] PRP <sam-> @ADVL>
+o	 [o] DET M S <artd> <-sam> @>N
+exílio	 [exílio] N M S @P<
+$,
+ela	 [ela] PERS F 3S NOM @SUBJ>
+disse	 [dizer] V PS 3S IND VFIN <fmc> @FMV
+ter	 [ter] V INF @IMV @#ICL-<ACC
+pena	 [pena] N F S @<ACC
+de	 [de] PRP <sam-> @N<
+o	 [o] DET M S <artd> <-sam> @>N
+pai	 [pai] N M S @P<
+e	 [e] <co-fmc> <co-vfin> KC @CO
+pediu	 [pedir] V PS 3S IND VFIN <fmc> @FMV
+a	 [a] PRP <sam-> @<PIV
+o	 [o] DET M S <artd> <-sam> @>N
+governo	 [governo] N M S @P<
+cubano	 [cubano] ADJ M S @N<
+que	 [que] KS @SUB @#FS-<ACC
+permitisse	 [permitir] V IMPF 3S SUBJ VFIN @FMV
+a	 [o] DET F S <artd> @>N
+viagem	 [viagem] N F S @<ACC
+de	 [de] PRP <sam-> @N<
+a	 [o] DET F S <artd> <-sam> @>N
+filha	 [filha] N F S @P<
+$.	 [$.] PU <<<
+$¶	 [$¶] PU <<<
+</s>
+</TEXT>
+$¶	 [$¶] PU <<<
+</DOC>

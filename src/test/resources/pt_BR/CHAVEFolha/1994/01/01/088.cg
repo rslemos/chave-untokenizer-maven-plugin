@@ -1,0 +1,149 @@
+<DOC>
+<DOCNO.valor=FSP940101-088>
+<DOCID.valor=FSP940101-088>
+<DATE.valor=940101>
+<TEXT>
+<s>
+Da=Reportagem=Local	 [Da=Reportagem=Local] PROP F S @NPHR
+$¶	 [$¶] PU <<<
+</s>
+<s>
+Para	 [para] PRP @ADVL>
+a	 [o] DET F S <artd> @>N
+vice-presidente	 [vice-presidente] N M S @P<
+de	 [de] PRP <sam-> @N<
+a	 [o] DET F S <artd> <-sam> @>N
+Apeoesp	 [Apeoesp] PROP F S @P<
+$	 [$] PU
+o	 [o] DET M S <artd> @>N
+sindicato	 [sindicato] N M S @SUBJ>
+que	 [que] SPEC M/F S @SUBJ> <rel> @#FS-N<
+liderou	 [liderar] V PS 3S IND VFIN @FMV
+a	 [o] DET F S <artd> @>N
+greve	 [greve] N F S @<ACC
+$	 [$] PU
+$,
+Eneide=Moreira=Lima	 [Eneide=Moreira=Lima] PROP F S @APP
+$,
+os	 [o] DET M P <artd> <*1> @>N
+calendários	 [calendário] N M P @SUBJ>
+escolares	 [escolar] ADJ M P @N<
+estão	 [estar] V PR 3P IND VFIN <fmc> @FAUX
+se	 [se] PERS M/F 3S ACC <refl> @ACC>
+tornando	 [tornar] V GER @#ICL-AUX< @IMV
+rotativos	 [rotativo] ADJ M P <*2> @<OC
+$.	 [$.] PU <<<
+$¶	 [$¶] PU <<<
+</s>
+<s>
+Eneide	 [Eneide] PROP M/F S @SUBJ>
+$,
+que	 [que] SPEC M S @SUBJ> <rel> @#FS-N<
+também	 [também] ADV @ADVL>
+é	 [ser] V PR 3S IND VFIN @FMV
+vice-presidente	 [vice-presidente] N M S @<SC
+de	 [de] PRP <sam-> @N<
+a	 [o] DET F S <artd> <-sam> @>N
+CNTE	 [CNTE] PROP F S @P<
+$(	 [$(] PU
+Confederação=Nacional=dos=Trabalhadores	 [Confederação=Nacional=dos=Trabalhadores] PROP F S @N<PRED
+em	 [em] PRP @<ADVL
+Educação	 [educação] N F S @P<
+$)	 [$)] PU
+$,
+afirma	 [afirmar] V PR 3S IND VFIN <fmc> @FMV
+que	 [que] KS @SUB @#FS-<ACC
+a	 [o] DET F S <artd> @>N
+amarração	 [amarração] N F S <*2> <*1> @SUBJ>
+de	 [de] PRP @N<
+um	 [um] NUM M S <card> @>N
+ano=letivo	 [ano=letivo] N M S @P<
+a	 [a] PRP <sam-> @PIV>
+o	 [o] DET M S <artd> <-sam> @>N
+outro	 [outro] DET M S <KOMP> <diff> @SUBJ>
+ocorreu	 [ocorrer] V PS 3S IND VFIN @FMV
+em	 [em] PRP @<ADVL
+1992	 [1992] NUM M/F S <card> @P<
+em	 [em] PRP @<ADVL
+Alagoas	 [Alagoas] PROP M S @P<
+$	 [$] PU
+que	 [que] KS @SUB
+teve	 [ter] V PS 3S IND VFIN <fmc> @FMV
+150	 [150] NUM M P <card> @>N
+dias	 [dia] N M P @<ACC
+de	 [de] PRP @N<
+greve	 [greve] N F S @P<
+e	 [e] <co-fmc> <co-vfin> KC @CO
+só	 [só] ADV @ADVL>
+terminou	 [terminar] V PS 3S IND VFIN <fmc> @FMV
+as	 [o] DET F P <artd> @>N
+aulas	 [aula] N F P @<ACC
+em	 [em] PRP @<ADVL
+meados	 [meado] N M P @P<
+de	 [de] PRP @N<
+1993	 [1993] NUM M/F P <card> @P<
+$.	 [$.] PU <<<
+$¶	 [$¶] PU <<<
+</s>
+<s>
+Os	 [o] DET M P <artd> @>N
+109	 [109] NUM M P <card> @>N
+dias	 [dia] N M P @ADVL>
+de	 [de] PRP @N<
+greve	 [greve] N F S @P<
+em	 [em] PRP <sam-> @N<
+a	 [o] DET F S <artd> <-sam> @>N
+rede	 [rede] N F S @P<
+estadual	 [estadual] ADJ F S @N<
+de	 [de] PRP <sam-> @N<
+o	 [o] DET M S <artd> <-sam> @>N
+Espírito=Santo	 [Espírito=Santo] PROP M S @P<
+em	 [em] PRP @ADVL>
+93	 [93] NUM M/F S <card> @P<
+leva	 [levar] V PR 3S IND VFIN <fmc> @FMV
+a	 [o] DET F S <artd> @>N
+conclusão	 [conclusão] N F S @<ACC
+de	 [de] PRP <sam-> @N<
+o	 [o] DET M S <artd> <-sam> @>N
+ano=letivo	 [ano=letivo] N M S @P<
+para	 [para] PRP @<ADVL
+abril	 [abril] N M S @P<
+de	 [de] PRP @N<
+94	 [94] NUM M/F P <card> @P<
+$.	 [$.] PU <<<
+$¶	 [$¶] PU <<<
+</s>
+<s>
+Queremos	 [querer] V PR 1P IND VFIN @FMV <*1> @#FS-ACC>>
+fazer	 [fazer] V INF @IMV @#ICL-<ACC
+uma	 [um] DET F S <arti> @>N
+discussão	 [discussão] N F S @<ACC
+sobre	 [sobre] PRP @N<
+o=que	 [o=que] SPEC M/F S <interr> @P<
+fazer	 [fazer] V INF @IMV @#ICL-<ACC
+diante=de	 [diante=de] PRP <sam-> @<ADVL
+a	 [o] DET F S <-sam> <artd> @>N
+necessidade	 [necessidade] N F S @P<
+de	 [de] PRP @N<
+entrar	 [entrar] V INF @IMV @#ICL-P<
+em	 [em] PRP @<ADVS
+greve	 [greve] N F S @P<
+para	 [para] PRP @<ADVL
+conseguir	 [conseguir] V INF @IMV @#ICL-P<
+reajustes	 [reajuste] N M P @<ACC
+salariais	 [salarial] ADJ M P <*2> @N<
+$,
+diz	 [dizer] V PR 3S IND VFIN <fmc> @FMV
+ela	 [ela] PERS F 3S NOM @<SUBJ
+$.	 [$.] PU <<<
+$¶	 [$¶] PU <<<
+</s>
+<s>
+$(	 [$(] PU
+Fr	 [fr] N M S @NPHR
+$)	 [$)] PU
+$¶	 [$¶] PU <<<
+</s>
+</TEXT>
+$¶	 [$¶] PU <<<
+</DOC>

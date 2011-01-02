@@ -1,0 +1,432 @@
+<DOC>
+<DOCNO.valor=FSP940101-033>
+<DOCID.valor=FSP940101-033>
+<DATE.valor=940101>
+<TEXT>
+<s>
+Da=Agência=Folha	 [Da=Agência=Folha] PROP F S @NPHR
+$¶	 [$¶] PU <<<
+</s>
+<s>
+O	 [o] DET M S <artd> @>N
+senador	 [senador] N M S @SUBJ>
+Mário=Covas	 [Mário=Covas] PROP M S @N<
+$(	 [$(] PU
+PSDB	 [pSDB] N M S @N<PRED
+$)	 [$)] PU
+lidera	 [liderar] V PR 3S IND VFIN <fmc> @FMV
+a	 [o] DET F S <artd> @>N
+pesquisa	 [pesquisa] N F S @<ACC
+de	 [de] PRP @N<
+intenção	 [intenção] N F S @P<
+de	 [de] PRP @N<
+votos	 [voto] N M P @P<
+para	 [para] PRP @<ADVL
+o	 [o] DET M S <artd> @>N
+governo	 [governo] N M S @P<
+de	 [de] PRP @N<
+São=Paulo	 [São=Paulo] PROP M S @P<
+em	 [em] PRP @<ADVL
+todas=as	 [todo=o] DET F P <quant> @>N
+regiões	 [região] N F P @P<
+de	 [de] PRP <sam-> @N<
+o	 [o] DET M S <artd> <-sam> @>N
+Estado	 [estado] <prop> N M S @P<
+$.	 [$.] PU <<<
+$¶	 [$¶] PU <<<
+</s>
+<s>
+Em	 [em] PRP <sam-> @ADVL>
+o	 [o] DET M S <artd> <-sam> @>N
+ABCD	 [ABCD] PROP M S @P<
+e	 [e] KC @CO
+em	 [em] PRP <sam-> @ADVL>
+o	 [o] DET M S <artd> <-sam> @>N
+Vale=do=Paraíba	 [Vale=do=Paraíba] PROP M S @P<
+$,
+Covas	 [Covas] PROP M/F S @SUBJ>
+tem	 [ter] V PR 3S IND VFIN <fmc> @FMV
+as	 [o] DET F P <artd> @>N
+suas	 [seu] DET F P <si> <poss 3S> @>N
+maiores	 [grande] ADJ F P <KOMP> @>N
+vantagens	 [vantagem] N F P @<ACC
+$,
+segundo	 [segundo] ADV @#AS-<ADVL <prp> <rel> @COM
+o	 [o] DET M S <artd> @>N
+Datafolha	 [Datafolha] PROP F S @AS<
+$,
+com	 [com] PRP @N<PRED
+51	 [51] NUM M/F P <card> @>N
+$%	 [%] N M P @P<	 [$%] PU
+$.	 [$.] PU <<<
+$¶	 [$¶] PU <<<
+</s>
+<s>
+Em	 [em] PRP <sam-> @ADVL>
+o	 [o] DET M S <artd> <-sam> @>N
+ABCD	 [ABCD] PROP M S @P<
+$,
+há	 [haver] V PR 3S IND VFIN <fmc> @FMV
+um	 [um] DET M S <arti> @>N
+empate	 [empate] N M S @<ACC
+técnico	 [técnico] ADJ M S @N<
+em	 [em] PRP <sam-> @<ADVL
+a	 [o] DET F S <artd> <-sam> @>N
+disputa	 [disputa] N F S @P<
+por	 [por] PRP <sam-> @<OC
+o	 [o] DET M S <artd> <-sam> @>N
+segundo	 [segundo] ADJ M S <NUM-ord> @>N
+lugar	 [lugar] N M S @P<
+$:	 [$:] PU <<<
+o	 [o] DET M S <artd> @>N
+secretário	 [secretário] N M S @SUBJ>
+de	 [de] PRP @N<
+Desenvolvimento=Urbano	 [Desenvolvimento=Urbano] PROP M S @P<
+de	 [de] PRP @N<
+São=Paulo	 [São=Paulo] PROP M S @P<
+$,
+o	 [o] DET M S <artd> @>N
+ex-prefeito	 [ex-prefeito] N M S @APP
+Reynaldo=de=Barros	 [Reynaldo=de=Barros] PROP M S @N<
+$(	 [$(] PU
+PPR	 [PPR] PROP M/F S @N<PRED
+$)	 [$)] PU
+$,
+com	 [com] PRP @ADVL> @N<PRED
+6	 [6] NUM M/F P <card> @>N
+$%	 [%] N M P @P<	 [$%] PU
+$,
+e	 [e] KC @CO
+o	 [o] DET M S <artd> @>N
+deputado	 [deputado] N M S @PRED>
+federal	 [federal] ADJ M S @N<
+José=Dirceu	 [José=Dirceu] PROP M S @N<
+$(	 [$(] PU
+PT	 [PT] PROP M/F S @N<PRED
+$)	 [$)] PU
+$,
+que	 [que] ADV <foc> @<FOC
+obteve	 [obter] V PS 3S IND VFIN <fmc> @FMV
+5	 [5] NUM M/F P <card> @>N
+$%	 [%] N M P @<ACC	 [$%] PU
+$.	 [$.] PU <<<
+$¶	 [$¶] PU <<<
+</s>
+<s>
+Em	 [em] PRP <sam-> @ADVL>
+o	 [o] DET M S <artd> <-sam> @>N
+Vale	 [vale] <prop> N M S @P<
+$,
+região	 [região] N F S @SUBJ>
+cuja	 [cujo] DET F S @>N <rel> @#FS-N<
+principal	 [principal] ADJ F S <SUP> @>N
+cidade	 [cidade] N F S @SUBJ>
+é	 [ser] V PR 3S IND VFIN @FMV
+São=José=dos=Campos	 [São=José=dos=Campos] PROP F S @<SC
+$,
+Barros	 [barro] N M P @<SC
+tem	 [ter] V PR 3S IND VFIN <fmc> @FMV
+5	 [5] NUM M/F P <card> @>N
+$%	 [%] N M P @<ACC	 [$%] PU
+e	 [e] KC @CO
+Dirceu	 [Dirceu] PROP M/F S @<ACC
+$,
+3	 [3] NUM M/F P <card> @>N
+$%	 [%] N M P @APP	 [$%] PU
+$.	 [$.] PU <<<
+$¶	 [$¶] PU <<<
+</s>
+<s>
+Covas	 [Covas] PROP M/F S @SUBJ>
+perdeu	 [perder] V PS 3S IND VFIN <fmc> @FMV
+cinco	 [cinco] NUM M P <card> @>N
+pontos	 [ponto] N M P @<ACC
+percentuais	 [percentual] ADJ M P @N<
+em	 [em] PRP <sam-> @N<
+a	 [o] DET F S <artd> <-sam> @>N
+preferência	 [preferência] N F S @P<
+de	 [de] PRP <sam-> @N<
+os	 [o] DET M P <artd> <-sam> @>N
+eleitores	 [eleitor] N M P @P<
+de	 [de] PRP <sam-> @N<
+a	 [o] DET F S <artd> <-sam> @>N
+região	 [região] N F S @P<
+de	 [de] PRP @N<
+Campinas	 [campina] N F P @P<
+$,
+mas	 [mas] <co-fmc> <co-vfin> KC @CO
+continua	 [continuar] V PR 3S IND VFIN <fmc> @FAUX
+liderando	 [liderar] V GER @#ICL-AUX< @IMV
+a	 [o] DET F S <artd> @>N
+disputa	 [disputa] N F S @<ACC
+$.	 [$.] PU <<<
+$¶	 [$¶] PU <<<
+</s>
+<s>
+O	 [o] DET M S <artd> @>N
+senador	 [senador] N M S @SUBJ>
+tem	 [ter] V PR 3S IND VFIN <fmc> @FMV
+47	 [47] NUM M/F P <card> @>N
+$%	 [%] N M P @<ACC	 [$%] PU
+de	 [de] PRP <sam-> @N<
+os	 [o] DET M P <artd> <-sam> @>N
+votos	 [voto] N M P @P<
+$,
+contra	 [contra] PRP @<ADVL
+5	 [5] NUM M/F P <card> @>N
+$%	 [%] N M P @P<	 [$%] PU
+de	 [de] PRP <sam-> @N<
+o	 [o] DET M S <artd> <-sam> @>N
+segundo	 [segundo] <n> <n> ADJ M S @P< <NUM-ord> @<ACC
+colocado	 [colocar] V PCP M S @P< @N<
+$,
+o	 [o] DET M S <artd> @>N
+secretário	 [secretário] N M S @APP
+de	 [de] PRP @N<
+Planejamento=da=Prefeitura	 [Planejamento=da=Prefeitura] PROP M S @P<
+de	 [de] PRP @N<
+São=Paulo	 [São=Paulo] PROP M S @P<
+$,
+Reynaldo=de=Barros	 [Reynaldo=de=Barros] PROP M S @APP
+$.	 [$.] PU <<<
+$¶	 [$¶] PU <<<
+</s>
+<s>
+O	 [o] DET M S <artd> @>N
+senador	 [senador] N M S @SUBJ>
+tucano	 [tucano] ADJ M S @N<
+também	 [também] ADV @ADVL>
+é	 [ser] V PR 3S IND VFIN <fmc> @FAUX
+o	 [o] DET M S <artd> @>N
+preferido	 [preferir] V PCP M S @#ICL-ADVL @IMV
+em	 [em] PRP <sam-> @<ADVL
+a	 [o] DET F S <artd> <-sam> @>N
+região	 [região] N F S @P<
+de	 [de] PRP @N<
+Rio=Preto	 [Rio=Preto] PROP M S @P<
+$.	 [$.] PU <<<
+$¶	 [$¶] PU <<<
+</s>
+<s>
+Em	 [em] PRP <sam-> @ADVL>
+a	 [o] DET F S <artd> <-sam> @>N
+cidade	 [cidade] N F S @P<
+de	 [de] PRP @N<
+São=José=do=Rio=Preto	 [São=José=do=Rio=Preto] PROP M S @P<
+$,
+o	 [o] DET M S <artd> @>N
+tucano	 [tucano] N M S @SUBJ>
+tem	 [ter] V PR 3S IND VFIN <fmc> @FMV
+40	 [40] NUM M/F P <card> @>N
+$%	 [%] N M P @<ACC	 [$%] PU
+$.	 [$.] PU <<<
+$¶	 [$¶] PU <<<
+</s>
+<s>
+Em	 [em] PRP @ADVL>
+Araçatuba	 [Araçatuba] PROP M S @P<
+e	 [e] KC @CO
+Catanduva	 [Catanduva] PROP M/F S @P<
+$,
+Covas	 [Covas] PROP M/F S @SUBJ>
+lidera	 [liderar] V PR 3S IND VFIN <fmc> @FMV
+a	 [o] DET F S <artd> @>N
+pesquisa	 [pesquisa] N F S @<ACC
+43	 [43] NUM M/F P <card> @>N
+$%	 [%] N M P @PRED>	 [$%] PU
+e	 [e] KC @CO
+46	 [46] NUM M/F P <card> @>N
+$%	 [%] N M P @<ACC	 [$%] PU
+$,
+respectivamente	 [respectivamente] ADV @<ADVL
+$.	 [$.] PU <<<
+$¶	 [$¶] PU <<<
+</s>
+<s>
+A	 [o] DET F S <artd> @>N
+média	 [média] N F S @SUBJ>
+ponderada	 [ponderar] V PCP F S @N<
+de	 [de] PRP <sam-> @N<
+a	 [o] DET F S <artd> <-sam> @>N
+pesquisa	 [pesquisa] N F S @P<
+em	 [em] PRP <sam-> @N<
+as	 [o] DET F P <artd> <-sam> @>N
+três	 [três] NUM F P <card> @>N
+cidades	 [cidade] N F P @P<
+$(	 [$(] PU
+ouvidos	 [ouvir] V PCP M P @N<PRED
+1.258	 [1.258] NUM M P <card> @>N
+eleitores	 [eleitor] N M P @N<PRED
+$)	 [$)] PU
+dá	 [dar] V PR 3S IND VFIN <fmc> @FMV
+a	 [a] PRP <sam-> @<PIV
+o	 [o] DET M S <artd> <-sam> @>N
+senador	 [senador] N M S @P<
+a	 [o] DET F S <artd> @>N
+liderança	 [liderança] N F S @<ACC
+com	 [com] PRP @<ADVL
+42	 [42] NUM M/F P <card> @>N
+$%	 [%] N M P @P<	 [$%] PU
+$.	 [$.] PU <<<
+$¶	 [$¶] PU <<<
+</s>
+<s>
+Em=segundo=lugar	 [em=segundo=lugar] ADV @ADVL>
+foi	 [ser] V PS 3S IND VFIN <fmc> @FAUX
+apontado	 [apontar] V PCP M S @IMV @#ICL-AUX<
+o	 [o] DET M S <artd> @>N
+ex-ministro	 [ex-ministro] N M S @<SUBJ
+de	 [de] PRP <sam-> @N<
+a	 [o] DET F S <artd> <-sam> @>N
+Agricultura	 [agricultura] <prop> N F S @P<
+$(	 [$(] PU
+governo	 [governo] N M S @N<PRED
+Collor	 [Collor] PROP M S @N<
+$)	 [$)] PU
+e	 [e] KC @CO
+atual	 [atual] ADJ M/F S @>N
+presidente	 [presidente] N M/F S @N<PRED
+estadual	 [estadual] ADJ M/F S @N<
+de	 [de] PRP <sam-> @N<
+o	 [o] DET M S <artd> <-sam> @>N
+PFL	 [PFL] PROP M S @P<
+$,
+Antônio=Cabrera	 [Antônio=Cabrera] PROP M S @APP
+$:	 [$:] PU <<<
+ele	 [ele] PERS M 3S NOM @SUBJ>
+atinge	 [atingir] V PR 3S IND VFIN <fmc> @FMV
+14	 [14] NUM M/F P <card> @>N
+$%	 [%] N M P @<ACC	 [$%] PU
+de	 [de] PRP <sam-> @N<
+as	 [o] DET F P <artd> <-sam> @>N
+intenções	 [intenção] N F P @P<
+de	 [de] PRP @N<
+voto	 [voto] N M S @P<
+em	 [em] PRP @<ADVL
+Rio=Preto	 [Rio=Preto] PROP M S @P<
+$(	 [$(] PU
+sua	 [seu] DET F S <poss 3S> @>N
+cidade	 [cidade] N F S @N<PRED
+$)	 [$)] PU
+$,
+6	 [6] NUM M/F P <card> @>N
+$%	 [%] N M P @<ACC	 [$%] PU
+em	 [em] PRP @<ADVL
+Catanduva	 [catanduva] N F S @P<
+e	 [e] KC @CO
+5	 [5] NUM M/F P <card> @>N
+$%	 [%] N M P @<ACC	 [$%] PU
+em	 [em] PRP @N<
+Araçatuba	 [Araçatuba] PROP M S @P<
+$.	 [$.] PU <<<
+$¶	 [$¶] PU <<<
+</s>
+<s>
+Em	 [em] PRP <sam-> @ADVL>
+a	 [o] DET F S <artd> <-sam> @>N
+região	 [região] N F S @P<
+de	 [de] PRP @N<
+Ribeirão=Preto	 [Ribeirão=Preto] PROP M S @P<
+$,
+Covas	 [Covas] PROP M/F S @SUBJ>
+mantém	 [manter] V PR 3S IND VFIN <fmc> @FMV
+a	 [o] DET F S <artd> @>N
+grande	 [grande] ADJ F S @>N
+vantagem	 [vantagem] N F S @<ACC
+$.	 [$.] PU <<<
+$¶	 [$¶] PU <<<
+</s>
+<s>
+Em	 [em] PRP <sam-> @ADVL>
+as	 [o] DET F P <artd> <-sam> @>N
+quatro	 [quatro] NUM F P <card> @>N
+principais	 [principal] ADJ F P <SUP> @>N
+cidades	 [cidade] N F P @P<
+de	 [de] PRP <sam-> @N<
+a	 [o] DET F S <artd> <-sam> @>N
+região	 [região] N F S @P<
+$	 [$] PU
+Ribeirão=Preto	 [Ribeirão=Preto] PROP F S @N<
+$,
+Franca	 [franco] ADJ F S @P<
+$,
+São=Carlos	 [São=Carlos] PROP M/F S @P<
+e	 [e] KC @CO
+Araraquara	 [Araraquara] PROP M/F S @P<
+$	 [$] PU
+47	 [47] NUM M/F P <card> @>N
+$%	 [%] N M P @P<	 [$%] PU
+de	 [de] PRP <sam-> @N<
+os	 [o] DET M P <artd> <-sam> @>N
+entrevistados	 [entrevistar] <n> V PCP M P @P<
+indicam	 [indicar] V PR 3P IND VFIN <fmc> @FMV
+o	 [o] DET M S <artd> @>N
+senador	 [senador] N M S @<SUBJ
+tucano	 [tucano] ADJ M S @N<
+como	 [como] ADV @#AS-<ADVL <prp> <rel> @COM
+o	 [o] DET M S <artd> @>N
+candidato	 [candidato] N M S @AS<
+preferido	 [preferir] V PCP M S @N<
+para	 [para] PRP @<ADVL
+substituir	 [substituir] V INF @IMV @#ICL-P<
+Luiz=Antonio=Fleury=Filho	 [Luiz=Antonio=Fleury=Filho] PROP M S @<ACC
+$(	 [$(] PU
+PMDB	 [PMDB] PROP M S @N<PRED
+$)	 [$)] PU
+$.	 [$.] PU <<<
+$¶	 [$¶] PU <<<
+</s>
+<s>
+Covas	 [Covas] PROP M/F S @SUBJ>
+tem	 [ter] V PR 3S IND VFIN <fmc> @FMV
+maior	 [grande] ADJ F S <KOMP> @>N
+vantagem	 [vantagem] N F S @<ACC
+sobre	 [sobre] PRP @<ADVL
+o	 [o] DET M S <artd> @>N
+segundo	 [segundo] ADJ M S <NUM-ord> @>N
+colocado	 [colocar] <n> V PCP M S @P<
+$	 [$] PU
+Reynaldo=de=Barros	 [Reynaldo=de=Barros] PROP M S @<ACC
+$,
+de	 [de] PRP <sam-> @N<PRED
+o	 [o] DET M S <artd> <-sam> @>N
+PPR	 [PPR] PROP M S @P<
+$	 [$] PU
+em	 [em] PRP @<ADVL
+São=Carlos	 [São=Carlos] PROP M S @P<
+$:	 [$:] PU <<<
+50	 [50] NUM M/F P <card> @>N
+$%	 [%] N M P @NPHR	 [$%] PU
+contra	 [contra] PRP @N<
+5	 [5] NUM M/F P <card> @>N
+$%	 [%] N M P @P<	 [$%] PU
+$.	 [$.] PU <<<
+$¶	 [$¶] PU <<<
+</s>
+<s>
+O	 [o] DET M S <artd> @>N
+senador	 [senador] N M S @SUBJ>
+obtém	 [obter] V PR 3S IND VFIN <fmc> @FMV
+48	 [48] NUM M/F P <card> @>N
+$%	 [%] N M P @<ACC	 [$%] PU
+de	 [de] PRP <sam-> @N<
+a	 [o] DET F S <artd> <-sam> @>N
+preferência	 [preferência] N F S @P<
+em	 [em] PRP @<ADVL
+Franca	 [franco] ADJ F S @P<
+$,
+47	 [47] NUM M/F P <card> @>N
+$%	 [%] N M P @<ACC	 [$%] PU
+em	 [em] PRP @<ADVL
+Ribeirão	 [ribeirão] N M S @P<
+e	 [e] KC @CO
+46	 [46] NUM M/F P <card> @>N
+$%	 [%] N M P @<ACC	 [$%] PU
+em	 [em] PRP @N<
+Araraquara	 [Araraquara] PROP M S @P<
+$.	 [$.] PU <<<
+$¶	 [$¶] PU <<<
+</s>
+</TEXT>
+$¶	 [$¶] PU <<<
+</DOC>

@@ -1,0 +1,247 @@
+<DOC>
+<DOCNO.valor=FSP940101-102>
+<DOCID.valor=FSP940101-102>
+<DATE.valor=940101>
+<TEXT>
+<s>
+Da=Reportagem=Local	 [Da=Reportagem=Local] PROP F S @NPHR
+$¶	 [$¶] PU <<<
+</s>
+<s>
+A	 [o] DET F S <artd> @>N
+fisiologia	 [fisiologia] N F S @SUBJ>
+é	 [ser] V PR 3S IND VFIN <fmc> @FMV
+o	 [o] DET M S <artd> @>N
+estudo	 [estudo] N M S @<SC
+de	 [de] PRP <sam-> @N<
+as	 [o] DET F P <artd> <-sam> @>N
+funções	 [função] N F P @P<
+orgânicas	 [orgânico] ADJ F P @N<
+de	 [de] PRP @N<
+um	 [um] DET M S <arti> @>N
+ser	 [ser] N M S @P<
+vivo	 [vivo] ADJ M S @N<
+$,
+em	 [em] PRP <sam-> @<ADVL
+este	 [este] DET M S <dem> <-sam> @>N
+caso	 [caso] N M S @P<
+o	 [o] DET M S <artd> @>N
+homem	 [homem] N M S @<SC
+$.	 [$.] PU <<<
+$¶	 [$¶] PU <<<
+</s>
+<s>
+O	 [o] DET M S <artd> @>N
+fisiologista	 [fisiologista] N M S @SUBJ>
+pode	 [poder] V PR 3S IND VFIN <fmc> @FAUX
+ser	 [ser] V INF @IMV @#ICL-AUX<
+diplomado	 [diplomado] ADJ M S @<SC
+em	 [em] PRP @A<
+ciências	 [ciência] N F P @P<
+biomédicas	 [biomédicas] ADJ F P <DERP> @N<
+ou	 [ou] KC @CO
+medicina	 [medicina] N F S @P<
+$.	 [$.] PU <<<
+$¶	 [$¶] PU <<<
+</s>
+<s>
+Sua	 [seu] DET F S <poss 3S> @>N
+formação	 [formação] N F S @SUBJ>
+é	 [ser] V PR 3S IND VFIN <fmc> @FMV
+diferente	 [diferente] ADJ F S @<SC
+de	 [de] PRP <sam-> @A<
+o	 [o] DET M S <artd> <-sam> @>N
+preparador	 [preparador] N M S @P<
+físico	 [físico] ADJ M S @N<
+$,
+que	 [que] ADV <interr> <quant> @>A
+normalmente	 [normalmente] ADV @ADVL>
+tem	 [ter] V PR 3S IND VFIN <fmc> @FMV
+diploma	 [diploma] N M S @<SUBJ
+de	 [de] PRP @N<
+educação	 [educação] N F S @P<
+física	 [físico] ADJ F S @N<
+$.	 [$.] PU <<<
+$¶	 [$¶] PU <<<
+</s>
+<s>
+O	 [o] DET M S <artd> @>N
+trabalho	 [trabalho] N M S @SUBJ>
+de	 [de] PRP @N<
+um	 [um] DET M S <arti> @>N
+fisiologista	 [fisiologista] N M S @P<
+tem	 [ter] V PR 3S IND VFIN <fmc> @FMV
+duas	 [dois] NUM F P <card> @>N
+etapas	 [etapa] N F P @<ACC
+$.	 [$.] PU <<<
+$¶	 [$¶] PU <<<
+</s>
+<s>
+A	 [o] DET F S <artd> @>N
+primeira	 [primeiro] <n> ADJ F S <NUM-ord> @SUBJ>
+é	 [ser] V PR 3S IND VFIN <fmc> @FMV
+avaliar	 [avaliar] V INF @IMV @#ICL-<SC
+o	 [o] DET M S <artd> @>N
+estágio	 [estágio] N M S @<ACC
+atlético	 [atlético] ADJ M S @N<PRED
+de	 [de] PRP @<ADVL
+uma	 [um] DET F S <arti> @>N
+pessoa	 [pessoa] N F S @P<
+$,
+atleta	 [atleta] N M/F S @N<PRED
+ou	 [ou] KC @CO
+não	 [não] ADV @<ADVL
+$.	 [$.] PU <<<
+$¶	 [$¶] PU <<<
+</s>
+<s>
+Para	 [para] PRP @ADVL>
+isso	 [isso] SPEC M S <dem> @P<
+$,
+são	 [ser] V PR 3P IND VFIN <fmc> @FAUX
+feitos	 [fazer] V PCP M P @IMV @#ICL-AUX<
+os	 [o] DET M P <artd> @>N
+famosos	 [famoso] ADJ M P @>N
+testes	 [teste] N M P @<SC
+de	 [de] PRP @N<
+bicicleta	 [bicicleta] N F S @P<
+e	 [e] <co-vfin> KC @CO
+esteira	 [esteira] N F S @P<
+$,
+que	 [que] SPEC M/F S @ACC> <rel> @#FS-N<
+fornecem	 [fornecer] V PR 3P IND VFIN @FMV
+grandezas	 [grandeza] N F P @SUBJ>
+como	 [como] ADV @COM <rel> @#AS-N<
+limiar	 [limiar] N M S @AS<
+anaeróbico	 [anaeróbico] ADJ M S @N<
+$(	 [$(] PU
+velocidade	 [velocidade] N F S @N<PRED
+máxima	 [grande] ADJ F S <SUP> @N<
+que	 [que] SPEC M/F S @SUBJ> <rel> @#FS-N<
+pode	 [poder] V PR 3S IND VFIN @FAUX
+se	 [se] PERS M/F 3S ACC @ACC>-PASS
+obter	 [obter] V INF @IMV @#ICL-AUX<
+sem	 [sem] PRP @<ADVL
+que	 [que] KS @SUB @#FS-P<
+o	 [o] DET M S <artd> @>N
+organismo	 [organismo] N M S @SUBJ>
+necessite	 [necessitar] V PR 3S SUBJ VFIN @FMV
+de	 [de] PRP @<PIV
+mais	 [muito] DET M S <KOMP> <quant> @>N
+oxigênio	 [oxigênio] N M S @P<
+do=que	 [do=que] KS @COM @#FS-KOMP<
+o	 [o] DET M S <artd> @>N
+corpo	 [corpo] N M S @SUBJ>
+é	 [ser] V PR 3S IND VFIN @FMV
+capaz	 [capaz] ADJ M S @<SC
+de	 [de] PRP @A<
+absorver	 [absorver] V INF @IMV @#ICL-P<
+$)	 [$)] PU
+$,
+potência	 [potência] N F S @<ACC
+muscular	 [muscular] ADJ F S @N<
+$(	 [$(] PU
+que	 [que] SPEC M/F S @SUBJ> <rel> @#FS-N<
+revela	 [revelar] V PR 3S IND VFIN @FMV
+o	 [o] DET M S <artd> @>N
+pico	 [pico] N M S @<ACC
+de	 [de] PRP @N<
+desempenho	 [desempenho] N M S @P<
+muscular	 [muscular] ADJ M S @N<
+$)	 [$)] PU
+e	 [e] KC @CO
+resistência	 [resistência] N F S @<ACC
+muscular	 [muscular] ADJ F S @N<
+$(	 [$(] PU
+a	 [o] DET F S <artd> @>N
+capacidade	 [capacidade] N F S @AS<
+de	 [de] PRP <sam-> @N<
+o	 [o] DET M S <artd> <-sam> @>N
+organismo	 [organismo] N M S @P<
+em	 [em] PRP @N<
+manter-	 [manter] V INF @IMV <hyfen> @#ICL-P<
+se	 [se] PERS M/F 3S ACC <refl> @<ACC
+ao=longo=de	 [ao=longo=de] PRP <sam-> @<ADVL
+o	 [o] DET M S <-sam> <artd> @>N
+tempo	 [tempo] N M S @P<
+perto=de	 [perto=de] PRP <sam-> @<ADVL
+o	 [o] DET M S <-sam> <artd> @>N
+pico	 [pico] N M S @P<
+$)	 [$)] PU
+$.	 [$.] PU <<<
+$¶	 [$¶] PU <<<
+</s>
+<s>
+Com	 [com] PRP @ADVL> @PRED>
+as	 [o] DET F P <artd> @>N
+informações	 [informação] N F P @P<
+$,
+o	 [o] DET M S <artd> @>N
+fisiologista	 [fisiologista] N M S @SUBJ>
+define	 [definir] V PR 3S IND VFIN <fmc> @FMV
+as	 [o] DET F P <artd> @>N
+linhas	 [linha] N F P @<ACC
+de	 [de] PRP @N<
+um	 [um] DET M S <arti> @>N
+programa	 [programa] N M S @P<
+de	 [de] PRP @N<
+condicionamento	 [condicionamento] N M S @P<
+físico	 [físico] ADJ M S @N<
+$.	 [$.] PU <<<
+$¶	 [$¶] PU <<<
+</s>
+<s>
+Em	 [em] PRP <sam-> @ADVL>
+um	 [um] DET M S <arti> <-sam> @>N
+clube	 [clube] N M S @P<
+de	 [de] PRP @N<
+futebol	 [futebol] N M S @P<
+$,
+o	 [o] DET M S <artd> @>N
+programa	 [programa] N M S @SUBJ>
+é	 [ser] V PR 3S IND VFIN <fmc> @FAUX
+passado	 [passar] V PCP M S @IMV @#ICL-AUX<
+a	 [a] PRP <sam-> @<ADVL
+o	 [o] DET M S <artd> <-sam> @>N
+preparador	 [preparador] N M S @P<
+físico	 [físico] ADJ M S @N<
+$,
+a	 [a] PRP @PIV>
+quem	 [quem] SPEC M/F S @P< <rel> @#FS-N<
+cabe	 [caber] V PR 3S IND VFIN @FMV
+detalhar-	 [detalhar] V INF @#ICL-<SUBJ <hyfen> @IMV
+lo	 [ele] PERS M 3S ACC @<ACC
+e	 [e] <co-inf> KC @CO
+pôr-	 [pôr] V INF <hyfen> @IMV
+lo	 [ele] PERS M 3S ACC @<ACC
+em	 [em] PRP @<ADVO
+prática	 [prática] N F S @P<
+$.	 [$.] PU <<<
+$¶	 [$¶] PU <<<
+</s>
+<s>
+A	 [o] DET F S <artd> @>N
+relação	 [relação] N F S @SUBJ>
+entre	 [entre] PRP @N<
+os	 [o] DET M P <artd> @>N
+dois	 [dois] NUM M P <card> @>N
+profissionais	 [profissional] N M P @P<
+é	 [ser] V PR 3S IND VFIN <fmc> @FMV
+de	 [de] PRP @<SC
+coordenação	 [coordenação] N F S @P<
+e	 [e] KC @CO
+não	 [não] ADV @>P
+de	 [de] PRP @N<
+subordinação	 [subordinação] N F S @P<
+$.	 [$.] PU <<<
+$¶	 [$¶] PU <<<
+</s>
+<s>
+$(	 [$(] PU
+Md	 [md] N M S @NPHR
+$)	 [$)] PU
+$¶	 [$¶] PU <<<
+</s>
+</TEXT>
+$¶	 [$¶] PU <<<
+</DOC>

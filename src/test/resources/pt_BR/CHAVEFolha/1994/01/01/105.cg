@@ -1,0 +1,499 @@
+<DOC>
+<DOCNO.valor=FSP940101-105>
+<DOCID.valor=FSP940101-105>
+<DATE.valor=940101>
+<TEXT>
+<s>
+Africanos	 [africano] ADJ M P @SUBJ>
+vencem	 [vencer] V PR 3P IND VFIN <fmc> @FMV
+em	 [em] PRP <sam-> @<ADVL
+o	 [o] DET M S <artd> <-sam> @>N
+feminino	 [feminino] N M S @P<
+e	 [e] KC @CO
+em	 [em] PRP <sam-> @<ADVL
+o	 [o] DET M S <artd> <-sam> @>N
+masculino	 [masculino] N M S @P<
+$;	 [$;] PU <<<
+Chewmoyo	 [Chewmoyo] PROP M/F S @SUBJ>
+ganha	 [ganhar] V PR 3S IND VFIN <fmc> @FMV
+o	 [o] DET M S <artd> @>N
+bi	 [bi] N M S @<ACC
+em	 [em] PRP <sam-> @<ADVL
+um	 [um] DET M S <arti> <-sam> @>N
+erro	 [erro] N M S @P<
+de	 [de] PRP <sam-> @N<
+o	 [o] DET M S <artd> <-sam> @>N
+etíope	 [etíope] N M S @P<
+Bayesa	 [Bayesa] PROP M S @N<
+$¶	 [$¶] PU <<<
+</s>
+<s>
+Da=Reportagem=Local	 [Da=Reportagem=Local] PROP F S @NPHR
+$¶	 [$¶] PU <<<
+</s>
+<s>
+O	 [o] DET M S <artd> @>N
+queniano	 [queniano] N M S @SUBJ>
+Simon=Chemwoyo	 [Simon=Chemwoyo] PROP M S @N<
+conquistou	 [conquistar] V PS 3S IND VFIN <fmc> @FMV
+ontem	 [ontem] ADV @<ADVL
+o	 [o] DET M S <artd> @>N
+bicampeonato	 [bicampeonato] N M S @<ACC
+de	 [de] PRP <sam-> @N<
+a	 [o] DET F S <artd> <-sam> @>N
+Corrida=de=São=Silvestre	 [Corrida=de=São=Silvestre] PROP F S @P<
+$,
+em	 [em] PRP <sam-> @<ADVL
+um	 [um] DET M S <arti> <-sam> @>N
+final	 [final] N M S @P<
+de	 [de] PRP @N<
+prova	 [prova] N F S @P<
+confuso	 [confuso] ADJ M S @N<
+$.	 [$.] PU <<<
+$¶	 [$¶] PU <<<
+</s>
+<s>
+Chemwoyo	 [Chemwoyo] PROP M S @SUBJ>
+estava	 [estar] V IMPF 3S IND VFIN <fmc> @FMV
+alguns	 [algum] DET M P <quant> @>N
+metros	 [metro] N M P @<SC
+atrás=de	 [atrás=de] PRP <sam-> @<ADVL
+o	 [o] DET M S <-sam> <artd> @>N
+etíope	 [etíope] N M S @P<
+Fita=Bayesa	 [Fita=Bayesa] PROP M S @N<
+até	 [até] ADV @>N
+as	 [o] DET F P <artd> @>N
+últimas	 [último] ADJ F P <NUM-ord> @>N
+passadas	 [passada] N F P @PRED>
+de	 [de] PRP <sam-> @N<
+a	 [o] DET F S <artd> <-sam> @>N
+corrida	 [corrida] N F S @P<
+$.	 [$.] PU <<<
+$¶	 [$¶] PU <<<
+</s>
+<s>
+Os	 [o] DET M P <artd> @>N
+dois	 [dois] NUM M P <card> @SUBJ>
+se	 [se] PERS M/F 3S ACC <refl> @ACC>
+atrapalharam	 [atrapalhar] V PS/MQP 3P IND VFIN <fmc> @FMV
+e	 [e] <co-vfin> KC @CO
+seguiram	 [seguir] V PS/MQP 3P IND VFIN <fmc> @FMV
+as	 [o] DET F P <artd> @>N
+motocicletas	 [motocicleta] N F P @<ACC
+de	 [de] PRP <sam-> @N<
+os	 [o] DET M P <artd> <-sam> @>N
+batedores	 [batedor] N M P @P<
+e	 [e] <co-vfin> KC @CO
+os	 [o] DET M P <artd> @>N
+carros	 [carro] N M P @<ACC
+de	 [de] PRP <sam-> @N<
+a	 [o] DET F S <artd> <-sam> @>N
+TV	 [tV] <prop> N F S @P<
+$,
+não	 [não] ADV @ADVL>
+entrando	 [entrar] V GER @#ICL-<ADVL @IMV
+em	 [em] PRP <sam-> @<ADVS
+o	 [o] DET M S <artd> <-sam> @>N
+funil	 [funil] N M S <*2> <*1> @P<
+que	 [que] SPEC M/F S @SUBJ> <rel> @#FS-N<
+leva	 [levar] V PR 3S IND VFIN @FMV
+os	 [o] DET M P <artd> @>N
+atletas	 [atleta] N M P @<ACC
+a	 [a] PRP <sam-> @<PIV
+a	 [o] DET F S <artd> <-sam> @>N
+linha	 [linha] N F S @P<
+de	 [de] PRP @N<
+chegada	 [chegada] N F S @P<
+$.	 [$.] PU <<<
+$¶	 [$¶] PU <<<
+</s>
+<s>
+Quando	 [quando] ADV @#FS-ADVL> <ks> <rel> @ADVL>
+os	 [o] DET M P <artd> @>N
+funcionários	 [funcionário] N M P @SUBJ>
+de	 [de] PRP <sam-> @N<
+a	 [o] DET F S <artd> <-sam> @>N
+organização	 [organização] N F S @P<
+perceberam	 [perceber] V PS/MQP 3P IND VFIN @FMV
+o	 [o] DET M S <artd> @>N
+erro	 [erro] N M S @<ACC
+de	 [de] PRP <sam-> @<PIV
+os	 [o] DET M P <artd> <-sam> @>N
+atletas	 [atleta] N M P @P<
+$,
+retiraram	 [retirar] V PS/MQP 3P IND VFIN <fmc> @FMV
+a	 [o] DET F S <artd> @>N
+grade	 [grade] N F S @<ACC
+divisória	 [divisório] ADJ F S @N<
+que	 [que] SPEC M/F S @SUBJ> <rel> @#FS-N<
+separava	 [separar] V IMPF 3S IND VFIN @FMV
+as	 [o] DET F P <artd> @>N
+pistas	 [pista] N F P @<ACC
+$.	 [$.] PU <<<
+$¶	 [$¶] PU <<<
+</s>
+<s>
+Chemwoyo	 [Chemwoyo] PROP M S @SUBJ>
+foi	 [ser] V PS 3S IND VFIN <fmc> @FMV
+mais	 [mais] ADV <KOMP> <quant> @>A
+rápido	 [rápido] ADJ M S @<SC
+a	 [a] PRP <sam-> @<ADVL
+o	 [o] DET M S <artd> <-sam> @>N
+retornar	 [retornar] V INF @IMV @#ICL-P<
+a	 [a] PRP <sam-> @<ADVS
+a	 [o] DET F S <artd> <-sam> @>N
+pista	 [pista] N F S @P<
+correta	 [correto] ADJ F S @N<
+e	 [e] <co-fmc> <co-vfin> KC @CO
+cruzou	 [cruzar] V PS 3S IND VFIN <fmc> @FMV
+a	 [o] DET F S <artd> @>N
+faixa	 [faixa] N F S @<ACC
+um	 [um] NUM M S <card> @>N
+segundo	 [segundo] N M S @>A
+antes	 [antes] ADV @N< @<ADVL
+de	 [de] PRP @A<
+Bayesa	 [Bayesa] PROP M/F S @P<
+$.	 [$.] PU <<<
+$¶	 [$¶] PU <<<
+</s>
+<s>
+Em	 [em] PRP <sam-> @ADVL
+a	 [o] DET F S <artd> <-sam> @>N
+prova	 [prova] N F S @P<
+feminina	 [feminino] ADJ F S @N<
+$,
+outra	 [outro] DET F S <KOMP> <diff> @>N
+vitória	 [vitória] N F S @NPHR
+queniana	 [queniano] ADJ F S @N<
+$,
+de	 [de] PRP @ADVL
+Hellen=Kimayio	 [Hellen=Kimayio] PROP M S @P<
+$.	 [$.] PU <<<
+$¶	 [$¶] PU <<<
+</s>
+<s>
+Chemwoyo	 [Chemwoyo] PROP M/F S @SUBJ>
+$,
+25	 [25] NUM M/F P <card> @P<
+$,
+esteve	 [estar] V PS 3S IND VFIN <fmc> @FMV
+durante	 [durante] PRP @<SC
+toda=a	 [todo=o] DET F S <quant> @>N
+prova	 [prova] N F S @P<
+em	 [em] PRP <sam-> @N<
+o	 [o] DET M S <artd> <-sam> @>N
+pelotão	 [pelotão] N M S @P<
+de=frente	 [de=frente] ADV @<ADVL
+$,
+alternando-	 [alternar] V GER @#ICL-<ADVL <hyfen> @IMV
+se	 [se] PERS M/F 3S ACC <reci> @<ACC
+em	 [em] PRP <sam-> @<ADVL
+a	 [o] DET F S <artd> <-sam> @>N
+liderança	 [liderança] N F S @P<
+com	 [com] PRP @<ADVL
+Bayesa	 [Bayesa] PROP M/F S @P<
+e	 [e] <co-vfin> KC @CO
+outro	 [outro] DET M S <KOMP> <diff> @>N
+atleta	 [atleta] N M S @P<
+de	 [de] PRP <sam-> @N<
+o	 [o] DET M S <artd> <-sam> @>N
+Quênia	 [Quênia] PROP F S @P<
+$,
+William=Sigei	 [William=Sigei] PROP M/F S @APP
+$,
+que	 [que] SPEC M/F S @SUBJ> <rel> @#FS-N<
+acabou	 [acabar] V PS 3S IND VFIN @FMV
+em	 [em] PRP @<PIV
+terceiro	 [terceiro] N M S @P<
+$.	 [$.] PU <<<
+$¶	 [$¶] PU <<<
+</s>
+<s>
+Chemwoyo	 [Chemwoyo] PROP M/F S @SUBJ>
+completou	 [completar] V PS 3S IND VFIN <fmc> @FMV
+a	 [o] DET F S <artd> @>N
+prova	 [prova] N F S @<ACC
+em	 [em] PRP @N<
+43	 [43] NUM M/F P <card> @P<
+min20	 [min20] PROP M/F S @APP
+$	 [$] PU
+em	 [em] PRP <sam-> @<ADVL
+o	 [o] DET M S <artd> <-sam> @>N
+ano	 [ano] N M S @P<
+passado	 [passado] ADJ M S @N<
+$,
+vencera	 [vencer] V MQP 3S IND VFIN <fmc> @FMV
+com	 [com] PRP @<ADVL
+44	 [44] NUM M/F P <card> @>N
+min08	 [min08] PROP M/F S @P<
+$.	 [$.] PU <<<
+$¶	 [$¶] PU <<<
+</s>
+<s>
+O	 [o] DET M S <artd> @>N
+mexicano	 [mexicano] N M S @SUBJ>
+Arturo=Barrios	 [Arturo=Barrios] PROP M S @N<
+$,
+vencedor	 [vencedor] N M S @N<PRED
+de	 [de] PRP <sam-> @N<
+a	 [o] DET F S <artd> <-sam> @>N
+prova	 [prova] N F S @P<
+em	 [em] PRP @N<
+90	 [90] NUM M/F P <card> @P<
+e	 [e] KC @CO
+91	 [91] NUM M/F P <card> @P<
+$,
+chegou	 [chegar] V PS 3S IND VFIN <fmc> @FMV
+em	 [em] PRP @<ADVS
+quarto	 [quarto] N M S @P<
+lugar	 [lugar] N M S @<ACC
+$.	 [$.] PU <<<
+$¶	 [$¶] PU <<<
+</s>
+<s>
+O	 [o] DET M S <artd> @>N
+brasileiro	 [brasileiro] N M S @SUBJ>
+Delmir=dos=Santos	 [Delmir=dos=Santos] PROP M S @N<
+chegou	 [chegar] V PS 3S IND VFIN <fmc> @FAUX
+a	 [a] PRP @PRT-AUX<
+acompanhar	 [acompanhar] V INF @IMV @#ICL-AUX<
+o	 [o] DET M S <artd> @>N
+grupo	 [grupo] N M S @<ACC
+de=frente	 [de=frente] ADV @<ADVL
+até	 [até] PRP @<ADVL
+a	 [o] DET F S <artd> @>N
+av.	 [av.] PROP F S @P<
+$.	 [$.] PU <<<
+São=João	 [São=João] PROP M S @SUBJ>
+$,
+mas	 [mas] KC @CO
+depois	 [depois] ADV @ADVL>
+perdeu	 [perder] V PS 3S IND VFIN <fmc> @FMV
+posições	 [posição] N F P @<ACC
+$.	 [$.] PU <<<
+$¶	 [$¶] PU <<<
+</s>
+<s>
+O	 [o] DET M S <artd> @>N
+brasileiro	 [brasileiro] N M S @SUBJ>
+melhor	 [melhor] ADV <SUP> <KOMP> @ADVL>
+colocado	 [colocar] V PCP M S @IMV @#ICL-N<
+em	 [em] PRP <sam-> @<ADVS
+a	 [o] DET F S <artd> <-sam> @>N
+prova	 [prova] N F S @P<
+foi	 [ser] V PS 3S IND VFIN <fmc> @FMV
+Ronaldo=Costa	 [Ronaldo=Costa] PROP M S @<SC
+$,
+em	 [em] PRP <sam-> @<ADVL
+a	 [o] DET F S <artd> <-sam> @>N
+sétimo	 [sétimo] ADJ M S <NUM-ord> @>N
+posição	 [posição] N F S @P<
+$.	 [$.] PU <<<
+$¶	 [$¶] PU <<<
+</s>
+<s>
+Hellen=Kimayio	 [Hellen=Kimayio] PROP M S @SUBJ>
+$,
+25	 [25] NUM M/F P <card> @P<
+$,
+venceu	 [vencer] V PS 3S IND VFIN <fmc> @FMV
+a	 [o] DET F S <artd> @>N
+brasileira	 [brasileira] N F S @<ACC
+Carmem=Oliveira	 [Carmem=Oliveira] PROP F S @N<
+por	 [por] PRP @<ADVL
+cinco	 [cinco] NUM M P <card> @>N
+segundos	 [segundo] N M P @P<
+$.	 [$.] PU <<<
+$¶	 [$¶] PU <<<
+</s>
+<s>
+Ela	 [ela] PERS F 3S NOM @SUBJ>
+completou	 [completar] V PS 3S IND VFIN <fmc> @FMV
+a	 [o] DET F S <artd> @>N
+prova	 [prova] N F S @<ACC
+em	 [em] PRP @N<
+50	 [50] NUM M/F P <card> @P<
+min26	 [min26] PROP M/F S @APP
+$.	 [$.] PU <<<
+$¶	 [$¶] PU <<<
+</s>
+<s>
+Em	 [em] PRP @ADVL>
+92	 [92] NUM M/F S <card> @P<
+$,
+Maria	 [Maria] PROP F S @SUBJ>
+del ALT xxx	 [del] N M S @ACC>
+Carmen	 [Carmen] PROP M/F S @SUBJ>
+venceu	 [vencer] V PS 3S IND VFIN <fmc> @FMV
+com	 [com] PRP @<ADVL
+54	 [54] NUM M/F P <card> @>N
+min00	 [min00] PROP M/F S @P<
+$.	 [$.] PU <<<
+$¶	 [$¶] PU <<<
+</s>
+<s>
+Kimayio	 [Kimayio] PROP M/F S @VOK @SUBJ>
+$,
+Diaz	 [Diaz] PROP M/F S @SUBJ>
+$,
+23	 [23] NUM M/F P <card> @SUBJ>
+$,
+Carmen	 [Carmen] PROP M/F S @SUBJ>
+$,
+28	 [28] NUM F P <card> @SUBJ>
+$,
+a	 [o] DET F S <artd> @>N
+portuguesa	 [português] N F S @APP
+Albertina=Dias	 [Albertina=Dias] PROP F S @N<
+$,
+28	 [28] NUM M/F P <card> @SUBJ>
+$,
+e	 [e] KC @CO
+a	 [o] DET F S <artd> @>N
+queniana	 [queniana] N F S @SUBJ>
+Sally=Barsosio	 [Sally=Barsosio] PROP F S @N<
+$,
+15	 [15] NUM M/F P <card> @P<
+$,
+dominaram	 [dominar] V PS/MQP 3P IND VFIN <fmc> @FMV
+a	 [o] DET F S <artd> @>N
+prova	 [prova] N F S @<ACC
+$.	 [$.] PU <<<
+$¶	 [$¶] PU <<<
+</s>
+<s>
+Correram	 [correr] V PS/MQP 3P IND VFIN <fmc> @FMV
+juntas	 [juntar] V PCP F P @<PRED
+os	 [o] DET M P <artd> @>N
+oito	 [oito] NUM M P <card> @>N
+primeiros	 [primeiro] ADJ M P <NUM-ord> @>N
+quilômetros	 [quilômetro] N M P @<SUBJ
+$.	 [$.] PU <<<
+$¶	 [$¶] PU <<<
+</s>
+<s>
+Depois	 [depois] ADV @ADVL>
+$,
+Maria	 [Maria] PROP F S @SUBJ>
+del ALT xxx	 [del] N M S @PRED>
+Carmen	 [Carmen] PROP M/F S @SUBJ>
+e	 [e] KC @CO
+depois	 [depois] ADV @ADVL>
+Sally	 [Sally] PROP M/F S @SUBJ>
+ficaram	 [ficar] V PS/MQP 3P IND VFIN <fmc> @FMV
+para	 [para] PRP @<SC
+trás	 [trás] ADV @<ADVL
+$.	 [$.] PU <<<
+$¶	 [$¶] PU <<<
+</s>
+<s>
+Em	 [em] PRP <sam-> @ADVL>
+o	 [o] DET M S <artd> <-sam> @>N
+começo	 [começo] N M S @P<
+de	 [de] PRP <sam-> @N<
+a	 [o] DET F S <artd> <-sam> @>N
+subida	 [subida] N F S @P<
+de	 [de] PRP <sam-> @N<
+a	 [o] DET F S <artd> <-sam> @>N
+Brigadeiro=Luiz=Antônio	 [Brigadeiro=Luiz=Antônio] PROP F S @P<
+$,
+Kimayio	 [Kimayio] PROP M/F S @P<
+$,
+Carmem	 [Carmem] PROP M/F S @P<
+e	 [e] KC @CO
+Albertina	 [Albertina] PROP M/F S @P<
+estavam	 [estar] V IMPF 3P IND VFIN <fmc> @FMV
+juntas	 [juntar] V PCP F P @<SC
+$.	 [$.] PU <<<
+$¶	 [$¶] PU <<<
+</s>
+<s>
+Em	 [em] PRP <sam-> @ADVL>
+a	 [o] DET F S <artd> <-sam> @>N
+altura	 [altura] N F S @P<
+de	 [de] PRP <sam-> @N<
+a	 [o] DET F S <artd> <-sam> @>N
+rua	 [rua] N F S @P<
+Pedroso	 [Pedroso] PROP F S @N<
+$,
+Albertina	 [Albertina] PROP M/F S @SUBJ>
+ficou	 [ficar] V PS 3S IND VFIN <fmc> @FMV
+para	 [para] PRP @<SC
+trás	 [trás] ADV @<ADVL
+$.	 [$.] PU <<<
+$¶	 [$¶] PU <<<
+</s>
+<s>
+Quando	 [quando] ADV @#FS-ADVL> <ks> <rel> @ADVL>
+faltava	 [faltar] V IMPF 3S IND VFIN @FMV
+1	 [1] NUM M S <card> @>N
+km	 [km] N M S @<SUBJ
+$,
+Kimayio	 [Kimayio] PROP M/F S @SUBJ>
+apertou	 [apertar] V PS 3S IND VFIN <fmc> @FMV
+o	 [o] DET M S <artd> @>N
+ritmo	 [ritmo] N M S @<ACC
+e	 [e] <co-fmc> <co-vfin> KC @CO
+ficou	 [ficar] V PS 3S IND VFIN <fmc> @FMV
+só	 [só] ADV @>P
+em	 [em] PRP <sam-> @<ADVS
+a	 [o] DET F S <artd> <-sam> @>N
+frente	 [frente] N F S @P<
+$.	 [$.] PU <<<
+$¶	 [$¶] PU <<<
+</s>
+<s>
+Em	 [em] PRP <sam-> @ADVL
+a	 [o] DET F S <artd> <-sam> @>N
+av.	 [av.] PROP F S @P<
+$.	 [$.] PU <<<
+Paulista	 [paulista] ADJ M/F S @PRED>
+$,
+Carmem	 [Carmem] PROP M/F S @SUBJ>
+ainda	 [ainda] ADV @ADVL>
+tentou	 [tentar] V PS 3S IND VFIN <fmc> @FMV
+um	 [um] DET M S <arti> @>N
+sprint ALT xxx	 [sprint] N M S <*2> <*1> <*2> <*1> @<ACC
+$,
+em=vão	 [em=vão] ADV @<ADVL
+$.	 [$.] PU <<<
+$¶	 [$¶] PU <<<
+</s>
+<s>
+Dias	 [Dias] PROP M/F S @SUBJ>
+ficou	 [ficar] V PS 3S IND VFIN <fmc> @FMV
+em	 [em] PRP @<ADVS
+terceiro	 [terceiro] N M S @P<
+$.	 [$.] PU <<<
+$¶	 [$¶] PU <<<
+</s>
+<s>
+O	 [o] DET M S <artd> @>N
+tempo	 [tempo] N M S @SUBJ>
+de	 [de] PRP <sam-> @N<
+o	 [o] DET M S <artd> <-sam> @>N
+10º.	 [10º.] ADJ M S <NUM-ord> @>N
+lugar	 [lugar] N M S @P<
+$,
+de	 [de] PRP <sam-> @N<
+a	 [o] DET F S <artd> <-sam> @>N
+brasileira	 [brasileira] N F S @P<
+Silvana=Pereira	 [Silvana=Pereira] PROP F S @N<
+$,
+53	 [53] NUM M/F P <card> @>N
+min57	 [min57] PROP M/F S @APP
+$,
+foi	 [ser] V PS 3S IND VFIN <fmc> @FMV
+melhor	 [bom] ADJ M S <SUP> <KOMP> @<SC
+do=que	 [do=que] KS @COM @#AS-KOMP<
+o	 [o] DET M S <dem> @AS<
+de	 [de] PRP @N<
+Carmen	 [Carmen] PROP M/F S @P<
+em	 [em] PRP @<ADVL
+92	 [92] NUM M/F S <card> @P<
+$.	 [$.] PU <<<
+$¶	 [$¶] PU <<<
+</s>
+</TEXT>
+$¶	 [$¶] PU <<<
+</DOC>

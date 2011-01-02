@@ -1,0 +1,170 @@
+<DOC>
+<DOCNO.valor=FSP940101-104>
+<DOCID.valor=FSP940101-104>
+<DATE.valor=940101>
+<TEXT>
+<s>
+Da=Folha=Nordeste	 [Da=Folha=Nordeste] PROP F S @NPHR
+$¶	 [$¶] PU <<<
+</s>
+<s>
+O	 [o] DET M S <artd> @>N
+São=Paulo	 [São=Paulo] PROP M S @SUBJ>
+vai	 [ir] V PR 3S IND VFIN <fmc> @FAUX
+emprestar	 [emprestar] V INF @IMV @#ICL-AUX<
+os	 [o] DET M P <artd> @>N
+jogadores	 [jogador] N M P @<ACC
+que	 [que] KS @SUB @#FS-<ACC
+não	 [não] ADV @ADVL>
+estão	 [estar] V PR 3P IND VFIN @FMV
+em	 [em] PRP <sam-> @<ADVS
+os	 [o] DET M P <artd> <-sam> @>N
+planos	 [plano] N M P @P<
+de	 [de] PRP <sam-> @N<
+o	 [o] DET M S <artd> <-sam> @>N
+técnico	 [técnico] N M S @P<
+Telê=Santana	 [Telê=Santana] PROP M S @N<
+para	 [para] PRP @N<
+o	 [o] DET M S <artd> @>N
+Taquaritinga	 [Taquaritinga] PROP M S @P<
+e	 [e] KC @CO
+o	 [o] DET M S <artd> @>N
+Botafogo	 [Botafogo] PROP M S @P<
+$,
+de	 [de] PRP @N<PRED
+Ribeirão=Preto	 [Ribeirão=Preto] PROP M S @P<
+$,
+equipes	 [equipe] N F P @N<PRED
+de	 [de] PRP <sam-> @N<
+a	 [o] DET F S <artd> <-sam> @>N
+série	 [série] N F S @P<
+A-2	 [A-2] PROP F S @N<
+de	 [de] PRP <sam-> @N<
+o	 [o] DET M S <artd> <-sam> @>N
+Campeonato=Paulista	 [Campeonato=Paulista] PROP M S @P<
+$.	 [$.] PU <<<
+$¶	 [$¶] PU <<<
+</s>
+<s>
+Ao=todo	 [ao=todo] ADV @ADVL>
+$,
+12	 [12] NUM M/F P <card> @>N
+profissionais	 [profissional] N M/F P @SUBJ>
+e	 [e] KC @CO
+5	 [5] NUM M P <card> @>N
+amadores	 [amador] N M P @SUBJ>
+estão	 [estar] V PR 3P IND VFIN <fmc> @FMV
+a	 [a] PRP <sam-> @<SC
+a	 [o] DET F S <artd> <-sam> @>N
+disposição	 [disposição] N F S @P<
+$,
+com	 [com] PRP @N<PRED @<ADVL
+prioridade	 [prioridade] N F S @P<
+para	 [para] PRP @<ADVL
+o	 [o] DET M S <artd> @>N
+Taquaritinga	 [Taquaritinga] PROP M S @P<
+$.	 [$.] PU <<<
+$¶	 [$¶] PU <<<
+</s>
+<s>
+A	 [o] DET F S <artd> @>N
+intenção	 [intenção] N F S @SUBJ>
+de	 [de] PRP <sam-> @N<
+o	 [o] DET M S <artd> <-sam> @>N
+clube	 [clube] N M S @P<
+é	 [ser] V PR 3S IND VFIN <fmc> @FMV
+manter	 [manter] V INF @IMV @#ICL-<SC
+os	 [o] DET M P <artd> @>N
+atletas	 [atleta] N M P @<ACC
+jogando	 [jogar] V GER @IMV @#ICL-<OC
+em	 [em] PRP @<ADVO
+São=Paulo	 [São=Paulo] PROP M S @P<
+$,
+onde	 [onde] ADV @ADVL> <ks> <rel> @#FS-N<
+podem	 [poder] V PR 3P IND VFIN @FMV
+se	 [se] KS @#FS-<ADVL @SUB
+projetar	 [projetar] V FUT 3S SUBJ VFIN @FMV
+mais	 [muito] DET M/F S <KOMP> <quant> @<ACC
+$.	 [$.] PU <<<
+$¶	 [$¶] PU <<<
+</s>
+<s>
+Quando	 [quando] ADV @#FS-ADVL> <ks> <rel> <*1> @ADVL>
+emprestamos	 [emprestar] V PR 1P IND VFIN @FMV
+os	 [o] DET M P <artd> @>N
+jogadores	 [jogador] N M P @<ACC
+para	 [para] PRP @<ADVL
+clubes	 [clube] N M P @P<
+de	 [de] PRP @N<
+outros	 [outro] DET M P <KOMP> <diff> @>N
+Estados	 [estado] <prop> N M P @P<
+$,
+ganhamos	 [ganhar] V PR 1P IND VFIN <fmc> @FMV
+pouco	 [pouco] DET M S <quant> @<ACC
+$.	 [$.] PU <<<
+$¶	 [$¶] PU <<<
+</s>
+<s>
+É	 [ser] V PR 3S IND VFIN @FMV @#FS-ACC>>
+melhor	 [bom] ADJ M S <SUP> <KOMP> @<SC
+ceder-	 [ceder] V INF @IMV <hyfen> @#ICL-<SUBJ
+los	 [eles] PERS M 3P ACC @<ACC
+de=graça	 [de=graça] ADJ @N<
+para	 [para] PRP @<ADVL
+um	 [um] DET M S <arti> @>N
+time	 [time] N M S @P<
+de	 [de] PRP <sam-> @N<
+o	 [o] DET M S <artd> <-sam> @>N
+interior	 [interior] N M S <*2> @P<
+$,
+disse	 [dizer] V PS 3S IND VFIN <fmc> @FMV
+João=Kalef=Francisco	 [João=Kalef=Francisco] PROP M S @<SUBJ
+$,
+diretor	 [diretor] N M S @N<PRED
+de	 [de] PRP <sam-> @N<
+o	 [o] DET M S <artd> <-sam> @>N
+clube	 [clube] N M S @P<
+$.	 [$.] PU <<<
+$¶	 [$¶] PU <<<
+</s>
+<s>
+Entre	 [entre] PRP @ADVL>
+os	 [o] DET M P <artd> @>N
+disponíveis	 [disponível] <n> ADJ M P @P<
+$,
+estão	 [estar] V PR 3P IND VFIN <fmc> @FMV
+os	 [o] DET M P <artd> @>N
+goleiros	 [goleiro] N M P @<SUBJ
+Gilberto	 [Gilberto] PROP M/F S @N<
+e	 [e] KC @CO
+Marcos	 [Marcos] PROP M/F S @N<
+$,
+os	 [o] DET M P <artd> @>N
+zagueiros	 [zagueiro] N M P @APP @<SUBJ
+Sérgio=Baresi	 [Sérgio=Baresi] PROP M S @N<
+e	 [e] KC @CO
+Murilo	 [Murilo] PROP M/F S @N<
+$,
+o	 [o] DET M S <artd> @>N
+volante	 [volante] N M S @<SC @APP @<SUBJ
+Mona	 [mona] <prop> N F S @N<
+$,
+os	 [eles] PERS M 3P ACC @ACC>
+meias	 [meio] ADJ F P @N<
+Suélio	 [Suélio] PROP M/F S @APP
+e	 [e] KC @CO
+Baiano	 [Baiano] PROP M/F S @APP
+e	 [e] KC @CO
+os	 [o] DET M P <artd> @>N
+atacantes	 [atacante] N M P @PRED>
+Eliel	 [Eliel] PROP M/F S @N<
+$,
+Pereira	 [Pereira] PROP M/F S @APP
+e	 [e] KC @CO
+Toninho	 [Toninho] PROP M/F S @APP
+$.	 [$.] PU <<<
+$¶	 [$¶] PU <<<
+</s>
+</TEXT>
+$¶	 [$¶] PU <<<
+</DOC>

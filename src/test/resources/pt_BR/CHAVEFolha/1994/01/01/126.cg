@@ -1,0 +1,240 @@
+<DOC>
+<DOCNO.valor=FSP940101-126>
+<DOCID.valor=FSP940101-126>
+<DATE.valor=940101>
+<TEXT>
+<s>
+Mercado	 [mercado] N M S @SUBJ>
+de	 [de] PRP @N<
+arte	 [arte] N F S @P<
+teve	 [ter] V PS 3S IND VFIN <fmc> @FMV
+aumento	 [aumento] N M S @<ACC
+em	 [em] PRP <sam-> @<ADVL
+as	 [o] DET F P <artd> <-sam> @>N
+vendas	 [venda] N F P @P<
+$¶	 [$¶] PU <<<
+</s>
+<s>
+De	 [de] PRP <sam-> @ADVL
+as	 [o] DET F P <artd> <-sam> @>N
+agências=internacionais	 [agência=internacional] N F P @P<
+$¶	 [$¶] PU <<<
+</s>
+<s>
+De=acordo	 [de=acordo] ADV @ADVL>
+com	 [com] PRP @A<
+o	 [o] DET M S <artd> @>N
+balanço	 [balanço] N M S @P<
+feito	 [fazer] V PCP M S @N<PRED
+por	 [por] PRP <sam-> @<ADVL
+as	 [o] DET F P <artd> <-sam> @>N
+casas	 [casa] N F P @P<
+de	 [de] PRP @N<
+leilão	 [leilão] N M S @P<
+Sotheby's	 [Sotheby's] PROP M/F S @SUBJ>
+e	 [e] KC @CO
+Christie's=de=Londres	 [Christie's=de=Londres] PROP M S @SUBJ>
+$,
+o	 [o] DET M S <artd> @>N
+ano	 [ano] N M S @APP
+de	 [de] PRP @N<
+1993	 [1993] NUM M/F P <card> @>N
+não	 [não] ADV @>N
+repetiu=o'=boom ALT xxx	 [repetiu=o'=boom] N M S @P<
+$'	 [$'] PU
+de	 [de] PRP @N<PRED
+vendas	 [venda] N F P @P<
+de	 [de] PRP @N<
+obras=de=arte	 [obra=de=arte] N F P @P<
+como	 [como] ADV @ADVL <prp> <rel> @#AS-ADVL>
+em	 [em] PRP <sam-> @AS<
+os	 [o] DET M P <artd> <-sam> @>N
+anos	 [ano] N M P @P<
+de	 [de] PRP @N<
+1988	 [1988] NUM M/F P <card> @P<
+e	 [e] KC @CO
+1989	 [1989] NUM M/F P <card> @P<
+$,
+mas	 [mas] KC @CO
+também	 [também] ADV @ADVL>
+não	 [não] ADV @ADVL>
+decepcionou	 [decepcionar] V PS 3S IND VFIN <fmc> @FMV
+$.	 [$.] PU <<<
+$¶	 [$¶] PU <<<
+</s>
+<s>
+A	 [o] DET F S <artd> @>N
+Sotheby's	 [Sotheby's] PROP F S @SUBJ>
+teve	 [ter] V PS 3S IND VFIN <fmc> @FMV
+um	 [um] DET M S <arti> @>N
+aumento	 [aumento] N M S @<ACC
+de	 [de] PRP @N<
+31	 [31] NUM M/F P <card> @>N
+$%	 [%] N M P @P<	 [$%] PU
+em	 [em] PRP @<ADVL
+suas	 [seu] DET F P <si> <poss 3S> @>N
+vendas	 [venda] N F P @P<
+e	 [e] <co-fmc> <co-vfin> KC @CO
+a	 [o] DET F S <artd> @>N
+Christie's	 [Christie's] PROP F S @SUBJ>
+vendeu	 [vender] V PS 3S IND VFIN <fmc> @FMV
+14	 [14] NUM M/F P <card> @>N
+$%	 [%] N M P @<ACC	 [$%] PU
+a=mais=de	 [a=mais=de] PRP <sam-> @<ADVL
+o	 [o] DET M S <-sam> <dem> @P<
+que	 [que] KS @SUB @#FS-<ACC
+em	 [em] PRP @<ADVL
+1992	 [1992] NUM M/F S <card> @P<
+$.	 [$.] PU <<<
+$¶	 [$¶] PU <<<
+</s>
+<s>
+O	 [o] DET M S <artd> @>N
+setor	 [setor] N M S @SUBJ>
+que	 [que] SPEC M S @SUBJ> <rel> @#FS-N<
+mais	 [mais] ADV <KOMP> <quant> @ADVL>
+cresceu	 [crescer] V PS 3S IND VFIN @FMV
+foi	 [ser] V PS 3S IND VFIN <fmc> @FMV
+o	 [o] DET M S <dem> @<SC
+de	 [de] PRP @N<
+peças	 [peça] N F P @P<
+antigas	 [antigo] ADJ F P @N<
+e	 [e] KC @CO
+de	 [de] PRP @N<
+arte	 [arte] N F S @P<
+oriental	 [oriental] ADJ F S @N<
+$.	 [$.] PU <<<
+$¶	 [$¶] PU <<<
+</s>
+<s>
+Nossos	 [nosso] DET M P <poss 1P> <*1> @>N
+mercados	 [mercado] N M P @SUBJ>
+mais	 [mais] ADV <KOMP> <quant> @>A
+fortes	 [forte] ADJ M/F P @N<
+foram	 [ser] V PS/MQP 3P IND VFIN @FMV @#FS-ACC>>
+os	 [o] DET M P <artd> @>N
+móveis	 [móvel] N M P @<SC
+franceses	 [francês] ADJ M P @N<
+e	 [e] <co-vfin> KC @CO
+ingleses	 [inglês] N M P @<SC
+$,
+jóias	 [jóia] N F P @<SC
+e	 [e] <co-vfin> KC @CO
+a	 [o] DET F S <artd> @>N
+arte	 [arte] N F S @<SC
+proveniente	 [proveniente] ADJ F S @N<
+de	 [de] PRP <sam-> @A<
+a	 [o] DET F S <artd> <-sam> @>N
+China	 [China] PROP F S <*2> @P<
+$,
+afirmou	 [afirmar] V PS 3S IND VFIN <fmc> @FMV
+o	 [o] DET M S <artd> @>N
+diretor	 [diretor] N M S @<SUBJ
+de	 [de] PRP <sam-> @N<
+a	 [o] DET F S <artd> <-sam> @>N
+Christie's	 [Christie's] PROP F S @P<
+$,
+David=Tyler	 [David=Tyler] PROP M/F S @<SC @APP
+$.	 [$.] PU <<<
+$¶	 [$¶] PU <<<
+</s>
+<s>
+A	 [o] DET F S <artd> @>N
+recuperação	 [recuperação] N F S @SUBJ>
+de	 [de] PRP <sam-> @N<
+o	 [o] DET M S <artd> <-sam> @>N
+mercado	 [mercado] N M S @P<
+de	 [de] PRP @N<
+arte	 [arte] N F S @P<
+apresenta	 [apresentar] V PR 3S IND VFIN <fmc> @FMV
+características	 [característica] N F P @<ACC
+diferentes	 [diferente] ADJ F P @N<
+de	 [de] PRP <sam-> @A<
+o	 [o] DET M S <artd> <-sam> @>N
+boom	 [boom] N M S @P<
+de	 [de] PRP <sam-> @N<
+o	 [o] DET M S <artd> <-sam> @>N
+final	 [final] N M S @P<
+de	 [de] PRP <sam-> @N<
+a	 [o] DET F S <artd> <-sam> @>N
+década	 [década] N F S @P<
+de	 [de] PRP @N<
+80	 [80] NUM M/F P <card> @P<
+$.	 [$.] PU <<<
+$¶	 [$¶] PU <<<
+</s>
+<s>
+Muitos	 [muito] DET M P <quant> @>N
+compradores	 [comprador] N M P @SUBJ>
+pagavam	 [pagar] V IMPF 3P IND VFIN <fmc> @FMV
+quantias	 [quantia] N F P @<ACC
+altíssimas	 [alto] ADJ F P <SUP> @N<
+por	 [por] PRP @<PIV
+pinturas	 [pintura] N F P @P<
+que	 [que] SPEC M/F S @ACC> <rel> @#FS-N<
+em	 [em] PRP @ADVL>
+pouco	 [pouco] DET M S <quant> @>N
+tempo	 [tempo] N M S @P<
+perdiam	 [perder] V IMPF 3P IND VFIN @FMV
+seu	 [seu] DET M S <si> <poss 3S> @>N
+valor	 [valor] N M S @<ACC
+$.	 [$.] PU <<<
+$¶	 [$¶] PU <<<
+</s>
+<s>
+Ambas	 [ambos] DET F P <quant> @>N
+as	 [o] DET F P <artd> @>N
+casas	 [casa] N F P @SUBJ>
+acreditam	 [acreditar] V PR 3P IND VFIN <fmc> @FMV
+que	 [que] KS @SUB @#FS-<ACC
+em	 [em] PRP @ADVL>
+1994	 [1994] NUM F P <card> @>N
+tendência	 [tendência] N F S @P<
+de	 [de] PRP @N<
+1993	 [1993] NUM M/F P <card> @P<
+continuará	 [continuar] V FUT 3S IND VFIN @FMV
+$,
+em	 [em] PRP @<ADVL
+especial	 [especial] ADJ M S @>N
+a	 [a] N M S @P<
+que	 [que] SPEC M/F S @SUBJ> <rel> @#FS-N<
+se	 [se] PERS M/F 3S ACC <refl> @ACC>
+refere	 [referir] V PR 3S IND VFIN @FMV
+a	 [a] PRP <sam-> @<PIV
+os	 [o] DET M P <artd> <-sam> @>N
+mercados	 [mercado] N M P @P<
+como	 [como] ADV @COM <rel> @#AS-N<
+China	 [China] PROP F S @AS<
+e	 [e] KC @CO
+India	 [Índia] PROP F S @AS<
+$,
+descobertos	 [descoberto] ADJ M P @N<PRED	 [descobrir] V PCP M P @IMV @#ICL-N<PRED
+recentemente	 [recentemente] ADV @<ADVL
+por	 [por] PRP <sam-> @<PASS
+os	 [o] DET M P <artd> <-sam> @>N
+compradores	 [comprador] N M P @P<
+$.	 [$.] PU <<<
+$¶	 [$¶] PU <<<
+</s>
+<s>
+A	 [o] DET F S <artd> @>N
+Christie's	 [Christie's] PROP F S @SUBJ>
+também	 [também] ADV @ADVL>
+espera	 [esperar] V PR 3S IND VFIN <fmc> @FMV
+o	 [o] DET M S <artd> @>N
+aumento	 [aumento] N M S @<ACC
+em	 [em] PRP <sam-> @N<
+a	 [o] DET F S <artd> <-sam> @>N
+demanda	 [demanda] N F S @P<
+de	 [de] PRP @<PIV
+pinturas	 [pintura] N F P @P<
+de	 [de] PRP <sam-> @N<
+o	 [o] DET M S <artd> <-sam> @>N
+século	 [século] N M S @P<
+20	 [20] NUM M/F P <card> @N<
+$.	 [$.] PU <<<
+$¶	 [$¶] PU <<<
+</s>
+</TEXT>
+$¶	 [$¶] PU <<<
+</DOC>

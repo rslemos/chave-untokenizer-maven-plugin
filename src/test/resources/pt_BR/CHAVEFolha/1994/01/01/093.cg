@@ -1,0 +1,378 @@
+<DOC>
+<DOCNO.valor=FSP940101-093>
+<DOCID.valor=FSP940101-093>
+<DATE.valor=940101>
+<TEXT>
+<s>
+Evair	 [Evair] PROP M/F S @SUBJ>
+pode	 [poder] V PR 3S IND VFIN <fmc> @FAUX
+ir	 [ir] V INF @IMV @#ICL-AUX<
+para	 [para] PRP @<ADVS
+o	 [o] DET M S <artd> @>N
+Japão	 [Japão] PROP M S @P<
+$¶	 [$¶] PU <<<
+</s>
+<s>
+O	 [o] DET M S <artd> @>N
+centroavante	 [centroavante] N M S @SUBJ>
+de	 [de] PRP <sam-> @N<
+o	 [o] DET M S <artd> <-sam> @>N
+Palmeiras	 [palmeira] <prop> N F P @P<
+$(	 [$(] PU
+foto	 [foto] N F S @N<PRED
+$)	 [$)] PU
+pode	 [poder] V PR 3S IND VFIN <fmc> @FAUX
+se	 [se] PERS M/F 3S ACC @ACC>-PASS
+tranferir ALT xxxir	 [tranferir] V INF @IMV @#ICL-AUX<
+para	 [para] PRP @<ADVL
+o	 [o] DET M S <artd> @>N
+Nagoya=Grampus	 [Nagoya=Grampus] PROP M S @P<
+$,
+de	 [de] PRP <sam-> @N<PRED
+a	 [o] DET F S <artd> <-sam> @>N
+primeira	 [primeiro] ADJ F S <NUM-ord> @>N
+divisão	 [divisão] N F S @P<
+de	 [de] PRP <sam-> @N<
+o	 [o] DET M S <artd> <-sam> @>N
+futebol	 [futebol] N M S @P<
+japonês	 [japonês] ADJ M S @N<
+$.	 [$.] PU <<<
+$¶	 [$¶] PU <<<
+</s>
+<s>
+A	 [o] DET F S <artd> @>N
+saída	 [saída] N F S @SUBJ>
+de	 [de] PRP <sam-> @N<
+o	 [o] DET M S <artd> <-sam> @>N
+jogador	 [jogador] N M S @P<
+serviria	 [servir] V COND 3S VFIN <fmc> @FMV
+para	 [para] PRP @<PIV
+abrir	 [abrir] V INF @IMV @#ICL-P<
+uma	 [um] DET F S <arti> @>N
+vaga	 [vaga] N F S @<ACC
+em	 [em] PRP <sam-> @<ADVL
+o	 [o] DET M S <artd> <-sam> @>N
+time	 [time] N M S @P<
+de	 [de] PRP @N<
+Wanderley=Luxemburgo	 [Wanderley=Luxemburgo] PROP M S @P<
+para	 [para] PRP @<ADVL
+o	 [o] DET M S <artd> @>N
+colombiano	 [colombiano] N M S @P<
+Rincón	 [Rincón] PROP M S @N<
+$.	 [$.] PU <<<
+$¶	 [$¶] PU <<<
+</s>
+<s>
+Evair	 [Evair] PROP M/F S @SUBJ>
+só	 [só] ADV @ADVL>
+não	 [não] ADV @ADVL>
+irá	 [ir] V FUT 3S IND VFIN <fmc> @FMV
+se	 [se] KS @#FS-<ADVL @SUB
+julgar	 [julgar] V FUT 3S SUBJ VFIN @FMV
+que	 [que] KS @SUB @#FS-<ACC
+tiver	 [ter] V FUT 3S SUBJ VFIN @FMV
+chance	 [chance] N F S @<ACC
+de	 [de] PRP @N<
+disputar	 [disputar] V INF @IMV @#ICL-P<
+a	 [o] DET F S <artd> @>N
+Copa=dos=Eua	 [Copa=dos=Eua] PROP F S @<ACC
+$.	 [$.] PU <<<
+$¶	 [$¶] PU <<<
+</s>
+<s>
+Paulista	 [paulista] N M/F S @NPHR
+$¶	 [$¶] PU <<<
+</s>
+<s>
+Campeão	 [campeão] N M S @SUBJ>
+quer	 [querer] V PR 3S IND VFIN <fmc> @FMV
+adiar	 [adiar] V INF @IMV @#ICL-<ACC
+primeiros	 [primeiro] ADJ M P <NUM-ord> @>N
+jogos	 [jogo] N M P @<ACC
+$¶	 [$¶] PU <<<
+</s>
+<s>
+A	 [o] DET F S <artd> @>N
+diretoria	 [diretoria] N F S @SUBJ>
+de	 [de] PRP <sam-> @N<
+o	 [o] DET M S <artd> <-sam> @>N
+Palmeiras	 [palmeira] <prop> N F P @P<
+pediu	 [pedir] V PS 3S IND VFIN <fmc> @FMV
+a	 [a] PRP <sam-> @<PIV
+a	 [o] DET F S <artd> <-sam> @>N
+Federação=Paulista=de=Futebol	 [Federação=Paulista=de=Futebol] PROP F S @P<
+o	 [o] DET M S <artd> @>N
+adiamento	 [adiamento] N M S @<ACC
+de	 [de] PRP <sam-> @N<
+as	 [o] DET F P <artd> <-sam> @>N
+duas	 [dois] NUM F P <card> @>N
+primeiras	 [primeiro] ADJ F P <NUM-ord> @>N
+partidas	 [partida] N F P @P<
+de	 [de] PRP <sam-> @N<
+o	 [o] DET M S <artd> <-sam> @>N
+Campeonato=Paulista	 [Campeonato=Paulista] PROP M S @P<
+e	 [e] KC @CO
+só	 [só] ADV @<ADVL
+estrear	 [estrear] V INF @IMV
+dia	 [dia] N M S @<ADVL
+29	 [29] NUM M/F P <card> @N<
+contra	 [contra] PRP @N<
+o	 [o] DET M S <artd> @>N
+Bragantino	 [bragantino] <prop> <n> ADJ M S @P<
+$,
+em	 [em] PRP @<ADVL
+Bragança=Paulista	 [Bragança=Paulista] PROP M S @P<
+$.	 [$.] PU <<<
+$¶	 [$¶] PU <<<
+</s>
+<s>
+O	 [o] DET M S <artd> @>N
+Palmeiras	 [palmeira] <prop> N F P @SUBJ>
+alega	 [alegar] V PR 3S IND VFIN <fmc> @FMV
+que	 [que] KS @SUB @#FS-<ACC
+os	 [o] DET M P <artd> @>N
+jogadores	 [jogador] N M P @SUBJ>
+só	 [só] ADV @ADVL>
+voltam	 [voltar] V PR 3P IND VFIN @FMV
+de	 [de] PRP <sam-> @<ADVL
+as	 [o] DET F P <artd> <-sam> @>N
+férias	 [féria] N F P @P<
+em	 [em] PRP <sam-> @<ADVL
+o	 [o] DET M S <artd> <-sam> @>N
+dia	 [dia] N M S @P<
+19	 [19] NUM M/F P <card> @N<
+e	 [e] <co-fmc> <co-vfin> KC @CO
+não	 [não] ADV @ADVL>
+poderiam	 [poder] V COND 3P VFIN <fmc> @FAUX
+estrear	 [estrear] V INF @IMV @#ICL-AUX<
+em	 [em] PRP <sam-> @<ADVL
+o	 [o] DET M S <artd> <-sam> @>N
+dia	 [dia] N M S @P<
+23	 [23] NUM M/F P @N< <card> @<ACC
+$.	 [$.] PU <<<
+$¶	 [$¶] PU <<<
+</s>
+<s>
+Portuguesa	 [português] N F S @NPHR
+$¶	 [$¶] PU <<<
+</s>
+<s>
+Fito=Neves	 [Fito=Neves] PROP M S @SUBJ>
+reintegra	 [reintegrar] V PR 3S IND VFIN <fmc> @FMV
+Vladimir	 [Vladimir] PROP M/F S @<ACC
+e	 [e] KC @CO
+Sinval	 [Sinval] PROP M/F S @<ACC
+$¶	 [$¶] PU <<<
+</s>
+<s>
+O	 [o] DET M S <artd> @>N
+técnico	 [técnico] N M S @SUBJ>
+Fito=Neves	 [Fito=Neves] PROP M S @N<
+pediu	 [pedir] V PS 3S IND VFIN <fmc> @FMV
+a	 [o] DET F S <artd> @>N
+reintegração	 [reintegração] N F S @<ACC
+de	 [de] PRP <sam-> @N<
+o	 [o] DET M S <artd> <-sam> @>N
+zagueiro	 [zagueiro] N M S @P<
+Vladimir	 [Vladimir] PROP M S @N<
+e	 [e] <co-vfin> KC @CO
+de	 [de] PRP <sam-> @N<
+o	 [o] DET M S <artd> <-sam> @>N
+atacante	 [atacante] N M S @P<
+Sinval	 [Sinval] PROP M S @N<
+$,
+que	 [que] KS @SUB @#FS-<ADVL
+disputaram	 [disputar] V PS/MQP 3P IND VFIN @FMV
+o	 [o] DET M S <artd> @>N
+Campeonato=Brasileiro	 [Campeonato=Brasileiro] PROP M S @<ACC
+por	 [por] PRP <sam-> @<ADVL
+o	 [o] DET M S <artd> <-sam> @>N
+Internacional	 [Internacional] PROP F S @P<
+$(	 [$(] PU
+RS	 [RS] PROP M S @N<PRED
+$)	 [$)] PU
+e	 [e] KC @CO
+Botafogo	 [Botafogo] PROP M/F S @<ACC
+$(	 [$(] PU
+RJ	 [RJ] PROP M S @N<PRED
+$)	 [$)] PU
+$,
+respectivamente	 [respectivamente] ADV @<ADVL
+$.	 [$.] PU <<<
+$¶	 [$¶] PU <<<
+</s>
+<s>
+Os	 [o] DET M P <artd> @>N
+dois	 [dois] NUM M P <card> @SUBJ>
+ainda	 [ainda] ADV @ADVL>
+precisam	 [precisar] V PR 3P IND VFIN <fmc> @FMV
+renovar	 [renovar] V INF @IMV @#ICL-<ACC
+seus	 [seu] DET M P <si> <poss 3S> @>N
+contratos	 [contrato] N M P @<ACC
+com	 [com] PRP @<ADVL
+o	 [o] DET M S <artd> @>N
+clube	 [clube] N M S @P<
+$.	 [$.] PU <<<
+$¶	 [$¶] PU <<<
+</s>
+<s>
+Cruzeiro	 [cruzeiro] N M S @NPHR
+$¶	 [$¶] PU <<<
+</s>
+<s>
+Time	 [time] N M S @SUBJ>
+contrata	 [contratar] V PR 3S IND VFIN <fmc> @FMV
+goleiro	 [goleiro] N M S @<ACC
+argentino	 [argentino] ADJ M S @N<
+$¶	 [$¶] PU <<<
+</s>
+<s>
+O	 [o] DET M S <artd> @>N
+Cruzeiro	 [cruzeiro] <prop> N M S @SUBJ>
+contratou	 [contratar] V PS 3S IND VFIN <fmc> @FMV
+o	 [o] DET M S <artd> @>N
+goleiro	 [goleiro] N M S @<ACC
+Roberto=Bonano	 [Roberto=Bonano] PROP M S @N<
+$,
+de	 [de] PRP <sam-> @N<PRED
+o	 [o] DET M S <artd> <-sam> @>N
+Rosário=Central	 [Rosário=Central] PROP M S @P<
+$,
+de	 [de] PRP <sam-> @N<PRED
+a	 [o] DET F S <artd> <-sam> @>N
+Argentina	 [Argentina] PROP F S @P<
+$.	 [$.] PU <<<
+$¶	 [$¶] PU <<<
+</s>
+<s>
+O	 [o] DET M S <artd> @>N
+jogador	 [jogador] N M S @SUBJ>
+deve	 [dever] V PR 3S IND VFIN <fmc> @FAUX
+se	 [se] PERS M/F 3S ACC @ACC>-PASS <obj> @ACC>
+apresentar	 [apresentar] V INF @IMV @#ICL-AUX<
+em	 [em] PRP <sam-> @<ADVL
+os	 [o] DET M P <artd> <-sam> @>N
+próximos	 [próximo] ADJ M P @>N
+dias	 [dia] N M P @P<
+a	 [a] PRP <sam-> @<PIV
+a	 [o] DET F S <artd> <-sam> @>N
+Toca=da=Raposa	 [Toca=da=Raposa] PROP F S @P<
+$.	 [$.] PU <<<
+$¶	 [$¶] PU <<<
+</s>
+<s>
+O	 [o] DET M S <artd> @>N
+time	 [time] N M S @SUBJ>
+mineiro	 [mineiro] ADJ M S @N<
+está	 [estar] V PR 3S IND VFIN <fmc> @FAUX
+reforçando	 [reforçar] V GER @#ICL-AUX< @IMV
+a	 [o] DET F S <artd> @>N
+equipe	 [equipe] N F S @<SUBJ
+para	 [para] PRP @<ADVL
+a	 [o] DET F S <artd> @>N
+disputa	 [disputa] N F S @P<
+de	 [de] PRP <sam-> @N<
+a	 [o] DET F S <artd> <-sam> @>N
+Taça=Libertadores=da=América	 [Taça=Libertadores=da=América] PROP F S @P<
+$.	 [$.] PU <<<
+$¶	 [$¶] PU <<<
+</s>
+<s>
+O	 [o] DET M S <artd> @>N
+Cruzeiro	 [cruzeiro] <prop> N M S @SUBJ>
+está	 [estar] V PR 3S IND VFIN <fmc> @FMV
+em	 [em] PRP <sam-> @<ADVS
+o	 [o] DET M S <artd> <-sam> @>N
+mesmo	 [mesmo] DET M S <KOMP> <diff> @>N
+grupo	 [grupo] N M S @P<
+que	 [que] KS @COM @#AS-KOMP<
+Palmeiras	 [palmeira] <prop> N F P @PRED>
+$,
+Vélez=Sarsfield	 [Vélez=Sarsfield] PROP M/F S @APP
+e	 [e] KC @CO
+Boca=Juniors	 [Boca=Juniors] PROP F S @APP
+$,
+de	 [de] PRP <sam-> @N<PRED
+a	 [o] DET F S <artd> <-sam> @>N
+Argentina	 [Argentina] PROP F S @P<
+$.	 [$.] PU <<<
+$¶	 [$¶] PU <<<
+</s>
+<s>
+Mercado	 [mercado] N M S @NPHR
+$¶	 [$¶] PU <<<
+</s>
+<s>
+Luisinho	 [Luisinho] PROP M/F S @SUBJ>
+volta	 [voltar] V PR 3S IND VFIN <fmc> @FMV
+para	 [para] PRP @<PIV
+o	 [o] DET M S <artd> @>N
+Vasco=da=Gama	 [Vasco=da=Gama] PROP M S @P<
+$¶	 [$¶] PU <<<
+</s>
+<s>
+O	 [o] DET M S <artd> @>N
+volante	 [volante] N M S @SUBJ>
+Luisinho	 [Luisinho] PROP M S @N<
+$,
+que	 [que] SPEC M/F S @SUBJ> <rel> @#FS-N<
+joga	 [jogar] V PR 3S IND VFIN @FMV
+em	 [em] PRP <sam-> @<ADVL
+o	 [o] DET M S <artd> <-sam> @>N
+Celta	 [celta] <prop> N M S @P<
+$,
+de	 [de] PRP <sam-> @N<PRED
+a	 [o] DET F S <artd> <-sam> @>N
+Espanha	 [Espanha] PROP F S @P<
+$,
+deve	 [dever] V PR 3S IND VFIN <fmc> @FAUX
+voltar	 [voltar] V INF @IMV @#ICL-AUX<
+para	 [para] PRP @<PIV
+o	 [o] DET M S <artd> @>N
+Vasco=da=Gama	 [Vasco=da=Gama] PROP M S @P<
+$,
+clube	 [clube] N M S @N<PRED
+em	 [em] PRP @ADVL>
+que	 [que] KS @SUB @#FS-<ACC
+foi	 [ser] V PS 3S IND VFIN @FMV
+bicampeão	 [bicampeão] N M S @<SC
+carioca	 [carioca] ADJ M S @N<
+$,
+92	 [92] NUM M/F P <card> @<ACC
+e	 [e] KC @CO
+93	 [93] NUM M/F P <card> @<ACC
+$.	 [$.] PU <<<
+$¶	 [$¶] PU <<<
+</s>
+<s>
+O	 [o] DET M S <artd> @>N
+Flamengo	 [flamengo] <prop> N M S @SUBJ>
+tenta	 [tentar] V PR 3S IND VFIN <fmc> @FMV
+contratar	 [contratar] V INF @IMV @#ICL-<ACC
+Ozias	 [Ozias] PROP M S @<ACC
+$,
+artilheiro	 [artilheiro] N M S @N<PRED
+de	 [de] PRP <sam-> @N<
+o	 [o] DET M S <artd> <-sam> @>N
+União=São=João	 [União=São=João] PROP M S @P<
+em	 [em] PRP <sam-> @<ADVL
+o	 [o] DET M S <artd> <-sam> @>N
+Campeonato=Brasileiro	 [Campeonato=Brasileiro] PROP M S @P<
+$.	 [$.] PU <<<
+$¶	 [$¶] PU <<<
+</s>
+<s>
+O	 [o] DET M S <artd> @>N
+Fluminense	 [fluminense] <prop> N M S @SUBJ>
+quer	 [querer] V PR 3S IND VFIN <fmc> @FMV
+Catê	 [Catê] PROP M/F S @<ACC
+$,
+de	 [de] PRP <sam-> @N<PRED
+o	 [o] DET M S <artd> <-sam> @>N
+São=Paulo	 [São=Paulo] PROP M S @P<
+$.	 [$.] PU <<<
+$¶	 [$¶] PU <<<
+</s>
+</TEXT>
+$¶	 [$¶] PU <<<
+</DOC>

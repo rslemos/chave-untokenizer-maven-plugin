@@ -1,0 +1,268 @@
+<DOC>
+<DOCNO.valor=FSP940101-073>
+<DOCID.valor=FSP940101-073>
+<DATE.valor=940101>
+<TEXT>
+<s>
+De	 [de] PRP <sam-> @ADVL
+a	 [o] DET F S <artd> <-sam> @>N
+FT	 [FT] PROP F S @P<
+$¶	 [$¶] PU <<<
+</s>
+<s>
+O	 [o] DET M S <artd> @>N
+túnel	 [túnel] N M S @SUBJ>
+Nove=de=Julho	 [Nove=de=Julho] PROP M S @N<
+será	 [ser] V FUT 3S IND VFIN <fmc> @FAUX
+interditado	 [interditar] V PCP M S @IMV @#ICL-AUX<
+para	 [para] PRP @<ADVL
+o	 [o] DET M S <artd> @>N
+trânsito	 [trânsito] N M S @P<
+de	 [de] PRP @N<
+carros	 [carro] N M P @P<
+por	 [por] PRP @<ADVL
+30	 [30] NUM M P <card> @>N
+dias	 [dia] N M P @P<
+a=partir=de	 [a=partir=de] PRP @N< <sam-> @<ADVL
+as	 [o] DET F P <-sam> <artd> @>N
+9h	 [9h] N F P @P<
+de	 [de] PRP @N<
+amanhã	 [amanhã] ADV @<ADVL
+$.	 [$.] PU <<<
+$¶	 [$¶] PU <<<
+</s>
+<s>
+A	 [o] DET F S <artd> @>N
+pista	 [pista] N F S @SUBJ>
+bairro-centro	 [bairro-centro] N M S @PRED>
+ficará	 [ficar] V FUT 3S IND VFIN <fmc> @FMV
+aberta	 [abrir] V PCP F S @<SC
+apenas	 [apenas] ADV @>P
+para	 [para] PRP @<ADVL
+a	 [o] DET F S <artd> @>N
+circulação	 [circulação] N F S @P<
+de	 [de] PRP @N<
+ônibus	 [ônibus] N M S @P<
+$,
+em	 [em] PRP @<ADVL
+mão	 [mão] N F S @P<
+dupla	 [duplo] ADJ F S @N<
+$.	 [$.] PU <<<
+$¶	 [$¶] PU <<<
+</s>
+<s>
+O	 [o] DET M S <artd> @>N
+motivo	 [motivo] N M S @SUBJ>
+de	 [de] PRP <sam-> @N<
+o	 [o] DET M S <artd> <-sam> @>N
+bloqueio	 [bloqueio] N M S @P<
+são	 [ser] V PR 3P IND VFIN <fmc> @FMV
+as	 [o] DET F P <artd> @>N
+obras	 [obra] N F P @<SC
+de	 [de] PRP @N<
+reconstrução	 [reconstrução] N F S @P<
+de	 [de] PRP <sam-> @N<
+o	 [o] DET M S <artd> <-sam> @>N
+pavimento	 [pavimento] N M S @P<
+de	 [de] PRP <sam-> @N<
+a	 [o] DET F S <artd> <-sam> @>N
+pista	 [pista] N F S @P<
+centro-bairro	 [centro-bairro] N M S @PRED>
+e	 [e] KC @CO
+a	 [o] DET F S <artd> @>N
+reforma	 [reforma] N F S @PRED>
+de	 [de] PRP <sam-> @N<
+o	 [o] DET M S <artd> <-sam> @>N
+teto	 [teto] N M S @P<
+de	 [de] PRP <sam-> @N<
+o	 [o] DET M S <artd> <-sam> @>N
+túnel	 [túnel] N M S @P<
+$.	 [$.] PU <<<
+$¶	 [$¶] PU <<<
+</s>
+<s>
+O	 [o] DET M S <artd> @>N
+trânsito	 [trânsito] N M S @SUBJ>
+será	 [ser] V FUT 3S IND VFIN <fmc> @FAUX
+desviado	 [desviar] V PCP M S @IMV @#ICL-AUX<
+para	 [para] PRP @<ADVL
+as	 [o] DET F P <artd> @>N
+ruas	 [rua] N F P @P<
+laterais	 [lateral] ADJ F P @N<
+que	 [que] SPEC M/F S @ACC> <rel> @#FS-N<
+cruzam	 [cruzar] V PR 3P IND VFIN @FMV
+a	 [o] DET F S <artd> @>N
+avenida	 [avenida] N F S @<SUBJ
+Paulista	 [paulista] <prop> ADJ M/F S @PRED>
+$.	 [$.] PU <<<
+$¶	 [$¶] PU <<<
+</s>
+<s>
+Em	 [em] PRP <sam-> @ADVL>
+o	 [o] DET M S <artd> <-sam> @>N
+sentido	 [sentir] V PCP M S @>N
+centro-bairro	 [centro-bairro] N M S @P<
+$,
+o	 [o] DET M S <artd> @>N
+desvio	 [desvio] N M S @SUBJ>
+será	 [ser] V FUT 3S IND VFIN <fmc> @FMV
+por	 [por] PRP <sam-> @<SC
+as	 [o] DET F P <artd> <-sam> @>N
+ruas	 [rua] N F P @P<
+Engenheiro=Monlevade	 [Engenheiro=Monlevade] PROP F S @N<
+$,
+Carlos=Comenale	 [Carlos=Comenale] PROP M S @APP
+$,
+Peixoto=Gomide	 [Peixoto=Gomide] PROP M S @APP
+e	 [e] KC @CO
+alameda	 [alameda] N F S @<SC
+Itu	 [Itu] PROP F S @N<
+$,
+voltando	 [voltar] V GER @#ICL-<ADVL @IMV
+para	 [para] PRP @<ADVO
+a	 [o] DET F S <artd> @>N
+avenida	 [avenida] N F S @P<
+Nove=de=Julho	 [Nove=de=Julho] PROP F S @N<
+$.	 [$.] PU <<<
+$¶	 [$¶] PU <<<
+</s>
+<s>
+Em	 [em] PRP <sam-> @ADVL>
+o	 [o] DET M S <artd> <-sam> @>N
+sentido	 [sentir] V PCP M S @>N
+bairro-centro	 [bairro-centro] N M S @P<
+$,
+será	 [ser] V FUT 3S IND VFIN <fmc> @FMV
+por	 [por] PRP <sam-> @<SC
+a	 [o] DET F S <artd> <-sam> @>N
+rua	 [rua] N F S @P<
+Convenção=de=Itu	 [Convenção=de=Itu] PROP F S @N<
+$,
+alamedas	 [alameda] N F P @SUBJ>
+Jaú	 [jaú] <prop> N M S @N<PRED
+e	 [e] KC @CO
+Casa=Branca	 [Casa=Branca] PROP F S @SUBJ>
+$,
+e	 [e] KC @CO
+ruas	 [rua] N F P @PRED>
+Prof.=Otávio=Mendes	 [Prof.=Otávio=Mendes] PROP F S @N<
+e	 [e] KC @CO
+Prof.=Picarolo	 [Prof.=Picarolo] PROP M S @N<
+$,
+retornando	 [retornar] V GER @#ICL-<ADVL @IMV
+para	 [para] PRP @<ADVL
+a	 [o] DET F S <artd> @>N
+Nove=de=Julho	 [Nove=de=Julho] PROP F S @P<
+$.	 [$.] PU <<<
+$¶	 [$¶] PU <<<
+</s>
+<s>
+A	 [o] DET F S <artd> @>N
+interdição	 [interdição] N F S @SUBJ>
+foi	 [ser] V PS 3S IND VFIN <fmc> @FAUX
+programada	 [programar] V PCP F S @IMV @#ICL-AUX<
+para	 [para] PRP @<ADVL
+janeiro	 [janeiro] N M S @P<
+porque	 [porque] KS @SUB @#FS-<ADVL
+$,
+segundo	 [segundo] ADV @#AS-<ADVL <prp> <rel> @COM
+a	 [o] DET F S <artd> @>N
+CET	 [CET] PROP F S @AS<
+$(	 [$(] PU
+Companhia=de=Engenharia=de=Tráfego	 [Companhia=de=Engenharia=de=Tráfego] PROP F S @N<PRED
+$)	 [$)] PU
+$,
+o	 [o] DET M S <artd> @>N
+fluxo	 [fluxo] N M S @SUBJ>
+de	 [de] PRP @N<
+carros	 [carro] N M P @P<
+diminui	 [diminuir] V PR 3S IND VFIN @FMV
+cerca=de	 [cerca=de] ADV @>A
+30	 [30] NUM M/F P <card> @>N
+$%	 [%] N M P @<ACC	 [$%] PU
+em	 [em] PRP <sam-> @<ADVL
+esta	 [este] DET F S <dem> <-sam> @>N
+época	 [época] N F S @P<
+de	 [de] PRP <sam-> @<PIV
+o	 [o] DET M S <artd> <-sam> @>N
+ano	 [ano] N M S @P<
+$.	 [$.] PU <<<
+$¶	 [$¶] PU <<<
+</s>
+<s>
+Normalmente	 [normalmente] ADV @ADVL>
+$,
+o	 [o] DET M S <artd> @>N
+tráfego	 [tráfego] N M S @SUBJ>
+registrado	 [registrado] ADJ M S @N<
+em	 [em] PRP <sam-> @N<
+os	 [o] DET M P <artd> <-sam> @>N
+horários	 [horário] N M P @P<
+de	 [de] PRP @N<
+pico	 [pico] N M S @P<
+em	 [em] PRP <sam-> @N<
+a	 [o] DET F S <artd> <-sam> @>N
+avenida	 [avenida] N F S @P<
+Nove=de=Julho	 [Nove=de=Julho] PROP F S @N<
+é	 [ser] V PR 3S IND VFIN <fmc> @FMV
+de	 [de] PRP @<SC
+4.000	 [4.000] NUM M P <card> @>N
+veículos	 [veículo] N M P @P<
+por=hora	 [por=hora] ADV @<ADVL
+$.	 [$.] PU <<<
+$¶	 [$¶] PU <<<
+</s>
+<s>
+Mesmo	 [mesmo] ADV <quant> @>P
+com	 [com] PRP @ADVL> @PRED>
+a	 [o] DET F S <artd> @>N
+redução	 [redução] N F S @P<
+$,
+a	 [o] DET F S <artd> @>N
+CET	 [CET] PROP F S @SUBJ>
+prevê	 [prever] V PR 3S IND VFIN <fmc> @FMV
+lentidão	 [lentidão] N F S @<ACC
+em	 [em] PRP <sam-> @<ADVL
+o	 [o] DET M S <artd> <-sam> @>N
+trânsito	 [trânsito] N M S @P<
+$.	 [$.] PU <<<
+$¶	 [$¶] PU <<<
+</s>
+<s>
+O	 [o] DET M S <artd> @>N
+engenheiro	 [engenheiro] N M S @SUBJ>
+de	 [de] PRP <sam-> @N<
+a	 [o] DET F S <artd> <-sam> @>N
+CET=Luiz=Carlos=Santos=Cunha	 [CET=Luiz=Carlos=Santos=Cunha] PROP F S @P<
+aconselha	 [aconselhar] V PR 3S IND VFIN <fmc> @FMV
+a	 [a] PRP <sam-> @<ADVL
+os	 [o] DET M P <artd> <-sam> @>N
+motoristas	 [motorista] N M P @P<
+a	 [o] DET F S <artd> @>N
+adoção	 [adoção] N F S @<ACC
+de	 [de] PRP @N<
+caminhos	 [caminho] N M P @P<
+alternativos	 [alternativo] ADJ M P @N<
+$,
+como	 [como] ADV @#AS-<ADVL <prp> <rel> @COM
+os	 [o] DET M P <artd> @>N
+corredores	 [corredor] N M P @AS<
+de	 [de] PRP <sam-> @N<
+a	 [o] DET F S <artd> <-sam> @>N
+23	 [23] NUM F P <card> @<ADVL
+de	 [de] PRP @N<
+Maio	 [maio] N M S @P<
+$,
+Rubem=Berta	 [Rubem=Berta] PROP F S @<ACC
+$,
+Consolação	 [consolação] N F S @N<PRED
+$,
+Rebouças	 [Rebouças] PROP M/F S @<ACC
+e	 [e] KC @CO
+Brigadeiro=Luís=Antônio	 [Brigadeiro=Luís=Antônio] PROP M S @<ACC
+$.	 [$.] PU <<<
+$¶	 [$¶] PU <<<
+</s>
+</TEXT>
+$¶	 [$¶] PU <<<
+</DOC>

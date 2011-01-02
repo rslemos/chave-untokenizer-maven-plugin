@@ -1,0 +1,331 @@
+<DOC>
+<DOCNO.valor=FSP940101-097>
+<DOCID.valor=FSP940101-097>
+<DATE.valor=940101>
+<TEXT>
+<s>
+De	 [de] PRP <sam-> @ADVL
+as	 [o] DET F P <artd> <-sam> @>N
+agências=internacionais	 [agência=internacional] N F P @P<
+$¶	 [$¶] PU <<<
+</s>
+<s>
+O	 [o] DET M S <artd> @>N
+Chicago=Bulls	 [Chicago=Bulls] PROP M S @SUBJ>
+perdeu	 [perder] V PS 3S IND VFIN <fmc> @FMV
+uma	 [um] DET F S <arti> @>N
+invencibilidade	 [invencibilidade] N F S @<ACC
+de	 [de] PRP @N<
+dez	 [dez] NUM F P <card> @>N
+partidas	 [partida] N F P @P<
+a	 [a] PRP <sam-> @<ADVL
+o	 [o] DET M S <artd> <-sam> @>N
+ser	 [ser] V INF @IAUX @#ICL-P<
+derrotado	 [derrotar] V PCP M S @IMV @#ICL-AUX<
+de	 [de] PRP @<ADVL
+forma	 [forma] N F S @P<
+humilhante	 [humilhante] ADJ F S @N<
+por	 [por] PRP <sam-> @N<
+o	 [o] DET M S <artd> <-sam> @>N
+Charlotte=Hornets	 [Charlotte=Hornets] PROP M S @P<
+$,
+quinta-feira	 [quinta-feira] N F S @N<PRED
+a	 [a] PRP <sam-> @<ADVL
+a	 [o] DET F S <artd> <-sam> @>N
+noite	 [noite] N F S @P<
+$,
+por	 [por] PRP @<ADVL
+115=a=95	 [115=a=95] NUM M/F P @P<
+$.	 [$.] PU <<<
+$¶	 [$¶] PU <<<
+</s>
+<s>
+Os	 [o] DET M P <artd> @>N
+Hornets	 [Hornets] PROP M S @SUBJ>
+$,
+que	 [que] SPEC M/F S @ACC> <rel> @#FS-N<
+atuaram	 [atuar] V PS/MQP 3P IND VFIN @FMV
+em=casa	 [em=casa] ADV @<ADVL
+$,
+venceram	 [vencer] V PS/MQP 3P IND VFIN <fmc> @FMV
+sem	 [sem] PRP @<ADVL
+seus	 [seu] DET M P <si> <poss 3S> @>N
+dois	 [dois] NUM M P <card> @>N
+principais	 [principal] ADJ M P <SUP> @>N
+jogadores	 [jogador] N M P @P<
+$,
+Larry=Johnson	 [Larry=Johnson] PROP M/F S @P< @<ACC
+e	 [e] KC @CO
+Alonzo=Mourning	 [Alonzo=Mourning] PROP M S @P< @<ACC
+$,
+ambos	 [ambos] DET M P <quant> @N<PRED
+contundidos	 [contundir] V PCP M P @N<PRED
+$.	 [$.] PU <<<
+$¶	 [$¶] PU <<<
+</s>
+<s>
+Em=contrapartida	 [em=contrapartida] ADV @ADVL>
+$,
+Horace=Grant	 [Horace=Grant] PROP F S @SUBJ>
+$,
+de	 [de] PRP <sam-> @N<PRED
+os	 [o] DET M P <artd> <-sam> @>N
+Bulls	 [Bulls] PROP M S @P<
+$,
+também	 [também] ADV @>A
+lesionado	 [lesionado] ADJ M S @N<PRED	 [lesionar] V PCP M S @N<PRED
+$,
+foi	 [ser] V PS 3S IND VFIN <fmc> @FMV
+outra	 [outro] DET F S <KOMP> <diff> @>N
+ausência	 [ausência] N F S @<SC
+em	 [em] PRP <sam-> @N<
+a	 [o] DET F S <artd> <-sam> @>N
+partida	 [partida] N F S @P<
+$.	 [$.] PU <<<
+$¶	 [$¶] PU <<<
+</s>
+<s>
+Dell=Curry	 [Dell=Curry] PROP M S @SUBJ>
+e	 [e] KC @CO
+Hersey=Hawkins	 [Hersey=Hawkins] PROP M S @SUBJ>
+foram	 [ser] V PS/MQP 3P IND VFIN <fmc> @FMV
+os	 [o] DET M P <artd> @>N
+destaques	 [destaque] N M P @<SC
+de	 [de] PRP <sam-> @N<
+os	 [o] DET M P <artd> <-sam> @>N
+Hornets	 [Hornets] PROP M S @P<
+$.	 [$.] PU <<<
+$¶	 [$¶] PU <<<
+</s>
+<s>
+Curry	 [curry] N M S @SUBJ>
+anotou	 [anotar] V PS 3S IND VFIN <fmc> @FMV
+28	 [28] NUM M P <card> @>N
+pontos	 [ponto] N M P @<ACC
+$(	 [$(] PU
+5	 [5] NUM F P <card> @>N
+cestas	 [cesta] N F P @N<PRED
+de	 [de] PRP @N<
+3	 [3] NUM M P <card> @>N
+pontos	 [ponto] N M P @P<
+$)	 [$)] PU
+$,
+enquanto=que	 [enquanto=que] KS @SUB @#FS-<ADVL
+Hawkins	 [Hawkins] PROP M/F S @SUBJ>
+marcou	 [marcar] V PS 3S IND VFIN @FMV
+26	 [26] NUM M/F P <card> @<ACC
+e	 [e] <co-fmc> <co-vfin> KC @CO
+apanhou	 [apanhar] V PS 3S IND VFIN <fmc> @FMV
+12	 [12] NUM M P <card> @>N
+rebotes	 [rebote] N M P @<ACC
+$.	 [$.] PU <<<
+$¶	 [$¶] PU <<<
+</s>
+<s>
+De	 [de] PRP <sam-> @ADVL>
+o	 [o] DET M S <artd> <-sam> @>N
+lado	 [lado] N M S @P<
+de	 [de] PRP <sam-> @N<
+o	 [o] DET M S <artd> <-sam> @>N
+Chicago	 [Chicago] PROP M S @P<
+$,
+Scottie=Pippen	 [Scottie=Pippen] PROP M S @SUBJ>
+foi	 [ser] V PS 3S IND VFIN <fmc> @FMV
+o	 [o] DET M S <artd> @>N
+cestinha	 [cestinha] N M S @<SC
+de	 [de] PRP <sam-> @N<
+o	 [o] DET M S <artd> <-sam> @>N
+time	 [time] N M S @P<
+$,
+com	 [com] PRP @<ADVL
+23	 [23] NUM M P <card> @>N
+pontos	 [ponto] N M P @P<
+$	 [$] PU
+13	 [13] NUM M P <card> @>N
+rebotes	 [rebote] N M P @<SC
+$.	 [$.] PU <<<
+$¶	 [$¶] PU <<<
+</s>
+<s>
+O	 [o] DET M S <artd> @>N
+croata	 [croata] N M S @SUBJ>
+Toni=Kukoc	 [Toni=Kukoc] PROP M S @N<
+$,
+que	 [que] SPEC M/F S @ACC> <rel> @#FS-N<
+em	 [em] PRP <sam-> @ADVL>
+os	 [o] DET M P <artd> <-sam> @>N
+dois	 [dois] NUM M P <card> @>N
+últimos	 [último] ADJ M P <NUM-ord> @>N
+jogos	 [jogo] N M P @P<
+decidiu	 [decidir] V PS 3S IND VFIN @FMV
+a	 [o] DET F S <artd> @>N
+partida	 [partida] N F S @<SUBJ
+a=favor=de	 [a=favor=de] PRP @N< <sam-> @<ADVL
+os	 [o] DET M P <-sam> <artd> @>N
+Bulls	 [Bulls] PROP M S @P<
+$,
+substituiu	 [substituir] V PS 3S IND VFIN <fmc> @FMV
+Grant	 [Grant] PROP M/F S @<ACC
+$.	 [$.] PU <<<
+$¶	 [$¶] PU <<<
+</s>
+<s>
+Marcou	 [marcar] V PS 3S IND VFIN <fmc> @FMV
+13	 [13] NUM M P <card> @>N
+pontos	 [ponto] N M P @<ACC
+e	 [e] <co-fmc> <co-vfin> KC @CO
+apanhou	 [apanhar] V PS 3S IND VFIN <fmc> @FMV
+7	 [7] NUM M P <card> @>N
+rebotes	 [rebote] N M P @<ACC
+$.	 [$.] PU <<<
+$¶	 [$¶] PU <<<
+</s>
+<s>
+Outra	 [outro] DET F S <KOMP> <diff> @>N
+partida	 [partida] N F S @SUBJ>
+importante	 [importante] ADJ F S @N<
+foi	 [ser] V PS 3S IND VFIN <fmc> @FMV
+o	 [o] DET M S <artd> @>N
+clássico	 [clássico] N M S @PRED>
+de	 [de] PRP <sam-> @N<
+a	 [o] DET F S <artd> <-sam> @>N
+Flórida	 [flórido] <prop> <n> ADJ F S @P<
+$,
+jogado	 [jogar] V PCP M S @IMV @#ICL-N<PRED
+em	 [em] PRP <sam-> @<ADVL
+o	 [o] DET M S <artd> <-sam> @>N
+Miami=Arena	 [Miami=Arena] PROP M S @P<
+e	 [e] KC @CO
+com	 [com] PRP @A<
+a	 [o] DET F S <artd> @>N
+popstar	 [popstar] N F S @P<
+Madonna	 [Madonna] PROP F S @N<
+em	 [em] PRP <sam-> @N<PRED
+a	 [o] DET F S <artd> <-sam> @>N
+platéia	 [platéia] N F S @P<
+$.	 [$.] PU <<<
+$¶	 [$¶] PU <<<
+</s>
+<s>
+O	 [o] DET M S <artd> @>N
+Orlando	 [Orlando] PROP M S @P<
+pouco	 [pouco] ADV <quant> @ADVL>
+se	 [se] PERS M/F 3S ACC @SUBJ>
+importou	 [importar] V PS 3S IND VFIN <fmc> @FMV
+em	 [em] PRP @<PIV
+atuar	 [atuar] V INF @IMV @#ICL-P<
+fora=de	 [fora=de] PRP @<ADVL
+casa	 [casa] N F S @P<
+e	 [e] <co-fmc> <co-vfin> KC @CO
+venceu	 [vencer] V PS 3S IND VFIN <fmc> @FMV
+por	 [por] PRP @<ADVL
+108=a=100	 [108=a=100] NUM M/F P @P<
+$.	 [$.] PU <<<
+$¶	 [$¶] PU <<<
+</s>
+<s>
+Shaquille=O'Neal	 [Shaquille=O'Neal] PROP M/F S @SUBJ>
+anotou	 [anotar] V PS 3S IND VFIN <fmc> @FMV
+27	 [27] NUM M P <card> @>N
+pontos	 [ponto] N M P @<ACC
+para	 [para] PRP @<ADVL
+o	 [o] DET M S <artd> @>N
+Magic	 [Magic] PROP M S @P<
+e	 [e] <co-fmc> <co-vfin> KC @CO
+apanhou	 [apanhar] V PS 3S IND VFIN <fmc> @FMV
+19	 [19] NUM M P <card> @>N
+rebotes	 [rebote] N M P @<ACC
+$,
+mas	 [mas] <co-fmc> <co-vfin> KC @CO
+teve	 [ter] V PS 3S IND VFIN <fmc> @FMV
+a	 [a] PRP @<ADVL
+seu	 [seu] DET M S <si> <poss 3S> @>N
+favor	 [favor] N M S @P<
+o	 [o] DET M S <artd> @>N
+fato	 [fato] N M S @<ACC
+de	 [de] PRP @N<
+seu	 [seu] DET M S <poss 3S> @>N
+marcador	 [marcador] N M S @P<
+$,
+Rony=Seikaly	 [Rony=Seikaly] PROP M/F S @APP
+$,
+ter	 [ter] V INF @IAUX
+ficado	 [ficar] V PCP @IMV @#ICL-AUX<
+de=fora	 [de=fora] ADV @<ADVL @<ADVL
+por	 [por] PRP @<SC
+estar	 [estar] V INF @IMV @#ICL-P<
+gripado	 [gripar] V PCP M S @<SC
+$.	 [$.] PU <<<
+$¶	 [$¶] PU <<<
+</s>
+<s>
+Por	 [por] PRP <sam-> @ADVL>
+o	 [o] DET M S <artd> <-sam> @>N
+Heat	 [Heat] PROP M S @P<
+$,
+Glen=Rice	 [Glen=Rice] PROP M/F S @SUBJ>
+terminou	 [terminar] V PS 3S IND VFIN <fmc> @FMV
+a	 [o] DET F S <artd> @>N
+partida	 [partida] N F S @<SUBJ
+com	 [com] PRP @<PIV
+24	 [24] NUM M P <card> @>N
+pontos	 [ponto] N M P @P<
+$.	 [$.] PU <<<
+$¶	 [$¶] PU <<<
+</s>
+<s>
+Outros=Resultados	 [Outros=Resultados] PROP M/F S @SUBJ>
+$	 [$] PU
+New=York	 [New=York] PROP M/F S @SUBJ>
+102	 [102] NUM M P <card> @>N
+x	 [x] N M S @PRED>
+84	 [84] NUM M/F P <card> @>N
+Washington	 [Washington] PROP M/F S @APP
+$,
+Detroit	 [Detroit] PROP M/F S @SUBJ>
+91	 [91] NUM M P <card> @>N
+x	 [x] N M S @PRED>
+97	 [97] NUM M/F P <card> @ACC>
+Sacramento	 [sacramentar] V PR 1S IND VFIN <fmc> @FMV
+$,
+Indiana	 [Indiana] PROP M S @APP
+82	 [82] NUM M P <card> @>N
+x	 [x] N M S @PRED>
+107	 [107] NUM M P <card> @>N
+San=Antonio	 [San=Antonio] PROP M S @APP
+$,
+Milwaukee	 [Milwaukee] PROP M/F S @APP
+105	 [105] NUM M P <card> @>N
+x	 [x] N M S @APP
+103	 [103] NUM M/F P <card> @>N
+Cleveland	 [Cleveland] PROP M/F S @APP
+$,
+Minnesota	 [Minnesota] PROP M/F S @APP
+104	 [104] NUM M P <card> @>N
+x	 [x] N M S @APP
+110	 [110] NUM M/F P <card> @>N
+Houston	 [Houston] PROP M/F S @APP
+$,
+Denver	 [Denver] PROP M/F S @APP
+101	 [101] NUM M P <card> @>N
+x	 [x] N M S @APP
+96	 [96] NUM M/F P <card> @>N
+Golden=State	 [Golden=State] PROP M/F S @APP
+$,
+Phoenix	 [Phoenix] PROP M/F S @APP
+119	 [119] NUM M P <card> @>N
+x	 [x] N M S @APP
+107	 [107] NUM M/F P <card> @>N
+Philadelphia	 [Philadelphia] PROP M/F S @APP
+e	 [e] KC @CO
+L.A.=Clippers	 [L.A.=Clippers] PROP M/F S @APP
+111	 [111] NUM M P <card> @>N
+x	 [x] N M S @APP
+119	 [119] NUM M/F P <card> @>N
+Boston	 [Boston] PROP M/F S @APP
+$.	 [$.] PU <<<
+$¶	 [$¶] PU <<<
+</s>
+</TEXT>
+$¶	 [$¶] PU <<<
+</DOC>
