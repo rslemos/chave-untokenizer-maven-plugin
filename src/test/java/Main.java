@@ -1,6 +1,9 @@
 import java.io.BufferedReader;
+import java.io.IOException;
 import java.io.InputStream;
 import java.io.InputStreamReader;
+import java.io.PrintStream;
+import java.net.MalformedURLException;
 import java.net.URL;
 import java.nio.charset.Charset;
 import java.util.regex.Matcher;
@@ -30,14 +33,27 @@ public class Main {
 
 	private static final Pattern PATTERN_CG_PENTRY = Pattern.compile("^(\\$¶)\t(.*)$");
 
-	private static Matcher innerMatcher = null;
+	private Matcher innerMatcher = null;
+
+	private URL cg;
+
+	private PrintStream out;
+
+	public Main(URL cg, PrintStream out) {
+		this.cg = cg;
+		this.out = out;
+	}
 
 	public static void main(String[] args) throws Exception {
 		URL cg = Main.class.getResource("/pt_BR/CHAVEFolha/1994/01/01/124.cg");
-		URL sgml = new URL(cg, "124.sgml");
+		new Main(cg, System.out).parse();
+	}
+
+	private void parse() throws Exception {
+		String cgPath = cg.getPath();
+		String sgmlPath = cgPath.substring(0, cgPath.indexOf(".cg")) + ".sgml";
 		
-		System.out.printf("cg = %s\n", cg);
-		System.out.printf("sgml = %s\n", sgml);
+		URL sgml = new URL(cg, sgmlPath);
 		
 		InputStream cgStream = cg.openStream();
 		InputStream sgmlStream = sgml.openStream();
@@ -173,12 +189,7 @@ public class Main {
 					if (key[j] == '$')
 						j++;
 				} else {
-					System.err.printf("Mismatch at (%d, %d)\n", i, j);
-					System.err.printf("text = %s\n", new String(cs));
-					System.err.printf("key = %s\n", new String(key));
-					System.err.printf("next = %d\n", next);
-					Exception up = new Exception();
-					throw up; // ha ha
+					bailOut(cs, next, key, j, i);
 				}
 				
 			}
@@ -187,12 +198,7 @@ public class Main {
 				// match!
 				emitToken(line, next, entryMatcher);
 			} else {
-				System.err.printf("Mismatch at (eol, %d)\n", j);
-				System.err.printf("text = %s\n", new String(cs));
-				System.err.printf("key = %s\n", new String(key));
-				System.err.printf("next = %d\n", next);
-				Exception up = new Exception();
-				throw up; // ha ha
+				bailOut(cs, next, key, j, cs.length);
 			}
 
 			cgLine = cgLines.readLine();
@@ -206,24 +212,33 @@ public class Main {
 		
 		match(line, PATTERN_SGML_S_TEXT);
 		match(line = sgmlLines.readLine(), PATTERN_SGML_S_DOC);
-		
 	}
 
-	private static void emitToken(String text, int from, Matcher entryMatcher) {
+	private void bailOut(char[] cs, int from, char[] key, int j, int to) throws Exception {
+		StringBuilder builder = new StringBuilder();
+		builder.append("Mismatch at (").append(to).append(", ").append(j).append(")\n");
+		builder.append("text = ").append(new String(cs)).append("\n");
+		builder.append("key = ").append(new String(key)).append("\n");
+		builder.append("next = ").append(from).append("\n");
+		Exception up = new Exception(builder.toString());
+		throw up; // ha ha
+	}
+
+	private void emitToken(String text, int from, Matcher entryMatcher) {
 		emitToken(text, from, text.length(), entryMatcher);
 	}
 
-	private static void emitToken(Matcher entryMatcher) {
+	private void emitToken(Matcher entryMatcher) {
 		emitToken("\n", 0, entryMatcher);
 	}
 
-	private static void emitToken(String text, int from, int to, Matcher entryMatcher) {
+	private void emitToken(String text, int from, int to, Matcher entryMatcher) {
 		String attributes = entryMatcher.group(2);
 		if (innerMatcher == null)
-			System.out.printf("<token a=\"%s\">%s</token>", escape(attributes), text.substring(from, to));
+			out.printf("<token a=\"%s\">%s</token>", escape(attributes), text.substring(from, to));
 		else {
 			int prefixLength = innerMatcher.group(1).length();
-			System.out.printf("<token a=\"%s\"><token a=\"%s\">%s</token>%s</token>", escape(attributes), escape(innerMatcher.group(2)), text.substring(from, from + prefixLength), text.substring(from + prefixLength, to));
+			out.printf("<token a=\"%s\"><token a=\"%s\">%s</token>%s</token>", escape(attributes), escape(innerMatcher.group(2)), text.substring(from, from + prefixLength), text.substring(from + prefixLength, to));
 			innerMatcher = null;
 		}
 	}
