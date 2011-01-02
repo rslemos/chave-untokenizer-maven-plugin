@@ -188,7 +188,7 @@ public class Main {
 					j = 0;
 					if (key[j] == '$')
 						j++;
-				} else if(j > 0 && key[j-1] == 'd' && key[j] == 'e' && key.length == j + 1) {
+				} else if(j > 0 && toLowerCase(key[j-1]) == 'd' && toLowerCase(key[j]) == 'e' && key.length == j + 1) {
 					emitToken(line, next, i, entryMatcher);
 					next = i;
 					i--;
