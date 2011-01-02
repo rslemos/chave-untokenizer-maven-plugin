@@ -6,6 +6,7 @@ import static org.mockito.Mockito.mock;
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
+import java.io.PrintStream;
 import java.io.Reader;
 import java.io.StringReader;
 import java.net.MalformedURLException;
@@ -33,9 +34,7 @@ public class ParserUnitTest {
 
 	@Test
 	public void testSingleWord() throws Exception {
-		String sgmlText = "word";
-		String cgLine = "word\t lorem ipsum\n";
-		verifyParse(buildCG(reader(cgLine)), buildSGML(sgmlText));
+		verifyParse(buildCG(buildCGSentence(buildCGLine("word", "lorem ipsum"))), buildSGML("word"));
 	}
 
 	@Test
@@ -88,6 +87,20 @@ public class ParserUnitTest {
 			);
 		
 		return concat(header, contents, trailer);
+	}
+
+	private static String buildCGLine(String key, String attributes) {
+		return key + "\t " + attributes;
+	}
+	
+	private static Reader buildCGSentence(String... lines) {
+		Reader[] readers = new Reader[lines.length];
+		
+		for (int i = 0; i < lines.length; i++) {
+			readers[i] = reader(lines[i] + "\n");
+		}
+		
+		return concat(readers);
 	}
 
 	private static Reader buildCG(Reader... sentences) {
@@ -166,4 +179,16 @@ public class ParserUnitTest {
 		};
 	}
 
+	private static void printReader(Reader reader, PrintStream stream) {
+		try {
+			char[] buffer = new char[8192];
+			int size;
+			
+			while ((size = reader.read(buffer)) != -1)
+				stream.append(new String(buffer, 0, size));
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
+		
+	}
 }
