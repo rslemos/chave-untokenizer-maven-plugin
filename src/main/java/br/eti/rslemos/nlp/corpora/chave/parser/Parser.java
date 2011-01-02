@@ -6,6 +6,7 @@ import static java.lang.Character.toLowerCase;
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.Reader;
+import java.util.ArrayList;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
@@ -49,10 +50,16 @@ public class Parser {
 	}
 
 	private void parse0(Reader cgText, Reader sgmlText) throws IOException, ParserException {
-		BufferedReader cgLines = new BufferedReader(cgText);
+		BufferedReader bcgLines = new BufferedReader(cgText);
 		BufferedReader sgmlLines = new BufferedReader(sgmlText);
 		
-		String line, cgLine;
+		ArrayList<String> cgLines = new ArrayList<String>();
+		String l;
+		while ((l = bcgLines.readLine()) != null)
+			cgLines.add(l);
+		
+		int ccgLine = -1;
+		String line;
 		
 		match(line = sgmlLines.readLine(), PATTERN_SGML_DOC);
 		String docno = matchAndExtract(line = sgmlLines.readLine(), PATTERN_SGML_DOCNO);
@@ -60,14 +67,14 @@ public class Parser {
 		String date = matchAndExtract(line = sgmlLines.readLine(), PATTERN_SGML_DATE);
 		match(line = sgmlLines.readLine(), PATTERN_SGML_TEXT);
 		
-		match(cgLine = cgLines.readLine(), PATTERN_CG_DOC);
-		String cgdocno = matchAndExtract(cgLine = cgLines.readLine(), PATTERN_CG_DOCNO);
-		String cgdocid = matchAndExtract(cgLine = cgLines.readLine(), PATTERN_CG_DOCID);
-		String cgdate = matchAndExtract(cgLine = cgLines.readLine(), PATTERN_CG_DATE);
-		match(cgLine = cgLines.readLine(), PATTERN_CG_TEXT);
+		match(cgLines.get(++ccgLine), PATTERN_CG_DOC);
+		String cgdocno = matchAndExtract(cgLines.get(++ccgLine), PATTERN_CG_DOCNO);
+		String cgdocid = matchAndExtract(cgLines.get(++ccgLine), PATTERN_CG_DOCID);
+		String cgdate = matchAndExtract(cgLines.get(++ccgLine), PATTERN_CG_DATE);
+		match(cgLines.get(++ccgLine), PATTERN_CG_TEXT);
 
 		while( (line = sgmlLines.readLine()) != null && !PATTERN_SGML_S_TEXT.matcher(line).matches()) {
-			match(cgLine = cgLines.readLine(), PATTERN_CG_S);
+			match(cgLines.get(++ccgLine), PATTERN_CG_S);
 			
 			char[] cs = line.toCharArray();
 			
@@ -76,8 +83,7 @@ public class Parser {
 			char[] key;
 			int j;
 
-			cgLine = cgLines.readLine();
-			entryMatcher = PATTERN_CG_ENTRY.matcher(cgLine);
+			entryMatcher = PATTERN_CG_ENTRY.matcher(cgLines.get(++ccgLine));
 			entryMatcher.matches();
 			sKey = entryMatcher.group(1);
 			key = sKey.toCharArray();
@@ -102,8 +108,7 @@ public class Parser {
 					}
 					next = i;
 					
-					cgLine = cgLines.readLine();
-					entryMatcher = PATTERN_CG_ENTRY.matcher(cgLine);
+					entryMatcher = PATTERN_CG_ENTRY.matcher(cgLines.get(++ccgLine));
 					entryMatcher.matches();
 					sKey = entryMatcher.group(1);
 					key = sKey.toCharArray();
@@ -129,8 +134,7 @@ public class Parser {
 					
 					i--;
 					
-					cgLine = cgLines.readLine();
-					entryMatcher = PATTERN_CG_ENTRY.matcher(cgLine);
+					entryMatcher = PATTERN_CG_ENTRY.matcher(cgLines.get(++ccgLine));
 					entryMatcher.matches();
 					sKey = entryMatcher.group(1);
 					key = sKey.toCharArray();
@@ -144,8 +148,7 @@ public class Parser {
 					next = i;
 					i--;
 					
-					cgLine = cgLines.readLine();
-					entryMatcher = PATTERN_CG_ENTRY.matcher(cgLine);
+					entryMatcher = PATTERN_CG_ENTRY.matcher(cgLines.get(++ccgLine));
 					entryMatcher.matches();
 					sKey = entryMatcher.group(1);
 					key = sKey.toCharArray();
@@ -157,8 +160,7 @@ public class Parser {
 					next = i;
 					i--;
 					
-					cgLine = cgLines.readLine();
-					entryMatcher = PATTERN_CG_ENTRY.matcher(cgLine);
+					entryMatcher = PATTERN_CG_ENTRY.matcher(cgLines.get(++ccgLine));
 					entryMatcher.matches();
 					sKey = entryMatcher.group(1);
 					key = sKey.toCharArray();
@@ -172,8 +174,7 @@ public class Parser {
 					next = i;
 					i--;
 					
-					cgLine = cgLines.readLine();
-					entryMatcher = PATTERN_CG_ENTRY.matcher(cgLine);
+					entryMatcher = PATTERN_CG_ENTRY.matcher(cgLines.get(++ccgLine));
 					entryMatcher.matches();
 					sKey = entryMatcher.group(1);
 					key = sKey.toCharArray();
@@ -182,15 +183,14 @@ public class Parser {
 						j++;
 					
 				} else if (key[j] == '¶') {
-					entryMatcher = PATTERN_CG_PENTRY.matcher(cgLine);
+					entryMatcher = PATTERN_CG_PENTRY.matcher(cgLines.get(ccgLine));
 					entryMatcher.matches();
 					emitToken("", 0, entryMatcher);
-					match(cgLine = cgLines.readLine(), PATTERN_CG_S_S);
-					match(cgLine = cgLines.readLine(), PATTERN_CG_S);
+					match(cgLines.get(++ccgLine), PATTERN_CG_S_S);
+					match(cgLines.get(++ccgLine), PATTERN_CG_S);
 					i--;
 					
-					cgLine = cgLines.readLine();
-					entryMatcher = PATTERN_CG_ENTRY.matcher(cgLine);
+					entryMatcher = PATTERN_CG_ENTRY.matcher(cgLines.get(++ccgLine));
 					entryMatcher.matches();
 					sKey = entryMatcher.group(1);
 					key = sKey.toCharArray();
@@ -210,12 +210,11 @@ public class Parser {
 				bailOut(cs, next, key, j, cs.length);
 			}
 
-			cgLine = cgLines.readLine();
-			entryMatcher = PATTERN_CG_PENTRY.matcher(cgLine);
+			entryMatcher = PATTERN_CG_PENTRY.matcher(cgLines.get(++ccgLine));
 			entryMatcher.matches();
 			emitToken(entryMatcher);
 			
-			match(cgLine = cgLines.readLine(), PATTERN_CG_S_S);
+			match(cgLines.get(++ccgLine), PATTERN_CG_S_S);
 			
 		}
 		
