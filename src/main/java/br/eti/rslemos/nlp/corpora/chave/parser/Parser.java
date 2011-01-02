@@ -5,8 +5,6 @@ import static java.lang.Character.toLowerCase;
 
 import java.io.BufferedReader;
 import java.io.IOException;
-import java.io.InputStreamReader;
-import java.io.PrintStream;
 import java.io.Reader;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
@@ -45,14 +43,12 @@ public class Parser {
 		try {
 			parse0(cgText, sgmlText);
 			return true;
-		} catch (IOException e) {
-			throw e;
-		} catch (Exception e) {
+		} catch (ParserException e) {
 			return false;
 		}
 	}
 
-	private void parse0(Reader cgText, Reader sgmlText) throws IOException, Exception {
+	private void parse0(Reader cgText, Reader sgmlText) throws IOException, ParserException {
 		BufferedReader cgLines = new BufferedReader(cgText);
 		BufferedReader sgmlLines = new BufferedReader(sgmlText);
 		
@@ -227,13 +223,13 @@ public class Parser {
 		match(line = sgmlLines.readLine(), PATTERN_SGML_S_DOC);
 	}
 
-	private void bailOut(char[] cs, int from, char[] key, int j, int to) throws Exception {
+	private void bailOut(char[] cs, int from, char[] key, int j, int to) throws ParserException {
 		StringBuilder builder = new StringBuilder();
 		builder.append("Mismatch at (").append(to).append(", ").append(j).append(")\n");
 		builder.append("text = ").append(new String(cs)).append("\n");
 		builder.append("key = ").append(new String(key)).append("\n");
 		builder.append("next = ").append(from).append("\n");
-		Exception up = new Exception(builder.toString());
+		ParserException up = new ParserException(builder.toString());
 		throw up; // ha ha
 	}
 
