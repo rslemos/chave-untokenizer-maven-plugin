@@ -7,6 +7,7 @@ import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 import java.io.PrintStream;
+import java.io.Reader;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
@@ -40,7 +41,7 @@ public class Parser {
 		this.out = out;
 	}
 
-	public boolean parse(InputStreamReader cgText, InputStreamReader sgmlText) throws IOException {
+	public boolean parse(Reader cgText, Reader sgmlText) throws IOException {
 		try {
 			parse0(cgText, sgmlText);
 			return true;
@@ -51,7 +52,7 @@ public class Parser {
 		}
 	}
 
-	private void parse0(InputStreamReader cgText, InputStreamReader sgmlText) throws IOException, Exception {
+	private void parse0(Reader cgText, Reader sgmlText) throws IOException, Exception {
 		BufferedReader cgLines = new BufferedReader(cgText);
 		BufferedReader sgmlLines = new BufferedReader(sgmlText);
 		
