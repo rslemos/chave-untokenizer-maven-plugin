@@ -48,6 +48,7 @@ public class Main {
 
 	public static void main(String[] args) throws Exception {
 		PrintStream out = new PrintStream("/dev/null");
+			//System.out;
 		
 		int total = 0;
 		int ok = 0;
@@ -195,6 +196,22 @@ public class Main {
 					j = 0;
 					if (key[j] == '$')
 						j++;
+				} else if(j > 0 && toLowerCase(key[j-1]) == 'p' && toLowerCase(key[j]) == 'o' && toLowerCase(key[j+1]) == 'r' && key.length == j + 2 && toLowerCase(cs[i]) == 'e' && toLowerCase(cs[i+1]) == 'l') {
+					// match!
+					i++; i++;
+					emitToken(line, next, i, entryMatcher);
+					next = i;
+					i--;
+					
+					cgLine = cgLines.readLine();
+					entryMatcher = PATTERN_CG_ENTRY.matcher(cgLine);
+					entryMatcher.matches();
+					sKey = entryMatcher.group(1);
+					key = sKey.toCharArray();
+					j = 0;
+					if (key[j] == '$')
+						j++;
+					
 				} else if (key[j] == '¶') {
 					entryMatcher = PATTERN_CG_PENTRY.matcher(cgLine);
 					entryMatcher.matches();
