@@ -1,19 +1,16 @@
+package br.eti.rslemos.nlp.corpora.chave.parser;
+
 import static java.lang.Character.isWhitespace;
 import static java.lang.Character.toLowerCase;
 
 import java.io.BufferedReader;
-import java.io.File;
-import java.io.InputStream;
+import java.io.IOException;
 import java.io.InputStreamReader;
 import java.io.PrintStream;
-import java.net.URL;
-import java.nio.charset.Charset;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
-public class Main {
-	private static final Charset UTF8 = Charset.forName("UTF-8");
-
+public class Parser {
 	private static final Pattern PATTERN_SGML_DOC = Pattern.compile("^<DOC>$");
 	private static final Pattern PATTERN_SGML_DOCNO = Pattern.compile("^<DOCNO>(.*)</DOCNO>$");
 	private static final Pattern PATTERN_SGML_DOCID = Pattern.compile("^<DOCID>(.*)</DOCID>$");
@@ -37,54 +34,24 @@ public class Main {
 
 	private Matcher innerMatcher = null;
 
-	private URL cg;
-
 	private PrintStream out;
 
-	public Main(URL cg, PrintStream out) {
-		this.cg = cg;
+	public Parser(PrintStream out) {
 		this.out = out;
 	}
 
-	public static void main(String[] args) throws Exception {
-		PrintStream out = new PrintStream("/dev/null");
-			//System.out;
-		
-		int total = 0;
-		int ok = 0;
-		
-		URL dir = Main.class.getResource("/pt_BR/CHAVEFolha/1994/01/01/");
-		String[] list = new File(dir.toURI()).list();
-		for (String entry : list) {
-			if (entry.endsWith(".cg")) {
-				total++;
-				URL cg = new URL(dir, entry);
-				System.out.printf("%s...", entry);
-				try {
-					new Main(cg, out).parse();
-					ok++;
-					System.out.printf("OK\n");
-				} catch (Exception e) {
-					e.printStackTrace();
-				}
-			}
+	public boolean parse(InputStreamReader cgText, InputStreamReader sgmlText) throws IOException {
+		try {
+			parse0(cgText, sgmlText);
+			return true;
+		} catch (IOException e) {
+			throw e;
+		} catch (Exception e) {
+			return false;
 		}
-		
-		System.out.printf("%d/%d\n", ok, total);
 	}
 
-	private void parse() throws Exception {
-		String cgPath = cg.getPath();
-		String sgmlPath = cgPath.substring(0, cgPath.indexOf(".cg")) + ".sgml";
-		
-		URL sgml = new URL(cg, sgmlPath);
-		
-		InputStream cgStream = cg.openStream();
-		InputStream sgmlStream = sgml.openStream();
-		
-		InputStreamReader cgText = new InputStreamReader(cgStream, UTF8);
-		InputStreamReader sgmlText = new InputStreamReader(sgmlStream, UTF8);
-		
+	private void parse0(InputStreamReader cgText, InputStreamReader sgmlText) throws IOException, Exception {
 		BufferedReader cgLines = new BufferedReader(cgText);
 		BufferedReader sgmlLines = new BufferedReader(sgmlText);
 		
