@@ -34,9 +34,9 @@ public class Parser {
 
 	private Matcher innerMatcher = null;
 
-	private PrintStream out;
+	private Handler out;
 
-	public Parser(PrintStream out) {
+	public Parser(Handler out) {
 		this.out = out;
 	}
 
