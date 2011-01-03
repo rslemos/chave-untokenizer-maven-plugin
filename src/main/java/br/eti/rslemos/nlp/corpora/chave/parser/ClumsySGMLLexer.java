@@ -5,6 +5,10 @@ import static java.lang.Character.isWhitespace;
 import java.io.IOException;
 import java.io.Reader;
 import java.nio.CharBuffer;
+import java.util.Arrays;
+import java.util.Collections;
+import java.util.HashSet;
+import java.util.Set;
 
 public class ClumsySGMLLexer {
 	public enum Event { CHARACTERS, TAG, WHITESPACE }
@@ -13,6 +17,9 @@ public class ClumsySGMLLexer {
 	private CharBuffer buffer;
 	
 	private Event next;
+	private Set<Event> filterEvents;
+	private String localName;
+	private String characters;
 
 	public ClumsySGMLLexer(Reader source) {
 		this(source, 8192);
@@ -22,38 +29,45 @@ public class ClumsySGMLLexer {
 		this.source = source;
 		this.buffer = CharBuffer.allocate(bufferSize);
 		this.buffer.flip();
+		this.filterEvents = Collections.emptySet();
 	}
 
 	public boolean hasNext() throws IOException {
 		return hasMoreData();
 	}
 
-	public Event next() {
-		char c = buffer.charAt(0);
-		if (isWhitespace(c))
-			next = Event.WHITESPACE;
-		else if (c == '<')
-			next = Event.TAG;
-		else
-			next = Event.CHARACTERS;
+	public Event next() throws IOException {
+		do {
+			characters = null;
+			localName = null;
+			
+			char c = buffer.charAt(0);
+			if (isWhitespace(c)) {
+				next = Event.WHITESPACE;
+				characters = fetchWhitespace();
+			} else if (c == '<') {
+				next = Event.TAG;
+				localName = fetchLocalName();
+			} else {
+				next = Event.CHARACTERS;
+				characters = fetchCharacters();
+			}
+			
+		} while (next != null && filterEvents.contains(next));
 		
 		return next;
 	};
 	
 	public String getCharacters() throws IOException {
-
-		switch (next) {
-		case WHITESPACE:
-			return fetchWhitespace();
-		case CHARACTERS:
-			return fetchCharacters();
-		default:
-			return null;
-		}
+		return characters; 
 	}
 
 	public String getLocalName() throws IOException {
-		return fetchLocalName();
+		return localName;
+	}
+
+	public void filter(Event... events) {
+		this.filterEvents = new HashSet<Event>(Arrays.asList(events));
 	}
 
 	private String fetchWhitespace() throws IOException {
@@ -117,4 +131,5 @@ public class ClumsySGMLLexer {
 	private boolean hasMoreData() throws IOException {
 		return buffer.hasRemaining() || loadMoreData();
 	}
+
 }
