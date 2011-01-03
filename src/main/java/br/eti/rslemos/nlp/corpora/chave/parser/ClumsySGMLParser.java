@@ -10,13 +10,18 @@ public class ClumsySGMLParser {
 	public enum Event { CHARACTERS, TAG, WHITESPACE }
 
 	private Reader source;
-	private CharBuffer buffer = CharBuffer.allocate(8192);
+	private CharBuffer buffer;
 	
 	private Event next;
 
 	public ClumsySGMLParser(Reader source) {
+		this(source, 8192);
+	}
+
+	public ClumsySGMLParser(Reader source, int bufferSize) {
 		this.source = source;
-		buffer.flip();
+		this.buffer = CharBuffer.allocate(bufferSize);
+		this.buffer.flip();
 	}
 
 	public boolean hasNext() throws IOException {
@@ -105,6 +110,9 @@ public class ClumsySGMLParser {
 	private String fetchLocalName() throws IOException {
 		// skip <
 		buffer.get();
+		if (!buffer.hasRemaining())
+			if (!loadMoreData())
+				return "";
 		
 		char c;
 		StringBuilder result = new StringBuilder();

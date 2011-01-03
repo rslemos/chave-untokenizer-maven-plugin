@@ -36,6 +36,17 @@ public class ClumsySGMLParserUnitTest {
 	}
 
 	@Test
+	public void testEmptyTag() throws Exception {
+		// the only chance for a tag to be empty is to open it at EOF
+		final String TEXT = "<";
+		
+		parser = new ClumsySGMLParser(reader(TEXT));
+		
+		assertNextIsTag("");
+		assertNextIsnot();
+	}
+
+	@Test
 	public void testWhitespaceOnly() throws Exception {
 		final String TEXT = "  \t\n\n\t\t\t\t\n\n\n\r\r\r\n\t\n\t\n    \t  \t \n \t\t\n   \r\r\n\r     ";
 		
@@ -66,6 +77,39 @@ public class ClumsySGMLParserUnitTest {
 				"textextext</TAG3></TAG2></TAG1>";
 		
 		parser = new ClumsySGMLParser(reader(TEXT));
+
+		assertNextIsTag("A TAG");
+		assertNextIsCharacters("then text");
+		assertNextIsTag("/A TAG");
+		assertNextIsWhitespace("\n");
+		assertNextIsTag("ANOTHER TAG");
+		assertNextIsCharacters("with text");
+		assertNextIsTag("/ANOTHER TAG");
+		assertNextIsWhitespace("\n");
+		assertNextIsTag("A CLOSED TAG/");
+		assertNextIsWhitespace("\n");
+		assertNextIsTag("TAG1");
+		assertNextIsTag("TAG2");
+		assertNextIsWhitespace("  \t");
+		assertNextIsTag("TAG3");
+		assertNextIsWhitespace("\n");
+		assertNextIsCharacters("textextext");
+		assertNextIsTag("/TAG3");
+		assertNextIsTag("/TAG2");
+		assertNextIsTag("/TAG1");
+		assertNextIsnot();
+
+	}
+
+	@Test
+	public void testReallisticSGMLWithReallySmallBuffer() throws Exception {
+		final String TEXT = "<A TAG>then text</A TAG>\n" +
+				"<ANOTHER TAG>with text</ANOTHER TAG>\n" +
+				"<A CLOSED TAG/>\n" +
+				"<TAG1><TAG2>  \t<TAG3>\n" +
+				"textextext</TAG3></TAG2></TAG1>";
+		
+		parser = new ClumsySGMLParser(reader(TEXT), 1);
 
 		assertNextIsTag("A TAG");
 		assertNextIsCharacters("then text");
