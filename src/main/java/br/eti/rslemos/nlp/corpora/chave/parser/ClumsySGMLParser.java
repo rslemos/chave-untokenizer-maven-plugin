@@ -25,22 +25,20 @@ public class ClumsySGMLParser {
 	}
 
 	public boolean hasNext() throws IOException {
-		if (!buffer.hasRemaining()) {
-			if (!loadMoreData()) {
-				next = null;
-				return false;
-			}
+		if (hasMoreData()) {
+			char c = buffer.charAt(0);
+			if (isWhitespace(c))
+				next = Event.WHITESPACE;
+			else if (c == '<')
+				next = Event.TAG;
+			else
+				next = Event.CHARACTERS;
+			
+			return true;
+		} else {
+			next = null;
+			return false;
 		}
-		
-		char c = buffer.charAt(0);
-		if (isWhitespace(c))
-			next = Event.WHITESPACE;
-		else if (c == '<')
-			next = Event.TAG;
-		else
-			next = Event.CHARACTERS;
-		
-		return true;
 	}
 
 	public Event next() {
@@ -55,20 +53,12 @@ public class ClumsySGMLParser {
 		case CHARACTERS:
 			return fetchCharacters();
 		default:
-				return null;
+			return null;
 		}
 	}
 
 	public String getLocalName() throws IOException {
 		return fetchLocalName();
-	}
-
-	private boolean loadMoreData() throws IOException {
-		buffer.compact();
-		source.read(buffer);
-		buffer.flip();
-		
-		return buffer.hasRemaining();
 	}
 
 	private String fetchWhitespace() throws IOException {
@@ -77,10 +67,8 @@ public class ClumsySGMLParser {
 		while (isWhitespace(c = buffer.get())) {
 			result.append(c);
 			
-			if (!buffer.hasRemaining()) {
-				if (!loadMoreData())
-					break;
-			}
+			if (!hasMoreData())
+				break;
 		}
 		
 		if (!isWhitespace(c))
@@ -95,10 +83,8 @@ public class ClumsySGMLParser {
 		while ((c = buffer.get()) != '<') {
 			result.append(c);
 			
-			if (!buffer.hasRemaining()) {
-				if (!loadMoreData())
-					break;
-			}
+			if (!hasMoreData())
+				break;
 		}
 		
 		if (c == '<')
@@ -110,21 +96,30 @@ public class ClumsySGMLParser {
 	private String fetchLocalName() throws IOException {
 		// skip <
 		buffer.get();
-		if (!buffer.hasRemaining())
-			if (!loadMoreData())
-				return "";
+		if (!hasMoreData())
+			return "";
 		
 		char c;
 		StringBuilder result = new StringBuilder();
 		while ((c = buffer.get()) != '>') {
 			result.append(c);
 			
-			if (!buffer.hasRemaining()) {
-				if (!loadMoreData())
-					break;
-			}
+			if (!hasMoreData())
+				break;
 		}
 		
 		return result.toString();
+	}
+
+	private boolean loadMoreData() throws IOException {
+		buffer.compact();
+		source.read(buffer);
+		buffer.flip();
+		
+		return buffer.hasRemaining();
+	}
+
+	private boolean hasMoreData() throws IOException {
+		return buffer.hasRemaining() || loadMoreData();
 	}
 }
