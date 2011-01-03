@@ -6,7 +6,7 @@ import java.io.IOException;
 import java.io.Reader;
 import java.nio.CharBuffer;
 
-public class ClumsySGMLParser {
+public class ClumsySGMLLexer {
 	public enum Event { CHARACTERS, TAG, WHITESPACE }
 
 	private Reader source;
@@ -14,34 +14,29 @@ public class ClumsySGMLParser {
 	
 	private Event next;
 
-	public ClumsySGMLParser(Reader source) {
+	public ClumsySGMLLexer(Reader source) {
 		this(source, 8192);
 	}
 
-	public ClumsySGMLParser(Reader source, int bufferSize) {
+	public ClumsySGMLLexer(Reader source, int bufferSize) {
 		this.source = source;
 		this.buffer = CharBuffer.allocate(bufferSize);
 		this.buffer.flip();
 	}
 
 	public boolean hasNext() throws IOException {
-		if (hasMoreData()) {
-			char c = buffer.charAt(0);
-			if (isWhitespace(c))
-				next = Event.WHITESPACE;
-			else if (c == '<')
-				next = Event.TAG;
-			else
-				next = Event.CHARACTERS;
-			
-			return true;
-		} else {
-			next = null;
-			return false;
-		}
+		return hasMoreData();
 	}
 
 	public Event next() {
+		char c = buffer.charAt(0);
+		if (isWhitespace(c))
+			next = Event.WHITESPACE;
+		else if (c == '<')
+			next = Event.TAG;
+		else
+			next = Event.CHARACTERS;
+		
 		return next;
 	};
 	

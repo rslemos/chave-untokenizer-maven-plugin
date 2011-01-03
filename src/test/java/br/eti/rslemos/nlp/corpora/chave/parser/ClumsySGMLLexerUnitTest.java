@@ -10,16 +10,16 @@ import java.io.StringReader;
 
 import org.junit.Test;
 
-import br.eti.rslemos.nlp.corpora.chave.parser.ClumsySGMLParser.Event;
+import br.eti.rslemos.nlp.corpora.chave.parser.ClumsySGMLLexer.Event;
 
-public class ClumsySGMLParserUnitTest {
+public class ClumsySGMLLexerUnitTest {
 	
-	private ClumsySGMLParser parser;
+	private ClumsySGMLLexer parser;
 
 	@Test
 	public void testCharactersOnly() throws Exception {
 		final String TEXT = "this is a text-only SGML";
-		parser = new ClumsySGMLParser(reader(TEXT));
+		parser = new ClumsySGMLLexer(reader(TEXT));
 
 		assertNextIsCharacters(TEXT);
 		assertNextIsnot();
@@ -29,7 +29,7 @@ public class ClumsySGMLParserUnitTest {
 	public void testTagOnly() throws Exception {
 		final String TEXT = "<A TAG>";
 		
-		parser = new ClumsySGMLParser(reader(TEXT));
+		parser = new ClumsySGMLLexer(reader(TEXT));
 		
 		assertNextIsTag("A TAG");
 		assertNextIsnot();
@@ -40,7 +40,7 @@ public class ClumsySGMLParserUnitTest {
 		// the only chance for a tag to be empty is to open it at EOF
 		final String TEXT = "<";
 		
-		parser = new ClumsySGMLParser(reader(TEXT));
+		parser = new ClumsySGMLLexer(reader(TEXT));
 		
 		assertNextIsTag("");
 		assertNextIsnot();
@@ -50,7 +50,7 @@ public class ClumsySGMLParserUnitTest {
 	public void testWhitespaceOnly() throws Exception {
 		final String TEXT = "  \t\n\n\t\t\t\t\n\n\n\r\r\r\n\t\n\t\n    \t  \t \n \t\t\n   \r\r\n\r     ";
 		
-		parser = new ClumsySGMLParser(reader(TEXT));
+		parser = new ClumsySGMLLexer(reader(TEXT));
 		
 		assertNextIsWhitespace(TEXT);
 		assertNextIsnot();
@@ -60,7 +60,7 @@ public class ClumsySGMLParserUnitTest {
 	public void testTagAndText() throws Exception {
 		final String TEXT = "<A TAG>then text</A TAG>";
 		
-		parser = new ClumsySGMLParser(reader(TEXT));
+		parser = new ClumsySGMLLexer(reader(TEXT));
 		
 		assertNextIsTag("A TAG");
 		assertNextIsCharacters("then text");
@@ -76,7 +76,7 @@ public class ClumsySGMLParserUnitTest {
 				"<TAG1><TAG2>  \t<TAG3>\n" +
 				"textextext</TAG3></TAG2></TAG1>";
 		
-		parser = new ClumsySGMLParser(reader(TEXT));
+		parser = new ClumsySGMLLexer(reader(TEXT));
 
 		assertNextIsTag("A TAG");
 		assertNextIsCharacters("then text");
@@ -109,7 +109,7 @@ public class ClumsySGMLParserUnitTest {
 				"<TAG1><TAG2>  \t<TAG3>\n" +
 				"textextext</TAG3></TAG2></TAG1>";
 		
-		parser = new ClumsySGMLParser(reader(TEXT), 1);
+		parser = new ClumsySGMLLexer(reader(TEXT), 1);
 
 		assertNextIsTag("A TAG");
 		assertNextIsCharacters("then text");
@@ -135,17 +135,17 @@ public class ClumsySGMLParserUnitTest {
 	}
 
 	private void assertNextIsCharacters(String characters) throws IOException {
-		assertNextIs(ClumsySGMLParser.Event.CHARACTERS);
+		assertNextIs(ClumsySGMLLexer.Event.CHARACTERS);
 		assertThat(parser.getCharacters(), is(equalTo(characters)));
 	}
 
 	private void assertNextIsTag(String localName) throws IOException {
-		assertNextIs(ClumsySGMLParser.Event.TAG);
+		assertNextIs(ClumsySGMLLexer.Event.TAG);
 		assertThat(parser.getLocalName(), is(equalTo(localName)));
 	}
 	
 	private void assertNextIsWhitespace(String whitespace) throws IOException {
-		assertNextIs(ClumsySGMLParser.Event.WHITESPACE);
+		assertNextIs(ClumsySGMLLexer.Event.WHITESPACE);
 		assertThat(parser.getCharacters(), is(equalTo(whitespace)));
 	}
 	
