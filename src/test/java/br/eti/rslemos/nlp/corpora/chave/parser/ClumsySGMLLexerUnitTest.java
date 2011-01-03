@@ -163,6 +163,18 @@ public class ClumsySGMLLexerUnitTest {
 
 	}
 
+	@Test
+	public void testFilterLastEvent() throws Exception {
+		final String TEXT = "<A TAG>\n";
+		
+		parser = new ClumsySGMLLexer(reader(TEXT));
+		parser.filter(Event.WHITESPACE);
+		
+		assertNextIsTag("A TAG");
+		assertNextIsnot();
+
+	}
+	
 	private void assertNextIsCharacters(String characters) throws IOException {
 		assertNextIs(ClumsySGMLLexer.Event.CHARACTERS);
 		assertThat(parser.getCharacters(), is(equalTo(characters)));

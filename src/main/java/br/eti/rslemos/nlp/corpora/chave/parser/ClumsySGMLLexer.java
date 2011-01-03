@@ -16,7 +16,6 @@ public class ClumsySGMLLexer {
 	private Reader source;
 	private CharBuffer buffer;
 	
-	private Event next;
 	private Set<Event> filterEvents;
 	private String localName;
 	private String characters;
@@ -33,31 +32,45 @@ public class ClumsySGMLLexer {
 	}
 
 	public boolean hasNext() throws IOException {
+		Event next;
+		while (filterEvents.contains(next = classifyInput())) {
+			fetch(next, false);
+		}
+		
 		return hasMoreData();
 	}
 
 	public Event next() throws IOException {
+		Event next;
 		do {
-			characters = null;
-			localName = null;
-			
-			char c = buffer.charAt(0);
-			if (isWhitespace(c)) {
-				next = Event.WHITESPACE;
-				characters = fetchWhitespace();
-			} else if (c == '<') {
-				next = Event.TAG;
-				localName = fetchLocalName();
-			} else {
-				next = Event.CHARACTERS;
-				characters = fetchCharacters();
-			}
-			
-		} while (next != null && filterEvents.contains(next));
+			fetch(next = classifyInput(), true);
+		} while (filterEvents.contains(next));
 		
 		return next;
-	};
-	
+	}
+
+	private void fetch(Event next, boolean overwrite) throws IOException {
+		String characters = null;
+		String localName = null;
+		
+		switch (next) {
+		case CHARACTERS:
+			characters = fetchCharacters();
+			break;
+		case TAG:
+			localName = fetchLocalName();
+			break;
+		case WHITESPACE:
+			characters = fetchWhitespace();
+			break;
+		}
+		
+		if (overwrite) {
+			this.characters = characters;
+			this.localName = localName;
+		}
+	}
+
 	public String getCharacters() throws IOException {
 		return characters; 
 	}
@@ -132,4 +145,20 @@ public class ClumsySGMLLexer {
 		return buffer.hasRemaining() || loadMoreData();
 	}
 
+	private Event classifyInput() throws IOException {
+		if (!hasMoreData())
+			return null;
+		
+		return classifyInput(buffer.charAt(0));
+	}
+
+	private Event classifyInput(char c) {
+		if (isWhitespace(c)) {
+			return Event.WHITESPACE;
+		} else if (c == '<') {
+			return Event.TAG;
+		} else {
+			return Event.CHARACTERS;
+		}
+	}
 }
