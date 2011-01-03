@@ -4,66 +4,116 @@ import static org.hamcrest.CoreMatchers.equalTo;
 import static org.hamcrest.CoreMatchers.is;
 import static org.junit.Assert.assertThat;
 
+import java.io.IOException;
 import java.io.Reader;
 import java.io.StringReader;
 
 import org.junit.Test;
 
+import br.eti.rslemos.nlp.corpora.chave.parser.ClumsySGMLParser.Event;
+
 public class ClumsySGMLParserUnitTest {
 	
+	private ClumsySGMLParser parser;
+
 	@Test
 	public void testCharactersOnly() throws Exception {
 		final String TEXT = "this is a text-only SGML";
-		ClumsySGMLParser parser = new ClumsySGMLParser(reader(TEXT));
-		
-		assertThat(parser.hasNext(), is(equalTo(true)));
-		assertThat(parser.next(), is(equalTo(ClumsySGMLParser.Event.CHARACTERS)));
-		assertThat(parser.getCharacters(), is(equalTo(TEXT)));
-		assertThat(parser.hasNext(), is(equalTo(false)));
+		parser = new ClumsySGMLParser(reader(TEXT));
+
+		assertNextIsCharacters(TEXT);
+		assertNextIsnot();
 	}
 
 	@Test
 	public void testTagOnly() throws Exception {
 		final String TEXT = "<A TAG>";
 		
-		ClumsySGMLParser parser = new ClumsySGMLParser(reader(TEXT));
+		parser = new ClumsySGMLParser(reader(TEXT));
 		
-		assertThat(parser.hasNext(), is(equalTo(true)));
-		assertThat(parser.next(), is(equalTo(ClumsySGMLParser.Event.TAG)));
-		assertThat(parser.getLocalName(), is(equalTo("A TAG")));
-		assertThat(parser.hasNext(), is(equalTo(false)));
+		assertNextIsTag("A TAG");
+		assertNextIsnot();
 	}
 
 	@Test
 	public void testWhitespaceOnly() throws Exception {
 		final String TEXT = "  \t\n\n\t\t\t\t\n\n\n\r\r\r\n\t\n\t\n    \t  \t \n \t\t\n   \r\r\n\r     ";
 		
-		ClumsySGMLParser parser = new ClumsySGMLParser(reader(TEXT));
+		parser = new ClumsySGMLParser(reader(TEXT));
 		
-		assertThat(parser.hasNext(), is(equalTo(true)));
-		assertThat(parser.next(), is(equalTo(ClumsySGMLParser.Event.WHITESPACE)));
-		assertThat(parser.getCharacters(), is(equalTo(TEXT)));
-		assertThat(parser.hasNext(), is(equalTo(false)));
+		assertNextIsWhitespace(TEXT);
+		assertNextIsnot();
 	}
-	
+
 	@Test
 	public void testTagAndText() throws Exception {
 		final String TEXT = "<A TAG>then text</A TAG>";
 		
-		ClumsySGMLParser parser = new ClumsySGMLParser(reader(TEXT));
+		parser = new ClumsySGMLParser(reader(TEXT));
 		
-		assertThat(parser.hasNext(), is(equalTo(true)));
-		assertThat(parser.next(), is(equalTo(ClumsySGMLParser.Event.TAG)));
-		assertThat(parser.getLocalName(), is(equalTo("A TAG")));
-		assertThat(parser.hasNext(), is(equalTo(true)));
-		assertThat(parser.next(), is(equalTo(ClumsySGMLParser.Event.CHARACTERS)));
-		assertThat(parser.getCharacters(), is(equalTo("then text")));
-		assertThat(parser.hasNext(), is(equalTo(true)));
-		assertThat(parser.next(), is(equalTo(ClumsySGMLParser.Event.TAG)));
-		assertThat(parser.getLocalName(), is(equalTo("/A TAG")));
-		assertThat(parser.hasNext(), is(equalTo(false)));
+		assertNextIsTag("A TAG");
+		assertNextIsCharacters("then text");
+		assertNextIsTag("/A TAG");
+		assertNextIsnot();
+	}
+
+	@Test
+	public void testReallisticSGML() throws Exception {
+		final String TEXT = "<A TAG>then text</A TAG>\n" +
+				"<ANOTHER TAG>with text</ANOTHER TAG>\n" +
+				"<A CLOSED TAG/>\n" +
+				"<TAG1><TAG2>  \t<TAG3>\n" +
+				"textextext</TAG3></TAG2></TAG1>";
+		
+		parser = new ClumsySGMLParser(reader(TEXT));
+
+		assertNextIsTag("A TAG");
+		assertNextIsCharacters("then text");
+		assertNextIsTag("/A TAG");
+		assertNextIsWhitespace("\n");
+		assertNextIsTag("ANOTHER TAG");
+		assertNextIsCharacters("with text");
+		assertNextIsTag("/ANOTHER TAG");
+		assertNextIsWhitespace("\n");
+		assertNextIsTag("A CLOSED TAG/");
+		assertNextIsWhitespace("\n");
+		assertNextIsTag("TAG1");
+		assertNextIsTag("TAG2");
+		assertNextIsWhitespace("  \t");
+		assertNextIsTag("TAG3");
+		assertNextIsWhitespace("\n");
+		assertNextIsCharacters("textextext");
+		assertNextIsTag("/TAG3");
+		assertNextIsTag("/TAG2");
+		assertNextIsTag("/TAG1");
+		assertNextIsnot();
+
+	}
+
+	private void assertNextIsCharacters(String characters) throws IOException {
+		assertNextIs(ClumsySGMLParser.Event.CHARACTERS);
+		assertThat(parser.getCharacters(), is(equalTo(characters)));
+	}
+
+	private void assertNextIsTag(String localName) throws IOException {
+		assertNextIs(ClumsySGMLParser.Event.TAG);
+		assertThat(parser.getLocalName(), is(equalTo(localName)));
 	}
 	
+	private void assertNextIsWhitespace(String whitespace) throws IOException {
+		assertNextIs(ClumsySGMLParser.Event.WHITESPACE);
+		assertThat(parser.getCharacters(), is(equalTo(whitespace)));
+	}
+	
+	private void assertNextIs(Event event) throws IOException {
+		assertThat(parser.hasNext(), is(equalTo(true)));
+		assertThat(parser.next(), is(equalTo(event)));
+	}
+
+	private void assertNextIsnot() throws IOException {
+		assertThat(parser.hasNext(), is(equalTo(false)));
+	}
+
 	private static Reader reader(String text) {
 		return new StringReader(text);
 	}
