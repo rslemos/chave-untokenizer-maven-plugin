@@ -11,21 +11,6 @@ import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
 public class Parser {
-	private static final Pattern PATTERN_SGML_DOC = Pattern.compile("^<DOC>$");
-	private static final Pattern PATTERN_SGML_DOCNO = Pattern.compile("^<DOCNO>(.*)</DOCNO>$");
-	private static final Pattern PATTERN_SGML_DOCID = Pattern.compile("^<DOCID>(.*)</DOCID>$");
-	private static final Pattern PATTERN_SGML_DATE = Pattern.compile("^<DATE>(.*)</DATE>$");
-	private static final Pattern PATTERN_SGML_TEXT = Pattern.compile("^<TEXT>$");
-	private static final Pattern PATTERN_SGML_S_TEXT = Pattern.compile("^</TEXT>$");
-	private static final Pattern PATTERN_SGML_S_DOC = Pattern.compile("^</DOC>$");
-
-	private static final Pattern PATTERN_CG_DOC = Pattern.compile("^<DOC>$");
-	private static final Pattern PATTERN_CG_DOCNO = Pattern.compile("^<DOCNO\\.valor=(.*)>$");
-	private static final Pattern PATTERN_CG_DOCID = Pattern.compile("^<DOCID\\.valor=(.*)>$");
-	private static final Pattern PATTERN_CG_DATE = Pattern.compile("^<DATE\\.valor=(.*)>$");
-	private static final Pattern PATTERN_CG_TEXT = Pattern.compile("^<TEXT>$");
-	private static final Pattern PATTERN_CG_S_TEXT = Pattern.compile("^</TEXT>$");
-	private static final Pattern PATTERN_CG_S_DOC = Pattern.compile("^</DOC>$");
 	private static final Pattern PATTERN_CG_ENTRY = Pattern.compile("^([^\t]*)(?:\t(.*))?$");
 	private static final Pattern PATTERN_CG_S = Pattern.compile("^<s>$");
 	private static final Pattern PATTERN_CG_S_S = Pattern.compile("^</s>$");
@@ -49,27 +34,25 @@ public class Parser {
 		}
 	}
 
-	private void parse0(Reader cgText, Reader sgmlText) throws IOException, ParserException {
+	private void parse0(Reader cgText, Reader sgmlText0) throws IOException, ParserException {
+		ArrayList<String> cgLines = preParseCG(cgText);
+
+		ClumsySGMLLexer sgmlLexer = new ClumsySGMLLexer(sgmlText0);
+		sgmlLexer.next();
+		
+		ClumsySGMLFilter.skipToTag(sgmlLexer, "TEXT");
+		sgmlLexer.next();
+		sgmlLexer.next();
+
+		Reader sgmlText = ClumsySGMLFilter.readToTag(sgmlLexer, "/TEXT");
+		
 		BufferedReader sgmlLines = new BufferedReader(sgmlText);
 		
-		ArrayList<String> cgLines = preParseCG(cgText);
 		
 		int ccgLine = -1;
 		String line;
 		
-		match(line = sgmlLines.readLine(), PATTERN_SGML_DOC);
-		String docno = matchAndExtract(line = sgmlLines.readLine(), PATTERN_SGML_DOCNO);
-		String docid = matchAndExtract(line = sgmlLines.readLine(), PATTERN_SGML_DOCID);
-		String date = matchAndExtract(line = sgmlLines.readLine(), PATTERN_SGML_DATE);
-		match(line = sgmlLines.readLine(), PATTERN_SGML_TEXT);
-		
-		match(cgLines.get(++ccgLine), PATTERN_CG_DOC);
-		String cgdocno = matchAndExtract(cgLines.get(++ccgLine), PATTERN_CG_DOCNO);
-		String cgdocid = matchAndExtract(cgLines.get(++ccgLine), PATTERN_CG_DOCID);
-		String cgdate = matchAndExtract(cgLines.get(++ccgLine), PATTERN_CG_DATE);
-		match(cgLines.get(++ccgLine), PATTERN_CG_TEXT);
-
-		while( (line = sgmlLines.readLine()) != null && !PATTERN_SGML_S_TEXT.matcher(line).matches()) {
+		while( (line = sgmlLines.readLine()) != null) {
 			match(cgLines.get(++ccgLine), PATTERN_CG_S);
 			
 			char[] cs = line.toCharArray();
@@ -214,16 +197,29 @@ public class Parser {
 			
 		}
 		
-		match(line, PATTERN_SGML_S_TEXT);
-		match(line = sgmlLines.readLine(), PATTERN_SGML_S_DOC);
+		sgmlText.close();
+
+		ClumsySGMLFilter.skipToTag(sgmlLexer, "");
 	}
 
 	private ArrayList<String> preParseCG(Reader cgText) throws IOException {
-		BufferedReader bcgLines = new BufferedReader(cgText);
+		ClumsySGMLLexer lexer = new ClumsySGMLLexer(cgText);
+		
+		lexer.next();
+		ClumsySGMLFilter.skipToTag(lexer, "TEXT");
+		lexer.next();
+		lexer.next();
+		BufferedReader reader = new BufferedReader(ClumsySGMLFilter.readToTag(lexer, "/TEXT"));
+		
 		ArrayList<String> cgLines = new ArrayList<String>();
-		String l;
-		while ((l = bcgLines.readLine()) != null)
-			cgLines.add(l);
+		String line;
+		while ((line = reader.readLine()) != null) {
+			cgLines.add(line);
+		}
+		reader.close();
+		
+		ClumsySGMLFilter.skipToTag(lexer, "");
+		
 		return cgLines;
 	}
 
@@ -265,11 +261,6 @@ public class Parser {
 		s = s.replaceAll("<", "&lt;");
 		
 		return s;
-	}
-
-	private static String matchAndExtract(String line, Pattern pattern) {
-		Matcher matcher = match(line, pattern);
-		return matcher.group(1);
 	}
 
 	private static Matcher match(String line, Pattern pattern) {
