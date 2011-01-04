@@ -19,6 +19,7 @@ public class ClumsySGMLLexer {
 	private Set<Event> filterEvents;
 	private String localName;
 	private String characters;
+	private Event next;
 
 	public ClumsySGMLLexer(Reader source) {
 		this(source, 8192);
@@ -41,11 +42,14 @@ public class ClumsySGMLLexer {
 	}
 
 	public Event next() throws IOException {
-		Event next;
 		do {
 			fetch(next = classifyInput(), true);
 		} while (filterEvents.contains(next));
 		
+		return next;
+	}
+
+	public Event currentEvent() {
 		return next;
 	}
 
