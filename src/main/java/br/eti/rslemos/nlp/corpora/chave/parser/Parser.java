@@ -20,6 +20,12 @@ public class Parser {
 	private Entry<String, String> innerEntry = null;
 
 	private Handler out;
+	
+	private Iterator<Entry<String, String>> it;
+	private Entry<String, String> entry;
+	private String sKey;
+	private char[] keys;
+	private int j;
 
 	public Parser(Handler out) {
 		this.out = out;
@@ -48,9 +54,7 @@ public class Parser {
 		
 		BufferedReader sgmlLines = new BufferedReader(sgmlText);
 		
-		Iterator<Entry<String, String>> it = cgLines.iterator();
-		Entry<String, String> entry;
-		
+		it = cgLines.iterator();
 		String line;
 		
 		while( (line = sgmlLines.readLine()) != null) {
@@ -58,15 +62,7 @@ public class Parser {
 			
 			char[] cs = line.toCharArray();
 			
-			String sKey;
-			char[] key;
-			int j;
-
-			sKey = (entry = it.next()).getKey();
-			key = sKey.toCharArray();
-			j = 0;
-			if (key[j] == '$')
-				j++;
+			fetchNextKey();
 			
 			int next = 0;
 			while(isWhitespace(cs[next]) || cs[next] == '"') {
@@ -75,7 +71,7 @@ public class Parser {
 			}
 
 			for (int i = next; i < cs.length; i++) {
-				if (j == key.length || isWhitespace(key[j])) {
+				if (j == keys.length || isWhitespace(keys[j])) {
 					// match!
 					emitToken(line, next, i, entry);
 					
@@ -85,104 +81,90 @@ public class Parser {
 					}
 					next = i;
 					
-					sKey = (entry = it.next()).getKey();
-					key = sKey.toCharArray();
-					j = 0;
-					if (key[j] == '$')
-						j++;
+					fetchNextKey();
 				}
 				
-				if (key[j] == '=') {
+				if (keys[j] == '=') {
 					while(isWhitespace(cs[i]))
 						i++;
 					
 					j++;
 				}
 				
-				if (toLowerCase(cs[i]) == toLowerCase(key[j]))
+				if (toLowerCase(cs[i]) == toLowerCase(keys[j]))
 					j++;
-				else if (toLowerCase(cs[i]) == 'à' && toLowerCase(key[j]) == 'a' && innerEntry != null)
+				else if (toLowerCase(cs[i]) == 'à' && toLowerCase(keys[j]) == 'a' && innerEntry != null)
 					j++;
-				else if (toLowerCase(cs[i]) == 'à' && toLowerCase(key[j]) == 'a' && key.length == j + 1) {
+				else if (toLowerCase(cs[i]) == 'à' && toLowerCase(keys[j]) == 'a' && keys.length == j + 1) {
 					// double-match
 					innerEntry = entry;
 					
 					i--;
 					
-					sKey = (entry = it.next()).getKey();
-					key = sKey.toCharArray();
-					j = 0;
-					if (key[j] == '$')
-						j++;
-				} else if(toLowerCase(cs[i]) == 'n' && toLowerCase(key[j]) == 'e' && toLowerCase(key[j+1]) == 'm' && key.length == j+2) {
+					fetchNextKey();
+				} else if(toLowerCase(cs[i]) == 'n' && toLowerCase(keys[j]) == 'e' && toLowerCase(keys[j+1]) == 'm' && keys.length == j+2) {
 					// match!
 					i++;
 					emitToken(line, next, i, entry);
 					next = i;
 					i--;
 					
-					sKey = (entry = it.next()).getKey();
-					key = sKey.toCharArray();
-					j = 0;
-					if (key[j] == '$')
-						j++;
-				} else if(j > 0 && toLowerCase(key[j-1]) == 'd' && toLowerCase(key[j]) == 'e' && key.length == j + 1) {
+					fetchNextKey();
+				} else if(j > 0 && toLowerCase(keys[j-1]) == 'd' && toLowerCase(keys[j]) == 'e' && keys.length == j + 1) {
 					emitToken(line, next, i, entry);
 					next = i;
 					i--;
 					
-					sKey = (entry = it.next()).getKey();
-					key = sKey.toCharArray();
-					j = 0;
-					if (key[j] == '$')
-						j++;
-				} else if(j > 0 && toLowerCase(key[j-1]) == 'p' && toLowerCase(key[j]) == 'o' && toLowerCase(key[j+1]) == 'r' && key.length == j + 2 && toLowerCase(cs[i]) == 'e' && toLowerCase(cs[i+1]) == 'l') {
+					fetchNextKey();
+				} else if(j > 0 && toLowerCase(keys[j-1]) == 'p' && toLowerCase(keys[j]) == 'o' && toLowerCase(keys[j+1]) == 'r' && keys.length == j + 2 && toLowerCase(cs[i]) == 'e' && toLowerCase(cs[i+1]) == 'l') {
 					// match!
 					i++; i++;
 					emitToken(line, next, i, entry);
 					next = i;
 					i--;
 					
-					sKey = (entry = it.next()).getKey();
-					key = sKey.toCharArray();
-					j = 0;
-					if (key[j] == '$')
-						j++;
+					fetchNextKey();
 					
-				} else if (key[j] == '¶') {
+				} else if (keys[j] == '¶') {
 					emitToken("", 0, entry);
-					match((entry = it.next()).getKey(), PATTERN_CG_S_S);
-					match((entry = it.next()).getKey(), PATTERN_CG_S);
+					match(fetchNextKey().getKey(), PATTERN_CG_S_S);
+					match(fetchNextKey().getKey(), PATTERN_CG_S);
 					i--;
 					
-					sKey = (entry = it.next()).getKey();
-					key = sKey.toCharArray();
-					j = 0;
-					if (key[j] == '$')
-						j++;
+					fetchNextKey();
 				} else {
-					bailOut(cs, next, key, j, i);
+					bailOut(cs, next, keys, j, i);
 				}
 				
 			}
 
-			if (j == key.length) {
+			if (j == keys.length) {
 				// match!
 				emitToken(line, next, entry);
 			} else {
-				bailOut(cs, next, key, j, cs.length);
+				bailOut(cs, next, keys, j, cs.length);
 			}
 
-			entry = it.next();
+			fetchNextKey();
 			emitToken(entry);
 			
-			match((entry = it.next()).getKey(), PATTERN_CG_S_S);
+			match(fetchNextKey().getKey(), PATTERN_CG_S_S);
 			
 		}
 		
 		sgmlText.close();
 
 		ClumsySGMLFilter.skipToTag(sgmlLexer, "");
+	}
+
+	public Entry<String, String> fetchNextKey() {
+		sKey = (entry = it.next()).getKey();
+		keys = sKey.toCharArray();
+		j = 0;
+		if (keys[j] == '$')
+			j++;
+		
+		return entry;
 	}
 
 	private List<Entry<String, String>> preParseCG(Reader cgText) throws IOException {
