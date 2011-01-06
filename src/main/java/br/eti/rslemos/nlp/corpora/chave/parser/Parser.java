@@ -23,8 +23,7 @@ public class Parser {
 	
 	private Iterator<Entry<String, String>> it;
 	private Entry<String, String> entry;
-	private String sKey;
-	private char[] keys;
+	private String key;
 	private int j;
 
 	public Parser(Handler out) {
@@ -36,6 +35,8 @@ public class Parser {
 			parse0(cgText, sgmlText);
 			return true;
 		} catch (ParserException e) {
+			e.printStackTrace();
+			
 			return false;
 		}
 	}
@@ -71,7 +72,7 @@ public class Parser {
 			}
 
 			for (int i = next; i < cs.length; i++) {
-				if (j == keys.length || isWhitespace(keys[j])) {
+				if (j == key.length() || isWhitespace(key.charAt(j))) {
 					// match!
 					emitToken(line, next, i, entry);
 					
@@ -84,25 +85,25 @@ public class Parser {
 					fetchNextKey();
 				}
 				
-				if (keys[j] == '=') {
+				if (key.charAt(j) == '=') {
 					while(isWhitespace(cs[i]))
 						i++;
 					
 					j++;
 				}
 				
-				if (toLowerCase(cs[i]) == toLowerCase(keys[j]))
+				if (toLowerCase(cs[i]) == toLowerCase(key.charAt(j)))
 					j++;
-				else if (toLowerCase(cs[i]) == 'à' && toLowerCase(keys[j]) == 'a' && innerEntry != null)
+				else if (toLowerCase(cs[i]) == 'à' && toLowerCase(key.charAt(j)) == 'a' && innerEntry != null)
 					j++;
-				else if (toLowerCase(cs[i]) == 'à' && toLowerCase(keys[j]) == 'a' && keys.length == j + 1) {
+				else if (toLowerCase(cs[i]) == 'à' && ("a".equals(key.toLowerCase()) || key.toLowerCase().endsWith("=a"))) {
 					// double-match
 					innerEntry = entry;
 					
 					i--;
 					
 					fetchNextKey();
-				} else if(toLowerCase(cs[i]) == 'n' && toLowerCase(keys[j]) == 'e' && toLowerCase(keys[j+1]) == 'm' && keys.length == j+2) {
+				} else if(toLowerCase(cs[i]) == 'n' && "em".equals(key.toLowerCase())) {
 					// match!
 					i++;
 					emitToken(line, next, i, entry);
@@ -110,13 +111,13 @@ public class Parser {
 					i--;
 					
 					fetchNextKey();
-				} else if(j > 0 && toLowerCase(keys[j-1]) == 'd' && toLowerCase(keys[j]) == 'e' && keys.length == j + 1) {
+				} else if("de".equals(key.toLowerCase()) || key.toLowerCase().endsWith("=de")) {
 					emitToken(line, next, i, entry);
 					next = i;
 					i--;
 					
 					fetchNextKey();
-				} else if(j > 0 && toLowerCase(keys[j-1]) == 'p' && toLowerCase(keys[j]) == 'o' && toLowerCase(keys[j+1]) == 'r' && keys.length == j + 2 && toLowerCase(cs[i]) == 'e' && toLowerCase(cs[i+1]) == 'l') {
+				} else if("por".equals(key.toLowerCase()) && toLowerCase(cs[i]) == 'e' && toLowerCase(cs[i+1]) == 'l') {
 					// match!
 					i++; i++;
 					emitToken(line, next, i, entry);
@@ -125,7 +126,7 @@ public class Parser {
 					
 					fetchNextKey();
 					
-				} else if (keys[j] == '¶') {
+				} else if (key.charAt(j) == '¶') {
 					emitToken("", 0, entry);
 					match(fetchNextKey().getKey(), PATTERN_CG_S_S);
 					match(fetchNextKey().getKey(), PATTERN_CG_S);
@@ -133,16 +134,16 @@ public class Parser {
 					
 					fetchNextKey();
 				} else {
-					bailOut(cs, next, keys, j, i);
+					bailOut(cs, next, key, j, i);
 				}
 				
 			}
 
-			if (j == keys.length) {
+			if (j == key.length()) {
 				// match!
 				emitToken(line, next, entry);
 			} else {
-				bailOut(cs, next, keys, j, cs.length);
+				bailOut(cs, next, key, j, cs.length);
 			}
 
 			fetchNextKey();
@@ -158,11 +159,11 @@ public class Parser {
 	}
 
 	public Entry<String, String> fetchNextKey() {
-		sKey = (entry = it.next()).getKey();
-		keys = sKey.toCharArray();
+		key = (entry = it.next()).getKey();
 		j = 0;
-		if (keys[j] == '$')
-			j++;
+
+		if (key.startsWith("$"))
+			key = key.substring(1);
 		
 		return entry;
 	}
@@ -195,7 +196,7 @@ public class Parser {
 		return result;
 	}
 
-	private void bailOut(char[] cs, int from, char[] key, int j, int to) throws ParserException {
+	private void bailOut(char[] cs, int from, String key, int j, int to) throws ParserException {
 		StringBuilder builder = new StringBuilder();
 		builder.append("Mismatch at (").append(to).append(", ").append(j).append(")\n");
 		builder.append("text = ").append(new String(cs)).append("\n");
