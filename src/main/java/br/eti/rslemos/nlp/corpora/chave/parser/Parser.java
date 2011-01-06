@@ -7,6 +7,8 @@ import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.Reader;
 import java.util.ArrayList;
+import java.util.Iterator;
+import java.util.List;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
@@ -15,9 +17,7 @@ public class Parser {
 	private static final Pattern PATTERN_CG_S = Pattern.compile("^<s>$");
 	private static final Pattern PATTERN_CG_S_S = Pattern.compile("^</s>$");
 
-	private static final Pattern PATTERN_CG_PENTRY = Pattern.compile("^(\\$¶)\t(.*)$");
-
-	private Matcher innerMatcher = null;
+	private Entry<String, String> innerEntry = null;
 
 	private Handler out;
 
@@ -35,7 +35,7 @@ public class Parser {
 	}
 
 	private void parse0(Reader cgText, Reader sgmlText0) throws IOException, ParserException {
-		ArrayList<String> cgLines = preParseCG(cgText);
+		List<Entry<String, String>> cgLines = preParseCG(cgText);
 
 		ClumsySGMLLexer sgmlLexer = new ClumsySGMLLexer(sgmlText0);
 		sgmlLexer.next();
@@ -48,23 +48,21 @@ public class Parser {
 		
 		BufferedReader sgmlLines = new BufferedReader(sgmlText);
 		
+		Iterator<Entry<String, String>> it = cgLines.iterator();
+		Entry<String, String> entry;
 		
-		int ccgLine = -1;
 		String line;
 		
 		while( (line = sgmlLines.readLine()) != null) {
-			match(cgLines.get(++ccgLine), PATTERN_CG_S);
+			match((entry = it.next()).getKey(), PATTERN_CG_S);
 			
 			char[] cs = line.toCharArray();
 			
-			Matcher entryMatcher;
 			String sKey;
 			char[] key;
 			int j;
 
-			entryMatcher = PATTERN_CG_ENTRY.matcher(cgLines.get(++ccgLine));
-			entryMatcher.matches();
-			sKey = entryMatcher.group(1);
+			sKey = (entry = it.next()).getKey();
 			key = sKey.toCharArray();
 			j = 0;
 			if (key[j] == '$')
@@ -79,7 +77,7 @@ public class Parser {
 			for (int i = next; i < cs.length; i++) {
 				if (j == key.length || isWhitespace(key[j])) {
 					// match!
-					emitToken(line, next, i, entryMatcher);
+					emitToken(line, next, i, entry);
 					
 					while(isWhitespace(cs[i]) || cs[i] == '"') {
 						out.printf("%c", cs[i]);
@@ -87,9 +85,7 @@ public class Parser {
 					}
 					next = i;
 					
-					entryMatcher = PATTERN_CG_ENTRY.matcher(cgLines.get(++ccgLine));
-					entryMatcher.matches();
-					sKey = entryMatcher.group(1);
+					sKey = (entry = it.next()).getKey();
 					key = sKey.toCharArray();
 					j = 0;
 					if (key[j] == '$')
@@ -105,17 +101,15 @@ public class Parser {
 				
 				if (toLowerCase(cs[i]) == toLowerCase(key[j]))
 					j++;
-				else if (toLowerCase(cs[i]) == 'à' && toLowerCase(key[j]) == 'a' && innerMatcher != null)
+				else if (toLowerCase(cs[i]) == 'à' && toLowerCase(key[j]) == 'a' && innerEntry != null)
 					j++;
 				else if (toLowerCase(cs[i]) == 'à' && toLowerCase(key[j]) == 'a' && key.length == j + 1) {
 					// double-match
-					innerMatcher = entryMatcher;
+					innerEntry = entry;
 					
 					i--;
 					
-					entryMatcher = PATTERN_CG_ENTRY.matcher(cgLines.get(++ccgLine));
-					entryMatcher.matches();
-					sKey = entryMatcher.group(1);
+					sKey = (entry = it.next()).getKey();
 					key = sKey.toCharArray();
 					j = 0;
 					if (key[j] == '$')
@@ -123,25 +117,21 @@ public class Parser {
 				} else if(toLowerCase(cs[i]) == 'n' && toLowerCase(key[j]) == 'e' && toLowerCase(key[j+1]) == 'm' && key.length == j+2) {
 					// match!
 					i++;
-					emitToken(line, next, i, entryMatcher);
+					emitToken(line, next, i, entry);
 					next = i;
 					i--;
 					
-					entryMatcher = PATTERN_CG_ENTRY.matcher(cgLines.get(++ccgLine));
-					entryMatcher.matches();
-					sKey = entryMatcher.group(1);
+					sKey = (entry = it.next()).getKey();
 					key = sKey.toCharArray();
 					j = 0;
 					if (key[j] == '$')
 						j++;
 				} else if(j > 0 && toLowerCase(key[j-1]) == 'd' && toLowerCase(key[j]) == 'e' && key.length == j + 1) {
-					emitToken(line, next, i, entryMatcher);
+					emitToken(line, next, i, entry);
 					next = i;
 					i--;
 					
-					entryMatcher = PATTERN_CG_ENTRY.matcher(cgLines.get(++ccgLine));
-					entryMatcher.matches();
-					sKey = entryMatcher.group(1);
+					sKey = (entry = it.next()).getKey();
 					key = sKey.toCharArray();
 					j = 0;
 					if (key[j] == '$')
@@ -149,29 +139,23 @@ public class Parser {
 				} else if(j > 0 && toLowerCase(key[j-1]) == 'p' && toLowerCase(key[j]) == 'o' && toLowerCase(key[j+1]) == 'r' && key.length == j + 2 && toLowerCase(cs[i]) == 'e' && toLowerCase(cs[i+1]) == 'l') {
 					// match!
 					i++; i++;
-					emitToken(line, next, i, entryMatcher);
+					emitToken(line, next, i, entry);
 					next = i;
 					i--;
 					
-					entryMatcher = PATTERN_CG_ENTRY.matcher(cgLines.get(++ccgLine));
-					entryMatcher.matches();
-					sKey = entryMatcher.group(1);
+					sKey = (entry = it.next()).getKey();
 					key = sKey.toCharArray();
 					j = 0;
 					if (key[j] == '$')
 						j++;
 					
 				} else if (key[j] == '¶') {
-					entryMatcher = PATTERN_CG_PENTRY.matcher(cgLines.get(ccgLine));
-					entryMatcher.matches();
-					emitToken("", 0, entryMatcher);
-					match(cgLines.get(++ccgLine), PATTERN_CG_S_S);
-					match(cgLines.get(++ccgLine), PATTERN_CG_S);
+					emitToken("", 0, entry);
+					match((entry = it.next()).getKey(), PATTERN_CG_S_S);
+					match((entry = it.next()).getKey(), PATTERN_CG_S);
 					i--;
 					
-					entryMatcher = PATTERN_CG_ENTRY.matcher(cgLines.get(++ccgLine));
-					entryMatcher.matches();
-					sKey = entryMatcher.group(1);
+					sKey = (entry = it.next()).getKey();
 					key = sKey.toCharArray();
 					j = 0;
 					if (key[j] == '$')
@@ -184,16 +168,15 @@ public class Parser {
 
 			if (j == key.length) {
 				// match!
-				emitToken(line, next, entryMatcher);
+				emitToken(line, next, entry);
 			} else {
 				bailOut(cs, next, key, j, cs.length);
 			}
 
-			entryMatcher = PATTERN_CG_PENTRY.matcher(cgLines.get(++ccgLine));
-			entryMatcher.matches();
-			emitToken(entryMatcher);
+			entry = it.next();
+			emitToken(entry);
 			
-			match(cgLines.get(++ccgLine), PATTERN_CG_S_S);
+			match((entry = it.next()).getKey(), PATTERN_CG_S_S);
 			
 		}
 		
@@ -202,7 +185,7 @@ public class Parser {
 		ClumsySGMLFilter.skipToTag(sgmlLexer, "");
 	}
 
-	private ArrayList<String> preParseCG(Reader cgText) throws IOException {
+	private List<Entry<String, String>> preParseCG(Reader cgText) throws IOException {
 		ClumsySGMLLexer lexer = new ClumsySGMLLexer(cgText);
 		
 		lexer.next();
@@ -211,16 +194,23 @@ public class Parser {
 		lexer.next();
 		BufferedReader reader = new BufferedReader(ClumsySGMLFilter.readToTag(lexer, "/TEXT"));
 		
-		ArrayList<String> cgLines = new ArrayList<String>();
+		ArrayList<Entry<String, String>> result = new ArrayList<Entry<String, String>>();
+		
 		String line;
 		while ((line = reader.readLine()) != null) {
-			cgLines.add(line);
+			Matcher matcher = PATTERN_CG_ENTRY.matcher(line);
+			if (!matcher.matches()) 
+				throw new Error();
+			
+			result.add(new Entry<String, String>(matcher.group(1), matcher.group(2)));
 		}
 		reader.close();
 		
 		ClumsySGMLFilter.skipToTag(lexer, "");
 		
-		return cgLines;
+		result.trimToSize();
+		
+		return result;
 	}
 
 	private void bailOut(char[] cs, int from, char[] key, int j, int to) throws ParserException {
@@ -233,22 +223,22 @@ public class Parser {
 		throw up; // ha ha
 	}
 
-	private void emitToken(String text, int from, Matcher entryMatcher) {
-		emitToken(text, from, text.length(), entryMatcher);
+	private void emitToken(String text, int from, Entry<String, String> entry) {
+		emitToken(text, from, text.length(), entry);
 	}
 
-	private void emitToken(Matcher entryMatcher) {
-		emitToken("\n", 0, entryMatcher);
+	private void emitToken(Entry<String, String> entry) {
+		emitToken("\n", 0, entry);
 	}
 
-	private void emitToken(String text, int from, int to, Matcher entryMatcher) {
-		String attributes = entryMatcher.group(2);
-		if (innerMatcher == null)
+	private void emitToken(String text, int from, int to, Entry<String, String> entry) {
+		String attributes = entry.getValue();
+		if (innerEntry == null)
 			out.printf("<token a=\"%s\">%s</token>", escape(attributes), text.substring(from, to));
 		else {
-			int prefixLength = innerMatcher.group(1).length();
-			out.printf("<token a=\"%s\"><token a=\"%s\">%s</token>%s</token>", escape(attributes), escape(innerMatcher.group(2)), text.substring(from, from + prefixLength), text.substring(from + prefixLength, to));
-			innerMatcher = null;
+			int prefixLength = innerEntry.getKey().length();
+			out.printf("<token a=\"%s\"><token a=\"%s\">%s</token>%s</token>", escape(attributes), escape(innerEntry.getValue()), text.substring(from, from + prefixLength), text.substring(from + prefixLength, to));
+			innerEntry = null;
 		}
 	}
 
@@ -271,5 +261,25 @@ public class Parser {
 		
 		assert matches;
 		return matcher;
+	}
+	
+	private static class Entry<K, V> {
+
+		private K key;
+		private V value;
+
+		public Entry(K key, V value) {
+			this.key = key;
+			this.value = value;
+		}
+
+		public V getValue() {
+			return value;
+		}
+
+		public K getKey() {
+			return key;
+		}
+		
 	}
 }
