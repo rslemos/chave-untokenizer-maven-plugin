@@ -57,6 +57,12 @@ public class Parser {
 
 		Reader sgmlText = ClumsySGMLFilter.readToTag(sgmlLexer, "/TEXT");
 		
+		parse0(cgLines, sgmlText);
+
+		ClumsySGMLFilter.skipToTag(sgmlLexer, "");
+	}
+
+	private void parse0(List<Entry<String, String>> cgLines, Reader sgmlText) throws IOException, ParserException {
 		BufferedReader sgmlLines = new BufferedReader(sgmlText);
 		
 		it = cgLines.iterator();
@@ -155,8 +161,6 @@ public class Parser {
 		}
 		
 		sgmlText.close();
-
-		ClumsySGMLFilter.skipToTag(sgmlLexer, "");
 	}
 
 	private Entry<String, String> fetchNextKey() {
