@@ -25,6 +25,10 @@ public class Parser {
 	private Entry<String, String> entry;
 	private String key;
 	private int j;
+	private int next;
+	private char[] cs;
+	private String line;
+	private int i;
 
 	public Parser(Handler out) {
 		this.out = out;
@@ -56,25 +60,22 @@ public class Parser {
 		BufferedReader sgmlLines = new BufferedReader(sgmlText);
 		
 		it = cgLines.iterator();
-		String line;
-		
 		while( (line = sgmlLines.readLine()) != null) {
 			match((entry = it.next()).getKey(), PATTERN_CG_S);
 			
-			char[] cs = line.toCharArray();
+			cs = line.toCharArray();
+			next = 0;
 			
 			fetchNextKey();
 			
-			int next = 0;
 			while(isWhitespace(cs[next]) || cs[next] == '"') {
 				out.printf("%c", cs[next]);
 				next++;
 			}
-
-			for (int i = next; i < cs.length; i++) {
+			
+			for (i = next; i < cs.length; i++) {
 				if (j == key.length() || isWhitespace(key.charAt(j))) {
-					// match!
-					emitToken(line, next, i, entry);
+					emitToken();
 					
 					while(isWhitespace(cs[i]) || cs[i] == '"') {
 						out.printf("%c", cs[i]);
@@ -106,13 +107,13 @@ public class Parser {
 				} else if(toLowerCase(cs[i]) == 'n' && "em".equals(key.toLowerCase())) {
 					// match!
 					i++;
-					emitToken(line, next, i, entry);
+					emitToken();
 					next = i;
 					i--;
 					
 					fetchNextKey();
 				} else if("de".equals(key.toLowerCase()) || key.toLowerCase().endsWith("=de")) {
-					emitToken(line, next, i, entry);
+					emitToken();
 					next = i;
 					i--;
 					
@@ -120,14 +121,14 @@ public class Parser {
 				} else if("por".equals(key.toLowerCase()) && toLowerCase(cs[i]) == 'e' && toLowerCase(cs[i+1]) == 'l') {
 					// match!
 					i++; i++;
-					emitToken(line, next, i, entry);
+					emitToken();
 					next = i;
 					i--;
 					
 					fetchNextKey();
 					
 				} else if (key.charAt(j) == '¶') {
-					emitToken("", 0, entry);
+					emitToken("");
 					match(fetchNextKey().getKey(), PATTERN_CG_S_S);
 					match(fetchNextKey().getKey(), PATTERN_CG_S);
 					i--;
@@ -141,13 +142,13 @@ public class Parser {
 
 			if (j == key.length()) {
 				// match!
-				emitToken(line, next, entry);
+				emitToken();
 			} else {
 				bailOut(cs, next, key, j, cs.length);
 			}
 
 			fetchNextKey();
-			emitToken(entry);
+			emitToken("\n");
 			
 			match(fetchNextKey().getKey(), PATTERN_CG_S_S);
 			
@@ -158,7 +159,7 @@ public class Parser {
 		ClumsySGMLFilter.skipToTag(sgmlLexer, "");
 	}
 
-	public Entry<String, String> fetchNextKey() {
+	private Entry<String, String> fetchNextKey() {
 		key = (entry = it.next()).getKey();
 		j = 0;
 
@@ -206,12 +207,12 @@ public class Parser {
 		throw up; // ha ha
 	}
 
-	private void emitToken(String text, int from, Entry<String, String> entry) {
-		emitToken(text, from, text.length(), entry);
+	private void emitToken(String text) {
+		emitToken(text, 0, text.length(), entry);
 	}
 
-	private void emitToken(Entry<String, String> entry) {
-		emitToken("\n", 0, entry);
+	private void emitToken() {
+		emitToken(line, next, i, entry);
 	}
 
 	private void emitToken(String text, int from, int to, Entry<String, String> entry) {
