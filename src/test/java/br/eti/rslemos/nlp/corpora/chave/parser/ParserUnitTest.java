@@ -1,7 +1,9 @@
 package br.eti.rslemos.nlp.corpora.chave.parser;
 
 import static org.junit.Assert.assertTrue;
+import static org.junit.Assert.fail;
 import static org.mockito.Mockito.mock;
+import static org.mockito.Mockito.verify;
 
 import java.io.IOException;
 import java.io.InputStreamReader;
@@ -13,9 +15,12 @@ import java.net.URL;
 import java.nio.charset.Charset;
 import java.util.Arrays;
 import java.util.Iterator;
+import java.util.List;
 
 import org.junit.Before;
 import org.junit.Test;
+
+import br.eti.rslemos.nlp.corpora.chave.parser.Parser.Entry;
 
 public class ParserUnitTest {
 	private static final Charset UTF8 = Charset.forName("UTF-8");
@@ -32,7 +37,54 @@ public class ParserUnitTest {
 
 	@Test
 	public void testSingleWord() throws Exception {
-		verifyParse(buildCG(buildCGSentence(buildCGLine("word", "lorem ipsum"))), buildSGML("word"));
+		@SuppressWarnings("unchecked")
+		List<Entry<String, String>> cg = Arrays.asList(new Parser.Entry<String, String>("feita", " [fazer] V PCP F S @IMV @#ICL-N<"));
+		verifyParse(cg, "feita");
+		
+		verify(handler).startToken(cg.get(0).getValue());
+		verify(handler).characters("feita".toCharArray());
+		verify(handler).endToken();
+	}
+
+	@Test
+	public void testCompositeWord() throws Exception {
+		@SuppressWarnings("unchecked")
+		List<Entry<String, String>> cg = Arrays.asList(new Parser.Entry<String, String>("Pesquisa=Datafolha", " [Pesquisa=Datafolha] PROP F S @SUBJ>"));
+		verifyParse(cg, "Pesquisa Datafolha");
+		
+		verify(handler).startToken(cg.get(0).getValue());
+		verify(handler).characters("Pesquisa Datafolha".toCharArray());
+		verify(handler).endToken();
+	}
+
+	@Test
+	public void testCompositeWordWithMoreWhitespaces() throws Exception {
+		@SuppressWarnings("unchecked")
+		List<Entry<String, String>> cg = Arrays.asList(new Parser.Entry<String, String>("Pesquisa=Datafolha", " [Pesquisa=Datafolha] PROP F S @SUBJ>"));
+		verifyParse(cg, "Pesquisa   \t\t \t  \t Datafolha");
+		
+		verify(handler).startToken(cg.get(0).getValue());
+		verify(handler).characters("Pesquisa   \t\t \t  \t Datafolha".toCharArray());
+		verify(handler).endToken();
+	}
+
+	@Test
+	public void testContraction_de_o() throws Exception {
+		@SuppressWarnings("unchecked")
+		List<Entry<String, String>> cg = Arrays.asList(
+				new Parser.Entry<String, String>("de", " [de] PRP <sam-> @N<"),
+				new Parser.Entry<String, String>("o", " [o] DET M S <artd> <-sam> @>N")
+			);
+		
+		verifyParse(cg, "do");
+		
+		verify(handler).startToken(cg.get(0).getValue());
+		verify(handler).characters("d".toCharArray());
+		verify(handler).endToken();
+		
+		verify(handler).startToken(cg.get(1).getValue());
+		verify(handler).characters("o".toCharArray());
+		verify(handler).endToken();
 	}
 
 	@Test
@@ -169,6 +221,15 @@ public class ParserUnitTest {
 		//verifyParse("130.cg", "130.sgml");
 		//verifyParse("131.cg", "131.sgml");
 		verifyParse("132.cg", "132.sgml");
+	}
+
+	private void verifyParse(List<Entry<String, String>> cg, String sgml) {
+		try {
+			parser.parse1(cg, reader(sgml));
+		} catch (Exception e) {
+			e.printStackTrace();
+			fail();
+		}
 	}
 
 	private void verifyParse(String cg, String sgml) throws IOException, MalformedURLException {

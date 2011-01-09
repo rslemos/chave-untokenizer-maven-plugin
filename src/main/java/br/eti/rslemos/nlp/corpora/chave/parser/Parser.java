@@ -6,13 +6,17 @@ import static java.lang.Character.toLowerCase;
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.Reader;
+import java.nio.CharBuffer;
 import java.util.ArrayList;
+import java.util.Formatter;
 import java.util.Iterator;
 import java.util.List;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
 public class Parser {
+	private static final Formatter FORMATTER = new Formatter();
+
 	private static final Pattern PATTERN_CG_ENTRY = Pattern.compile("^([^\t]*)(?:\t(.*))?$");
 	private static final Pattern PATTERN_CG_S = Pattern.compile("^<s>$");
 	private static final Pattern PATTERN_CG_S_S = Pattern.compile("^</s>$");
@@ -62,7 +66,53 @@ public class Parser {
 		ClumsySGMLFilter.skipToTag(sgmlLexer, "");
 	}
 
-	private void parse0(List<Entry<String, String>> cgLines, Reader sgmlText) throws IOException, ParserException {
+	void parse1(List<Entry<String, String>> cg, Reader sgml) throws IOException, ParserException {
+		CharBuffer buffer = CharBuffer.allocate(65536);
+		sgml.read(buffer);
+		buffer.flip();
+		
+		for (int i = 0; i < cg.size(); i++) {
+			Entry<String, String> currentEntry = cg.get(i);
+			String currentKey = currentEntry.getKey();
+			
+			int j = 0;
+			int k = 0;
+			try {
+				while (true) {
+					if (currentKey.charAt(j) == '=') {
+						while (isWhitespace(buffer.charAt(k)))
+							k++;
+						j++;
+						
+						continue;
+					}
+					
+					if (toLowerCase(currentKey.charAt(j)) != toLowerCase(buffer.charAt(k))) {
+						break;
+					}
+					
+					j++;
+					k++;
+				}
+			} catch (StringIndexOutOfBoundsException e) {
+			}
+
+			if (j == currentKey.length()) {
+				// full match
+				char[] cs = new char[k];
+				buffer.get(cs);
+				
+				out.startToken(currentEntry.getValue());
+				out.characters(cs);
+				out.endToken();
+			} else {
+				FORMATTER.format("%d-th entry: %s; buffer at %d (mismatch at %d, %d)\n", i, currentEntry.getKey(), buffer.position(), j, k);
+				throw new ParserException(FORMATTER.out().toString());
+			}
+		}
+	}
+	
+	void parse0(List<Entry<String, String>> cgLines, Reader sgmlText) throws IOException, ParserException {
 		BufferedReader sgmlLines = new BufferedReader(sgmlText);
 		
 		it = cgLines.iterator();
@@ -251,7 +301,7 @@ public class Parser {
 		return matcher;
 	}
 	
-	private static class Entry<K, V> {
+	static class Entry<K, V> {
 
 		private K key;
 		private V value;
@@ -270,4 +320,5 @@ public class Parser {
 		}
 		
 	}
+
 }
