@@ -10,6 +10,7 @@ import java.nio.CharBuffer;
 import java.util.ArrayList;
 import java.util.Formatter;
 import java.util.Iterator;
+import java.util.LinkedList;
 import java.util.List;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
@@ -67,51 +68,28 @@ public class Parser {
 	}
 
 	void parse1(List<Entry<String, String>> cg, Reader sgml) throws IOException, ParserException {
+		cg = new LinkedList<Entry<String, String>>(cg);
+		
 		CharBuffer buffer = CharBuffer.allocate(65536);
 		sgml.read(buffer);
 		buffer.flip();
-		
-		for (int i = 0; i < cg.size(); i++) {
-			Entry<String, String> currentEntry = cg.get(i);
-			String currentKey = currentEntry.getKey();
-			
-			int j = 0;
-			int k = 0;
-			try {
-				while (true) {
-					if (currentKey.charAt(j) == '=') {
-						while (isWhitespace(buffer.charAt(k)))
-							k++;
-						j++;
-						
-						continue;
-					}
-					
-					if (toLowerCase(currentKey.charAt(j)) != toLowerCase(buffer.charAt(k))) {
-						break;
-					}
-					
-					j++;
-					k++;
-				}
-			} catch (StringIndexOutOfBoundsException e) {
-			}
 
-			if (j == currentKey.length()) {
-				// full match
-				char[] cs = new char[k];
-				buffer.get(cs);
-				
-				out.startToken(currentEntry.getValue());
-				out.characters(cs);
-				out.endToken();
-			} else {
-				FORMATTER.format("%d-th entry: %s; buffer at %d (mismatch at %d, %d)\n", i, currentEntry.getKey(), buffer.position(), j, k);
-				throw new ParserException(FORMATTER.out().toString());
+		ParsingStrategy[] strategies = {
+			new DirectMatchStrategy(),
+		};
+
+outer:
+		while (!cg.isEmpty()) {
+			for (ParsingStrategy strategy : strategies) {
+				if (strategy.match(buffer, cg, out)) 
+					continue outer;
 			}
+			
+			FORMATTER.format("%d-th entry: %s; buffer at %d\n", i, cg.get(0).getKey(), buffer.position());
+			throw new ParserException(FORMATTER.out().toString());
 		}
 	}
-	
+
 	void parse0(List<Entry<String, String>> cgLines, Reader sgmlText) throws IOException, ParserException {
 		BufferedReader sgmlLines = new BufferedReader(sgmlText);
 		
@@ -301,6 +279,51 @@ public class Parser {
 		return matcher;
 	}
 	
+	private static class DirectMatchStrategy implements ParsingStrategy {
+		public boolean match(CharBuffer buffer, List<Entry<String, String>> cg, Handler handler) throws ParserException {
+			Entry<String, String> currentEntry = cg.get(0);
+			String currentKey = currentEntry.getKey();
+			
+			int j = 0;
+			int k = 0;
+			try {
+				while (true) {
+					if (currentKey.charAt(j) == '=') {
+						while (isWhitespace(buffer.charAt(k)))
+							k++;
+						j++;
+						
+						continue;
+					}
+					
+					if (toLowerCase(currentKey.charAt(j)) != toLowerCase(buffer.charAt(k))) {
+						break;
+					}
+					
+					j++;
+					k++;
+				}
+			} catch (StringIndexOutOfBoundsException e) {
+			}
+			
+			if (j == currentKey.length()) {
+				// full match
+				char[] cs = new char[k];
+				buffer.get(cs);
+				
+				handler.startToken(currentEntry.getValue());
+				handler.characters(cs);
+				handler.endToken();
+				
+				cg.remove(0);
+				
+				return true;
+			} else {
+				return false;
+			}
+		}
+	}
+
 	static class Entry<K, V> {
 
 		private K key;
@@ -321,4 +344,27 @@ public class Parser {
 		
 	}
 
+	public interface ParsingStrategy {
+		/**
+		 * Try to match the (few) next item(s) on <code>cg</code>.
+		 * 
+		 * On successful match, <code>cg</code>  should have the matched items
+		 * removed and <code>buffer</code> should have been advanced to the
+		 * next position to match.
+		 * 
+		 * On failure, <code>cg</code> and <code>buffer</code> should be left
+		 * unaffected.
+		 * 
+		 * On 
+		 * @param buffer
+		 * @param cg
+		 * 
+		 * @return <code>true</code> if a successful match was done;
+		 * <code>false</code> otherwise
+		 * 
+		 * @throws ParserException if was successfully matching but the
+		 * buffer underflows.
+		 */
+		boolean match(CharBuffer buffer, List<Entry<String, String>> cg, Handler handler) throws ParserException;
+	}
 }
