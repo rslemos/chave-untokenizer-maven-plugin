@@ -81,8 +81,11 @@ public class Parser {
 outer:
 		while (!cg.isEmpty()) {
 			for (ParsingStrategy strategy : strategies) {
-				if (strategy.match(buffer, cg, out)) 
+				ParsingMemento memento;
+				if ((memento = strategy.match(buffer, cg, out)) != null) {
+					memento.apply();
 					continue outer;
+				}
 			}
 			
 			FORMATTER.format("%d-th entry: %s; buffer at %d\n", i, cg.get(0).getKey(), buffer.position());
@@ -280,8 +283,8 @@ outer:
 	}
 	
 	private static class DirectMatchStrategy implements ParsingStrategy {
-		public boolean match(CharBuffer buffer, List<Entry<String, String>> cg, Handler handler) throws ParserException {
-			Entry<String, String> currentEntry = cg.get(0);
+		public ParsingMemento match(final CharBuffer buffer, final List<Entry<String, String>> cg, final Handler handler) throws ParserException {
+			final Entry<String, String> currentEntry = cg.get(0);
 			String currentKey = currentEntry.getKey();
 			
 			int j = 0;
@@ -308,18 +311,22 @@ outer:
 			
 			if (j == currentKey.length()) {
 				// full match
-				char[] cs = new char[k];
-				buffer.get(cs);
-				
-				handler.startToken(currentEntry.getValue());
-				handler.characters(cs);
-				handler.endToken();
-				
-				cg.remove(0);
-				
-				return true;
+				final int k1 = k; 
+
+				return new ParsingMemento() {
+					public void apply() {
+						char[] cs = new char[k1];
+						buffer.get(cs);
+						
+						handler.startToken(currentEntry.getValue());
+						handler.characters(cs);
+						handler.endToken();
+						
+						cg.remove(0);
+					}
+				};
 			} else {
-				return false;
+				return null;
 			}
 		}
 	}
@@ -359,12 +366,20 @@ outer:
 		 * @param buffer
 		 * @param cg
 		 * 
-		 * @return <code>true</code> if a successful match was done;
-		 * <code>false</code> otherwise
+		 * @return <code>Monad</code> that captures the actions that should be
+		 * carried later to consume the matching; or null if impossible to
+		 * match after all.
 		 * 
 		 * @throws ParserException if was successfully matching but the
 		 * buffer underflows.
 		 */
-		boolean match(CharBuffer buffer, List<Entry<String, String>> cg, Handler handler) throws ParserException;
+		ParsingMemento match(CharBuffer buffer, List<Entry<String, String>> cg, Handler handler) throws ParserException;
+	}
+	
+	public interface ParsingMemento {
+		/**
+		 * Carry all actions to consume a previously successful match.
+		 */
+		void apply();
 	}
 }
