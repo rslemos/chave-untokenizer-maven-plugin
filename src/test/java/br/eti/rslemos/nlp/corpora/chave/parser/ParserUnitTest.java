@@ -35,25 +35,6 @@ public class ParserUnitTest {
 		parser = new Parser(handler);
 	}
 
-//	@Test
-//	public void testContraction_de_o() throws Exception {
-//		@SuppressWarnings("unchecked")
-//		List<Entry<String, String>> cg = Arrays.asList(
-//				new Parser.Entry<String, String>("de", " [de] PRP <sam-> @N<"),
-//				new Parser.Entry<String, String>("o", " [o] DET M S <artd> <-sam> @>N")
-//			);
-//		
-//		verifyParse(cg, "do");
-//		
-//		verify(handler).startToken(cg.get(0).getValue());
-//		verify(handler).characters("d".toCharArray());
-//		verify(handler).endToken();
-//		
-//		verify(handler).startToken(cg.get(1).getValue());
-//		verify(handler).characters("o".toCharArray());
-//		verify(handler).endToken();
-//	}
-
 	@Test
 	public void testChave19940101() throws Exception {
 		verifyParse("001.cg", "001.sgml");
