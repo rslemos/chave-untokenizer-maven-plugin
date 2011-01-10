@@ -74,16 +74,16 @@ public class Parser {
 		sgml.read(buffer);
 		buffer.flip();
 
-		ParsingStrategy[] strategies = {
+		MatchStrategy[] strategies = {
 			new DirectMatchStrategy(),
 		};
 
 outer:
 		while (!cg.isEmpty()) {
-			for (ParsingStrategy strategy : strategies) {
-				ParsingMemento memento;
-				if ((memento = strategy.match(buffer, cg, out)) != null) {
-					memento.apply();
+			for (MatchStrategy strategy : strategies) {
+				MatchResult memento;
+				if ((memento = strategy.match(buffer, cg)) != null) {
+					memento.apply(out);
 					continue outer;
 				}
 			}
@@ -282,55 +282,6 @@ outer:
 		return matcher;
 	}
 	
-	private static class DirectMatchStrategy implements ParsingStrategy {
-		public ParsingMemento match(final CharBuffer buffer, final List<Entry<String, String>> cg, final Handler handler) throws ParserException {
-			final Entry<String, String> currentEntry = cg.get(0);
-			String currentKey = currentEntry.getKey();
-			
-			int j = 0;
-			int k = 0;
-			try {
-				while (true) {
-					if (currentKey.charAt(j) == '=') {
-						while (isWhitespace(buffer.charAt(k)))
-							k++;
-						j++;
-						
-						continue;
-					}
-					
-					if (toLowerCase(currentKey.charAt(j)) != toLowerCase(buffer.charAt(k))) {
-						break;
-					}
-					
-					j++;
-					k++;
-				}
-			} catch (StringIndexOutOfBoundsException e) {
-			}
-			
-			if (j == currentKey.length()) {
-				// full match
-				final int k1 = k; 
-
-				return new ParsingMemento() {
-					public void apply() {
-						char[] cs = new char[k1];
-						buffer.get(cs);
-						
-						handler.startToken(currentEntry.getValue());
-						handler.characters(cs);
-						handler.endToken();
-						
-						cg.remove(0);
-					}
-				};
-			} else {
-				return null;
-			}
-		}
-	}
-
 	static class Entry<K, V> {
 
 		private K key;
@@ -349,37 +300,5 @@ outer:
 			return key;
 		}
 		
-	}
-
-	public interface ParsingStrategy {
-		/**
-		 * Try to match the (few) next item(s) on <code>cg</code>.
-		 * 
-		 * On successful match, <code>cg</code>  should have the matched items
-		 * removed and <code>buffer</code> should have been advanced to the
-		 * next position to match.
-		 * 
-		 * On failure, <code>cg</code> and <code>buffer</code> should be left
-		 * unaffected.
-		 * 
-		 * On 
-		 * @param buffer
-		 * @param cg
-		 * 
-		 * @return <code>Monad</code> that captures the actions that should be
-		 * carried later to consume the matching; or null if impossible to
-		 * match after all.
-		 * 
-		 * @throws ParserException if was successfully matching but the
-		 * buffer underflows.
-		 */
-		ParsingMemento match(CharBuffer buffer, List<Entry<String, String>> cg, Handler handler) throws ParserException;
-	}
-	
-	public interface ParsingMemento {
-		/**
-		 * Carry all actions to consume a previously successful match.
-		 */
-		void apply();
 	}
 }
