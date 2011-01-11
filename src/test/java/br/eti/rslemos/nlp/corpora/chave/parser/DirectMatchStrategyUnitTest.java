@@ -50,4 +50,15 @@ public class DirectMatchStrategyUnitTest extends AbstractMatchStrategyUnitTest {
 		verify(handler).endToken();
 	}
 
+	@Test
+	public void testPunctuationMark() throws Exception {
+		@SuppressWarnings("unchecked")
+		List<Entry<String, String>> cg = Arrays.asList(new Parser.Entry<String, String>("$,", null));
+		matchAndApply(cg, ",");
+		
+		verify(handler).startToken(cg.get(0).getValue());
+		verify(handler).characters(",".toCharArray());
+		verify(handler).endToken();
+	}
+
 }

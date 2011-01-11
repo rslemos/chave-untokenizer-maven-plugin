@@ -14,6 +14,9 @@ public class DirectMatchStrategy implements MatchStrategy {
 		final Entry<String, String> currentEntry = cg.get(0);
 		String currentKey = currentEntry.getKey();
 		
+		if (currentKey.startsWith("$"))
+			currentKey = currentKey.substring(1);
+		
 		int j = 0;
 		int k = 0;
 		try {
