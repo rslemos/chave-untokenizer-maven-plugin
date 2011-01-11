@@ -38,4 +38,15 @@ public class NewLineMatchStrategyUnitTest extends AbstractMatchStrategyUnitTest 
 		verify(handler).characters(new char[0]);
 		verify(handler).endToken();
 	}
+
+	@Test
+	public void testEmptyInput() throws Exception {
+		@SuppressWarnings("unchecked")
+		List<Entry<String, String>> cg = Arrays.asList(new Parser.Entry<String, String>("$¶", " [$¶] PU <<<"));
+		matchAndApply(cg, "");
+		
+		verify(handler).startToken(cg.get(0).getValue());
+		verify(handler).characters(new char[0]);
+		verify(handler).endToken();
+	}
 }

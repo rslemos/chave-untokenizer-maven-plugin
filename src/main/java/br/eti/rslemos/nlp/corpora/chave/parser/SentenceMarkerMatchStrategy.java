@@ -8,7 +8,7 @@ import br.eti.rslemos.nlp.corpora.chave.parser.Parser.Entry;
 
 public class SentenceMarkerMatchStrategy implements MatchStrategy {
 
-	public MatchResult match(CharBuffer buffer, final List<Entry<String, String>> cg) throws BufferUnderflowException {
+	public MatchResult match(CharBuffer buffer, final List<Entry<String, String>> cg, boolean noMoreData) throws BufferUnderflowException {
 		String key = cg.get(0).getKey();
 		
 		if ("<s>".equals(key) || "</s>".equals(key)) {

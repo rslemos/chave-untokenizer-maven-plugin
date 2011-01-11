@@ -10,7 +10,7 @@ import br.eti.rslemos.nlp.corpora.chave.parser.Parser.Entry;
 
 public class WhitespaceMatchStrategy implements MatchStrategy {
 
-	public MatchResult match(final CharBuffer buffer, List<Entry<String, String>> cg) throws BufferUnderflowException {
+	public MatchResult match(final CharBuffer buffer, List<Entry<String, String>> cg, boolean noMoreData) throws BufferUnderflowException {
 		int k = 0;
 		
 		try {

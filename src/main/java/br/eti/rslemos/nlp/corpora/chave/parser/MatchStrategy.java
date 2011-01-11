@@ -13,12 +13,12 @@ public interface MatchStrategy {
 	 * On 
 	 * @param buffer
 	 * @param cg
-	 * 
+	 * @param noMoreData TODO
 	 * @return <code>MatchingResult</code> that captures the actions that
 	 * should be carried later to consume the matching; or null if impossible
 	 * to match after all.
 	 * 
 	 * @throws BufferUnderflowException if more data is needed.
 	 */
-	MatchResult match(CharBuffer buffer, List<Entry<String, String>> cg) throws BufferUnderflowException;
+	MatchResult match(CharBuffer buffer, List<Entry<String, String>> cg, boolean noMoreData) throws BufferUnderflowException;
 }

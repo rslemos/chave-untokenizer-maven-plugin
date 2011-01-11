@@ -1,6 +1,7 @@
 package br.eti.rslemos.nlp.corpora.chave.parser;
 
 import static org.mockito.Mockito.verify;
+import static org.mockito.Mockito.verifyNoMoreInteractions;
 
 import java.util.Arrays;
 import java.util.List;
@@ -60,5 +61,15 @@ public class DirectMatchStrategyUnitTest extends AbstractMatchStrategyUnitTest {
 		verify(handler).characters(",".toCharArray());
 		verify(handler).endToken();
 	}
+
+	@Test
+	public void testEmptyInput() throws Exception {
+		@SuppressWarnings("unchecked")
+		List<Entry<String, String>> cg = Arrays.asList(new Parser.Entry<String, String>("Pesquisa=Datafolha", " [Pesquisa=Datafolha] PROP F S @SUBJ>"));
+		noMatch(cg, "");
+
+		verifyNoMoreInteractions(handler);
+	}
+
 
 }

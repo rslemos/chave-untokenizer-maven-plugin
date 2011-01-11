@@ -1,5 +1,7 @@
 package br.eti.rslemos.nlp.corpora.chave.parser;
 
+import static junit.framework.Assert.assertNull;
+
 import java.nio.CharBuffer;
 import java.util.LinkedList;
 import java.util.List;
@@ -22,7 +24,10 @@ public abstract class AbstractMatchStrategyUnitTest {
 	}
 
 	protected void matchAndApply(List<Entry<String, String>> cg, String sgml) {
-		strategy.match(CharBuffer.wrap(sgml), new LinkedList<Entry<String, String>>(cg)).apply(handler);
+		strategy.match(CharBuffer.wrap(sgml), new LinkedList<Entry<String, String>>(cg), true).apply(handler);
 	}
 
+	protected void noMatch(List<Entry<String, String>> cg, String sgml) {
+		assertNull(strategy.match(CharBuffer.wrap(sgml), new LinkedList<Entry<String, String>>(cg), true));
+	}
 }

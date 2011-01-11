@@ -31,7 +31,25 @@ public class ParserUnitTest {
 	
 	@Before
 	public void setUp() {
-		handler = mock(Handler.class);
+		//handler = mock(Handler.class);
+		handler = new Handler() {
+
+			public void printf(String string, Object... args) {
+			}
+
+			public void startToken(String attributes) {
+				System.out.printf("startToken(%s)\n", attributes);
+			}
+
+			public void characters(char[] chars) {
+				System.out.printf("characters(%s)\n", new String(chars));
+			}
+
+			public void endToken() {
+				System.out.printf("endToken()\n");
+			}
+			
+		};
 		parser = new Parser(handler);
 	}
 

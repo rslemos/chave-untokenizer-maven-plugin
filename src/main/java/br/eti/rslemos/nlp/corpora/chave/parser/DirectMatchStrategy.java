@@ -10,7 +10,7 @@ import java.util.List;
 import br.eti.rslemos.nlp.corpora.chave.parser.Parser.Entry;
 
 public class DirectMatchStrategy implements MatchStrategy {
-	public MatchResult match(final CharBuffer buffer, final List<Entry<String, String>> cg) {
+	public MatchResult match(final CharBuffer buffer, final List<Entry<String, String>> cg, boolean noMoreData) {
 		final Entry<String, String> currentEntry = cg.get(0);
 		String currentKey = currentEntry.getKey();
 		
@@ -38,7 +38,8 @@ public class DirectMatchStrategy implements MatchStrategy {
 			}
 		} catch (StringIndexOutOfBoundsException e) {
 		} catch (IndexOutOfBoundsException e) {
-			throw new BufferUnderflowException();
+			if (!noMoreData)
+				throw new BufferUnderflowException();
 		}
 		
 		if (j == currentKey.length()) {

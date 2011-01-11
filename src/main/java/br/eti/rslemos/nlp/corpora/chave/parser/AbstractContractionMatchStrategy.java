@@ -23,7 +23,7 @@ public abstract class AbstractContractionMatchStrategy implements MatchStrategy 
 		this.prefixLength = prefixLength;
 	}
 
-	public MatchResult match(final CharBuffer buffer, final List<Entry<String, String>> cg) throws BufferUnderflowException {
+	public MatchResult match(final CharBuffer buffer, final List<Entry<String, String>> cg, boolean noMoreData) throws BufferUnderflowException {
 		if (!prefix.equals(cg.get(0).getKey().toLowerCase()))
 			return null;
 		
