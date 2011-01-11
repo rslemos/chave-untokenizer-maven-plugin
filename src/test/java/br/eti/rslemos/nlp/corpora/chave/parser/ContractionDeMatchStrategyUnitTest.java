@@ -500,4 +500,25 @@ public class ContractionDeMatchStrategyUnitTest extends AbstractMatchStrategyUni
 		order.verify(handler).characters("elas".toCharArray());
 		order.verify(handler).endToken();
 	}
+	
+	@Test
+	public void testExpressionContraction_Alem_de_isso() throws Exception {
+		@SuppressWarnings("unchecked")
+		List<Entry<String, String>> cg = Arrays.asList(
+				new Parser.Entry<String, String>("Além=de", " [além=de] PRP <sam-> @ADVL>"),
+				new Parser.Entry<String, String>("isso", " [isso] SPEC M S <-sam> <dem> @P<")
+			);
+		
+		matchAndApply(cg, "Além disso");
+		
+		InOrder order = inOrder(handler);
+		
+		order.verify(handler).startToken(cg.get(0).getValue());
+		order.verify(handler).characters("Além d".toCharArray());
+		order.verify(handler).endToken();
+		
+		order.verify(handler).startToken(cg.get(1).getValue());
+		order.verify(handler).characters("isso".toCharArray());
+		order.verify(handler).endToken();
+	}
 }
