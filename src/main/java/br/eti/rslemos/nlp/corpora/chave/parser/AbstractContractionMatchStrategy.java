@@ -51,18 +51,24 @@ public abstract class AbstractContractionMatchStrategy implements MatchStrategy 
 		if (!(cg0.equals(key0) || key0.endsWith("=" + cg0)))
 			return null;
 		
-		String key1 = cg.get(1).getKey().toLowerCase();
+		final String key1 = cg.get(1).getKey().toLowerCase();
 		
 		final int idx;
-		if ((idx = Arrays.binarySearch(cg1, key1)) < 0)
+		if ((idx = Arrays.binarySearch(cg1, key1.split("=")[0])) < 0)
 			return null;
 		
 		
 		final String currentKey;
-		if (cg0.equals(key0))
-			currentKey = results[idx];
-		else // key0.endsWith("=" + cg0) 
+		if (cg0.equals(key0)) {
+			if (cg1[idx].equals(key1))
+				currentKey = results[idx];
+			else
+				// key1.startsWith(cg1 + "=")
+				currentKey = key1.replaceAll("^" + cg1[idx] + "=", results[idx] + "=");
+		} else {
+			// key0.endsWith("=" + cg0)
 			currentKey = key0.replaceAll("=" + cg0 + "$", "=" + results[idx]);
+		}
 		
 		int j = 0;
 		int k = 0;
@@ -102,41 +108,66 @@ public abstract class AbstractContractionMatchStrategy implements MatchStrategy 
 					int pe = prefixEnd[idx];
 					int ss = suffixStart[idx];
 					
-					char[] prefix = new char[k1 - (results[idx].length() - (pe))];
-					System.arraycopy(match, 0, prefix, 0, prefix.length);
-					
-					char[] suffix;
-					
-//					char[] prefix = new char[k1 - (results[idx].length() - prefixLength)];
-//					buffer.get(prefix);
-//					
-//					char[] suffix = new char[(results[idx].length() - prefixLength)];
-//					buffer.get(suffix);
-
-					
-					if (ss >= pe) {
-						suffix = new char[(results[idx].length() - ss)];
-						System.arraycopy(match, match.length - suffix.length, suffix, 0, suffix.length);
-
-						handler.startToken(cg.get(0).getValue());
-						handler.characters(prefix);
-						handler.endToken();
+					if (cg1[idx].equals(key1)) {
+						char[] prefix = new char[k1 - (results[idx].length() - (pe))];
+						System.arraycopy(match, 0, prefix, 0, prefix.length);
 						
-						handler.startToken(cg.get(1).getValue());
-						handler.characters(suffix);
-						handler.endToken();
-					} else {
-						suffix = new char[(results[idx].length() - ss - (pe - ss))];
-						System.arraycopy(match, match.length - suffix.length, suffix, 0, suffix.length);
-
-						handler.startToken(cg.get(1).getValue());
-						handler.startToken(cg.get(0).getValue());
-						handler.characters(prefix);
-						handler.endToken();
-						if (suffix.length > 0)
+						char[] suffix;
+						
+						if (ss >= pe) {
+							suffix = new char[(results[idx].length() - ss)];
+							System.arraycopy(match, match.length - suffix.length, suffix, 0, suffix.length);
+	
+							handler.startToken(cg.get(0).getValue());
+							handler.characters(prefix);
+							handler.endToken();
+							
+							handler.startToken(cg.get(1).getValue());
 							handler.characters(suffix);
-						handler.endToken();
+							handler.endToken();
+						} else {
+							suffix = new char[(results[idx].length() - ss - (pe - ss))];
+							System.arraycopy(match, match.length - suffix.length, suffix, 0, suffix.length);
+	
+							handler.startToken(cg.get(1).getValue());
+							handler.startToken(cg.get(0).getValue());
+							handler.characters(prefix);
+							handler.endToken();
+							if (suffix.length > 0)
+								handler.characters(suffix);
+							handler.endToken();
+						}
+					} else {
+						char[] prefix = new char[pe];
+						System.arraycopy(match, 0, prefix, 0, prefix.length);
+						
+						char[] suffix;
+						
+						if (ss >= pe) {
+							suffix = new char[k1 - (results[idx].length() - ss)];
+							System.arraycopy(match, match.length - suffix.length, suffix, 0, suffix.length);
+	
+							handler.startToken(cg.get(0).getValue());
+							handler.characters(prefix);
+							handler.endToken();
+							
+							handler.startToken(cg.get(1).getValue());
+							handler.characters(suffix);
+							handler.endToken();
+						} else {
+							suffix = new char[k1 - (results[idx].length() - ss - (pe - ss))];
+							System.arraycopy(match, match.length - suffix.length, suffix, 0, suffix.length);
+	
+							handler.startToken(cg.get(1).getValue());
+							handler.startToken(cg.get(0).getValue());
+							handler.characters(prefix);
+							handler.endToken();
+							if (suffix.length > 0)
+								handler.characters(suffix);
+							handler.endToken();
+						}
 					}
+					
 					cg.remove(0);
 					cg.remove(0);
 				}

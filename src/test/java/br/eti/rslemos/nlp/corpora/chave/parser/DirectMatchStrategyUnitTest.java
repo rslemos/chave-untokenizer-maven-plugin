@@ -71,5 +71,16 @@ public class DirectMatchStrategyUnitTest extends AbstractMatchStrategyUnitTest {
 		verifyNoMoreInteractions(handler);
 	}
 
+	@Test
+	public void testDirtyEntry() throws Exception {
+		@SuppressWarnings("unchecked")
+		List<Entry<String, String>> cg = Arrays.asList(new Parser.Entry<String, String>("checks ALT xxxs", " [check] N M P <*1> <*1> @P<"));
+		matchAndApply(cg, "checks");
+		
+		verify(handler).startToken(cg.get(0).getValue());
+		verify(handler).characters("checks".toCharArray());
+		verify(handler).endToken();
+	}
+
 
 }

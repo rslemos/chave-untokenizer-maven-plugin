@@ -218,4 +218,24 @@ public class ContractionAMatchStrategyUnitTest extends AbstractMatchStrategyUnit
 		order.verify(handler).characters("s".toCharArray());
 		order.verify(handler).endToken();
 	}
+	
+	@Test
+	public void testExpressionContraction_a_as_quais() throws Exception {
+		@SuppressWarnings("unchecked")
+		List<Entry<String, String>> cg = Arrays.asList(
+				new Parser.Entry<String, String>("a", " [a] PRP <sam-> @ADVL"),
+				new Parser.Entry<String, String>("as=quais", " [o=qual] SPEC F P @P< <rel> <-sam> @#FS-N<")
+			);
+		
+		matchAndApply(cg, "às quais");
+		
+		InOrder order = inOrder(handler);
+		
+		order.verify(handler).startToken(cg.get(1).getValue());
+		order.verify(handler).startToken(cg.get(0).getValue());
+		order.verify(handler).characters("à".toCharArray());
+		order.verify(handler).endToken();
+		order.verify(handler).characters("s quais".toCharArray());
+		order.verify(handler).endToken();
+	}
 }

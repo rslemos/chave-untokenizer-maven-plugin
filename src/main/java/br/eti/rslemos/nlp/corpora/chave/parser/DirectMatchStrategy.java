@@ -13,6 +13,7 @@ public class DirectMatchStrategy implements MatchStrategy {
 	public MatchResult match(final CharBuffer buffer, final List<Entry<String, String>> cg, boolean noMoreData) {
 		final Entry<String, String> currentEntry = cg.get(0);
 		String currentKey = currentEntry.getKey();
+		currentKey = currentKey.split(" ")[0];
 		
 		if (currentKey.startsWith("$"))
 			currentKey = currentKey.substring(1);

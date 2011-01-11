@@ -584,4 +584,26 @@ public class ContractionEmMatchStrategyUnitTest extends AbstractMatchStrategyUni
 		order.verify(handler).characters("umas".toCharArray());
 		order.verify(handler).endToken();
 	}
+	
+	@Test
+	public void testExpressionContraction_em_o_qual() throws Exception {
+		@SuppressWarnings("unchecked")
+		List<Entry<String, String>> cg = Arrays.asList(
+				new Parser.Entry<String, String>("em", " [em] PRP <sam-> @<ADVL"),
+				new Parser.Entry<String, String>("o=qual", " [o=qual] SPEC M S @P< <rel> <-sam> @#FS-N<")
+			);
+		
+		matchAndApply(cg, "no qual");
+		
+		InOrder order = inOrder(handler);
+		
+		order.verify(handler).startToken(cg.get(0).getValue());
+		order.verify(handler).characters("n".toCharArray());
+		order.verify(handler).endToken();
+		
+		order.verify(handler).startToken(cg.get(1).getValue());
+		order.verify(handler).characters("o qual".toCharArray());
+		order.verify(handler).endToken();
+		
+	}
 }
