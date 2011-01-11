@@ -1,9 +1,6 @@
 package br.eti.rslemos.nlp.corpora.chave.parser;
 
 import static org.junit.Assert.assertTrue;
-import static org.junit.Assert.fail;
-import static org.mockito.Mockito.mock;
-import static org.mockito.Mockito.verify;
 
 import java.io.IOException;
 import java.io.InputStreamReader;
@@ -15,12 +12,9 @@ import java.net.URL;
 import java.nio.charset.Charset;
 import java.util.Arrays;
 import java.util.Iterator;
-import java.util.List;
 
 import org.junit.Before;
 import org.junit.Test;
-
-import br.eti.rslemos.nlp.corpora.chave.parser.Parser.Entry;
 
 public class ParserUnitTest {
 	private static final Charset UTF8 = Charset.forName("UTF-8");
