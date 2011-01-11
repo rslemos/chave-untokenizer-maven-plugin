@@ -500,4 +500,88 @@ public class ContractionEmMatchStrategyUnitTest extends AbstractMatchStrategyUni
 		order.verify(handler).characters("elas".toCharArray());
 		order.verify(handler).endToken();
 	}
+	
+	@Test
+	public void testContraction_em_um() throws Exception {
+		@SuppressWarnings("unchecked")
+		List<Entry<String, String>> cg = Arrays.asList(
+				new Parser.Entry<String, String>("em", " [em] PRP <sam-> @<ADVL"),
+				new Parser.Entry<String, String>("um", " [um] DET M S <arti> @>N")
+			);
+		
+		matchAndApply(cg, "num");
+		
+		InOrder order = inOrder(handler);
+		
+		order.verify(handler).startToken(cg.get(0).getValue());
+		order.verify(handler).characters("n".toCharArray());
+		order.verify(handler).endToken();
+		
+		order.verify(handler).startToken(cg.get(1).getValue());
+		order.verify(handler).characters("um".toCharArray());
+		order.verify(handler).endToken();
+	}
+	
+	@Test
+	public void testContraction_em_uma() throws Exception {
+		@SuppressWarnings("unchecked")
+		List<Entry<String, String>> cg = Arrays.asList(
+				new Parser.Entry<String, String>("em", " [em] PRP <sam-> @<ADVL"),
+				new Parser.Entry<String, String>("uma", " [um] DET F S <arti> @>N")
+			);
+		
+		matchAndApply(cg, "numa");
+		
+		InOrder order = inOrder(handler);
+		
+		order.verify(handler).startToken(cg.get(0).getValue());
+		order.verify(handler).characters("n".toCharArray());
+		order.verify(handler).endToken();
+		
+		order.verify(handler).startToken(cg.get(1).getValue());
+		order.verify(handler).characters("uma".toCharArray());
+		order.verify(handler).endToken();
+	}
+	
+	@Test
+	public void testContraction_em_uns() throws Exception {
+		@SuppressWarnings("unchecked")
+		List<Entry<String, String>> cg = Arrays.asList(
+				new Parser.Entry<String, String>("em", " [em] PRP <sam-> @<ADVL"),
+				new Parser.Entry<String, String>("uns", " [um] DET M P <arti> @>N")
+			);
+		
+		matchAndApply(cg, "nuns");
+		
+		InOrder order = inOrder(handler);
+		
+		order.verify(handler).startToken(cg.get(0).getValue());
+		order.verify(handler).characters("n".toCharArray());
+		order.verify(handler).endToken();
+		
+		order.verify(handler).startToken(cg.get(1).getValue());
+		order.verify(handler).characters("uns".toCharArray());
+		order.verify(handler).endToken();
+	}
+	
+	@Test
+	public void testContraction_em_umas() throws Exception {
+		@SuppressWarnings("unchecked")
+		List<Entry<String, String>> cg = Arrays.asList(
+				new Parser.Entry<String, String>("em", " [em] PRP <sam-> @<ADVL"),
+				new Parser.Entry<String, String>("umas", " [um] DET F P <arti> @>N")
+			);
+		
+		matchAndApply(cg, "numas");
+		
+		InOrder order = inOrder(handler);
+		
+		order.verify(handler).startToken(cg.get(0).getValue());
+		order.verify(handler).characters("n".toCharArray());
+		order.verify(handler).endToken();
+		
+		order.verify(handler).startToken(cg.get(1).getValue());
+		order.verify(handler).characters("umas".toCharArray());
+		order.verify(handler).endToken();
+	}
 }
