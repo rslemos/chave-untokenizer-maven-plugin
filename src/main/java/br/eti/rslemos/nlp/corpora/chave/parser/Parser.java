@@ -11,8 +11,6 @@ import java.util.List;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
-import br.eti.rslemos.nlp.corpora.chave.parser.Parser.Entry;
-
 public class Parser {
 	private static final Formatter FORMATTER = new Formatter();
 
@@ -20,8 +18,6 @@ public class Parser {
 
 	private Handler out;
 	
-	private int i;
-
 	public Parser(Handler out) {
 		this.out = out;
 	}
@@ -55,22 +51,27 @@ public class Parser {
 	}
 
 	void parse1(List<Entry<String, String>> cg, Reader sgml) throws IOException, ParserException {
+		MatchStrategy[] strategies = {
+				new DirectMatchStrategy(),
+				new ContractionDeMatchStrategy(),
+				new ContractionEmMatchStrategy(),
+				new ContractionAMatchStrategy(),
+				new ContractionPorMatchStrategy(),
+				new WhitespaceMatchStrategy(),
+				new SentenceMarkerMatchStrategy(),
+				new NewLineMatchStrategy(),
+				new DamerauLevenshteinMatchStrategy(1),
+			};
+
+		parser1(strategies, cg, sgml);
+	}
+
+	private void parser1(MatchStrategy[] strategies, List<Entry<String, String>> cg, Reader sgml) throws IOException, ParserException {
 		LinkedList<Entry<String, String>> cg1 = new LinkedList<Entry<String, String>>(cg);
 		
 		CharBuffer buffer = CharBuffer.allocate(65536);
 		sgml.read(buffer);
 		buffer.flip();
-
-		MatchStrategy[] strategies = {
-			new DirectMatchStrategy(),
-			new ContractionDeMatchStrategy(),
-			new ContractionEmMatchStrategy(),
-			new ContractionAMatchStrategy(),
-			new ContractionPorMatchStrategy(),
-			new WhitespaceMatchStrategy(),
-			new SentenceMarkerMatchStrategy(),
-			new NewLineMatchStrategy(),
-		};
 
 outer:
 		while (!cg1.isEmpty()) {
