@@ -53,6 +53,7 @@ public class Parser {
 	void parse1(List<Entry<String, String>> cg, Reader sgml) throws IOException, ParserException {
 		MatchStrategy[] strategies = {
 				new DirectMatchStrategy(),
+				new EncliticMatchStrategy(),
 				new ContractionDeMatchStrategy(),
 				new ContractionEmMatchStrategy(),
 				new ContractionAMatchStrategy(),

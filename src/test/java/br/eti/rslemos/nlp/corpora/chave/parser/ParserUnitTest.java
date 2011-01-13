@@ -121,7 +121,7 @@ public class ParserUnitTest {
 		verifyParse("002.cg", "002.sgml");
 		verifyParse("003.cg", "003.sgml");
 		verifyParse("004.cg", "004.sgml");
-		//verifyParse("005.cg", "005.sgml"); // 51-th entry: fazer-; buffer at 1985\nDump remaining buffer (1760): fazê-lo.
+		verifyParse("005.cg", "005.sgml");
 		//verifyParse("006.cg", "006.sgml"); // 68-th entry: Sendo; buffer at 2110\nDump remaining buffer (1819): . Sendo um dos editores
 		verifyParse("007.cg", "007.sgml");
 		verifyParse("008.cg", "008.sgml");
@@ -155,27 +155,27 @@ public class ParserUnitTest {
 		verifyParse("036.cg", "036.sgml");
 		verifyParse("037.cg", "037.sgml");
 		//verifyParse("038.cg", "038.sgml"); // 220-th entry: país=o'=fuzzy ALT xxx; buffer at 1887\nDump remaining buffer (905): país o 'fuzzy logic', sistema
-		//verifyParse("039.cg", "039.sgml"); // 497-th entry: usar-; buffer at 7781\nDump remaining buffer (5406): usá-lo em contratos
+		//verifyParse("039.cg", "039.sgml"); // 1432-th entry: criará-; buffer at 7781\nDump remaining buffer (955): criar-se-á imensa expectativa
 		verifyParse("040.cg", "040.sgml");
 		verifyParse("041.cg", "041.sgml");
 		verifyParse("042.cg", "042.sgml");
 		verifyParse("043.cg", "043.sgml");
-		//verifyParse("044.cg", "044.sgml"); // 120-th entry: usar-; buffer at 1864\nDump remaining buffer (1334): usá-lo e o os atrasos são menores
+		verifyParse("044.cg", "044.sgml");
 		verifyParse("045.cg", "045.sgml");
-		//verifyParse("046.cg", "046.sgml"); // 360-th entry: cobrar-; buffer at 2124\bDump remaining buffer (423): cobrá-lo em agosto
+		verifyParse("046.cg", "046.sgml");
 		verifyParse("047.cg", "047.sgml");
 		verifyParse("048.cg", "048.sgml");
 		verifyParse("049.cg", "049.sgml");
 		verifyParse("050.cg", "050.sgml");
-		//verifyParse("051.cg", "051.sgml"); // 764-th entry: assistir-; buffer at 3964\nDump remaining buffer (168): assisti-los e aos seus filhos.
-		//verifyParse("052.cg", "052.sgml"); // 335-th entry: fazer-; buffer at 1830\nDump remaining buffer (205): fazê-los retornar a seu país.
+		verifyParse("051.cg", "051.sgml");
+		verifyParse("052.cg", "052.sgml");
 		verifyParse("053.cg", "053.sgml");
 		verifyParse("054.cg", "054.sgml");
 		//verifyParse("055.cg", "055.sgml"); // 89-th entry: $.; buffer at 2485\nDump remaining buffer (2079): º de janeiro
 		verifyParse("056.cg", "056.sgml");
 		verifyParse("057.cg", "057.sgml");
 		verifyParse("058.cg", "058.sgml");
-		//verifyParse("059.cg", "059.sgml"); // 341-th entry: indenizar-; buffer at 2408\nDump remaining buffer (576): indenizá-los.
+		verifyParse("059.cg", "059.sgml");
 		verifyParse("060.cg", "060.sgml");
 		verifyParse("061.cg", "061.sgml");
 		verifyParse("062.cg", "062.sgml");
@@ -184,7 +184,7 @@ public class ParserUnitTest {
 		verifyParse("065.cg", "065.sgml");
 		verifyParse("066.cg", "066.sgml");
 		verifyParse("067.cg", "067.sgml");
-		//verifyParse("068.cg", "068.sgml"); // 128-th entry: adotar-; buffer at 1523\nDump remaining buffer (912): adotá-los deve procurar
+		verifyParse("068.cg", "068.sgml");
 		verifyParse("069.cg", "069.sgml");
 		verifyParse("070.cg", "070.sgml"); 
 		verifyParse("071.cg", "071.sgml");
@@ -218,9 +218,9 @@ public class ParserUnitTest {
 		//verifyParse("099.cg", "099.sgml"); // 2-th entry: $.; buffer at 848\nDump remaining buffer (846): Brunner trabalhou na Ferrari
 		verifyParse("100.cg", "100.sgml");
 		verifyParse("101.cg", "101.sgml");
-		//verifyParse("102.cg", "102.sgml"); // 206-th entry: detalhar-; buffer at 1058\nDump remaining buffer (114): detalhá-lo e pô-lo em prática
+		verifyParse("102.cg", "102.sgml");
 		verifyParse("103.cg", "103.sgml");
-		//verifyParse("104.cg", "104.sgml"); // 104-th entry: ceder-; buffer at 748\nDump remaining buffer (269): cedê-los
+		verifyParse("104.cg", "104.sgml");
 		//verifyParse("105.cg", "105.sgml"); // 260-th entry: $.; buffer at 2036\nDump remaining buffer (884): São João,
 		verifyParse("106.cg", "106.sgml");
 		verifyParse("107.cg", "107.sgml");
@@ -231,7 +231,7 @@ public class ParserUnitTest {
 		//verifyParse("112.cg", "112.sgml"); // 1-th entry: Produtor=de'Concubina; buffer at 5285\nDump remaining buffer (5285): Produtor de 'Concubina'
 		verifyParse("113.cg", "113.sgml");
 		//verifyParse("114.cg", "114.sgml"); // 85-th entry: $.; buffer at 1980\nDump remaining buffer (1567): Time Warner Inc.
-		//verifyParse("115.cg", "115.sgml"); // 434-th entry: complementar-; buffer at 2380\nDump remaining buffer (450): complementá-la estabelecendo
+		//verifyParse("115.cg", "115.sgml"); // 489-th entry: Como; buffer at 2380\nDump remaining buffer (180): . Como Diegues,
 		//verifyParse("116.cg", "116.sgml"); // 72-th entry: professor; buffer at 3705\nDump remaining buffer (3402): O professor
 		verifyParse("117.cg", "117.sgml");
 		//verifyParse("118.cg", "118.sgml"); // 273-th entry: Uma=Fortuna=Perigosa=Follett; buffer at 1813\nDump remaining buffer (557): Uma Fortuna Perigosa"
@@ -247,7 +247,7 @@ public class ParserUnitTest {
 		//verifyParse("128.cg", "128.sgml"); // 412-th entry: mim; buffer at 2857\nDump remaining buffer (916): igo", conta
 		//verifyParse("129.cg", "129.sgml"); // 33-th entry: $.; buffer at 1726\nDump remaining buffer (1635): Direção: Ettore Scola.
 		//verifyParse("130.cg", "130.sgml"); // 29-th entry: $.; buffer at 3340\nDump remaining buffer (3276): Direção: David A. Prior. Com Dan Haggerty, Brian O'Connor.
-		//verifyParse("131.cg", "131.sgml"); // 705-th entry: abrir-; buffer at 7695\nDump remaining buffer (4572): abri-lo
+		verifyParse("131.cg", "131.sgml");
 		verifyParse("132.cg", "132.sgml");
 	}
 
