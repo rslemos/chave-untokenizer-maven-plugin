@@ -502,6 +502,27 @@ public class ContractionDeMatchStrategyUnitTest extends AbstractMatchStrategyUni
 	}
 	
 	@Test
+	public void testContraction_de_aí() throws Exception {
+		@SuppressWarnings("unchecked")
+		List<Entry<String, String>> cg = Arrays.asList(
+				new Parser.Entry<String, String>("de", " [de] PRP <sam-> @<ADVL"),
+				new Parser.Entry<String, String>("aí", " [aí] ADV <-sam> @<ADVL")
+			);
+		
+		matchAndApply(cg, "daí");
+		
+		InOrder order = inOrder(handler);
+		
+		order.verify(handler).startToken(cg.get(0).getValue());
+		order.verify(handler).characters("d".toCharArray());
+		order.verify(handler).endToken();
+		
+		order.verify(handler).startToken(cg.get(1).getValue());
+		order.verify(handler).characters("aí".toCharArray());
+		order.verify(handler).endToken();
+	}
+	
+	@Test
 	public void testExpressionContraction_Alem_de_isso() throws Exception {
 		@SuppressWarnings("unchecked")
 		List<Entry<String, String>> cg = Arrays.asList(

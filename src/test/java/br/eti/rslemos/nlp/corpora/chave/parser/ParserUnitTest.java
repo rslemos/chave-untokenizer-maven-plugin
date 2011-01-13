@@ -188,13 +188,13 @@ public class ParserUnitTest {
 		verifyParse("069.cg", "069.sgml");
 		verifyParse("070.cg", "070.sgml"); 
 		verifyParse("071.cg", "071.sgml");
-		//verifyParse("072.cg", "072.sgml"); // 345-th entry: aí; buffer at 2467\nDump remaining buffer (919): í
+		verifyParse("072.cg", "072.sgml");
 		verifyParse("073.cg", "073.sgml");
 		//verifyParse("074.cg", "074.sgml"); // 109-th entry: Essa; buffer at 791\nDump remaining buffer (309): . Essa é a última viagem sorteada
 		verifyParse("075.cg", "075.sgml");
 		//verifyParse("076.cg", "076.sgml"); // 222-th entry: Sesc=Pinheiros-Av.; buffer at 1189\nDump remaining buffer (116): Sesc Pinheiros- av. Rebouças, 2876.
 		verifyParse("077.cg", "077.sgml");
-		//verifyParse("078.cg", "078.sgml"); // 130-th entry: A=partir=de; buffer at 2154\nDump remaining buffer (1543): A partir daí,
+		verifyParse("078.cg", "078.sgml");
 		verifyParse("079.cg", "079.sgml");
 		verifyParse("080.cg", "080.sgml");
 		//verifyParse("081.cg", "081.sgml"); // 233-th entry: $.; buffer at 5806\nDump remaining buffer (4706): Folha - Qual
