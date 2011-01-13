@@ -14,7 +14,7 @@ public class WhitespaceMatchStrategy implements MatchStrategy {
 		int k = 0;
 		
 		try {
-			while(isWhitespace(buffer.charAt(k)) || buffer.charAt(k) == '"')
+			while(isWhitespace(buffer.charAt(k)))
 				k++;
 		} catch (IndexOutOfBoundsException e) {}
 		

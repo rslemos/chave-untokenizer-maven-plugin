@@ -31,7 +31,7 @@ public class DamerauLevenshteinMatchStrategy implements MatchStrategy {
 			return null;
 		
 		final char[] cs1 = slices[0].toCharArray();
-		if (cs1.length == 0)
+		if (cs1.length < 2)
 			return null;
 		
 		if (levenshteinDistance(key0.toCharArray(), cs1) <= maxDistance) {

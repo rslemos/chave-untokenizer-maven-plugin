@@ -57,6 +57,7 @@ public class Parser {
 				new ContractionEmMatchStrategy(),
 				new ContractionAMatchStrategy(),
 				new ContractionPorMatchStrategy(),
+				new QuotesMatchStrategy(),
 				new WhitespaceMatchStrategy(),
 				new SentenceMarkerMatchStrategy(),
 				new NewLineMatchStrategy(),

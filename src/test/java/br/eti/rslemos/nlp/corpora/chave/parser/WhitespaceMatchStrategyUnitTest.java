@@ -33,13 +33,4 @@ public class WhitespaceMatchStrategyUnitTest extends AbstractMatchStrategyUnitTe
 
 		verify(handler).characters("   \t\t   \t   ".toCharArray());
 	}
-	
-	@Test
-	public void testDoubleQuotes() throws Exception {
-		@SuppressWarnings("unchecked")
-		List<Entry<String, String>> cg = Arrays.asList();
-		matchAndApply(cg, "\"abcd");
-
-		verify(handler).characters("\"".toCharArray());
-	}
 }

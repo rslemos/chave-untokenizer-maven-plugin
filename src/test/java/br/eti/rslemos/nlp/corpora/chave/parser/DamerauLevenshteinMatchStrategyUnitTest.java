@@ -56,4 +56,14 @@ public class DamerauLevenshteinMatchStrategyUnitTest extends AbstractMatchStrate
 
 		verifyNoMoreInteractions(handler);
 	}
+
+	@Test
+	public void testDontMatchSingleChar() throws Exception {
+		@SuppressWarnings("unchecked")
+		List<Entry<String, String>> cg = Arrays.asList(new Parser.Entry<String, String>("o", " [o] DET M S <artd> @>N"));
+		noMatch(cg, "\"");
+
+		verifyNoMoreInteractions(handler);
+	}
+
 }
