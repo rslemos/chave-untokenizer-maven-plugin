@@ -20,7 +20,12 @@ public class DamerauLevenshteinMatchStrategy implements MatchStrategy {
 		CharBuffer tempBuffer = buffer.slice();
 
 		char[] cs = new char[key0.length()];
-		tempBuffer.get(cs);
+		try {
+			tempBuffer.get(cs);
+		} catch (BufferUnderflowException e) {
+			return null;
+		}
+		
 		String[] slices = new String(cs).split("\\p{Space}");
 		if (slices.length == 0)
 			return null;
@@ -41,6 +46,10 @@ public class DamerauLevenshteinMatchStrategy implements MatchStrategy {
 					handler.endToken();
 					
 					cg.remove(0);
+				}
+
+				public int getMatchLength() {
+					return cs1.length;
 				}
 			};
 		} else

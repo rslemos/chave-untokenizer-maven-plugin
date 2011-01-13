@@ -34,6 +34,10 @@ public class NewLineMatchStrategy implements MatchStrategy {
 					
 					cg.remove(0);
 				}
+
+				public int getMatchLength() {
+					return l1;
+				}
 			};
 		} else
 			return null;

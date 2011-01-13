@@ -5,4 +5,6 @@ public interface MatchResult {
 	 * Carry all actions to consume a previously successful match.
 	 */
 	void apply(Handler handler);
+
+	int getMatchLength();
 }

@@ -76,14 +76,31 @@ public class Parser {
 outer:
 		while (!cg1.isEmpty()) {
 			try {
+				ArrayList<MatchResult> mementos = new ArrayList<MatchResult>(strategies.length);
+				
 				for (MatchStrategy strategy : strategies) {
-					MatchResult memento;
-					if ((memento = strategy.match(buffer, cg1, true)) != null) {
-						memento.apply(out);
+					mementos.add(strategy.match(buffer, cg1, true));
+				}
+				
+				do {} while (mementos.remove(null));
+				
+				if (mementos.size() > 0) {
+					MatchResult best = mementos.get(0);
+					int bestLength = -1;
+					for (MatchResult memento : mementos) {
+						bestLength = best != null ? best.getMatchLength() : -1;
+						if (memento.getMatchLength() > bestLength) {
+							best = memento;
+						}
+					}
+					if (best != null) {
+						best.apply(out);
 						continue outer;
 					}
 				}
+
 			} catch (Exception e) {
+				e.printStackTrace();
 			}
 			
 			int remaining = buffer.remaining();

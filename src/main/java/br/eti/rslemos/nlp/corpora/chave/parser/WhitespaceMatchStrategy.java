@@ -26,6 +26,10 @@ public class WhitespaceMatchStrategy implements MatchStrategy {
 					buffer.get(cs);
 					handler.characters(cs);
 				}
+
+				public int getMatchLength() {
+					return k1;
+				}
 			};
 		} else
 			return null;

@@ -171,6 +171,10 @@ public abstract class AbstractContractionMatchStrategy implements MatchStrategy 
 					cg.remove(0);
 					cg.remove(0);
 				}
+
+				public int getMatchLength() {
+					return k1;
+				}
 			};
 		} else {
 			return null;

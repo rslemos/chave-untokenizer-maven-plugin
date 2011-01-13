@@ -16,6 +16,10 @@ public class SentenceMarkerMatchStrategy implements MatchStrategy {
 				public void apply(Handler handler) {
 					cg.remove(0);
 				}
+
+				public int getMatchLength() {
+					return 0;
+				}
 			};
 		} else 
 			return null;

@@ -58,6 +58,10 @@ public class DirectMatchStrategy implements MatchStrategy {
 					
 					cg.remove(0);
 				}
+
+				public int getMatchLength() {
+					return k1;
+				}
 			};
 		} else {
 			return null;
