@@ -238,4 +238,24 @@ public class ContractionAMatchStrategyUnitTest extends AbstractMatchStrategyUnit
 		order.verify(handler).characters("s quais".toCharArray());
 		order.verify(handler).endToken();
 	}
+	
+	@Test
+	public void testExpressionContraction_devido_a_a() throws Exception {
+		@SuppressWarnings("unchecked")
+		List<Entry<String, String>> cg = Arrays.asList(
+				new Parser.Entry<String, String>("devido=a", " [devido=a] PRP <sam-> @<ADVL"),
+				new Parser.Entry<String, String>("a", " [o] DET F S <-sam> <artd> @>N")
+			);
+		
+		matchAndApply(cg, "devido à");
+		
+		InOrder order = inOrder(handler);
+		
+		order.verify(handler).startToken(cg.get(0).getValue());
+		order.verify(handler).characters("devido ".toCharArray());
+		order.verify(handler).startToken(cg.get(1).getValue());
+		order.verify(handler).characters("à".toCharArray());
+		order.verify(handler).endToken();
+		order.verify(handler).endToken();
+	}
 }
