@@ -128,7 +128,7 @@ public class ParserUnitTest {
 		verifyParse("009.cg", "009.sgml");
 		verifyParse("010.cg", "010.sgml");
 		verifyParse("011.cg", "011.sgml"); 
-		//verifyParse("012.cg", "012.sgml"); // spurious key "$."
+		//verifyParse("012.cg", "012.sgml"); // 202-th entry: $.; buffer at 6590\nDump remaining buffer (5668): Kathryn Tolbert,
 		verifyParse("013.cg", "013.sgml");
 		verifyParse("014.cg", "014.sgml");
 		verifyParse("015.cg", "015.sgml");
