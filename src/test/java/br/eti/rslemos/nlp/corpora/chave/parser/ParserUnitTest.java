@@ -116,6 +116,34 @@ public class ParserUnitTest {
 	}
 
 	@Test
+	public void testChave19940101_001() throws Exception {
+		handler = new Handler() {
+			
+			public void startToken(String attributes) {
+				if (attributes != null)
+					System.out.printf("<token attributes=\"%s\">", escape(attributes));
+				else
+					System.out.printf("<token>");
+			}
+			
+			public void endToken() {
+				System.out.print("</token>");
+			}
+			
+			public void characters(char[] chars) {
+				System.out.printf("%s", new String(chars));
+			}
+			
+			private String escape(String in) {
+				return in.replaceAll("<", "\\&lt;").replaceAll(">", "\\&gt;").replaceAll("\"", "\\&quot;");
+			}
+		};
+		parser = new Parser(handler);
+		
+		verifyParse("131.cg", "131.sgml");
+	}
+	
+	@Test
 	public void testChave19940101() throws Exception {
 		verifyParse("001.cg", "001.sgml");
 		verifyParse("002.cg", "002.sgml");
