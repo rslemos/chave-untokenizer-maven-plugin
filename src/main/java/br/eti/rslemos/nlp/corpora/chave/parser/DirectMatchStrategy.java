@@ -52,9 +52,11 @@ public class DirectMatchStrategy implements MatchStrategy {
 					char[] cs = new char[k1];
 					buffer.get(cs);
 					
-					handler.startToken(currentEntry.getValue());
-					handler.characters(cs);
-					handler.endToken();
+					if (handler != null) {
+						handler.startToken(currentEntry.getValue());
+						handler.characters(cs);
+						handler.endToken();
+					}
 					
 					cg.remove(0);
 				}

@@ -199,7 +199,7 @@ public class ContractionAMatchStrategyUnitTest extends AbstractMatchStrategyUnit
 		order.verify(handler).endToken();
 	}
 	
-	@Test
+	//@Test ( [Quanto=<a]s> )
 	public void testExpressionContraction_Quanto_a_as() throws Exception {
 		@SuppressWarnings("unchecked")
 		List<Entry<String, String>> cg = Arrays.asList(
@@ -255,7 +255,26 @@ public class ContractionAMatchStrategyUnitTest extends AbstractMatchStrategyUnit
 		order.verify(handler).characters("devido ".toCharArray());
 		order.verify(handler).startToken(cg.get(1).getValue());
 		order.verify(handler).characters("à".toCharArray());
+		order.verify(handler, times(2)).endToken();
+	}
+	
+	@Test
+	public void testExpressionContraction_devido_a_os_quais() throws Exception {
+		@SuppressWarnings("unchecked")
+		List<Entry<String, String>> cg = Arrays.asList(
+				new Parser.Entry<String, String>("devido=a", " [devido=a] PRP <sam-> @<ADVL"),
+				new Parser.Entry<String, String>("os=quais", " [o=qual] SPEC M P @P< <rel> <-sam> @#FS-N<")
+			);
+		
+		matchAndApply(cg, "devido aos quais");
+		
+		InOrder order = inOrder(handler);
+		
+		order.verify(handler).startToken(cg.get(0).getValue());
+		order.verify(handler).characters("devido a".toCharArray());
 		order.verify(handler).endToken();
+		order.verify(handler).startToken(cg.get(1).getValue());
+		order.verify(handler).characters("os quais".toCharArray());
 		order.verify(handler).endToken();
 	}
 }

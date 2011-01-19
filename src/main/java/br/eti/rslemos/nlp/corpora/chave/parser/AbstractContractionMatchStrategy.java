@@ -5,6 +5,7 @@ import static java.lang.Character.toLowerCase;
 
 import java.nio.BufferUnderflowException;
 import java.nio.CharBuffer;
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
@@ -12,6 +13,8 @@ import br.eti.rslemos.nlp.corpora.chave.parser.Parser.Entry;
 
 public abstract class AbstractContractionMatchStrategy implements MatchStrategy {
 
+	private static final DirectMatchStrategy DM = new DirectMatchStrategy();
+	
 	private final String cg0;
 	private final String[] cg1;
 	private final String[] results;
@@ -56,129 +59,99 @@ public abstract class AbstractContractionMatchStrategy implements MatchStrategy 
 		final int idx;
 		if ((idx = Arrays.binarySearch(cg1, key1.split("=")[0])) < 0)
 			return null;
-		
-		
-		final String currentKey;
-		if (cg0.equals(key0)) {
-			if (cg1[idx].equals(key1))
-				currentKey = results[idx];
-			else
-				// key1.startsWith(cg1 + "=")
-				currentKey = key1.replaceAll("^" + cg1[idx] + "=", results[idx] + "=");
-		} else {
-			// key0.endsWith("=" + cg0)
-			currentKey = key0.replaceAll("=" + cg0 + "$", "=" + results[idx]);
-		}
-		
-		int j = 0;
-		int k = 0;
-		try {
-			while (true) {
-				if (currentKey.charAt(j) == '=') {
-					while (isWhitespace(buffer.charAt(k)))
-						k++;
-					j++;
-					
-					continue;
-				}
-				
-				if (toLowerCase(currentKey.charAt(j)) != toLowerCase(buffer.charAt(k))) {
-					break;
-				}
-				
-				j++;
-				k++;
-			}
-		} catch (StringIndexOutOfBoundsException e) {
-		} catch (IndexOutOfBoundsException e) {
-			if (!noMoreData)
-				throw new BufferUnderflowException();
-		}
-		
-		if (j == currentKey.length()) {
-			// full match
-			final int k1 = k;
-			
-			return new MatchResult() {
-				
-				public void apply(Handler handler) {
-					char[] match = new char[k1];
-					buffer.get(match);
-					
-					int pe = prefixEnd[idx];
-					int ss = suffixStart[idx];
-					
-					if (cg1[idx].equals(key1)) {
-						char[] prefix = new char[k1 - (results[idx].length() - (pe))];
-						System.arraycopy(match, 0, prefix, 0, prefix.length);
-						
-						char[] suffix;
-						
-						if (ss >= pe) {
-							suffix = new char[(results[idx].length() - ss)];
-							System.arraycopy(match, match.length - suffix.length, suffix, 0, suffix.length);
-	
-							handler.startToken(cg.get(0).getValue());
-							handler.characters(prefix);
-							handler.endToken();
-							
-							handler.startToken(cg.get(1).getValue());
-							handler.characters(suffix);
-							handler.endToken();
-						} else {
-							suffix = new char[(results[idx].length() - ss - (pe - ss))];
-							System.arraycopy(match, match.length - suffix.length, suffix, 0, suffix.length);
-	
-							handler.startToken(cg.get(1).getValue());
-							handler.startToken(cg.get(0).getValue());
-							handler.characters(prefix);
-							handler.endToken();
-							if (suffix.length > 0)
-								handler.characters(suffix);
-							handler.endToken();
-						}
-					} else {
-						char[] prefix = new char[pe];
-						System.arraycopy(match, 0, prefix, 0, prefix.length);
-						
-						char[] suffix;
-						
-						if (ss >= pe) {
-							suffix = new char[k1 - (results[idx].length() - ss)];
-							System.arraycopy(match, match.length - suffix.length, suffix, 0, suffix.length);
-	
-							handler.startToken(cg.get(0).getValue());
-							handler.characters(prefix);
-							handler.endToken();
-							
-							handler.startToken(cg.get(1).getValue());
-							handler.characters(suffix);
-							handler.endToken();
-						} else {
-							suffix = new char[k1 - (results[idx].length() - ss - (pe - ss))];
-							System.arraycopy(match, match.length - suffix.length, suffix, 0, suffix.length);
-	
-							handler.startToken(cg.get(1).getValue());
-							handler.startToken(cg.get(0).getValue());
-							handler.characters(prefix);
-							handler.endToken();
-							if (suffix.length > 0)
-								handler.characters(suffix);
-							handler.endToken();
-						}
-					}
-					
-					cg.remove(0);
-					cg.remove(0);
-				}
 
-				public int getMatchLength() {
-					return k1;
-				}
-			};
-		} else {
-			return null;
+		CharBuffer buffer0 = buffer.slice();
+		
+		int tmpleft = 0;
+		if (key0.endsWith("=" + cg0)) {
+			Entry<String, String> fauxEntry = new Entry<String, String>(key0.replaceAll("=" + cg0 + "$", "="), null);
+			List<Entry<String, String>> fauxCG = new ArrayList<Parser.Entry<String,String>>(0);
+			fauxCG.add(fauxEntry);
+			MatchResult result = DM.match(buffer0, fauxCG, noMoreData);
+			if (result == null)
+				return null;
+			
+			result.apply(null);
+			tmpleft += result.getMatchLength();
 		}
 		
+		int tmpmiddle = 0;
+		int tmpright = 0;
+
+		int i = 0;
+		while (i < results[idx].length() && toLowerCase(buffer0.get()) == results[idx].charAt(i))
+			i++;
+		
+		if (i != results[idx].length())
+			return null;
+		
+		if (prefixEnd[idx] <= suffixStart[idx]) {
+			tmpleft += prefixEnd[idx];
+			tmpright += results[idx].length() - suffixStart[idx];
+		} else {
+			tmpleft += suffixStart[idx];
+			tmpmiddle += prefixEnd[idx] - suffixStart[idx];
+			tmpright += results[idx].length() - prefixEnd[idx];
+		}
+		
+		if (key1.startsWith(cg1[idx] + "=")) {
+			Entry<String, String> fauxEntry = new Entry<String, String>(key1.replaceAll("^" + cg1[idx] + "=", "="), null);
+			List<Entry<String, String>> fauxCG = new ArrayList<Parser.Entry<String,String>>(0);
+			fauxCG.add(fauxEntry);
+			MatchResult result = DM.match(buffer0, fauxCG, noMoreData);
+			if (result == null)
+				return null;
+			
+			result.apply(null);
+			tmpright += result.getMatchLength();
+		}
+
+		final int cleft = tmpleft;
+		final int cmiddle = tmpmiddle;
+		final int cright = tmpright;
+		
+		return new MatchResult() {
+			
+			public int getMatchLength() {
+				return cleft + cmiddle + cright;
+			}
+			
+			public void apply(Handler handler) {
+				char[] left = new char[cleft];
+				char[] middle = new char[cmiddle];
+				char[] right = new char[cright];
+				
+				buffer.get(left);
+				buffer.get(middle);
+				buffer.get(right);
+				
+				if (cmiddle == 0) {
+					handler.startToken(cg.get(0).getValue());
+					handler.characters(left);
+					handler.endToken();
+					
+					handler.startToken(cg.get(1).getValue());
+					handler.characters(right);
+					handler.endToken();
+				} else if (cleft == 0) {
+					handler.startToken(cg.get(1).getValue());
+					handler.startToken(cg.get(0).getValue());
+					handler.characters(middle);
+					handler.endToken();
+					handler.characters(right);
+					handler.endToken();
+				} else if (cright == 0) {
+					handler.startToken(cg.get(0).getValue());
+					handler.characters(left);
+					handler.startToken(cg.get(1).getValue());
+					handler.characters(middle);
+					handler.endToken();
+					handler.endToken();
+				}
+				
+				cg.remove(0);
+				cg.remove(0);
+			}
+		};
 	}
 }
