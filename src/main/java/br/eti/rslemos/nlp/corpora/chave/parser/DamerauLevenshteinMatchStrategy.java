@@ -2,6 +2,7 @@ package br.eti.rslemos.nlp.corpora.chave.parser;
 
 import java.nio.BufferUnderflowException;
 import java.nio.CharBuffer;
+import java.util.Arrays;
 import java.util.List;
 
 import br.eti.rslemos.nlp.corpora.chave.parser.Parser.Entry;
@@ -16,7 +17,20 @@ public class DamerauLevenshteinMatchStrategy implements MatchStrategy {
 
 	public MatchResult match(final CharBuffer buffer, final List<Entry<String, String>> cg, boolean noMoreData) throws BufferUnderflowException {
 		final Entry<String, String> entry0 = cg.get(0);
-		final String key0 = entry0.getKey();
+		String key0 = entry0.getKey();
+
+		if (cg.size() > 1) {
+			String key1 = cg.get(1).getKey();
+			if (key1.startsWith("$"))
+				key1 = key1.substring(1);
+			
+			if (Arrays.binarySearch(new String[] { ",", "-", ".", ":", ";" }, key1) >= 0) {
+				if (key0.endsWith(key1)) {
+					key0 = key0.substring(0, key0.length() - key1.length());
+				}
+			}
+		}
+
 		CharBuffer tempBuffer = buffer.slice();
 
 		char[] cs = new char[key0.length()];

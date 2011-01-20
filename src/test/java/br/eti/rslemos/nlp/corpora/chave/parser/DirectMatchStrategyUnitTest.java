@@ -82,5 +82,19 @@ public class DirectMatchStrategyUnitTest extends AbstractMatchStrategyUnitTest {
 		verify(handler).endToken();
 	}
 
+	@Test
+	public void testUngreedyMatchPunctuation() throws Exception {
+		@SuppressWarnings("unchecked")
+		List<Entry<String, String>> cg = Arrays.asList(
+				new Parser.Entry<String, String>("sra.", " [sra.] N F S @P<"),
+				new Parser.Entry<String, String>("$.", " [$.] PU <<<")
+			);
+
+		matchAndApply(cg, "sra.");
+		
+		verify(handler).startToken(cg.get(0).getValue());
+		verify(handler).characters("sra".toCharArray());
+		verify(handler).endToken();
+	}
 
 }

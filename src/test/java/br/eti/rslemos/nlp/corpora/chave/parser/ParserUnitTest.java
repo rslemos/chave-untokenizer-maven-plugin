@@ -145,6 +145,29 @@ public class ParserUnitTest {
 	}
 
 	@Test
+	public void testUngreedyMatchPunctuation() throws Exception {
+		handler = mock(Handler.class);
+		parser = new Parser(handler);
+		
+		@SuppressWarnings("unchecked")
+		List<Entry<String, String>> cg = Arrays.asList(
+				new Parser.Entry<String, String>("sra.", " [sra.] N F S @P<"),
+				new Parser.Entry<String, String>("$.", " [$.] PU <<<")
+			);
+
+		parser.parse1(cg, reader("sra."));
+		
+		InOrder order = inOrder(handler);
+		
+		order.verify(handler).startToken(cg.get(0).getValue());
+		order.verify(handler).characters("sra".toCharArray());
+		order.verify(handler).endToken();
+		order.verify(handler).startToken(cg.get(1).getValue());
+		order.verify(handler).characters(".".toCharArray());
+		order.verify(handler).endToken();
+	}
+	
+	@Test
 	public void testChave19940101_001() throws Exception {
 		handler = new Handler() {
 			
@@ -186,7 +209,7 @@ public class ParserUnitTest {
 	@Test
 	public void testChave19940101() throws Exception {
 
-		//verifyParse("012.cg", "012.sgml"); // 202-th entry: $.; buffer at 6590\nDump remaining buffer (5668): Kathryn Tolbert,
+		//verifyParse("012.cg", "012.sgml"); // 338-th entry: Africa=do=Sul=o'=apartheid'; buffer at 6590\nDump remaining buffer (5026): Africa do Sul o 'apartheid'
 		//verifyParse("038.cg", "038.sgml"); // 220-th entry: país=o'=fuzzy ALT xxx; buffer at 1887\nDump remaining buffer (905): país o 'fuzzy logic', sistema
 		//verifyParse("039.cg", "039.sgml"); // 1432-th entry: criará-; buffer at 7781\nDump remaining buffer (955): criar-se-á imensa expectativa
 		//verifyParse("055.cg", "055.sgml"); // 89-th entry: $.; buffer at 2485\nDump remaining buffer (2079): º de janeiro
@@ -196,7 +219,6 @@ public class ParserUnitTest {
 		//verifyParse("087.cg", "087.sgml"); // 70-th entry: $.; buffer at 2609\nDump remaining buffer (2282): º de março.
 		//verifyParse("094.cg", "094.sgml"); // 3-th entry: dÁgua ALT xxxua; buffer at 3439\nDump remaining buffer (3432): d'Água'
 		//verifyParse("099.cg", "099.sgml"); // 2-th entry: $.; buffer at 848\nDump remaining buffer (846): Brunner trabalhou na Ferrari
-		//verifyParse("105.cg", "105.sgml"); // 260-th entry: $.; buffer at 2036\nDump remaining buffer (884): São João,
 		//verifyParse("110.cg", "110.sgml"); // 37-th entry: $.; buffer at 1442\nDump remaining buffer (1302): Reuniu terça-feira
 		//verifyParse("112.cg", "112.sgml"); // 1-th entry: Produtor=de'Concubina; buffer at 5285\nDump remaining buffer (5285): Produtor de 'Concubina'
 		//verifyParse("114.cg", "114.sgml"); // 85-th entry: $.; buffer at 1980\nDump remaining buffer (1567): Time Warner Inc.
@@ -205,7 +227,6 @@ public class ParserUnitTest {
 		//verifyParse("122.cg", "122.sgml"); // 366-th entry: mudou; buffer at 3365\nDump remaining buffer (1581): as mulheres se esqueceram de como é ser jovem.
 		//verifyParse("125.cg", "125.sgml"); // 280-th entry: a; buffer at 1873\nDump remaining buffer (676): gente comprar
 		//verifyParse("126.cg", "126.sgml"); // 37-th entry: repetiu=o'=boom ALT xxx; buffer at 1041\nDump remaining buffer (868): repetiu o
-		//verifyParse("129.cg", "129.sgml"); // 33-th entry: $.; buffer at 1726\nDump remaining buffer (1635): Direção: Ettore Scola.
 		//verifyParse("130.cg", "130.sgml"); // 29-th entry: $.; buffer at 3340\nDump remaining buffer (3276): Direção: David A. Prior. Com Dan Haggerty, Brian O'Connor.
 		
 		verifyParse("001.cg", "001.sgml");
@@ -302,6 +323,7 @@ public class ParserUnitTest {
 		verifyParse("102.cg", "102.sgml");
 		verifyParse("103.cg", "103.sgml");
 		verifyParse("104.cg", "104.sgml");
+		verifyParse("105.cg", "105.sgml");
 		verifyParse("106.cg", "106.sgml");
 		verifyParse("107.cg", "107.sgml");
 		verifyParse("108.cg", "108.sgml");
@@ -317,6 +339,7 @@ public class ParserUnitTest {
 		verifyParse("124.cg", "124.sgml");
 		verifyParse("127.cg", "127.sgml");
 		verifyParse("128.cg", "128.sgml");
+		verifyParse("129.cg", "129.sgml");
 		verifyParse("131.cg", "131.sgml");
 		verifyParse("132.cg", "132.sgml");
 	}

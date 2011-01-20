@@ -5,6 +5,7 @@ import static java.lang.Character.toLowerCase;
 
 import java.nio.BufferUnderflowException;
 import java.nio.CharBuffer;
+import java.util.Arrays;
 import java.util.List;
 
 import br.eti.rslemos.nlp.corpora.chave.parser.Parser.Entry;
@@ -12,11 +13,17 @@ import br.eti.rslemos.nlp.corpora.chave.parser.Parser.Entry;
 public class DirectMatchStrategy implements MatchStrategy {
 	public MatchResult match(final CharBuffer buffer, final List<Entry<String, String>> cg, boolean noMoreData) {
 		final Entry<String, String> currentEntry = cg.get(0);
-		String currentKey = currentEntry.getKey();
-		currentKey = currentKey.split(" ")[0];
+		String currentKey = getKey(currentEntry);
 		
-		if (currentKey.startsWith("$"))
-			currentKey = currentKey.substring(1);
+		if (cg.size() > 1) {
+			String nextKey = getKey(cg.get(1));
+			
+			if (Arrays.binarySearch(new String[] { ",", "-", ".", ":", ";" }, nextKey) >= 0) {
+				if (currentKey.endsWith(nextKey)) {
+					currentKey = currentKey.substring(0, currentKey.length() - nextKey.length());
+				}
+			}
+		}
 		
 		int j = 0;
 		int k = 0;
@@ -92,5 +99,15 @@ public class DirectMatchStrategy implements MatchStrategy {
 		} else {
 			return null;
 		}
+	}
+
+	private static String getKey(final Entry<String, String> entry) {
+		String currentKey = entry.getKey();
+		currentKey = currentKey.split(" ")[0];
+		
+		if (currentKey.startsWith("$"))
+			currentKey = currentKey.substring(1);
+		
+		return currentKey;
 	}
 }
