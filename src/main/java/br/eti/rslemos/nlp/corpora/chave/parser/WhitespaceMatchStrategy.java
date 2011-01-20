@@ -30,6 +30,10 @@ public class WhitespaceMatchStrategy implements MatchStrategy {
 				public int getMatchLength() {
 					return k1;
 				}
+
+				public int getSkipLength() {
+					return 0;
+				}
 			};
 		} else
 			return null;

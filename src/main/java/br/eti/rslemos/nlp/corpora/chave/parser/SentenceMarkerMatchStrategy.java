@@ -20,6 +20,10 @@ public class SentenceMarkerMatchStrategy implements MatchStrategy {
 				public int getMatchLength() {
 					return 0;
 				}
+
+				public int getSkipLength() {
+					return 0;
+				}
 			};
 		} else 
 			return null;

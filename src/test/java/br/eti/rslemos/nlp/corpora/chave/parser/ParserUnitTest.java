@@ -84,6 +84,27 @@ public class ParserUnitTest {
 	}
 
 	@Test
+	public void testSkipsUnmatchedCharacters() throws Exception {
+		handler = mock(Handler.class);
+		parser = new Parser(handler);
+		
+		@SuppressWarnings("unchecked")
+		List<Entry<String, String>> cg = Arrays.asList(
+				new Parser.Entry<String, String>("Sendo", " [ser] V GER @IMV @#ICL-ADVL>")
+			);
+
+		parser.parse1(cg, reader(". Sendo"));
+		
+		InOrder order = inOrder(handler);
+		
+		order.verify(handler).characters(". ".toCharArray());
+
+		order.verify(handler).startToken(cg.get(0).getValue());
+		order.verify(handler).characters("Sendo".toCharArray());
+		order.verify(handler).endToken();
+	}
+
+	@Test
 	public void testQuotesCanMatchKey() throws Exception {
 		handler = mock(Handler.class);
 		parser = new Parser(handler);
@@ -164,13 +185,12 @@ public class ParserUnitTest {
 	
 	@Test
 	public void testChave19940101() throws Exception {
-		//verifyParse("006.cg", "006.sgml"); // 68-th entry: Sendo; buffer at 2110\nDump remaining buffer (1819): . Sendo um dos editores
+
 		//verifyParse("012.cg", "012.sgml"); // 202-th entry: $.; buffer at 6590\nDump remaining buffer (5668): Kathryn Tolbert,
 		//verifyParse("038.cg", "038.sgml"); // 220-th entry: país=o'=fuzzy ALT xxx; buffer at 1887\nDump remaining buffer (905): país o 'fuzzy logic', sistema
 		//verifyParse("039.cg", "039.sgml"); // 1432-th entry: criará-; buffer at 7781\nDump remaining buffer (955): criar-se-á imensa expectativa
 		//verifyParse("055.cg", "055.sgml"); // 89-th entry: $.; buffer at 2485\nDump remaining buffer (2079): º de janeiro
 		//verifyParse("063.cg", "063.sgml"); // 22-th entry: $.; buffer at 2851\nDump remaining buffer (2761): Da Redação
-		//verifyParse("074.cg", "074.sgml"); // 109-th entry: Essa; buffer at 791\nDump remaining buffer (309): . Essa é a última viagem sorteada
 		//verifyParse("076.cg", "076.sgml"); // 222-th entry: Sesc=Pinheiros-Av.; buffer at 1189\nDump remaining buffer (116): Sesc Pinheiros- av. Rebouças, 2876.
 		//verifyParse("081.cg", "081.sgml"); // 233-th entry: $.; buffer at 5806\nDump remaining buffer (4706): Folha - Qual
 		//verifyParse("087.cg", "087.sgml"); // 70-th entry: $.; buffer at 2609\nDump remaining buffer (2282): º de março.
@@ -178,14 +198,11 @@ public class ParserUnitTest {
 		//verifyParse("099.cg", "099.sgml"); // 2-th entry: $.; buffer at 848\nDump remaining buffer (846): Brunner trabalhou na Ferrari
 		//verifyParse("105.cg", "105.sgml"); // 260-th entry: $.; buffer at 2036\nDump remaining buffer (884): São João,
 		//verifyParse("110.cg", "110.sgml"); // 37-th entry: $.; buffer at 1442\nDump remaining buffer (1302): Reuniu terça-feira
-		//verifyParse("111.cg", "111.sgml"); // 39-th entry: irmã; buffer at 270\nDump remaining buffer (87): o a irmã
 		//verifyParse("112.cg", "112.sgml"); // 1-th entry: Produtor=de'Concubina; buffer at 5285\nDump remaining buffer (5285): Produtor de 'Concubina'
 		//verifyParse("114.cg", "114.sgml"); // 85-th entry: $.; buffer at 1980\nDump remaining buffer (1567): Time Warner Inc.
-		//verifyParse("115.cg", "115.sgml"); // 489-th entry: Como; buffer at 2380\nDump remaining buffer (180): . Como Diegues,
-		//verifyParse("116.cg", "116.sgml"); // 72-th entry: professor; buffer at 3705\nDump remaining buffer (3402): O professor
 		//verifyParse("118.cg", "118.sgml"); // 273-th entry: Uma=Fortuna=Perigosa=Follett; buffer at 1813\nDump remaining buffer (557): Uma Fortuna Perigosa"
 		//verifyParse("119.cg", "119.sgml"); // 332-th entry: O=Onus...>; buffer at 1834\nDump remaining buffer (404): O Onus...' até que nã
-		//verifyParse("122.cg", "122.sgml"); // 237-th entry: só; buffer at 3365\nDump remaining buffer (2214): -só para citar alguns-
+		//verifyParse("122.cg", "122.sgml"); // 366-th entry: mudou; buffer at 3365\nDump remaining buffer (1581): as mulheres se esqueceram de como é ser jovem.
 		//verifyParse("125.cg", "125.sgml"); // 280-th entry: a; buffer at 1873\nDump remaining buffer (676): gente comprar
 		//verifyParse("126.cg", "126.sgml"); // 37-th entry: repetiu=o'=boom ALT xxx; buffer at 1041\nDump remaining buffer (868): repetiu o
 		//verifyParse("129.cg", "129.sgml"); // 33-th entry: $.; buffer at 1726\nDump remaining buffer (1635): Direção: Ettore Scola.
@@ -196,6 +213,7 @@ public class ParserUnitTest {
 		verifyParse("003.cg", "003.sgml");
 		verifyParse("004.cg", "004.sgml");
 		verifyParse("005.cg", "005.sgml");
+		verifyParse("006.cg", "006.sgml");
 		verifyParse("007.cg", "007.sgml");
 		verifyParse("008.cg", "008.sgml");
 		verifyParse("009.cg", "009.sgml");
@@ -258,6 +276,7 @@ public class ParserUnitTest {
 		verifyParse("071.cg", "071.sgml");
 		verifyParse("072.cg", "072.sgml");
 		verifyParse("073.cg", "073.sgml");
+		verifyParse("074.cg", "074.sgml");
 		verifyParse("075.cg", "075.sgml");
 		verifyParse("077.cg", "077.sgml");
 		verifyParse("078.cg", "078.sgml");
@@ -287,7 +306,10 @@ public class ParserUnitTest {
 		verifyParse("107.cg", "107.sgml");
 		verifyParse("108.cg", "108.sgml");
 		verifyParse("109.cg", "109.sgml");
+		verifyParse("111.cg", "111.sgml");
 		verifyParse("113.cg", "113.sgml");
+		verifyParse("115.cg", "115.sgml");
+		verifyParse("116.cg", "116.sgml");
 		verifyParse("117.cg", "117.sgml");
 		verifyParse("120.cg", "120.sgml");
 		verifyParse("121.cg", "121.sgml");

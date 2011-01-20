@@ -62,6 +62,7 @@ public abstract class AbstractContractionMatchStrategy implements MatchStrategy 
 		CharBuffer buffer0 = buffer.slice();
 		
 		int tmpleft = 0;
+		int tmpskip = 0;
 		if (key0.endsWith("=" + cg0)) {
 			Entry<String, String> fauxEntry = new Entry<String, String>(key0.replaceAll("=" + cg0 + "$", "="), null);
 			List<Entry<String, String>> fauxCG = new ArrayList<Parser.Entry<String,String>>(0);
@@ -72,6 +73,7 @@ public abstract class AbstractContractionMatchStrategy implements MatchStrategy 
 			
 			result.apply(null);
 			tmpleft += result.getMatchLength();
+			tmpskip = result.getSkipLength();
 		}
 		
 		int tmpmiddle = 0;
@@ -108,6 +110,7 @@ public abstract class AbstractContractionMatchStrategy implements MatchStrategy 
 		final int cleft = tmpleft;
 		final int cmiddle = tmpmiddle;
 		final int cright = tmpright;
+		final int cskip = tmpskip;
 		
 		return new MatchResult() {
 			
@@ -158,6 +161,10 @@ public abstract class AbstractContractionMatchStrategy implements MatchStrategy 
 				
 				cg.remove(0);
 				cg.remove(0);
+			}
+
+			public int getSkipLength() {
+				return cskip;
 			}
 		};
 	}

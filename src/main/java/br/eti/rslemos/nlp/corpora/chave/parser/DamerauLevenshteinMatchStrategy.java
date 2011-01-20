@@ -51,6 +51,10 @@ public class DamerauLevenshteinMatchStrategy implements MatchStrategy {
 				public int getMatchLength() {
 					return cs1.length;
 				}
+
+				public int getSkipLength() {
+					return 0;
+				}
 			};
 		} else
 			return null;

@@ -27,6 +27,10 @@ public class QuotesMatchStrategy implements MatchStrategy {
 					public int getMatchLength() {
 						return 1;
 					}
+
+					public int getSkipLength() {
+						return 0;
+					}
 				};
 			} else {
 				return new MatchResult() {
@@ -38,6 +42,10 @@ public class QuotesMatchStrategy implements MatchStrategy {
 	
 					public int getMatchLength() {
 						return 1;
+					}
+
+					public int getSkipLength() {
+						return 0;
 					}
 				};
 			}

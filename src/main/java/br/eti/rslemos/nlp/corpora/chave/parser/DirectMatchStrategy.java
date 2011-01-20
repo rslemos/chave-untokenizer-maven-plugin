@@ -20,6 +20,25 @@ public class DirectMatchStrategy implements MatchStrategy {
 		
 		int j = 0;
 		int k = 0;
+		int skip = 0;
+
+		try {
+			if (currentKey.charAt(j) != '=')
+				while (toLowerCase(currentKey.charAt(j)) != toLowerCase(buffer.charAt(k))) {
+					k++;
+					skip++;
+				}
+			else
+				while (!isWhitespace(buffer.charAt(k))) {
+					k++;
+					skip++;
+				}
+				
+		} catch (IndexOutOfBoundsException e) {
+			if (!noMoreData)
+				throw new BufferUnderflowException();
+		}
+		
 		try {
 			while (true) {
 				if (currentKey.charAt(j) == '=') {
@@ -45,7 +64,8 @@ public class DirectMatchStrategy implements MatchStrategy {
 		
 		if (j == currentKey.length()) {
 			// full match
-			final int k1 = k; 
+			final int k1 = k;
+			final int skip1 = skip;
 
 			return new MatchResult() {
 				public void apply(Handler handler) {
@@ -62,7 +82,11 @@ public class DirectMatchStrategy implements MatchStrategy {
 				}
 
 				public int getMatchLength() {
-					return k1;
+					return k1 - skip1;
+				}
+
+				public int getSkipLength() {
+					return skip1;
 				}
 			};
 		} else {

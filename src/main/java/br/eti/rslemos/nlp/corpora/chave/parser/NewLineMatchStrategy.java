@@ -38,6 +38,10 @@ public class NewLineMatchStrategy implements MatchStrategy {
 				public int getMatchLength() {
 					return l1;
 				}
+
+				public int getSkipLength() {
+					return 0;
+				}
 			};
 		} else
 			return null;

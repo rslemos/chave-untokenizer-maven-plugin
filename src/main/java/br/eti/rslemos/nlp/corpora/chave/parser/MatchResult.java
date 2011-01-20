@@ -7,4 +7,6 @@ public interface MatchResult {
 	void apply(Handler handler);
 
 	int getMatchLength();
+
+	int getSkipLength();
 }

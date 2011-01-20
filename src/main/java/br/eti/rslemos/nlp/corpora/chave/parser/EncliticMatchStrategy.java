@@ -98,6 +98,10 @@ public class EncliticMatchStrategy implements MatchStrategy {
 					public int getMatchLength() {
 						return k1;
 					}
+
+					public int getSkipLength() {
+						return 0;
+					}
 				};
 				
 			} else {

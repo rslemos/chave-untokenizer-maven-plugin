@@ -6,6 +6,7 @@ import java.io.Reader;
 import java.nio.CharBuffer;
 import java.util.ArrayList;
 import java.util.Formatter;
+import java.util.Iterator;
 import java.util.LinkedList;
 import java.util.List;
 import java.util.regex.Matcher;
@@ -88,17 +89,32 @@ outer:
 				do {} while (mementos.remove(null));
 				
 				if (mementos.size() > 0) {
-					MatchResult best = mementos.get(0);
-					int bestLength = -1;
-					for (MatchResult memento : mementos) {
-						bestLength = best != null ? best.getMatchLength() : -1;
-						if (memento.getMatchLength() > bestLength) {
-							best = memento;
-						}
+					int minSkip = Integer.MAX_VALUE;
+					for (Iterator<MatchResult> iterator = mementos.iterator(); iterator.hasNext();) {
+						MatchResult memento = iterator.next();
+						minSkip = Math.min(minSkip, memento.getSkipLength());
+						if (memento.getSkipLength() > 0)
+							iterator.remove();
 					}
-					if (best != null) {
-						best.apply(out);
-						continue outer;
+					
+					if (minSkip == 0) {
+						MatchResult best = mementos.get(0);
+						int bestLength = -1;
+						for (MatchResult memento : mementos) {
+							bestLength = best != null ? best.getMatchLength() : -1;
+							if (memento.getMatchLength() > bestLength) {
+								best = memento;
+							}
+						}
+						if (best != null) {
+							best.apply(out);
+							continue outer;
+						}
+					} else {
+						char[] toSkip = new char[minSkip];
+						buffer.get(toSkip);
+						out.characters(toSkip);
+						continue;
 					}
 				}
 
