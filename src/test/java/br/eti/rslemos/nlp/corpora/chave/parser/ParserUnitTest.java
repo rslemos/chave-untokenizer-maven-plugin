@@ -188,7 +188,6 @@ public class ParserUnitTest {
 		//verifyParse("122.cg", "122.sgml"); // 237-th entry: só; buffer at 3365\nDump remaining buffer (2214): -só para citar alguns-
 		//verifyParse("125.cg", "125.sgml"); // 280-th entry: a; buffer at 1873\nDump remaining buffer (676): gente comprar
 		//verifyParse("126.cg", "126.sgml"); // 37-th entry: repetiu=o'=boom ALT xxx; buffer at 1041\nDump remaining buffer (868): repetiu o
-		//verifyParse("128.cg", "128.sgml"); // 412-th entry: mim; buffer at 2857\nDump remaining buffer (916): igo", conta
 		//verifyParse("129.cg", "129.sgml"); // 33-th entry: $.; buffer at 1726\nDump remaining buffer (1635): Direção: Ettore Scola.
 		//verifyParse("130.cg", "130.sgml"); // 29-th entry: $.; buffer at 3340\nDump remaining buffer (3276): Direção: David A. Prior. Com Dan Haggerty, Brian O'Connor.
 		
@@ -295,6 +294,7 @@ public class ParserUnitTest {
 		verifyParse("123.cg", "123.sgml");
 		verifyParse("124.cg", "124.sgml");
 		verifyParse("127.cg", "127.sgml");
+		verifyParse("128.cg", "128.sgml");
 		verifyParse("131.cg", "131.sgml");
 		verifyParse("132.cg", "132.sgml");
 	}

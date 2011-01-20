@@ -58,6 +58,7 @@ public class Parser {
 				new ContractionEmMatchStrategy(),
 				new ContractionAMatchStrategy(),
 				new ContractionPorMatchStrategy(),
+				new ContractionComMatchStrategy(),
 				new QuotesMatchStrategy(),
 				new WhitespaceMatchStrategy(),
 				new SentenceMarkerMatchStrategy(),
@@ -160,5 +161,8 @@ outer:
 			return key;
 		}
 		
+		public String toString() {
+			return String.valueOf(key);
+		}
 	}
 }
