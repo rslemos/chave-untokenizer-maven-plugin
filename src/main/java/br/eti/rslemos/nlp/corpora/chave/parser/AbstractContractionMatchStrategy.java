@@ -1,6 +1,5 @@
 package br.eti.rslemos.nlp.corpora.chave.parser;
 
-import static java.lang.Character.isWhitespace;
 import static java.lang.Character.toLowerCase;
 
 import java.nio.BufferUnderflowException;
@@ -147,6 +146,14 @@ public abstract class AbstractContractionMatchStrategy implements MatchStrategy 
 					handler.characters(middle);
 					handler.endToken();
 					handler.endToken();
+				} else {
+					handler.startPseudoToken(cg.get(0).getValue());
+					handler.characters(left);
+					handler.startPseudoToken(cg.get(1).getValue());
+					handler.characters(middle);
+					handler.endPseudoToken();
+					handler.characters(right);
+					handler.endPseudoToken();
 				}
 				
 				cg.remove(0);

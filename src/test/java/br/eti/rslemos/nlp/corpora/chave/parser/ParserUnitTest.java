@@ -45,6 +45,14 @@ public class ParserUnitTest {
 			public void endToken() {
 				System.out.printf("endToken()\n");
 			}
+
+			public void startPseudoToken(String attributes) {
+				System.out.printf("startPseudoToken(%s)\n", attributes);
+			}
+
+			public void endPseudoToken() {
+				System.out.printf("endPseudoToken()\n");
+			}
 			
 		};
 		parser = new Parser(handler);
@@ -136,6 +144,17 @@ public class ParserUnitTest {
 			
 			private String escape(String in) {
 				return in.replaceAll("<", "\\&lt;").replaceAll(">", "\\&gt;").replaceAll("\"", "\\&quot;");
+			}
+
+			public void startPseudoToken(String attributes) {
+				if (attributes != null)
+					System.out.printf("<ptoken attributes=\"%s\">", escape(attributes));
+				else
+					System.out.printf("<ptoken>");
+			}
+
+			public void endPseudoToken() {
+				System.out.print("</ptoken>");
 			}
 		};
 		parser = new Parser(handler);

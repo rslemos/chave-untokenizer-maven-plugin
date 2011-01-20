@@ -8,4 +8,8 @@ public interface Handler {
 
 	void endToken();
 
+	void startPseudoToken(String attributes);
+
+	void endPseudoToken();
+
 }

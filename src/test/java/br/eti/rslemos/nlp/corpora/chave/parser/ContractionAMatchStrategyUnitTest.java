@@ -199,7 +199,7 @@ public class ContractionAMatchStrategyUnitTest extends AbstractMatchStrategyUnit
 		order.verify(handler).endToken();
 	}
 	
-	//@Test ( [Quanto=<a]s> )
+	@Test
 	public void testExpressionContraction_Quanto_a_as() throws Exception {
 		@SuppressWarnings("unchecked")
 		List<Entry<String, String>> cg = Arrays.asList(
@@ -211,12 +211,13 @@ public class ContractionAMatchStrategyUnitTest extends AbstractMatchStrategyUnit
 		
 		InOrder order = inOrder(handler);
 		
-		order.verify(handler).startToken(cg.get(1).getValue());
-		order.verify(handler).startToken(cg.get(0).getValue());
-		order.verify(handler).characters("Quanto à".toCharArray());
-		order.verify(handler).endToken();
+		order.verify(handler).startPseudoToken(cg.get(0).getValue());
+		order.verify(handler).characters("Quanto ".toCharArray());
+		order.verify(handler).startPseudoToken(cg.get(1).getValue());
+		order.verify(handler).characters("à".toCharArray());
+		order.verify(handler).endPseudoToken();
 		order.verify(handler).characters("s".toCharArray());
-		order.verify(handler).endToken();
+		order.verify(handler).endPseudoToken();
 	}
 	
 	@Test
