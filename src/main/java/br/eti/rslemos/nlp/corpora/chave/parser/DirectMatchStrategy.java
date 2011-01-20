@@ -74,28 +74,7 @@ public class DirectMatchStrategy implements MatchStrategy {
 			final int k1 = k;
 			final int skip1 = skip;
 
-			return new MatchResult() {
-				public void apply(Handler handler) {
-					char[] cs = new char[k1];
-					buffer.get(cs);
-					
-					if (handler != null) {
-						handler.startToken(currentEntry.getValue());
-						handler.characters(cs);
-						handler.endToken();
-					}
-					
-					cg.remove(0);
-				}
-
-				public int getMatchLength() {
-					return k1 - skip1;
-				}
-
-				public int getSkipLength() {
-					return skip1;
-				}
-			};
+			return new MatchResult(buffer, cg, skip1, skip1 + k1, 1, skip1, skip1 + k1);
 		} else {
 			return null;
 		}

@@ -12,19 +12,7 @@ public class SentenceMarkerMatchStrategy implements MatchStrategy {
 		String key = cg.get(0).getKey();
 		
 		if ("<s>".equals(key) || "</s>".equals(key)) {
-			return new MatchResult() {
-				public void apply(Handler handler) {
-					cg.remove(0);
-				}
-
-				public int getMatchLength() {
-					return 0;
-				}
-
-				public int getSkipLength() {
-					return 0;
-				}
-			};
+			return new MatchResult(buffer, cg, 0, 0, 1);
 		} else 
 			return null;
 	}

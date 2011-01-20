@@ -15,39 +15,9 @@ public class QuotesMatchStrategy implements MatchStrategy {
 	
 			final Entry<String, String> entry0 = cg.size() > 0 ? cg.get(0) : null;
 			if (entry0 != null && "$\"".equals(entry0.getKey())) {
-				return new MatchResult() {
-					public void apply(Handler handler) {
-						char[] cs = new char[1];
-						buffer.get(cs);
-						handler.startToken(entry0.getValue());
-						handler.characters(cs);
-						handler.endToken();
-					}
-	
-					public int getMatchLength() {
-						return 1;
-					}
-
-					public int getSkipLength() {
-						return 0;
-					}
-				};
+				return new MatchResult(buffer, cg, 0, 1, 1, 0, 1);
 			} else {
-				return new MatchResult() {
-					public void apply(Handler handler) {
-						char[] cs = new char[1];
-						buffer.get(cs);
-						handler.characters(cs);
-					}
-	
-					public int getMatchLength() {
-						return 1;
-					}
-
-					public int getSkipLength() {
-						return 0;
-					}
-				};
+				return new MatchResult(buffer, cg, 0, 1, 0);
 			}
 		} catch (IndexOutOfBoundsException e) {
 			return null;

@@ -23,26 +23,7 @@ public class NewLineMatchStrategy implements MatchStrategy {
 			
 			final int l1 = l;
 			
-			return new MatchResult() {
-				public void apply(Handler handler) {
-					char[] c = new char[l1];
-					buffer.get(c);
-					
-					handler.startToken(cg.get(0).getValue());
-					handler.characters(c);
-					handler.endToken();
-					
-					cg.remove(0);
-				}
-
-				public int getMatchLength() {
-					return l1;
-				}
-
-				public int getSkipLength() {
-					return 0;
-				}
-			};
+			return new MatchResult(buffer, cg, 0, l1, 1, 0, l1);
 		} else
 			return null;
 	}

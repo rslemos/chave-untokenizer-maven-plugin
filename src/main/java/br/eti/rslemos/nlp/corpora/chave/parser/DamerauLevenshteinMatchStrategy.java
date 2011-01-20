@@ -49,27 +49,7 @@ public class DamerauLevenshteinMatchStrategy implements MatchStrategy {
 			return null;
 		
 		if (levenshteinDistance(key0.toCharArray(), cs1) <= maxDistance) {
-			return new MatchResult() {
-				
-				public void apply(Handler handler) {
-					char[] cs = new char[cs1.length];
-					buffer.get(cs);
-
-					handler.startToken(entry0.getValue());
-					handler.characters(cs);
-					handler.endToken();
-					
-					cg.remove(0);
-				}
-
-				public int getMatchLength() {
-					return cs1.length;
-				}
-
-				public int getSkipLength() {
-					return 0;
-				}
-			};
+			return new MatchResult(buffer, cg, 0, cs1.length, 1, 0, cs1.length);
 		} else
 			return null;
 	}

@@ -19,22 +19,7 @@ public class WhitespaceMatchStrategy implements MatchStrategy {
 		} catch (IndexOutOfBoundsException e) {}
 		
 		if (k > 0) {
-			final int k1 = k; 
-			return new MatchResult() {
-				public void apply(Handler handler) {
-					char[] cs = new char[k1];
-					buffer.get(cs);
-					handler.characters(cs);
-				}
-
-				public int getMatchLength() {
-					return k1;
-				}
-
-				public int getSkipLength() {
-					return 0;
-				}
-			};
+			return new MatchResult(buffer, cg, 0, k, 0);
 		} else
 			return null;
 	}

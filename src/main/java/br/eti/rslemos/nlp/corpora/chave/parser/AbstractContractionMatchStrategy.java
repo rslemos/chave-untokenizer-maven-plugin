@@ -71,7 +71,7 @@ public abstract class AbstractContractionMatchStrategy implements MatchStrategy 
 			if (result == null)
 				return null;
 			
-			result.apply(null);
+			buffer0.position(buffer0.position() + result.getMatchLength() + result.getSkipLength());
 			tmpleft += result.getMatchLength();
 			tmpskip = result.getSkipLength();
 		}
@@ -112,60 +112,14 @@ public abstract class AbstractContractionMatchStrategy implements MatchStrategy 
 		final int cright = tmpright;
 		final int cskip = tmpskip;
 		
-		return new MatchResult() {
-			
-			public int getMatchLength() {
-				return cleft + cmiddle + cright;
-			}
-			
-			public void apply(Handler handler) {
-				char[] left = new char[cleft];
-				char[] middle = new char[cmiddle];
-				char[] right = new char[cright];
-				
-				buffer.get(left);
-				buffer.get(middle);
-				buffer.get(right);
-				
-				if (cmiddle == 0) {
-					handler.startToken(cg.get(0).getValue());
-					handler.characters(left);
-					handler.endToken();
-					
-					handler.startToken(cg.get(1).getValue());
-					handler.characters(right);
-					handler.endToken();
-				} else if (cleft == 0) {
-					handler.startToken(cg.get(1).getValue());
-					handler.startToken(cg.get(0).getValue());
-					handler.characters(middle);
-					handler.endToken();
-					handler.characters(right);
-					handler.endToken();
-				} else if (cright == 0) {
-					handler.startToken(cg.get(0).getValue());
-					handler.characters(left);
-					handler.startToken(cg.get(1).getValue());
-					handler.characters(middle);
-					handler.endToken();
-					handler.endToken();
-				} else {
-					handler.startPseudoToken(cg.get(0).getValue());
-					handler.characters(left);
-					handler.startPseudoToken(cg.get(1).getValue());
-					handler.characters(middle);
-					handler.endPseudoToken();
-					handler.characters(right);
-					handler.endPseudoToken();
-				}
-				
-				cg.remove(0);
-				cg.remove(0);
-			}
-
-			public int getSkipLength() {
-				return cskip;
-			}
-		};
+		if (cmiddle == 0) {
+			return new MatchResult(buffer, cg, cskip, cleft + cmiddle + cright + cskip, 2, cskip, cskip + cleft, cskip + cleft, cskip + cleft + cright);
+		} else if (cleft == 0) {
+			return new MatchResult(buffer, cg, cskip, cleft + cmiddle + cright + cskip, 2, cskip, cskip + cmiddle, cskip, cskip + cmiddle + cright);
+		} else if (cright == 0) {
+			return new MatchResult(buffer, cg, cskip, cleft + cmiddle + cright + cskip, 2, cskip, cskip + cleft + cmiddle, cskip + cleft, cskip + cleft + cmiddle);
+		} else {
+			return new MatchResult(buffer, cg, cskip, cleft + cmiddle + cright + cskip, 2, cskip, cskip + cleft + cmiddle, cskip + cleft, cskip + cleft + cmiddle + cright);
+		}
 	}
 }

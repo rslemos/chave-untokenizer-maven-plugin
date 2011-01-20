@@ -71,39 +71,7 @@ public class EncliticMatchStrategy implements MatchStrategy {
 			if (j == currentKey.length()) {
 				// full match
 				final int k1 = k;
-				return new MatchResult() {
-					
-					public void apply(Handler handler) {
-						char[] match = new char[k1];
-						buffer.get(match);
-						
-						char[] left = new char[match.length - key1.length()];
-						System.arraycopy(match, 0, left, 0, left.length);
-						
-						char[] right = new char[key1.length()];
-						System.arraycopy(match, match.length - right.length, right, 0, right.length);
-						
-						handler.startToken(entry0.getValue());
-						handler.characters(left);
-						handler.endToken();
-						
-						handler.startToken(entry1.getValue());
-						handler.characters(right);
-						handler.endToken();
-						
-						cg.remove(0);
-						cg.remove(0);
-					}
-
-					public int getMatchLength() {
-						return k1;
-					}
-
-					public int getSkipLength() {
-						return 0;
-					}
-				};
-				
+				return new MatchResult(buffer, cg, 0, k1, 2, 0, k1 - key1.length(), k1 - key1.length(), k1);
 			} else {
 				return null;
 			}
