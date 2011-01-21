@@ -1,15 +1,10 @@
 package br.eti.rslemos.nlp.corpora.chave.parser;
 
-import static org.mockito.Mockito.verify;
-import static org.mockito.Mockito.verifyNoMoreInteractions;
-
-import java.util.Arrays;
-import java.util.List;
+import static br.eti.rslemos.nlp.corpora.chave.parser.Parser.Entry.entry;
+import static junit.framework.Assert.assertNull;
 
 import org.junit.Before;
 import org.junit.Test;
-
-import br.eti.rslemos.nlp.corpora.chave.parser.Parser.Entry;
 
 public class DamerauLevenshteinMatchStrategyUnitTest extends AbstractMatchStrategyUnitTest {
 	@Before
@@ -19,66 +14,52 @@ public class DamerauLevenshteinMatchStrategyUnitTest extends AbstractMatchStrate
 	
 	@Test
 	public void testSingleWordDistance1() throws Exception {
-		@SuppressWarnings("unchecked")
-		List<Entry<String, String>> cg = Arrays.asList(new Parser.Entry<String, String>("3º.", " [3º.] ADJ M/F S <NUM-ord> @N<PRED"));
-		matchAndApply(cg, "3.º");
+		cg.add(entry("3º.", " [3º.] ADJ M/F S <NUM-ord> @N<PRED"));
+		MatchResult result = match("3.º");
 		
-		verify(handler).startToken(cg.get(0).getValue());
-		verify(handler).characters("3.º".toCharArray());
-		verify(handler).endToken();
+		verifyTokensInSequence(result, "3.º");
 	}
 	
 	@Test
 	public void testMatchTillWhitespace() throws Exception {
-		@SuppressWarnings("unchecked")
-		List<Entry<String, String>> cg = Arrays.asList(new Parser.Entry<String, String>("3º.", " [3º.] ADJ M/F S <NUM-ord> @N<PRED"));
-		matchAndApply(cg, "3. º");
+		cg.add(entry("3º.", " [3º.] ADJ M/F S <NUM-ord> @N<PRED"));
+		MatchResult result = match("3. º");
 		
-		verify(handler).startToken(cg.get(0).getValue());
-		verify(handler).characters("3.".toCharArray());
-		verify(handler).endToken();
+		verifyTokensInSequence(result, "3.");
 	}
 	
 	@Test
 	public void testDontMatchEmpty() throws Exception {
-		@SuppressWarnings("unchecked")
-		List<Entry<String, String>> cg = Arrays.asList(new Parser.Entry<String, String>("o", " [o] DET M S <artd> @>N"));
-		noMatch(cg, " o");
+		cg.add(entry("o", " [o] DET M S <artd> @>N"));
+		assertNull(match(" o"));
 
-		verifyNoMoreInteractions(handler);
+		verifyNoToken();
 	}
 
 	@Test
 	public void testDontMatchEmpty2() throws Exception {
-		@SuppressWarnings("unchecked")
-		List<Entry<String, String>> cg = Arrays.asList(new Parser.Entry<String, String>("em", " [em] PRP @N<"));
-		noMatch(cg, " em");
+		cg.add(entry("em", " [em] PRP @N<"));
+		assertNull(match(" em"));
 
-		verifyNoMoreInteractions(handler);
+		verifyNoToken();
 	}
 
 	@Test
 	public void testDontMatchSingleChar() throws Exception {
-		@SuppressWarnings("unchecked")
-		List<Entry<String, String>> cg = Arrays.asList(new Parser.Entry<String, String>("o", " [o] DET M S <artd> @>N"));
-		noMatch(cg, "\"");
+		cg.add(entry("o", " [o] DET M S <artd> @>N"));
+		assertNull(match("\""));
 
-		verifyNoMoreInteractions(handler);
+		verifyNoToken();
 	}
 
 
 	@Test
 	public void testUngreedyMatchPunctuation() throws Exception {
-		@SuppressWarnings("unchecked")
-		List<Entry<String, String>> cg = Arrays.asList(
-				new Parser.Entry<String, String>("sra.", " [sra.] N F S @P<"),
-				new Parser.Entry<String, String>("$.", " [$.] PU <<<")
-			);
+		cg.add(entry("sra.", " [sra.] N F S @P<"));
+		cg.add(entry("$.", " [$.] PU <<<"));
 
-		matchAndApply(cg, "sra.");
+		MatchResult result = match("sra.");
 		
-		verify(handler).startToken(cg.get(0).getValue());
-		verify(handler).characters("sra".toCharArray());
-		verify(handler).endToken();
+		verifyTokensInSequence(result, "sra");
 	}
 }

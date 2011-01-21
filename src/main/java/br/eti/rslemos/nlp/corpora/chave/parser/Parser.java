@@ -159,7 +159,7 @@ outer:
 		return result;
 	}
 
-	static class Entry<K, V> {
+	public static class Entry<K, V> {
 
 		private K key;
 		private V value;
@@ -179,6 +179,10 @@ outer:
 		
 		public String toString() {
 			return String.valueOf(key);
+		}
+		
+		public static <K, V> Entry<K, V> entry(K key, V value) {
+			return new Entry<K, V>(key, value);
 		}
 	}
 }

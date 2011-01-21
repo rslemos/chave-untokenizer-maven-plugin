@@ -1,15 +1,9 @@
 package br.eti.rslemos.nlp.corpora.chave.parser;
 
-import static org.mockito.Mockito.inOrder;
-
-import java.util.Arrays;
-import java.util.List;
+import static br.eti.rslemos.nlp.corpora.chave.parser.Parser.Entry.entry;
 
 import org.junit.Before;
 import org.junit.Test;
-import org.mockito.InOrder;
-
-import br.eti.rslemos.nlp.corpora.chave.parser.Parser.Entry;
 
 public class EncliticMatchStrategyUnitTest extends AbstractMatchStrategyUnitTest {
 	
@@ -20,337 +14,161 @@ public class EncliticMatchStrategyUnitTest extends AbstractMatchStrategyUnitTest
 	
 	@Test
 	public void testInfinitiv_ar_lo() throws Exception {
-		@SuppressWarnings("unchecked")
-		List<Entry<String, String>> cg = Arrays.asList(
-				new Parser.Entry<String, String>("Convocar-", " [convocar] V INF @IMV <hyfen> @#ICL-SUBJ>"),
-				new Parser.Entry<String, String>("lo", " [ele] PERS M 3S ACC @<ACC")
-			);
+		cg.add(entry("Convocar-", " [convocar] V INF @IMV <hyfen> @#ICL-SUBJ>"));
+		cg.add(entry("lo", " [ele] PERS M 3S ACC @<ACC"));
 		
-		matchAndApply(cg, "Convocá-lo");
+		MatchResult result = match("Convocá-lo");
 		
-		InOrder order = inOrder(handler);
-		
-		order.verify(handler).startToken(cg.get(0).getValue());
-		order.verify(handler).characters("Convocá-".toCharArray());
-		order.verify(handler).endToken();
-		
-		order.verify(handler).startToken(cg.get(1).getValue());
-		order.verify(handler).characters("lo".toCharArray());
-		order.verify(handler).endToken();
+		verifyTokensInSequence(result, "Convocá-", "lo");
 	}
 
 	@Test
 	public void testInfinitiv_ar_la() throws Exception {
-		@SuppressWarnings("unchecked")
-		List<Entry<String, String>> cg = Arrays.asList(
-				new Parser.Entry<String, String>("Convocar-", " [convocar] V INF @IMV <hyfen> @#ICL-SUBJ>"),
-				new Parser.Entry<String, String>("la", " [ela] PERS F 3S ACC @<ACC")
-			);
+		cg.add(entry("Convocar-", " [convocar] V INF @IMV <hyfen> @#ICL-SUBJ>"));
+		cg.add(entry("la", " [ela] PERS F 3S ACC @<ACC"));
 		
-		matchAndApply(cg, "Convocá-la");
+		MatchResult result = match("Convocá-la");
 		
-		InOrder order = inOrder(handler);
-		
-		order.verify(handler).startToken(cg.get(0).getValue());
-		order.verify(handler).characters("Convocá-".toCharArray());
-		order.verify(handler).endToken();
-		
-		order.verify(handler).startToken(cg.get(1).getValue());
-		order.verify(handler).characters("la".toCharArray());
-		order.verify(handler).endToken();
+		verifyTokensInSequence(result, "Convocá-", "la");
 	}
 	
 	@Test
 	public void testInfinitiv_ar_los() throws Exception {
-		@SuppressWarnings("unchecked")
-		List<Entry<String, String>> cg = Arrays.asList(
-				new Parser.Entry<String, String>("Convocar-", " [convocar] V INF @IMV <hyfen> @#ICL-SUBJ>"),
-				new Parser.Entry<String, String>("los", " [ele] PERS M 3P ACC @<ACC")
-			);
+		cg.add(entry("Convocar-", " [convocar] V INF @IMV <hyfen> @#ICL-SUBJ>"));
+		cg.add(entry("los", " [ele] PERS M 3P ACC @<ACC"));
 		
-		matchAndApply(cg, "Convocá-los");
+		MatchResult result = match("Convocá-los");
 		
-		InOrder order = inOrder(handler);
-		
-		order.verify(handler).startToken(cg.get(0).getValue());
-		order.verify(handler).characters("Convocá-".toCharArray());
-		order.verify(handler).endToken();
-		
-		order.verify(handler).startToken(cg.get(1).getValue());
-		order.verify(handler).characters("los".toCharArray());
-		order.verify(handler).endToken();
+		verifyTokensInSequence(result, "Convocá-", "los");
 	}
 
 	@Test
 	public void testInfinitiv_ar_las() throws Exception {
-		@SuppressWarnings("unchecked")
-		List<Entry<String, String>> cg = Arrays.asList(
-				new Parser.Entry<String, String>("Convocar-", " [convocar] V INF @IMV <hyfen> @#ICL-SUBJ>"),
-				new Parser.Entry<String, String>("las", " [ela] PERS F 3M ACC @<ACC")
-			);
+		cg.add(entry("Convocar-", " [convocar] V INF @IMV <hyfen> @#ICL-SUBJ>"));
+		cg.add(entry("las", " [ela] PERS F 3M ACC @<ACC"));
 		
-		matchAndApply(cg, "Convocá-las");
+		MatchResult result = match("Convocá-las");
 		
-		InOrder order = inOrder(handler);
-		
-		order.verify(handler).startToken(cg.get(0).getValue());
-		order.verify(handler).characters("Convocá-".toCharArray());
-		order.verify(handler).endToken();
-		
-		order.verify(handler).startToken(cg.get(1).getValue());
-		order.verify(handler).characters("las".toCharArray());
-		order.verify(handler).endToken();
+		verifyTokensInSequence(result, "Convocá-", "las");
 	}
 	
 	@Test
 	public void testInfinitiv_er_lo() throws Exception {
-		@SuppressWarnings("unchecked")
-		List<Entry<String, String>> cg = Arrays.asList(
-				new Parser.Entry<String, String>("fazer-", " [fazer] V INF @IMV <hyfen> @#ICL-P<"),
-				new Parser.Entry<String, String>("lo", " [ele] PERS M 3S ACC @<ACC")
-			);
+		cg.add(entry("fazer-", " [fazer] V INF @IMV <hyfen> @#ICL-P<"));
+		cg.add(entry("lo", " [ele] PERS M 3S ACC @<ACC"));
 		
-		matchAndApply(cg, "fazê-lo");
+		MatchResult result = match("fazê-lo");
 		
-		InOrder order = inOrder(handler);
-		
-		order.verify(handler).startToken(cg.get(0).getValue());
-		order.verify(handler).characters("fazê-".toCharArray());
-		order.verify(handler).endToken();
-		
-		order.verify(handler).startToken(cg.get(1).getValue());
-		order.verify(handler).characters("lo".toCharArray());
-		order.verify(handler).endToken();
+		verifyTokensInSequence(result, "fazê-", "lo");
 	}
 
 	@Test
 	public void testInfinitiv_er_la() throws Exception {
-		@SuppressWarnings("unchecked")
-		List<Entry<String, String>> cg = Arrays.asList(
-				new Parser.Entry<String, String>("fazer-", " [fazer] V INF @IMV <hyfen> @#ICL-P<"),
-				new Parser.Entry<String, String>("la", " [ela] PERS F 3S ACC @<ACC")
-			);
+		cg.add(entry("fazer-", " [fazer] V INF @IMV <hyfen> @#ICL-P<"));
+		cg.add(entry("la", " [ela] PERS F 3S ACC @<ACC"));
 		
-		matchAndApply(cg, "fazê-la");
+		MatchResult result = match("fazê-la");
 		
-		InOrder order = inOrder(handler);
-		
-		order.verify(handler).startToken(cg.get(0).getValue());
-		order.verify(handler).characters("fazê-".toCharArray());
-		order.verify(handler).endToken();
-		
-		order.verify(handler).startToken(cg.get(1).getValue());
-		order.verify(handler).characters("la".toCharArray());
-		order.verify(handler).endToken();
+		verifyTokensInSequence(result, "fazê-", "la");
 	}
 	
 	@Test
 	public void testInfinitiv_er_los() throws Exception {
-		@SuppressWarnings("unchecked")
-		List<Entry<String, String>> cg = Arrays.asList(
-				new Parser.Entry<String, String>("fazer-", " [fazer] V INF @IMV <hyfen> @#ICL-P<"),
-				new Parser.Entry<String, String>("los", " [ele] PERS M 3P ACC @<ACC")
-			);
+		cg.add(entry("fazer-", " [fazer] V INF @IMV <hyfen> @#ICL-P<"));
+		cg.add(entry("los", " [ele] PERS M 3P ACC @<ACC"));
 		
-		matchAndApply(cg, "fazê-los");
+		MatchResult result = match("fazê-los");
 		
-		InOrder order = inOrder(handler);
-		
-		order.verify(handler).startToken(cg.get(0).getValue());
-		order.verify(handler).characters("fazê-".toCharArray());
-		order.verify(handler).endToken();
-		
-		order.verify(handler).startToken(cg.get(1).getValue());
-		order.verify(handler).characters("los".toCharArray());
-		order.verify(handler).endToken();
+		verifyTokensInSequence(result, "fazê-", "los");
 	}
 
 	@Test
 	public void testInfinitiv_er_las() throws Exception {
-		@SuppressWarnings("unchecked")
-		List<Entry<String, String>> cg = Arrays.asList(
-				new Parser.Entry<String, String>("fazer-", " [fazer] V INF @IMV <hyfen> @#ICL-P<"),
-				new Parser.Entry<String, String>("las", " [ela] PERS F 3M ACC @<ACC")
-			);
+		cg.add(entry("fazer-", " [fazer] V INF @IMV <hyfen> @#ICL-P<"));
+		cg.add(entry("las", " [ela] PERS F 3M ACC @<ACC"));
 		
-		matchAndApply(cg, "fazê-las");
+		MatchResult result = match("fazê-las");
 		
-		InOrder order = inOrder(handler);
-		
-		order.verify(handler).startToken(cg.get(0).getValue());
-		order.verify(handler).characters("fazê-".toCharArray());
-		order.verify(handler).endToken();
-		
-		order.verify(handler).startToken(cg.get(1).getValue());
-		order.verify(handler).characters("las".toCharArray());
-		order.verify(handler).endToken();
+		verifyTokensInSequence(result, "fazê-", "las");
 	}
 	
 	@Test
 	public void testInfinitiv_ir_lo() throws Exception {
-		@SuppressWarnings("unchecked")
-		List<Entry<String, String>> cg = Arrays.asList(
-				new Parser.Entry<String, String>("assistir-", " [assistir] V INF @IMV <hyfen> @#ICL-P<"),
-				new Parser.Entry<String, String>("lo", " [ele] PERS M 3S ACC @<ACC")
-			);
+		cg.add(entry("assistir-", " [assistir] V INF @IMV <hyfen> @#ICL-P<"));
+		cg.add(entry("lo", " [ele] PERS M 3S ACC @<ACC"));
 		
-		matchAndApply(cg, "assisti-lo");
+		MatchResult result = match("assisti-lo");
 		
-		InOrder order = inOrder(handler);
-		
-		order.verify(handler).startToken(cg.get(0).getValue());
-		order.verify(handler).characters("assisti-".toCharArray());
-		order.verify(handler).endToken();
-		
-		order.verify(handler).startToken(cg.get(1).getValue());
-		order.verify(handler).characters("lo".toCharArray());
-		order.verify(handler).endToken();
+		verifyTokensInSequence(result, "assisti-", "lo");
 	}
 
 	@Test
 	public void testInfinitiv_ir_la() throws Exception {
-		@SuppressWarnings("unchecked")
-		List<Entry<String, String>> cg = Arrays.asList(
-				new Parser.Entry<String, String>("assistir-", " [assistir] V INF @IMV <hyfen> @#ICL-P<"),
-				new Parser.Entry<String, String>("la", " [ela] PERS F 3S ACC @<ACC")
-			);
+		cg.add(entry("assistir-", " [assistir] V INF @IMV <hyfen> @#ICL-P<"));
+		cg.add(entry("la", " [ela] PERS F 3S ACC @<ACC"));
 		
-		matchAndApply(cg, "assisti-la");
+		MatchResult result = match("assisti-la");
 		
-		InOrder order = inOrder(handler);
-		
-		order.verify(handler).startToken(cg.get(0).getValue());
-		order.verify(handler).characters("assisti-".toCharArray());
-		order.verify(handler).endToken();
-		
-		order.verify(handler).startToken(cg.get(1).getValue());
-		order.verify(handler).characters("la".toCharArray());
-		order.verify(handler).endToken();
+		verifyTokensInSequence(result, "assisti-", "la");
 	}
 	
 	@Test
 	public void testInfinitiv_ir_los() throws Exception {
-		@SuppressWarnings("unchecked")
-		List<Entry<String, String>> cg = Arrays.asList(
-				new Parser.Entry<String, String>("assistir-", " [assistir] V INF @IMV <hyfen> @#ICL-P<"),
-				new Parser.Entry<String, String>("los", " [ele] PERS M 3P ACC @<ACC")
-			);
+		cg.add(entry("assistir-", " [assistir] V INF @IMV <hyfen> @#ICL-P<"));
+		cg.add(entry("los", " [ele] PERS M 3P ACC @<ACC"));
 		
-		matchAndApply(cg, "assisti-los");
+		MatchResult result = match("assisti-los");
 		
-		InOrder order = inOrder(handler);
-		
-		order.verify(handler).startToken(cg.get(0).getValue());
-		order.verify(handler).characters("assisti-".toCharArray());
-		order.verify(handler).endToken();
-		
-		order.verify(handler).startToken(cg.get(1).getValue());
-		order.verify(handler).characters("los".toCharArray());
-		order.verify(handler).endToken();
+		verifyTokensInSequence(result, "assisti-", "los");
 	}
 
 	@Test
 	public void testInfinitiv_ir_las() throws Exception {
-		@SuppressWarnings("unchecked")
-		List<Entry<String, String>> cg = Arrays.asList(
-				new Parser.Entry<String, String>("assistir-", " [assistir] V INF @IMV <hyfen> @#ICL-P<"),
-				new Parser.Entry<String, String>("las", " [ela] PERS F 3M ACC @<ACC")
-			);
+		cg.add(entry("assistir-", " [assistir] V INF @IMV <hyfen> @#ICL-P<"));
+		cg.add(entry("las", " [ela] PERS F 3M ACC @<ACC"));
 		
-		matchAndApply(cg, "assisti-las");
+		MatchResult result = match("assisti-las");
 		
-		InOrder order = inOrder(handler);
-		
-		order.verify(handler).startToken(cg.get(0).getValue());
-		order.verify(handler).characters("assisti-".toCharArray());
-		order.verify(handler).endToken();
-		
-		order.verify(handler).startToken(cg.get(1).getValue());
-		order.verify(handler).characters("las".toCharArray());
-		order.verify(handler).endToken();
+		verifyTokensInSequence(result, "assisti-", "las");
 	}
 	
 	@Test
 	public void testInfinitiv_por_lo() throws Exception {
-		@SuppressWarnings("unchecked")
-		List<Entry<String, String>> cg = Arrays.asList(
-				new Parser.Entry<String, String>("assistir-", " [assistir] V INF @IMV <hyfen> @#ICL-P<"),
-				new Parser.Entry<String, String>("lo", " [ele] PERS M 3S ACC @<ACC")
-			);
+		cg.add(entry("assistir-", " [assistir] V INF @IMV <hyfen> @#ICL-P<"));
+		cg.add(entry("lo", " [ele] PERS M 3S ACC @<ACC"));
 		
-		matchAndApply(cg, "assisti-lo");
+		MatchResult result = match("assisti-lo");
 		
-		InOrder order = inOrder(handler);
-		
-		order.verify(handler).startToken(cg.get(0).getValue());
-		order.verify(handler).characters("assisti-".toCharArray());
-		order.verify(handler).endToken();
-		
-		order.verify(handler).startToken(cg.get(1).getValue());
-		order.verify(handler).characters("lo".toCharArray());
-		order.verify(handler).endToken();
+		verifyTokensInSequence(result, "assisti-", "lo");
 	}
 
 	@Test
 	public void testInfinitiv_por_la() throws Exception {
-		@SuppressWarnings("unchecked")
-		List<Entry<String, String>> cg = Arrays.asList(
-				new Parser.Entry<String, String>("assistir-", " [assistir] V INF @IMV <hyfen> @#ICL-P<"),
-				new Parser.Entry<String, String>("la", " [ela] PERS F 3S ACC @<ACC")
-			);
+		cg.add(entry("assistir-", " [assistir] V INF @IMV <hyfen> @#ICL-P<"));
+		cg.add(entry("la", " [ela] PERS F 3S ACC @<ACC"));
 		
-		matchAndApply(cg, "assisti-la");
+		MatchResult result = match("assisti-la");
 		
-		InOrder order = inOrder(handler);
-		
-		order.verify(handler).startToken(cg.get(0).getValue());
-		order.verify(handler).characters("assisti-".toCharArray());
-		order.verify(handler).endToken();
-		
-		order.verify(handler).startToken(cg.get(1).getValue());
-		order.verify(handler).characters("la".toCharArray());
-		order.verify(handler).endToken();
+		verifyTokensInSequence(result, "assisti-", "la");
 	}
 	
 	@Test
 	public void testInfinitiv_por_los() throws Exception {
-		@SuppressWarnings("unchecked")
-		List<Entry<String, String>> cg = Arrays.asList(
-				new Parser.Entry<String, String>("assistir-", " [assistir] V INF @IMV <hyfen> @#ICL-P<"),
-				new Parser.Entry<String, String>("los", " [ele] PERS M 3P ACC @<ACC")
-			);
+		cg.add(entry("assistir-", " [assistir] V INF @IMV <hyfen> @#ICL-P<"));
+		cg.add(entry("los", " [ele] PERS M 3P ACC @<ACC"));
 		
-		matchAndApply(cg, "assisti-los");
+		MatchResult result = match("assisti-los");
 		
-		InOrder order = inOrder(handler);
-		
-		order.verify(handler).startToken(cg.get(0).getValue());
-		order.verify(handler).characters("assisti-".toCharArray());
-		order.verify(handler).endToken();
-		
-		order.verify(handler).startToken(cg.get(1).getValue());
-		order.verify(handler).characters("los".toCharArray());
-		order.verify(handler).endToken();
+		verifyTokensInSequence(result, "assisti-", "los");
 	}
 
 	@Test
 	public void testInfinitiv_por_las() throws Exception {
-		@SuppressWarnings("unchecked")
-		List<Entry<String, String>> cg = Arrays.asList(
-				new Parser.Entry<String, String>("assistir-", " [assistir] V INF @IMV <hyfen> @#ICL-P<"),
-				new Parser.Entry<String, String>("las", " [ela] PERS F 3M ACC @<ACC")
-			);
+		cg.add(entry("assistir-", " [assistir] V INF @IMV <hyfen> @#ICL-P<"));
+		cg.add(entry("las", " [ela] PERS F 3M ACC @<ACC"));
 		
-		matchAndApply(cg, "assisti-las");
+		MatchResult result = match("assisti-las");
 		
-		InOrder order = inOrder(handler);
-		
-		order.verify(handler).startToken(cg.get(0).getValue());
-		order.verify(handler).characters("assisti-".toCharArray());
-		order.verify(handler).endToken();
-		
-		order.verify(handler).startToken(cg.get(1).getValue());
-		order.verify(handler).characters("las".toCharArray());
-		order.verify(handler).endToken();
+		verifyTokensInSequence(result, "assisti-", "las");
 	}
 }

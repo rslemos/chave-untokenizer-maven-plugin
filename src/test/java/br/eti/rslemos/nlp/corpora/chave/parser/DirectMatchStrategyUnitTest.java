@@ -1,15 +1,10 @@
 package br.eti.rslemos.nlp.corpora.chave.parser;
 
-import static org.mockito.Mockito.verify;
-import static org.mockito.Mockito.verifyNoMoreInteractions;
-
-import java.util.Arrays;
-import java.util.List;
+import static br.eti.rslemos.nlp.corpora.chave.parser.Parser.Entry.entry;
+import static junit.framework.Assert.assertNull;
 
 import org.junit.Before;
 import org.junit.Test;
-
-import br.eti.rslemos.nlp.corpora.chave.parser.Parser.Entry;
 
 public class DirectMatchStrategyUnitTest extends AbstractMatchStrategyUnitTest {
 
@@ -20,81 +15,60 @@ public class DirectMatchStrategyUnitTest extends AbstractMatchStrategyUnitTest {
 	
 	@Test
 	public void testSingleWord() throws Exception {
-		@SuppressWarnings("unchecked")
-		List<Entry<String, String>> cg = Arrays.asList(new Parser.Entry<String, String>("feita", " [fazer] V PCP F S @IMV @#ICL-N<"));
-		matchAndApply(cg, "feita");
+		cg.add(entry("feita", " [fazer] V PCP F S @IMV @#ICL-N<"));
+		MatchResult result = match("feita");
 		
-		verify(handler).startToken(cg.get(0).getValue());
-		verify(handler).characters("feita".toCharArray());
-		verify(handler).endToken();
+		verifyTokensInSequence(result, "feita");
 	}
 
 	@Test
 	public void testCompositeWord() throws Exception {
-		@SuppressWarnings("unchecked")
-		List<Entry<String, String>> cg = Arrays.asList(new Parser.Entry<String, String>("Pesquisa=Datafolha", " [Pesquisa=Datafolha] PROP F S @SUBJ>"));
-		matchAndApply(cg, "Pesquisa Datafolha");
+		cg.add(entry("Pesquisa=Datafolha", " [Pesquisa=Datafolha] PROP F S @SUBJ>"));
+		MatchResult result = match("Pesquisa Datafolha");
 		
-		verify(handler).startToken(cg.get(0).getValue());
-		verify(handler).characters("Pesquisa Datafolha".toCharArray());
-		verify(handler).endToken();
+		verifyTokensInSequence(result, "Pesquisa Datafolha");
 	}
 
 	@Test
 	public void testCompositeWordWithMoreWhitespaces() throws Exception {
-		@SuppressWarnings("unchecked")
-		List<Entry<String, String>> cg = Arrays.asList(new Parser.Entry<String, String>("Pesquisa=Datafolha", " [Pesquisa=Datafolha] PROP F S @SUBJ>"));
-		matchAndApply(cg, "Pesquisa   \t\t \t  \t Datafolha");
+		cg.add(entry("Pesquisa=Datafolha", " [Pesquisa=Datafolha] PROP F S @SUBJ>"));
+		MatchResult result = match("Pesquisa   \t\t \t  \t Datafolha");
 		
-		verify(handler).startToken(cg.get(0).getValue());
-		verify(handler).characters("Pesquisa   \t\t \t  \t Datafolha".toCharArray());
-		verify(handler).endToken();
+		verifyTokensInSequence(result, "Pesquisa   \t\t \t  \t Datafolha");
 	}
 
 	@Test
 	public void testPunctuationMark() throws Exception {
-		@SuppressWarnings("unchecked")
-		List<Entry<String, String>> cg = Arrays.asList(new Parser.Entry<String, String>("$,", null));
-		matchAndApply(cg, ",");
+		cg.add(entry("$,", (String)null));
+		MatchResult result = match(",");
 		
-		verify(handler).startToken(cg.get(0).getValue());
-		verify(handler).characters(",".toCharArray());
-		verify(handler).endToken();
+		verifyTokensInSequence(result, ",");
 	}
 
 	@Test
 	public void testEmptyInput() throws Exception {
-		@SuppressWarnings("unchecked")
-		List<Entry<String, String>> cg = Arrays.asList(new Parser.Entry<String, String>("Pesquisa=Datafolha", " [Pesquisa=Datafolha] PROP F S @SUBJ>"));
-		noMatch(cg, "");
+		cg.add(entry("Pesquisa=Datafolha", " [Pesquisa=Datafolha] PROP F S @SUBJ>"));
+		assertNull(match(""));
 
-		verifyNoMoreInteractions(handler);
+		verifyNoToken();
 	}
 
 	@Test
 	public void testDirtyEntry() throws Exception {
-		@SuppressWarnings("unchecked")
-		List<Entry<String, String>> cg = Arrays.asList(new Parser.Entry<String, String>("checks ALT xxxs", " [check] N M P <*1> <*1> @P<"));
-		matchAndApply(cg, "checks");
+		cg.add(entry("checks ALT xxxs", " [check] N M P <*1> <*1> @P<"));
+		MatchResult result = match("checks");
 		
-		verify(handler).startToken(cg.get(0).getValue());
-		verify(handler).characters("checks".toCharArray());
-		verify(handler).endToken();
+		verifyTokensInSequence(result, "checks");
 	}
 
 	@Test
 	public void testUngreedyMatchPunctuation() throws Exception {
-		@SuppressWarnings("unchecked")
-		List<Entry<String, String>> cg = Arrays.asList(
-				new Parser.Entry<String, String>("sra.", " [sra.] N F S @P<"),
-				new Parser.Entry<String, String>("$.", " [$.] PU <<<")
-			);
+		cg.add(entry("sra.", " [sra.] N F S @P<"));
+		cg.add(entry("$.", " [$.] PU <<<"));
 
-		matchAndApply(cg, "sra.");
+		MatchResult result = match("sra.");
 		
-		verify(handler).startToken(cg.get(0).getValue());
-		verify(handler).characters("sra".toCharArray());
-		verify(handler).endToken();
+		verifyTokensInSequence(result, "sra");
 	}
 
 }

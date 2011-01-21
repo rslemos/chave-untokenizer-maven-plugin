@@ -1,15 +1,9 @@
 package br.eti.rslemos.nlp.corpora.chave.parser;
 
-import static org.mockito.Mockito.inOrder;
-
-import java.util.Arrays;
-import java.util.List;
+import static br.eti.rslemos.nlp.corpora.chave.parser.Parser.Entry.entry;
 
 import org.junit.Before;
 import org.junit.Test;
-import org.mockito.InOrder;
-
-import br.eti.rslemos.nlp.corpora.chave.parser.Parser.Entry;
 
 public class ContractionEmMatchStrategyUnitTest extends AbstractMatchStrategyUnitTest {
 	
@@ -20,590 +14,282 @@ public class ContractionEmMatchStrategyUnitTest extends AbstractMatchStrategyUni
 	
 	@Test
 	public void testContraction_em_o() throws Exception {
-		@SuppressWarnings("unchecked")
-		List<Entry<String, String>> cg = Arrays.asList(
-				new Parser.Entry<String, String>("em", " [em] PRP <sam-> @<ADVL"),
-				new Parser.Entry<String, String>("o", " [o] DET M S <artd> <-sam> @>N")
-			);
+		cg.add(entry("em", " [em] PRP <sam-> @<ADVL"));
+		cg.add(entry("o", " [o] DET M S <artd> <-sam> @>N"));
 		
-		matchAndApply(cg, "no");
+		MatchResult result = match("no");
 		
-		InOrder order = inOrder(handler);
-		
-		order.verify(handler).startToken(cg.get(0).getValue());
-		order.verify(handler).characters("n".toCharArray());
-		order.verify(handler).endToken();
-		
-		order.verify(handler).startToken(cg.get(1).getValue());
-		order.verify(handler).characters("o".toCharArray());
-		order.verify(handler).endToken();
+		verifyTokensInSequence(result, "n", "o");
 	}
 	
 	@Test
 	public void testContraction_em_a() throws Exception {
-		@SuppressWarnings("unchecked")
-		List<Entry<String, String>> cg = Arrays.asList(
-				new Parser.Entry<String, String>("em", " [em] PRP <sam-> @<ADVL"),
-				new Parser.Entry<String, String>("a", " [o] DET F S <artd> <-sam> @>N")
-			);
+		cg.add(entry("em", " [em] PRP <sam-> @<ADVL"));
+		cg.add(entry("a", " [o] DET F S <artd> <-sam> @>N"));
 		
-		matchAndApply(cg, "na");
+		MatchResult result = match("na");
 		
-		InOrder order = inOrder(handler);
-		
-		order.verify(handler).startToken(cg.get(0).getValue());
-		order.verify(handler).characters("n".toCharArray());
-		order.verify(handler).endToken();
-		
-		order.verify(handler).startToken(cg.get(1).getValue());
-		order.verify(handler).characters("a".toCharArray());
-		order.verify(handler).endToken();
+		verifyTokensInSequence(result, "n", "a");
 	}
 	
 	@Test
 	public void testContraction_em_os() throws Exception {
-		@SuppressWarnings("unchecked")
-		List<Entry<String, String>> cg = Arrays.asList(
-				new Parser.Entry<String, String>("em", " [em] PRP <sam-> @<ADVL"),
-				new Parser.Entry<String, String>("os", " [o] DET M P <artd> <-sam> @>N")
-			);
+		cg.add(entry("em", " [em] PRP <sam-> @<ADVL"));
+		cg.add(entry("os", " [o] DET M P <artd> <-sam> @>N"));
 		
-		matchAndApply(cg, "nos");
+		MatchResult result = match("nos");
 		
-		InOrder order = inOrder(handler);
-		
-		order.verify(handler).startToken(cg.get(0).getValue());
-		order.verify(handler).characters("n".toCharArray());
-		order.verify(handler).endToken();
-		
-		order.verify(handler).startToken(cg.get(1).getValue());
-		order.verify(handler).characters("os".toCharArray());
-		order.verify(handler).endToken();
+		verifyTokensInSequence(result, "n", "os");
 	}
 	
 	@Test
 	public void testContraction_em_as() throws Exception {
-		@SuppressWarnings("unchecked")
-		List<Entry<String, String>> cg = Arrays.asList(
-				new Parser.Entry<String, String>("em", " [em] PRP <sam-> @<ADVL"),
-				new Parser.Entry<String, String>("as", " [o] DET F P <artd> <-sam> @>N")
-			);
+		cg.add(entry("em", " [em] PRP <sam-> @<ADVL"));
+		cg.add(entry("as", " [o] DET F P <artd> <-sam> @>N"));
 		
-		matchAndApply(cg, "nas");
+		MatchResult result = match("nas");
 		
-		InOrder order = inOrder(handler);
-		
-		order.verify(handler).startToken(cg.get(0).getValue());
-		order.verify(handler).characters("n".toCharArray());
-		order.verify(handler).endToken();
-		
-		order.verify(handler).startToken(cg.get(1).getValue());
-		order.verify(handler).characters("as".toCharArray());
-		order.verify(handler).endToken();
+		verifyTokensInSequence(result, "n", "as");
 	}
 
 	@Test
 	public void testContraction_em_este() throws Exception {
-		@SuppressWarnings("unchecked")
-		List<Entry<String, String>> cg = Arrays.asList(
-				new Parser.Entry<String, String>("em", " [em] PRP <sam-> @<ADVL"),
-				new Parser.Entry<String, String>("este", " [este] DET M S <dem> <-sam> @>N")
-			);
+		cg.add(entry("em", " [em] PRP <sam-> @<ADVL"));
+		cg.add(entry("este", " [este] DET M S <dem> <-sam> @>N"));
 		
-		matchAndApply(cg, "neste");
+		MatchResult result = match("neste");
 		
-		InOrder order = inOrder(handler);
-		
-		order.verify(handler).startToken(cg.get(0).getValue());
-		order.verify(handler).characters("n".toCharArray());
-		order.verify(handler).endToken();
-		
-		order.verify(handler).startToken(cg.get(1).getValue());
-		order.verify(handler).characters("este".toCharArray());
-		order.verify(handler).endToken();
+		verifyTokensInSequence(result, "n", "este");
 	}
 	
 	@Test
 	public void testContraction_em_esse() throws Exception {
-		@SuppressWarnings("unchecked")
-		List<Entry<String, String>> cg = Arrays.asList(
-				new Parser.Entry<String, String>("em", " [em] PRP <sam-> @<ADVL"),
-				new Parser.Entry<String, String>("esse", " [esse] DET M S <dem> <-sam> @>N")
-			);
+		cg.add(entry("em", " [em] PRP <sam-> @<ADVL"));
+		cg.add(entry("esse", " [esse] DET M S <dem> <-sam> @>N"));
 		
-		matchAndApply(cg, "nesse");
+		MatchResult result = match("nesse");
 		
-		InOrder order = inOrder(handler);
-		
-		order.verify(handler).startToken(cg.get(0).getValue());
-		order.verify(handler).characters("n".toCharArray());
-		order.verify(handler).endToken();
-		
-		order.verify(handler).startToken(cg.get(1).getValue());
-		order.verify(handler).characters("esse".toCharArray());
-		order.verify(handler).endToken();
+		verifyTokensInSequence(result, "n", "esse");
 	}
 	
 	@Test
 	public void testContraction_em_esta() throws Exception {
-		@SuppressWarnings("unchecked")
-		List<Entry<String, String>> cg = Arrays.asList(
-				new Parser.Entry<String, String>("em", " [em] PRP <sam-> @<ADVL"),
-				new Parser.Entry<String, String>("esta", " [este] DET F S <dem> <-sam> @>N")
-			);
+		cg.add(entry("em", " [em] PRP <sam-> @<ADVL"));
+		cg.add(entry("esta", " [este] DET F S <dem> <-sam> @>N"));
 		
-		matchAndApply(cg, "nesta");
+		MatchResult result = match("nesta");
 		
-		InOrder order = inOrder(handler);
-		
-		order.verify(handler).startToken(cg.get(0).getValue());
-		order.verify(handler).characters("n".toCharArray());
-		order.verify(handler).endToken();
-		
-		order.verify(handler).startToken(cg.get(1).getValue());
-		order.verify(handler).characters("esta".toCharArray());
-		order.verify(handler).endToken();
+		verifyTokensInSequence(result, "n", "esta");
 	}
 	
 	@Test
 	public void testContraction_em_essa() throws Exception {
-		@SuppressWarnings("unchecked")
-		List<Entry<String, String>> cg = Arrays.asList(
-				new Parser.Entry<String, String>("em", " [em] PRP <sam-> @<ADVL"),
-				new Parser.Entry<String, String>("essa", " [esse] DET F S <dem> <-sam> @>N")
-			);
+		cg.add(entry("em", " [em] PRP <sam-> @<ADVL"));
+		cg.add(entry("essa", " [esse] DET F S <dem> <-sam> @>N"));
 		
-		matchAndApply(cg, "nessa");
+		MatchResult result = match("nessa");
 		
-		InOrder order = inOrder(handler);
-		
-		order.verify(handler).startToken(cg.get(0).getValue());
-		order.verify(handler).characters("n".toCharArray());
-		order.verify(handler).endToken();
-		
-		order.verify(handler).startToken(cg.get(1).getValue());
-		order.verify(handler).characters("essa".toCharArray());
-		order.verify(handler).endToken();
+		verifyTokensInSequence(result, "n", "essa");
 	}
 	
 	@Test
 	public void testContraction_em_estes() throws Exception {
-		@SuppressWarnings("unchecked")
-		List<Entry<String, String>> cg = Arrays.asList(
-				new Parser.Entry<String, String>("em", " [em] PRP <sam-> @<ADVL"),
-				new Parser.Entry<String, String>("estes", " [este] DET M P <dem> <-sam> @>N")
-			);
+		cg.add(entry("em", " [em] PRP <sam-> @<ADVL"));
+		cg.add(entry("estes", " [este] DET M P <dem> <-sam> @>N"));
 		
-		matchAndApply(cg, "nestes");
+		MatchResult result = match("nestes");
 		
-		InOrder order = inOrder(handler);
-		
-		order.verify(handler).startToken(cg.get(0).getValue());
-		order.verify(handler).characters("n".toCharArray());
-		order.verify(handler).endToken();
-		
-		order.verify(handler).startToken(cg.get(1).getValue());
-		order.verify(handler).characters("estes".toCharArray());
-		order.verify(handler).endToken();
+		verifyTokensInSequence(result, "n", "estes");
 	}
 	
 	@Test
 	public void testContraction_em_esses() throws Exception {
-		@SuppressWarnings("unchecked")
-		List<Entry<String, String>> cg = Arrays.asList(
-				new Parser.Entry<String, String>("em", " [em] PRP <sam-> @<ADVL"),
-				new Parser.Entry<String, String>("esses", " [esse] DET M P <dem> <-sam> @>N")
-			);
+		cg.add(entry("em", " [em] PRP <sam-> @<ADVL"));
+		cg.add(entry("esses", " [esse] DET M P <dem> <-sam> @>N"));
 		
-		matchAndApply(cg, "nesses");
+		MatchResult result = match("nesses");
 		
-		InOrder order = inOrder(handler);
-		
-		order.verify(handler).startToken(cg.get(0).getValue());
-		order.verify(handler).characters("n".toCharArray());
-		order.verify(handler).endToken();
-		
-		order.verify(handler).startToken(cg.get(1).getValue());
-		order.verify(handler).characters("esses".toCharArray());
-		order.verify(handler).endToken();
+		verifyTokensInSequence(result, "n", "esses");
 	}
 	
 	@Test
 	public void testContraction_em_estas() throws Exception {
-		@SuppressWarnings("unchecked")
-		List<Entry<String, String>> cg = Arrays.asList(
-				new Parser.Entry<String, String>("em", " [em] PRP <sam-> @<ADVL"),
-				new Parser.Entry<String, String>("estas", " [este] DET F P <dem> @>N")
-			);
+		cg.add(entry("em", " [em] PRP <sam-> @<ADVL"));
+		cg.add(entry("estas", " [este] DET F P <dem> @>N"));
 		
-		matchAndApply(cg, "nestas");
+		MatchResult result = match("nestas");
 		
-		InOrder order = inOrder(handler);
-		
-		order.verify(handler).startToken(cg.get(0).getValue());
-		order.verify(handler).characters("n".toCharArray());
-		order.verify(handler).endToken();
-		
-		order.verify(handler).startToken(cg.get(1).getValue());
-		order.verify(handler).characters("estas".toCharArray());
-		order.verify(handler).endToken();
+		verifyTokensInSequence(result, "n", "estas");
 	}
 	
 	@Test
 	public void testContraction_em_essas() throws Exception {
-		@SuppressWarnings("unchecked")
-		List<Entry<String, String>> cg = Arrays.asList(
-				new Parser.Entry<String, String>("em", " [em] PRP <sam-> @<ADVL"),
-				new Parser.Entry<String, String>("essas", " [esse] DET F P <dem> <-sam> @>N")
-			);
+		cg.add(entry("em", " [em] PRP <sam-> @<ADVL"));
+		cg.add(entry("essas", " [esse] DET F P <dem> <-sam> @>N"));
 		
-		matchAndApply(cg, "nessas");
+		MatchResult result = match("nessas");
 		
-		InOrder order = inOrder(handler);
-		
-		order.verify(handler).startToken(cg.get(0).getValue());
-		order.verify(handler).characters("n".toCharArray());
-		order.verify(handler).endToken();
-		
-		order.verify(handler).startToken(cg.get(1).getValue());
-		order.verify(handler).characters("essas".toCharArray());
-		order.verify(handler).endToken();
+		verifyTokensInSequence(result, "n", "essas");
 	}
 	
 	@Test
 	public void testContraction_em_isto() throws Exception {
-		@SuppressWarnings("unchecked")
-		List<Entry<String, String>> cg = Arrays.asList(
-				new Parser.Entry<String, String>("em", " [em] PRP <sam-> @<ADVL"),
-				new Parser.Entry<String, String>("isto", " [isto] SPEC M S <dem> @<ACC")
-			);
+		cg.add(entry("em", " [em] PRP <sam-> @<ADVL"));
+		cg.add(entry("isto", " [isto] SPEC M S <dem> @<ACC"));
 		
-		matchAndApply(cg, "nisto");
+		MatchResult result = match("nisto");
 		
-		InOrder order = inOrder(handler);
-		
-		order.verify(handler).startToken(cg.get(0).getValue());
-		order.verify(handler).characters("n".toCharArray());
-		order.verify(handler).endToken();
-		
-		order.verify(handler).startToken(cg.get(1).getValue());
-		order.verify(handler).characters("isto".toCharArray());
-		order.verify(handler).endToken();
+		verifyTokensInSequence(result, "n", "isto");
 	}
 	
 	@Test
 	public void testContraction_em_isso() throws Exception {
-		@SuppressWarnings("unchecked")
-		List<Entry<String, String>> cg = Arrays.asList(
-				new Parser.Entry<String, String>("em", " [em] PRP <sam-> @<ADVL"),
-				new Parser.Entry<String, String>("isso", " [isso] SPEC M S <dem> @SUBJ>")
-			);
+		cg.add(entry("em", " [em] PRP <sam-> @<ADVL"));
+		cg.add(entry("isso", " [isso] SPEC M S <dem> @SUBJ>"));
 		
-		matchAndApply(cg, "nisso");
+		MatchResult result = match("nisso");
 		
-		InOrder order = inOrder(handler);
-		
-		order.verify(handler).startToken(cg.get(0).getValue());
-		order.verify(handler).characters("n".toCharArray());
-		order.verify(handler).endToken();
-		
-		order.verify(handler).startToken(cg.get(1).getValue());
-		order.verify(handler).characters("isso".toCharArray());
-		order.verify(handler).endToken();
+		verifyTokensInSequence(result, "n", "isso");
 	}
 	
 	@Test
 	public void testContraction_em_aquele() throws Exception {
-		@SuppressWarnings("unchecked")
-		List<Entry<String, String>> cg = Arrays.asList(
-				new Parser.Entry<String, String>("em", " [em] PRP <sam-> @<ADVL"),
-				new Parser.Entry<String, String>("aquele", " [aquele] DET M S <dem> <-sam> @>N")
-			);
+		cg.add(entry("em", " [em] PRP <sam-> @<ADVL"));
+		cg.add(entry("aquele", " [aquele] DET M S <dem> <-sam> @>N"));
 		
-		matchAndApply(cg, "naquele");
+		MatchResult result = match("naquele");
 		
-		InOrder order = inOrder(handler);
-		
-		order.verify(handler).startToken(cg.get(0).getValue());
-		order.verify(handler).characters("n".toCharArray());
-		order.verify(handler).endToken();
-		
-		order.verify(handler).startToken(cg.get(1).getValue());
-		order.verify(handler).characters("aquele".toCharArray());
-		order.verify(handler).endToken();
+		verifyTokensInSequence(result, "n", "aquele");
 	}
 	
 	@Test
 	public void testContraction_em_aquela() throws Exception {
-		@SuppressWarnings("unchecked")
-		List<Entry<String, String>> cg = Arrays.asList(
-				new Parser.Entry<String, String>("em", " [em] PRP <sam-> @<ADVL"),
-				new Parser.Entry<String, String>("aquela", "[aquele] DET F S <dem> @>N")
-			);
+		cg.add(entry("em", " [em] PRP <sam-> @<ADVL"));
+		cg.add(entry("aquela", "[aquele] DET F S <dem> @>N"));
 		
-		matchAndApply(cg, "naquela");
+		MatchResult result = match("naquela");
 		
-		InOrder order = inOrder(handler);
-		
-		order.verify(handler).startToken(cg.get(0).getValue());
-		order.verify(handler).characters("n".toCharArray());
-		order.verify(handler).endToken();
-		
-		order.verify(handler).startToken(cg.get(1).getValue());
-		order.verify(handler).characters("aquela".toCharArray());
-		order.verify(handler).endToken();
+		verifyTokensInSequence(result, "n", "aquela");
 	}
 	
 	@Test
 	public void testContraction_em_aqueles() throws Exception {
-		@SuppressWarnings("unchecked")
-		List<Entry<String, String>> cg = Arrays.asList(
-				new Parser.Entry<String, String>("em", " [em] PRP <sam-> @<ADVL"),
-				new Parser.Entry<String, String>("aqueles", " [aquele] DET M P <dem> @P<")
-			);
+		cg.add(entry("em", " [em] PRP <sam-> @<ADVL"));
+		cg.add(entry("aqueles", " [aquele] DET M P <dem> @P<"));
 		
-		matchAndApply(cg, "naqueles");
+		MatchResult result = match("naqueles");
 		
-		InOrder order = inOrder(handler);
-		
-		order.verify(handler).startToken(cg.get(0).getValue());
-		order.verify(handler).characters("n".toCharArray());
-		order.verify(handler).endToken();
-		
-		order.verify(handler).startToken(cg.get(1).getValue());
-		order.verify(handler).characters("aqueles".toCharArray());
-		order.verify(handler).endToken();
+		verifyTokensInSequence(result, "n", "aqueles");
 	}
 	
 	@Test
 	public void testContraction_em_aquelas() throws Exception {
-		@SuppressWarnings("unchecked")
-		List<Entry<String, String>> cg = Arrays.asList(
-				new Parser.Entry<String, String>("em", " [em] PRP <sam-> @<ADVL"),
-				new Parser.Entry<String, String>("aquelas", " [aquele] DET F P <dem> <-sam> @P<")
-			);
+		cg.add(entry("em", " [em] PRP <sam-> @<ADVL"));
+		cg.add(entry("aquelas", " [aquele] DET F P <dem> <-sam> @P<"));
 		
-		matchAndApply(cg, "naquelas");
+		MatchResult result = match("naquelas");
 		
-		InOrder order = inOrder(handler);
-		
-		order.verify(handler).startToken(cg.get(0).getValue());
-		order.verify(handler).characters("n".toCharArray());
-		order.verify(handler).endToken();
-		
-		order.verify(handler).startToken(cg.get(1).getValue());
-		order.verify(handler).characters("aquelas".toCharArray());
-		order.verify(handler).endToken();
+		verifyTokensInSequence(result, "n", "aquelas");
 	}
 	
 	@Test
 	public void testContraction_em_aquilo() throws Exception {
-		@SuppressWarnings("unchecked")
-		List<Entry<String, String>> cg = Arrays.asList(
-				new Parser.Entry<String, String>("em", " [em] PRP <sam-> @<ADVL"),
-				new Parser.Entry<String, String>("aquilo", " [aquilo] SPEC M S <dem> <-sam> @P<")
-			);
+		cg.add(entry("em", " [em] PRP <sam-> @<ADVL"));
+		cg.add(entry("aquilo", " [aquilo] SPEC M S <dem> <-sam> @P<"));
 		
-		matchAndApply(cg, "naquilo");
+		MatchResult result = match("naquilo");
 		
-		InOrder order = inOrder(handler);
-		
-		order.verify(handler).startToken(cg.get(0).getValue());
-		order.verify(handler).characters("n".toCharArray());
-		order.verify(handler).endToken();
-		
-		order.verify(handler).startToken(cg.get(1).getValue());
-		order.verify(handler).characters("aquilo".toCharArray());
-		order.verify(handler).endToken();
+		verifyTokensInSequence(result, "n", "aquilo");
 	}
 	
 	@Test
 	public void testContraction_em_ele() throws Exception {
-		@SuppressWarnings("unchecked")
-		List<Entry<String, String>> cg = Arrays.asList(
-				new Parser.Entry<String, String>("em", " [em] PRP <sam-> @<ADVL"),
-				new Parser.Entry<String, String>("ele", " [ele] PERS M 3S NOM @SUBJ>")
-			);
+		cg.add(entry("em", " [em] PRP <sam-> @<ADVL"));
+		cg.add(entry("ele", " [ele] PERS M 3S NOM @SUBJ>"));
 		
-		matchAndApply(cg, "nele");
+		MatchResult result = match("nele");
 		
-		InOrder order = inOrder(handler);
-		
-		order.verify(handler).startToken(cg.get(0).getValue());
-		order.verify(handler).characters("n".toCharArray());
-		order.verify(handler).endToken();
-		
-		order.verify(handler).startToken(cg.get(1).getValue());
-		order.verify(handler).characters("ele".toCharArray());
-		order.verify(handler).endToken();
+		verifyTokensInSequence(result, "n", "ele");
 	}
 	
 	@Test
 	public void testContraction_em_ela() throws Exception {
-		@SuppressWarnings("unchecked")
-		List<Entry<String, String>> cg = Arrays.asList(
-				new Parser.Entry<String, String>("em", " [em] PRP <sam-> @<ADVL"),
-				new Parser.Entry<String, String>("ela", " [ela] PERS F 3S NOM/PIV <-sam> @P<")
-			);
+		cg.add(entry("em", " [em] PRP <sam-> @<ADVL"));
+		cg.add(entry("ela", " [ela] PERS F 3S NOM/PIV <-sam> @P<"));
 		
-		matchAndApply(cg, "nela");
+		MatchResult result = match("nela");
 		
-		InOrder order = inOrder(handler);
-		
-		order.verify(handler).startToken(cg.get(0).getValue());
-		order.verify(handler).characters("n".toCharArray());
-		order.verify(handler).endToken();
-		
-		order.verify(handler).startToken(cg.get(1).getValue());
-		order.verify(handler).characters("ela".toCharArray());
-		order.verify(handler).endToken();
+		verifyTokensInSequence(result, "n", "ela");
 	}
 	
 	@Test
 	public void testContraction_em_eles() throws Exception {
-		@SuppressWarnings("unchecked")
-		List<Entry<String, String>> cg = Arrays.asList(
-				new Parser.Entry<String, String>("em", " [em] PRP <sam-> @<ADVL"),
-				new Parser.Entry<String, String>("eles", " [eles] PERS M 3P NOM/PIV <-sam> @P<")
-			);
+		cg.add(entry("em", " [em] PRP <sam-> @<ADVL"));
+		cg.add(entry("eles", " [eles] PERS M 3P NOM/PIV <-sam> @P<"));
 		
-		matchAndApply(cg, "neles");
+		MatchResult result = match("neles");
 		
-		InOrder order = inOrder(handler);
-		
-		order.verify(handler).startToken(cg.get(0).getValue());
-		order.verify(handler).characters("n".toCharArray());
-		order.verify(handler).endToken();
-		
-		order.verify(handler).startToken(cg.get(1).getValue());
-		order.verify(handler).characters("eles".toCharArray());
-		order.verify(handler).endToken();
+		verifyTokensInSequence(result, "n", "eles");
 	}
 	
 	@Test
 	public void testContraction_em_elas() throws Exception {
-		@SuppressWarnings("unchecked")
-		List<Entry<String, String>> cg = Arrays.asList(
-				new Parser.Entry<String, String>("em", " [em] PRP <sam-> @<ADVL"),
-				new Parser.Entry<String, String>("elas", " [elas] PERS F 3P NOM/PIV <-sam> @P<")
-			);
+		cg.add(entry("em", " [em] PRP <sam-> @<ADVL"));
+		cg.add(entry("elas", " [elas] PERS F 3P NOM/PIV <-sam> @P<"));
 		
-		matchAndApply(cg, "nelas");
+		MatchResult result = match("nelas");
 		
-		InOrder order = inOrder(handler);
-		
-		order.verify(handler).startToken(cg.get(0).getValue());
-		order.verify(handler).characters("n".toCharArray());
-		order.verify(handler).endToken();
-		
-		order.verify(handler).startToken(cg.get(1).getValue());
-		order.verify(handler).characters("elas".toCharArray());
-		order.verify(handler).endToken();
+		verifyTokensInSequence(result, "n", "elas");
 	}
 	
 	@Test
 	public void testContraction_em_um() throws Exception {
-		@SuppressWarnings("unchecked")
-		List<Entry<String, String>> cg = Arrays.asList(
-				new Parser.Entry<String, String>("em", " [em] PRP <sam-> @<ADVL"),
-				new Parser.Entry<String, String>("um", " [um] DET M S <arti> @>N")
-			);
+		cg.add(entry("em", " [em] PRP <sam-> @<ADVL"));
+		cg.add(entry("um", " [um] DET M S <arti> @>N"));
 		
-		matchAndApply(cg, "num");
+		MatchResult result = match("num");
 		
-		InOrder order = inOrder(handler);
-		
-		order.verify(handler).startToken(cg.get(0).getValue());
-		order.verify(handler).characters("n".toCharArray());
-		order.verify(handler).endToken();
-		
-		order.verify(handler).startToken(cg.get(1).getValue());
-		order.verify(handler).characters("um".toCharArray());
-		order.verify(handler).endToken();
+		verifyTokensInSequence(result, "n", "um");
 	}
 	
 	@Test
 	public void testContraction_em_uma() throws Exception {
-		@SuppressWarnings("unchecked")
-		List<Entry<String, String>> cg = Arrays.asList(
-				new Parser.Entry<String, String>("em", " [em] PRP <sam-> @<ADVL"),
-				new Parser.Entry<String, String>("uma", " [um] DET F S <arti> @>N")
-			);
+		cg.add(entry("em", " [em] PRP <sam-> @<ADVL"));
+		cg.add(entry("uma", " [um] DET F S <arti> @>N"));
 		
-		matchAndApply(cg, "numa");
+		MatchResult result = match("numa");
 		
-		InOrder order = inOrder(handler);
-		
-		order.verify(handler).startToken(cg.get(0).getValue());
-		order.verify(handler).characters("n".toCharArray());
-		order.verify(handler).endToken();
-		
-		order.verify(handler).startToken(cg.get(1).getValue());
-		order.verify(handler).characters("uma".toCharArray());
-		order.verify(handler).endToken();
+		verifyTokensInSequence(result, "n", "uma");
 	}
 	
 	@Test
 	public void testContraction_em_uns() throws Exception {
-		@SuppressWarnings("unchecked")
-		List<Entry<String, String>> cg = Arrays.asList(
-				new Parser.Entry<String, String>("em", " [em] PRP <sam-> @<ADVL"),
-				new Parser.Entry<String, String>("uns", " [um] DET M P <arti> @>N")
-			);
+		cg.add(entry("em", " [em] PRP <sam-> @<ADVL"));
+		cg.add(entry("uns", " [um] DET M P <arti> @>N"));
 		
-		matchAndApply(cg, "nuns");
+		MatchResult result = match("nuns");
 		
-		InOrder order = inOrder(handler);
-		
-		order.verify(handler).startToken(cg.get(0).getValue());
-		order.verify(handler).characters("n".toCharArray());
-		order.verify(handler).endToken();
-		
-		order.verify(handler).startToken(cg.get(1).getValue());
-		order.verify(handler).characters("uns".toCharArray());
-		order.verify(handler).endToken();
+		verifyTokensInSequence(result, "n", "uns");
 	}
 	
 	@Test
 	public void testContraction_em_umas() throws Exception {
-		@SuppressWarnings("unchecked")
-		List<Entry<String, String>> cg = Arrays.asList(
-				new Parser.Entry<String, String>("em", " [em] PRP <sam-> @<ADVL"),
-				new Parser.Entry<String, String>("umas", " [um] DET F P <arti> @>N")
-			);
+		cg.add(entry("em", " [em] PRP <sam-> @<ADVL"));
+		cg.add(entry("umas", " [um] DET F P <arti> @>N"));
 		
-		matchAndApply(cg, "numas");
+		MatchResult result = match("numas");
 		
-		InOrder order = inOrder(handler);
-		
-		order.verify(handler).startToken(cg.get(0).getValue());
-		order.verify(handler).characters("n".toCharArray());
-		order.verify(handler).endToken();
-		
-		order.verify(handler).startToken(cg.get(1).getValue());
-		order.verify(handler).characters("umas".toCharArray());
-		order.verify(handler).endToken();
+		verifyTokensInSequence(result, "n", "umas");
 	}
 	
 	@Test
 	public void testExpressionContraction_em_o_qual() throws Exception {
-		@SuppressWarnings("unchecked")
-		List<Entry<String, String>> cg = Arrays.asList(
-				new Parser.Entry<String, String>("em", " [em] PRP <sam-> @<ADVL"),
-				new Parser.Entry<String, String>("o=qual", " [o=qual] SPEC M S @P< <rel> <-sam> @#FS-N<")
-			);
+		cg.add(entry("em", " [em] PRP <sam-> @<ADVL"));
+		cg.add(entry("o=qual", " [o=qual] SPEC M S @P< <rel> <-sam> @#FS-N<"));
 		
-		matchAndApply(cg, "no qual");
+		MatchResult result = match("no qual");
 		
-		InOrder order = inOrder(handler);
-		
-		order.verify(handler).startToken(cg.get(0).getValue());
-		order.verify(handler).characters("n".toCharArray());
-		order.verify(handler).endToken();
-		
-		order.verify(handler).startToken(cg.get(1).getValue());
-		order.verify(handler).characters("o qual".toCharArray());
-		order.verify(handler).endToken();
+		verifyTokensInSequence(result, "n", "o qual");
 		
 	}
 }

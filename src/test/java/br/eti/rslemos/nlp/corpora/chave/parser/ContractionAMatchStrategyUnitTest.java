@@ -1,16 +1,9 @@
 package br.eti.rslemos.nlp.corpora.chave.parser;
 
-import static org.mockito.Mockito.inOrder;
-import static org.mockito.Mockito.times;
-
-import java.util.Arrays;
-import java.util.List;
+import static br.eti.rslemos.nlp.corpora.chave.parser.Parser.Entry.entry;
 
 import org.junit.Before;
 import org.junit.Test;
-import org.mockito.InOrder;
-
-import br.eti.rslemos.nlp.corpora.chave.parser.Parser.Entry;
 
 public class ContractionAMatchStrategyUnitTest extends AbstractMatchStrategyUnitTest {
 	
@@ -21,261 +14,131 @@ public class ContractionAMatchStrategyUnitTest extends AbstractMatchStrategyUnit
 	
 	@Test
 	public void testContraction_a_o() throws Exception {
-		@SuppressWarnings("unchecked")
-		List<Entry<String, String>> cg = Arrays.asList(
-				new Parser.Entry<String, String>("a", " [a] PRP <sam-> @ADVL"),
-				new Parser.Entry<String, String>("o", " [o] DET M S <artd> <-sam> @>N")
-			);
+		cg.add(entry("a", " [a] PRP <sam-> @ADVL"));
+		cg.add(entry("o", " [o] DET M S <artd> <-sam> @>N"));
 		
-		matchAndApply(cg, "ao");
+		MatchResult result = match("ao");
 		
-		InOrder order = inOrder(handler);
-		
-		order.verify(handler).startToken(cg.get(0).getValue());
-		order.verify(handler).characters("a".toCharArray());
-		order.verify(handler).endToken();
-		
-		order.verify(handler).startToken(cg.get(1).getValue());
-		order.verify(handler).characters("o".toCharArray());
-		order.verify(handler).endToken();
+		verifyTokensInSequence(result, "a", "o");
 	}
 	
 	@Test
 	public void testContraction_a_a() throws Exception {
-		@SuppressWarnings("unchecked")
-		List<Entry<String, String>> cg = Arrays.asList(
-				new Parser.Entry<String, String>("a", " [a] PRP <sam-> @ADVL"),
-				new Parser.Entry<String, String>("a", " [o] DET F S <artd> <-sam> @>N")
-			);
+		cg.add(entry("a", " [a] PRP <sam-> @ADVL"));
+		cg.add(entry("a", " [o] DET F S <artd> <-sam> @>N"));
 		
-		matchAndApply(cg, "à");
+		MatchResult result = match("à");
 		
-		InOrder order = inOrder(handler);
-		
-		order.verify(handler).startToken(cg.get(1).getValue());
-		order.verify(handler).startToken(cg.get(0).getValue());
-		order.verify(handler).characters("à".toCharArray());
-		order.verify(handler, times(2)).endToken();
+		verifyFullOverlappingTokens(result, "à");
 	}
 	
 	@Test
 	public void testContraction_a_os() throws Exception {
-		@SuppressWarnings("unchecked")
-		List<Entry<String, String>> cg = Arrays.asList(
-				new Parser.Entry<String, String>("a", " [a] PRP <sam-> @ADVL"),
-				new Parser.Entry<String, String>("os", " [o] DET M P <artd> <-sam> @>N")
-			);
+		cg.add(entry("a", " [a] PRP <sam-> @ADVL"));
+		cg.add(entry("os", " [o] DET M P <artd> <-sam> @>N"));
 		
-		matchAndApply(cg, "aos");
+		MatchResult result = match("aos");
 		
-		InOrder order = inOrder(handler);
-		
-		order.verify(handler).startToken(cg.get(0).getValue());
-		order.verify(handler).characters("a".toCharArray());
-		order.verify(handler).endToken();
-		
-		order.verify(handler).startToken(cg.get(1).getValue());
-		order.verify(handler).characters("os".toCharArray());
-		order.verify(handler).endToken();
+		verifyTokensInSequence(result, "a", "os");
 	}
 	
 	@Test
 	public void testContraction_a_as() throws Exception {
-		@SuppressWarnings("unchecked")
-		List<Entry<String, String>> cg = Arrays.asList(
-				new Parser.Entry<String, String>("a", " [a] PRP <sam-> @ADVL"),
-				new Parser.Entry<String, String>("as", " [o] DET F P <artd> <-sam> @>N")
-			);
+		cg.add(entry("a", " [a] PRP <sam-> @ADVL"));
+		cg.add(entry("as", " [o] DET F P <artd> <-sam> @>N"));
 		
-		matchAndApply(cg, "às");
+		MatchResult result = match("às");
 		
-		InOrder order = inOrder(handler);
-		
-		order.verify(handler).startToken(cg.get(1).getValue());
-		order.verify(handler).startToken(cg.get(0).getValue());
-		order.verify(handler).characters("à".toCharArray());
-		order.verify(handler).endToken();
-		order.verify(handler).characters("s".toCharArray());
-		order.verify(handler).endToken();
+		verifyLeftAlignedOverlappingTokens(result, "à", "s");
 	}
 	
 	@Test
 	public void testContraction_a_aquele() throws Exception {
-		@SuppressWarnings("unchecked")
-		List<Entry<String, String>> cg = Arrays.asList(
-				new Parser.Entry<String, String>("a", " [a] PRP <sam-> @ADVL"),
-				new Parser.Entry<String, String>("aquele", "[aquele] DET M S <dem> @>N")
-			);
+		cg.add(entry("a", " [a] PRP <sam-> @ADVL"));
+		cg.add(entry("aquele", "[aquele] DET M S <dem> @>N"));
 		
-		matchAndApply(cg, "àquele");
+		MatchResult result = match("àquele");
 		
-		InOrder order = inOrder(handler);
-		
-		order.verify(handler).startToken(cg.get(1).getValue());
-		order.verify(handler).startToken(cg.get(0).getValue());
-		order.verify(handler).characters("à".toCharArray());
-		order.verify(handler).endToken();
-		order.verify(handler).characters("quele".toCharArray());
-		order.verify(handler).endToken();
+		verifyLeftAlignedOverlappingTokens(result, "à", "quele");
 	}
 	
 	@Test
 	public void testContraction_a_aquela() throws Exception {
-		@SuppressWarnings("unchecked")
-		List<Entry<String, String>> cg = Arrays.asList(
-				new Parser.Entry<String, String>("a", " [a] PRP <sam-> @ADVL"),
-				new Parser.Entry<String, String>("aquela", "[aquele] DET F S <dem> @>N")
-			);
+		cg.add(entry("a", " [a] PRP <sam-> @ADVL"));
+		cg.add(entry("aquela", "[aquele] DET F S <dem> @>N"));
 		
-		matchAndApply(cg, "àquela");
+		MatchResult result = match("àquela");
 		
-		InOrder order = inOrder(handler);
-		
-		order.verify(handler).startToken(cg.get(1).getValue());
-		order.verify(handler).startToken(cg.get(0).getValue());
-		order.verify(handler).characters("à".toCharArray());
-		order.verify(handler).endToken();
-		order.verify(handler).characters("quela".toCharArray());
-		order.verify(handler).endToken();
+		verifyLeftAlignedOverlappingTokens(result, "à", "quela");
 	}
 	
 	@Test
 	public void testContraction_a_aqueles() throws Exception {
-		@SuppressWarnings("unchecked")
-		List<Entry<String, String>> cg = Arrays.asList(
-				new Parser.Entry<String, String>("a", " [a] PRP <sam-> @ADVL"),
-				new Parser.Entry<String, String>("aqueles", " [aquele] DET M P <dem> @P<")
-			);
+		cg.add(entry("a", " [a] PRP <sam-> @ADVL"));
+		cg.add(entry("aqueles", " [aquele] DET M P <dem> @P<"));
 		
-		matchAndApply(cg, "àqueles");
+		MatchResult result = match("àqueles");
 		
-		InOrder order = inOrder(handler);
-		
-		order.verify(handler).startToken(cg.get(1).getValue());
-		order.verify(handler).startToken(cg.get(0).getValue());
-		order.verify(handler).characters("à".toCharArray());
-		order.verify(handler).endToken();
-		order.verify(handler).characters("queles".toCharArray());
-		order.verify(handler).endToken();
+		verifyLeftAlignedOverlappingTokens(result, "à", "queles");
 	}
 	
 	@Test
 	public void testContraction_a_aquelas() throws Exception {
-		@SuppressWarnings("unchecked")
-		List<Entry<String, String>> cg = Arrays.asList(
-				new Parser.Entry<String, String>("a", " [a] PRP <sam-> @ADVL"),
-				new Parser.Entry<String, String>("aquelas", " [aquele] DET F P <dem> <-sam> @P<")
-			);
+		cg.add(entry("a", " [a] PRP <sam-> @ADVL"));
+		cg.add(entry("aquelas", " [aquele] DET F P <dem> <-sam> @P<"));
 		
-		matchAndApply(cg, "àquelas");
+		MatchResult result = match("àquelas");
 		
-		InOrder order = inOrder(handler);
-		
-		order.verify(handler).startToken(cg.get(1).getValue());
-		order.verify(handler).startToken(cg.get(0).getValue());
-		order.verify(handler).characters("à".toCharArray());
-		order.verify(handler).endToken();
-		order.verify(handler).characters("quelas".toCharArray());
-		order.verify(handler).endToken();
+		verifyLeftAlignedOverlappingTokens(result, "à", "quelas");
 	}
-	
+
 	@Test
 	public void testContraction_a_aquilo() throws Exception {
-		@SuppressWarnings("unchecked")
-		List<Entry<String, String>> cg = Arrays.asList(
-				new Parser.Entry<String, String>("a", " [a] PRP <sam-> @ADVL"),
-				new Parser.Entry<String, String>("aquilo", " [aquilo] SPEC M S <dem> <-sam> @P<")
-			);
+		cg.add(entry("a", " [a] PRP <sam-> @ADVL"));
+		cg.add(entry("aquilo", " [aquilo] SPEC M S <dem> <-sam> @P<"));
 		
-		matchAndApply(cg, "àquilo");
+		MatchResult result = match("àquilo");
 		
-		InOrder order = inOrder(handler);
-		
-		order.verify(handler).startToken(cg.get(1).getValue());
-		order.verify(handler).startToken(cg.get(0).getValue());
-		order.verify(handler).characters("à".toCharArray());
-		order.verify(handler).endToken();
-		order.verify(handler).characters("quilo".toCharArray());
-		order.verify(handler).endToken();
+		verifyLeftAlignedOverlappingTokens(result, "à", "quilo");
 	}
 	
 	@Test
 	public void testExpressionContraction_Quanto_a_as() throws Exception {
-		@SuppressWarnings("unchecked")
-		List<Entry<String, String>> cg = Arrays.asList(
-				new Parser.Entry<String, String>("Quanto=a", " [quanto=a] PRP <sam-> @ADVL>"),
-				new Parser.Entry<String, String>("as", " [o] DET F P <artd> <-sam> @>N")
-			);
+		cg.add(entry("Quanto=a", " [quanto=a] PRP <sam-> @ADVL>"));
+		cg.add(entry("as", " [o] DET F P <artd> <-sam> @>N"));
 		
-		matchAndApply(cg, "Quanto às");
+		MatchResult result = match("Quanto às");
 		
-		InOrder order = inOrder(handler);
-		
-		order.verify(handler).startPseudoToken(cg.get(0).getValue());
-		order.verify(handler).characters("Quanto ".toCharArray());
-		order.verify(handler).startPseudoToken(cg.get(1).getValue());
-		order.verify(handler).characters("à".toCharArray());
-		order.verify(handler).endPseudoToken();
-		order.verify(handler).characters("s".toCharArray());
-		order.verify(handler).endPseudoToken();
+		verifyIntersectingPseudoToken(result, "Quanto ", "à", "s");
 	}
 	
 	@Test
 	public void testExpressionContraction_a_as_quais() throws Exception {
-		@SuppressWarnings("unchecked")
-		List<Entry<String, String>> cg = Arrays.asList(
-				new Parser.Entry<String, String>("a", " [a] PRP <sam-> @ADVL"),
-				new Parser.Entry<String, String>("as=quais", " [o=qual] SPEC F P @P< <rel> <-sam> @#FS-N<")
-			);
+		cg.add(entry("a", " [a] PRP <sam-> @ADVL"));
+		cg.add(entry("as=quais", " [o=qual] SPEC F P @P< <rel> <-sam> @#FS-N<"));
 		
-		matchAndApply(cg, "às quais");
+		MatchResult result = match("às quais");
 		
-		InOrder order = inOrder(handler);
-		
-		order.verify(handler).startToken(cg.get(1).getValue());
-		order.verify(handler).startToken(cg.get(0).getValue());
-		order.verify(handler).characters("à".toCharArray());
-		order.verify(handler).endToken();
-		order.verify(handler).characters("s quais".toCharArray());
-		order.verify(handler).endToken();
+		verifyLeftAlignedOverlappingTokens(result, "à", "s quais");
 	}
 	
 	@Test
 	public void testExpressionContraction_devido_a_a() throws Exception {
-		@SuppressWarnings("unchecked")
-		List<Entry<String, String>> cg = Arrays.asList(
-				new Parser.Entry<String, String>("devido=a", " [devido=a] PRP <sam-> @<ADVL"),
-				new Parser.Entry<String, String>("a", " [o] DET F S <-sam> <artd> @>N")
-			);
+		cg.add(entry("devido=a", " [devido=a] PRP <sam-> @<ADVL"));
+		cg.add(entry("a", " [o] DET F S <-sam> <artd> @>N"));
 		
-		matchAndApply(cg, "devido à");
+		MatchResult result = match("devido à");
 		
-		InOrder order = inOrder(handler);
-		
-		order.verify(handler).startToken(cg.get(0).getValue());
-		order.verify(handler).characters("devido ".toCharArray());
-		order.verify(handler).startToken(cg.get(1).getValue());
-		order.verify(handler).characters("à".toCharArray());
-		order.verify(handler, times(2)).endToken();
+		verifyRightAlignedOverlappingTokens(result, "devido ", "à");
 	}
 	
 	@Test
 	public void testExpressionContraction_devido_a_os_quais() throws Exception {
-		@SuppressWarnings("unchecked")
-		List<Entry<String, String>> cg = Arrays.asList(
-				new Parser.Entry<String, String>("devido=a", " [devido=a] PRP <sam-> @<ADVL"),
-				new Parser.Entry<String, String>("os=quais", " [o=qual] SPEC M P @P< <rel> <-sam> @#FS-N<")
-			);
+		cg.add(entry("devido=a", " [devido=a] PRP <sam-> @<ADVL"));
+		cg.add(entry("os=quais", " [o=qual] SPEC M P @P< <rel> <-sam> @#FS-N<"));
 		
-		matchAndApply(cg, "devido aos quais");
+		MatchResult result = match("devido aos quais");
 		
-		InOrder order = inOrder(handler);
-		
-		order.verify(handler).startToken(cg.get(0).getValue());
-		order.verify(handler).characters("devido a".toCharArray());
-		order.verify(handler).endToken();
-		order.verify(handler).startToken(cg.get(1).getValue());
-		order.verify(handler).characters("os quais".toCharArray());
-		order.verify(handler).endToken();
+		verifyTokensInSequence(result, "devido a", "os quais");
 	}
 }

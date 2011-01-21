@@ -1,14 +1,9 @@
 package br.eti.rslemos.nlp.corpora.chave.parser;
 
-import static org.mockito.Mockito.verifyNoMoreInteractions;
-
-import java.util.Arrays;
-import java.util.List;
+import static br.eti.rslemos.nlp.corpora.chave.parser.Parser.Entry.entry;
 
 import org.junit.Before;
 import org.junit.Test;
-
-import br.eti.rslemos.nlp.corpora.chave.parser.Parser.Entry;
 
 public class SentenceMarkerMatchStrategyUnitTest extends AbstractMatchStrategyUnitTest {
 	@Before
@@ -18,19 +13,17 @@ public class SentenceMarkerMatchStrategyUnitTest extends AbstractMatchStrategyUn
 	
 	@Test
 	public void testStartSentenceMarker() throws Exception {
-		@SuppressWarnings("unchecked")
-		List<Entry<String, String>> cg = Arrays.asList(new Parser.Entry<String, String>("<s>", null));
-		matchAndApply(cg, "");
-
-		verifyNoMoreInteractions(handler);
+		cg.add(entry("<s>", (String)null));
+		MatchResult result = match("");
+		
+		verifyNoToken(result);
 	}
 	
 	@Test
 	public void testEndSentenceMarker() throws Exception {
-		@SuppressWarnings("unchecked")
-		List<Entry<String, String>> cg = Arrays.asList(new Parser.Entry<String, String>("</s>", null));
-		matchAndApply(cg, "");
-
-		verifyNoMoreInteractions(handler);
+		cg.add(entry("</s>", (String)null));
+		MatchResult result = match("");
+		
+		verifyNoToken(result);
 	}
 }

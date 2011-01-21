@@ -1,5 +1,6 @@
 package br.eti.rslemos.nlp.corpora.chave.parser;
 
+import static br.eti.rslemos.nlp.corpora.chave.parser.Parser.Entry.entry;
 import static org.junit.Assert.assertTrue;
 import static org.mockito.Mockito.inOrder;
 import static org.mockito.Mockito.mock;
@@ -65,13 +66,14 @@ public class ParserUnitTest {
 		
 		@SuppressWarnings("unchecked")
 		List<Entry<String, String>> cg = Arrays.asList(
-				new Parser.Entry<String, String>("de", " [de] PRP <sam-> @N<"),
-				new Parser.Entry<String, String>("eles", " [eles] PERS M 3P NOM/PIV <-sam> @P<")
+				entry("de", " [de] PRP <sam-> @N<"),
+				entry("eles", " [eles] PERS M 3P NOM/PIV <-sam> @P<")
 			);
 
 		parser.parse1(cg, reader("deles"));
 		
 		InOrder order = inOrder(handler);
+		
 		
 		order.verify(handler).startToken(cg.get(0).getValue());
 		order.verify(handler).characters("d".toCharArray());
@@ -90,12 +92,13 @@ public class ParserUnitTest {
 		
 		@SuppressWarnings("unchecked")
 		List<Entry<String, String>> cg = Arrays.asList(
-				new Parser.Entry<String, String>("Sendo", " [ser] V GER @IMV @#ICL-ADVL>")
+				entry("Sendo", " [ser] V GER @IMV @#ICL-ADVL>")
 			);
 
 		parser.parse1(cg, reader(". Sendo"));
 		
 		InOrder order = inOrder(handler);
+		
 		
 		order.verify(handler).characters(". ".toCharArray());
 
@@ -111,12 +114,13 @@ public class ParserUnitTest {
 		
 		@SuppressWarnings("unchecked")
 		List<Entry<String, String>> cg = Arrays.asList(
-				new Parser.Entry<String, String>("$\"", " [$\"] PU")
+				entry("$\"", " [$\"] PU")
 			);
 
 		parser.parse1(cg, reader("\"  "));
 		
 		InOrder order = inOrder(handler);
+		
 		
 		order.verify(handler).startToken(cg.get(0).getValue());
 		order.verify(handler).characters("\"".toCharArray());
@@ -131,12 +135,13 @@ public class ParserUnitTest {
 		
 		@SuppressWarnings("unchecked")
 		List<Entry<String, String>> cg = Arrays.asList(
-				new Parser.Entry<String, String>("$\"", " [$\"] PU")
+				entry("$\"", " [$\"] PU")
 			);
 
 		parser.parse1(cg, reader("  \""));
 		
 		InOrder order = inOrder(handler);
+		
 		
 		order.verify(handler).characters("  ".toCharArray());
 		order.verify(handler).startToken(cg.get(0).getValue());
@@ -151,13 +156,14 @@ public class ParserUnitTest {
 		
 		@SuppressWarnings("unchecked")
 		List<Entry<String, String>> cg = Arrays.asList(
-				new Parser.Entry<String, String>("sra.", " [sra.] N F S @P<"),
-				new Parser.Entry<String, String>("$.", " [$.] PU <<<")
+				entry("sra.", " [sra.] N F S @P<"),
+				entry("$.", " [$.] PU <<<")
 			);
 
 		parser.parse1(cg, reader("sra."));
 		
 		InOrder order = inOrder(handler);
+		
 		
 		order.verify(handler).startToken(cg.get(0).getValue());
 		order.verify(handler).characters("sra".toCharArray());
