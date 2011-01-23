@@ -28,7 +28,7 @@ public class ParserUnitTest {
 	private static final URL basedir = ParserUnitTest.class.getResource("/pt_BR/CHAVEFolha/1994/01/01/");
 
 	private Handler handler;
-	private Parser parser;
+	private Untokenizer parser;
 	
 	@Before
 	public void setUp() {
@@ -56,13 +56,13 @@ public class ParserUnitTest {
 			}
 			
 		};
-		parser = new Parser(handler);
+		parser = new Untokenizer(handler);
 	}
 
 	@Test
 	public void testGivesPriorityToLengthierMatch() throws Exception {
 		handler = mock(Handler.class);
-		parser = new Parser(handler);
+		parser = new Untokenizer(handler);
 		
 		List<CGEntry> cg = Arrays.asList(
 				entry("de", " [de] PRP <sam-> @N<"),
@@ -87,7 +87,7 @@ public class ParserUnitTest {
 	@Test
 	public void testSkipsUnmatchedCharacters() throws Exception {
 		handler = mock(Handler.class);
-		parser = new Parser(handler);
+		parser = new Untokenizer(handler);
 		
 		List<CGEntry> cg = Arrays.asList(
 				entry("Sendo", " [ser] V GER @IMV @#ICL-ADVL>")
@@ -108,7 +108,7 @@ public class ParserUnitTest {
 	@Test
 	public void testQuotesCanMatchKey() throws Exception {
 		handler = mock(Handler.class);
-		parser = new Parser(handler);
+		parser = new Untokenizer(handler);
 		
 		List<CGEntry> cg = Arrays.asList(
 				entry("$\"", " [$\"] PU")
@@ -128,7 +128,7 @@ public class ParserUnitTest {
 	@Test
 	public void testQuotesCanMatchKey2() throws Exception {
 		handler = mock(Handler.class);
-		parser = new Parser(handler);
+		parser = new Untokenizer(handler);
 		
 		List<CGEntry> cg = Arrays.asList(
 				entry("$\"", " [$\"] PU")
@@ -148,7 +148,7 @@ public class ParserUnitTest {
 	@Test
 	public void testUngreedyMatchPunctuation() throws Exception {
 		handler = mock(Handler.class);
-		parser = new Parser(handler);
+		parser = new Untokenizer(handler);
 		
 		List<CGEntry> cg = Arrays.asList(
 				entry("sra.", " [sra.] N F S @P<"),
@@ -202,7 +202,7 @@ public class ParserUnitTest {
 				System.out.print("</ptoken>");
 			}
 		};
-		parser = new Parser(handler);
+		parser = new Untokenizer(handler);
 		
 		verifyParse("131.cg", "131.sgml");
 	}

@@ -10,12 +10,12 @@ import java.util.LinkedList;
 import java.util.List;
 
 
-public class Parser {
+public class Untokenizer {
 	private static final Formatter FORMATTER = new Formatter();
 
 	private Handler out;
 	
-	public Parser(Handler out) {
+	public Untokenizer(Handler out) {
 		this.out = out;
 	}
 
