@@ -3,14 +3,12 @@ package br.eti.rslemos.nlp.corpora.chave.parser;
 import static br.eti.rslemos.nlp.corpora.chave.parser.Parser.Entry.entry;
 import static junit.framework.Assert.assertNull;
 
-import org.junit.Before;
 import org.junit.Test;
 
 public class DirectMatchStrategyUnitTest extends AbstractMatchStrategyUnitTest {
 
-	@Before
-	public void setUp() {
-		super.setUp(new DirectMatchStrategy());
+	public DirectMatchStrategyUnitTest () {
+		super(new DirectMatchStrategy());
 	}
 	
 	@Test

@@ -2,14 +2,12 @@ package br.eti.rslemos.nlp.corpora.chave.parser;
 
 import static br.eti.rslemos.nlp.corpora.chave.parser.Parser.Entry.entry;
 
-import org.junit.Before;
 import org.junit.Test;
 
 public class ContractionDeMatchStrategyUnitTest extends AbstractMatchStrategyUnitTest {
 	
-	@Before
-	public void setUp() {
-		super.setUp(new ContractionDeMatchStrategy());
+	public ContractionDeMatchStrategyUnitTest() {
+		super(new ContractionDeMatchStrategy());
 	}
 	
 	@Test

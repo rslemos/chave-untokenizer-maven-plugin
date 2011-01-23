@@ -3,13 +3,12 @@ package br.eti.rslemos.nlp.corpora.chave.parser;
 import static br.eti.rslemos.nlp.corpora.chave.parser.Parser.Entry.entry;
 import static junit.framework.Assert.assertNull;
 
-import org.junit.Before;
 import org.junit.Test;
 
 public class DamerauLevenshteinMatchStrategyUnitTest extends AbstractMatchStrategyUnitTest {
-	@Before
-	public void setUp() {
-		super.setUp(new DamerauLevenshteinMatchStrategy(2));
+
+	public DamerauLevenshteinMatchStrategyUnitTest() {
+		super(new DamerauLevenshteinMatchStrategy(2));
 	}
 	
 	@Test

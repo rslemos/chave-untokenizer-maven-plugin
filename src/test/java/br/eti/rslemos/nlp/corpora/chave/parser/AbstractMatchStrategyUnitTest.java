@@ -13,12 +13,11 @@ import br.eti.rslemos.nlp.corpora.chave.parser.Parser.Entry;
 
 public abstract class AbstractMatchStrategyUnitTest {
 
-	protected MatchStrategy strategy;
-	protected List<Entry<String, String>> cg;
+	private final MatchStrategy strategy;
+	protected final List<Entry<String, String>> cg = new LinkedList<Entry<String, String>>();
 
-	protected void setUp(final MatchStrategy strategy) {
+	protected AbstractMatchStrategyUnitTest(MatchStrategy strategy) {
 		this.strategy = strategy;
-		cg = new LinkedList<Entry<String, String>>();
 	}
 
 	protected MatchResult match(String sgml) {

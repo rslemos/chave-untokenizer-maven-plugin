@@ -1,12 +1,11 @@
 package br.eti.rslemos.nlp.corpora.chave.parser;
 
-import org.junit.Before;
 import org.junit.Test;
 
 public class WhitespaceMatchStrategyUnitTest extends AbstractMatchStrategyUnitTest {
-	@Before
-	public void setUp() {
-		super.setUp(new WhitespaceMatchStrategy());
+
+	public WhitespaceMatchStrategyUnitTest() {
+		super(new WhitespaceMatchStrategy());
 	}
 	
 	@Test
