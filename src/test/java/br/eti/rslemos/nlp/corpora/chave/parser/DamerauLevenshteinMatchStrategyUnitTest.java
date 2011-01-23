@@ -32,24 +32,18 @@ public class DamerauLevenshteinMatchStrategyUnitTest extends AbstractMatchStrate
 	public void testDontMatchEmpty() throws Exception {
 		cg.add(entry("o", " [o] DET M S <artd> @>N"));
 		assertNull(match(" o"));
-
-		verifyNoToken();
 	}
 
 	@Test
 	public void testDontMatchEmpty2() throws Exception {
 		cg.add(entry("em", " [em] PRP @N<"));
 		assertNull(match(" em"));
-
-		verifyNoToken();
 	}
 
 	@Test
 	public void testDontMatchSingleChar() throws Exception {
 		cg.add(entry("o", " [o] DET M S <artd> @>N"));
 		assertNull(match("\""));
-
-		verifyNoToken();
 	}
 
 

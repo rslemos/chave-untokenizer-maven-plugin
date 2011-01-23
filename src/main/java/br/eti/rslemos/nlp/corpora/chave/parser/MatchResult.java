@@ -121,4 +121,33 @@ public final class MatchResult {
 	public int getSkipLength() {
 		return from;
 	}
+
+	public int getFrom() {
+		return from;
+	}
+	
+	public int getTo() {
+		return to;
+	}
+	
+	public Match[] getMatches() {
+		Match[] result = new Match[positions.length / 2];
+		for (int i = 0; i < result.length; i++) {
+			result[i] = new Match(positions[i*2], positions[i*2+1], i);
+		}
+		
+		return result;
+	}
+	
+	public static class Match {
+		public final int from;
+		public final int to;
+		public final int entry;
+		
+		public Match(int from, int to, int entry) {
+			this.from = from;
+			this.to = to;
+			this.entry = entry;
+		}
+	}
 }

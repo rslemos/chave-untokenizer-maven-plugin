@@ -1,41 +1,24 @@
 package br.eti.rslemos.nlp.corpora.chave.parser;
 
-import static org.mockito.Mockito.inOrder;
-import static org.mockito.Mockito.times;
-import static org.mockito.Mockito.verifyNoMoreInteractions;
+import static org.hamcrest.CoreMatchers.equalTo;
+import static org.hamcrest.CoreMatchers.is;
+import static org.junit.Assert.assertThat;
 
 import java.nio.CharBuffer;
 import java.util.LinkedList;
 import java.util.List;
 
-import org.mockito.InOrder;
-import org.mockito.Mock;
-import org.mockito.MockitoAnnotations;
-
+import br.eti.rslemos.nlp.corpora.chave.parser.MatchResult.Match;
 import br.eti.rslemos.nlp.corpora.chave.parser.Parser.Entry;
 
 public abstract class AbstractMatchStrategyUnitTest {
 
-	@Mock
-	private Handler handler;
-	
 	protected MatchStrategy strategy;
 	protected List<Entry<String, String>> cg;
 
-	private InOrder order;
-
 	protected void setUp(final MatchStrategy strategy) {
-		this.strategy = new MatchStrategy() {
-
-			public MatchResult match(CharBuffer buffer, List<Entry<String, String>> cg, boolean noMoreData) {
-				return strategy.match(buffer, new LinkedList<Entry<String, String>>(cg), noMoreData);
-			}
-			
-		};
-		
+		this.strategy = strategy;
 		cg = new LinkedList<Entry<String, String>>();
-		MockitoAnnotations.initMocks(this);
-		order = inOrder(handler);
 	}
 
 	protected MatchResult match(String sgml) {
@@ -43,71 +26,82 @@ public abstract class AbstractMatchStrategyUnitTest {
 	}
 
 	protected void verifyTextButNoToken(MatchResult result, String text) {
-		result.apply(handler);
-		
-		order.verify(handler).characters(text.toCharArray());
-		
-		verifyNoMoreInteractions(handler);
+		assertThat(result.getFrom(), is(equalTo(0)));
+		assertThat(result.getTo(), is(equalTo(text.length())));
+		assertThat(result.getMatches().length, is(equalTo(0)));
 	}
 
-	protected void verifyNoToken() {
-		verifyNoMoreInteractions(handler);
-	}
-	
 	protected void verifyNoToken(MatchResult result) {
-		result.apply(handler);
-		verifyNoMoreInteractions(handler);
+		assertThat(result.getFrom(), is(equalTo(0)));
+		assertThat(result.getTo(), is(equalTo(0)));
+		assertThat(result.getMatches().length, is(equalTo(0)));
 	}
 	
 	protected void verifyTokensInSequence(MatchResult result, String... text) {
-		result.apply(handler);
+		Match[] matches = result.getMatches();
 		
+		assertThat(matches.length, is(equalTo(text.length)));
+		int t = 0;
 		for (int i = 0; i < text.length; i++) {
-			order.verify(handler).startToken(cg.get(i).getValue());
-			order.verify(handler).characters(text[i].toCharArray());
-			order.verify(handler).endToken();
+			assertThat(matches[i].entry, is(equalTo(i)));
+			assertThat(matches[i].from, is(equalTo(t)));
+			assertThat(matches[i].to, is(equalTo(t+text[i].length())));
+			t += text[i].length();
 		}
+		
+		assertThat(result.getFrom(), is(equalTo(0)));
+		assertThat(result.getTo(), is(equalTo(t)));
 	}
 
 	protected void verifyLeftAlignedOverlappingTokens(MatchResult result, String left, String right) {
-		result.apply(handler);
+		assertThat(result.getFrom(), is(equalTo(0)));
+		assertThat(result.getTo(), is(equalTo(left.length() + right.length())));
 		
-		order.verify(handler).startToken(cg.get(1).getValue());
-		order.verify(handler).startToken(cg.get(0).getValue());
-		order.verify(handler).characters(left.toCharArray());
-		order.verify(handler).endToken();
-		order.verify(handler).characters(right.toCharArray());
-		order.verify(handler).endToken();
+		assertThat(result.getMatches()[0].entry, is(equalTo(0)));
+		assertThat(result.getMatches()[0].from, is(equalTo(0)));
+		assertThat(result.getMatches()[0].to, is(equalTo(left.length())));
+		
+		assertThat(result.getMatches()[1].entry, is(equalTo(1)));
+		assertThat(result.getMatches()[1].from, is(equalTo(0)));
+		assertThat(result.getMatches()[1].to, is(equalTo(left.length() + right.length())));
 	}
 
 	protected void verifyRightAlignedOverlappingTokens(MatchResult result, String left, String right) {
-		result.apply(handler);
+		assertThat(result.getFrom(), is(equalTo(0)));
+		assertThat(result.getTo(), is(equalTo(left.length() + right.length())));
 		
-		order.verify(handler).startToken(cg.get(0).getValue());
-		order.verify(handler).characters(left.toCharArray());
-		order.verify(handler).startToken(cg.get(1).getValue());
-		order.verify(handler).characters(right.toCharArray());
-		order.verify(handler, times(2)).endToken();
+		assertThat(result.getMatches()[0].entry, is(equalTo(0)));
+		assertThat(result.getMatches()[0].from, is(equalTo(0)));
+		assertThat(result.getMatches()[0].to, is(equalTo(left.length() + right.length())));
+		
+		assertThat(result.getMatches()[1].entry, is(equalTo(1)));
+		assertThat(result.getMatches()[1].from, is(equalTo(left.length())));
+		assertThat(result.getMatches()[1].to, is(equalTo(left.length() + right.length())));
 	}
 
 	protected void verifyFullOverlappingTokens(MatchResult result, String full) {
-		result.apply(handler);
+		assertThat(result.getFrom(), is(equalTo(0)));
+		assertThat(result.getTo(), is(equalTo(full.length())));
 		
-		order.verify(handler).startToken(cg.get(1).getValue());
-		order.verify(handler).startToken(cg.get(0).getValue());
-		order.verify(handler).characters(full.toCharArray());
-		order.verify(handler, times(2)).endToken();
+		assertThat(result.getMatches()[0].entry, is(equalTo(0)));
+		assertThat(result.getMatches()[0].from, is(equalTo(0)));
+		assertThat(result.getMatches()[0].to, is(equalTo(full.length())));
+		
+		assertThat(result.getMatches()[1].entry, is(equalTo(1)));
+		assertThat(result.getMatches()[1].from, is(equalTo(0)));
+		assertThat(result.getMatches()[1].to, is(equalTo(full.length())));
 	}
 	
 	protected void verifyIntersectingPseudoToken(MatchResult result, String left, String middle, String right) {
-		result.apply(handler);
+		assertThat(result.getFrom(), is(equalTo(0)));
+		assertThat(result.getTo(), is(equalTo(left.length() + middle.length() + right.length())));
 		
-		order.verify(handler).startPseudoToken(cg.get(0).getValue());
-		order.verify(handler).characters(left.toCharArray());
-		order.verify(handler).startPseudoToken(cg.get(1).getValue());
-		order.verify(handler).characters(middle.toCharArray());
-		order.verify(handler).endPseudoToken();
-		order.verify(handler).characters(right.toCharArray());
-		order.verify(handler).endPseudoToken();
+		assertThat(result.getMatches()[0].entry, is(equalTo(0)));
+		assertThat(result.getMatches()[0].from, is(equalTo(0)));
+		assertThat(result.getMatches()[0].to, is(equalTo(left.length() + middle.length())));
+		
+		assertThat(result.getMatches()[1].entry, is(equalTo(1)));
+		assertThat(result.getMatches()[1].from, is(equalTo(left.length())));
+		assertThat(result.getMatches()[1].to, is(equalTo(left.length() + middle.length() + right.length())));
 	}
 }

@@ -49,8 +49,6 @@ public class DirectMatchStrategyUnitTest extends AbstractMatchStrategyUnitTest {
 	public void testEmptyInput() throws Exception {
 		cg.add(entry("Pesquisa=Datafolha", " [Pesquisa=Datafolha] PROP F S @SUBJ>"));
 		assertNull(match(""));
-
-		verifyNoToken();
 	}
 
 	@Test
