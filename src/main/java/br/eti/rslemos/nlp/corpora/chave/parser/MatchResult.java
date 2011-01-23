@@ -34,61 +34,53 @@ public final class MatchResult {
 			throw new IllegalArgumentException("Must consume at least the same number of emited tokens");
 	}
 
-	public int apply(String buffer, List<CGEntry> cg, Handler handler) {
+	public void apply(String buffer, List<CGEntry> cg, Handler handler) {
 		if (from > 0)
 			throw new IllegalStateException("Cannoy apply if data must be skipped");
 		
 		char[] data = new char[getMatchLength()];
 		buffer.getChars(0, data.length, data, 0);
 		
-		CGEntry entries[] = new CGEntry[consume];
-
-		if (cg != null) {
-			for (int i = 0; i < consume; i++) {
-				entries[i] = cg.remove(0);
-			}
-		}
-		
 		if (handler != null) {
 			if (positions.length == 0) {
 				if (data.length > 0)
 					handler.characters(data);
 			} else if (positions.length == 2) {
-				handler.startToken(entries[0].getValue());
+				handler.startToken(cg.get(0).getValue());
 				handler.characters(data);
 				handler.endToken();
 			} else if (positions.length == 4) {
 				if (positions[2] >= positions[1]) {
 					// non-intersecting
-					handler.startToken(entries[0].getValue());
+					handler.startToken(cg.get(0).getValue());
 					handler.characters(subchar(data, positions[0], positions[1]));
 					handler.endToken();
-					handler.startToken(entries[1].getValue());
+					handler.startToken(cg.get(1).getValue());
 					handler.characters(subchar(data, positions[2], positions[3]));
 					handler.endToken();
 				} else {
 					// intersecting
 					if (positions[0] == positions[2]) {
 						// 0th inside 1st
-						handler.startToken(entries[1].getValue());
-						handler.startToken(entries[0].getValue());
+						handler.startToken(cg.get(1).getValue());
+						handler.startToken(cg.get(0).getValue());
 						handler.characters(subchar(data, positions[0], positions[1]));
 						handler.endToken();
 						handler.characters(subchar(data, positions[1], positions[3]));
 						handler.endToken();
 					} else if (positions[3] == positions[1]) {
 						// 1st inside 0th
-						handler.startToken(entries[0].getValue());
+						handler.startToken(cg.get(0).getValue());
 						handler.characters(subchar(data, positions[0], positions[2]));
-						handler.startToken(entries[1].getValue());
+						handler.startToken(cg.get(1).getValue());
 						handler.characters(subchar(data, positions[2], positions[3]));
 						handler.endToken();
 						handler.endToken();
 					} else {
 						// overlapping
-						handler.startPseudoToken(entries[0].getValue());
+						handler.startPseudoToken(cg.get(0).getValue());
 						handler.characters(subchar(data, positions[0], positions[2]));
-						handler.startPseudoToken(entries[1].getValue());
+						handler.startPseudoToken(cg.get(1).getValue());
 						handler.characters(subchar(data, positions[2], positions[1]));
 						handler.endPseudoToken();
 						handler.characters(subchar(data, positions[1], positions[3]));
@@ -98,8 +90,6 @@ public final class MatchResult {
 			} else
 				throw new UnsupportedOperationException();
 		}
-		
-		return data.length;
 	}
 	
 	private char[] subchar(char[] data, int from, int to) {
@@ -147,5 +137,9 @@ public final class MatchResult {
 			this.to = to;
 			this.entry = entry;
 		}
+	}
+
+	public int getConsume() {
+		return consume;
 	}
 }
