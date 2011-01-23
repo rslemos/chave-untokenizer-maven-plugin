@@ -46,6 +46,10 @@ public final class GateLoader {
 	}
 
 	private static void parseSGML(Document doc) throws GateException {
+		String contents = doc.getContent().toString();
+		contents = contents.replaceAll("\\&", "\\&amp;");
+		doc.setContent(new DocumentContentImpl(contents));
+		
 		format.unpackMarkup(doc);
 		
 		stripAnnotations(doc);
