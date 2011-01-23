@@ -1,7 +1,7 @@
 package br.eti.rslemos.nlp.corpora.chave.parser;
 
 import static br.eti.rslemos.nlp.corpora.chave.parser.CGEntry.entry;
-import static org.junit.Assert.assertTrue;
+import static org.junit.Assert.fail;
 import static org.mockito.Mockito.inOrder;
 import static org.mockito.Mockito.mock;
 import gate.Document;
@@ -69,7 +69,7 @@ public class ParserUnitTest {
 				entry("eles", " [eles] PERS M 3P NOM/PIV <-sam> @P<")
 			);
 
-		parser.parse1(cg, reader("deles"));
+		parser.parse(cg, document("deles"));
 		
 		InOrder order = inOrder(handler);
 		
@@ -93,7 +93,7 @@ public class ParserUnitTest {
 				entry("Sendo", " [ser] V GER @IMV @#ICL-ADVL>")
 			);
 
-		parser.parse1(cg, reader(". Sendo"));
+		parser.parse(cg, document(". Sendo"));
 		
 		InOrder order = inOrder(handler);
 		
@@ -114,7 +114,7 @@ public class ParserUnitTest {
 				entry("$\"", " [$\"] PU")
 			);
 
-		parser.parse1(cg, reader("\"  "));
+		parser.parse(cg, document("\"  "));
 		
 		InOrder order = inOrder(handler);
 		
@@ -134,7 +134,7 @@ public class ParserUnitTest {
 				entry("$\"", " [$\"] PU")
 			);
 
-		parser.parse1(cg, reader("  \""));
+		parser.parse(cg, document("  \""));
 		
 		InOrder order = inOrder(handler);
 		
@@ -155,7 +155,7 @@ public class ParserUnitTest {
 				entry("$.", " [$.] PU <<<")
 			);
 
-		parser.parse1(cg, reader("sra."));
+		parser.parse(cg, document("sra."));
 		
 		InOrder order = inOrder(handler);
 		
@@ -350,7 +350,16 @@ public class ParserUnitTest {
 	}
 
 	private void verifyParse(Reader cg, URL sgml) throws IOException, GateException {
-		assertTrue(parser.parse(cg, sgml));
+		try {
+			List<CGEntry> cgLines = CGEntry.loadFromReader(cg);
+			
+			Document document = GateLoader.load(sgml, "UTF-8");
+			
+			parser.parse(cgLines, document);
+		} catch (ParserException e) {
+			e.printStackTrace();
+			fail(e.toString());
+		}
 	}
 	
 	private static Reader open(String res) throws MalformedURLException, IOException {
@@ -361,7 +370,7 @@ public class ParserUnitTest {
 		return new InputStreamReader(url.openStream(), UTF8);
 	}
 
-	private static Document reader(String text) {
+	private static Document document(String text) {
 		Document result = new DocumentImpl();
 		result.setContent(new DocumentContentImpl(text));
 		return result;

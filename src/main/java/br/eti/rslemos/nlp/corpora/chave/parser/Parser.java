@@ -1,11 +1,8 @@
 package br.eti.rslemos.nlp.corpora.chave.parser;
 
 import gate.Document;
-import gate.util.GateException;
 
 import java.io.IOException;
-import java.io.Reader;
-import java.net.URL;
 import java.util.ArrayList;
 import java.util.Formatter;
 import java.util.Iterator;
@@ -22,26 +19,7 @@ public class Parser {
 		this.out = out;
 	}
 
-	public boolean parse(Reader cgText, URL sgmlText) throws IOException, GateException {
-		try {
-			parse0(cgText, sgmlText);
-			return true;
-		} catch (ParserException e) {
-			e.printStackTrace();
-			
-			return false;
-		}
-	}
-
-	private void parse0(Reader cgText, URL sgmlText0) throws IOException, ParserException, GateException {
-		List<CGEntry> cgLines = CGEntry.loadFromReader(cgText);
-		
-		Document document = GateLoader.load(sgmlText0, "UTF-8");
-
-		parse1(cgLines, document);
-	}
-
-	void parse1(List<CGEntry> cg, Document document) throws IOException, ParserException {
+	public void parse(List<CGEntry> cg, Document document) throws IOException, ParserException {
 		MatchStrategy[] strategies = {
 				new DirectMatchStrategy(),
 				new EncliticMatchStrategy(),
@@ -57,10 +35,10 @@ public class Parser {
 				new DamerauLevenshteinMatchStrategy(1),
 			};
 
-		parser1(strategies, cg, document);
+		parser(strategies, cg, document);
 	}
 
-	private void parser1(MatchStrategy[] strategies, List<CGEntry> cg, Document document) throws IOException, ParserException {
+	private void parser(MatchStrategy[] strategies, List<CGEntry> cg, Document document) throws IOException, ParserException {
 		LinkedList<CGEntry> cg1 = new LinkedList<CGEntry>(cg);
 		
 		String buffer = document.getContent().toString();
