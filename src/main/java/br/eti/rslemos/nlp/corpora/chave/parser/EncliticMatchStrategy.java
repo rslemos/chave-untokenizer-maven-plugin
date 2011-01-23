@@ -3,14 +3,12 @@ package br.eti.rslemos.nlp.corpora.chave.parser;
 import static java.lang.Character.isWhitespace;
 import static java.lang.Character.toLowerCase;
 
-import java.nio.BufferUnderflowException;
-import java.nio.CharBuffer;
 import java.util.Arrays;
 import java.util.List;
 
 public class EncliticMatchStrategy implements MatchStrategy {
 
-	public MatchResult match(CharBuffer buffer, List<String> cg, boolean noMoreData) throws BufferUnderflowException {
+	public MatchResult match(String text, List<String> cg) {
 		if (cg.size() < 2)
 			return null;
 		
@@ -43,14 +41,14 @@ public class EncliticMatchStrategy implements MatchStrategy {
 			try {
 				while (true) {
 					if (currentKey.charAt(j) == '=') {
-						while (isWhitespace(buffer.charAt(k)))
+						while (isWhitespace(text.charAt(k)))
 							k++;
 						j++;
 						
 						continue;
 					}
 					
-					if (toLowerCase(currentKey.charAt(j)) != toLowerCase(buffer.charAt(k))) {
+					if (toLowerCase(currentKey.charAt(j)) != toLowerCase(text.charAt(k))) {
 						break;
 					}
 					
@@ -59,12 +57,10 @@ public class EncliticMatchStrategy implements MatchStrategy {
 				}
 			} catch (StringIndexOutOfBoundsException e) {
 			} catch (IndexOutOfBoundsException e) {
-				if (!noMoreData)
-					throw new BufferUnderflowException();
 			}
 			
 			if (j == currentKey.length()) {
-				return new MatchResult(buffer, 0, k, 2, 0, k - key1.length(), k - key1.length(), k);
+				return new MatchResult(0, k, 2, 0, k - key1.length(), k - key1.length(), k);
 			} else {
 				return null;
 			}

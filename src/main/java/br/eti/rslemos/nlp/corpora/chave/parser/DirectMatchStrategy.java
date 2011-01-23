@@ -3,13 +3,12 @@ package br.eti.rslemos.nlp.corpora.chave.parser;
 import static java.lang.Character.isWhitespace;
 import static java.lang.Character.toLowerCase;
 
-import java.nio.BufferUnderflowException;
-import java.nio.CharBuffer;
 import java.util.Arrays;
 import java.util.List;
 
 public class DirectMatchStrategy implements MatchStrategy {
-	public MatchResult match(CharBuffer buffer, List<String> cg, boolean noMoreData) {
+	
+	public MatchResult match(String text, List<String> cg) {
 		String currentEntry = cg.get(0);
 		String currentKey = getKey(currentEntry);
 		
@@ -29,32 +28,30 @@ public class DirectMatchStrategy implements MatchStrategy {
 
 		try {
 			if (currentKey.charAt(j) != '=')
-				while (toLowerCase(currentKey.charAt(j)) != toLowerCase(buffer.charAt(k))) {
+				while (toLowerCase(currentKey.charAt(j)) != toLowerCase(text.charAt(k))) {
 					k++;
 					skip++;
 				}
 			else
-				while (!isWhitespace(buffer.charAt(k))) {
+				while (!isWhitespace(text.charAt(k))) {
 					k++;
 					skip++;
 				}
 				
 		} catch (IndexOutOfBoundsException e) {
-			if (!noMoreData)
-				throw new BufferUnderflowException();
 		}
 		
 		try {
 			while (true) {
 				if (currentKey.charAt(j) == '=') {
-					while (isWhitespace(buffer.charAt(k)))
+					while (isWhitespace(text.charAt(k)))
 						k++;
 					j++;
 					
 					continue;
 				}
 				
-				if (toLowerCase(currentKey.charAt(j)) != toLowerCase(buffer.charAt(k))) {
+				if (toLowerCase(currentKey.charAt(j)) != toLowerCase(text.charAt(k))) {
 					break;
 				}
 				
@@ -63,12 +60,10 @@ public class DirectMatchStrategy implements MatchStrategy {
 			}
 		} catch (StringIndexOutOfBoundsException e) {
 		} catch (IndexOutOfBoundsException e) {
-			if (!noMoreData)
-				throw new BufferUnderflowException();
 		}
 		
 		if (j == currentKey.length()) {
-			return new MatchResult(buffer, skip, skip + k, 1, skip, skip + k);
+			return new MatchResult(skip, skip + k, 1, skip, skip + k);
 		} else {
 			return null;
 		}

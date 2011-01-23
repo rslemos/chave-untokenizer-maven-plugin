@@ -83,7 +83,7 @@ outer:
 				ArrayList<MatchResult> mementos = new ArrayList<MatchResult>(strategies.length);
 				
 				for (MatchStrategy strategy : strategies) {
-					mementos.add(strategy.match(buffer, onlyKeys(cg1), true));
+					mementos.add(strategy.match(buffer.toString(), onlyKeys(cg1)));
 				}
 				
 				do {} while (mementos.remove(null));
@@ -107,7 +107,7 @@ outer:
 							}
 						}
 						if (best != null) {
-							best.apply(cg1, out);
+							best.apply(buffer, cg1, out);
 							continue outer;
 						}
 					} else {

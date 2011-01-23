@@ -1,22 +1,15 @@
 package br.eti.rslemos.nlp.corpora.chave.parser;
 
-import java.nio.BufferUnderflowException;
-import java.nio.CharBuffer;
 import java.util.List;
 
 public interface MatchStrategy {
 	/**
-	 * Try to match the (few) next item(s) on <code>cg</code>.
+	 * Try to match the (few) next item(s) on <code>cg</code>. An
+	 * implementation is expected neither to skip over entries in
+	 * <code>cg</code> nor characters over <code>text</code>.
 	 * 
-	 * On 
-	 * @param buffer
+	 * @param text
 	 * @param cg
-	 * @param noMoreData TODO
-	 * @return <code>MatchingResult</code> that captures the actions that
-	 * should be carried later to consume the matching; or null if impossible
-	 * to match after all.
-	 * 
-	 * @throws BufferUnderflowException if more data is needed.
 	 */
-	MatchResult match(CharBuffer buffer, List<String> cg, boolean noMoreData) throws BufferUnderflowException;
+	MatchResult match(String text, List<String> cg);
 }

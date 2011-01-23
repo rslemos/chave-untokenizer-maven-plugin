@@ -1,7 +1,5 @@
 package br.eti.rslemos.nlp.corpora.chave.parser;
 
-import java.nio.BufferUnderflowException;
-import java.nio.CharBuffer;
 import java.util.Arrays;
 import java.util.List;
 
@@ -13,7 +11,7 @@ public class DamerauLevenshteinMatchStrategy implements MatchStrategy {
 		this.maxDistance = maxDistance;
 	}
 
-	public MatchResult match(CharBuffer buffer, List<String> cg, boolean noMoreData) throws BufferUnderflowException {
+	public MatchResult match(String text, List<String> cg) {
 		String key0 = cg.get(0);
 
 		if (cg.size() > 1) {
@@ -28,12 +26,10 @@ public class DamerauLevenshteinMatchStrategy implements MatchStrategy {
 			}
 		}
 
-		CharBuffer tempBuffer = buffer.slice();
-
 		char[] cs = new char[key0.length()];
 		try {
-			tempBuffer.get(cs);
-		} catch (BufferUnderflowException e) {
+			text.getChars(0, cs.length, cs, 0);
+		} catch (StringIndexOutOfBoundsException e) {
 			return null;
 		}
 		
@@ -46,7 +42,7 @@ public class DamerauLevenshteinMatchStrategy implements MatchStrategy {
 			return null;
 		
 		if (levenshteinDistance(key0.toCharArray(), cs1) <= maxDistance) {
-			return new MatchResult(buffer, 0, cs1.length, 1, 0, cs1.length);
+			return new MatchResult(0, cs1.length, 1, 0, cs1.length);
 		} else
 			return null;
 	}

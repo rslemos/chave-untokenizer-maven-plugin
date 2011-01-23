@@ -6,20 +6,18 @@ import java.util.List;
 import br.eti.rslemos.nlp.corpora.chave.parser.Parser.Entry;
 
 public final class MatchResult {
-	private final CharBuffer buffer;
 	private final int from;
 	private final int to;
 	private final int consume;
 	
 	private final int[] positions;
 	
-	public MatchResult(CharBuffer buffer, int from, int to, int consume, int... positions) {
+	public MatchResult(int from, int to, int consume, int... positions) {
 		this.from = from;
 		this.to = to;
 		if (positions.length % 2 == 1)
 			throw new IllegalArgumentException("unpaired position");
 			
-		this.buffer = buffer;
 		this.consume = consume;
 		this.positions = positions;
 	
@@ -38,7 +36,7 @@ public final class MatchResult {
 			throw new IllegalArgumentException("Must consume at least the same number of emited tokens");
 	}
 
-	public void apply(List<Entry<String, String>> cg, Handler handler) {
+	public void apply(CharBuffer buffer, List<Entry<String, String>> cg, Handler handler) {
 		if (from > 0)
 			throw new IllegalStateException("Cannoy apply if data must be skipped");
 		

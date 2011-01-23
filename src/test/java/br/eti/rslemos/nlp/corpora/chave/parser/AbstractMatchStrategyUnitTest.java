@@ -4,7 +4,6 @@ import static org.hamcrest.CoreMatchers.equalTo;
 import static org.hamcrest.CoreMatchers.is;
 import static org.junit.Assert.assertThat;
 
-import java.nio.CharBuffer;
 import java.util.LinkedList;
 import java.util.List;
 
@@ -20,7 +19,7 @@ public abstract class AbstractMatchStrategyUnitTest {
 	}
 
 	protected MatchResult match(String sgml) {
-		return strategy.match(CharBuffer.wrap(sgml), cg, true);
+		return strategy.match(sgml, cg);
 	}
 
 	protected void verifyTextButNoToken(MatchResult result, String text) {
