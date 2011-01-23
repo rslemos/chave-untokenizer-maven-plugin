@@ -1,9 +1,11 @@
 package br.eti.rslemos.nlp.corpora.chave.parser;
 
-import java.io.BufferedReader;
+import gate.Document;
+import gate.util.GateException;
+
 import java.io.IOException;
 import java.io.Reader;
-import java.nio.CharBuffer;
+import java.net.URL;
 import java.util.ArrayList;
 import java.util.Formatter;
 import java.util.Iterator;
@@ -11,6 +13,8 @@ import java.util.LinkedList;
 import java.util.List;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
+
+import org.apache.commons.io.IOUtils;
 
 public class Parser {
 	private static final Formatter FORMATTER = new Formatter();
@@ -23,7 +27,7 @@ public class Parser {
 		this.out = out;
 	}
 
-	public boolean parse(Reader cgText, Reader sgmlText) throws IOException {
+	public boolean parse(Reader cgText, URL sgmlText) throws IOException, GateException {
 		try {
 			parse0(cgText, sgmlText);
 			return true;
@@ -34,24 +38,15 @@ public class Parser {
 		}
 	}
 
-	private void parse0(Reader cgText, Reader sgmlText0) throws IOException, ParserException {
+	private void parse0(Reader cgText, URL sgmlText0) throws IOException, ParserException, GateException {
 		List<Entry<String, String>> cgLines = preParseCG(cgText);
-
-		ClumsySGMLLexer sgmlLexer = new ClumsySGMLLexer(sgmlText0);
-		sgmlLexer.next();
 		
-		ClumsySGMLFilter.skipToTag(sgmlLexer, "TEXT");
-		sgmlLexer.next();
-		sgmlLexer.next();
+		Document document = GateLoader.load(sgmlText0, "UTF-8");
 
-		Reader sgmlText = ClumsySGMLFilter.readToTag(sgmlLexer, "/TEXT");
-		
-		parse1(cgLines, sgmlText);
-
-		ClumsySGMLFilter.skipToTag(sgmlLexer, "");
+		parse1(cgLines, document);
 	}
 
-	void parse1(List<Entry<String, String>> cg, Reader sgml) throws IOException, ParserException {
+	void parse1(List<Entry<String, String>> cg, Document document) throws IOException, ParserException {
 		MatchStrategy[] strategies = {
 				new DirectMatchStrategy(),
 				new EncliticMatchStrategy(),
@@ -67,15 +62,13 @@ public class Parser {
 				new DamerauLevenshteinMatchStrategy(1),
 			};
 
-		parser1(strategies, cg, sgml);
+		parser1(strategies, cg, document);
 	}
 
-	private void parser1(MatchStrategy[] strategies, List<Entry<String, String>> cg, Reader sgml) throws IOException, ParserException {
+	private void parser1(MatchStrategy[] strategies, List<Entry<String, String>> cg, Document document) throws IOException, ParserException {
 		LinkedList<Entry<String, String>> cg1 = new LinkedList<Entry<String, String>>(cg);
 		
-		CharBuffer buffer = CharBuffer.allocate(65536);
-		sgml.read(buffer);
-		buffer.flip();
+		String buffer = document.getContent().toString();
 
 outer:
 		while (!cg1.isEmpty()) {
@@ -107,13 +100,15 @@ outer:
 							}
 						}
 						if (best != null) {
-							best.apply(buffer, cg1, out);
+							int k = best.apply(buffer, cg1, out);
+							buffer = buffer.substring(k);
 							continue outer;
 						}
 					} else {
 						char[] toSkip = new char[minSkip];
-						buffer.get(toSkip);
+						buffer.getChars(0, toSkip.length, toSkip, 0);
 						out.characters(toSkip);
+						buffer = buffer.substring(toSkip.length);
 						continue;
 					}
 				}
@@ -122,11 +117,7 @@ outer:
 				e.printStackTrace();
 			}
 			
-			int remaining = buffer.remaining();
-			char[] dump = new char[remaining];
-			buffer.get(dump);
-			
-			FORMATTER.format("%d-th entry: %s; buffer at %d\nDump remaining buffer (%d): %s\n", cg.size() - cg1.size(), cg1.get(0).getKey(), buffer.position(), remaining, new String(dump));
+			FORMATTER.format("%d-th entry: %s; Dump remaining buffer: %s\n", cg.size() - cg1.size(), cg1.get(0).getKey(), buffer);
 			throw new ParserException(FORMATTER.out().toString());
 		}
 	}
@@ -141,28 +132,22 @@ outer:
 	}
 
 	private List<Entry<String, String>> preParseCG(Reader cgText) throws IOException {
-		ClumsySGMLLexer lexer = new ClumsySGMLLexer(cgText);
-		
-		lexer.next();
-		ClumsySGMLFilter.skipToTag(lexer, "TEXT");
-		lexer.next();
-		lexer.next();
-		BufferedReader reader = new BufferedReader(ClumsySGMLFilter.readToTag(lexer, "/TEXT"));
+		@SuppressWarnings("unchecked")
+		List<String> lines = IOUtils.readLines(cgText);
 		
 		ArrayList<Entry<String, String>> result = new ArrayList<Entry<String, String>>();
-		
-		String line;
-		while ((line = reader.readLine()) != null) {
+
+		for (String line : lines) {
+			if (line.startsWith("<"))
+				continue;
+			
 			Matcher matcher = PATTERN_CG_ENTRY.matcher(line);
 			if (!matcher.matches()) 
-				throw new Error();
+				continue;
 			
 			result.add(new Entry<String, String>(matcher.group(1), matcher.group(2)));
 		}
-		reader.close();
-		
-		ClumsySGMLFilter.skipToTag(lexer, "");
-		
+
 		result.trimToSize();
 		
 		return result;
