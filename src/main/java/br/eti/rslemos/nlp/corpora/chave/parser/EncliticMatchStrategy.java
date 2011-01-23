@@ -8,19 +8,14 @@ import java.nio.CharBuffer;
 import java.util.Arrays;
 import java.util.List;
 
-import br.eti.rslemos.nlp.corpora.chave.parser.Parser.Entry;
-
 public class EncliticMatchStrategy implements MatchStrategy {
 
-	public MatchResult match(final CharBuffer buffer, final List<Entry<String, String>> cg, boolean noMoreData) throws BufferUnderflowException {
+	public MatchResult match(CharBuffer buffer, List<String> cg, boolean noMoreData) throws BufferUnderflowException {
 		if (cg.size() < 2)
 			return null;
 		
-		final Entry<String, String> entry0 = cg.get(0);
-		final Entry<String, String> entry1 = cg.get(1);
-		
-		String key0 = entry0.getKey().toLowerCase();
-		final String key1 = entry1.getKey().toLowerCase();
+		String key0 = cg.get(0).toLowerCase();
+		String key1 = cg.get(1).toLowerCase();
 		
 		if (Arrays.asList("la", "las", "lo", "los").contains(key1)) {
 			String currentKey = null;
@@ -69,9 +64,7 @@ public class EncliticMatchStrategy implements MatchStrategy {
 			}
 			
 			if (j == currentKey.length()) {
-				// full match
-				final int k1 = k;
-				return new MatchResult(buffer, cg, 0, k1, 2, 0, k1 - key1.length(), k1 - key1.length(), k1);
+				return new MatchResult(buffer, 0, k, 2, 0, k - key1.length(), k - key1.length(), k);
 			} else {
 				return null;
 			}

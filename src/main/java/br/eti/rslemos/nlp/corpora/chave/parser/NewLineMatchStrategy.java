@@ -4,12 +4,10 @@ import java.nio.BufferUnderflowException;
 import java.nio.CharBuffer;
 import java.util.List;
 
-import br.eti.rslemos.nlp.corpora.chave.parser.Parser.Entry;
-
 public class NewLineMatchStrategy implements MatchStrategy {
 
-	public MatchResult match(final CharBuffer buffer, final List<Entry<String, String>> cg, boolean noMoreData) throws BufferUnderflowException {
-		if ("$¶".equals(cg.get(0).getKey())) {
+	public MatchResult match(CharBuffer buffer, List<String> cg, boolean noMoreData) throws BufferUnderflowException {
+		if ("$¶".equals(cg.get(0))) {
 			int l;
 			try {
 				if ('\n' == buffer.charAt(0)) {
@@ -21,9 +19,7 @@ public class NewLineMatchStrategy implements MatchStrategy {
 				l = 0;
 			}
 			
-			final int l1 = l;
-			
-			return new MatchResult(buffer, cg, 0, l1, 1, 0, l1);
+			return new MatchResult(buffer, 0, l, 1, 0, l);
 		} else
 			return null;
 	}

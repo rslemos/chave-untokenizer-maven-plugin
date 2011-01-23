@@ -83,7 +83,7 @@ outer:
 				ArrayList<MatchResult> mementos = new ArrayList<MatchResult>(strategies.length);
 				
 				for (MatchStrategy strategy : strategies) {
-					mementos.add(strategy.match(buffer, cg1, true));
+					mementos.add(strategy.match(buffer, onlyKeys(cg1), true));
 				}
 				
 				do {} while (mementos.remove(null));
@@ -107,7 +107,7 @@ outer:
 							}
 						}
 						if (best != null) {
-							best.apply(out);
+							best.apply(cg1, out);
 							continue outer;
 						}
 					} else {
@@ -129,6 +129,15 @@ outer:
 			FORMATTER.format("%d-th entry: %s; buffer at %d\nDump remaining buffer (%d): %s\n", cg.size() - cg1.size(), cg1.get(0).getKey(), buffer.position(), remaining, new String(dump));
 			throw new ParserException(FORMATTER.out().toString());
 		}
+	}
+
+	private static List<String> onlyKeys(LinkedList<Entry<String, String>> cg1) {
+		ArrayList<String> result = new ArrayList<String>(cg1.size());
+		for (Entry<String, String> entry : cg1) {
+			result.add(entry.getKey());
+		}
+		
+		return result;
 	}
 
 	private List<Entry<String, String>> preParseCG(Reader cgText) throws IOException {

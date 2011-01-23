@@ -4,15 +4,13 @@ import java.nio.BufferUnderflowException;
 import java.nio.CharBuffer;
 import java.util.List;
 
-import br.eti.rslemos.nlp.corpora.chave.parser.Parser.Entry;
-
 public class SentenceMarkerMatchStrategy implements MatchStrategy {
 
-	public MatchResult match(CharBuffer buffer, final List<Entry<String, String>> cg, boolean noMoreData) throws BufferUnderflowException {
-		String key = cg.get(0).getKey();
+	public MatchResult match(CharBuffer buffer, List<String> cg, boolean noMoreData) throws BufferUnderflowException {
+		String key = cg.get(0);
 		
 		if ("<s>".equals(key) || "</s>".equals(key)) {
-			return new MatchResult(buffer, cg, 0, 0, 1);
+			return new MatchResult(buffer, 0, 0, 1);
 		} else 
 			return null;
 	}

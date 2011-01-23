@@ -1,6 +1,5 @@
 package br.eti.rslemos.nlp.corpora.chave.parser;
 
-import static br.eti.rslemos.nlp.corpora.chave.parser.Parser.Entry.entry;
 import static junit.framework.Assert.assertNull;
 
 import org.junit.Test;

@@ -9,12 +9,11 @@ import java.util.LinkedList;
 import java.util.List;
 
 import br.eti.rslemos.nlp.corpora.chave.parser.MatchResult.Match;
-import br.eti.rslemos.nlp.corpora.chave.parser.Parser.Entry;
 
 public abstract class AbstractMatchStrategyUnitTest {
 
 	private final MatchStrategy strategy;
-	protected final List<Entry<String, String>> cg = new LinkedList<Entry<String, String>>();
+	protected final List<String> cg = new LinkedList<String>();
 
 	protected AbstractMatchStrategyUnitTest(MatchStrategy strategy) {
 		this.strategy = strategy;
@@ -102,5 +101,9 @@ public abstract class AbstractMatchStrategyUnitTest {
 		assertThat(result.getMatches()[1].entry, is(equalTo(1)));
 		assertThat(result.getMatches()[1].from, is(equalTo(left.length())));
 		assertThat(result.getMatches()[1].to, is(equalTo(left.length() + middle.length() + right.length())));
+	}
+	
+	protected String entry(String key, String value) {
+		return key;
 	}
 }

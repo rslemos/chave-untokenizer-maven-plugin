@@ -4,8 +4,6 @@ import java.nio.BufferUnderflowException;
 import java.nio.CharBuffer;
 import java.util.List;
 
-import br.eti.rslemos.nlp.corpora.chave.parser.Parser.Entry;
-
 public interface MatchStrategy {
 	/**
 	 * Try to match the (few) next item(s) on <code>cg</code>.
@@ -20,5 +18,5 @@ public interface MatchStrategy {
 	 * 
 	 * @throws BufferUnderflowException if more data is needed.
 	 */
-	MatchResult match(CharBuffer buffer, List<Entry<String, String>> cg, boolean noMoreData) throws BufferUnderflowException;
+	MatchResult match(CharBuffer buffer, List<String> cg, boolean noMoreData) throws BufferUnderflowException;
 }

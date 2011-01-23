@@ -4,11 +4,9 @@ import static java.lang.Character.toLowerCase;
 
 import java.nio.BufferUnderflowException;
 import java.nio.CharBuffer;
-import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.Collections;
 import java.util.List;
-
-import br.eti.rslemos.nlp.corpora.chave.parser.Parser.Entry;
 
 public abstract class AbstractContractionMatchStrategy implements MatchStrategy {
 
@@ -47,13 +45,13 @@ public abstract class AbstractContractionMatchStrategy implements MatchStrategy 
 
 
 
-	public MatchResult match(final CharBuffer buffer, final List<Entry<String, String>> cg, boolean noMoreData) throws BufferUnderflowException {
-		String key0 = cg.get(0).getKey().toLowerCase();
+	public MatchResult match(CharBuffer buffer, List<String> cg, boolean noMoreData) throws BufferUnderflowException {
+		String key0 = cg.get(0).toLowerCase();
 		
 		if (!(cg0.equals(key0) || key0.endsWith("=" + cg0)))
 			return null;
 		
-		final String key1 = cg.get(1).getKey().toLowerCase();
+		String key1 = cg.get(1).toLowerCase();
 		
 		final int idx;
 		if ((idx = Arrays.binarySearch(cg1, key1.split("=")[0])) < 0)
@@ -61,23 +59,21 @@ public abstract class AbstractContractionMatchStrategy implements MatchStrategy 
 
 		CharBuffer buffer0 = buffer.slice();
 		
-		int tmpleft = 0;
-		int tmpskip = 0;
+		int cleft = 0;
+		int cskip = 0;
 		if (key0.endsWith("=" + cg0)) {
-			Entry<String, String> fauxEntry = new Entry<String, String>(key0.replaceAll("=" + cg0 + "$", "="), null);
-			List<Entry<String, String>> fauxCG = new ArrayList<Parser.Entry<String,String>>(0);
-			fauxCG.add(fauxEntry);
-			MatchResult result = DM.match(buffer0, fauxCG, noMoreData);
+			String fauxKey = key0.replaceAll("=" + cg0 + "$", "=");
+			MatchResult result = DM.match(buffer0, Collections.singletonList(fauxKey), noMoreData);
 			if (result == null)
 				return null;
 			
 			buffer0.position(buffer0.position() + result.getMatchLength() + result.getSkipLength());
-			tmpleft += result.getMatchLength();
-			tmpskip = result.getSkipLength();
+			cleft += result.getMatchLength();
+			cskip = result.getSkipLength();
 		}
 		
-		int tmpmiddle = 0;
-		int tmpright = 0;
+		int cmiddle = 0;
+		int cright = 0;
 
 		int i = 0;
 		while (i < results[idx].length() && toLowerCase(buffer0.get()) == results[idx].charAt(i))
@@ -87,39 +83,32 @@ public abstract class AbstractContractionMatchStrategy implements MatchStrategy 
 			return null;
 		
 		if (prefixEnd[idx] <= suffixStart[idx]) {
-			tmpleft += prefixEnd[idx];
-			tmpright += results[idx].length() - suffixStart[idx];
+			cleft += prefixEnd[idx];
+			cright += results[idx].length() - suffixStart[idx];
 		} else {
-			tmpleft += suffixStart[idx];
-			tmpmiddle += prefixEnd[idx] - suffixStart[idx];
-			tmpright += results[idx].length() - prefixEnd[idx];
+			cleft += suffixStart[idx];
+			cmiddle += prefixEnd[idx] - suffixStart[idx];
+			cright += results[idx].length() - prefixEnd[idx];
 		}
 		
 		if (key1.startsWith(cg1[idx] + "=")) {
-			Entry<String, String> fauxEntry = new Entry<String, String>(key1.replaceAll("^" + cg1[idx] + "=", "="), null);
-			List<Entry<String, String>> fauxCG = new ArrayList<Parser.Entry<String,String>>(0);
-			fauxCG.add(fauxEntry);
-			MatchResult result = DM.match(buffer0, fauxCG, noMoreData);
+			String fauxKey = key1.replaceAll("^" + cg1[idx] + "=", "=");
+			MatchResult result = DM.match(buffer0, Collections.singletonList(fauxKey), noMoreData);
 			if (result == null)
 				return null;
 			
-			result.apply(null);
-			tmpright += result.getMatchLength();
+			result.apply(null, null);
+			cright += result.getMatchLength();
 		}
 
-		final int cleft = tmpleft;
-		final int cmiddle = tmpmiddle;
-		final int cright = tmpright;
-		final int cskip = tmpskip;
-		
 		if (cmiddle == 0) {
-			return new MatchResult(buffer, cg, cskip, cleft + cmiddle + cright + cskip, 2, cskip, cskip + cleft, cskip + cleft, cskip + cleft + cright);
+			return new MatchResult(buffer, cskip, cleft + cmiddle + cright + cskip, 2, cskip, cskip + cleft, cskip + cleft, cskip + cleft + cright);
 		} else if (cleft == 0) {
-			return new MatchResult(buffer, cg, cskip, cleft + cmiddle + cright + cskip, 2, cskip, cskip + cmiddle, cskip, cskip + cmiddle + cright);
+			return new MatchResult(buffer, cskip, cleft + cmiddle + cright + cskip, 2, cskip, cskip + cmiddle, cskip, cskip + cmiddle + cright);
 		} else if (cright == 0) {
-			return new MatchResult(buffer, cg, cskip, cleft + cmiddle + cright + cskip, 2, cskip, cskip + cleft + cmiddle, cskip + cleft, cskip + cleft + cmiddle);
+			return new MatchResult(buffer, cskip, cleft + cmiddle + cright + cskip, 2, cskip, cskip + cleft + cmiddle, cskip + cleft, cskip + cleft + cmiddle);
 		} else {
-			return new MatchResult(buffer, cg, cskip, cleft + cmiddle + cright + cskip, 2, cskip, cskip + cleft + cmiddle, cskip + cleft, cskip + cleft + cmiddle + cright);
+			return new MatchResult(buffer, cskip, cleft + cmiddle + cright + cskip, 2, cskip, cskip + cleft + cmiddle, cskip + cleft, cskip + cleft + cmiddle + cright);
 		}
 	}
 }

@@ -8,11 +8,9 @@ import java.nio.CharBuffer;
 import java.util.Arrays;
 import java.util.List;
 
-import br.eti.rslemos.nlp.corpora.chave.parser.Parser.Entry;
-
 public class DirectMatchStrategy implements MatchStrategy {
-	public MatchResult match(final CharBuffer buffer, final List<Entry<String, String>> cg, boolean noMoreData) {
-		final Entry<String, String> currentEntry = cg.get(0);
+	public MatchResult match(CharBuffer buffer, List<String> cg, boolean noMoreData) {
+		String currentEntry = cg.get(0);
 		String currentKey = getKey(currentEntry);
 		
 		if (cg.size() > 1) {
@@ -70,18 +68,13 @@ public class DirectMatchStrategy implements MatchStrategy {
 		}
 		
 		if (j == currentKey.length()) {
-			// full match
-			final int k1 = k;
-			final int skip1 = skip;
-
-			return new MatchResult(buffer, cg, skip1, skip1 + k1, 1, skip1, skip1 + k1);
+			return new MatchResult(buffer, skip, skip + k, 1, skip, skip + k);
 		} else {
 			return null;
 		}
 	}
 
-	private static String getKey(final Entry<String, String> entry) {
-		String currentKey = entry.getKey();
+	private static String getKey(String currentKey) {
 		currentKey = currentKey.split(" ")[0];
 		
 		if (currentKey.startsWith("$"))

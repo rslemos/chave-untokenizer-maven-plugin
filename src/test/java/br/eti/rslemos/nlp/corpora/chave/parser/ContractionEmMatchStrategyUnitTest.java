@@ -1,7 +1,5 @@
 package br.eti.rslemos.nlp.corpora.chave.parser;
 
-import static br.eti.rslemos.nlp.corpora.chave.parser.Parser.Entry.entry;
-
 import org.junit.Test;
 
 public class ContractionEmMatchStrategyUnitTest extends AbstractMatchStrategyUnitTest {

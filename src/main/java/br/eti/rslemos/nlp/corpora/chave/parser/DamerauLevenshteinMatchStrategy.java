@@ -5,8 +5,6 @@ import java.nio.CharBuffer;
 import java.util.Arrays;
 import java.util.List;
 
-import br.eti.rslemos.nlp.corpora.chave.parser.Parser.Entry;
-
 public class DamerauLevenshteinMatchStrategy implements MatchStrategy {
 
 	private final int maxDistance;
@@ -15,12 +13,11 @@ public class DamerauLevenshteinMatchStrategy implements MatchStrategy {
 		this.maxDistance = maxDistance;
 	}
 
-	public MatchResult match(final CharBuffer buffer, final List<Entry<String, String>> cg, boolean noMoreData) throws BufferUnderflowException {
-		final Entry<String, String> entry0 = cg.get(0);
-		String key0 = entry0.getKey();
+	public MatchResult match(CharBuffer buffer, List<String> cg, boolean noMoreData) throws BufferUnderflowException {
+		String key0 = cg.get(0);
 
 		if (cg.size() > 1) {
-			String key1 = cg.get(1).getKey();
+			String key1 = cg.get(1);
 			if (key1.startsWith("$"))
 				key1 = key1.substring(1);
 			
@@ -44,12 +41,12 @@ public class DamerauLevenshteinMatchStrategy implements MatchStrategy {
 		if (slices.length == 0)
 			return null;
 		
-		final char[] cs1 = slices[0].toCharArray();
+		char[] cs1 = slices[0].toCharArray();
 		if (cs1.length < 2)
 			return null;
 		
 		if (levenshteinDistance(key0.toCharArray(), cs1) <= maxDistance) {
-			return new MatchResult(buffer, cg, 0, cs1.length, 1, 0, cs1.length);
+			return new MatchResult(buffer, 0, cs1.length, 1, 0, cs1.length);
 		} else
 			return null;
 	}
