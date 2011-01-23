@@ -11,15 +11,10 @@ import java.util.Formatter;
 import java.util.Iterator;
 import java.util.LinkedList;
 import java.util.List;
-import java.util.regex.Matcher;
-import java.util.regex.Pattern;
 
-import org.apache.commons.io.IOUtils;
 
 public class Parser {
 	private static final Formatter FORMATTER = new Formatter();
-
-	private static final Pattern PATTERN_CG_ENTRY = Pattern.compile("^([^\t]*)(?:\t(.*))?$");
 
 	private Handler out;
 	
@@ -39,14 +34,14 @@ public class Parser {
 	}
 
 	private void parse0(Reader cgText, URL sgmlText0) throws IOException, ParserException, GateException {
-		List<Entry<String, String>> cgLines = preParseCG(cgText);
+		List<CGEntry> cgLines = CGEntry.loadFromReader(cgText);
 		
 		Document document = GateLoader.load(sgmlText0, "UTF-8");
 
 		parse1(cgLines, document);
 	}
 
-	void parse1(List<Entry<String, String>> cg, Document document) throws IOException, ParserException {
+	void parse1(List<CGEntry> cg, Document document) throws IOException, ParserException {
 		MatchStrategy[] strategies = {
 				new DirectMatchStrategy(),
 				new EncliticMatchStrategy(),
@@ -65,8 +60,8 @@ public class Parser {
 		parser1(strategies, cg, document);
 	}
 
-	private void parser1(MatchStrategy[] strategies, List<Entry<String, String>> cg, Document document) throws IOException, ParserException {
-		LinkedList<Entry<String, String>> cg1 = new LinkedList<Entry<String, String>>(cg);
+	private void parser1(MatchStrategy[] strategies, List<CGEntry> cg, Document document) throws IOException, ParserException {
+		LinkedList<CGEntry> cg1 = new LinkedList<CGEntry>(cg);
 		
 		String buffer = document.getContent().toString();
 
@@ -122,61 +117,12 @@ outer:
 		}
 	}
 
-	private static List<String> onlyKeys(LinkedList<Entry<String, String>> cg1) {
+	private static List<String> onlyKeys(LinkedList<CGEntry> cg1) {
 		ArrayList<String> result = new ArrayList<String>(cg1.size());
-		for (Entry<String, String> entry : cg1) {
+		for (CGEntry entry : cg1) {
 			result.add(entry.getKey());
 		}
 		
 		return result;
-	}
-
-	private List<Entry<String, String>> preParseCG(Reader cgText) throws IOException {
-		@SuppressWarnings("unchecked")
-		List<String> lines = IOUtils.readLines(cgText);
-		
-		ArrayList<Entry<String, String>> result = new ArrayList<Entry<String, String>>();
-
-		for (String line : lines) {
-			if (line.startsWith("<"))
-				continue;
-			
-			Matcher matcher = PATTERN_CG_ENTRY.matcher(line);
-			if (!matcher.matches()) 
-				continue;
-			
-			result.add(new Entry<String, String>(matcher.group(1), matcher.group(2)));
-		}
-
-		result.trimToSize();
-		
-		return result;
-	}
-
-	public static class Entry<K, V> {
-
-		private K key;
-		private V value;
-
-		public Entry(K key, V value) {
-			this.key = key;
-			this.value = value;
-		}
-
-		public V getValue() {
-			return value;
-		}
-
-		public K getKey() {
-			return key;
-		}
-		
-		public String toString() {
-			return String.valueOf(key);
-		}
-		
-		public static <K, V> Entry<K, V> entry(K key, V value) {
-			return new Entry<K, V>(key, value);
-		}
 	}
 }

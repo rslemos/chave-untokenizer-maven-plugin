@@ -2,7 +2,6 @@ package br.eti.rslemos.nlp.corpora.chave.parser;
 
 import java.util.List;
 
-import br.eti.rslemos.nlp.corpora.chave.parser.Parser.Entry;
 
 public final class MatchResult {
 	private final int from;
@@ -35,15 +34,14 @@ public final class MatchResult {
 			throw new IllegalArgumentException("Must consume at least the same number of emited tokens");
 	}
 
-	public int apply(String buffer, List<Entry<String, String>> cg, Handler handler) {
+	public int apply(String buffer, List<CGEntry> cg, Handler handler) {
 		if (from > 0)
 			throw new IllegalStateException("Cannoy apply if data must be skipped");
 		
 		char[] data = new char[getMatchLength()];
 		buffer.getChars(0, data.length, data, 0);
 		
-		@SuppressWarnings("unchecked")
-		Entry<String, String> entries[] = new Entry[consume];
+		CGEntry entries[] = new CGEntry[consume];
 
 		if (cg != null) {
 			for (int i = 0; i < consume; i++) {

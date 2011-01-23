@@ -1,6 +1,6 @@
 package br.eti.rslemos.nlp.corpora.chave.parser;
 
-import static br.eti.rslemos.nlp.corpora.chave.parser.Parser.Entry.entry;
+import static br.eti.rslemos.nlp.corpora.chave.parser.CGEntry.entry;
 import static org.junit.Assert.assertTrue;
 import static org.mockito.Mockito.inOrder;
 import static org.mockito.Mockito.mock;
@@ -22,7 +22,6 @@ import org.junit.Before;
 import org.junit.Test;
 import org.mockito.InOrder;
 
-import br.eti.rslemos.nlp.corpora.chave.parser.Parser.Entry;
 
 public class ParserUnitTest {
 	private static final Charset UTF8 = Charset.forName("UTF-8");
@@ -65,8 +64,7 @@ public class ParserUnitTest {
 		handler = mock(Handler.class);
 		parser = new Parser(handler);
 		
-		@SuppressWarnings("unchecked")
-		List<Entry<String, String>> cg = Arrays.asList(
+		List<CGEntry> cg = Arrays.asList(
 				entry("de", " [de] PRP <sam-> @N<"),
 				entry("eles", " [eles] PERS M 3P NOM/PIV <-sam> @P<")
 			);
@@ -91,8 +89,7 @@ public class ParserUnitTest {
 		handler = mock(Handler.class);
 		parser = new Parser(handler);
 		
-		@SuppressWarnings("unchecked")
-		List<Entry<String, String>> cg = Arrays.asList(
+		List<CGEntry> cg = Arrays.asList(
 				entry("Sendo", " [ser] V GER @IMV @#ICL-ADVL>")
 			);
 
@@ -113,8 +110,7 @@ public class ParserUnitTest {
 		handler = mock(Handler.class);
 		parser = new Parser(handler);
 		
-		@SuppressWarnings("unchecked")
-		List<Entry<String, String>> cg = Arrays.asList(
+		List<CGEntry> cg = Arrays.asList(
 				entry("$\"", " [$\"] PU")
 			);
 
@@ -134,8 +130,7 @@ public class ParserUnitTest {
 		handler = mock(Handler.class);
 		parser = new Parser(handler);
 		
-		@SuppressWarnings("unchecked")
-		List<Entry<String, String>> cg = Arrays.asList(
+		List<CGEntry> cg = Arrays.asList(
 				entry("$\"", " [$\"] PU")
 			);
 
@@ -155,8 +150,7 @@ public class ParserUnitTest {
 		handler = mock(Handler.class);
 		parser = new Parser(handler);
 		
-		@SuppressWarnings("unchecked")
-		List<Entry<String, String>> cg = Arrays.asList(
+		List<CGEntry> cg = Arrays.asList(
 				entry("sra.", " [sra.] N F S @P<"),
 				entry("$.", " [$.] PU <<<")
 			);
