@@ -1,5 +1,10 @@
 package br.eti.rslemos.nlp.corpora.chave.parser;
 
+import gate.AnnotationSet;
+import gate.FeatureMap;
+import gate.util.InvalidOffsetException;
+import gate.util.SimpleFeatureMapImpl;
+
 import java.util.List;
 
 
@@ -91,7 +96,16 @@ public final class MatchResult {
 				throw new UnsupportedOperationException();
 		}
 	}
-	
+
+	public void apply(AnnotationSet annotationSet, int k, List<CGEntry> cg, int i) throws InvalidOffsetException {
+		for (Match match : getMatches()) {
+			FeatureMap features = new SimpleFeatureMapImpl();
+			features.put("match", cg.get(match.entry + i).getKey());
+			features.put("cg", cg.get(match.entry + i).getValue());
+			annotationSet.add((long)(match.from + k), (long)(match.to + k), "token", features);
+		}
+	}
+
 	private char[] subchar(char[] data, int from, int to) {
 		if (to == this.to + 1)
 			to = this.to;

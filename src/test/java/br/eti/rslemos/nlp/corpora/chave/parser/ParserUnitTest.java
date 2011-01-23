@@ -1,10 +1,17 @@
 package br.eti.rslemos.nlp.corpora.chave.parser;
 
 import static br.eti.rslemos.nlp.corpora.chave.parser.CGEntry.entry;
+import static org.hamcrest.CoreMatchers.equalTo;
+import static org.hamcrest.CoreMatchers.is;
+import static org.junit.Assert.assertThat;
 import static org.junit.Assert.fail;
 import static org.mockito.Mockito.inOrder;
 import static org.mockito.Mockito.mock;
+import gate.Annotation;
+import gate.AnnotationSet;
 import gate.Document;
+import gate.GateConstants;
+import gate.Utils;
 import gate.corpora.DocumentContentImpl;
 import gate.corpora.DocumentImpl;
 import gate.util.GateException;
@@ -69,7 +76,16 @@ public class ParserUnitTest {
 				entry("eles", " [eles] PERS M 3P NOM/PIV <-sam> @P<")
 			);
 
-		parser.parse(cg, document("deles"));
+		Document document = parser.parse(cg, document("deles"));
+		AnnotationSet set = document.getAnnotations(GateConstants.ORIGINAL_MARKUPS_ANNOT_SET_NAME);
+
+		Annotation ann0 = set.get("token", Utils.featureMap("cg", cg.get(0).getValue())).iterator().next();
+		Annotation ann1 = set.get("token", Utils.featureMap("cg", cg.get(1).getValue())).iterator().next();
+		
+		assertThat(Utils.stringFor(document, ann0), is(equalTo("d")));
+		assertThat(Utils.stringFor(document, ann1), is(equalTo("eles")));
+		
+		System.out.println(document.toXml());
 		
 		InOrder order = inOrder(handler);
 		
@@ -204,7 +220,18 @@ public class ParserUnitTest {
 		};
 		parser = new Untokenizer(handler);
 		
-		verifyParse("131.cg", "131.sgml");
+		try {
+			List<CGEntry> cgLines = CGEntry.loadFromReader(open("131.cg"));
+			
+			Document document = GateLoader.load(new URL(basedir, "131.sgml"), "UTF-8");
+			
+			parser.parse(cgLines, document);
+			
+			System.out.println(document.toXml());
+		} catch (ParserException e) {
+			e.printStackTrace();
+			fail(e.toString());
+		}
 	}
 	
 	@Test
