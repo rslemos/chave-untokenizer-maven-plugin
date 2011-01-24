@@ -1,7 +1,12 @@
 package br.eti.rslemos.nlp.corpora.chave.parser;
 
+import static org.hamcrest.CoreMatchers.equalTo;
+import static org.hamcrest.CoreMatchers.is;
+import static org.junit.Assert.assertThat;
 import static org.junit.Assert.fail;
+import gate.AnnotationSet;
 import gate.Document;
+import gate.GateConstants;
 
 import java.io.InputStreamReader;
 import java.io.Reader;
@@ -169,6 +174,9 @@ public class UntokenizerFunctionalTest {
 			Document document = GateLoader.load(new URL(basedir, basename + ".sgml"), "UTF-8");
 			
 			parser.parse(cgLines, document);
+			AnnotationSet originalMarkups = document.getAnnotations(GateConstants.ORIGINAL_MARKUPS_ANNOT_SET_NAME);
+			AnnotationSet tokens = originalMarkups.get("token");
+			assertThat(tokens.size(), is(equalTo(cgLines.size())));
 		} catch (ParserException e) {
 			e.printStackTrace();
 			fail(e.toString());
