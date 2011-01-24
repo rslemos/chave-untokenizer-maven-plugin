@@ -70,6 +70,10 @@ outer:
 							}
 						}
 						if (best != null) {
+<<<<<<< HEAD
+=======
+							best.apply(buffer.substring(k), cg1.subList(i, cg1.size()), out);
+>>>>>>> de22df3d49edc3e39370d1e67961933661eb62d4
 							best.apply(document.getAnnotations(GateConstants.ORIGINAL_MARKUPS_ANNOT_SET_NAME), k, cg1, i);
 							k += best.getMatchLength();
 							i += best.getConsume();
