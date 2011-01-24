@@ -48,15 +48,6 @@ public final class MatchResult {
 		}
 	}
 
-	public void apply(AnnotationSet annotationSet, int k, List<CGEntry> cg, int i) throws InvalidOffsetException {
-		for (Match match : getMatches()) {
-			FeatureMap features = new SimpleFeatureMapImpl();
-			features.put("match", cg.get(match.entry + i).getKey());
-			features.put("cg", cg.get(match.entry + i).getValue());
-			annotationSet.add((long)(match.from + k), (long)(match.to + k), "token", features);
-		}
-	}
-
 	public int getMatchLength() {
 		return to - from;
 	}
