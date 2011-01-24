@@ -1,6 +1,7 @@
 package br.eti.rslemos.nlp.corpora.chave.parser;
 
 import gate.Document;
+import gate.GateConstants;
 
 import java.io.IOException;
 import java.util.ArrayList;
@@ -13,13 +14,7 @@ import java.util.List;
 public class Untokenizer {
 	private static final Formatter FORMATTER = new Formatter();
 
-	private Handler out;
-	
-	public Untokenizer(Handler out) {
-		this.out = out;
-	}
-
-	public void parse(List<CGEntry> cg, Document document) throws IOException, ParserException {
+	public Document parse(List<CGEntry> cg, Document document) throws IOException, ParserException {
 		MatchStrategy[] strategies = {
 				new DirectMatchStrategy(),
 				new EncliticMatchStrategy(),
@@ -35,10 +30,10 @@ public class Untokenizer {
 				new DamerauLevenshteinMatchStrategy(1),
 			};
 
-		parser(strategies, cg, document);
+		return parser(strategies, cg, document);
 	}
 
-	private void parser(MatchStrategy[] strategies, List<CGEntry> cg, Document document) throws IOException, ParserException {
+	private Document parser(MatchStrategy[] strategies, List<CGEntry> cg, Document document) throws IOException, ParserException {
 		List<CGEntry> cg1 = Collections.unmodifiableList(cg);
 		int i = 0;
 		
@@ -75,15 +70,12 @@ outer:
 							}
 						}
 						if (best != null) {
-							best.apply(buffer.substring(k), cg1.subList(i, cg1.size()), out);
+							best.apply(document.getAnnotations(GateConstants.ORIGINAL_MARKUPS_ANNOT_SET_NAME), k, cg1, i);
 							k += best.getMatchLength();
 							i += best.getConsume();
 							continue outer;
 						}
 					} else {
-						char[] toSkip = new char[minSkip];
-						buffer.substring(k).getChars(0, toSkip.length, toSkip, 0);
-						out.characters(toSkip);
 						k += minSkip;
 						continue;
 					}
@@ -96,6 +88,8 @@ outer:
 			FORMATTER.format("%d-th entry: %s; Dump remaining buffer: %s\n", i, cg1.get(i).getKey(), buffer.substring(k));
 			throw new ParserException(FORMATTER.out().toString());
 		}
+		
+		return document;
 	}
 
 	private static List<String> onlyKeys(List<CGEntry> cg1) {

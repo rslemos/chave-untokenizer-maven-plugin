@@ -1,10 +1,15 @@
 package br.eti.rslemos.nlp.corpora.chave.parser;
 
 import static br.eti.rslemos.nlp.corpora.chave.parser.CGEntry.entry;
+import static org.hamcrest.CoreMatchers.equalTo;
+import static org.hamcrest.CoreMatchers.is;
+import static org.junit.Assert.assertThat;
 import static org.junit.Assert.fail;
-import static org.mockito.Mockito.inOrder;
-import static org.mockito.Mockito.mock;
+import gate.Annotation;
+import gate.AnnotationSet;
 import gate.Document;
+import gate.GateConstants;
+import gate.Utils;
 import gate.corpora.DocumentContentImpl;
 import gate.corpora.DocumentImpl;
 import gate.util.GateException;
@@ -20,191 +25,108 @@ import java.util.List;
 
 import org.junit.Before;
 import org.junit.Test;
-import org.mockito.InOrder;
 
 
 public class ParserUnitTest {
 	private static final Charset UTF8 = Charset.forName("UTF-8");
 	private static final URL basedir = ParserUnitTest.class.getResource("/pt_BR/CHAVEFolha/1994/01/01/");
 
-	private Handler handler;
 	private Untokenizer parser;
 	
 	@Before
 	public void setUp() {
-		//handler = mock(Handler.class);
-		handler = new Handler() {
-
-			public void startToken(String attributes) {
-				System.out.printf("startToken(%s)\n", attributes);
-			}
-
-			public void characters(char[] chars) {
-				System.out.printf("characters(%s)\n", new String(chars));
-			}
-
-			public void endToken() {
-				System.out.printf("endToken()\n");
-			}
-
-			public void startPseudoToken(String attributes) {
-				System.out.printf("startPseudoToken(%s)\n", attributes);
-			}
-
-			public void endPseudoToken() {
-				System.out.printf("endPseudoToken()\n");
-			}
-			
-		};
-		parser = new Untokenizer(handler);
+		parser = new Untokenizer();
 	}
 
 	@Test
 	public void testGivesPriorityToLengthierMatch() throws Exception {
-		handler = mock(Handler.class);
-		parser = new Untokenizer(handler);
-		
 		List<CGEntry> cg = Arrays.asList(
 				entry("de", " [de] PRP <sam-> @N<"),
 				entry("eles", " [eles] PERS M 3P NOM/PIV <-sam> @P<")
 			);
 
-		parser.parse(cg, document("deles"));
+		Document document = parser.parse(cg, document("deles"));
+		AnnotationSet set = document.getAnnotations(GateConstants.ORIGINAL_MARKUPS_ANNOT_SET_NAME);
+
+		Annotation ann0 = set.get("token", Utils.featureMap("cg", cg.get(0).getValue())).iterator().next();
+		Annotation ann1 = set.get("token", Utils.featureMap("cg", cg.get(1).getValue())).iterator().next();
 		
-		InOrder order = inOrder(handler);
-		
-		
-		order.verify(handler).startToken(cg.get(0).getValue());
-		order.verify(handler).characters("d".toCharArray());
-		order.verify(handler).endToken();
-		
-		order.verify(handler).startToken(cg.get(1).getValue());
-		order.verify(handler).characters("eles".toCharArray());
-		order.verify(handler).endToken();
-		
+		assertThat(Utils.stringFor(document, ann0), is(equalTo("d")));
+		assertThat(Utils.stringFor(document, ann1), is(equalTo("eles")));
 	}
 
 	@Test
 	public void testSkipsUnmatchedCharacters() throws Exception {
-		handler = mock(Handler.class);
-		parser = new Untokenizer(handler);
-		
 		List<CGEntry> cg = Arrays.asList(
 				entry("Sendo", " [ser] V GER @IMV @#ICL-ADVL>")
 			);
 
-		parser.parse(cg, document(". Sendo"));
+		Document document = parser.parse(cg, document(". Sendo"));
+		AnnotationSet set = document.getAnnotations(GateConstants.ORIGINAL_MARKUPS_ANNOT_SET_NAME);
 		
-		InOrder order = inOrder(handler);
+		Annotation ann0 = set.get("token", Utils.featureMap("cg", cg.get(0).getValue())).iterator().next();
 		
-		
-		order.verify(handler).characters(". ".toCharArray());
-
-		order.verify(handler).startToken(cg.get(0).getValue());
-		order.verify(handler).characters("Sendo".toCharArray());
-		order.verify(handler).endToken();
+		assertThat(Utils.stringFor(document, ann0), is(equalTo("Sendo")));
 	}
 
 	@Test
 	public void testQuotesCanMatchKey() throws Exception {
-		handler = mock(Handler.class);
-		parser = new Untokenizer(handler);
-		
 		List<CGEntry> cg = Arrays.asList(
 				entry("$\"", " [$\"] PU")
 			);
 
-		parser.parse(cg, document("\"  "));
+		Document document = parser.parse(cg, document("\"  "));
+		AnnotationSet set = document.getAnnotations(GateConstants.ORIGINAL_MARKUPS_ANNOT_SET_NAME);
 		
-		InOrder order = inOrder(handler);
+		Annotation ann0 = set.get("token", Utils.featureMap("cg", cg.get(0).getValue())).iterator().next();
 		
-		
-		order.verify(handler).startToken(cg.get(0).getValue());
-		order.verify(handler).characters("\"".toCharArray());
-		order.verify(handler).endToken();
+		assertThat(Utils.stringFor(document, ann0), is(equalTo("\"")));
 	}
 	
 
 	@Test
 	public void testQuotesCanMatchKey2() throws Exception {
-		handler = mock(Handler.class);
-		parser = new Untokenizer(handler);
-		
 		List<CGEntry> cg = Arrays.asList(
 				entry("$\"", " [$\"] PU")
 			);
 
-		parser.parse(cg, document("  \""));
+		Document document = parser.parse(cg, document("  \""));
+		AnnotationSet set = document.getAnnotations(GateConstants.ORIGINAL_MARKUPS_ANNOT_SET_NAME);
+
+		Annotation ann0 = set.get("token", Utils.featureMap("cg", cg.get(0).getValue())).iterator().next();
 		
-		InOrder order = inOrder(handler);
-		
-		
-		order.verify(handler).characters("  ".toCharArray());
-		order.verify(handler).startToken(cg.get(0).getValue());
-		order.verify(handler).characters("\"".toCharArray());
-		order.verify(handler).endToken();
+		assertThat(Utils.stringFor(document, ann0), is(equalTo("\"")));
 	}
 
 	@Test
 	public void testUngreedyMatchPunctuation() throws Exception {
-		handler = mock(Handler.class);
-		parser = new Untokenizer(handler);
-		
 		List<CGEntry> cg = Arrays.asList(
 				entry("sra.", " [sra.] N F S @P<"),
 				entry("$.", " [$.] PU <<<")
 			);
 
-		parser.parse(cg, document("sra."));
+		Document document = parser.parse(cg, document("sra."));
+		AnnotationSet set = document.getAnnotations(GateConstants.ORIGINAL_MARKUPS_ANNOT_SET_NAME);
+
+		Annotation ann0 = set.get("token", Utils.featureMap("cg", cg.get(0).getValue())).iterator().next();
+		Annotation ann1 = set.get("token", Utils.featureMap("cg", cg.get(1).getValue())).iterator().next();
 		
-		InOrder order = inOrder(handler);
-		
-		
-		order.verify(handler).startToken(cg.get(0).getValue());
-		order.verify(handler).characters("sra".toCharArray());
-		order.verify(handler).endToken();
-		order.verify(handler).startToken(cg.get(1).getValue());
-		order.verify(handler).characters(".".toCharArray());
-		order.verify(handler).endToken();
+		assertThat(Utils.stringFor(document, ann0), is(equalTo("sra")));
+		assertThat(Utils.stringFor(document, ann1), is(equalTo(".")));
 	}
 	
 	@Test
 	public void testChave19940101_001() throws Exception {
-		handler = new Handler() {
+		try {
+			List<CGEntry> cgLines = CGEntry.loadFromReader(open("131.cg"));
 			
-			public void startToken(String attributes) {
-				if (attributes != null)
-					System.out.printf("<token attributes=\"%s\">", escape(attributes));
-				else
-					System.out.printf("<token>");
-			}
+			Document document = GateLoader.load(new URL(basedir, "131.sgml"), "UTF-8");
 			
-			public void endToken() {
-				System.out.print("</token>");
-			}
-			
-			public void characters(char[] chars) {
-				System.out.printf("%s", new String(chars));
-			}
-			
-			private String escape(String in) {
-				return in.replaceAll("<", "\\&lt;").replaceAll(">", "\\&gt;").replaceAll("\"", "\\&quot;");
-			}
-
-			public void startPseudoToken(String attributes) {
-				if (attributes != null)
-					System.out.printf("<ptoken attributes=\"%s\">", escape(attributes));
-				else
-					System.out.printf("<ptoken>");
-			}
-
-			public void endPseudoToken() {
-				System.out.print("</ptoken>");
-			}
-		};
-		parser = new Untokenizer(handler);
-		
-		verifyParse("131.cg", "131.sgml");
+			parser.parse(cgLines, document);
+		} catch (ParserException e) {
+			e.printStackTrace();
+			fail(e.toString());
+		}
 	}
 	
 	@Test
