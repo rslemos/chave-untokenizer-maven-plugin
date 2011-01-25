@@ -27,7 +27,6 @@ public class Untokenizer {
 				new ContractionComMatchStrategy(),
 				new QuotesMatchStrategy(),
 				new WhitespaceMatchStrategy(),
-				new SentenceMarkerMatchStrategy(),
 				new NewLineMatchStrategy(),
 				new DamerauLevenshteinMatchStrategy(1),
 			};
