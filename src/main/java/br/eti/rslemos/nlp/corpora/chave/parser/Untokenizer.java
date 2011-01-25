@@ -70,7 +70,7 @@ outer:
 							}
 						}
 						if (best != null) {
-							best.apply(document.getAnnotations(GateConstants.ORIGINAL_MARKUPS_ANNOT_SET_NAME), k, cg1, i);
+							best.adjust(k, i).apply(document.getAnnotations(GateConstants.ORIGINAL_MARKUPS_ANNOT_SET_NAME), cg1);
 							k += best.getMatchLength();
 							i += best.getConsume();
 							continue outer;
