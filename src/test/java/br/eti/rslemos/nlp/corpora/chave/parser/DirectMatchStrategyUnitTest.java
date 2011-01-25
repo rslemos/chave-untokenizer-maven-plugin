@@ -12,7 +12,7 @@ public class DirectMatchStrategyUnitTest extends AbstractMatchStrategyUnitTest {
 	
 	@Test
 	public void testSingleWord() throws Exception {
-		cg.add(entry("feita", " [fazer] V PCP F S @IMV @#ICL-N<"));
+		cg.add("feita");
 		MatchResult result = match("feita");
 		
 		verifyTokensInSequence(result, "feita");
@@ -20,7 +20,7 @@ public class DirectMatchStrategyUnitTest extends AbstractMatchStrategyUnitTest {
 
 	@Test
 	public void testCompositeWord() throws Exception {
-		cg.add(entry("Pesquisa=Datafolha", " [Pesquisa=Datafolha] PROP F S @SUBJ>"));
+		cg.add("Pesquisa=Datafolha");
 		MatchResult result = match("Pesquisa Datafolha");
 		
 		verifyTokensInSequence(result, "Pesquisa Datafolha");
@@ -28,7 +28,7 @@ public class DirectMatchStrategyUnitTest extends AbstractMatchStrategyUnitTest {
 
 	@Test
 	public void testCompositeWordWithMoreWhitespaces() throws Exception {
-		cg.add(entry("Pesquisa=Datafolha", " [Pesquisa=Datafolha] PROP F S @SUBJ>"));
+		cg.add("Pesquisa=Datafolha");
 		MatchResult result = match("Pesquisa   \t\t \t  \t Datafolha");
 		
 		verifyTokensInSequence(result, "Pesquisa   \t\t \t  \t Datafolha");
@@ -36,7 +36,7 @@ public class DirectMatchStrategyUnitTest extends AbstractMatchStrategyUnitTest {
 
 	@Test
 	public void testPunctuationMark() throws Exception {
-		cg.add(entry("$,", (String)null));
+		cg.add("$,");
 		MatchResult result = match(",");
 		
 		verifyTokensInSequence(result, ",");
@@ -44,13 +44,13 @@ public class DirectMatchStrategyUnitTest extends AbstractMatchStrategyUnitTest {
 
 	@Test
 	public void testEmptyInput() throws Exception {
-		cg.add(entry("Pesquisa=Datafolha", " [Pesquisa=Datafolha] PROP F S @SUBJ>"));
+		cg.add("Pesquisa=Datafolha");
 		assertNull(match(""));
 	}
 
 	@Test
 	public void testDirtyEntry() throws Exception {
-		cg.add(entry("checks ALT xxxs", " [check] N M P <*1> <*1> @P<"));
+		cg.add("checks ALT xxxs");
 		MatchResult result = match("checks");
 		
 		verifyTokensInSequence(result, "checks");
@@ -58,8 +58,8 @@ public class DirectMatchStrategyUnitTest extends AbstractMatchStrategyUnitTest {
 
 	@Test
 	public void testUngreedyMatchPunctuation() throws Exception {
-		cg.add(entry("sra.", " [sra.] N F S @P<"));
-		cg.add(entry("$.", " [$.] PU <<<"));
+		cg.add("sra.");
+		cg.add("$.");
 
 		MatchResult result = match("sra.");
 		

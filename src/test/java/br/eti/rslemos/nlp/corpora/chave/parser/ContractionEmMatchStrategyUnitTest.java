@@ -10,8 +10,8 @@ public class ContractionEmMatchStrategyUnitTest extends AbstractMatchStrategyUni
 	
 	@Test
 	public void testContraction_em_o() throws Exception {
-		cg.add(entry("em", " [em] PRP <sam-> @<ADVL"));
-		cg.add(entry("o", " [o] DET M S <artd> <-sam> @>N"));
+		cg.add("em");
+		cg.add("o");
 		
 		MatchResult result = match("no");
 		
@@ -20,8 +20,8 @@ public class ContractionEmMatchStrategyUnitTest extends AbstractMatchStrategyUni
 	
 	@Test
 	public void testContraction_em_a() throws Exception {
-		cg.add(entry("em", " [em] PRP <sam-> @<ADVL"));
-		cg.add(entry("a", " [o] DET F S <artd> <-sam> @>N"));
+		cg.add("em");
+		cg.add("a");
 		
 		MatchResult result = match("na");
 		
@@ -30,8 +30,8 @@ public class ContractionEmMatchStrategyUnitTest extends AbstractMatchStrategyUni
 	
 	@Test
 	public void testContraction_em_os() throws Exception {
-		cg.add(entry("em", " [em] PRP <sam-> @<ADVL"));
-		cg.add(entry("os", " [o] DET M P <artd> <-sam> @>N"));
+		cg.add("em");
+		cg.add("os");
 		
 		MatchResult result = match("nos");
 		
@@ -40,8 +40,8 @@ public class ContractionEmMatchStrategyUnitTest extends AbstractMatchStrategyUni
 	
 	@Test
 	public void testContraction_em_as() throws Exception {
-		cg.add(entry("em", " [em] PRP <sam-> @<ADVL"));
-		cg.add(entry("as", " [o] DET F P <artd> <-sam> @>N"));
+		cg.add("em");
+		cg.add("as");
 		
 		MatchResult result = match("nas");
 		
@@ -50,8 +50,8 @@ public class ContractionEmMatchStrategyUnitTest extends AbstractMatchStrategyUni
 
 	@Test
 	public void testContraction_em_este() throws Exception {
-		cg.add(entry("em", " [em] PRP <sam-> @<ADVL"));
-		cg.add(entry("este", " [este] DET M S <dem> <-sam> @>N"));
+		cg.add("em");
+		cg.add("este");
 		
 		MatchResult result = match("neste");
 		
@@ -60,8 +60,8 @@ public class ContractionEmMatchStrategyUnitTest extends AbstractMatchStrategyUni
 	
 	@Test
 	public void testContraction_em_esse() throws Exception {
-		cg.add(entry("em", " [em] PRP <sam-> @<ADVL"));
-		cg.add(entry("esse", " [esse] DET M S <dem> <-sam> @>N"));
+		cg.add("em");
+		cg.add("esse");
 		
 		MatchResult result = match("nesse");
 		
@@ -70,8 +70,8 @@ public class ContractionEmMatchStrategyUnitTest extends AbstractMatchStrategyUni
 	
 	@Test
 	public void testContraction_em_esta() throws Exception {
-		cg.add(entry("em", " [em] PRP <sam-> @<ADVL"));
-		cg.add(entry("esta", " [este] DET F S <dem> <-sam> @>N"));
+		cg.add("em");
+		cg.add("esta");
 		
 		MatchResult result = match("nesta");
 		
@@ -80,8 +80,8 @@ public class ContractionEmMatchStrategyUnitTest extends AbstractMatchStrategyUni
 	
 	@Test
 	public void testContraction_em_essa() throws Exception {
-		cg.add(entry("em", " [em] PRP <sam-> @<ADVL"));
-		cg.add(entry("essa", " [esse] DET F S <dem> <-sam> @>N"));
+		cg.add("em");
+		cg.add("essa");
 		
 		MatchResult result = match("nessa");
 		
@@ -90,8 +90,8 @@ public class ContractionEmMatchStrategyUnitTest extends AbstractMatchStrategyUni
 	
 	@Test
 	public void testContraction_em_estes() throws Exception {
-		cg.add(entry("em", " [em] PRP <sam-> @<ADVL"));
-		cg.add(entry("estes", " [este] DET M P <dem> <-sam> @>N"));
+		cg.add("em");
+		cg.add("estes");
 		
 		MatchResult result = match("nestes");
 		
@@ -100,8 +100,8 @@ public class ContractionEmMatchStrategyUnitTest extends AbstractMatchStrategyUni
 	
 	@Test
 	public void testContraction_em_esses() throws Exception {
-		cg.add(entry("em", " [em] PRP <sam-> @<ADVL"));
-		cg.add(entry("esses", " [esse] DET M P <dem> <-sam> @>N"));
+		cg.add("em");
+		cg.add("esses");
 		
 		MatchResult result = match("nesses");
 		
@@ -110,8 +110,8 @@ public class ContractionEmMatchStrategyUnitTest extends AbstractMatchStrategyUni
 	
 	@Test
 	public void testContraction_em_estas() throws Exception {
-		cg.add(entry("em", " [em] PRP <sam-> @<ADVL"));
-		cg.add(entry("estas", " [este] DET F P <dem> @>N"));
+		cg.add("em");
+		cg.add("estas");
 		
 		MatchResult result = match("nestas");
 		
@@ -120,8 +120,8 @@ public class ContractionEmMatchStrategyUnitTest extends AbstractMatchStrategyUni
 	
 	@Test
 	public void testContraction_em_essas() throws Exception {
-		cg.add(entry("em", " [em] PRP <sam-> @<ADVL"));
-		cg.add(entry("essas", " [esse] DET F P <dem> <-sam> @>N"));
+		cg.add("em");
+		cg.add("essas");
 		
 		MatchResult result = match("nessas");
 		
@@ -130,8 +130,8 @@ public class ContractionEmMatchStrategyUnitTest extends AbstractMatchStrategyUni
 	
 	@Test
 	public void testContraction_em_isto() throws Exception {
-		cg.add(entry("em", " [em] PRP <sam-> @<ADVL"));
-		cg.add(entry("isto", " [isto] SPEC M S <dem> @<ACC"));
+		cg.add("em");
+		cg.add("isto");
 		
 		MatchResult result = match("nisto");
 		
@@ -140,8 +140,8 @@ public class ContractionEmMatchStrategyUnitTest extends AbstractMatchStrategyUni
 	
 	@Test
 	public void testContraction_em_isso() throws Exception {
-		cg.add(entry("em", " [em] PRP <sam-> @<ADVL"));
-		cg.add(entry("isso", " [isso] SPEC M S <dem> @SUBJ>"));
+		cg.add("em");
+		cg.add("isso");
 		
 		MatchResult result = match("nisso");
 		
@@ -150,8 +150,8 @@ public class ContractionEmMatchStrategyUnitTest extends AbstractMatchStrategyUni
 	
 	@Test
 	public void testContraction_em_aquele() throws Exception {
-		cg.add(entry("em", " [em] PRP <sam-> @<ADVL"));
-		cg.add(entry("aquele", " [aquele] DET M S <dem> <-sam> @>N"));
+		cg.add("em");
+		cg.add("aquele");
 		
 		MatchResult result = match("naquele");
 		
@@ -160,8 +160,8 @@ public class ContractionEmMatchStrategyUnitTest extends AbstractMatchStrategyUni
 	
 	@Test
 	public void testContraction_em_aquela() throws Exception {
-		cg.add(entry("em", " [em] PRP <sam-> @<ADVL"));
-		cg.add(entry("aquela", "[aquele] DET F S <dem> @>N"));
+		cg.add("em");
+		cg.add("aquela");
 		
 		MatchResult result = match("naquela");
 		
@@ -170,8 +170,8 @@ public class ContractionEmMatchStrategyUnitTest extends AbstractMatchStrategyUni
 	
 	@Test
 	public void testContraction_em_aqueles() throws Exception {
-		cg.add(entry("em", " [em] PRP <sam-> @<ADVL"));
-		cg.add(entry("aqueles", " [aquele] DET M P <dem> @P<"));
+		cg.add("em");
+		cg.add("aqueles");
 		
 		MatchResult result = match("naqueles");
 		
@@ -180,8 +180,8 @@ public class ContractionEmMatchStrategyUnitTest extends AbstractMatchStrategyUni
 	
 	@Test
 	public void testContraction_em_aquelas() throws Exception {
-		cg.add(entry("em", " [em] PRP <sam-> @<ADVL"));
-		cg.add(entry("aquelas", " [aquele] DET F P <dem> <-sam> @P<"));
+		cg.add("em");
+		cg.add("aquelas");
 		
 		MatchResult result = match("naquelas");
 		
@@ -190,8 +190,8 @@ public class ContractionEmMatchStrategyUnitTest extends AbstractMatchStrategyUni
 	
 	@Test
 	public void testContraction_em_aquilo() throws Exception {
-		cg.add(entry("em", " [em] PRP <sam-> @<ADVL"));
-		cg.add(entry("aquilo", " [aquilo] SPEC M S <dem> <-sam> @P<"));
+		cg.add("em");
+		cg.add("aquilo");
 		
 		MatchResult result = match("naquilo");
 		
@@ -200,8 +200,8 @@ public class ContractionEmMatchStrategyUnitTest extends AbstractMatchStrategyUni
 	
 	@Test
 	public void testContraction_em_ele() throws Exception {
-		cg.add(entry("em", " [em] PRP <sam-> @<ADVL"));
-		cg.add(entry("ele", " [ele] PERS M 3S NOM @SUBJ>"));
+		cg.add("em");
+		cg.add("ele");
 		
 		MatchResult result = match("nele");
 		
@@ -210,8 +210,8 @@ public class ContractionEmMatchStrategyUnitTest extends AbstractMatchStrategyUni
 	
 	@Test
 	public void testContraction_em_ela() throws Exception {
-		cg.add(entry("em", " [em] PRP <sam-> @<ADVL"));
-		cg.add(entry("ela", " [ela] PERS F 3S NOM/PIV <-sam> @P<"));
+		cg.add("em");
+		cg.add("ela");
 		
 		MatchResult result = match("nela");
 		
@@ -220,8 +220,8 @@ public class ContractionEmMatchStrategyUnitTest extends AbstractMatchStrategyUni
 	
 	@Test
 	public void testContraction_em_eles() throws Exception {
-		cg.add(entry("em", " [em] PRP <sam-> @<ADVL"));
-		cg.add(entry("eles", " [eles] PERS M 3P NOM/PIV <-sam> @P<"));
+		cg.add("em");
+		cg.add("eles");
 		
 		MatchResult result = match("neles");
 		
@@ -230,8 +230,8 @@ public class ContractionEmMatchStrategyUnitTest extends AbstractMatchStrategyUni
 	
 	@Test
 	public void testContraction_em_elas() throws Exception {
-		cg.add(entry("em", " [em] PRP <sam-> @<ADVL"));
-		cg.add(entry("elas", " [elas] PERS F 3P NOM/PIV <-sam> @P<"));
+		cg.add("em");
+		cg.add("elas");
 		
 		MatchResult result = match("nelas");
 		
@@ -240,8 +240,8 @@ public class ContractionEmMatchStrategyUnitTest extends AbstractMatchStrategyUni
 	
 	@Test
 	public void testContraction_em_um() throws Exception {
-		cg.add(entry("em", " [em] PRP <sam-> @<ADVL"));
-		cg.add(entry("um", " [um] DET M S <arti> @>N"));
+		cg.add("em");
+		cg.add("um");
 		
 		MatchResult result = match("num");
 		
@@ -250,8 +250,8 @@ public class ContractionEmMatchStrategyUnitTest extends AbstractMatchStrategyUni
 	
 	@Test
 	public void testContraction_em_uma() throws Exception {
-		cg.add(entry("em", " [em] PRP <sam-> @<ADVL"));
-		cg.add(entry("uma", " [um] DET F S <arti> @>N"));
+		cg.add("em");
+		cg.add("uma");
 		
 		MatchResult result = match("numa");
 		
@@ -260,8 +260,8 @@ public class ContractionEmMatchStrategyUnitTest extends AbstractMatchStrategyUni
 	
 	@Test
 	public void testContraction_em_uns() throws Exception {
-		cg.add(entry("em", " [em] PRP <sam-> @<ADVL"));
-		cg.add(entry("uns", " [um] DET M P <arti> @>N"));
+		cg.add("em");
+		cg.add("uns");
 		
 		MatchResult result = match("nuns");
 		
@@ -270,8 +270,8 @@ public class ContractionEmMatchStrategyUnitTest extends AbstractMatchStrategyUni
 	
 	@Test
 	public void testContraction_em_umas() throws Exception {
-		cg.add(entry("em", " [em] PRP <sam-> @<ADVL"));
-		cg.add(entry("umas", " [um] DET F P <arti> @>N"));
+		cg.add("em");
+		cg.add("umas");
 		
 		MatchResult result = match("numas");
 		
@@ -280,8 +280,8 @@ public class ContractionEmMatchStrategyUnitTest extends AbstractMatchStrategyUni
 	
 	@Test
 	public void testExpressionContraction_em_o_qual() throws Exception {
-		cg.add(entry("em", " [em] PRP <sam-> @<ADVL"));
-		cg.add(entry("o=qual", " [o=qual] SPEC M S @P< <rel> <-sam> @#FS-N<"));
+		cg.add("em");
+		cg.add("o=qual");
 		
 		MatchResult result = match("no qual");
 		

@@ -10,8 +10,8 @@ public class ContractionPorMatchStrategyUnitTest extends AbstractMatchStrategyUn
 	
 	@Test
 	public void testContraction_de_o() throws Exception {
-		cg.add(entry("por", " [por] PRP <sam-> @ADVL"));
-		cg.add(entry("o", " [o] DET M S <artd> <-sam> @>N"));
+		cg.add("por");
+		cg.add("o");
 		
 		MatchResult result = match("pelo");
 		
@@ -20,8 +20,8 @@ public class ContractionPorMatchStrategyUnitTest extends AbstractMatchStrategyUn
 	
 	@Test
 	public void testContraction_de_a() throws Exception {
-		cg.add(entry("por", " [por] PRP <sam-> @ADVL"));
-		cg.add(entry("a", " [a] DET F S <artd> <-sam> @>N"));
+		cg.add("por");
+		cg.add("a");
 		
 		MatchResult result = match("pela");
 		
@@ -30,8 +30,8 @@ public class ContractionPorMatchStrategyUnitTest extends AbstractMatchStrategyUn
 	
 	@Test
 	public void testContraction_de_os() throws Exception {
-		cg.add(entry("por", " [por] PRP <sam-> @ADVL"));
-		cg.add(entry("os", " [os] DET M P <artd> <-sam> @>N"));
+		cg.add("por");
+		cg.add("os");
 		
 		MatchResult result = match("pelos");
 		
@@ -40,8 +40,8 @@ public class ContractionPorMatchStrategyUnitTest extends AbstractMatchStrategyUn
 	
 	@Test
 	public void testContraction_de_as() throws Exception {
-		cg.add(entry("por", " [por] PRP <sam-> @ADVL"));
-		cg.add(entry("as", " [as] DET F P <artd> <-sam> @>N"));
+		cg.add("por");
+		cg.add("as");
 		
 		MatchResult result = match("pelas");
 		

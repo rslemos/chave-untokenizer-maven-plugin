@@ -10,7 +10,7 @@ public class SentenceMarkerMatchStrategyUnitTest extends AbstractMatchStrategyUn
 	
 	@Test
 	public void testStartSentenceMarker() throws Exception {
-		cg.add(entry("<s>", (String)null));
+		cg.add("<s>");
 		MatchResult result = match("");
 		
 		verifyNoToken(result);
@@ -18,7 +18,7 @@ public class SentenceMarkerMatchStrategyUnitTest extends AbstractMatchStrategyUn
 	
 	@Test
 	public void testEndSentenceMarker() throws Exception {
-		cg.add(entry("</s>", (String)null));
+		cg.add("</s>");
 		MatchResult result = match("");
 		
 		verifyNoToken(result);

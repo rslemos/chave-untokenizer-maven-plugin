@@ -10,7 +10,7 @@ public class QuotesMatchStrategyUnitTest extends AbstractMatchStrategyUnitTest {
 	
 	@Test
 	public void testDoubleQuotesMatchesKey() throws Exception {
-		cg.add(entry("$\"", " [$\"] PU"));
+		cg.add("$\"");
 		
 		MatchResult result = match("\"abcd");
 		

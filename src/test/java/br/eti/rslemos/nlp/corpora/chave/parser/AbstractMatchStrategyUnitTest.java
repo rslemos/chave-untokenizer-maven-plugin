@@ -101,8 +101,4 @@ public abstract class AbstractMatchStrategyUnitTest {
 		assertThat(result.getMatches()[1].from, is(equalTo(left.length())));
 		assertThat(result.getMatches()[1].to, is(equalTo(left.length() + middle.length() + right.length())));
 	}
-	
-	protected String entry(String key, String value) {
-		return key;
-	}
 }

@@ -10,7 +10,7 @@ public class NewLineMatchStrategyUnitTest extends AbstractMatchStrategyUnitTest 
 	
 	@Test
 	public void testNewLine() throws Exception {
-		cg.add(entry("$¶", " [$¶] PU <<<"));
+		cg.add("$¶");
 		MatchResult result = match("\n");
 		
 		verifyTokensInSequence(result, "\n");
@@ -18,7 +18,7 @@ public class NewLineMatchStrategyUnitTest extends AbstractMatchStrategyUnitTest 
 
 	@Test
 	public void testOptionalNewLine() throws Exception {
-		cg.add(entry("$¶", " [$¶] PU <<<"));
+		cg.add("$¶");
 		MatchResult result = match("abcd");
 		
 		verifyTokensInSequence(result, "");
@@ -26,7 +26,7 @@ public class NewLineMatchStrategyUnitTest extends AbstractMatchStrategyUnitTest 
 
 	@Test
 	public void testEmptyInput() throws Exception {
-		cg.add(entry("$¶", " [$¶] PU <<<"));
+		cg.add("$¶");
 		MatchResult result = match("");
 		
 		verifyTokensInSequence(result, "");

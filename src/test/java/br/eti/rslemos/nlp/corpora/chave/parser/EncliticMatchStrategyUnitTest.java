@@ -10,8 +10,8 @@ public class EncliticMatchStrategyUnitTest extends AbstractMatchStrategyUnitTest
 	
 	@Test
 	public void testInfinitiv_ar_lo() throws Exception {
-		cg.add(entry("Convocar-", " [convocar] V INF @IMV <hyfen> @#ICL-SUBJ>"));
-		cg.add(entry("lo", " [ele] PERS M 3S ACC @<ACC"));
+		cg.add("Convocar-");
+		cg.add("lo");
 		
 		MatchResult result = match("Convocá-lo");
 		
@@ -20,8 +20,8 @@ public class EncliticMatchStrategyUnitTest extends AbstractMatchStrategyUnitTest
 
 	@Test
 	public void testInfinitiv_ar_la() throws Exception {
-		cg.add(entry("Convocar-", " [convocar] V INF @IMV <hyfen> @#ICL-SUBJ>"));
-		cg.add(entry("la", " [ela] PERS F 3S ACC @<ACC"));
+		cg.add("Convocar-");
+		cg.add("la");
 		
 		MatchResult result = match("Convocá-la");
 		
@@ -30,8 +30,8 @@ public class EncliticMatchStrategyUnitTest extends AbstractMatchStrategyUnitTest
 	
 	@Test
 	public void testInfinitiv_ar_los() throws Exception {
-		cg.add(entry("Convocar-", " [convocar] V INF @IMV <hyfen> @#ICL-SUBJ>"));
-		cg.add(entry("los", " [ele] PERS M 3P ACC @<ACC"));
+		cg.add("Convocar-");
+		cg.add("los");
 		
 		MatchResult result = match("Convocá-los");
 		
@@ -40,8 +40,8 @@ public class EncliticMatchStrategyUnitTest extends AbstractMatchStrategyUnitTest
 
 	@Test
 	public void testInfinitiv_ar_las() throws Exception {
-		cg.add(entry("Convocar-", " [convocar] V INF @IMV <hyfen> @#ICL-SUBJ>"));
-		cg.add(entry("las", " [ela] PERS F 3M ACC @<ACC"));
+		cg.add("Convocar-");
+		cg.add("las");
 		
 		MatchResult result = match("Convocá-las");
 		
@@ -50,8 +50,8 @@ public class EncliticMatchStrategyUnitTest extends AbstractMatchStrategyUnitTest
 	
 	@Test
 	public void testInfinitiv_er_lo() throws Exception {
-		cg.add(entry("fazer-", " [fazer] V INF @IMV <hyfen> @#ICL-P<"));
-		cg.add(entry("lo", " [ele] PERS M 3S ACC @<ACC"));
+		cg.add("fazer-");
+		cg.add("lo");
 		
 		MatchResult result = match("fazê-lo");
 		
@@ -60,8 +60,8 @@ public class EncliticMatchStrategyUnitTest extends AbstractMatchStrategyUnitTest
 
 	@Test
 	public void testInfinitiv_er_la() throws Exception {
-		cg.add(entry("fazer-", " [fazer] V INF @IMV <hyfen> @#ICL-P<"));
-		cg.add(entry("la", " [ela] PERS F 3S ACC @<ACC"));
+		cg.add("fazer-");
+		cg.add("la");
 		
 		MatchResult result = match("fazê-la");
 		
@@ -70,8 +70,8 @@ public class EncliticMatchStrategyUnitTest extends AbstractMatchStrategyUnitTest
 	
 	@Test
 	public void testInfinitiv_er_los() throws Exception {
-		cg.add(entry("fazer-", " [fazer] V INF @IMV <hyfen> @#ICL-P<"));
-		cg.add(entry("los", " [ele] PERS M 3P ACC @<ACC"));
+		cg.add("fazer-");
+		cg.add("los");
 		
 		MatchResult result = match("fazê-los");
 		
@@ -80,8 +80,8 @@ public class EncliticMatchStrategyUnitTest extends AbstractMatchStrategyUnitTest
 
 	@Test
 	public void testInfinitiv_er_las() throws Exception {
-		cg.add(entry("fazer-", " [fazer] V INF @IMV <hyfen> @#ICL-P<"));
-		cg.add(entry("las", " [ela] PERS F 3M ACC @<ACC"));
+		cg.add("fazer-");
+		cg.add("las");
 		
 		MatchResult result = match("fazê-las");
 		
@@ -90,8 +90,8 @@ public class EncliticMatchStrategyUnitTest extends AbstractMatchStrategyUnitTest
 	
 	@Test
 	public void testInfinitiv_ir_lo() throws Exception {
-		cg.add(entry("assistir-", " [assistir] V INF @IMV <hyfen> @#ICL-P<"));
-		cg.add(entry("lo", " [ele] PERS M 3S ACC @<ACC"));
+		cg.add("assistir-");
+		cg.add("lo");
 		
 		MatchResult result = match("assisti-lo");
 		
@@ -100,8 +100,8 @@ public class EncliticMatchStrategyUnitTest extends AbstractMatchStrategyUnitTest
 
 	@Test
 	public void testInfinitiv_ir_la() throws Exception {
-		cg.add(entry("assistir-", " [assistir] V INF @IMV <hyfen> @#ICL-P<"));
-		cg.add(entry("la", " [ela] PERS F 3S ACC @<ACC"));
+		cg.add("assistir-");
+		cg.add("la");
 		
 		MatchResult result = match("assisti-la");
 		
@@ -110,8 +110,8 @@ public class EncliticMatchStrategyUnitTest extends AbstractMatchStrategyUnitTest
 	
 	@Test
 	public void testInfinitiv_ir_los() throws Exception {
-		cg.add(entry("assistir-", " [assistir] V INF @IMV <hyfen> @#ICL-P<"));
-		cg.add(entry("los", " [ele] PERS M 3P ACC @<ACC"));
+		cg.add("assistir-");
+		cg.add("los");
 		
 		MatchResult result = match("assisti-los");
 		
@@ -120,8 +120,8 @@ public class EncliticMatchStrategyUnitTest extends AbstractMatchStrategyUnitTest
 
 	@Test
 	public void testInfinitiv_ir_las() throws Exception {
-		cg.add(entry("assistir-", " [assistir] V INF @IMV <hyfen> @#ICL-P<"));
-		cg.add(entry("las", " [ela] PERS F 3M ACC @<ACC"));
+		cg.add("assistir-");
+		cg.add("las");
 		
 		MatchResult result = match("assisti-las");
 		
@@ -130,8 +130,8 @@ public class EncliticMatchStrategyUnitTest extends AbstractMatchStrategyUnitTest
 	
 	@Test
 	public void testInfinitiv_por_lo() throws Exception {
-		cg.add(entry("assistir-", " [assistir] V INF @IMV <hyfen> @#ICL-P<"));
-		cg.add(entry("lo", " [ele] PERS M 3S ACC @<ACC"));
+		cg.add("assistir-");
+		cg.add("lo");
 		
 		MatchResult result = match("assisti-lo");
 		
@@ -140,8 +140,8 @@ public class EncliticMatchStrategyUnitTest extends AbstractMatchStrategyUnitTest
 
 	@Test
 	public void testInfinitiv_por_la() throws Exception {
-		cg.add(entry("assistir-", " [assistir] V INF @IMV <hyfen> @#ICL-P<"));
-		cg.add(entry("la", " [ela] PERS F 3S ACC @<ACC"));
+		cg.add("assistir-");
+		cg.add("la");
 		
 		MatchResult result = match("assisti-la");
 		
@@ -150,8 +150,8 @@ public class EncliticMatchStrategyUnitTest extends AbstractMatchStrategyUnitTest
 	
 	@Test
 	public void testInfinitiv_por_los() throws Exception {
-		cg.add(entry("assistir-", " [assistir] V INF @IMV <hyfen> @#ICL-P<"));
-		cg.add(entry("los", " [ele] PERS M 3P ACC @<ACC"));
+		cg.add("assistir-");
+		cg.add("los");
 		
 		MatchResult result = match("assisti-los");
 		
@@ -160,8 +160,8 @@ public class EncliticMatchStrategyUnitTest extends AbstractMatchStrategyUnitTest
 
 	@Test
 	public void testInfinitiv_por_las() throws Exception {
-		cg.add(entry("assistir-", " [assistir] V INF @IMV <hyfen> @#ICL-P<"));
-		cg.add(entry("las", " [ela] PERS F 3M ACC @<ACC"));
+		cg.add("assistir-");
+		cg.add("las");
 		
 		MatchResult result = match("assisti-las");
 		

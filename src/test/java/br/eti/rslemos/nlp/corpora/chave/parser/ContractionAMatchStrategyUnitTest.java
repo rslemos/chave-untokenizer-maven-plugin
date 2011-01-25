@@ -10,8 +10,8 @@ public class ContractionAMatchStrategyUnitTest extends AbstractMatchStrategyUnit
 	
 	@Test
 	public void testContraction_a_o() throws Exception {
-		cg.add(entry("a", " [a] PRP <sam-> @ADVL"));
-		cg.add(entry("o", " [o] DET M S <artd> <-sam> @>N"));
+		cg.add("a");
+		cg.add("o");
 		
 		MatchResult result = match("ao");
 		
@@ -20,8 +20,8 @@ public class ContractionAMatchStrategyUnitTest extends AbstractMatchStrategyUnit
 	
 	@Test
 	public void testContraction_a_a() throws Exception {
-		cg.add(entry("a", " [a] PRP <sam-> @ADVL"));
-		cg.add(entry("a", " [o] DET F S <artd> <-sam> @>N"));
+		cg.add("a");
+		cg.add("a");
 		
 		MatchResult result = match("à");
 		
@@ -30,8 +30,8 @@ public class ContractionAMatchStrategyUnitTest extends AbstractMatchStrategyUnit
 	
 	@Test
 	public void testContraction_a_os() throws Exception {
-		cg.add(entry("a", " [a] PRP <sam-> @ADVL"));
-		cg.add(entry("os", " [o] DET M P <artd> <-sam> @>N"));
+		cg.add("a");
+		cg.add("os");
 		
 		MatchResult result = match("aos");
 		
@@ -40,8 +40,8 @@ public class ContractionAMatchStrategyUnitTest extends AbstractMatchStrategyUnit
 	
 	@Test
 	public void testContraction_a_as() throws Exception {
-		cg.add(entry("a", " [a] PRP <sam-> @ADVL"));
-		cg.add(entry("as", " [o] DET F P <artd> <-sam> @>N"));
+		cg.add("a");
+		cg.add("as");
 		
 		MatchResult result = match("às");
 		
@@ -50,8 +50,8 @@ public class ContractionAMatchStrategyUnitTest extends AbstractMatchStrategyUnit
 	
 	@Test
 	public void testContraction_a_aquele() throws Exception {
-		cg.add(entry("a", " [a] PRP <sam-> @ADVL"));
-		cg.add(entry("aquele", "[aquele] DET M S <dem> @>N"));
+		cg.add("a");
+		cg.add("aquele");
 		
 		MatchResult result = match("àquele");
 		
@@ -60,8 +60,8 @@ public class ContractionAMatchStrategyUnitTest extends AbstractMatchStrategyUnit
 	
 	@Test
 	public void testContraction_a_aquela() throws Exception {
-		cg.add(entry("a", " [a] PRP <sam-> @ADVL"));
-		cg.add(entry("aquela", "[aquele] DET F S <dem> @>N"));
+		cg.add("a");
+		cg.add("aquela");
 		
 		MatchResult result = match("àquela");
 		
@@ -70,8 +70,8 @@ public class ContractionAMatchStrategyUnitTest extends AbstractMatchStrategyUnit
 	
 	@Test
 	public void testContraction_a_aqueles() throws Exception {
-		cg.add(entry("a", " [a] PRP <sam-> @ADVL"));
-		cg.add(entry("aqueles", " [aquele] DET M P <dem> @P<"));
+		cg.add("a");
+		cg.add("aqueles");
 		
 		MatchResult result = match("àqueles");
 		
@@ -80,8 +80,8 @@ public class ContractionAMatchStrategyUnitTest extends AbstractMatchStrategyUnit
 	
 	@Test
 	public void testContraction_a_aquelas() throws Exception {
-		cg.add(entry("a", " [a] PRP <sam-> @ADVL"));
-		cg.add(entry("aquelas", " [aquele] DET F P <dem> <-sam> @P<"));
+		cg.add("a");
+		cg.add("aquelas");
 		
 		MatchResult result = match("àquelas");
 		
@@ -90,8 +90,8 @@ public class ContractionAMatchStrategyUnitTest extends AbstractMatchStrategyUnit
 
 	@Test
 	public void testContraction_a_aquilo() throws Exception {
-		cg.add(entry("a", " [a] PRP <sam-> @ADVL"));
-		cg.add(entry("aquilo", " [aquilo] SPEC M S <dem> <-sam> @P<"));
+		cg.add("a");
+		cg.add("aquilo");
 		
 		MatchResult result = match("àquilo");
 		
@@ -100,8 +100,8 @@ public class ContractionAMatchStrategyUnitTest extends AbstractMatchStrategyUnit
 	
 	@Test
 	public void testExpressionContraction_Quanto_a_as() throws Exception {
-		cg.add(entry("Quanto=a", " [quanto=a] PRP <sam-> @ADVL>"));
-		cg.add(entry("as", " [o] DET F P <artd> <-sam> @>N"));
+		cg.add("Quanto=a");
+		cg.add("as");
 		
 		MatchResult result = match("Quanto às");
 		
@@ -110,8 +110,8 @@ public class ContractionAMatchStrategyUnitTest extends AbstractMatchStrategyUnit
 	
 	@Test
 	public void testExpressionContraction_a_as_quais() throws Exception {
-		cg.add(entry("a", " [a] PRP <sam-> @ADVL"));
-		cg.add(entry("as=quais", " [o=qual] SPEC F P @P< <rel> <-sam> @#FS-N<"));
+		cg.add("a");
+		cg.add("as=quais");
 		
 		MatchResult result = match("às quais");
 		
@@ -120,8 +120,8 @@ public class ContractionAMatchStrategyUnitTest extends AbstractMatchStrategyUnit
 	
 	@Test
 	public void testExpressionContraction_devido_a_a() throws Exception {
-		cg.add(entry("devido=a", " [devido=a] PRP <sam-> @<ADVL"));
-		cg.add(entry("a", " [o] DET F S <-sam> <artd> @>N"));
+		cg.add("devido=a");
+		cg.add("a");
 		
 		MatchResult result = match("devido à");
 		
@@ -130,8 +130,8 @@ public class ContractionAMatchStrategyUnitTest extends AbstractMatchStrategyUnit
 	
 	@Test
 	public void testExpressionContraction_devido_a_os_quais() throws Exception {
-		cg.add(entry("devido=a", " [devido=a] PRP <sam-> @<ADVL"));
-		cg.add(entry("os=quais", " [o=qual] SPEC M P @P< <rel> <-sam> @#FS-N<"));
+		cg.add("devido=a");
+		cg.add("os=quais");
 		
 		MatchResult result = match("devido aos quais");
 		

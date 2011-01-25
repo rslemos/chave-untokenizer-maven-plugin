@@ -10,8 +10,8 @@ public class ContractionComMatchStrategyUnitTest extends AbstractMatchStrategyUn
 	
 	@Test
 	public void testContraction_com_mim() throws Exception {
-		cg.add(entry("com", " [com] PRP <sam-> @<ADVL"));
-		cg.add(entry("mim", " [eu] PERS M/F 1S PIV @P<"));
+		cg.add("com");
+		cg.add("mim");
 		
 		MatchResult result = match("comigo");
 		
@@ -20,8 +20,8 @@ public class ContractionComMatchStrategyUnitTest extends AbstractMatchStrategyUn
 	
 	@Test
 	public void testContraction_com_ti() throws Exception {
-		cg.add(entry("com", " [com] PRP <sam-> @<ADVL"));
-		cg.add(entry("ti", " [tu] PERS M/F 2S PIV @P<"));
+		cg.add("com");
+		cg.add("ti");
 		
 		MatchResult result = match("contigo");
 		
@@ -30,8 +30,8 @@ public class ContractionComMatchStrategyUnitTest extends AbstractMatchStrategyUn
 	
 	@Test
 	public void testContraction_com_si() throws Exception {
-		cg.add(entry("com", " [com] PRP <sam-> @<ADVL"));
-		cg.add(entry("si", " [se] <refl> PERS M/F 3S/P PIV @P<"));
+		cg.add("com");
+		cg.add("si");
 		
 		MatchResult result = match("consigo");
 		
@@ -40,8 +40,8 @@ public class ContractionComMatchStrategyUnitTest extends AbstractMatchStrategyUn
 	
 	@Test
 	public void testContraction_com_nos() throws Exception {
-		cg.add(entry("com", " [com] PRP <sam-> @<ADVL"));
-		cg.add(entry("nos", " [nós] PERS M/F 1P PIV @P<"));
+		cg.add("com");
+		cg.add("nos");
 		
 		MatchResult result = match("conosco");
 		
@@ -50,8 +50,8 @@ public class ContractionComMatchStrategyUnitTest extends AbstractMatchStrategyUn
 	
 	@Test
 	public void testContraction_com_vos() throws Exception {
-		cg.add(entry("com", " [com] PRP <sam-> @<ADVL"));
-		cg.add(entry("vos", " [vós] PERS M/F 2P PIV @P<"));
+		cg.add("com");
+		cg.add("vos");
 		
 		MatchResult result = match("convosco");
 		
