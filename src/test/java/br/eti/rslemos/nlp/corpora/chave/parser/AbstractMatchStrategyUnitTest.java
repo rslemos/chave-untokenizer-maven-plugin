@@ -6,6 +6,7 @@ import static org.junit.Assert.assertThat;
 
 import java.util.LinkedList;
 import java.util.List;
+import java.util.Set;
 
 import br.eti.rslemos.nlp.corpora.chave.parser.MatchResult.Match;
 
@@ -19,7 +20,11 @@ public abstract class AbstractMatchStrategyUnitTest {
 	}
 
 	protected MatchResult match(String sgml) {
-		return strategy.match(sgml, cg);
+		Set<MatchResult> set = strategy.match(sgml, cg);
+		if (set.isEmpty())
+			return null;
+		else
+			return set.iterator().next();
 	}
 
 	protected void verifyTextButNoToken(MatchResult result, String text) {

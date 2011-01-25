@@ -3,7 +3,7 @@ package br.eti.rslemos.nlp.corpora.chave.parser;
 import java.util.Arrays;
 import java.util.List;
 
-public class DamerauLevenshteinMatchStrategy implements MatchStrategy {
+public class DamerauLevenshteinMatchStrategy extends AbstractStrategy implements MatchStrategy {
 
 	private final int maxDistance;
 
@@ -11,7 +11,7 @@ public class DamerauLevenshteinMatchStrategy implements MatchStrategy {
 		this.maxDistance = maxDistance;
 	}
 
-	public MatchResult match(String text, List<String> cg) {
+	public MatchResult match0(String text, List<String> cg) {
 		String key0 = cg.get(0);
 
 		if (cg.size() > 1) {

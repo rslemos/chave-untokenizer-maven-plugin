@@ -6,9 +6,9 @@ import static java.lang.Character.toLowerCase;
 import java.util.Arrays;
 import java.util.List;
 
-public class DirectMatchStrategy implements MatchStrategy {
+public class DirectMatchStrategy extends AbstractStrategy implements MatchStrategy {
 	
-	public MatchResult match(String text, List<String> cg) {
+	public MatchResult match0(String text, List<String> cg) {
 		String currentEntry = cg.get(0);
 		String currentKey = getKey(currentEntry);
 		

@@ -4,9 +4,9 @@ import static java.lang.Character.isWhitespace;
 
 import java.util.List;
 
-public class WhitespaceMatchStrategy implements MatchStrategy {
+public class WhitespaceMatchStrategy extends AbstractStrategy implements MatchStrategy {
 
-	public MatchResult match(String text, List<String> cg) {
+	public MatchResult match0(String text, List<String> cg) {
 		int k = 0;
 		
 		try {

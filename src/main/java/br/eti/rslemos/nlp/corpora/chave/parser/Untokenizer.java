@@ -8,7 +8,9 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Formatter;
 import java.util.Iterator;
+import java.util.LinkedHashSet;
 import java.util.List;
+import java.util.Set;
 
 
 public class Untokenizer {
@@ -43,13 +45,11 @@ public class Untokenizer {
 outer:
 		while (i < cg1.size()) {
 			try {
-				ArrayList<MatchResult> mementos = new ArrayList<MatchResult>(strategies.length);
+				Set<MatchResult> mementos = new LinkedHashSet<MatchResult>(strategies.length);
 				
 				for (MatchStrategy strategy : strategies) {
-					mementos.add(strategy.match(buffer.substring(k), onlyKeys(cg1.subList(i, cg1.size()))));
+					mementos.addAll(strategy.match(buffer.substring(k), onlyKeys(cg1.subList(i, cg1.size()))));
 				}
-				
-				do {} while (mementos.remove(null));
 				
 				if (mementos.size() > 0) {
 					int minSkip = Integer.MAX_VALUE;
@@ -61,12 +61,12 @@ outer:
 					}
 					
 					if (minSkip == 0) {
-						MatchResult best = mementos.get(0);
+						MatchResult best = null;
 						int bestLength = -1;
 						for (MatchResult memento : mementos) {
-							bestLength = best != null ? best.getMatchLength() : -1;
 							if (memento.getMatchLength() > bestLength) {
 								best = memento;
+								bestLength = best.getMatchLength();
 							}
 						}
 						if (best != null) {

@@ -1,6 +1,7 @@
 package br.eti.rslemos.nlp.corpora.chave.parser;
 
 import java.util.List;
+import java.util.Set;
 
 public interface MatchStrategy {
 	/**
@@ -11,5 +12,5 @@ public interface MatchStrategy {
 	 * @param text
 	 * @param cg
 	 */
-	MatchResult match(String text, List<String> cg);
+	Set<MatchResult> match(String text, List<String> cg);
 }

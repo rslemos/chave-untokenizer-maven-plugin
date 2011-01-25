@@ -2,9 +2,9 @@ package br.eti.rslemos.nlp.corpora.chave.parser;
 
 import java.util.List;
 
-public class NewLineMatchStrategy implements MatchStrategy {
+public class NewLineMatchStrategy extends AbstractStrategy implements MatchStrategy {
 
-	public MatchResult match(String text, List<String> cg) {
+	public MatchResult match0(String text, List<String> cg) {
 		if ("$¶".equals(cg.get(0))) {
 			int l;
 			try {

@@ -5,8 +5,9 @@ import static java.lang.Character.toLowerCase;
 import java.util.Arrays;
 import java.util.Collections;
 import java.util.List;
+import java.util.Set;
 
-public abstract class AbstractContractionMatchStrategy implements MatchStrategy {
+public abstract class AbstractContractionMatchStrategy extends AbstractStrategy implements MatchStrategy {
 
 	private static final DirectMatchStrategy DM = new DirectMatchStrategy();
 	
@@ -43,7 +44,7 @@ public abstract class AbstractContractionMatchStrategy implements MatchStrategy 
 
 
 
-	public MatchResult match(String text, List<String> cg) {
+	public MatchResult match0(String text, List<String> cg) {
 		String key0 = cg.get(0).toLowerCase();
 		
 		if (!(cg0.equals(key0) || key0.endsWith("=" + cg0)))
@@ -60,10 +61,11 @@ public abstract class AbstractContractionMatchStrategy implements MatchStrategy 
 		int k = 0;
 		if (key0.endsWith("=" + cg0)) {
 			String fauxKey = key0.replaceAll("=" + cg0 + "$", "=");
-			MatchResult result = DM.match(text, Collections.singletonList(fauxKey));
-			if (result == null)
+			Set<MatchResult> resultSet = DM.match(text, Collections.singletonList(fauxKey));
+			if (resultSet.isEmpty())
 				return null;
 			
+			MatchResult result = resultSet.iterator().next();
 			k += result.getMatchLength() + result.getSkipLength();
 			cleft += result.getMatchLength();
 			cskip = result.getSkipLength();
@@ -91,10 +93,11 @@ public abstract class AbstractContractionMatchStrategy implements MatchStrategy 
 		
 		if (key1.startsWith(cg1[idx] + "=")) {
 			String fauxKey = key1.replaceAll("^" + cg1[idx] + "=", "=");
-			MatchResult result = DM.match(text.substring(k), Collections.singletonList(fauxKey));
-			if (result == null)
+			Set<MatchResult> resultSet = DM.match(text.substring(k), Collections.singletonList(fauxKey));
+			if (resultSet.isEmpty())
 				return null;
 			
+			MatchResult result = resultSet.iterator().next();
 			cright += result.getMatchLength();
 		}
 
