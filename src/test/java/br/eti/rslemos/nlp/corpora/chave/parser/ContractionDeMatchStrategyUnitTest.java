@@ -13,7 +13,7 @@ public class ContractionDeMatchStrategyUnitTest extends AbstractMatchStrategyUni
 		cg.add("de");
 		cg.add("o");
 		
-		MatchResult result = match("do");
+		Match result = match("do");
 		
 		verifyTokensInSequence(result, "d", "o");
 	}
@@ -23,7 +23,7 @@ public class ContractionDeMatchStrategyUnitTest extends AbstractMatchStrategyUni
 		cg.add("de");
 		cg.add("a");
 		
-		MatchResult result = match("da");
+		Match result = match("da");
 		
 		verifyTokensInSequence(result, "d", "a");
 	}
@@ -33,7 +33,7 @@ public class ContractionDeMatchStrategyUnitTest extends AbstractMatchStrategyUni
 		cg.add("de");
 		cg.add("os");
 		
-		MatchResult result = match("dos");
+		Match result = match("dos");
 		
 		verifyTokensInSequence(result, "d", "os");
 	}
@@ -43,7 +43,7 @@ public class ContractionDeMatchStrategyUnitTest extends AbstractMatchStrategyUni
 		cg.add("de");
 		cg.add("as");
 		
-		MatchResult result = match("das");
+		Match result = match("das");
 		
 		verifyTokensInSequence(result, "d", "as");
 	}
@@ -53,7 +53,7 @@ public class ContractionDeMatchStrategyUnitTest extends AbstractMatchStrategyUni
 		cg.add("de");
 		cg.add("este");
 		
-		MatchResult result = match("deste");
+		Match result = match("deste");
 		
 		verifyTokensInSequence(result, "d", "este");
 	}
@@ -63,7 +63,7 @@ public class ContractionDeMatchStrategyUnitTest extends AbstractMatchStrategyUni
 		cg.add("de");
 		cg.add("esse");
 		
-		MatchResult result = match("desse");
+		Match result = match("desse");
 		
 		verifyTokensInSequence(result, "d", "esse");
 	}
@@ -73,7 +73,7 @@ public class ContractionDeMatchStrategyUnitTest extends AbstractMatchStrategyUni
 		cg.add("de");
 		cg.add("esta");
 		
-		MatchResult result = match("desta");
+		Match result = match("desta");
 		
 		verifyTokensInSequence(result, "d", "esta");
 	}
@@ -83,7 +83,7 @@ public class ContractionDeMatchStrategyUnitTest extends AbstractMatchStrategyUni
 		cg.add("de");
 		cg.add("essa");
 		
-		MatchResult result = match("dessa");
+		Match result = match("dessa");
 		
 		verifyTokensInSequence(result, "d", "essa");
 	}
@@ -93,7 +93,7 @@ public class ContractionDeMatchStrategyUnitTest extends AbstractMatchStrategyUni
 		cg.add("de");
 		cg.add("estes");
 		
-		MatchResult result = match("destes");
+		Match result = match("destes");
 		
 		verifyTokensInSequence(result, "d", "estes");
 	}
@@ -103,7 +103,7 @@ public class ContractionDeMatchStrategyUnitTest extends AbstractMatchStrategyUni
 		cg.add("de");
 		cg.add("esses");
 		
-		MatchResult result = match("desses");
+		Match result = match("desses");
 		
 		verifyTokensInSequence(result, "d", "esses");
 	}
@@ -113,7 +113,7 @@ public class ContractionDeMatchStrategyUnitTest extends AbstractMatchStrategyUni
 		cg.add("de");
 		cg.add("estas");
 		
-		MatchResult result = match("destas");
+		Match result = match("destas");
 		
 		verifyTokensInSequence(result, "d", "estas");
 	}
@@ -123,7 +123,7 @@ public class ContractionDeMatchStrategyUnitTest extends AbstractMatchStrategyUni
 		cg.add("de");
 		cg.add("essas");
 		
-		MatchResult result = match("dessas");
+		Match result = match("dessas");
 		
 		verifyTokensInSequence(result, "d", "essas");
 	}
@@ -133,7 +133,7 @@ public class ContractionDeMatchStrategyUnitTest extends AbstractMatchStrategyUni
 		cg.add("de");
 		cg.add("isto");
 		
-		MatchResult result = match("disto");
+		Match result = match("disto");
 		
 		verifyTokensInSequence(result, "d", "isto");
 	}
@@ -143,7 +143,7 @@ public class ContractionDeMatchStrategyUnitTest extends AbstractMatchStrategyUni
 		cg.add("de");
 		cg.add("isso");
 		
-		MatchResult result = match("disso");
+		Match result = match("disso");
 		
 		verifyTokensInSequence(result, "d", "isso");
 	}
@@ -153,7 +153,7 @@ public class ContractionDeMatchStrategyUnitTest extends AbstractMatchStrategyUni
 		cg.add("de");
 		cg.add("aquele");
 		
-		MatchResult result = match("daquele");
+		Match result = match("daquele");
 		
 		verifyTokensInSequence(result, "d", "aquele");
 	}
@@ -163,7 +163,7 @@ public class ContractionDeMatchStrategyUnitTest extends AbstractMatchStrategyUni
 		cg.add("de");
 		cg.add("aquela");
 		
-		MatchResult result = match("daquela");
+		Match result = match("daquela");
 		
 		verifyTokensInSequence(result, "d", "aquela");
 	}
@@ -173,7 +173,7 @@ public class ContractionDeMatchStrategyUnitTest extends AbstractMatchStrategyUni
 		cg.add("de");
 		cg.add("aqueles");
 		
-		MatchResult result = match("daqueles");
+		Match result = match("daqueles");
 		
 		verifyTokensInSequence(result, "d", "aqueles");
 	}
@@ -183,7 +183,7 @@ public class ContractionDeMatchStrategyUnitTest extends AbstractMatchStrategyUni
 		cg.add("de");
 		cg.add("aquelas");
 		
-		MatchResult result = match("daquelas");
+		Match result = match("daquelas");
 		
 		verifyTokensInSequence(result, "d", "aquelas");
 	}
@@ -193,7 +193,7 @@ public class ContractionDeMatchStrategyUnitTest extends AbstractMatchStrategyUni
 		cg.add("de");
 		cg.add("aquilo");
 		
-		MatchResult result = match("daquilo");
+		Match result = match("daquilo");
 		
 		verifyTokensInSequence(result, "d", "aquilo");
 	}
@@ -203,7 +203,7 @@ public class ContractionDeMatchStrategyUnitTest extends AbstractMatchStrategyUni
 		cg.add("de");
 		cg.add("ele");
 		
-		MatchResult result = match("dele");
+		Match result = match("dele");
 		
 		verifyTokensInSequence(result, "d", "ele");
 	}
@@ -213,7 +213,7 @@ public class ContractionDeMatchStrategyUnitTest extends AbstractMatchStrategyUni
 		cg.add("de");
 		cg.add("ela");
 		
-		MatchResult result = match("dela");
+		Match result = match("dela");
 		
 		verifyTokensInSequence(result, "d", "ela");
 	}
@@ -223,7 +223,7 @@ public class ContractionDeMatchStrategyUnitTest extends AbstractMatchStrategyUni
 		cg.add("de");
 		cg.add("eles");
 		
-		MatchResult result = match("deles");
+		Match result = match("deles");
 		
 		verifyTokensInSequence(result, "d", "eles");
 	}
@@ -233,7 +233,7 @@ public class ContractionDeMatchStrategyUnitTest extends AbstractMatchStrategyUni
 		cg.add("de");
 		cg.add("elas");
 		
-		MatchResult result = match("delas");
+		Match result = match("delas");
 		
 		verifyTokensInSequence(result, "d", "elas");
 	}
@@ -243,7 +243,7 @@ public class ContractionDeMatchStrategyUnitTest extends AbstractMatchStrategyUni
 		cg.add("de");
 		cg.add("aí");
 		
-		MatchResult result = match("daí");
+		Match result = match("daí");
 		
 		verifyTokensInSequence(result, "d", "aí");
 	}
@@ -253,7 +253,7 @@ public class ContractionDeMatchStrategyUnitTest extends AbstractMatchStrategyUni
 		cg.add("Além=de");
 		cg.add("isso");
 		
-		MatchResult result = match("Além disso");
+		Match result = match("Além disso");
 		
 		verifyTokensInSequence(result, "Além d", "isso");
 	}

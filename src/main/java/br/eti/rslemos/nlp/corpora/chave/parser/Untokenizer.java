@@ -44,7 +44,7 @@ public class Untokenizer {
 outer:
 		while (i < cg1.size()) {
 			try {
-				Set<MatchResult> mementos = new LinkedHashSet<MatchResult>(strategies.length);
+				Set<Match> mementos = new LinkedHashSet<Match>(strategies.length);
 				
 				for (MatchStrategy strategy : strategies) {
 					mementos.addAll(strategy.match(buffer.substring(k), onlyKeys(cg1.subList(i, cg1.size()))));
@@ -52,17 +52,17 @@ outer:
 				
 				if (mementos.size() > 0) {
 					int minSkip = Integer.MAX_VALUE;
-					for (Iterator<MatchResult> iterator = mementos.iterator(); iterator.hasNext();) {
-						MatchResult memento = iterator.next();
+					for (Iterator<Match> iterator = mementos.iterator(); iterator.hasNext();) {
+						Match memento = iterator.next();
 						minSkip = Math.min(minSkip, memento.getSkipLength());
 						if (memento.getSkipLength() > 0)
 							iterator.remove();
 					}
 					
 					if (minSkip == 0) {
-						MatchResult best = null;
+						Match best = null;
 						int bestLength = -1;
-						for (MatchResult memento : mementos) {
+						for (Match memento : mementos) {
 							if (memento.getMatchLength() > bestLength) {
 								best = memento;
 								bestLength = best.getMatchLength();

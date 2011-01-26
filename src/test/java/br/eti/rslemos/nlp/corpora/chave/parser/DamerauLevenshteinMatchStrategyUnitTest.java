@@ -13,7 +13,7 @@ public class DamerauLevenshteinMatchStrategyUnitTest extends AbstractMatchStrate
 	@Test
 	public void testSingleWordDistance1() throws Exception {
 		cg.add("3º.");
-		MatchResult result = match("3.º");
+		Match result = match("3.º");
 		
 		verifyTokensInSequence(result, "3.º");
 	}
@@ -21,7 +21,7 @@ public class DamerauLevenshteinMatchStrategyUnitTest extends AbstractMatchStrate
 	@Test
 	public void testMatchTillWhitespace() throws Exception {
 		cg.add("3º.");
-		MatchResult result = match("3. º");
+		Match result = match("3. º");
 		
 		verifyTokensInSequence(result, "3.");
 	}
@@ -50,7 +50,7 @@ public class DamerauLevenshteinMatchStrategyUnitTest extends AbstractMatchStrate
 		cg.add("sra.");
 		cg.add("$.");
 
-		MatchResult result = match("sra.");
+		Match result = match("sra.");
 		
 		verifyTokensInSequence(result, "sra");
 	}

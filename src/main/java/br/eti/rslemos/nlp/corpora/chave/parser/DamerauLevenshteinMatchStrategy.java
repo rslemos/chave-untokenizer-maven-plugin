@@ -1,6 +1,6 @@
 package br.eti.rslemos.nlp.corpora.chave.parser;
 
-import static br.eti.rslemos.nlp.corpora.chave.parser.MatchResult.result;
+import static br.eti.rslemos.nlp.corpora.chave.parser.Match.result;
 
 import java.util.Arrays;
 import java.util.Collections;
@@ -15,7 +15,7 @@ public class DamerauLevenshteinMatchStrategy implements MatchStrategy {
 		this.maxDistance = maxDistance;
 	}
 
-	public MatchResult match0(String text, List<String> cg) {
+	public Match match0(String text, List<String> cg) {
 		String key0 = cg.get(0);
 
 		if (cg.size() > 1) {
@@ -46,13 +46,13 @@ public class DamerauLevenshteinMatchStrategy implements MatchStrategy {
 			return null;
 		
 		if (levenshteinDistance(key0.toCharArray(), cs1) <= maxDistance) {
-			return new MatchResult(0, cs1.length, result(0, cs1.length, 0));
+			return new Match(0, cs1.length, result(0, cs1.length, 0));
 		} else
 			return null;
 	}
 
-	public Set<MatchResult> match(String text, List<String> cg) {
-		MatchResult match0 = match0(text, cg);
+	public Set<Match> match(String text, List<String> cg) {
+		Match match0 = match0(text, cg);
 		if (match0 == null)
 			return Collections.emptySet();
 		else

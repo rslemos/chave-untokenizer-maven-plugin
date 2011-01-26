@@ -8,7 +8,7 @@ import java.util.Set;
 
 public class WhitespaceMatchStrategy implements MatchStrategy {
 
-	public MatchResult match0(String text, List<String> cg) {
+	public Match match0(String text, List<String> cg) {
 		int k = 0;
 		
 		try {
@@ -17,13 +17,13 @@ public class WhitespaceMatchStrategy implements MatchStrategy {
 		} catch (IndexOutOfBoundsException e) {}
 		
 		if (k > 0) {
-			return new MatchResult(0, k);
+			return new Match(0, k);
 		} else
 			return null;
 	}
 
-	public Set<MatchResult> match(String text, List<String> cg) {
-		MatchResult match0 = match0(text, cg);
+	public Set<Match> match(String text, List<String> cg) {
+		Match match0 = match0(text, cg);
 		if (match0 == null)
 			return Collections.emptySet();
 		else

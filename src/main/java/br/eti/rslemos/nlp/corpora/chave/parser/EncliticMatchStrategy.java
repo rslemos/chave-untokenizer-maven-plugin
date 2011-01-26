@@ -1,6 +1,6 @@
 package br.eti.rslemos.nlp.corpora.chave.parser;
 
-import static br.eti.rslemos.nlp.corpora.chave.parser.MatchResult.result;
+import static br.eti.rslemos.nlp.corpora.chave.parser.Match.result;
 import static java.lang.Character.isWhitespace;
 import static java.lang.Character.toLowerCase;
 
@@ -11,7 +11,7 @@ import java.util.Set;
 
 public class EncliticMatchStrategy implements MatchStrategy {
 
-	public MatchResult match0(String text, List<String> cg) {
+	public Match match0(String text, List<String> cg) {
 		if (cg.size() < 2)
 			return null;
 		
@@ -63,7 +63,7 @@ public class EncliticMatchStrategy implements MatchStrategy {
 			}
 			
 			if (j == currentKey.length()) {
-				return new MatchResult(0, k, result(0, (k - key1.length()), 0), result((k - key1.length()), k, 1));
+				return new Match(0, k, result(0, (k - key1.length()), 0), result((k - key1.length()), k, 1));
 			} else {
 				return null;
 			}
@@ -71,8 +71,8 @@ public class EncliticMatchStrategy implements MatchStrategy {
 			return null;
 	}
 
-	public Set<MatchResult> match(String text, List<String> cg) {
-		MatchResult match0 = match0(text, cg);
+	public Set<Match> match(String text, List<String> cg) {
+		Match match0 = match0(text, cg);
 		if (match0 == null)
 			return Collections.emptySet();
 		else

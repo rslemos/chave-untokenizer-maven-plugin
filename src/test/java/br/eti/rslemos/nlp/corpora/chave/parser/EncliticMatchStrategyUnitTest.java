@@ -13,7 +13,7 @@ public class EncliticMatchStrategyUnitTest extends AbstractMatchStrategyUnitTest
 		cg.add("Convocar-");
 		cg.add("lo");
 		
-		MatchResult result = match("Convocá-lo");
+		Match result = match("Convocá-lo");
 		
 		verifyTokensInSequence(result, "Convocá-", "lo");
 	}
@@ -23,7 +23,7 @@ public class EncliticMatchStrategyUnitTest extends AbstractMatchStrategyUnitTest
 		cg.add("Convocar-");
 		cg.add("la");
 		
-		MatchResult result = match("Convocá-la");
+		Match result = match("Convocá-la");
 		
 		verifyTokensInSequence(result, "Convocá-", "la");
 	}
@@ -33,7 +33,7 @@ public class EncliticMatchStrategyUnitTest extends AbstractMatchStrategyUnitTest
 		cg.add("Convocar-");
 		cg.add("los");
 		
-		MatchResult result = match("Convocá-los");
+		Match result = match("Convocá-los");
 		
 		verifyTokensInSequence(result, "Convocá-", "los");
 	}
@@ -43,7 +43,7 @@ public class EncliticMatchStrategyUnitTest extends AbstractMatchStrategyUnitTest
 		cg.add("Convocar-");
 		cg.add("las");
 		
-		MatchResult result = match("Convocá-las");
+		Match result = match("Convocá-las");
 		
 		verifyTokensInSequence(result, "Convocá-", "las");
 	}
@@ -53,7 +53,7 @@ public class EncliticMatchStrategyUnitTest extends AbstractMatchStrategyUnitTest
 		cg.add("fazer-");
 		cg.add("lo");
 		
-		MatchResult result = match("fazê-lo");
+		Match result = match("fazê-lo");
 		
 		verifyTokensInSequence(result, "fazê-", "lo");
 	}
@@ -63,7 +63,7 @@ public class EncliticMatchStrategyUnitTest extends AbstractMatchStrategyUnitTest
 		cg.add("fazer-");
 		cg.add("la");
 		
-		MatchResult result = match("fazê-la");
+		Match result = match("fazê-la");
 		
 		verifyTokensInSequence(result, "fazê-", "la");
 	}
@@ -73,7 +73,7 @@ public class EncliticMatchStrategyUnitTest extends AbstractMatchStrategyUnitTest
 		cg.add("fazer-");
 		cg.add("los");
 		
-		MatchResult result = match("fazê-los");
+		Match result = match("fazê-los");
 		
 		verifyTokensInSequence(result, "fazê-", "los");
 	}
@@ -83,7 +83,7 @@ public class EncliticMatchStrategyUnitTest extends AbstractMatchStrategyUnitTest
 		cg.add("fazer-");
 		cg.add("las");
 		
-		MatchResult result = match("fazê-las");
+		Match result = match("fazê-las");
 		
 		verifyTokensInSequence(result, "fazê-", "las");
 	}
@@ -93,7 +93,7 @@ public class EncliticMatchStrategyUnitTest extends AbstractMatchStrategyUnitTest
 		cg.add("assistir-");
 		cg.add("lo");
 		
-		MatchResult result = match("assisti-lo");
+		Match result = match("assisti-lo");
 		
 		verifyTokensInSequence(result, "assisti-", "lo");
 	}
@@ -103,7 +103,7 @@ public class EncliticMatchStrategyUnitTest extends AbstractMatchStrategyUnitTest
 		cg.add("assistir-");
 		cg.add("la");
 		
-		MatchResult result = match("assisti-la");
+		Match result = match("assisti-la");
 		
 		verifyTokensInSequence(result, "assisti-", "la");
 	}
@@ -113,7 +113,7 @@ public class EncliticMatchStrategyUnitTest extends AbstractMatchStrategyUnitTest
 		cg.add("assistir-");
 		cg.add("los");
 		
-		MatchResult result = match("assisti-los");
+		Match result = match("assisti-los");
 		
 		verifyTokensInSequence(result, "assisti-", "los");
 	}
@@ -123,7 +123,7 @@ public class EncliticMatchStrategyUnitTest extends AbstractMatchStrategyUnitTest
 		cg.add("assistir-");
 		cg.add("las");
 		
-		MatchResult result = match("assisti-las");
+		Match result = match("assisti-las");
 		
 		verifyTokensInSequence(result, "assisti-", "las");
 	}
@@ -133,7 +133,7 @@ public class EncliticMatchStrategyUnitTest extends AbstractMatchStrategyUnitTest
 		cg.add("assistir-");
 		cg.add("lo");
 		
-		MatchResult result = match("assisti-lo");
+		Match result = match("assisti-lo");
 		
 		verifyTokensInSequence(result, "assisti-", "lo");
 	}
@@ -143,7 +143,7 @@ public class EncliticMatchStrategyUnitTest extends AbstractMatchStrategyUnitTest
 		cg.add("assistir-");
 		cg.add("la");
 		
-		MatchResult result = match("assisti-la");
+		Match result = match("assisti-la");
 		
 		verifyTokensInSequence(result, "assisti-", "la");
 	}
@@ -153,7 +153,7 @@ public class EncliticMatchStrategyUnitTest extends AbstractMatchStrategyUnitTest
 		cg.add("assistir-");
 		cg.add("los");
 		
-		MatchResult result = match("assisti-los");
+		Match result = match("assisti-los");
 		
 		verifyTokensInSequence(result, "assisti-", "los");
 	}
@@ -163,7 +163,7 @@ public class EncliticMatchStrategyUnitTest extends AbstractMatchStrategyUnitTest
 		cg.add("assistir-");
 		cg.add("las");
 		
-		MatchResult result = match("assisti-las");
+		Match result = match("assisti-las");
 		
 		verifyTokensInSequence(result, "assisti-", "las");
 	}

@@ -13,7 +13,7 @@ public class ContractionAMatchStrategyUnitTest extends AbstractMatchStrategyUnit
 		cg.add("a");
 		cg.add("o");
 		
-		MatchResult result = match("ao");
+		Match result = match("ao");
 		
 		verifyTokensInSequence(result, "a", "o");
 	}
@@ -23,7 +23,7 @@ public class ContractionAMatchStrategyUnitTest extends AbstractMatchStrategyUnit
 		cg.add("a");
 		cg.add("a");
 		
-		MatchResult result = match("à");
+		Match result = match("à");
 		
 		verifyFullOverlappingTokens(result, "à");
 	}
@@ -33,7 +33,7 @@ public class ContractionAMatchStrategyUnitTest extends AbstractMatchStrategyUnit
 		cg.add("a");
 		cg.add("os");
 		
-		MatchResult result = match("aos");
+		Match result = match("aos");
 		
 		verifyTokensInSequence(result, "a", "os");
 	}
@@ -43,7 +43,7 @@ public class ContractionAMatchStrategyUnitTest extends AbstractMatchStrategyUnit
 		cg.add("a");
 		cg.add("as");
 		
-		MatchResult result = match("às");
+		Match result = match("às");
 		
 		verifyLeftAlignedOverlappingTokens(result, "à", "s");
 	}
@@ -53,7 +53,7 @@ public class ContractionAMatchStrategyUnitTest extends AbstractMatchStrategyUnit
 		cg.add("a");
 		cg.add("aquele");
 		
-		MatchResult result = match("àquele");
+		Match result = match("àquele");
 		
 		verifyLeftAlignedOverlappingTokens(result, "à", "quele");
 	}
@@ -63,7 +63,7 @@ public class ContractionAMatchStrategyUnitTest extends AbstractMatchStrategyUnit
 		cg.add("a");
 		cg.add("aquela");
 		
-		MatchResult result = match("àquela");
+		Match result = match("àquela");
 		
 		verifyLeftAlignedOverlappingTokens(result, "à", "quela");
 	}
@@ -73,7 +73,7 @@ public class ContractionAMatchStrategyUnitTest extends AbstractMatchStrategyUnit
 		cg.add("a");
 		cg.add("aqueles");
 		
-		MatchResult result = match("àqueles");
+		Match result = match("àqueles");
 		
 		verifyLeftAlignedOverlappingTokens(result, "à", "queles");
 	}
@@ -83,7 +83,7 @@ public class ContractionAMatchStrategyUnitTest extends AbstractMatchStrategyUnit
 		cg.add("a");
 		cg.add("aquelas");
 		
-		MatchResult result = match("àquelas");
+		Match result = match("àquelas");
 		
 		verifyLeftAlignedOverlappingTokens(result, "à", "quelas");
 	}
@@ -93,7 +93,7 @@ public class ContractionAMatchStrategyUnitTest extends AbstractMatchStrategyUnit
 		cg.add("a");
 		cg.add("aquilo");
 		
-		MatchResult result = match("àquilo");
+		Match result = match("àquilo");
 		
 		verifyLeftAlignedOverlappingTokens(result, "à", "quilo");
 	}
@@ -103,7 +103,7 @@ public class ContractionAMatchStrategyUnitTest extends AbstractMatchStrategyUnit
 		cg.add("Quanto=a");
 		cg.add("as");
 		
-		MatchResult result = match("Quanto às");
+		Match result = match("Quanto às");
 		
 		verifyIntersectingPseudoToken(result, "Quanto ", "à", "s");
 	}
@@ -113,7 +113,7 @@ public class ContractionAMatchStrategyUnitTest extends AbstractMatchStrategyUnit
 		cg.add("a");
 		cg.add("as=quais");
 		
-		MatchResult result = match("às quais");
+		Match result = match("às quais");
 		
 		verifyLeftAlignedOverlappingTokens(result, "à", "s quais");
 	}
@@ -123,7 +123,7 @@ public class ContractionAMatchStrategyUnitTest extends AbstractMatchStrategyUnit
 		cg.add("devido=a");
 		cg.add("a");
 		
-		MatchResult result = match("devido à");
+		Match result = match("devido à");
 		
 		verifyRightAlignedOverlappingTokens(result, "devido ", "à");
 	}
@@ -133,7 +133,7 @@ public class ContractionAMatchStrategyUnitTest extends AbstractMatchStrategyUnit
 		cg.add("devido=a");
 		cg.add("os=quais");
 		
-		MatchResult result = match("devido aos quais");
+		Match result = match("devido aos quais");
 		
 		verifyTokensInSequence(result, "devido a", "os quais");
 	}

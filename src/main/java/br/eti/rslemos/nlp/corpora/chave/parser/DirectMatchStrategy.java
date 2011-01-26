@@ -1,6 +1,6 @@
 package br.eti.rslemos.nlp.corpora.chave.parser;
 
-import static br.eti.rslemos.nlp.corpora.chave.parser.MatchResult.result;
+import static br.eti.rslemos.nlp.corpora.chave.parser.Match.result;
 import static java.lang.Character.isWhitespace;
 import static java.lang.Character.toLowerCase;
 
@@ -11,7 +11,7 @@ import java.util.Set;
 
 public class DirectMatchStrategy implements MatchStrategy {
 	
-	public MatchResult match0(String text, List<String> cg) {
+	public Match match0(String text, List<String> cg) {
 		String currentEntry = cg.get(0);
 		String currentKey = getKey(currentEntry);
 		
@@ -66,14 +66,14 @@ public class DirectMatchStrategy implements MatchStrategy {
 		}
 		
 		if (j == currentKey.length()) {
-			return new MatchResult(skip, skip + k, result(skip, (skip + k), 0));
+			return new Match(skip, skip + k, result(skip, (skip + k), 0));
 		} else {
 			return null;
 		}
 	}
 
-	public Set<MatchResult> match(String text, List<String> cg) {
-		MatchResult match0 = match0(text, cg);
+	public Set<Match> match(String text, List<String> cg) {
+		Match match0 = match0(text, cg);
 		if (match0 == null)
 			return Collections.emptySet();
 		else

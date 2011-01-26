@@ -8,38 +8,38 @@ import gate.util.SimpleFeatureMapImpl;
 import java.util.List;
 
 
-public final class MatchResult {
+public final class Match {
 	private int from;
 	private int to;
 	
-	private final Match[] matches;
+	private final Span[] matches;
 	
-	public MatchResult(int from, int to, Match... matches) {
+	public Match(int from, int to, Span... matches) {
 		this.from = from;
 		this.to = to;
 		this.matches = matches;
 	}
 	
-	public static Match result(int from, int to, int i) {
-		return new Match(from, to, i);
+	public static Span result(int from, int to, int i) {
+		return new Span(from, to, i);
 	}
 
 	public void apply(AnnotationSet annotationSet, List<CGEntry> cg) throws InvalidOffsetException {
-		for (Match match : getMatches()) {
-			if (match.from >= 0 && match.to >= 0) {
+		for (Span span : getMatches()) {
+			if (span.from >= 0 && span.to >= 0) {
 				FeatureMap features = new SimpleFeatureMapImpl();
-				features.put("match", cg.get(match.entry).getKey());
-				features.put("cg", cg.get(match.entry).getValue());
-				annotationSet.add((long)match.from, (long)match.to, "token", features);
+				features.put("match", cg.get(span.entry).getKey());
+				features.put("cg", cg.get(span.entry).getValue());
+				annotationSet.add((long)span.from, (long)span.to, "token", features);
 			}
 		}
 	}
 
-	public MatchResult adjust(int k, int i) {
+	public Match adjust(int k, int i) {
 		from += k;
 		to += k;
 		for (int j = 0; j < matches.length; j++) {
-			matches[j] = new Match(matches[j].from + k, matches[j].to + k, matches[j].entry + i);
+			matches[j] = new Span(matches[j].from + k, matches[j].to + k, matches[j].entry + i);
 		}
 		
 		return this;
@@ -61,7 +61,7 @@ public final class MatchResult {
 		return to;
 	}
 	
-	public Match[] getMatches() {
+	public Span[] getMatches() {
 		return matches;
 	}
 
@@ -69,12 +69,12 @@ public final class MatchResult {
 		return matches.length;
 	}
 	
-	public static class Match {
+	public static class Span {
 		public final int from;
 		public final int to;
 		public final int entry;
 		
-		public Match(int from, int to, int entry) {
+		public Span(int from, int to, int entry) {
 			this.from = from;
 			this.to = to;
 			this.entry = entry;
@@ -87,10 +87,10 @@ public final class MatchResult {
 			if (o == this)
 				return true;
 			
-			if (!(o instanceof Match))
+			if (!(o instanceof Span))
 				return false;
 			
-			Match m = (Match) o;
+			Span m = (Span) o;
 			return this.from == m.from && 
 				this.to == m.to &&
 				this.entry == m.entry;

@@ -10,14 +10,14 @@ public class WhitespaceMatchStrategyUnitTest extends AbstractMatchStrategyUnitTe
 	
 	@Test
 	public void testWhitespace() throws Exception {
-		MatchResult result = match("   \t\t   \t   abcd");
+		Match result = match("   \t\t   \t   abcd");
 		
 		verifyTextButNoToken(result, "   \t\t   \t   ");
 	}
 	
 	@Test
 	public void testFinalWhitespace() throws Exception {
-		MatchResult result = match("   \t\t   \t   ");
+		Match result = match("   \t\t   \t   ");
 		
 		verifyTextButNoToken(result, "   \t\t   \t   ");
 	}

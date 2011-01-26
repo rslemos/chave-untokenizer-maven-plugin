@@ -13,7 +13,7 @@ public class ContractionComMatchStrategyUnitTest extends AbstractMatchStrategyUn
 		cg.add("com");
 		cg.add("mim");
 		
-		MatchResult result = match("comigo");
+		Match result = match("comigo");
 		
 		verifyIntersectingPseudoToken(result, "co", "m", "igo");
 	}
@@ -23,7 +23,7 @@ public class ContractionComMatchStrategyUnitTest extends AbstractMatchStrategyUn
 		cg.add("com");
 		cg.add("ti");
 		
-		MatchResult result = match("contigo");
+		Match result = match("contigo");
 		
 		verifyTokensInSequence(result, "con", "tigo");
 	}
@@ -33,7 +33,7 @@ public class ContractionComMatchStrategyUnitTest extends AbstractMatchStrategyUn
 		cg.add("com");
 		cg.add("si");
 		
-		MatchResult result = match("consigo");
+		Match result = match("consigo");
 		
 		verifyTokensInSequence(result, "con", "sigo");
 	}
@@ -43,7 +43,7 @@ public class ContractionComMatchStrategyUnitTest extends AbstractMatchStrategyUn
 		cg.add("com");
 		cg.add("nos");
 		
-		MatchResult result = match("conosco");
+		Match result = match("conosco");
 		
 		verifyIntersectingPseudoToken(result, "co", "n", "osco");
 	}
@@ -53,7 +53,7 @@ public class ContractionComMatchStrategyUnitTest extends AbstractMatchStrategyUn
 		cg.add("com");
 		cg.add("vos");
 		
-		MatchResult result = match("convosco");
+		Match result = match("convosco");
 		
 		verifyTokensInSequence(result, "con", "vosco");
 	}

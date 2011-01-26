@@ -13,7 +13,7 @@ public class ContractionPorMatchStrategyUnitTest extends AbstractMatchStrategyUn
 		cg.add("por");
 		cg.add("o");
 		
-		MatchResult result = match("pelo");
+		Match result = match("pelo");
 		
 		verifyTokensInSequence(result, "pel", "o");
 	}
@@ -23,7 +23,7 @@ public class ContractionPorMatchStrategyUnitTest extends AbstractMatchStrategyUn
 		cg.add("por");
 		cg.add("a");
 		
-		MatchResult result = match("pela");
+		Match result = match("pela");
 		
 		verifyTokensInSequence(result, "pel", "a");
 	}
@@ -33,7 +33,7 @@ public class ContractionPorMatchStrategyUnitTest extends AbstractMatchStrategyUn
 		cg.add("por");
 		cg.add("os");
 		
-		MatchResult result = match("pelos");
+		Match result = match("pelos");
 		
 		verifyTokensInSequence(result, "pel", "os");
 	}
@@ -43,7 +43,7 @@ public class ContractionPorMatchStrategyUnitTest extends AbstractMatchStrategyUn
 		cg.add("por");
 		cg.add("as");
 		
-		MatchResult result = match("pelas");
+		Match result = match("pelas");
 		
 		verifyTokensInSequence(result, "pel", "as");
 	}

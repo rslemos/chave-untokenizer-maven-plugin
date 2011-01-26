@@ -8,7 +8,7 @@ import java.util.LinkedList;
 import java.util.List;
 import java.util.Set;
 
-import br.eti.rslemos.nlp.corpora.chave.parser.MatchResult.Match;
+import br.eti.rslemos.nlp.corpora.chave.parser.Match.Span;
 
 public abstract class AbstractMatchStrategyUnitTest {
 
@@ -19,28 +19,28 @@ public abstract class AbstractMatchStrategyUnitTest {
 		this.strategy = strategy;
 	}
 
-	protected MatchResult match(String sgml) {
-		Set<MatchResult> set = strategy.match(sgml, cg);
+	protected Match match(String sgml) {
+		Set<Match> set = strategy.match(sgml, cg);
 		if (set.isEmpty())
 			return null;
 		else
 			return set.iterator().next();
 	}
 
-	protected void verifyTextButNoToken(MatchResult result, String text) {
+	protected void verifyTextButNoToken(Match result, String text) {
 		assertThat(result.getFrom(), is(equalTo(0)));
 		assertThat(result.getTo(), is(equalTo(text.length())));
 		assertThat(result.getMatches().length, is(equalTo(0)));
 	}
 
-	protected void verifyNoToken(MatchResult result) {
+	protected void verifyNoToken(Match result) {
 		assertThat(result.getFrom(), is(equalTo(0)));
 		assertThat(result.getTo(), is(equalTo(0)));
 		assertThat(result.getMatches().length, is(equalTo(0)));
 	}
 	
-	protected void verifyTokensInSequence(MatchResult result, String... text) {
-		Match[] matches = result.getMatches();
+	protected void verifyTokensInSequence(Match result, String... text) {
+		Span[] matches = result.getMatches();
 		
 		assertThat(matches.length, is(equalTo(text.length)));
 		int t = 0;
@@ -55,7 +55,7 @@ public abstract class AbstractMatchStrategyUnitTest {
 		assertThat(result.getTo(), is(equalTo(t)));
 	}
 
-	protected void verifyLeftAlignedOverlappingTokens(MatchResult result, String left, String right) {
+	protected void verifyLeftAlignedOverlappingTokens(Match result, String left, String right) {
 		assertThat(result.getFrom(), is(equalTo(0)));
 		assertThat(result.getTo(), is(equalTo(left.length() + right.length())));
 		
@@ -68,7 +68,7 @@ public abstract class AbstractMatchStrategyUnitTest {
 		assertThat(result.getMatches()[1].to, is(equalTo(left.length() + right.length())));
 	}
 
-	protected void verifyRightAlignedOverlappingTokens(MatchResult result, String left, String right) {
+	protected void verifyRightAlignedOverlappingTokens(Match result, String left, String right) {
 		assertThat(result.getFrom(), is(equalTo(0)));
 		assertThat(result.getTo(), is(equalTo(left.length() + right.length())));
 		
@@ -81,7 +81,7 @@ public abstract class AbstractMatchStrategyUnitTest {
 		assertThat(result.getMatches()[1].to, is(equalTo(left.length() + right.length())));
 	}
 
-	protected void verifyFullOverlappingTokens(MatchResult result, String full) {
+	protected void verifyFullOverlappingTokens(Match result, String full) {
 		assertThat(result.getFrom(), is(equalTo(0)));
 		assertThat(result.getTo(), is(equalTo(full.length())));
 		
@@ -94,7 +94,7 @@ public abstract class AbstractMatchStrategyUnitTest {
 		assertThat(result.getMatches()[1].to, is(equalTo(full.length())));
 	}
 	
-	protected void verifyIntersectingPseudoToken(MatchResult result, String left, String middle, String right) {
+	protected void verifyIntersectingPseudoToken(Match result, String left, String middle, String right) {
 		assertThat(result.getFrom(), is(equalTo(0)));
 		assertThat(result.getTo(), is(equalTo(left.length() + middle.length() + right.length())));
 		

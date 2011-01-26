@@ -13,7 +13,7 @@ public class DirectMatchStrategyUnitTest extends AbstractMatchStrategyUnitTest {
 	@Test
 	public void testSingleWord() throws Exception {
 		cg.add("feita");
-		MatchResult result = match("feita");
+		Match result = match("feita");
 		
 		verifyTokensInSequence(result, "feita");
 	}
@@ -21,7 +21,7 @@ public class DirectMatchStrategyUnitTest extends AbstractMatchStrategyUnitTest {
 	@Test
 	public void testCompositeWord() throws Exception {
 		cg.add("Pesquisa=Datafolha");
-		MatchResult result = match("Pesquisa Datafolha");
+		Match result = match("Pesquisa Datafolha");
 		
 		verifyTokensInSequence(result, "Pesquisa Datafolha");
 	}
@@ -29,7 +29,7 @@ public class DirectMatchStrategyUnitTest extends AbstractMatchStrategyUnitTest {
 	@Test
 	public void testCompositeWordWithMoreWhitespaces() throws Exception {
 		cg.add("Pesquisa=Datafolha");
-		MatchResult result = match("Pesquisa   \t\t \t  \t Datafolha");
+		Match result = match("Pesquisa   \t\t \t  \t Datafolha");
 		
 		verifyTokensInSequence(result, "Pesquisa   \t\t \t  \t Datafolha");
 	}
@@ -37,7 +37,7 @@ public class DirectMatchStrategyUnitTest extends AbstractMatchStrategyUnitTest {
 	@Test
 	public void testPunctuationMark() throws Exception {
 		cg.add("$,");
-		MatchResult result = match(",");
+		Match result = match(",");
 		
 		verifyTokensInSequence(result, ",");
 	}
@@ -51,7 +51,7 @@ public class DirectMatchStrategyUnitTest extends AbstractMatchStrategyUnitTest {
 	@Test
 	public void testDirtyEntry() throws Exception {
 		cg.add("checks ALT xxxs");
-		MatchResult result = match("checks");
+		Match result = match("checks");
 		
 		verifyTokensInSequence(result, "checks");
 	}
@@ -61,7 +61,7 @@ public class DirectMatchStrategyUnitTest extends AbstractMatchStrategyUnitTest {
 		cg.add("sra.");
 		cg.add("$.");
 
-		MatchResult result = match("sra.");
+		Match result = match("sra.");
 		
 		verifyTokensInSequence(result, "sra");
 	}

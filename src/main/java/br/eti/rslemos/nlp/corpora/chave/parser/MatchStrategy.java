@@ -12,5 +12,5 @@ public interface MatchStrategy {
 	 * @param text
 	 * @param cg
 	 */
-	Set<MatchResult> match(String text, List<String> cg);
+	Set<Match> match(String text, List<String> cg);
 }
