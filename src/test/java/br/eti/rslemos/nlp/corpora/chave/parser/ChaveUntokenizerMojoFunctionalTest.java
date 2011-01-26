@@ -4,8 +4,10 @@ import java.io.File;
 
 import org.apache.maven.it.Verifier;
 import org.apache.maven.it.util.ResourceExtractor;
+import org.junit.Ignore;
 import org.junit.Test;
 
+@Ignore
 public class ChaveUntokenizerMojoFunctionalTest {
 
 	@Test
