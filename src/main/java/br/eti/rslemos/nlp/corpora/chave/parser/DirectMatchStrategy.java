@@ -5,9 +5,11 @@ import static java.lang.Character.isWhitespace;
 import static java.lang.Character.toLowerCase;
 
 import java.util.Arrays;
+import java.util.Collections;
 import java.util.List;
+import java.util.Set;
 
-public class DirectMatchStrategy extends AbstractStrategy implements MatchStrategy {
+public class DirectMatchStrategy implements MatchStrategy {
 	
 	public MatchResult match0(String text, List<String> cg) {
 		String currentEntry = cg.get(0);
@@ -68,6 +70,14 @@ public class DirectMatchStrategy extends AbstractStrategy implements MatchStrate
 		} else {
 			return null;
 		}
+	}
+
+	public Set<MatchResult> match(String text, List<String> cg) {
+		MatchResult match0 = match0(text, cg);
+		if (match0 == null)
+			return Collections.emptySet();
+		else
+			return Collections.singleton(match0);
 	}
 
 	private static String getKey(String currentKey) {

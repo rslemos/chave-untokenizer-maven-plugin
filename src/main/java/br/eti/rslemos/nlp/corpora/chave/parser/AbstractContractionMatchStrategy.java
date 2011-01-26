@@ -8,7 +8,7 @@ import java.util.Collections;
 import java.util.List;
 import java.util.Set;
 
-public abstract class AbstractContractionMatchStrategy extends AbstractStrategy implements MatchStrategy {
+public abstract class AbstractContractionMatchStrategy implements MatchStrategy {
 
 	private static final DirectMatchStrategy DM = new DirectMatchStrategy();
 	
@@ -111,5 +111,13 @@ public abstract class AbstractContractionMatchStrategy extends AbstractStrategy 
 		} else {
 			return new MatchResult(cskip, cleft + cmiddle + cright + cskip, result(cskip, (cskip + cleft + cmiddle), 0), result((cskip + cleft), (cskip + cleft + cmiddle + cright), 1));
 		}
+	}
+
+	public Set<MatchResult> match(String text, List<String> cg) {
+		MatchResult match0 = match0(text, cg);
+		if (match0 == null)
+			return Collections.emptySet();
+		else
+			return Collections.singleton(match0);
 	}
 }

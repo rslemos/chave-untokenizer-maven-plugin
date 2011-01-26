@@ -5,9 +5,11 @@ import static java.lang.Character.isWhitespace;
 import static java.lang.Character.toLowerCase;
 
 import java.util.Arrays;
+import java.util.Collections;
 import java.util.List;
+import java.util.Set;
 
-public class EncliticMatchStrategy extends AbstractStrategy implements MatchStrategy {
+public class EncliticMatchStrategy implements MatchStrategy {
 
 	public MatchResult match0(String text, List<String> cg) {
 		if (cg.size() < 2)
@@ -67,6 +69,14 @@ public class EncliticMatchStrategy extends AbstractStrategy implements MatchStra
 			}
 		} else
 			return null;
+	}
+
+	public Set<MatchResult> match(String text, List<String> cg) {
+		MatchResult match0 = match0(text, cg);
+		if (match0 == null)
+			return Collections.emptySet();
+		else
+			return Collections.singleton(match0);
 	}
 
 }

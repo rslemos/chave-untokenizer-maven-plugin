@@ -3,9 +3,11 @@ package br.eti.rslemos.nlp.corpora.chave.parser;
 import static br.eti.rslemos.nlp.corpora.chave.parser.MatchResult.result;
 
 import java.util.Arrays;
+import java.util.Collections;
 import java.util.List;
+import java.util.Set;
 
-public class DamerauLevenshteinMatchStrategy extends AbstractStrategy implements MatchStrategy {
+public class DamerauLevenshteinMatchStrategy implements MatchStrategy {
 
 	private final int maxDistance;
 
@@ -47,6 +49,14 @@ public class DamerauLevenshteinMatchStrategy extends AbstractStrategy implements
 			return new MatchResult(0, cs1.length, result(0, cs1.length, 0));
 		} else
 			return null;
+	}
+
+	public Set<MatchResult> match(String text, List<String> cg) {
+		MatchResult match0 = match0(text, cg);
+		if (match0 == null)
+			return Collections.emptySet();
+		else
+			return Collections.singleton(match0);
 	}
 
 	private static int levenshteinDistance(char[] cs1, char[] cs2) {
