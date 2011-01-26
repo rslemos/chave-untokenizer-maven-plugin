@@ -1,5 +1,6 @@
 package br.eti.rslemos.nlp.corpora.chave.parser;
 
+import static br.eti.rslemos.nlp.corpora.chave.parser.MatchResult.result;
 import static java.lang.Character.toLowerCase;
 
 import java.util.Arrays;
@@ -102,13 +103,13 @@ public abstract class AbstractContractionMatchStrategy extends AbstractStrategy 
 		}
 
 		if (cmiddle == 0) {
-			return new MatchResult(cskip, cleft + cmiddle + cright + cskip, 2, cskip, cskip + cleft, cskip + cleft, cskip + cleft + cright);
+			return new MatchResult(cskip, cleft + cmiddle + cright + cskip, result(cskip, (cskip + cleft), 0), result((cskip + cleft), (cskip + cleft + cright), 1));
 		} else if (cleft == 0) {
-			return new MatchResult(cskip, cleft + cmiddle + cright + cskip, 2, cskip, cskip + cmiddle, cskip, cskip + cmiddle + cright);
+			return new MatchResult(cskip, cleft + cmiddle + cright + cskip, result(cskip, (cskip + cmiddle), 0), result(cskip, (cskip + cmiddle + cright), 1));
 		} else if (cright == 0) {
-			return new MatchResult(cskip, cleft + cmiddle + cright + cskip, 2, cskip, cskip + cleft + cmiddle, cskip + cleft, cskip + cleft + cmiddle);
+			return new MatchResult(cskip, cleft + cmiddle + cright + cskip, result(cskip, (cskip + cleft + cmiddle), 0), result((cskip + cleft), (cskip + cleft + cmiddle), 1));
 		} else {
-			return new MatchResult(cskip, cleft + cmiddle + cright + cskip, 2, cskip, cskip + cleft + cmiddle, cskip + cleft, cskip + cleft + cmiddle + cright);
+			return new MatchResult(cskip, cleft + cmiddle + cright + cskip, result(cskip, (cskip + cleft + cmiddle), 0), result((cskip + cleft), (cskip + cleft + cmiddle + cright), 1));
 		}
 	}
 }

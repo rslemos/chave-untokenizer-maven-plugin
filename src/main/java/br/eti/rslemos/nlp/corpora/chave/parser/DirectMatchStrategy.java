@@ -1,5 +1,6 @@
 package br.eti.rslemos.nlp.corpora.chave.parser;
 
+import static br.eti.rslemos.nlp.corpora.chave.parser.MatchResult.result;
 import static java.lang.Character.isWhitespace;
 import static java.lang.Character.toLowerCase;
 
@@ -63,7 +64,7 @@ public class DirectMatchStrategy extends AbstractStrategy implements MatchStrate
 		}
 		
 		if (j == currentKey.length()) {
-			return new MatchResult(skip, skip + k, 1, skip, skip + k);
+			return new MatchResult(skip, skip + k, result(skip, (skip + k), 0));
 		} else {
 			return null;
 		}

@@ -1,5 +1,7 @@
 package br.eti.rslemos.nlp.corpora.chave.parser;
 
+import static br.eti.rslemos.nlp.corpora.chave.parser.MatchResult.result;
+
 import java.util.List;
 
 public class NewLineMatchStrategy extends AbstractStrategy implements MatchStrategy {
@@ -17,7 +19,7 @@ public class NewLineMatchStrategy extends AbstractStrategy implements MatchStrat
 				l = 0;
 			}
 			
-			return new MatchResult(0, l, 1, 0, l);
+			return new MatchResult(0, l, result(0, l, 0));
 		} else
 			return null;
 	}

@@ -11,44 +11,27 @@ import java.util.List;
 public final class MatchResult {
 	private int from;
 	private int to;
-	private final int consume;
 	
 	private final Match[] matches;
 	
-	public MatchResult(int from, int to, int consume, int... positions) {
+	public MatchResult(int from, int to, Match... matches) {
 		this.from = from;
 		this.to = to;
-		if (positions.length % 2 == 1)
-			throw new IllegalArgumentException("unpaired position");
-			
-		this.consume = consume;
+		this.matches = matches;
+	}
 	
-		for (int i = 0; i < positions.length; i += 2) {
-			if (positions[i] == -1 || positions[i+1] == -1)
-				throw new IllegalArgumentException();
-
-			if (positions[i] < from || positions[i] > to)
-				throw new IndexOutOfBoundsException(i + "th position outside [" + from + ", " + to + "[");
-			
-			if (positions[i+1] < from || positions[i+1] > to)
-				throw new IndexOutOfBoundsException((i+1) + "th position outside [" + from + ", " + to + "[");
-		}
-		
-		if (consume < positions.length/2)
-			throw new IllegalArgumentException("Must consume at least the same number of emited tokens");
-		
-		matches = new Match[positions.length / 2];
-		for (int i = 0; i < matches.length; i++) {
-			matches[i] = new Match(positions[i*2], positions[i*2+1], i);
-		}
+	public static Match result(int from, int to, int i) {
+		return new Match(from, to, i);
 	}
 
 	public void apply(AnnotationSet annotationSet, List<CGEntry> cg) throws InvalidOffsetException {
 		for (Match match : getMatches()) {
-			FeatureMap features = new SimpleFeatureMapImpl();
-			features.put("match", cg.get(match.entry).getKey());
-			features.put("cg", cg.get(match.entry).getValue());
-			annotationSet.add((long)match.from, (long)match.to, "token", features);
+			if (match.from >= 0 && match.to >= 0) {
+				FeatureMap features = new SimpleFeatureMapImpl();
+				features.put("match", cg.get(match.entry).getKey());
+				features.put("cg", cg.get(match.entry).getValue());
+				annotationSet.add((long)match.from, (long)match.to, "token", features);
+			}
 		}
 	}
 
@@ -83,7 +66,7 @@ public final class MatchResult {
 	}
 
 	public int getConsume() {
-		return consume;
+		return matches.length;
 	}
 	
 	public static class Match {

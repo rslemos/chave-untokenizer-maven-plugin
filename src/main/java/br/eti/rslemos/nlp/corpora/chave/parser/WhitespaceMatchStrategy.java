@@ -15,7 +15,7 @@ public class WhitespaceMatchStrategy extends AbstractStrategy implements MatchSt
 		} catch (IndexOutOfBoundsException e) {}
 		
 		if (k > 0) {
-			return new MatchResult(0, k, 0);
+			return new MatchResult(0, k);
 		} else
 			return null;
 	}
