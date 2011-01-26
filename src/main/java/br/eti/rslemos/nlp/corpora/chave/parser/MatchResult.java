@@ -79,5 +79,25 @@ public final class MatchResult {
 			this.to = to;
 			this.entry = entry;
 		}
+		
+		public boolean equals(Object o) {
+			if (o == null)
+				return false;
+			
+			if (o == this)
+				return true;
+			
+			if (!(o instanceof Match))
+				return false;
+			
+			Match m = (Match) o;
+			return this.from == m.from && 
+				this.to == m.to &&
+				this.entry == m.entry;
+		}
+		
+		public int hashCode() {
+			return to * 3 + from * 5 + entry * 7;
+		}
 	}
 }
