@@ -1,5 +1,7 @@
 package br.eti.rslemos.nlp.corpora.chave.parser;
 
+import static br.eti.rslemos.nlp.corpora.chave.parser.Match.Span.span;
+
 import org.junit.Test;
 
 public class ContractionComMatchStrategyUnitTest extends AbstractMatchStrategyUnitTest {
@@ -15,7 +17,10 @@ public class ContractionComMatchStrategyUnitTest extends AbstractMatchStrategyUn
 		
 		Match result = match("comigo");
 		
-		verifyIntersectingPseudoToken(result, "co", "m", "igo");
+		verifyMatch(result, 0, "comigo".length(),  
+			span(0, "com".length(), 0),
+			span("co".length(), "comigo".length(), 1)
+		);
 	}
 	
 	@Test
@@ -25,7 +30,10 @@ public class ContractionComMatchStrategyUnitTest extends AbstractMatchStrategyUn
 		
 		Match result = match("contigo");
 		
-		verifyTokensInSequence(result, "con", "tigo");
+		verifyMatch(result, 0, "contigo".length(), 
+				span(0, "con".length(), 0),
+				span("con".length(), "contigo".length(), 1)
+			);
 	}
 	
 	@Test
@@ -35,7 +43,10 @@ public class ContractionComMatchStrategyUnitTest extends AbstractMatchStrategyUn
 		
 		Match result = match("consigo");
 		
-		verifyTokensInSequence(result, "con", "sigo");
+		verifyMatch(result, 0, "consigo".length(), 
+				span(0, "con".length(), 0),
+				span("con".length(), "consigo".length(), 1)
+			);
 	}
 	
 	@Test
@@ -45,7 +56,10 @@ public class ContractionComMatchStrategyUnitTest extends AbstractMatchStrategyUn
 		
 		Match result = match("conosco");
 		
-		verifyIntersectingPseudoToken(result, "co", "n", "osco");
+		verifyMatch(result, 0, "conosco".length(),  
+			span(0, "con".length(), 0),
+			span("co".length(), "conosco".length(), 1)
+		);
 	}
 	
 	@Test
@@ -55,6 +69,9 @@ public class ContractionComMatchStrategyUnitTest extends AbstractMatchStrategyUn
 		
 		Match result = match("convosco");
 		
-		verifyTokensInSequence(result, "con", "vosco");
+		verifyMatch(result, 0, "convosco".length(), 
+				span(0, "con".length(), 0),
+				span("con".length(), "convosco".length(), 1)
+			);
 	}
 }

@@ -1,5 +1,7 @@
 package br.eti.rslemos.nlp.corpora.chave.parser;
 
+import static br.eti.rslemos.nlp.corpora.chave.parser.Match.Span.span;
+
 import org.junit.Test;
 
 public class QuotesMatchStrategyUnitTest extends AbstractMatchStrategyUnitTest {
@@ -14,13 +16,15 @@ public class QuotesMatchStrategyUnitTest extends AbstractMatchStrategyUnitTest {
 		
 		Match result = match("\"abcd");
 		
-		verifyTokensInSequence(result, "\"");
+		verifyMatch(result, 0, 1, 
+				span(0, 1, 0)
+			);
 	}
 	
 	@Test
 	public void testDoubleQuotesMatchesNoKey() throws Exception {
 		Match result = match("\"abcd");
 		
-		verifyTextButNoToken(result, "\"");
+		verifyMatch(result, 0, 1);
 	}
 }

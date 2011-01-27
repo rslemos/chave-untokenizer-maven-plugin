@@ -1,5 +1,7 @@
 package br.eti.rslemos.nlp.corpora.chave.parser;
 
+import static br.eti.rslemos.nlp.corpora.chave.parser.Match.Span.span;
+
 import org.junit.Test;
 
 public class ContractionAMatchStrategyUnitTest extends AbstractMatchStrategyUnitTest {
@@ -15,7 +17,10 @@ public class ContractionAMatchStrategyUnitTest extends AbstractMatchStrategyUnit
 		
 		Match result = match("ao");
 		
-		verifyTokensInSequence(result, "a", "o");
+		verifyMatch(result, 0, 2, 
+				span(0, 1, 0),
+				span(1, 2, 1)
+			);
 	}
 	
 	@Test
@@ -25,7 +30,10 @@ public class ContractionAMatchStrategyUnitTest extends AbstractMatchStrategyUnit
 		
 		Match result = match("à");
 		
-		verifyFullOverlappingTokens(result, "à");
+		verifyMatch(result, 0, 1, 
+				span(0, 1, 0), 
+				span(0, 1, 1)
+			);
 	}
 	
 	@Test
@@ -35,7 +43,10 @@ public class ContractionAMatchStrategyUnitTest extends AbstractMatchStrategyUnit
 		
 		Match result = match("aos");
 		
-		verifyTokensInSequence(result, "a", "os");
+		verifyMatch(result, 0, 3, 
+				span(0, 1, 0),
+				span(1, 3, 1)
+			);
 	}
 	
 	@Test
@@ -45,7 +56,10 @@ public class ContractionAMatchStrategyUnitTest extends AbstractMatchStrategyUnit
 		
 		Match result = match("às");
 		
-		verifyLeftAlignedOverlappingTokens(result, "à", "s");
+		verifyMatch(result, 0, 2,
+				span(0, 1, 0),
+				span(0, 2, 1)
+			);
 	}
 	
 	@Test
@@ -55,7 +69,10 @@ public class ContractionAMatchStrategyUnitTest extends AbstractMatchStrategyUnit
 		
 		Match result = match("àquele");
 		
-		verifyLeftAlignedOverlappingTokens(result, "à", "quele");
+		verifyMatch(result, 0, "àquele".length(),
+				span(0, 1, 0),
+				span(0, "àquele".length(), 1)
+			);
 	}
 	
 	@Test
@@ -65,7 +82,10 @@ public class ContractionAMatchStrategyUnitTest extends AbstractMatchStrategyUnit
 		
 		Match result = match("àquela");
 		
-		verifyLeftAlignedOverlappingTokens(result, "à", "quela");
+		verifyMatch(result, 0, "àquela".length(),
+				span(0, 1, 0),
+				span(0, "àquela".length(), 1)
+			);
 	}
 	
 	@Test
@@ -75,7 +95,10 @@ public class ContractionAMatchStrategyUnitTest extends AbstractMatchStrategyUnit
 		
 		Match result = match("àqueles");
 		
-		verifyLeftAlignedOverlappingTokens(result, "à", "queles");
+		verifyMatch(result, 0, "àqueles".length(),
+				span(0, 1, 0),
+				span(0, "àqueles".length(), 1)
+			);
 	}
 	
 	@Test
@@ -85,7 +108,10 @@ public class ContractionAMatchStrategyUnitTest extends AbstractMatchStrategyUnit
 		
 		Match result = match("àquelas");
 		
-		verifyLeftAlignedOverlappingTokens(result, "à", "quelas");
+		verifyMatch(result, 0, "àquelas".length(),
+				span(0, 1, 0),
+				span(0, "àquelas".length(), 1)
+			);
 	}
 
 	@Test
@@ -95,7 +121,10 @@ public class ContractionAMatchStrategyUnitTest extends AbstractMatchStrategyUnit
 		
 		Match result = match("àquilo");
 		
-		verifyLeftAlignedOverlappingTokens(result, "à", "quilo");
+		verifyMatch(result, 0, "àquilo".length(),
+				span(0, 1, 0),
+				span(0, "àquilo".length(), 1)
+			);
 	}
 	
 	@Test
@@ -105,7 +134,10 @@ public class ContractionAMatchStrategyUnitTest extends AbstractMatchStrategyUnit
 		
 		Match result = match("Quanto às");
 		
-		verifyIntersectingPseudoToken(result, "Quanto ", "à", "s");
+		verifyMatch(result, 0, "Quanto às".length(),  
+			span(0, "Quanto à".length(), 0),
+			span("Quanto ".length(), "Quanto às".length(), 1)
+		);
 	}
 	
 	@Test
@@ -115,7 +147,10 @@ public class ContractionAMatchStrategyUnitTest extends AbstractMatchStrategyUnit
 		
 		Match result = match("às quais");
 		
-		verifyLeftAlignedOverlappingTokens(result, "à", "s quais");
+		verifyMatch(result, 0, "às quais".length(),
+				span(0, 1, 0),
+				span(0, "às quais".length(), 1)
+			);
 	}
 	
 	@Test
@@ -125,7 +160,10 @@ public class ContractionAMatchStrategyUnitTest extends AbstractMatchStrategyUnit
 		
 		Match result = match("devido à");
 		
-		verifyRightAlignedOverlappingTokens(result, "devido ", "à");
+		verifyMatch(result, 0, "devido à".length(), 
+				span(0, "devido à".length(), 0),
+				span("devido ".length(), "devido à".length(), 1)
+			);
 	}
 	
 	@Test
@@ -135,6 +173,9 @@ public class ContractionAMatchStrategyUnitTest extends AbstractMatchStrategyUnit
 		
 		Match result = match("devido aos quais");
 		
-		verifyTokensInSequence(result, "devido a", "os quais");
+		verifyMatch(result, 0, "devido aos quais".length(), 
+				span(0, "devido a".length(), 0),
+				span("devido a".length(), "devido aos quais".length(), 1)
+			);
 	}
 }

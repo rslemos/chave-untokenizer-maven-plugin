@@ -1,5 +1,6 @@
 package br.eti.rslemos.nlp.corpora.chave.parser;
 
+import static br.eti.rslemos.nlp.corpora.chave.parser.Match.Span.span;
 import static junit.framework.Assert.assertNull;
 
 import org.junit.Test;
@@ -15,7 +16,9 @@ public class DamerauLevenshteinMatchStrategyUnitTest extends AbstractMatchStrate
 		cg.add("3º.");
 		Match result = match("3.º");
 		
-		verifyTokensInSequence(result, "3.º");
+		verifyMatch(result, 0, 3,
+				span(0, 3, 0)
+			);
 	}
 	
 	@Test
@@ -23,7 +26,9 @@ public class DamerauLevenshteinMatchStrategyUnitTest extends AbstractMatchStrate
 		cg.add("3º.");
 		Match result = match("3. º");
 		
-		verifyTokensInSequence(result, "3.");
+		verifyMatch(result, 0, 2,
+				span(0, 2, 0)
+			);
 	}
 	
 	@Test
@@ -52,6 +57,8 @@ public class DamerauLevenshteinMatchStrategyUnitTest extends AbstractMatchStrate
 
 		Match result = match("sra.");
 		
-		verifyTokensInSequence(result, "sra");
+		verifyMatch(result, 0, 3,
+				span(0, 3, 0)
+			);
 	}
 }

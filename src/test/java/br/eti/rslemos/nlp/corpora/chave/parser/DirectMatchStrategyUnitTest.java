@@ -1,5 +1,6 @@
 package br.eti.rslemos.nlp.corpora.chave.parser;
 
+import static br.eti.rslemos.nlp.corpora.chave.parser.Match.Span.span;
 import static junit.framework.Assert.assertNull;
 
 import org.junit.Test;
@@ -15,7 +16,9 @@ public class DirectMatchStrategyUnitTest extends AbstractMatchStrategyUnitTest {
 		cg.add("feita");
 		Match result = match("feita");
 		
-		verifyTokensInSequence(result, "feita");
+		verifyMatch(result, 0, "feita".length(), 
+				span(0, "feita".length(), 0)
+			);
 	}
 
 	@Test
@@ -23,7 +26,9 @@ public class DirectMatchStrategyUnitTest extends AbstractMatchStrategyUnitTest {
 		cg.add("Pesquisa=Datafolha");
 		Match result = match("Pesquisa Datafolha");
 		
-		verifyTokensInSequence(result, "Pesquisa Datafolha");
+		verifyMatch(result, 0, "Pesquisa Datafolha".length(), 
+				span(0, "Pesquisa Datafolha".length(), 0)
+			);
 	}
 
 	@Test
@@ -31,7 +36,9 @@ public class DirectMatchStrategyUnitTest extends AbstractMatchStrategyUnitTest {
 		cg.add("Pesquisa=Datafolha");
 		Match result = match("Pesquisa   \t\t \t  \t Datafolha");
 		
-		verifyTokensInSequence(result, "Pesquisa   \t\t \t  \t Datafolha");
+		verifyMatch(result, 0, "Pesquisa   \t\t \t  \t Datafolha".length(), 
+				span(0, "Pesquisa   \t\t \t  \t Datafolha".length(), 0)
+			);
 	}
 
 	@Test
@@ -39,7 +46,9 @@ public class DirectMatchStrategyUnitTest extends AbstractMatchStrategyUnitTest {
 		cg.add("$,");
 		Match result = match(",");
 		
-		verifyTokensInSequence(result, ",");
+		verifyMatch(result, 0, 1, 
+				span(0, 1, 0)
+			);
 	}
 
 	@Test
@@ -53,7 +62,9 @@ public class DirectMatchStrategyUnitTest extends AbstractMatchStrategyUnitTest {
 		cg.add("checks ALT xxxs");
 		Match result = match("checks");
 		
-		verifyTokensInSequence(result, "checks");
+		verifyMatch(result, 0, "checks".length(), 
+				span(0, "checks".length(), 0)
+			);
 	}
 
 	@Test
@@ -63,7 +74,9 @@ public class DirectMatchStrategyUnitTest extends AbstractMatchStrategyUnitTest {
 
 		Match result = match("sra.");
 		
-		verifyTokensInSequence(result, "sra");
+		verifyMatch(result, 0, "sra".length(), 
+				span(0, "sra".length(), 0)
+			);
 	}
 
 }

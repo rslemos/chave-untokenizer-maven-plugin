@@ -1,5 +1,7 @@
 package br.eti.rslemos.nlp.corpora.chave.parser;
 
+import static br.eti.rslemos.nlp.corpora.chave.parser.Match.Span.span;
+
 import org.junit.Test;
 
 public class ContractionDeMatchStrategyUnitTest extends AbstractMatchStrategyUnitTest {
@@ -15,7 +17,10 @@ public class ContractionDeMatchStrategyUnitTest extends AbstractMatchStrategyUni
 		
 		Match result = match("do");
 		
-		verifyTokensInSequence(result, "d", "o");
+		verifyMatch(result, 0, 2, 
+				span(0, 1, 0),
+				span(1, 2, 1)
+			);
 	}
 	
 	@Test
@@ -25,7 +30,10 @@ public class ContractionDeMatchStrategyUnitTest extends AbstractMatchStrategyUni
 		
 		Match result = match("da");
 		
-		verifyTokensInSequence(result, "d", "a");
+		verifyMatch(result, 0, 2, 
+				span(0, 1, 0),
+				span(1, 2, 1)
+			);
 	}
 	
 	@Test
@@ -35,7 +43,10 @@ public class ContractionDeMatchStrategyUnitTest extends AbstractMatchStrategyUni
 		
 		Match result = match("dos");
 		
-		verifyTokensInSequence(result, "d", "os");
+		verifyMatch(result, 0, 3, 
+				span(0, 1, 0),
+				span(1, 3, 1)
+			);
 	}
 	
 	@Test
@@ -45,7 +56,10 @@ public class ContractionDeMatchStrategyUnitTest extends AbstractMatchStrategyUni
 		
 		Match result = match("das");
 		
-		verifyTokensInSequence(result, "d", "as");
+		verifyMatch(result, 0, 3, 
+				span(0, 1, 0),
+				span(1, 3, 1)
+			);
 	}
 
 	@Test
@@ -55,7 +69,10 @@ public class ContractionDeMatchStrategyUnitTest extends AbstractMatchStrategyUni
 		
 		Match result = match("deste");
 		
-		verifyTokensInSequence(result, "d", "este");
+		verifyMatch(result, 0, "deste".length(), 
+				span(0, 1, 0),
+				span(1, "deste".length(), 1)
+			);
 	}
 	
 	@Test
@@ -65,7 +82,10 @@ public class ContractionDeMatchStrategyUnitTest extends AbstractMatchStrategyUni
 		
 		Match result = match("desse");
 		
-		verifyTokensInSequence(result, "d", "esse");
+		verifyMatch(result, 0, "desse".length(), 
+				span(0, 1, 0),
+				span(1, "desse".length(), 1)
+			);
 	}
 	
 	@Test
@@ -75,7 +95,10 @@ public class ContractionDeMatchStrategyUnitTest extends AbstractMatchStrategyUni
 		
 		Match result = match("desta");
 		
-		verifyTokensInSequence(result, "d", "esta");
+		verifyMatch(result, 0, "desta".length(), 
+				span(0, 1, 0),
+				span(1, "desta".length(), 1)
+			);
 	}
 	
 	@Test
@@ -85,7 +108,10 @@ public class ContractionDeMatchStrategyUnitTest extends AbstractMatchStrategyUni
 		
 		Match result = match("dessa");
 		
-		verifyTokensInSequence(result, "d", "essa");
+		verifyMatch(result, 0, "dessa".length(), 
+				span(0, 1, 0),
+				span(1, "dessa".length(), 1)
+			);
 	}
 	
 	@Test
@@ -95,7 +121,10 @@ public class ContractionDeMatchStrategyUnitTest extends AbstractMatchStrategyUni
 		
 		Match result = match("destes");
 		
-		verifyTokensInSequence(result, "d", "estes");
+		verifyMatch(result, 0, "destes".length(), 
+				span(0, 1, 0),
+				span(1, "destes".length(), 1)
+			);
 	}
 	
 	@Test
@@ -105,7 +134,10 @@ public class ContractionDeMatchStrategyUnitTest extends AbstractMatchStrategyUni
 		
 		Match result = match("desses");
 		
-		verifyTokensInSequence(result, "d", "esses");
+		verifyMatch(result, 0, "desses".length(), 
+				span(0, 1, 0),
+				span(1, "desses".length(), 1)
+			);
 	}
 	
 	@Test
@@ -115,7 +147,10 @@ public class ContractionDeMatchStrategyUnitTest extends AbstractMatchStrategyUni
 		
 		Match result = match("destas");
 		
-		verifyTokensInSequence(result, "d", "estas");
+		verifyMatch(result, 0, "destas".length(), 
+				span(0, 1, 0),
+				span(1, "destas".length(), 1)
+			);
 	}
 	
 	@Test
@@ -125,7 +160,10 @@ public class ContractionDeMatchStrategyUnitTest extends AbstractMatchStrategyUni
 		
 		Match result = match("dessas");
 		
-		verifyTokensInSequence(result, "d", "essas");
+		verifyMatch(result, 0, "dessas".length(), 
+				span(0, 1, 0),
+				span(1, "dessas".length(), 1)
+			);
 	}
 	
 	@Test
@@ -135,7 +173,10 @@ public class ContractionDeMatchStrategyUnitTest extends AbstractMatchStrategyUni
 		
 		Match result = match("disto");
 		
-		verifyTokensInSequence(result, "d", "isto");
+		verifyMatch(result, 0, "disto".length(), 
+				span(0, 1, 0),
+				span(1, "disto".length(), 1)
+			);
 	}
 	
 	@Test
@@ -145,7 +186,10 @@ public class ContractionDeMatchStrategyUnitTest extends AbstractMatchStrategyUni
 		
 		Match result = match("disso");
 		
-		verifyTokensInSequence(result, "d", "isso");
+		verifyMatch(result, 0, "disso".length(), 
+				span(0, 1, 0),
+				span(1, "disso".length(), 1)
+			);
 	}
 	
 	@Test
@@ -155,7 +199,10 @@ public class ContractionDeMatchStrategyUnitTest extends AbstractMatchStrategyUni
 		
 		Match result = match("daquele");
 		
-		verifyTokensInSequence(result, "d", "aquele");
+		verifyMatch(result, 0, "daquele".length(), 
+				span(0, 1, 0),
+				span(1, "daquele".length(), 1)
+			);
 	}
 	
 	@Test
@@ -165,7 +212,10 @@ public class ContractionDeMatchStrategyUnitTest extends AbstractMatchStrategyUni
 		
 		Match result = match("daquela");
 		
-		verifyTokensInSequence(result, "d", "aquela");
+		verifyMatch(result, 0, "daquela".length(), 
+				span(0, 1, 0),
+				span(1, "daquela".length(), 1)
+			);
 	}
 	
 	@Test
@@ -175,7 +225,10 @@ public class ContractionDeMatchStrategyUnitTest extends AbstractMatchStrategyUni
 		
 		Match result = match("daqueles");
 		
-		verifyTokensInSequence(result, "d", "aqueles");
+		verifyMatch(result, 0, "daqueles".length(), 
+				span(0, 1, 0),
+				span(1, "daqueles".length(), 1)
+			);
 	}
 	
 	@Test
@@ -185,7 +238,10 @@ public class ContractionDeMatchStrategyUnitTest extends AbstractMatchStrategyUni
 		
 		Match result = match("daquelas");
 		
-		verifyTokensInSequence(result, "d", "aquelas");
+		verifyMatch(result, 0, "daquelas".length(), 
+				span(0, 1, 0),
+				span(1, "daquelas".length(), 1)
+			);
 	}
 	
 	@Test
@@ -195,7 +251,10 @@ public class ContractionDeMatchStrategyUnitTest extends AbstractMatchStrategyUni
 		
 		Match result = match("daquilo");
 		
-		verifyTokensInSequence(result, "d", "aquilo");
+		verifyMatch(result, 0, "daquilo".length(), 
+				span(0, 1, 0),
+				span(1, "daquilo".length(), 1)
+			);
 	}
 	
 	@Test
@@ -205,7 +264,10 @@ public class ContractionDeMatchStrategyUnitTest extends AbstractMatchStrategyUni
 		
 		Match result = match("dele");
 		
-		verifyTokensInSequence(result, "d", "ele");
+		verifyMatch(result, 0, "dele".length(), 
+				span(0, 1, 0),
+				span(1, "dele".length(), 1)
+			);
 	}
 	
 	@Test
@@ -215,7 +277,10 @@ public class ContractionDeMatchStrategyUnitTest extends AbstractMatchStrategyUni
 		
 		Match result = match("dela");
 		
-		verifyTokensInSequence(result, "d", "ela");
+		verifyMatch(result, 0, "dela".length(), 
+				span(0, 1, 0),
+				span(1, "dela".length(), 1)
+			);
 	}
 	
 	@Test
@@ -225,7 +290,10 @@ public class ContractionDeMatchStrategyUnitTest extends AbstractMatchStrategyUni
 		
 		Match result = match("deles");
 		
-		verifyTokensInSequence(result, "d", "eles");
+		verifyMatch(result, 0, "deles".length(), 
+				span(0, 1, 0),
+				span(1, "deles".length(), 1)
+			);
 	}
 	
 	@Test
@@ -235,7 +303,10 @@ public class ContractionDeMatchStrategyUnitTest extends AbstractMatchStrategyUni
 		
 		Match result = match("delas");
 		
-		verifyTokensInSequence(result, "d", "elas");
+		verifyMatch(result, 0, "delas".length(), 
+				span(0, 1, 0),
+				span(1, "delas".length(), 1)
+			);
 	}
 	
 	@Test
@@ -245,7 +316,10 @@ public class ContractionDeMatchStrategyUnitTest extends AbstractMatchStrategyUni
 		
 		Match result = match("daí");
 		
-		verifyTokensInSequence(result, "d", "aí");
+		verifyMatch(result, 0, "daí".length(), 
+				span(0, 1, 0),
+				span(1, "daí".length(), 1)
+			);
 	}
 	
 	@Test
@@ -255,6 +329,9 @@ public class ContractionDeMatchStrategyUnitTest extends AbstractMatchStrategyUni
 		
 		Match result = match("Além disso");
 		
-		verifyTokensInSequence(result, "Além d", "isso");
+		verifyMatch(result, 0, "Além disso".length(), 
+				span(0, "Além d".length(), 0),
+				span("Além d".length(), "Além disso".length(), 1)
+			);
 	}
 }

@@ -1,5 +1,7 @@
 package br.eti.rslemos.nlp.corpora.chave.parser;
 
+import static br.eti.rslemos.nlp.corpora.chave.parser.Match.Span.span;
+
 import org.junit.Test;
 
 public class EncliticMatchStrategyUnitTest extends AbstractMatchStrategyUnitTest {
@@ -15,7 +17,10 @@ public class EncliticMatchStrategyUnitTest extends AbstractMatchStrategyUnitTest
 		
 		Match result = match("Convocá-lo");
 		
-		verifyTokensInSequence(result, "Convocá-", "lo");
+		verifyMatch(result, 0, "Convocá-lo".length(), 
+				span(0, "Convocá-".length(), 0),
+				span("Convocá-".length(), "Convocá-lo".length(), 1)
+			);
 	}
 
 	@Test
@@ -25,7 +30,10 @@ public class EncliticMatchStrategyUnitTest extends AbstractMatchStrategyUnitTest
 		
 		Match result = match("Convocá-la");
 		
-		verifyTokensInSequence(result, "Convocá-", "la");
+		verifyMatch(result, 0, "Convocá-la".length(), 
+				span(0, "Convocá-".length(), 0),
+				span("Convocá-".length(), "Convocá-la".length(), 1)
+			);
 	}
 	
 	@Test
@@ -35,7 +43,10 @@ public class EncliticMatchStrategyUnitTest extends AbstractMatchStrategyUnitTest
 		
 		Match result = match("Convocá-los");
 		
-		verifyTokensInSequence(result, "Convocá-", "los");
+		verifyMatch(result, 0, "Convocá-los".length(), 
+				span(0, "Convocá-".length(), 0),
+				span("Convocá-".length(), "Convocá-los".length(), 1)
+			);
 	}
 
 	@Test
@@ -45,7 +56,10 @@ public class EncliticMatchStrategyUnitTest extends AbstractMatchStrategyUnitTest
 		
 		Match result = match("Convocá-las");
 		
-		verifyTokensInSequence(result, "Convocá-", "las");
+		verifyMatch(result, 0, "Convocá-las".length(), 
+				span(0, "Convocá-".length(), 0),
+				span("Convocá-".length(), "Convocá-las".length(), 1)
+			);
 	}
 	
 	@Test
@@ -55,7 +69,10 @@ public class EncliticMatchStrategyUnitTest extends AbstractMatchStrategyUnitTest
 		
 		Match result = match("fazê-lo");
 		
-		verifyTokensInSequence(result, "fazê-", "lo");
+		verifyMatch(result, 0, "fazê-lo".length(), 
+				span(0, "fazê-".length(), 0),
+				span("fazê-".length(), "fazê-lo".length(), 1)
+			);
 	}
 
 	@Test
@@ -65,7 +82,10 @@ public class EncliticMatchStrategyUnitTest extends AbstractMatchStrategyUnitTest
 		
 		Match result = match("fazê-la");
 		
-		verifyTokensInSequence(result, "fazê-", "la");
+		verifyMatch(result, 0, "fazê-la".length(), 
+				span(0, "fazê-".length(), 0),
+				span("fazê-".length(), "fazê-la".length(), 1)
+			);
 	}
 	
 	@Test
@@ -75,7 +95,10 @@ public class EncliticMatchStrategyUnitTest extends AbstractMatchStrategyUnitTest
 		
 		Match result = match("fazê-los");
 		
-		verifyTokensInSequence(result, "fazê-", "los");
+		verifyMatch(result, 0, "fazê-los".length(), 
+				span(0, "fazê-".length(), 0),
+				span("fazê-".length(), "fazê-los".length(), 1)
+			);
 	}
 
 	@Test
@@ -85,7 +108,10 @@ public class EncliticMatchStrategyUnitTest extends AbstractMatchStrategyUnitTest
 		
 		Match result = match("fazê-las");
 		
-		verifyTokensInSequence(result, "fazê-", "las");
+		verifyMatch(result, 0, "fazê-las".length(), 
+				span(0, "fazê-".length(), 0),
+				span("fazê-".length(), "fazê-las".length(), 1)
+			);
 	}
 	
 	@Test
@@ -95,7 +121,10 @@ public class EncliticMatchStrategyUnitTest extends AbstractMatchStrategyUnitTest
 		
 		Match result = match("assisti-lo");
 		
-		verifyTokensInSequence(result, "assisti-", "lo");
+		verifyMatch(result, 0, "assisti-lo".length(), 
+				span(0, "assisti-".length(), 0),
+				span("assisti-".length(), "assisti-lo".length(), 1)
+			);
 	}
 
 	@Test
@@ -105,7 +134,10 @@ public class EncliticMatchStrategyUnitTest extends AbstractMatchStrategyUnitTest
 		
 		Match result = match("assisti-la");
 		
-		verifyTokensInSequence(result, "assisti-", "la");
+		verifyMatch(result, 0, "assisti-la".length(), 
+				span(0, "assisti-".length(), 0),
+				span("assisti-".length(), "assisti-la".length(), 1)
+			);
 	}
 	
 	@Test
@@ -115,7 +147,10 @@ public class EncliticMatchStrategyUnitTest extends AbstractMatchStrategyUnitTest
 		
 		Match result = match("assisti-los");
 		
-		verifyTokensInSequence(result, "assisti-", "los");
+		verifyMatch(result, 0, "assisti-los".length(), 
+				span(0, "assisti-".length(), 0),
+				span("assisti-".length(), "assisti-los".length(), 1)
+			);
 	}
 
 	@Test
@@ -125,7 +160,10 @@ public class EncliticMatchStrategyUnitTest extends AbstractMatchStrategyUnitTest
 		
 		Match result = match("assisti-las");
 		
-		verifyTokensInSequence(result, "assisti-", "las");
+		verifyMatch(result, 0, "assisti-las".length(), 
+				span(0, "assisti-".length(), 0),
+				span("assisti-".length(), "assisti-las".length(), 1)
+			);
 	}
 	
 	@Test
@@ -135,7 +173,10 @@ public class EncliticMatchStrategyUnitTest extends AbstractMatchStrategyUnitTest
 		
 		Match result = match("assisti-lo");
 		
-		verifyTokensInSequence(result, "assisti-", "lo");
+		verifyMatch(result, 0, "assisti-lo".length(), 
+				span(0, "assisti-".length(), 0),
+				span("assisti-".length(), "assisti-lo".length(), 1)
+			);
 	}
 
 	@Test
@@ -145,7 +186,10 @@ public class EncliticMatchStrategyUnitTest extends AbstractMatchStrategyUnitTest
 		
 		Match result = match("assisti-la");
 		
-		verifyTokensInSequence(result, "assisti-", "la");
+		verifyMatch(result, 0, "assisti-la".length(), 
+				span(0, "assisti-".length(), 0),
+				span("assisti-".length(), "assisti-la".length(), 1)
+			);
 	}
 	
 	@Test
@@ -155,7 +199,10 @@ public class EncliticMatchStrategyUnitTest extends AbstractMatchStrategyUnitTest
 		
 		Match result = match("assisti-los");
 		
-		verifyTokensInSequence(result, "assisti-", "los");
+		verifyMatch(result, 0, "assisti-los".length(), 
+				span(0, "assisti-".length(), 0),
+				span("assisti-".length(), "assisti-los".length(), 1)
+			);
 	}
 
 	@Test
@@ -165,6 +212,9 @@ public class EncliticMatchStrategyUnitTest extends AbstractMatchStrategyUnitTest
 		
 		Match result = match("assisti-las");
 		
-		verifyTokensInSequence(result, "assisti-", "las");
+		verifyMatch(result, 0, "assisti-las".length(), 
+				span(0, "assisti-".length(), 0),
+				span("assisti-".length(), "assisti-las".length(), 1)
+			);
 	}
 }

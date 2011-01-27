@@ -12,13 +12,13 @@ public class WhitespaceMatchStrategyUnitTest extends AbstractMatchStrategyUnitTe
 	public void testWhitespace() throws Exception {
 		Match result = match("   \t\t   \t   abcd");
 		
-		verifyTextButNoToken(result, "   \t\t   \t   ");
+		verifyMatch(result, 0, "   \t\t   \t   ".length());
 	}
 	
 	@Test
 	public void testFinalWhitespace() throws Exception {
 		Match result = match("   \t\t   \t   ");
 		
-		verifyTextButNoToken(result, "   \t\t   \t   ");
+		verifyMatch(result, 0, "   \t\t   \t   ".length());
 	}
 }
