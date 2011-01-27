@@ -1,6 +1,6 @@
 package br.eti.rslemos.nlp.corpora.chave.parser;
 
-import static br.eti.rslemos.nlp.corpora.chave.parser.Match.result;
+import static br.eti.rslemos.nlp.corpora.chave.parser.Match.Span.span;
 import static java.lang.Character.toLowerCase;
 
 import java.util.Arrays;
@@ -103,13 +103,13 @@ public abstract class AbstractContractionMatchStrategy implements MatchStrategy 
 		}
 
 		if (cmiddle == 0) {
-			return new Match(cskip, cleft + cmiddle + cright + cskip, result(cskip, (cskip + cleft), 0), result((cskip + cleft), (cskip + cleft + cright), 1));
+			return new Match(cskip, cleft + cmiddle + cright + cskip, span(cskip, (cskip + cleft), 0), span((cskip + cleft), (cskip + cleft + cright), 1));
 		} else if (cleft == 0) {
-			return new Match(cskip, cleft + cmiddle + cright + cskip, result(cskip, (cskip + cmiddle), 0), result(cskip, (cskip + cmiddle + cright), 1));
+			return new Match(cskip, cleft + cmiddle + cright + cskip, span(cskip, (cskip + cmiddle), 0), span(cskip, (cskip + cmiddle + cright), 1));
 		} else if (cright == 0) {
-			return new Match(cskip, cleft + cmiddle + cright + cskip, result(cskip, (cskip + cleft + cmiddle), 0), result((cskip + cleft), (cskip + cleft + cmiddle), 1));
+			return new Match(cskip, cleft + cmiddle + cright + cskip, span(cskip, (cskip + cleft + cmiddle), 0), span((cskip + cleft), (cskip + cleft + cmiddle), 1));
 		} else {
-			return new Match(cskip, cleft + cmiddle + cright + cskip, result(cskip, (cskip + cleft + cmiddle), 0), result((cskip + cleft), (cskip + cleft + cmiddle + cright), 1));
+			return new Match(cskip, cleft + cmiddle + cright + cskip, span(cskip, (cskip + cleft + cmiddle), 0), span((cskip + cleft), (cskip + cleft + cmiddle + cright), 1));
 		}
 	}
 

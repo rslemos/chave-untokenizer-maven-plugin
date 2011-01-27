@@ -5,25 +5,28 @@ import gate.FeatureMap;
 import gate.util.InvalidOffsetException;
 import gate.util.SimpleFeatureMapImpl;
 
+import java.util.Arrays;
+import java.util.LinkedHashSet;
 import java.util.List;
+import java.util.Set;
 
 
 public final class Match {
 	private int from;
 	private int to;
 	
-	private final Span[] matches;
+	private Set<Span> spans;
 	
-	public Match(int from, int to, Span... matches) {
+	public Match(int from, int to, Span... spans) {
+		this(from, to, new LinkedHashSet<Span>(Arrays.asList(spans)));
+	}
+	
+	public Match(int from, int to, Set<Span> spans) {
 		this.from = from;
 		this.to = to;
-		this.matches = matches;
+		this.spans = spans;
 	}
 	
-	public static Span result(int from, int to, int i) {
-		return new Span(from, to, i);
-	}
-
 	public void apply(AnnotationSet annotationSet, List<CGEntry> cg) throws InvalidOffsetException {
 		for (Span span : getMatches()) {
 			if (span.from >= 0 && span.to >= 0) {
@@ -36,11 +39,16 @@ public final class Match {
 	}
 
 	public Match adjust(int k, int i) {
+		Set<Span> spans = new LinkedHashSet<Span>(this.spans.size());
+		
 		from += k;
 		to += k;
-		for (int j = 0; j < matches.length; j++) {
-			matches[j] = new Span(matches[j].from + k, matches[j].to + k, matches[j].entry + i);
+		for (Span span : this.spans) {
+			span = Span.span(span.from + k, span.to + k, span.entry + i);
+			spans.add(span);
 		}
+		
+		this.spans = spans;
 		
 		return this;
 	}
@@ -61,12 +69,37 @@ public final class Match {
 		return to;
 	}
 	
-	public Span[] getMatches() {
-		return matches;
+	public Set<Span> getMatches() {
+		return spans;
 	}
 
 	public int getConsume() {
-		return matches.length;
+		return spans.size();
+	}
+	
+	public boolean equals(Object o) {
+		if (o == null)
+			return false;
+		
+		if (o == this)
+			return true;
+		
+		if (!(o instanceof Match))
+			return false;
+		
+		Match m = (Match) o;
+		
+		return this.from == m.from &&
+			this.to == m.to &&
+			(this.spans != null ? this.spans.equals(m.spans) : m.spans == null);
+	}
+	
+	public int hashCode() {
+		return this.to * 3 + this.from * 5 + (this.spans != null ? this.spans.hashCode() * 7 : 1); 
+	}
+	
+	public static Match match(int from, int to, Span... spans) {
+		return new Match(from, to, spans);
 	}
 	
 	public static class Span {
@@ -98,6 +131,10 @@ public final class Match {
 		
 		public int hashCode() {
 			return to * 3 + from * 5 + entry * 7;
+		}
+
+		public static Match.Span span(int from, int to, int i) {
+			return new Match.Span(from, to, i);
 		}
 	}
 }

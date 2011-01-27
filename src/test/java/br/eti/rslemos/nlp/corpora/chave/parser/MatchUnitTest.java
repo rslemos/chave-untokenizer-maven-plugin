@@ -1,19 +1,18 @@
 package br.eti.rslemos.nlp.corpora.chave.parser;
 
+import static br.eti.rslemos.nlp.corpora.chave.parser.Match.match;
 import static br.eti.rslemos.nlp.corpora.chave.parser.Match.Span.span;
 import static org.hamcrest.CoreMatchers.is;
 import static org.junit.Assert.assertThat;
 
 import org.junit.Test;
 
-import br.eti.rslemos.nlp.corpora.chave.parser.Match.Span;
-
-public class SpanUnitTest {
+public class MatchUnitTest {
 	@Test
 	public void testEquals() {
-		Span a0 = span(0, 0, 0);
-		Span a1 = span(0, 0, 0);
-		
-		assertThat(a0.equals(a1), is(true));
+		Match d0 = match(0, 15, span(0, 10, 0), span(5, 15, 1));
+		Match d1 = match(0, 15, span(0, 10, 0), span(5, 15, 1));
+
+		assertThat(d0.equals(d1), is(true));
 	}
 }

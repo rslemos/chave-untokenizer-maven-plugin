@@ -1,7 +1,9 @@
 package br.eti.rslemos.nlp.corpora.chave.parser;
 
+import static br.eti.rslemos.nlp.corpora.chave.parser.Match.Span.span;
 import static org.hamcrest.CoreMatchers.equalTo;
 import static org.hamcrest.CoreMatchers.is;
+import static org.hamcrest.Matchers.hasItems;
 import static org.junit.Assert.assertThat;
 
 import java.util.LinkedList;
@@ -28,82 +30,56 @@ public abstract class AbstractMatchStrategyUnitTest {
 	}
 
 	protected void verifyTextButNoToken(Match result, String text) {
-		assertThat(result.getFrom(), is(equalTo(0)));
-		assertThat(result.getTo(), is(equalTo(text.length())));
-		assertThat(result.getMatches().length, is(equalTo(0)));
+		verifyMatch(result, 0, text.length());
 	}
 
 	protected void verifyNoToken(Match result) {
-		assertThat(result.getFrom(), is(equalTo(0)));
-		assertThat(result.getTo(), is(equalTo(0)));
-		assertThat(result.getMatches().length, is(equalTo(0)));
+		verifyMatch(result, 0, 0);
 	}
 	
 	protected void verifyTokensInSequence(Match result, String... text) {
-		Span[] matches = result.getMatches();
+		Span[] expectedSpans = new Span[text.length];
 		
-		assertThat(matches.length, is(equalTo(text.length)));
 		int t = 0;
 		for (int i = 0; i < text.length; i++) {
-			assertThat(matches[i].entry, is(equalTo(i)));
-			assertThat(matches[i].from, is(equalTo(t)));
-			assertThat(matches[i].to, is(equalTo(t+text[i].length())));
+			expectedSpans[i] = span(t, t+text[i].length(), i);
 			t += text[i].length();
 		}
-		
-		assertThat(result.getFrom(), is(equalTo(0)));
-		assertThat(result.getTo(), is(equalTo(t)));
+
+		verifyMatch(result, 0, t, expectedSpans);
 	}
 
 	protected void verifyLeftAlignedOverlappingTokens(Match result, String left, String right) {
-		assertThat(result.getFrom(), is(equalTo(0)));
-		assertThat(result.getTo(), is(equalTo(left.length() + right.length())));
-		
-		assertThat(result.getMatches()[0].entry, is(equalTo(0)));
-		assertThat(result.getMatches()[0].from, is(equalTo(0)));
-		assertThat(result.getMatches()[0].to, is(equalTo(left.length())));
-		
-		assertThat(result.getMatches()[1].entry, is(equalTo(1)));
-		assertThat(result.getMatches()[1].from, is(equalTo(0)));
-		assertThat(result.getMatches()[1].to, is(equalTo(left.length() + right.length())));
+		verifyMatch(result, 0, left.length() + right.length(),
+				span(0, left.length(), 0),
+				span(0, left.length() + right.length(), 1)
+			);
 	}
 
 	protected void verifyRightAlignedOverlappingTokens(Match result, String left, String right) {
-		assertThat(result.getFrom(), is(equalTo(0)));
-		assertThat(result.getTo(), is(equalTo(left.length() + right.length())));
-		
-		assertThat(result.getMatches()[0].entry, is(equalTo(0)));
-		assertThat(result.getMatches()[0].from, is(equalTo(0)));
-		assertThat(result.getMatches()[0].to, is(equalTo(left.length() + right.length())));
-		
-		assertThat(result.getMatches()[1].entry, is(equalTo(1)));
-		assertThat(result.getMatches()[1].from, is(equalTo(left.length())));
-		assertThat(result.getMatches()[1].to, is(equalTo(left.length() + right.length())));
+		verifyMatch(result, 0, left.length() + right.length(), 
+				span(0, left.length() + right.length(), 0),
+				span(left.length(), left.length() + right.length(), 1)
+			);
 	}
 
 	protected void verifyFullOverlappingTokens(Match result, String full) {
-		assertThat(result.getFrom(), is(equalTo(0)));
-		assertThat(result.getTo(), is(equalTo(full.length())));
-		
-		assertThat(result.getMatches()[0].entry, is(equalTo(0)));
-		assertThat(result.getMatches()[0].from, is(equalTo(0)));
-		assertThat(result.getMatches()[0].to, is(equalTo(full.length())));
-		
-		assertThat(result.getMatches()[1].entry, is(equalTo(1)));
-		assertThat(result.getMatches()[1].from, is(equalTo(0)));
-		assertThat(result.getMatches()[1].to, is(equalTo(full.length())));
+		verifyMatch(result, 0, full.length(), span(0, full.length(), 0), span(0, full.length(), 1));
 	}
 	
 	protected void verifyIntersectingPseudoToken(Match result, String left, String middle, String right) {
-		assertThat(result.getFrom(), is(equalTo(0)));
-		assertThat(result.getTo(), is(equalTo(left.length() + middle.length() + right.length())));
+		verifyMatch(result, 0, left.length() + middle.length() + right.length(),  
+				span(0, left.length() + middle.length(), 0),
+				span(left.length(), left.length() + middle.length() + right.length(), 1)
+			);
+	}
+
+	private void verifyMatch(Match match, int expectedFrom, int expectedTo, Span... expectedSpans) {
+		assertThat(match.getFrom(), is(equalTo(expectedFrom)));
+		assertThat(match.getTo(), is(equalTo(expectedTo)));
 		
-		assertThat(result.getMatches()[0].entry, is(equalTo(0)));
-		assertThat(result.getMatches()[0].from, is(equalTo(0)));
-		assertThat(result.getMatches()[0].to, is(equalTo(left.length() + middle.length())));
-		
-		assertThat(result.getMatches()[1].entry, is(equalTo(1)));
-		assertThat(result.getMatches()[1].from, is(equalTo(left.length())));
-		assertThat(result.getMatches()[1].to, is(equalTo(left.length() + middle.length() + right.length())));
+		Set<Span> actualSpans = match.getMatches();
+		assertThat(actualSpans.size(), is(equalTo(expectedSpans.length)));
+		assertThat(actualSpans, hasItems(expectedSpans));
 	}
 }

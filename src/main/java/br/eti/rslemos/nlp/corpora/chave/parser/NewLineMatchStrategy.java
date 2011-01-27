@@ -1,6 +1,6 @@
 package br.eti.rslemos.nlp.corpora.chave.parser;
 
-import static br.eti.rslemos.nlp.corpora.chave.parser.Match.result;
+import static br.eti.rslemos.nlp.corpora.chave.parser.Match.Span.span;
 
 import java.util.Collections;
 import java.util.List;
@@ -21,7 +21,7 @@ public class NewLineMatchStrategy implements MatchStrategy {
 				l = 0;
 			}
 			
-			return new Match(0, l, result(0, l, 0));
+			return new Match(0, l, span(0, l, 0));
 		} else
 			return null;
 	}

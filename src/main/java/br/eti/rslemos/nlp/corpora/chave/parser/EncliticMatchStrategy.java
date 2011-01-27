@@ -1,6 +1,6 @@
 package br.eti.rslemos.nlp.corpora.chave.parser;
 
-import static br.eti.rslemos.nlp.corpora.chave.parser.Match.result;
+import static br.eti.rslemos.nlp.corpora.chave.parser.Match.Span.span;
 import static java.lang.Character.isWhitespace;
 import static java.lang.Character.toLowerCase;
 
@@ -63,7 +63,7 @@ public class EncliticMatchStrategy implements MatchStrategy {
 			}
 			
 			if (j == currentKey.length()) {
-				return new Match(0, k, result(0, (k - key1.length()), 0), result((k - key1.length()), k, 1));
+				return new Match(0, k, span(0, (k - key1.length()), 0), span((k - key1.length()), k, 1));
 			} else {
 				return null;
 			}

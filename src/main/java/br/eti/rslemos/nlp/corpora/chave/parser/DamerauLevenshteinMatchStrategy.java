@@ -1,6 +1,6 @@
 package br.eti.rslemos.nlp.corpora.chave.parser;
 
-import static br.eti.rslemos.nlp.corpora.chave.parser.Match.result;
+import static br.eti.rslemos.nlp.corpora.chave.parser.Match.Span.span;
 
 import java.util.Arrays;
 import java.util.Collections;
@@ -46,7 +46,7 @@ public class DamerauLevenshteinMatchStrategy implements MatchStrategy {
 			return null;
 		
 		if (levenshteinDistance(key0.toCharArray(), cs1) <= maxDistance) {
-			return new Match(0, cs1.length, result(0, cs1.length, 0));
+			return new Match(0, cs1.length, span(0, cs1.length, 0));
 		} else
 			return null;
 	}
