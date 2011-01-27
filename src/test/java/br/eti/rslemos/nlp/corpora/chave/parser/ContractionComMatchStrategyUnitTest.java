@@ -1,5 +1,6 @@
 package br.eti.rslemos.nlp.corpora.chave.parser;
 
+import static br.eti.rslemos.nlp.corpora.chave.parser.Match.match;
 import static br.eti.rslemos.nlp.corpora.chave.parser.Match.Span.span;
 
 import org.junit.Test;
@@ -15,12 +16,11 @@ public class ContractionComMatchStrategyUnitTest extends AbstractMatchStrategyUn
 		cg.add("com");
 		cg.add("mim");
 		
-		Match result = runOver("comigo");
+		runOver("comigo");
 		
-		verifyMatch(result, 0, "comigo".length(),  
-			span(0, "com".length(), 0),
-			span("co".length(), "comigo".length(), 1)
-		);
+		verifyMatches(match(0, "comigo".length(), span(0, "com".length(), 0),  
+				span("co".length(), "comigo".length(), 1)
+			));
 	}
 	
 	@Test
@@ -28,12 +28,11 @@ public class ContractionComMatchStrategyUnitTest extends AbstractMatchStrategyUn
 		cg.add("com");
 		cg.add("ti");
 		
-		Match result = runOver("contigo");
+		runOver("contigo");
 		
-		verifyMatch(result, 0, "contigo".length(), 
-				span(0, "con".length(), 0),
+		verifyMatches(match(0, "contigo".length(), span(0, "con".length(), 0), 
 				span("con".length(), "contigo".length(), 1)
-			);
+			));
 	}
 	
 	@Test
@@ -41,12 +40,11 @@ public class ContractionComMatchStrategyUnitTest extends AbstractMatchStrategyUn
 		cg.add("com");
 		cg.add("si");
 		
-		Match result = runOver("consigo");
+		runOver("consigo");
 		
-		verifyMatch(result, 0, "consigo".length(), 
-				span(0, "con".length(), 0),
+		verifyMatches(match(0, "consigo".length(), span(0, "con".length(), 0), 
 				span("con".length(), "consigo".length(), 1)
-			);
+			));
 	}
 	
 	@Test
@@ -54,12 +52,11 @@ public class ContractionComMatchStrategyUnitTest extends AbstractMatchStrategyUn
 		cg.add("com");
 		cg.add("nos");
 		
-		Match result = runOver("conosco");
+		runOver("conosco");
 		
-		verifyMatch(result, 0, "conosco".length(),  
-			span(0, "con".length(), 0),
-			span("co".length(), "conosco".length(), 1)
-		);
+		verifyMatches(match(0, "conosco".length(), span(0, "con".length(), 0),  
+				span("co".length(), "conosco".length(), 1)
+			));
 	}
 	
 	@Test
@@ -67,11 +64,10 @@ public class ContractionComMatchStrategyUnitTest extends AbstractMatchStrategyUn
 		cg.add("com");
 		cg.add("vos");
 		
-		Match result = runOver("convosco");
+		runOver("convosco");
 		
-		verifyMatch(result, 0, "convosco".length(), 
-				span(0, "con".length(), 0),
+		verifyMatches(match(0, "convosco".length(), span(0, "con".length(), 0), 
 				span("con".length(), "convosco".length(), 1)
-			);
+			));
 	}
 }

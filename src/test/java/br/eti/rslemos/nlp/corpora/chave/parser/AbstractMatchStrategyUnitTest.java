@@ -1,34 +1,31 @@
 package br.eti.rslemos.nlp.corpora.chave.parser;
 
-import static br.eti.rslemos.nlp.corpora.chave.parser.Match.match;
 import static org.hamcrest.CoreMatchers.equalTo;
 import static org.hamcrest.CoreMatchers.is;
+import static org.hamcrest.Matchers.hasItems;
 import static org.junit.Assert.assertThat;
 
 import java.util.LinkedList;
 import java.util.List;
 import java.util.Set;
 
-import br.eti.rslemos.nlp.corpora.chave.parser.Match.Span;
-
 public abstract class AbstractMatchStrategyUnitTest {
 
 	private final MatchStrategy strategy;
 	protected final List<String> cg = new LinkedList<String>();
 
+	private Set<Match> matches;
+
 	protected AbstractMatchStrategyUnitTest(MatchStrategy strategy) {
 		this.strategy = strategy;
 	}
 
-	protected Match runOver(String sgml) {
-		Set<Match> set = strategy.match(sgml, cg);
-		if (set.isEmpty())
-			return null;
-		else
-			return set.iterator().next();
+	protected void runOver(String sgml) {
+		matches = strategy.match(sgml, cg);
 	}
 
-	public static void verifyMatch(Match match, int from, int to, Span... spans) {
-		assertThat(match, is(equalTo(match(from, to, spans))));
+	public void verifyMatches(Match... matches) {
+		assertThat(this.matches.size(), is(equalTo(matches.length)));
+		assertThat(this.matches, hasItems(matches));
 	}
 }

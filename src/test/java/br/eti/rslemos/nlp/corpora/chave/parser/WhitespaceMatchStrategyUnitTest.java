@@ -1,5 +1,6 @@
 package br.eti.rslemos.nlp.corpora.chave.parser;
 
+import static br.eti.rslemos.nlp.corpora.chave.parser.Match.match;
 import org.junit.Test;
 
 public class WhitespaceMatchStrategyUnitTest extends AbstractMatchStrategyUnitTest {
@@ -10,15 +11,15 @@ public class WhitespaceMatchStrategyUnitTest extends AbstractMatchStrategyUnitTe
 	
 	@Test
 	public void testWhitespace() throws Exception {
-		Match result = runOver("   \t\t   \t   abcd");
+		runOver("   \t\t   \t   abcd");
 		
-		verifyMatch(result, 0, "   \t\t   \t   ".length());
+		verifyMatches(match(0, "   \t\t   \t   ".length()));
 	}
 	
 	@Test
 	public void testFinalWhitespace() throws Exception {
-		Match result = runOver("   \t\t   \t   ");
+		runOver("   \t\t   \t   ");
 		
-		verifyMatch(result, 0, "   \t\t   \t   ".length());
+		verifyMatches(match(0, "   \t\t   \t   ".length()));
 	}
 }

@@ -1,5 +1,6 @@
 package br.eti.rslemos.nlp.corpora.chave.parser;
 
+import static br.eti.rslemos.nlp.corpora.chave.parser.Match.match;
 import static br.eti.rslemos.nlp.corpora.chave.parser.Match.Span.span;
 
 import org.junit.Test;
@@ -15,12 +16,11 @@ public class ContractionPorMatchStrategyUnitTest extends AbstractMatchStrategyUn
 		cg.add("por");
 		cg.add("o");
 		
-		Match result = runOver("pelo");
+		runOver("pelo");
 		
-		verifyMatch(result, 0, "pelo".length(), 
-				span(0, "pel".length(), 0),
+		verifyMatches(match(0, "pelo".length(), span(0, "pel".length(), 0), 
 				span("pel".length(), "pelo".length(), 1)
-			);
+			));
 	}
 	
 	@Test
@@ -28,12 +28,11 @@ public class ContractionPorMatchStrategyUnitTest extends AbstractMatchStrategyUn
 		cg.add("por");
 		cg.add("a");
 		
-		Match result = runOver("pela");
+		runOver("pela");
 		
-		verifyMatch(result, 0, "pela".length(), 
-				span(0, "pel".length(), 0),
+		verifyMatches(match(0, "pela".length(), span(0, "pel".length(), 0), 
 				span("pel".length(), "pela".length(), 1)
-			);
+			));
 	}
 	
 	@Test
@@ -41,12 +40,11 @@ public class ContractionPorMatchStrategyUnitTest extends AbstractMatchStrategyUn
 		cg.add("por");
 		cg.add("os");
 		
-		Match result = runOver("pelos");
+		runOver("pelos");
 		
-		verifyMatch(result, 0, "pelos".length(), 
-				span(0, "pel".length(), 0),
+		verifyMatches(match(0, "pelos".length(), span(0, "pel".length(), 0), 
 				span("pel".length(), "pelos".length(), 1)
-			);
+			));
 	}
 	
 	@Test
@@ -54,11 +52,10 @@ public class ContractionPorMatchStrategyUnitTest extends AbstractMatchStrategyUn
 		cg.add("por");
 		cg.add("as");
 		
-		Match result = runOver("pelas");
+		runOver("pelas");
 		
-		verifyMatch(result, 0, "pelas".length(), 
-				span(0, "pel".length(), 0),
+		verifyMatches(match(0, "pelas".length(), span(0, "pel".length(), 0), 
 				span("pel".length(), "pelas".length(), 1)
-			);
+			));
 	}
 }

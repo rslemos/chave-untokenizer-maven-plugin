@@ -1,5 +1,6 @@
 package br.eti.rslemos.nlp.corpora.chave.parser;
 
+import static br.eti.rslemos.nlp.corpora.chave.parser.Match.match;
 import static br.eti.rslemos.nlp.corpora.chave.parser.Match.Span.span;
 
 import org.junit.Test;
@@ -13,30 +14,24 @@ public class NewLineMatchStrategyUnitTest extends AbstractMatchStrategyUnitTest 
 	@Test
 	public void testNewLine() throws Exception {
 		cg.add("$¶");
-		Match result = runOver("\n");
+		runOver("\n");
 		
-		verifyMatch(result, 0, 1, 
-				span(0, 1, 0)
-			);
+		verifyMatches(match(0, 1, span(0, 1, 0)));
 	}
 
 	@Test
 	public void testOptionalNewLine() throws Exception {
 		cg.add("$¶");
-		Match result = runOver("abcd");
+		runOver("abcd");
 		
-		verifyMatch(result, 0, 0, 
-				span(0, 0, 0)
-			);
+		verifyMatches(match(0, 0, span(0, 0, 0)));
 	}
 
 	@Test
 	public void testEmptyInput() throws Exception {
 		cg.add("$¶");
-		Match result = runOver("");
+		runOver("");
 		
-		verifyMatch(result, 0, 0, 
-				span(0, 0, 0)
-			);
+		verifyMatches(match(0, 0, span(0, 0, 0)));
 	}
 }

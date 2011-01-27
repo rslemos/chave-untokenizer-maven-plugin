@@ -1,5 +1,6 @@
 package br.eti.rslemos.nlp.corpora.chave.parser;
 
+import static br.eti.rslemos.nlp.corpora.chave.parser.Match.match;
 import static br.eti.rslemos.nlp.corpora.chave.parser.Match.Span.span;
 
 import org.junit.Test;
@@ -15,12 +16,11 @@ public class ContractionEmMatchStrategyUnitTest extends AbstractMatchStrategyUni
 		cg.add("em");
 		cg.add("o");
 		
-		Match result = runOver("no");
+		runOver("no");
 		
-		verifyMatch(result, 0, 2, 
-				span(0, 1, 0),
+		verifyMatches(match(0, 2, span(0, 1, 0), 
 				span(1, 2, 1)
-			);
+			));
 	}
 	
 	@Test
@@ -28,12 +28,11 @@ public class ContractionEmMatchStrategyUnitTest extends AbstractMatchStrategyUni
 		cg.add("em");
 		cg.add("a");
 		
-		Match result = runOver("na");
+		runOver("na");
 		
-		verifyMatch(result, 0, 2, 
-				span(0, 1, 0),
+		verifyMatches(match(0, 2, span(0, 1, 0), 
 				span(1, 2, 1)
-			);
+			));
 	}
 	
 	@Test
@@ -41,12 +40,11 @@ public class ContractionEmMatchStrategyUnitTest extends AbstractMatchStrategyUni
 		cg.add("em");
 		cg.add("os");
 		
-		Match result = runOver("nos");
+		runOver("nos");
 		
-		verifyMatch(result, 0, 3, 
-				span(0, 1, 0),
+		verifyMatches(match(0, 3, span(0, 1, 0), 
 				span(1, 3, 1)
-			);
+			));
 	}
 	
 	@Test
@@ -54,12 +52,11 @@ public class ContractionEmMatchStrategyUnitTest extends AbstractMatchStrategyUni
 		cg.add("em");
 		cg.add("as");
 		
-		Match result = runOver("nas");
+		runOver("nas");
 		
-		verifyMatch(result, 0, 3, 
-				span(0, 1, 0),
+		verifyMatches(match(0, 3, span(0, 1, 0), 
 				span(1, 3, 1)
-			);
+			));
 	}
 
 	@Test
@@ -67,12 +64,11 @@ public class ContractionEmMatchStrategyUnitTest extends AbstractMatchStrategyUni
 		cg.add("em");
 		cg.add("este");
 		
-		Match result = runOver("neste");
+		runOver("neste");
 		
-		verifyMatch(result, 0, "neste".length(), 
-				span(0, 1, 0),
+		verifyMatches(match(0, "neste".length(), span(0, 1, 0), 
 				span(1, "neste".length(), 1)
-			);
+			));
 	}
 	
 	@Test
@@ -80,12 +76,11 @@ public class ContractionEmMatchStrategyUnitTest extends AbstractMatchStrategyUni
 		cg.add("em");
 		cg.add("esse");
 		
-		Match result = runOver("nesse");
+		runOver("nesse");
 		
-		verifyMatch(result, 0, "nesse".length(), 
-				span(0, 1, 0),
+		verifyMatches(match(0, "nesse".length(), span(0, 1, 0), 
 				span(1, "nesse".length(), 1)
-			);
+			));
 	}
 	
 	@Test
@@ -93,12 +88,11 @@ public class ContractionEmMatchStrategyUnitTest extends AbstractMatchStrategyUni
 		cg.add("em");
 		cg.add("esta");
 		
-		Match result = runOver("nesta");
+		runOver("nesta");
 		
-		verifyMatch(result, 0, "nesta".length(), 
-				span(0, 1, 0),
+		verifyMatches(match(0, "nesta".length(), span(0, 1, 0), 
 				span(1, "nesta".length(), 1)
-			);
+			));
 	}
 	
 	@Test
@@ -106,12 +100,11 @@ public class ContractionEmMatchStrategyUnitTest extends AbstractMatchStrategyUni
 		cg.add("em");
 		cg.add("essa");
 		
-		Match result = runOver("nessa");
+		runOver("nessa");
 		
-		verifyMatch(result, 0, "nessa".length(), 
-				span(0, 1, 0),
+		verifyMatches(match(0, "nessa".length(), span(0, 1, 0), 
 				span(1, "nessa".length(), 1)
-			);
+			));
 	}
 	
 	@Test
@@ -119,12 +112,11 @@ public class ContractionEmMatchStrategyUnitTest extends AbstractMatchStrategyUni
 		cg.add("em");
 		cg.add("estes");
 		
-		Match result = runOver("nestes");
+		runOver("nestes");
 		
-		verifyMatch(result, 0, "nestes".length(), 
-				span(0, 1, 0),
+		verifyMatches(match(0, "nestes".length(), span(0, 1, 0), 
 				span(1, "nestes".length(), 1)
-			);
+			));
 	}
 	
 	@Test
@@ -132,12 +124,11 @@ public class ContractionEmMatchStrategyUnitTest extends AbstractMatchStrategyUni
 		cg.add("em");
 		cg.add("esses");
 		
-		Match result = runOver("nesses");
+		runOver("nesses");
 		
-		verifyMatch(result, 0, "nesses".length(), 
-				span(0, 1, 0),
+		verifyMatches(match(0, "nesses".length(), span(0, 1, 0), 
 				span(1, "nesses".length(), 1)
-			);
+			));
 	}
 	
 	@Test
@@ -145,12 +136,11 @@ public class ContractionEmMatchStrategyUnitTest extends AbstractMatchStrategyUni
 		cg.add("em");
 		cg.add("estas");
 		
-		Match result = runOver("nestas");
+		runOver("nestas");
 		
-		verifyMatch(result, 0, "nestas".length(), 
-				span(0, 1, 0),
+		verifyMatches(match(0, "nestas".length(), span(0, 1, 0), 
 				span(1, "nestas".length(), 1)
-			);
+			));
 	}
 	
 	@Test
@@ -158,12 +148,11 @@ public class ContractionEmMatchStrategyUnitTest extends AbstractMatchStrategyUni
 		cg.add("em");
 		cg.add("essas");
 		
-		Match result = runOver("nessas");
+		runOver("nessas");
 		
-		verifyMatch(result, 0, "nessas".length(), 
-				span(0, 1, 0),
+		verifyMatches(match(0, "nessas".length(), span(0, 1, 0), 
 				span(1, "nessas".length(), 1)
-			);
+			));
 	}
 	
 	@Test
@@ -171,12 +160,11 @@ public class ContractionEmMatchStrategyUnitTest extends AbstractMatchStrategyUni
 		cg.add("em");
 		cg.add("isto");
 		
-		Match result = runOver("nisto");
+		runOver("nisto");
 		
-		verifyMatch(result, 0, "nisto".length(), 
-				span(0, 1, 0),
+		verifyMatches(match(0, "nisto".length(), span(0, 1, 0), 
 				span(1, "nisto".length(), 1)
-			);
+			));
 	}
 	
 	@Test
@@ -184,12 +172,11 @@ public class ContractionEmMatchStrategyUnitTest extends AbstractMatchStrategyUni
 		cg.add("em");
 		cg.add("isso");
 		
-		Match result = runOver("nisso");
+		runOver("nisso");
 		
-		verifyMatch(result, 0, "nisso".length(), 
-				span(0, 1, 0),
+		verifyMatches(match(0, "nisso".length(), span(0, 1, 0), 
 				span(1, "nisso".length(), 1)
-			);
+			));
 	}
 	
 	@Test
@@ -197,12 +184,11 @@ public class ContractionEmMatchStrategyUnitTest extends AbstractMatchStrategyUni
 		cg.add("em");
 		cg.add("aquele");
 		
-		Match result = runOver("naquele");
+		runOver("naquele");
 		
-		verifyMatch(result, 0, "naquele".length(), 
-				span(0, 1, 0),
+		verifyMatches(match(0, "naquele".length(), span(0, 1, 0), 
 				span(1, "naquele".length(), 1)
-			);
+			));
 	}
 	
 	@Test
@@ -210,12 +196,11 @@ public class ContractionEmMatchStrategyUnitTest extends AbstractMatchStrategyUni
 		cg.add("em");
 		cg.add("aquela");
 		
-		Match result = runOver("naquela");
+		runOver("naquela");
 		
-		verifyMatch(result, 0, "naquela".length(), 
-				span(0, 1, 0),
+		verifyMatches(match(0, "naquela".length(), span(0, 1, 0), 
 				span(1, "naquela".length(), 1)
-			);
+			));
 	}
 	
 	@Test
@@ -223,12 +208,11 @@ public class ContractionEmMatchStrategyUnitTest extends AbstractMatchStrategyUni
 		cg.add("em");
 		cg.add("aqueles");
 		
-		Match result = runOver("naqueles");
+		runOver("naqueles");
 		
-		verifyMatch(result, 0, "naqueles".length(), 
-				span(0, 1, 0),
+		verifyMatches(match(0, "naqueles".length(), span(0, 1, 0), 
 				span(1, "naqueles".length(), 1)
-			);
+			));
 	}
 	
 	@Test
@@ -236,12 +220,11 @@ public class ContractionEmMatchStrategyUnitTest extends AbstractMatchStrategyUni
 		cg.add("em");
 		cg.add("aquelas");
 		
-		Match result = runOver("naquelas");
+		runOver("naquelas");
 		
-		verifyMatch(result, 0, "naquelas".length(), 
-				span(0, 1, 0),
+		verifyMatches(match(0, "naquelas".length(), span(0, 1, 0), 
 				span(1, "naquelas".length(), 1)
-			);
+			));
 	}
 	
 	@Test
@@ -249,12 +232,11 @@ public class ContractionEmMatchStrategyUnitTest extends AbstractMatchStrategyUni
 		cg.add("em");
 		cg.add("aquilo");
 		
-		Match result = runOver("naquilo");
+		runOver("naquilo");
 		
-		verifyMatch(result, 0, "naquilo".length(), 
-				span(0, 1, 0),
+		verifyMatches(match(0, "naquilo".length(), span(0, 1, 0), 
 				span(1, "naquilo".length(), 1)
-			);
+			));
 	}
 	
 	@Test
@@ -262,12 +244,11 @@ public class ContractionEmMatchStrategyUnitTest extends AbstractMatchStrategyUni
 		cg.add("em");
 		cg.add("ele");
 		
-		Match result = runOver("nele");
+		runOver("nele");
 		
-		verifyMatch(result, 0, "nele".length(), 
-				span(0, 1, 0),
+		verifyMatches(match(0, "nele".length(), span(0, 1, 0), 
 				span(1, "nele".length(), 1)
-			);
+			));
 	}
 	
 	@Test
@@ -275,12 +256,11 @@ public class ContractionEmMatchStrategyUnitTest extends AbstractMatchStrategyUni
 		cg.add("em");
 		cg.add("ela");
 		
-		Match result = runOver("nela");
+		runOver("nela");
 		
-		verifyMatch(result, 0, "nela".length(), 
-				span(0, 1, 0),
+		verifyMatches(match(0, "nela".length(), span(0, 1, 0), 
 				span(1, "nela".length(), 1)
-			);
+			));
 	}
 	
 	@Test
@@ -288,12 +268,11 @@ public class ContractionEmMatchStrategyUnitTest extends AbstractMatchStrategyUni
 		cg.add("em");
 		cg.add("eles");
 		
-		Match result = runOver("neles");
+		runOver("neles");
 		
-		verifyMatch(result, 0, "neles".length(), 
-				span(0, 1, 0),
+		verifyMatches(match(0, "neles".length(), span(0, 1, 0), 
 				span(1, "neles".length(), 1)
-			);
+			));
 	}
 	
 	@Test
@@ -301,12 +280,11 @@ public class ContractionEmMatchStrategyUnitTest extends AbstractMatchStrategyUni
 		cg.add("em");
 		cg.add("elas");
 		
-		Match result = runOver("nelas");
+		runOver("nelas");
 		
-		verifyMatch(result, 0, "nelas".length(), 
-				span(0, 1, 0),
+		verifyMatches(match(0, "nelas".length(), span(0, 1, 0), 
 				span(1, "nelas".length(), 1)
-			);
+			));
 	}
 	
 	@Test
@@ -314,12 +292,11 @@ public class ContractionEmMatchStrategyUnitTest extends AbstractMatchStrategyUni
 		cg.add("em");
 		cg.add("um");
 		
-		Match result = runOver("num");
+		runOver("num");
 		
-		verifyMatch(result, 0, 3, 
-				span(0, 1, 0),
+		verifyMatches(match(0, 3, span(0, 1, 0), 
 				span(1, 3, 1)
-			);
+			));
 	}
 	
 	@Test
@@ -327,12 +304,11 @@ public class ContractionEmMatchStrategyUnitTest extends AbstractMatchStrategyUni
 		cg.add("em");
 		cg.add("uma");
 		
-		Match result = runOver("numa");
+		runOver("numa");
 		
-		verifyMatch(result, 0, 4, 
-				span(0, 1, 0),
+		verifyMatches(match(0, 4, span(0, 1, 0), 
 				span(1, 4, 1)
-			);
+			));
 	}
 	
 	@Test
@@ -340,12 +316,11 @@ public class ContractionEmMatchStrategyUnitTest extends AbstractMatchStrategyUni
 		cg.add("em");
 		cg.add("uns");
 		
-		Match result = runOver("nuns");
+		runOver("nuns");
 		
-		verifyMatch(result, 0, 4, 
-				span(0, 1, 0),
+		verifyMatches(match(0, 4, span(0, 1, 0), 
 				span(1, 4, 1)
-			);
+			));
 	}
 	
 	@Test
@@ -353,12 +328,11 @@ public class ContractionEmMatchStrategyUnitTest extends AbstractMatchStrategyUni
 		cg.add("em");
 		cg.add("umas");
 		
-		Match result = runOver("numas");
+		runOver("numas");
 		
-		verifyMatch(result, 0, 5, 
-				span(0, 1, 0),
+		verifyMatches(match(0, 5, span(0, 1, 0), 
 				span(1, 5, 1)
-			);
+			));
 	}
 	
 	@Test
@@ -366,12 +340,11 @@ public class ContractionEmMatchStrategyUnitTest extends AbstractMatchStrategyUni
 		cg.add("em");
 		cg.add("o=qual");
 		
-		Match result = runOver("no qual");
+		runOver("no qual");
 		
-		verifyMatch(result, 0, "no qual".length(), 
-				span(0, 1, 0),
+		verifyMatches(match(0, "no qual".length(), span(0, 1, 0), 
 				span(1, "no qual".length(), 1)
-			);
+			));
 		
 	}
 }
