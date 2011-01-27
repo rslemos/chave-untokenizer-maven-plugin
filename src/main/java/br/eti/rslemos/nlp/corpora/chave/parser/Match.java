@@ -28,7 +28,7 @@ public final class Match {
 	}
 	
 	public void apply(AnnotationSet annotationSet, List<CGEntry> cg) throws InvalidOffsetException {
-		for (Span span : getMatches()) {
+		for (Span span : getSpans()) {
 			if (span.from >= 0 && span.to >= 0) {
 				FeatureMap features = new SimpleFeatureMapImpl();
 				features.put("match", cg.get(span.entry).getKey());
@@ -69,7 +69,7 @@ public final class Match {
 		return to;
 	}
 	
-	public Set<Span> getMatches() {
+	public Set<Span> getSpans() {
 		return spans;
 	}
 

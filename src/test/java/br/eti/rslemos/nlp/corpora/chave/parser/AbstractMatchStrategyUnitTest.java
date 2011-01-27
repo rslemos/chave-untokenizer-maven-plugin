@@ -32,7 +32,7 @@ public abstract class AbstractMatchStrategyUnitTest {
 		assertThat(match.getFrom(), is(equalTo(expectedFrom)));
 		assertThat(match.getTo(), is(equalTo(expectedTo)));
 		
-		Set<Span> actualSpans = match.getMatches();
+		Set<Span> actualSpans = match.getSpans();
 		assertThat(actualSpans.size(), is(equalTo(expectedSpans.length)));
 		assertThat(actualSpans, hasItems(expectedSpans));
 	}
