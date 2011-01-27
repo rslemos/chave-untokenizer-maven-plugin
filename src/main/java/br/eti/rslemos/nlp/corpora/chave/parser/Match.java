@@ -98,6 +98,10 @@ public final class Match {
 		return this.to * 3 + this.from * 5 + (this.spans != null ? this.spans.hashCode() * 7 : 1); 
 	}
 	
+	public String toString() {
+		return "{" + from + ", " + to + "}/" + spans;
+	}
+	
 	public static Match match(int from, int to, Span... spans) {
 		return new Match(from, to, spans);
 	}
@@ -133,6 +137,10 @@ public final class Match {
 			return to * 3 + from * 5 + entry * 7;
 		}
 
+		public String toString() {
+			return "{" + from + ", " + to + "} -> " + entry;
+		}
+		
 		public static Match.Span span(int from, int to, int i) {
 			return new Match.Span(from, to, i);
 		}
