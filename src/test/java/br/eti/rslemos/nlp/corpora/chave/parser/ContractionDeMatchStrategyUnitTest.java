@@ -15,7 +15,7 @@ public class ContractionDeMatchStrategyUnitTest extends AbstractMatchStrategyUni
 		cg.add("de");
 		cg.add("o");
 		
-		Match result = match("do");
+		Match result = runOver("do");
 		
 		verifyMatch(result, 0, 2, 
 				span(0, 1, 0),
@@ -28,7 +28,7 @@ public class ContractionDeMatchStrategyUnitTest extends AbstractMatchStrategyUni
 		cg.add("de");
 		cg.add("a");
 		
-		Match result = match("da");
+		Match result = runOver("da");
 		
 		verifyMatch(result, 0, 2, 
 				span(0, 1, 0),
@@ -41,7 +41,7 @@ public class ContractionDeMatchStrategyUnitTest extends AbstractMatchStrategyUni
 		cg.add("de");
 		cg.add("os");
 		
-		Match result = match("dos");
+		Match result = runOver("dos");
 		
 		verifyMatch(result, 0, 3, 
 				span(0, 1, 0),
@@ -54,7 +54,7 @@ public class ContractionDeMatchStrategyUnitTest extends AbstractMatchStrategyUni
 		cg.add("de");
 		cg.add("as");
 		
-		Match result = match("das");
+		Match result = runOver("das");
 		
 		verifyMatch(result, 0, 3, 
 				span(0, 1, 0),
@@ -67,7 +67,7 @@ public class ContractionDeMatchStrategyUnitTest extends AbstractMatchStrategyUni
 		cg.add("de");
 		cg.add("este");
 		
-		Match result = match("deste");
+		Match result = runOver("deste");
 		
 		verifyMatch(result, 0, "deste".length(), 
 				span(0, 1, 0),
@@ -80,7 +80,7 @@ public class ContractionDeMatchStrategyUnitTest extends AbstractMatchStrategyUni
 		cg.add("de");
 		cg.add("esse");
 		
-		Match result = match("desse");
+		Match result = runOver("desse");
 		
 		verifyMatch(result, 0, "desse".length(), 
 				span(0, 1, 0),
@@ -93,7 +93,7 @@ public class ContractionDeMatchStrategyUnitTest extends AbstractMatchStrategyUni
 		cg.add("de");
 		cg.add("esta");
 		
-		Match result = match("desta");
+		Match result = runOver("desta");
 		
 		verifyMatch(result, 0, "desta".length(), 
 				span(0, 1, 0),
@@ -106,7 +106,7 @@ public class ContractionDeMatchStrategyUnitTest extends AbstractMatchStrategyUni
 		cg.add("de");
 		cg.add("essa");
 		
-		Match result = match("dessa");
+		Match result = runOver("dessa");
 		
 		verifyMatch(result, 0, "dessa".length(), 
 				span(0, 1, 0),
@@ -119,7 +119,7 @@ public class ContractionDeMatchStrategyUnitTest extends AbstractMatchStrategyUni
 		cg.add("de");
 		cg.add("estes");
 		
-		Match result = match("destes");
+		Match result = runOver("destes");
 		
 		verifyMatch(result, 0, "destes".length(), 
 				span(0, 1, 0),
@@ -132,7 +132,7 @@ public class ContractionDeMatchStrategyUnitTest extends AbstractMatchStrategyUni
 		cg.add("de");
 		cg.add("esses");
 		
-		Match result = match("desses");
+		Match result = runOver("desses");
 		
 		verifyMatch(result, 0, "desses".length(), 
 				span(0, 1, 0),
@@ -145,7 +145,7 @@ public class ContractionDeMatchStrategyUnitTest extends AbstractMatchStrategyUni
 		cg.add("de");
 		cg.add("estas");
 		
-		Match result = match("destas");
+		Match result = runOver("destas");
 		
 		verifyMatch(result, 0, "destas".length(), 
 				span(0, 1, 0),
@@ -158,7 +158,7 @@ public class ContractionDeMatchStrategyUnitTest extends AbstractMatchStrategyUni
 		cg.add("de");
 		cg.add("essas");
 		
-		Match result = match("dessas");
+		Match result = runOver("dessas");
 		
 		verifyMatch(result, 0, "dessas".length(), 
 				span(0, 1, 0),
@@ -171,7 +171,7 @@ public class ContractionDeMatchStrategyUnitTest extends AbstractMatchStrategyUni
 		cg.add("de");
 		cg.add("isto");
 		
-		Match result = match("disto");
+		Match result = runOver("disto");
 		
 		verifyMatch(result, 0, "disto".length(), 
 				span(0, 1, 0),
@@ -184,7 +184,7 @@ public class ContractionDeMatchStrategyUnitTest extends AbstractMatchStrategyUni
 		cg.add("de");
 		cg.add("isso");
 		
-		Match result = match("disso");
+		Match result = runOver("disso");
 		
 		verifyMatch(result, 0, "disso".length(), 
 				span(0, 1, 0),
@@ -197,7 +197,7 @@ public class ContractionDeMatchStrategyUnitTest extends AbstractMatchStrategyUni
 		cg.add("de");
 		cg.add("aquele");
 		
-		Match result = match("daquele");
+		Match result = runOver("daquele");
 		
 		verifyMatch(result, 0, "daquele".length(), 
 				span(0, 1, 0),
@@ -210,7 +210,7 @@ public class ContractionDeMatchStrategyUnitTest extends AbstractMatchStrategyUni
 		cg.add("de");
 		cg.add("aquela");
 		
-		Match result = match("daquela");
+		Match result = runOver("daquela");
 		
 		verifyMatch(result, 0, "daquela".length(), 
 				span(0, 1, 0),
@@ -223,7 +223,7 @@ public class ContractionDeMatchStrategyUnitTest extends AbstractMatchStrategyUni
 		cg.add("de");
 		cg.add("aqueles");
 		
-		Match result = match("daqueles");
+		Match result = runOver("daqueles");
 		
 		verifyMatch(result, 0, "daqueles".length(), 
 				span(0, 1, 0),
@@ -236,7 +236,7 @@ public class ContractionDeMatchStrategyUnitTest extends AbstractMatchStrategyUni
 		cg.add("de");
 		cg.add("aquelas");
 		
-		Match result = match("daquelas");
+		Match result = runOver("daquelas");
 		
 		verifyMatch(result, 0, "daquelas".length(), 
 				span(0, 1, 0),
@@ -249,7 +249,7 @@ public class ContractionDeMatchStrategyUnitTest extends AbstractMatchStrategyUni
 		cg.add("de");
 		cg.add("aquilo");
 		
-		Match result = match("daquilo");
+		Match result = runOver("daquilo");
 		
 		verifyMatch(result, 0, "daquilo".length(), 
 				span(0, 1, 0),
@@ -262,7 +262,7 @@ public class ContractionDeMatchStrategyUnitTest extends AbstractMatchStrategyUni
 		cg.add("de");
 		cg.add("ele");
 		
-		Match result = match("dele");
+		Match result = runOver("dele");
 		
 		verifyMatch(result, 0, "dele".length(), 
 				span(0, 1, 0),
@@ -275,7 +275,7 @@ public class ContractionDeMatchStrategyUnitTest extends AbstractMatchStrategyUni
 		cg.add("de");
 		cg.add("ela");
 		
-		Match result = match("dela");
+		Match result = runOver("dela");
 		
 		verifyMatch(result, 0, "dela".length(), 
 				span(0, 1, 0),
@@ -288,7 +288,7 @@ public class ContractionDeMatchStrategyUnitTest extends AbstractMatchStrategyUni
 		cg.add("de");
 		cg.add("eles");
 		
-		Match result = match("deles");
+		Match result = runOver("deles");
 		
 		verifyMatch(result, 0, "deles".length(), 
 				span(0, 1, 0),
@@ -301,7 +301,7 @@ public class ContractionDeMatchStrategyUnitTest extends AbstractMatchStrategyUni
 		cg.add("de");
 		cg.add("elas");
 		
-		Match result = match("delas");
+		Match result = runOver("delas");
 		
 		verifyMatch(result, 0, "delas".length(), 
 				span(0, 1, 0),
@@ -314,7 +314,7 @@ public class ContractionDeMatchStrategyUnitTest extends AbstractMatchStrategyUni
 		cg.add("de");
 		cg.add("aí");
 		
-		Match result = match("daí");
+		Match result = runOver("daí");
 		
 		verifyMatch(result, 0, "daí".length(), 
 				span(0, 1, 0),
@@ -327,7 +327,7 @@ public class ContractionDeMatchStrategyUnitTest extends AbstractMatchStrategyUni
 		cg.add("Além=de");
 		cg.add("isso");
 		
-		Match result = match("Além disso");
+		Match result = runOver("Além disso");
 		
 		verifyMatch(result, 0, "Além disso".length(), 
 				span(0, "Além d".length(), 0),

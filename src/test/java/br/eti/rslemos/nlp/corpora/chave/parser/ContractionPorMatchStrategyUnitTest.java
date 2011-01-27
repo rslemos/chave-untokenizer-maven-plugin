@@ -15,7 +15,7 @@ public class ContractionPorMatchStrategyUnitTest extends AbstractMatchStrategyUn
 		cg.add("por");
 		cg.add("o");
 		
-		Match result = match("pelo");
+		Match result = runOver("pelo");
 		
 		verifyMatch(result, 0, "pelo".length(), 
 				span(0, "pel".length(), 0),
@@ -28,7 +28,7 @@ public class ContractionPorMatchStrategyUnitTest extends AbstractMatchStrategyUn
 		cg.add("por");
 		cg.add("a");
 		
-		Match result = match("pela");
+		Match result = runOver("pela");
 		
 		verifyMatch(result, 0, "pela".length(), 
 				span(0, "pel".length(), 0),
@@ -41,7 +41,7 @@ public class ContractionPorMatchStrategyUnitTest extends AbstractMatchStrategyUn
 		cg.add("por");
 		cg.add("os");
 		
-		Match result = match("pelos");
+		Match result = runOver("pelos");
 		
 		verifyMatch(result, 0, "pelos".length(), 
 				span(0, "pel".length(), 0),
@@ -54,7 +54,7 @@ public class ContractionPorMatchStrategyUnitTest extends AbstractMatchStrategyUn
 		cg.add("por");
 		cg.add("as");
 		
-		Match result = match("pelas");
+		Match result = runOver("pelas");
 		
 		verifyMatch(result, 0, "pelas".length(), 
 				span(0, "pel".length(), 0),

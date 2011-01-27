@@ -15,7 +15,7 @@ public class ContractionComMatchStrategyUnitTest extends AbstractMatchStrategyUn
 		cg.add("com");
 		cg.add("mim");
 		
-		Match result = match("comigo");
+		Match result = runOver("comigo");
 		
 		verifyMatch(result, 0, "comigo".length(),  
 			span(0, "com".length(), 0),
@@ -28,7 +28,7 @@ public class ContractionComMatchStrategyUnitTest extends AbstractMatchStrategyUn
 		cg.add("com");
 		cg.add("ti");
 		
-		Match result = match("contigo");
+		Match result = runOver("contigo");
 		
 		verifyMatch(result, 0, "contigo".length(), 
 				span(0, "con".length(), 0),
@@ -41,7 +41,7 @@ public class ContractionComMatchStrategyUnitTest extends AbstractMatchStrategyUn
 		cg.add("com");
 		cg.add("si");
 		
-		Match result = match("consigo");
+		Match result = runOver("consigo");
 		
 		verifyMatch(result, 0, "consigo".length(), 
 				span(0, "con".length(), 0),
@@ -54,7 +54,7 @@ public class ContractionComMatchStrategyUnitTest extends AbstractMatchStrategyUn
 		cg.add("com");
 		cg.add("nos");
 		
-		Match result = match("conosco");
+		Match result = runOver("conosco");
 		
 		verifyMatch(result, 0, "conosco".length(),  
 			span(0, "con".length(), 0),
@@ -67,7 +67,7 @@ public class ContractionComMatchStrategyUnitTest extends AbstractMatchStrategyUn
 		cg.add("com");
 		cg.add("vos");
 		
-		Match result = match("convosco");
+		Match result = runOver("convosco");
 		
 		verifyMatch(result, 0, "convosco".length(), 
 				span(0, "con".length(), 0),

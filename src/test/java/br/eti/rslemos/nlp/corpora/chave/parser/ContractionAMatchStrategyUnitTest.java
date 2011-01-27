@@ -15,7 +15,7 @@ public class ContractionAMatchStrategyUnitTest extends AbstractMatchStrategyUnit
 		cg.add("a");
 		cg.add("o");
 		
-		Match result = match("ao");
+		Match result = runOver("ao");
 		
 		verifyMatch(result, 0, 2, 
 				span(0, 1, 0),
@@ -28,7 +28,7 @@ public class ContractionAMatchStrategyUnitTest extends AbstractMatchStrategyUnit
 		cg.add("a");
 		cg.add("a");
 		
-		Match result = match("à");
+		Match result = runOver("à");
 		
 		verifyMatch(result, 0, 1, 
 				span(0, 1, 0), 
@@ -41,7 +41,7 @@ public class ContractionAMatchStrategyUnitTest extends AbstractMatchStrategyUnit
 		cg.add("a");
 		cg.add("os");
 		
-		Match result = match("aos");
+		Match result = runOver("aos");
 		
 		verifyMatch(result, 0, 3, 
 				span(0, 1, 0),
@@ -54,7 +54,7 @@ public class ContractionAMatchStrategyUnitTest extends AbstractMatchStrategyUnit
 		cg.add("a");
 		cg.add("as");
 		
-		Match result = match("às");
+		Match result = runOver("às");
 		
 		verifyMatch(result, 0, 2,
 				span(0, 1, 0),
@@ -67,7 +67,7 @@ public class ContractionAMatchStrategyUnitTest extends AbstractMatchStrategyUnit
 		cg.add("a");
 		cg.add("aquele");
 		
-		Match result = match("àquele");
+		Match result = runOver("àquele");
 		
 		verifyMatch(result, 0, "àquele".length(),
 				span(0, 1, 0),
@@ -80,7 +80,7 @@ public class ContractionAMatchStrategyUnitTest extends AbstractMatchStrategyUnit
 		cg.add("a");
 		cg.add("aquela");
 		
-		Match result = match("àquela");
+		Match result = runOver("àquela");
 		
 		verifyMatch(result, 0, "àquela".length(),
 				span(0, 1, 0),
@@ -93,7 +93,7 @@ public class ContractionAMatchStrategyUnitTest extends AbstractMatchStrategyUnit
 		cg.add("a");
 		cg.add("aqueles");
 		
-		Match result = match("àqueles");
+		Match result = runOver("àqueles");
 		
 		verifyMatch(result, 0, "àqueles".length(),
 				span(0, 1, 0),
@@ -106,7 +106,7 @@ public class ContractionAMatchStrategyUnitTest extends AbstractMatchStrategyUnit
 		cg.add("a");
 		cg.add("aquelas");
 		
-		Match result = match("àquelas");
+		Match result = runOver("àquelas");
 		
 		verifyMatch(result, 0, "àquelas".length(),
 				span(0, 1, 0),
@@ -119,7 +119,7 @@ public class ContractionAMatchStrategyUnitTest extends AbstractMatchStrategyUnit
 		cg.add("a");
 		cg.add("aquilo");
 		
-		Match result = match("àquilo");
+		Match result = runOver("àquilo");
 		
 		verifyMatch(result, 0, "àquilo".length(),
 				span(0, 1, 0),
@@ -132,7 +132,7 @@ public class ContractionAMatchStrategyUnitTest extends AbstractMatchStrategyUnit
 		cg.add("Quanto=a");
 		cg.add("as");
 		
-		Match result = match("Quanto às");
+		Match result = runOver("Quanto às");
 		
 		verifyMatch(result, 0, "Quanto às".length(),  
 			span(0, "Quanto à".length(), 0),
@@ -145,7 +145,7 @@ public class ContractionAMatchStrategyUnitTest extends AbstractMatchStrategyUnit
 		cg.add("a");
 		cg.add("as=quais");
 		
-		Match result = match("às quais");
+		Match result = runOver("às quais");
 		
 		verifyMatch(result, 0, "às quais".length(),
 				span(0, 1, 0),
@@ -158,7 +158,7 @@ public class ContractionAMatchStrategyUnitTest extends AbstractMatchStrategyUnit
 		cg.add("devido=a");
 		cg.add("a");
 		
-		Match result = match("devido à");
+		Match result = runOver("devido à");
 		
 		verifyMatch(result, 0, "devido à".length(), 
 				span(0, "devido à".length(), 0),
@@ -171,7 +171,7 @@ public class ContractionAMatchStrategyUnitTest extends AbstractMatchStrategyUnit
 		cg.add("devido=a");
 		cg.add("os=quais");
 		
-		Match result = match("devido aos quais");
+		Match result = runOver("devido aos quais");
 		
 		verifyMatch(result, 0, "devido aos quais".length(), 
 				span(0, "devido a".length(), 0),

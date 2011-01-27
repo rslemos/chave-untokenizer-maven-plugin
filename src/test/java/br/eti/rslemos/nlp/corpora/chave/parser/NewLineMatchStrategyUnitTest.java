@@ -13,7 +13,7 @@ public class NewLineMatchStrategyUnitTest extends AbstractMatchStrategyUnitTest 
 	@Test
 	public void testNewLine() throws Exception {
 		cg.add("$¶");
-		Match result = match("\n");
+		Match result = runOver("\n");
 		
 		verifyMatch(result, 0, 1, 
 				span(0, 1, 0)
@@ -23,7 +23,7 @@ public class NewLineMatchStrategyUnitTest extends AbstractMatchStrategyUnitTest 
 	@Test
 	public void testOptionalNewLine() throws Exception {
 		cg.add("$¶");
-		Match result = match("abcd");
+		Match result = runOver("abcd");
 		
 		verifyMatch(result, 0, 0, 
 				span(0, 0, 0)
@@ -33,7 +33,7 @@ public class NewLineMatchStrategyUnitTest extends AbstractMatchStrategyUnitTest 
 	@Test
 	public void testEmptyInput() throws Exception {
 		cg.add("$¶");
-		Match result = match("");
+		Match result = runOver("");
 		
 		verifyMatch(result, 0, 0, 
 				span(0, 0, 0)

@@ -1,5 +1,6 @@
 package br.eti.rslemos.nlp.corpora.chave.parser;
 
+import static br.eti.rslemos.nlp.corpora.chave.parser.Match.match;
 import static org.hamcrest.CoreMatchers.equalTo;
 import static org.hamcrest.CoreMatchers.is;
 import static org.junit.Assert.assertThat;
@@ -19,7 +20,7 @@ public abstract class AbstractMatchStrategyUnitTest {
 		this.strategy = strategy;
 	}
 
-	protected Match match(String sgml) {
+	protected Match runOver(String sgml) {
 		Set<Match> set = strategy.match(sgml, cg);
 		if (set.isEmpty())
 			return null;
@@ -28,6 +29,6 @@ public abstract class AbstractMatchStrategyUnitTest {
 	}
 
 	public static void verifyMatch(Match match, int from, int to, Span... spans) {
-		assertThat(match, is(equalTo(Match.match(from, to, spans))));
+		assertThat(match, is(equalTo(match(from, to, spans))));
 	}
 }

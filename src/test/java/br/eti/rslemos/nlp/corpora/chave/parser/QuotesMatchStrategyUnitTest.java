@@ -14,7 +14,7 @@ public class QuotesMatchStrategyUnitTest extends AbstractMatchStrategyUnitTest {
 	public void testDoubleQuotesMatchesKey() throws Exception {
 		cg.add("$\"");
 		
-		Match result = match("\"abcd");
+		Match result = runOver("\"abcd");
 		
 		verifyMatch(result, 0, 1, 
 				span(0, 1, 0)
@@ -23,7 +23,7 @@ public class QuotesMatchStrategyUnitTest extends AbstractMatchStrategyUnitTest {
 	
 	@Test
 	public void testDoubleQuotesMatchesNoKey() throws Exception {
-		Match result = match("\"abcd");
+		Match result = runOver("\"abcd");
 		
 		verifyMatch(result, 0, 1);
 	}
