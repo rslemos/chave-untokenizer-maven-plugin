@@ -12,6 +12,8 @@ import java.util.LinkedHashSet;
 import java.util.List;
 import java.util.Set;
 
+import br.eti.rslemos.nlp.corpora.chave.parser.Match.Span;
+
 
 public class Untokenizer {
 	private static final Formatter FORMATTER = new Formatter();
@@ -45,9 +47,12 @@ outer:
 		while (i < cg1.size()) {
 			try {
 				Set<Match> mementos = new LinkedHashSet<Match>(strategies.length);
+
+				String substring = buffer.substring(k);
+				List<String> onlyKeys = onlyKeys(cg1.subList(i, cg1.size()));
 				
 				for (MatchStrategy strategy : strategies) {
-					mementos.addAll(strategy.match(buffer.substring(k), onlyKeys(cg1.subList(i, cg1.size()))));
+					mementos.addAll(keepFor(strategy.match(substring, onlyKeys), k, 0));
 				}
 				
 				if (mementos.size() > 0) {
@@ -89,6 +94,22 @@ outer:
 		}
 		
 		return document;
+	}
+
+	private Set<Match> keepFor(Set<Match> matches, int k, int i) {
+		matches = new LinkedHashSet<Match>(matches);
+		for (Iterator<Match> iterator = matches.iterator(); iterator.hasNext();) {
+			Match match = iterator.next();
+			int minEntry = Integer.MAX_VALUE;
+			for (Span span : match.getSpans()) {
+				minEntry = Math.min(minEntry, span.entry);
+			}
+			
+			if (minEntry != i && match.getSpans().size() > 0)
+				iterator.remove();
+		}
+		
+		return matches;
 	}
 
 	private static List<String> onlyKeys(List<CGEntry> cg1) {

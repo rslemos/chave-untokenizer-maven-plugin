@@ -310,4 +310,44 @@ public class ContractionDeMatchStrategyUnitTest extends AbstractMatchStrategyUni
 				span("Além d".length(), "Além disso".length(), 1)
 			));
 	}
+
+	@Test
+	public void testManyContractions() throws Exception {
+		cg.add("");
+		cg.add("de");
+		cg.add("o");
+		cg.add("");
+		cg.add("de");
+		cg.add("a");
+		cg.add("");
+		
+		runOver("do da do da dado");
+		
+		verifyMatches(
+				match( 0,  2, 
+						span( 0,  1, 1), 
+						span( 1,  2, 2)
+					),
+				match( 3,  5, 
+						span( 3,  4, 4), 
+						span( 4,  5, 5)
+					),
+				match( 6,  8, 
+						span( 6,  7, 1), 
+						span( 7,  8, 2)
+					),
+				match( 9, 11, 
+						span( 9, 10, 4), 
+						span(10, 11, 5)
+					),
+				match(12, 14, 
+						span(12, 13, 4), 
+						span(13, 14, 5)
+					),
+				match(14,  16, 
+						span(14, 15, 1), 
+						span(15, 16, 2)
+					)
+			);
+	}
 }

@@ -5,6 +5,7 @@ import static java.lang.Character.toLowerCase;
 
 import java.util.Arrays;
 import java.util.Collections;
+import java.util.LinkedHashSet;
 import java.util.List;
 import java.util.Set;
 
@@ -43,38 +44,53 @@ public abstract class AbstractContractionMatchStrategy implements MatchStrategy 
 		this.suffixStart = suffixStart;
 	}
 
-
-
-	public Match match0(String text, List<String> cg) {
-		String key0 = cg.get(0).toLowerCase();
+	private Set<Match> match(String text, List<String> cg, int i2) {
+		String key0 = cg.get(i2).toLowerCase();
 		
 		if (!(cg0.equals(key0) || key0.endsWith("=" + cg0)))
-			return null;
+			return Collections.emptySet();
 		
-		String key1 = cg.get(1).toLowerCase();
+		String key1 = cg.get(i2 + 1).toLowerCase();
 		
-		final int idx;
+		int idx;
 		if ((idx = Arrays.binarySearch(cg1, key1.split("=")[0])) < 0)
-			return null;
+			return Collections.emptySet();
 
+		return match(text, key0, key1, idx, i2);
+	}
+
+	private Set<Match> match(String text, String key0, String key1, final int idx, int i2) {
+		Set<Match> result = new LinkedHashSet<Match>();
+
+		for (int k = 0; k < text.length(); k++) {
+			result.add(match(text, key0, key1, idx, k, i2));
+		}
+		
+		return result;
+	}
+
+	private Match match(String text, String key0, String key1, final int idx,
+			int k, int i2) {
+		int cskip = k;
 		int cleft = 0;
-		int cskip = 0;
-		int k = 0;
 		if (key0.endsWith("=" + cg0)) {
 			String fauxKey = key0.replaceAll("=" + cg0 + "$", "=");
-			Set<Match> resultSet = DM.match(text, Collections.singletonList(fauxKey));
+			Set<Match> resultSet = DM.match(text.substring(k), Collections.singletonList(fauxKey));
 			if (resultSet.isEmpty())
 				return null;
 			
 			Match result = resultSet.iterator().next();
 			k += result.getMatchLength() + result.getSkipLength();
 			cleft += result.getMatchLength();
-			cskip = result.getSkipLength();
+			cskip += result.getSkipLength();
 		}
 		
 		int cmiddle = 0;
 		int cright = 0;
 
+		if (text.length() < k + results[idx].length())
+			return null;
+		
 		int i = 0;
 		while (i < results[idx].length() && toLowerCase(text.charAt(k++)) == results[idx].charAt(i)) {
 			i++;
@@ -103,21 +119,25 @@ public abstract class AbstractContractionMatchStrategy implements MatchStrategy 
 		}
 
 		if (cmiddle == 0) {
-			return new Match(cskip, cleft + cmiddle + cright + cskip, span(cskip, (cskip + cleft), 0), span((cskip + cleft), (cskip + cleft + cright), 1));
+			return new Match(cskip, cleft + cmiddle + cright + cskip, span(cskip, (cskip + cleft), 0+i2), span((cskip + cleft), (cskip + cleft + cright), 1+i2));
 		} else if (cleft == 0) {
-			return new Match(cskip, cleft + cmiddle + cright + cskip, span(cskip, (cskip + cmiddle), 0), span(cskip, (cskip + cmiddle + cright), 1));
+			return new Match(cskip, cleft + cmiddle + cright + cskip, span(cskip, (cskip + cmiddle), 0+i2), span(cskip, (cskip + cmiddle + cright), 1+i2));
 		} else if (cright == 0) {
-			return new Match(cskip, cleft + cmiddle + cright + cskip, span(cskip, (cskip + cleft + cmiddle), 0), span((cskip + cleft), (cskip + cleft + cmiddle), 1));
+			return new Match(cskip, cleft + cmiddle + cright + cskip, span(cskip, (cskip + cleft + cmiddle), 0+i2), span((cskip + cleft), (cskip + cleft + cmiddle), 1+i2));
 		} else {
-			return new Match(cskip, cleft + cmiddle + cright + cskip, span(cskip, (cskip + cleft + cmiddle), 0), span((cskip + cleft), (cskip + cleft + cmiddle + cright), 1));
+			return new Match(cskip, cleft + cmiddle + cright + cskip, span(cskip, (cskip + cleft + cmiddle), 0+i2), span((cskip + cleft), (cskip + cleft + cmiddle + cright), 1+i2));
 		}
 	}
 
 	public Set<Match> match(String text, List<String> cg) {
-		Match match0 = match0(text, cg);
-		if (match0 == null)
-			return Collections.emptySet();
-		else
-			return Collections.singleton(match0);
+		Set<Match> result = new LinkedHashSet<Match>();
+		
+		for (int i = 0; i < cg.size() - 1; i++) {
+			result.addAll(match(text, cg, i));
+		}
+		
+		result.remove(null);
+		
+		return result;
 	}
 }
