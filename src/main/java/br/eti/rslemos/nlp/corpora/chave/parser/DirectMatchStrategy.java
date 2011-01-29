@@ -14,19 +14,25 @@ import br.eti.rslemos.nlp.corpora.chave.parser.Match.Span;
 public class DirectMatchStrategy implements MatchStrategy {
 	
 	public Set<Match> match(String text, List<String> cg) {
-		String key0 = getKey(cg.get(0));
-		
-		if (cg.size() > 1) {
-			String key1 = getKey(cg.get(1));
+		Set<Match> matches = new LinkedHashSet<Match>();
+
+		for (int i = 0; i < cg.size(); i++) {
+			String key0 = getKey(cg.get(i));
 			
-			if (Arrays.binarySearch(new String[] { ",", "-", ".", ":", ";" }, key1) >= 0) {
-				if (key0.endsWith(key1)) {
-					key0 = key0.substring(0, key0.length() - key1.length());
+			if (cg.size() > i + 1) {
+				String key1 = getKey(cg.get(i + 1));
+				
+				if (Arrays.binarySearch(new String[] { ",", "-", ".", ":", ";" }, key1) >= 0) {
+					if (key0.endsWith(key1)) {
+						key0 = key0.substring(0, key0.length() - key1.length());
+					}
 				}
 			}
+			
+			matches.addAll(matchKey(text, key0, span(0, key0.length(), i)));
 		}
 		
-		return matchKey(text, key0, span(0, key0.length(), 0));
+		return matches;
 	}
 
 	private Set<Match> matchKey(String text, String key, Span... inSpans) {

@@ -71,7 +71,10 @@ public class DirectMatchStrategyUnitTest extends AbstractMatchStrategyUnitTest {
 
 		runOver("sra.");
 		
-		verifyMatches(match(0, "sra".length(), span(0, "sra".length(), 0)));
+		verifyMatches(
+				match(0, "sra".length(), span(0, "sra".length(), 0)),
+				match("sra".length(), "sra.".length(), span("sra".length(), "sra.".length(), 1))
+			);
 	}
 
 	@Test
@@ -87,6 +90,20 @@ public class DirectMatchStrategyUnitTest extends AbstractMatchStrategyUnitTest {
 			);
 	}
 
+	@Test
+	public void testManyMatchesOfTwoWords() throws Exception {
+		cg.add("feita");
+		cg.add("feito");
+
+		runOver("feitofeitafeitofeita");
+		
+		verifyMatches(
+				match("feit_".length()*0, "feit_".length()*1, span("feit_".length()*0, "feit_".length()*1, 1)),
+				match("feit_".length()*1, "feit_".length()*2, span("feit_".length()*1, "feit_".length()*2, 0)),
+				match("feit_".length()*2, "feit_".length()*3, span("feit_".length()*2, "feit_".length()*3, 1)),
+				match("feit_".length()*3, "feit_".length()*4, span("feit_".length()*3, "feit_".length()*4, 0))
+			);
+	}
 
 	@Test
 	public void testMatchTwo() throws Exception {
