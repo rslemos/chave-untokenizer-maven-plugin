@@ -198,8 +198,30 @@ public class EncliticMatchStrategyUnitTest extends AbstractMatchStrategyUnitTest
 		
 		runOver("assisti-las");
 		
-		verifyMatches(match(0, "assisti-las".length(), span(0, "assisti-".length(), 0), 
-				span("assisti-".length(), "assisti-las".length(), 1)
-			));
+		verifyMatches(
+				match(0, "assisti-las".length(),
+						span(0, "assisti-".length(), 0), 
+						span("assisti-".length(), "assisti-las".length(), 1)
+					)
+			);
+	}
+	
+	@Test
+	public void testManyMatchesOfSameEnclitic() throws Exception {
+		cg.add("assistir-");
+		cg.add("las");
+		
+		runOver("assisti-las assisti-las");
+		
+		verifyMatches(
+				match(0, "assisti-las".length(),
+						span(0, "assisti-".length(), 0), 
+						span("assisti-".length(), "assisti-las".length(), 1)
+					),
+				match("assisti-las ".length(), "assisti-las assisti-las".length(),
+						span("assisti-las ".length(), "assisti-las assisti-".length(), 0), 
+						span("assisti-las assisti-".length(), "assisti-las assisti-las".length(), 1)
+					)
+			);
 	}
 }
