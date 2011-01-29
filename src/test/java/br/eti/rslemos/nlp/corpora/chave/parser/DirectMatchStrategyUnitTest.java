@@ -88,4 +88,16 @@ public class DirectMatchStrategyUnitTest extends AbstractMatchStrategyUnitTest {
 				)
 			)));
 	}
+
+	@Test
+	public void testMatchWithMapping() throws Exception {
+		DirectMatchStrategy strategy = new DirectMatchStrategy();
+		int[] results = strategy.matchKey(
+				"012 \t56789   3\t\t6789", 
+				"012=56789=3=6789", false,
+				0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16
+			);
+		
+		assertThat(results, is(equalTo(new int[] {0, 1, 2, 3, 5, 6, 7, 8, 9, 10, 13, 14, 16, 17, 18, 19, 20})));
+	}
 }

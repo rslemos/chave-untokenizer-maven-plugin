@@ -12,61 +12,75 @@ import java.util.Set;
 public class DirectMatchStrategy implements MatchStrategy {
 	
 	public Match match0(String text, List<String> cg) {
-		String currentEntry = cg.get(0);
-		String currentKey = getKey(currentEntry);
+		String key0 = getKey(cg.get(0));
 		
 		if (cg.size() > 1) {
-			String nextKey = getKey(cg.get(1));
+			String key1 = getKey(cg.get(1));
 			
-			if (Arrays.binarySearch(new String[] { ",", "-", ".", ":", ";" }, nextKey) >= 0) {
-				if (currentKey.endsWith(nextKey)) {
-					currentKey = currentKey.substring(0, currentKey.length() - nextKey.length());
+			if (Arrays.binarySearch(new String[] { ",", "-", ".", ":", ";" }, key1) >= 0) {
+				if (key0.endsWith(key1)) {
+					key0 = key0.substring(0, key0.length() - key1.length());
 				}
 			}
 		}
 		
+		int[] points = matchKey(text, key0, true, 0, key0.length());
+		
+		if (points != null) {
+			return new Match(points[0], points[1], span(points[0], points[1], 0));
+		} else {
+			return null;
+		}
+	}
+
+	public int[] matchKey(String text, String key, boolean maySkip, int... points) {
+		int[] mappedPoints = new int[points.length];
+		Arrays.fill(mappedPoints, -1);
+		
 		int j = 0;
 		int k = 0;
-		int skip = 0;
 
-		try {
-			if (currentKey.charAt(j) != '=')
-				while (toLowerCase(currentKey.charAt(j)) != toLowerCase(text.charAt(k))) {
-					k++;
-					skip++;
-				}
-			else
-				while (!isWhitespace(text.charAt(k))) {
-					k++;
-					skip++;
-				}
-				
-		} catch (IndexOutOfBoundsException e) {
-		}
+		if (maySkip)
+			try {
+				if (key.charAt(j) != '=')
+					while (toLowerCase(key.charAt(j)) != toLowerCase(text.charAt(k))) {
+						k++;
+					}
+				else
+					while (!isWhitespace(text.charAt(k))) {
+						k++;
+					}
+			} catch (IndexOutOfBoundsException e) {
+			}
 		
 		try {
 			while (true) {
-				if (currentKey.charAt(j) == '=') {
+				for (int i = 0; i < points.length; i++) {
+					if (points[i] == j)
+						mappedPoints[i] = k;
+				}
+				
+				if (key.charAt(j) == '=') {
 					while (isWhitespace(text.charAt(k)))
 						k++;
 					j++;
 					
+					
 					continue;
 				}
 				
-				if (toLowerCase(currentKey.charAt(j)) != toLowerCase(text.charAt(k))) {
+				if (toLowerCase(key.charAt(j)) != toLowerCase(text.charAt(k))) {
 					break;
 				}
 				
 				j++;
 				k++;
 			}
-		} catch (StringIndexOutOfBoundsException e) {
 		} catch (IndexOutOfBoundsException e) {
 		}
-		
-		if (j == currentKey.length()) {
-			return new Match(skip, skip + k, span(skip, (skip + k), 0));
+
+		if (j == key.length()) {
+			return mappedPoints;
 		} else {
 			return null;
 		}
@@ -92,45 +106,13 @@ public class DirectMatchStrategy implements MatchStrategy {
 	public Match matchTwo(String text, String key, 
 			int span0_start, int span0_end, 
 			int span1_start, int span1_end) {
-		
-		int j = 0;
-		int k = 0;
 
-		int real_span0_start = -1;
-		int real_span0_end = -1;
-		int real_span1_start = -1;
-		int real_span1_end = -1;
+		int[] points = matchKey(text, key, false, 0, key.length(), span0_start, span0_end, span1_start, span1_end);
 		
-		try {
-			while (true) {
-				if (j == span0_start) real_span0_start = k;
-				if (j == span0_end  ) real_span0_end   = k;
-				if (j == span1_start) real_span1_start = k;
-				if (j == span1_end  ) real_span1_end   = k;
-				
-				if (key.charAt(j) == '=') {
-					while (isWhitespace(text.charAt(k)))
-						k++;
-					j++;
-					
-					continue;
-				}
-				
-				if (toLowerCase(key.charAt(j)) != toLowerCase(text.charAt(k))) {
-					break;
-				}
-				
-				j++;
-				k++;
-			}
-		} catch (StringIndexOutOfBoundsException e) {
-		} catch (IndexOutOfBoundsException e) {
-		}
-		
-		if (j == key.length()) {
-			return new Match(0, k, 
-					span(real_span0_start, real_span0_end, 0),
-					span(real_span1_start, real_span1_end, 1)
+		if (points != null) {
+			return new Match(points[0], points[1], 
+					span(points[2], points[3], 0),
+					span(points[4], points[5], 1)
 				);
 		} else {
 			return null;
