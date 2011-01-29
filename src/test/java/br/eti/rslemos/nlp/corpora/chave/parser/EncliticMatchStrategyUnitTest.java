@@ -231,6 +231,10 @@ public class EncliticMatchStrategyUnitTest extends AbstractMatchStrategyUnitTest
 		cg.add("los");
 		cg.add("assistir-");
 		cg.add("las");
+		cg.add("promover-");
+		cg.add("los");
+		cg.add("assistir-");
+		cg.add("las");
 		
 		runOver("assisti-las promovê-los assisti-las promovê-los");
 		
@@ -250,6 +254,22 @@ public class EncliticMatchStrategyUnitTest extends AbstractMatchStrategyUnitTest
 				match("assisti-las promovê-los assisti-las ".length(), "assisti-las promovê-los assisti-las promovê-los".length(),
 						span("assisti-las promovê-los assisti-las ".length(), "assisti-las promovê-los assisti-las promovê-".length(), 0), 
 						span("assisti-las promovê-los assisti-las promovê-".length(), "assisti-las promovê-los assisti-las promovê-los".length(), 1)
+					),
+				match(0, "assisti-las".length(),
+						span(0, "assisti-".length(), 6), 
+						span("assisti-".length(), "assisti-las".length(), 7)
+					),
+				match("assisti-las ".length(), "assisti-las promovê-los".length(),
+						span("assisti-las ".length(), "assisti-las promovê-".length(), 4), 
+						span("assisti-las promovê-".length(), "assisti-las promovê-los".length(), 5)
+					),
+				match("assisti-las promovê-los ".length(), "assisti-las promovê-los assisti-las".length(),
+						span("assisti-las promovê-los ".length(), "assisti-las promovê-los assisti-".length(), 6), 
+						span("assisti-las promovê-los assisti-".length(), "assisti-las promovê-los assisti-las".length(), 7)
+					),
+				match("assisti-las promovê-los assisti-las ".length(), "assisti-las promovê-los assisti-las promovê-los".length(),
+						span("assisti-las promovê-los assisti-las ".length(), "assisti-las promovê-los assisti-las promovê-".length(), 4), 
+						span("assisti-las promovê-los assisti-las promovê-".length(), "assisti-las promovê-los assisti-las promovê-los".length(), 5)
 					)
 			);
 	}
