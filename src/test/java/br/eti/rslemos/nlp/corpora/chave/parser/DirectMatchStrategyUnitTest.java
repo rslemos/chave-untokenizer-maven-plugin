@@ -4,7 +4,10 @@ import static br.eti.rslemos.nlp.corpora.chave.parser.Match.match;
 import static br.eti.rslemos.nlp.corpora.chave.parser.Match.Span.span;
 import static org.hamcrest.CoreMatchers.equalTo;
 import static org.hamcrest.CoreMatchers.is;
+import static org.hamcrest.Matchers.hasItems;
 import static org.junit.Assert.assertThat;
+
+import java.util.Set;
 
 import org.junit.Test;
 
@@ -72,29 +75,44 @@ public class DirectMatchStrategyUnitTest extends AbstractMatchStrategyUnitTest {
 	}
 
 	@Test
+	public void testManyMatchesOfSingleWord() throws Exception {
+		cg.add("feita");
+		runOver("feitafeitafeitafeita");
+		
+		verifyMatches(
+				match("feita".length()*0, "feita".length()*1, span("feita".length()*0, "feita".length()*1, 0)),
+				match("feita".length()*1, "feita".length()*2, span("feita".length()*1, "feita".length()*2, 0)),
+				match("feita".length()*2, "feita".length()*3, span("feita".length()*2, "feita".length()*3, 0)),
+				match("feita".length()*3, "feita".length()*4, span("feita".length()*3, "feita".length()*4, 0))
+			);
+	}
+
+
+	@Test
 	public void testMatchTwo() throws Exception {
 		DirectMatchStrategy strategy = new DirectMatchStrategy();
-		Match match = strategy.matchTwo("Devido  às   quais", 
+		Set<Match> matches = strategy.matchTwo("Devido  às   quais", 
 				"Devido=às=quais",
 				0, "Devido=à".length(),
 				"Devido=".length(),
 				"Devido=às=quais".length()
 			);
 		
-		assertThat(match, is(equalTo(
+		assertThat(matches.size(), is(equalTo(1)));
+		assertThat(matches, hasItems(
 				match(0, "Devido  às   quais".length(),
-					span(0, "Devido  à".length(), 0),
-					span("Devido  ".length(), "Devido  às   quais".length(), 1)
-				)
-			)));
+						span(0, "Devido  à".length(), 0),
+						span("Devido  ".length(), "Devido  às   quais".length(), 1)
+					)
+			));
 	}
 
 	@Test
 	public void testMatchWithMapping() throws Exception {
 		DirectMatchStrategy strategy = new DirectMatchStrategy();
 		int[] results = strategy.matchKey(
-				"012 \t56789   3\t\t6789", 
-				"012=56789=3=6789", false,
+				"012 \t56789   3\t\t6789", 0, 
+				"012=56789=3=6789", 
 				0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16
 			);
 		

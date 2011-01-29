@@ -104,15 +104,6 @@ public abstract class AbstractContractionMatchStrategy implements MatchStrategy 
 	}
 
 	private Set<Match> match(String text, String toMatch, int span0_start, int span0_end, int span1_start, int span1_end) {
-		Set<Match> matches = new LinkedHashSet<Match>();
-		
-		for (int k = 0; k < text.length(); k++) {
-			Match match = DM.matchTwo(text.substring(k), toMatch, span0_start, span0_end, span1_start, span1_end);
-			if (match != null) {
-				matches.add(match.adjust(k, 0));
-			}
-		}
-		
-		return matches;
+		return DM.matchTwo(text, toMatch, span0_start, span0_end, span1_start, span1_end);
 	}
 }

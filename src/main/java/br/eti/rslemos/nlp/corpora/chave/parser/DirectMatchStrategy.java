@@ -5,13 +5,15 @@ import static java.lang.Character.isWhitespace;
 import static java.lang.Character.toLowerCase;
 
 import java.util.Arrays;
-import java.util.Collections;
+import java.util.LinkedHashSet;
 import java.util.List;
 import java.util.Set;
 
+import br.eti.rslemos.nlp.corpora.chave.parser.Match.Span;
+
 public class DirectMatchStrategy implements MatchStrategy {
 	
-	public Match match0(String text, List<String> cg) {
+	public Set<Match> match(String text, List<String> cg) {
 		String key0 = getKey(cg.get(0));
 		
 		if (cg.size() > 1) {
@@ -24,35 +26,41 @@ public class DirectMatchStrategy implements MatchStrategy {
 			}
 		}
 		
-		int[] points = matchKey(text, key0, true, 0, key0.length());
-		
-		if (points != null) {
-			return new Match(points[0], points[1], span(points[0], points[1], 0));
-		} else {
-			return null;
-		}
+		return matchKey(text, key0, span(0, key0.length(), 0));
 	}
 
-	public int[] matchKey(String text, String key, boolean maySkip, int... points) {
+	private Set<Match> matchKey(String text, String key, Span... inSpans) {
+		Set<Match> matches = new LinkedHashSet<Match>();
+
+		int[] inPoints = new int[inSpans.length*2 + 2];
+		inPoints[0] = 0;
+		inPoints[1] = key.length();
+		
+		for (int i = 0; i < inSpans.length; i++) {
+			inPoints[i*2 + 2] = inSpans[i].from;
+			inPoints[i*2 + 3] = inSpans[i].to;
+		}
+		
+		for (int k = 0; k < text.length(); k++) {
+			int[] outPoints = matchKey(text, k, key, inPoints);
+			if (outPoints != null) {
+				Span[] outSpans = new Span[inSpans.length];
+				for (int i = 0; i < outSpans.length; i++) {
+					outSpans[i] = span(outPoints[i*2 + 2], outPoints[i*2 + 3], inSpans[i].entry);
+				}
+				
+				matches.add(new Match(outPoints[0], outPoints[1], outSpans));
+			}
+		}
+		
+		return matches;
+	}
+
+	public int[] matchKey(String text, int k, String key, int... points) {
 		int[] mappedPoints = new int[points.length];
 		Arrays.fill(mappedPoints, -1);
 		
 		int j = 0;
-		int k = 0;
-
-		if (maySkip)
-			try {
-				if (key.charAt(j) != '=')
-					while (toLowerCase(key.charAt(j)) != toLowerCase(text.charAt(k))) {
-						k++;
-					}
-				else
-					while (!isWhitespace(text.charAt(k))) {
-						k++;
-					}
-			} catch (IndexOutOfBoundsException e) {
-			}
-		
 		try {
 			while (true) {
 				for (int i = 0; i < points.length; i++) {
@@ -86,14 +94,6 @@ public class DirectMatchStrategy implements MatchStrategy {
 		}
 	}
 
-	public Set<Match> match(String text, List<String> cg) {
-		Match match0 = match0(text, cg);
-		if (match0 == null)
-			return Collections.emptySet();
-		else
-			return Collections.singleton(match0);
-	}
-
 	private static String getKey(String currentKey) {
 		currentKey = currentKey.split(" ")[0];
 		
@@ -103,19 +103,10 @@ public class DirectMatchStrategy implements MatchStrategy {
 		return currentKey;
 	}
 
-	public Match matchTwo(String text, String key, 
+	public Set<Match> matchTwo(String text, String key, 
 			int span0_start, int span0_end, 
 			int span1_start, int span1_end) {
 
-		int[] points = matchKey(text, key, false, 0, key.length(), span0_start, span0_end, span1_start, span1_end);
-		
-		if (points != null) {
-			return new Match(points[0], points[1], 
-					span(points[2], points[3], 0),
-					span(points[4], points[5], 1)
-				);
-		} else {
-			return null;
-		}
+		return matchKey(text, key, span(span0_start, span0_end, 0), span(span1_start, span1_end, 1));
 	}
 }
