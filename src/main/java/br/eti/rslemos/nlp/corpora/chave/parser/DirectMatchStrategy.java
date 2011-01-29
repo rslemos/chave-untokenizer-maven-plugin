@@ -35,7 +35,7 @@ public class DirectMatchStrategy implements MatchStrategy {
 		return matches;
 	}
 
-	private Set<Match> matchKey(String text, String key, Span... inSpans) {
+	public Set<Match> matchKey(String text, String key, Span... inSpans) {
 		Set<Match> matches = new LinkedHashSet<Match>();
 
 		int[] inPoints = new int[inSpans.length*2 + 2];
@@ -107,12 +107,5 @@ public class DirectMatchStrategy implements MatchStrategy {
 			currentKey = currentKey.substring(1);
 		
 		return currentKey;
-	}
-
-	public Set<Match> matchTwo(String text, String key, 
-			int span0_start, int span0_end, 
-			int span1_start, int span1_end) {
-
-		return matchKey(text, key, span(span0_start, span0_end, 0), span(span1_start, span1_end, 1));
 	}
 }

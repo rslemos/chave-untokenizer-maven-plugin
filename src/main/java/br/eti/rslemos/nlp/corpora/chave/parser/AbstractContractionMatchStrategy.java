@@ -1,5 +1,7 @@
 package br.eti.rslemos.nlp.corpora.chave.parser;
 
+import static br.eti.rslemos.nlp.corpora.chave.parser.Match.Span.span;
+
 import java.util.Arrays;
 import java.util.HashMap;
 import java.util.LinkedHashSet;
@@ -87,9 +89,8 @@ public abstract class AbstractContractionMatchStrategy implements MatchStrategy 
 			String toMatch = toMatchBuilder.toString();
 
 			if (!cache.containsKey(toMatch)) {
-				cache.put(toMatch, match(text, toMatch, span0_start, span0_end, span1_start, span1_end));
+				cache.put(toMatch, DM.matchKey(text, toMatch, span(span0_start, span0_end, 0), span(span1_start, span1_end, 1)));
 			}
-
 			
 			Set<Match> matches = new LinkedHashSet<Match>();
 
@@ -101,9 +102,5 @@ public abstract class AbstractContractionMatchStrategy implements MatchStrategy 
 		}
 		
 		return result;
-	}
-
-	private Set<Match> match(String text, String toMatch, int span0_start, int span0_end, int span1_start, int span1_end) {
-		return DM.matchTwo(text, toMatch, span0_start, span0_end, span1_start, span1_end);
 	}
 }

@@ -106,14 +106,9 @@ public class DirectMatchStrategyUnitTest extends AbstractMatchStrategyUnitTest {
 	}
 
 	@Test
-	public void testMatchTwo() throws Exception {
+	public void testMatchKey() throws Exception {
 		DirectMatchStrategy strategy = new DirectMatchStrategy();
-		Set<Match> matches = strategy.matchTwo("Devido  às   quais", 
-				"Devido=às=quais",
-				0, "Devido=à".length(),
-				"Devido=".length(),
-				"Devido=às=quais".length()
-			);
+		Set<Match> matches = strategy.matchKey("Devido  às   quais", "Devido=às=quais", span(0, "Devido=à".length(), 0), span("Devido=".length(), "Devido=às=quais".length(), 1));
 		
 		assertThat(matches.size(), is(equalTo(1)));
 		assertThat(matches, hasItems(
@@ -125,7 +120,7 @@ public class DirectMatchStrategyUnitTest extends AbstractMatchStrategyUnitTest {
 	}
 
 	@Test
-	public void testMatchWithMapping() throws Exception {
+	public void testMapping() throws Exception {
 		DirectMatchStrategy strategy = new DirectMatchStrategy();
 		int[] results = strategy.matchKey(
 				"012 \t56789   3\t\t6789", 0, 
