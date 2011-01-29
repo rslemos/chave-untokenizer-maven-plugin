@@ -224,4 +224,33 @@ public class EncliticMatchStrategyUnitTest extends AbstractMatchStrategyUnitTest
 					)
 			);
 	}
+
+	@Test
+	public void testManyMatchesOfDifferentEnclitics() throws Exception {
+		cg.add("promover-");
+		cg.add("los");
+		cg.add("assistir-");
+		cg.add("las");
+		
+		runOver("assisti-las promovê-los assisti-las promovê-los");
+		
+		verifyMatches(
+				match(0, "assisti-las".length(),
+						span(0, "assisti-".length(), 2), 
+						span("assisti-".length(), "assisti-las".length(), 3)
+					),
+				match("assisti-las ".length(), "assisti-las promovê-los".length(),
+						span("assisti-las ".length(), "assisti-las promovê-".length(), 0), 
+						span("assisti-las promovê-".length(), "assisti-las promovê-los".length(), 1)
+					),
+				match("assisti-las promovê-los ".length(), "assisti-las promovê-los assisti-las".length(),
+						span("assisti-las promovê-los ".length(), "assisti-las promovê-los assisti-".length(), 2), 
+						span("assisti-las promovê-los assisti-".length(), "assisti-las promovê-los assisti-las".length(), 3)
+					),
+				match("assisti-las promovê-los assisti-las ".length(), "assisti-las promovê-los assisti-las promovê-los".length(),
+						span("assisti-las promovê-los assisti-las ".length(), "assisti-las promovê-los assisti-las promovê-".length(), 0), 
+						span("assisti-las promovê-los assisti-las promovê-".length(), "assisti-las promovê-los assisti-las promovê-los".length(), 1)
+					)
+			);
+	}
 }

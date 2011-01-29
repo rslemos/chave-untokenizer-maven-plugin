@@ -14,10 +14,9 @@ public class EncliticMatchStrategy implements MatchStrategy {
 	public Set<Match> match(String text, List<String> cg) {
 		Set<Match> result = new LinkedHashSet<Match>();
 		
-		if (cg.size() > 1) {
-			
-			String key0 = cg.get(0).toLowerCase();
-			String key1 = cg.get(1).toLowerCase();
+		for (int i = 0; i < cg.size() - 1; i++) {
+			String key0 = cg.get(i).toLowerCase();
+			String key1 = cg.get(i + 1).toLowerCase();
 			
 			if (Arrays.asList("la", "las", "lo", "los").contains(key1)) {
 				String toMatch = null;
@@ -41,8 +40,8 @@ public class EncliticMatchStrategy implements MatchStrategy {
 					toMatch += key1;
 					
 					result.addAll(DM.matchKey(text, toMatch,
-							span(0, toMatch.length() - key1.length(), 0),
-							span(toMatch.length() - key1.length(), toMatch.length(), 1)
+							span(0, toMatch.length() - key1.length(), i),
+							span(toMatch.length() - key1.length(), toMatch.length(), i+1)
 						));
 				}
 			}
