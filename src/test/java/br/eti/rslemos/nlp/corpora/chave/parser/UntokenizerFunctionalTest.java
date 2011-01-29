@@ -15,12 +15,14 @@ import java.nio.charset.Charset;
 import java.util.List;
 
 import org.junit.Before;
+import org.junit.Ignore;
 import org.junit.experimental.theories.DataPoint;
 import org.junit.experimental.theories.Theories;
 import org.junit.experimental.theories.Theory;
 import org.junit.runner.RunWith;
 
 @RunWith(Theories.class)
+@Ignore
 public class UntokenizerFunctionalTest {
 	
 	private static final Charset UTF8 = Charset.forName("UTF-8");
