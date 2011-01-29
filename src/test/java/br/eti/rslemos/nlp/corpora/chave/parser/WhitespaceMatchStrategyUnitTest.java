@@ -1,6 +1,7 @@
 package br.eti.rslemos.nlp.corpora.chave.parser;
 
 import static br.eti.rslemos.nlp.corpora.chave.parser.Match.match;
+
 import org.junit.Test;
 
 public class WhitespaceMatchStrategyUnitTest extends AbstractMatchStrategyUnitTest {

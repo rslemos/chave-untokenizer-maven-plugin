@@ -1,12 +1,10 @@
 package br.eti.rslemos.nlp.corpora.chave.parser;
 
-import static br.eti.rslemos.nlp.corpora.chave.parser.Match.Span.span;
-import static java.lang.Character.toLowerCase;
-
 import java.util.Arrays;
-import java.util.Collections;
+import java.util.HashMap;
 import java.util.LinkedHashSet;
 import java.util.List;
+import java.util.Map;
 import java.util.Set;
 
 public abstract class AbstractContractionMatchStrategy implements MatchStrategy {
@@ -44,100 +42,77 @@ public abstract class AbstractContractionMatchStrategy implements MatchStrategy 
 		this.suffixStart = suffixStart;
 	}
 
-	private Set<Match> match(String text, List<String> cg, int i2) {
-		String key0 = cg.get(i2).toLowerCase();
-		
-		if (!(cg0.equals(key0) || key0.endsWith("=" + cg0)))
-			return Collections.emptySet();
-		
-		String key1 = cg.get(i2 + 1).toLowerCase();
-		
-		int idx;
-		if ((idx = Arrays.binarySearch(cg1, key1.split("=")[0])) < 0)
-			return Collections.emptySet();
-
-		return match(text, key0, key1, idx, i2);
-	}
-
-	private Set<Match> match(String text, String key0, String key1, final int idx, int i2) {
-		Set<Match> result = new LinkedHashSet<Match>();
-
-		for (int k = 0; k < text.length(); k++) {
-			result.add(match(text, key0, key1, idx, k, i2));
-		}
-		
-		return result;
-	}
-
-	private Match match(String text, String key0, String key1, final int idx,
-			int k, int i2) {
-		int cskip = k;
-		int cleft = 0;
-		if (key0.endsWith("=" + cg0)) {
-			String fauxKey = key0.replaceAll("=" + cg0 + "$", "=");
-			Set<Match> resultSet = DM.match(text.substring(k), Collections.singletonList(fauxKey));
-			if (resultSet.isEmpty())
-				return null;
-			
-			Match result = resultSet.iterator().next();
-			k += result.getMatchLength() + result.getSkipLength();
-			cleft += result.getMatchLength();
-			cskip += result.getSkipLength();
-		}
-		
-		int cmiddle = 0;
-		int cright = 0;
-
-		if (text.length() < k + results[idx].length())
-			return null;
-		
-		int i = 0;
-		while (i < results[idx].length() && toLowerCase(text.charAt(k++)) == results[idx].charAt(i)) {
-			i++;
-		}
-		
-		if (i != results[idx].length())
-			return null;
-		
-		if (prefixEnd[idx] <= suffixStart[idx]) {
-			cleft += prefixEnd[idx];
-			cright += results[idx].length() - suffixStart[idx];
-		} else {
-			cleft += suffixStart[idx];
-			cmiddle += prefixEnd[idx] - suffixStart[idx];
-			cright += results[idx].length() - prefixEnd[idx];
-		}
-		
-		if (key1.startsWith(cg1[idx] + "=")) {
-			String fauxKey = key1.replaceAll("^" + cg1[idx] + "=", "=");
-			Set<Match> resultSet = DM.match(text.substring(k), Collections.singletonList(fauxKey));
-			if (resultSet.isEmpty())
-				return null;
-			
-			Match result = resultSet.iterator().next();
-			cright += result.getMatchLength();
-		}
-
-		if (cmiddle == 0) {
-			return new Match(cskip, cleft + cmiddle + cright + cskip, span(cskip, (cskip + cleft), 0+i2), span((cskip + cleft), (cskip + cleft + cright), 1+i2));
-		} else if (cleft == 0) {
-			return new Match(cskip, cleft + cmiddle + cright + cskip, span(cskip, (cskip + cmiddle), 0+i2), span(cskip, (cskip + cmiddle + cright), 1+i2));
-		} else if (cright == 0) {
-			return new Match(cskip, cleft + cmiddle + cright + cskip, span(cskip, (cskip + cleft + cmiddle), 0+i2), span((cskip + cleft), (cskip + cleft + cmiddle), 1+i2));
-		} else {
-			return new Match(cskip, cleft + cmiddle + cright + cskip, span(cskip, (cskip + cleft + cmiddle), 0+i2), span((cskip + cleft), (cskip + cleft + cmiddle + cright), 1+i2));
-		}
-	}
-
 	public Set<Match> match(String text, List<String> cg) {
+		Map<String, Set<Match>> cache = new HashMap<String, Set<Match>>();
+		
 		Set<Match> result = new LinkedHashSet<Match>();
 		
 		for (int i = 0; i < cg.size() - 1; i++) {
-			result.addAll(match(text, cg, i));
+			String key0 = cg.get(i).toLowerCase();
+			
+			if ((!cg0.equals(key0) && !key0.endsWith("=" + cg0)))
+				continue;
+			
+			String key1 = cg.get(i + 1).toLowerCase();
+
+			int idx;
+			if ((idx = Arrays.binarySearch(cg1, key1.split("=")[0])) < 0)
+				continue;
+			
+			int span0_start = 0;
+			int span0_end = prefixEnd[idx];
+			int span1_start = suffixStart[idx];
+			int span1_end = results[idx].length();
+			
+			StringBuilder toMatchBuilder = new StringBuilder();
+			
+			if (key0.endsWith("=" + cg0)) {
+				String left = key0.replaceAll("=" + cg0 + "$", "=");
+				
+				toMatchBuilder.append(left);
+				span0_end += left.length();
+				span1_start += left.length();
+				span1_end += left.length();
+			}
+			
+			toMatchBuilder.append(results[idx]);
+			
+			if (key1.startsWith(cg1[idx] + "=")) {
+				String right = key1.replaceAll("^" + cg1[idx] + "=", "=");
+				
+				toMatchBuilder.append(right);
+				span1_end += right.length();
+			}
+			
+			String toMatch = toMatchBuilder.toString();
+
+			if (!cache.containsKey(toMatch)) {
+				cache.put(toMatch, match(text, toMatch, span0_start, span0_end, span1_start, span1_end));
+			}
+
+			
+			Set<Match> matches = new LinkedHashSet<Match>();
+
+			for (Match match : cache.get(toMatch)) {
+				matches.add(match.adjust(0, i));
+			}
+			
+			result.addAll(matches);
 		}
 		
-		result.remove(null);
-		
 		return result;
+	}
+
+	private Set<Match> match(String text, String toMatch, int span0_start, int span0_end, int span1_start, int span1_end) {
+		Set<Match> matches = new LinkedHashSet<Match>();
+		
+		for (int k = 0; k < text.length(); k++) {
+			Match match = DM.matchTwo(text.substring(k), toMatch, span0_start, span0_end, span1_start, span1_end);
+			if (match != null) {
+				matches.add(match.adjust(k, 0));
+			}
+		}
+		
+		return matches;
 	}
 }

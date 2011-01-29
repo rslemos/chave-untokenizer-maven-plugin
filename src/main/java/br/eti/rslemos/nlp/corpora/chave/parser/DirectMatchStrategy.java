@@ -88,4 +88,52 @@ public class DirectMatchStrategy implements MatchStrategy {
 		
 		return currentKey;
 	}
+
+	public Match matchTwo(String text, String key, 
+			int span0_start, int span0_end, 
+			int span1_start, int span1_end) {
+		
+		int j = 0;
+		int k = 0;
+
+		int real_span0_start = -1;
+		int real_span0_end = -1;
+		int real_span1_start = -1;
+		int real_span1_end = -1;
+		
+		try {
+			while (true) {
+				if (j == span0_start) real_span0_start = k;
+				if (j == span0_end  ) real_span0_end   = k;
+				if (j == span1_start) real_span1_start = k;
+				if (j == span1_end  ) real_span1_end   = k;
+				
+				if (key.charAt(j) == '=') {
+					while (isWhitespace(text.charAt(k)))
+						k++;
+					j++;
+					
+					continue;
+				}
+				
+				if (toLowerCase(key.charAt(j)) != toLowerCase(text.charAt(k))) {
+					break;
+				}
+				
+				j++;
+				k++;
+			}
+		} catch (StringIndexOutOfBoundsException e) {
+		} catch (IndexOutOfBoundsException e) {
+		}
+		
+		if (j == key.length()) {
+			return new Match(0, k, 
+					span(real_span0_start, real_span0_end, 0),
+					span(real_span1_start, real_span1_end, 1)
+				);
+		} else {
+			return null;
+		}
+	}
 }

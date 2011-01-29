@@ -2,6 +2,9 @@ package br.eti.rslemos.nlp.corpora.chave.parser;
 
 import static br.eti.rslemos.nlp.corpora.chave.parser.Match.match;
 import static br.eti.rslemos.nlp.corpora.chave.parser.Match.Span.span;
+import static org.hamcrest.CoreMatchers.equalTo;
+import static org.hamcrest.CoreMatchers.is;
+import static org.junit.Assert.assertThat;
 
 import org.junit.Test;
 
@@ -68,4 +71,21 @@ public class DirectMatchStrategyUnitTest extends AbstractMatchStrategyUnitTest {
 		verifyMatches(match(0, "sra".length(), span(0, "sra".length(), 0)));
 	}
 
+	@Test
+	public void testMatchTwo() throws Exception {
+		DirectMatchStrategy strategy = new DirectMatchStrategy();
+		Match match = strategy.matchTwo("Devido  às   quais", 
+				"Devido=às=quais",
+				0, "Devido=à".length(),
+				"Devido=".length(),
+				"Devido=às=quais".length()
+			);
+		
+		assertThat(match, is(equalTo(
+				match(0, "Devido  às   quais".length(),
+					span(0, "Devido  à".length(), 0),
+					span("Devido  ".length(), "Devido  às   quais".length(), 1)
+				)
+			)));
+	}
 }
