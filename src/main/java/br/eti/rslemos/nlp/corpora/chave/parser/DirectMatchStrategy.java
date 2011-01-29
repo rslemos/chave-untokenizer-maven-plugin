@@ -5,8 +5,10 @@ import static java.lang.Character.isWhitespace;
 import static java.lang.Character.toLowerCase;
 
 import java.util.Arrays;
+import java.util.LinkedHashMap;
 import java.util.LinkedHashSet;
 import java.util.List;
+import java.util.Map;
 import java.util.Set;
 
 import br.eti.rslemos.nlp.corpora.chave.parser.Match.Span;
@@ -14,6 +16,7 @@ import br.eti.rslemos.nlp.corpora.chave.parser.Match.Span;
 public class DirectMatchStrategy implements MatchStrategy {
 	
 	public Set<Match> match(String text, List<String> cg) {
+		Map<String, Set<Match>> cache = new LinkedHashMap<String, Set<Match>>();
 		Set<Match> matches = new LinkedHashSet<Match>();
 
 		for (int i = 0; i < cg.size(); i++) {
@@ -29,7 +32,13 @@ public class DirectMatchStrategy implements MatchStrategy {
 				}
 			}
 			
-			matches.addAll(matchKey(text, key0, span(0, key0.length(), i)));
+			if (!cache.containsKey(key0)){
+				cache.put(key0, matchKey(text, key0, span(0, key0.length(), 0)));
+			}
+			
+			for (Match match : cache.get(key0)) {
+				matches.add(match.adjust(0, i));
+			}
 		}
 		
 		return matches;
@@ -62,41 +71,36 @@ public class DirectMatchStrategy implements MatchStrategy {
 		return matches;
 	}
 
-	public int[] matchKey(String text, int k, String key, int... points) {
-		int[] mappedPoints = new int[points.length];
-		Arrays.fill(mappedPoints, -1);
+	public int[] matchKey(String text, int k, String key, int... keyPoints) {
+		int[] textPoints = new int[keyPoints.length];
+		Arrays.fill(textPoints, -1);
 		
-		int j = 0;
-		try {
-			while (true) {
-				for (int i = 0; i < points.length; i++) {
-					if (points[i] == j)
-						mappedPoints[i] = k;
-				}
+		for (int j = 0; j < key.length(); j++) {
+			remap(j, keyPoints, k, textPoints);
+			
+			if (key.charAt(j) == '=') {
+				while (isWhitespace(text.charAt(k)))
+					k++;
 				
-				if (key.charAt(j) == '=') {
-					while (isWhitespace(text.charAt(k)))
-						k++;
-					j++;
-					
-					
-					continue;
-				}
-				
-				if (toLowerCase(key.charAt(j)) != toLowerCase(text.charAt(k))) {
-					break;
-				}
-				
-				j++;
-				k++;
+				continue;
 			}
-		} catch (IndexOutOfBoundsException e) {
+			
+			if (k >= text.length() || toLowerCase(key.charAt(j)) != toLowerCase(text.charAt(k))) {
+				return null;
+			}
+			
+			k++;
 		}
 
-		if (j == key.length()) {
-			return mappedPoints;
-		} else {
-			return null;
+		remap(key.length(), keyPoints, k, textPoints);
+
+		return textPoints;
+	}
+
+	private void remap(int j, int[] inPoints, int k, int[] outPoints) {
+		for (int i = 0; i < inPoints.length; i++) {
+			if (inPoints[i] == j)
+				outPoints[i] = k;
 		}
 	}
 
