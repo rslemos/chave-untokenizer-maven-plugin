@@ -57,7 +57,7 @@ public class DirectMatchStrategy implements MatchStrategy {
 		}
 		
 		for (int k = 0; k < text.length(); k++) {
-			int[] outPoints = matchKey(text, k, key, inPoints);
+			int[] outPoints = matchKey(text, k, key, true, inPoints);
 			if (outPoints != null) {
 				Span[] outSpans = new Span[inSpans.length];
 				for (int i = 0; i < outSpans.length; i++) {
@@ -71,9 +71,12 @@ public class DirectMatchStrategy implements MatchStrategy {
 		return matches;
 	}
 
-	public int[] matchKey(String text, int k, String key, int... keyPoints) {
+	public int[] matchKey(String text, int k, String key, boolean wordBoundary, int... keyPoints) {
 		int[] textPoints = new int[keyPoints.length];
 		Arrays.fill(textPoints, -1);
+		
+		if (wordBoundary && k > 0 && !isWordBoundary(text.charAt(k - 1)))
+			return null;
 		
 		for (int j = 0; j < key.length(); j++) {
 			remap(j, keyPoints, k, textPoints);
@@ -92,9 +95,16 @@ public class DirectMatchStrategy implements MatchStrategy {
 			k++;
 		}
 
+		if (wordBoundary && k < text.length() && !isWordBoundary(text.charAt(k)))
+			return null;
+		
 		remap(key.length(), keyPoints, k, textPoints);
 
 		return textPoints;
+	}
+
+	private static boolean isWordBoundary(char c) {
+		return !Character.isLetterOrDigit(c);
 	}
 
 	private void remap(int j, int[] inPoints, int k, int[] outPoints) {

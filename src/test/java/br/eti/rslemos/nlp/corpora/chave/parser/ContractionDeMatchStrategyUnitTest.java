@@ -339,14 +339,6 @@ public class ContractionDeMatchStrategyUnitTest extends AbstractMatchStrategyUni
 				match( 9, 11, 
 						span( 9, 10, 4), 
 						span(10, 11, 5)
-					),
-				match(12, 14, 
-						span(12, 13, 4), 
-						span(13, 14, 5)
-					),
-				match(14,  16, 
-						span(14, 15, 1), 
-						span(15, 16, 2)
 					)
 			);
 	}

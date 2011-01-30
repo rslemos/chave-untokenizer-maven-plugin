@@ -72,21 +72,21 @@ public class DirectMatchStrategyUnitTest extends AbstractMatchStrategyUnitTest {
 		runOver("sra.");
 		
 		verifyMatches(
-				match(0, "sra".length(), span(0, "sra".length(), 0)),
-				match("sra".length(), "sra.".length(), span("sra".length(), "sra.".length(), 1))
+				match(0, "sra".length(), span(0, "sra".length(), 0))//,
+//				match("sra".length(), "sra.".length(), span("sra".length(), "sra.".length(), 1))
 			);
 	}
 
 	@Test
 	public void testManyMatchesOfSingleWord() throws Exception {
 		cg.add("feita");
-		runOver("feitafeitafeitafeita");
+		runOver("feita feita feita feita");
 		
 		verifyMatches(
-				match("feita".length()*0, "feita".length()*1, span("feita".length()*0, "feita".length()*1, 0)),
-				match("feita".length()*1, "feita".length()*2, span("feita".length()*1, "feita".length()*2, 0)),
-				match("feita".length()*2, "feita".length()*3, span("feita".length()*2, "feita".length()*3, 0)),
-				match("feita".length()*3, "feita".length()*4, span("feita".length()*3, "feita".length()*4, 0))
+				match("feita ".length()*0, "feita ".length()*1 - 1, span("feita ".length()*0, "feita ".length()*1 - 1, 0)),
+				match("feita ".length()*1, "feita ".length()*2 - 1, span("feita ".length()*1, "feita ".length()*2 - 1, 0)),
+				match("feita ".length()*2, "feita ".length()*3 - 1, span("feita ".length()*2, "feita ".length()*3 - 1, 0)),
+				match("feita ".length()*3, "feita ".length()*4 - 1, span("feita ".length()*3, "feita ".length()*4 - 1, 0))
 			);
 	}
 
@@ -95,13 +95,13 @@ public class DirectMatchStrategyUnitTest extends AbstractMatchStrategyUnitTest {
 		cg.add("feita");
 		cg.add("feito");
 
-		runOver("feitofeitafeitofeita");
+		runOver("feito feita feito feita");
 		
 		verifyMatches(
-				match("feit_".length()*0, "feit_".length()*1, span("feit_".length()*0, "feit_".length()*1, 1)),
-				match("feit_".length()*1, "feit_".length()*2, span("feit_".length()*1, "feit_".length()*2, 0)),
-				match("feit_".length()*2, "feit_".length()*3, span("feit_".length()*2, "feit_".length()*3, 1)),
-				match("feit_".length()*3, "feit_".length()*4, span("feit_".length()*3, "feit_".length()*4, 0))
+				match("feit_ ".length()*0, "feit_ ".length()*1 - 1, span("feit_ ".length()*0, "feit_ ".length()*1 - 1, 1)),
+				match("feit_ ".length()*1, "feit_ ".length()*2 - 1, span("feit_ ".length()*1, "feit_ ".length()*2 - 1, 0)),
+				match("feit_ ".length()*2, "feit_ ".length()*3 - 1, span("feit_ ".length()*2, "feit_ ".length()*3 - 1, 1)),
+				match("feit_ ".length()*3, "feit_ ".length()*4 - 1, span("feit_ ".length()*3, "feit_ ".length()*4 - 1, 0))
 			);
 	}
 
@@ -125,7 +125,7 @@ public class DirectMatchStrategyUnitTest extends AbstractMatchStrategyUnitTest {
 		int[] results = strategy.matchKey(
 				"012 \t56789   3\t\t6789", 0, 
 				"012=56789=3=6789", 
-				0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16
+				true, 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16
 			);
 		
 		assertThat(results, is(equalTo(new int[] {0, 1, 2, 3, 5, 6, 7, 8, 9, 10, 13, 14, 16, 17, 18, 19, 20})));
