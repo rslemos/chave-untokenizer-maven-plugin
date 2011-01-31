@@ -44,9 +44,9 @@ public class DirectMatchStrategyUnitTest extends AbstractMatchStrategyUnitTest {
 	@Test
 	public void testPunctuationMark() throws Exception {
 		cg.add("$,");
-		runOver(",");
+		runOver("), ");
 		
-		verifyMatches(match(0, 1, span(0, 1, 0)));
+		verifyMatches(match(1, 2, span(1, 2, 0)));
 	}
 
 	@Test
@@ -72,8 +72,8 @@ public class DirectMatchStrategyUnitTest extends AbstractMatchStrategyUnitTest {
 		runOver("sra.");
 		
 		verifyMatches(
-				match(0, "sra".length(), span(0, "sra".length(), 0))//,
-//				match("sra".length(), "sra.".length(), span("sra".length(), "sra.".length(), 1))
+				match(0, "sra".length(), span(0, "sra".length(), 0)),
+				match("sra".length(), "sra.".length(), span("sra".length(), "sra.".length(), 1))
 			);
 	}
 

@@ -75,7 +75,7 @@ public class DirectMatchStrategy implements MatchStrategy {
 		int[] textPoints = new int[keyPoints.length];
 		Arrays.fill(textPoints, -1);
 		
-		if (wordBoundary && k > 0 && !isWordBoundary(text.charAt(k - 1)))
+		if (wordBoundary && k > 0 && !isWhitespace(text.charAt(k - 1)) && !isWordBoundary(key.charAt(0)) && !isWordBoundary(text.charAt(k - 1)))
 			return null;
 		
 		for (int j = 0; j < key.length(); j++) {
@@ -95,7 +95,7 @@ public class DirectMatchStrategy implements MatchStrategy {
 			k++;
 		}
 
-		if (wordBoundary && k < text.length() && !isWordBoundary(text.charAt(k)))
+		if (wordBoundary && k < text.length() && !isWhitespace(text.charAt(k)) && !isWordBoundary(key.charAt(key.length() - 1)) && !isWordBoundary(text.charAt(k)))
 			return null;
 		
 		remap(key.length(), keyPoints, k, textPoints);
