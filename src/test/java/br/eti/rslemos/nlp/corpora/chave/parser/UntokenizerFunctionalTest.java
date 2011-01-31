@@ -12,15 +12,23 @@ import java.io.InputStreamReader;
 import java.io.Reader;
 import java.net.URL;
 import java.nio.charset.Charset;
+import java.util.Arrays;
+import java.util.Comparator;
 import java.util.List;
+import java.util.Set;
+import java.util.TreeSet;
 
 import org.junit.Before;
+import org.junit.Test;
 import org.junit.experimental.theories.DataPoint;
 import org.junit.experimental.theories.Theories;
 import org.junit.experimental.theories.Theory;
 import org.junit.runner.RunWith;
 
+import br.eti.rslemos.nlp.corpora.chave.parser.Match.Span;
+
 @RunWith(Theories.class)
+//@Ignore
 public class UntokenizerFunctionalTest {
 	
 	private static final Charset UTF8 = Charset.forName("UTF-8");
@@ -202,5 +210,95 @@ public class UntokenizerFunctionalTest {
 		return new InputStreamReader(url.openStream(), UTF8);
 	}
 
+	@Test
+	public void testUniverseCount() throws Exception {
+		System.out.printf("Memory: %d\n", Runtime.getRuntime().totalMemory());
+		String basename = "/pt_BR/CHAVEFolha/1995/12/28/039";
+		
+		List<CGEntry> cgLines = CGEntry.loadFromReader(open(basename + ".cg"));
+		
+		Document document = GateLoader.load(UntokenizerUnitTest.class.getResource(basename + ".sgml"), "UTF-8");
+		
+		List<String> cg = Untokenizer.onlyKeys(cgLines);
+		String text = document.getContent().toString();
+		System.out.printf("Text: %d characters; CG: %d entries\n", text.length(), cg.size());
+		
+		Set<Match> matches = new TreeSet<Match>(new Comparator<Match>() {
 
+			public int compare(Match o1, Match o2) {
+				if (o1.equals(o2))
+					return 0;
+				
+				int compare = getMinEntry(o1) - getMinEntry(o2);
+				
+				if (compare == 0) 
+					compare = getMaxEntry(o2) - getMaxEntry(o1);
+				
+				if (compare == 0)
+					compare = -1;
+				
+				return compare;
+			}
+
+		});
+		
+		for (MatchStrategy strategy : Arrays.asList(
+				new ContractionDeMatchStrategy(),
+				new ContractionEmMatchStrategy(),
+				new ContractionAMatchStrategy(),
+				new ContractionPorMatchStrategy(),
+				new ContractionComMatchStrategy(),
+				new EncliticMatchStrategy(),
+				new DirectMatchStrategy()
+			)) {
+			
+			long before = System.nanoTime();
+			Set<Match> match = strategy.match(text, cg);
+			long after = System.nanoTime();
+
+			int size = match.size();
+			matches.addAll(match);
+			System.out.printf("%s (%fms): %d = %f²\n", strategy.getClass().getSimpleName(), (float)(after - before)/1000000, size, Math.sqrt(size));
+		}
+
+		System.out.printf("Matches: %d = %f²\n", matches.size(), Math.sqrt(matches.size()));
+		
+		int lastEntry = -1;
+		int count = 0;
+		
+		for (Match match : matches) {
+			int minEntry = getMinEntry(match);
+		
+			if (minEntry != lastEntry) {
+				System.out.printf("%d. %d\n", lastEntry, count);
+				count = 0;
+			}
+			
+			lastEntry = minEntry;
+			count++;
+		}
+
+		System.out.printf("Memory: %d\n", Runtime.getRuntime().totalMemory());
+	}
+
+	private static int getMinEntry(Match o) {
+		int minEntry = Integer.MAX_VALUE;
+		for (Span span : o.getSpans()) {
+			if (span.entry < minEntry)
+				minEntry = span.entry;
+		}
+		
+		return minEntry;
+	}
+	
+	private static int getMaxEntry(Match o) {
+		int maxEntry = Integer.MIN_VALUE;
+		for (Span span : o.getSpans()) {
+			if (span.entry > maxEntry)
+				maxEntry = span.entry;
+		}
+		
+		return maxEntry;
+	}
+	
 }

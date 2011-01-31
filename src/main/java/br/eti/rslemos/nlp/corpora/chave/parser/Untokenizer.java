@@ -112,7 +112,7 @@ outer:
 		return matches;
 	}
 
-	private static List<String> onlyKeys(List<CGEntry> cg1) {
+	public static List<String> onlyKeys(List<CGEntry> cg1) {
 		ArrayList<String> result = new ArrayList<String>(cg1.size());
 		for (CGEntry entry : cg1) {
 			result.add(entry.getKey());
