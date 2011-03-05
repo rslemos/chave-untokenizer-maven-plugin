@@ -2,12 +2,11 @@ package br.eti.rslemos.nlp.corpora.chave.parser;
 
 import static java.lang.Character.isWhitespace;
 
-import java.util.Collections;
 import java.util.List;
-import java.util.Set;
 
-public class WhitespaceMatchStrategy implements MatchStrategy {
+public class WhitespaceMatchStrategy extends OldStyleMatchStrategy {
 
+	@Override
 	public Match match0(String text, List<String> cg) {
 		int k = 0;
 		
@@ -20,14 +19,6 @@ public class WhitespaceMatchStrategy implements MatchStrategy {
 			return new Match(0, k);
 		} else
 			return null;
-	}
-
-	public Set<Match> match(String text, List<String> cg) {
-		Match match0 = match0(text, cg);
-		if (match0 == null)
-			return Collections.emptySet();
-		else
-			return Collections.singleton(match0);
 	}
 
 }
