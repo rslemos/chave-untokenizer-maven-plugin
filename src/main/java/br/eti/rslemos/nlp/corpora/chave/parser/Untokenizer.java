@@ -54,7 +54,7 @@ outer:
 				for (MatchStrategy strategy : strategies) {
 					strategy.setText(substring);
 					strategy.setCG(onlyKeys);
-					mementos.addAll(keepFor(strategy.match(), k, 0));
+					mementos.addAll(keepFor(strategy.matchAll(), k, 0));
 				}
 				
 				if (mementos.size() > 0) {

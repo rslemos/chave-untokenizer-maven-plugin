@@ -46,7 +46,7 @@ public abstract class AbstractContractionMatchStrategy extends AbstractMatchStra
 		this.suffixStart = suffixStart;
 	}
 
-	public Set<Match> match() {
+	public Set<Match> matchAll() {
 		cache = new HashMap<String, Set<Match>>();
 		
 		Set<Match> result = new LinkedHashSet<Match>();

@@ -23,7 +23,7 @@ public abstract class AbstractMatchStrategyUnitTest {
 	protected void runOver(String sgml) {
 		strategy.setText(sgml);
 		strategy.setCG(cg);
-		matches = strategy.match();
+		matches = strategy.matchAll();
 	}
 
 	public void verifyMatches(Match... matches) {

@@ -14,7 +14,7 @@ import br.eti.rslemos.nlp.corpora.chave.parser.Match.Span;
 
 public class DirectMatchStrategy extends AbstractMatchStrategy {
 	
-	public Set<Match> match() {
+	public Set<Match> matchAll() {
 		Map<String, Set<Match>> cache = new LinkedHashMap<String, Set<Match>>();
 		Set<Match> matches = new LinkedHashSet<Match>();
 

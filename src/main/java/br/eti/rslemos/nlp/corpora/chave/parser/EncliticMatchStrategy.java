@@ -12,7 +12,7 @@ public class EncliticMatchStrategy extends AbstractMatchStrategy {
 
 	private static final DirectMatchStrategy DM = new DirectMatchStrategy();
 
-	public Set<Match> match() {
+	public Set<Match> matchAll() {
 		Map<String, Set<Match>> cache = new LinkedHashMap<String, Set<Match>>();
 		
 		Set<Match> result = new LinkedHashSet<Match>();

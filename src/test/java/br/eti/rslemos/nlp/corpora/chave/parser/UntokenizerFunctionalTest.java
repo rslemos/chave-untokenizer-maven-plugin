@@ -257,7 +257,7 @@ public class UntokenizerFunctionalTest {
 			long before = System.nanoTime();
 			strategy.setText(text);
 			strategy.setCG(cg);
-			Set<Match> match = strategy.match();
+			Set<Match> match = strategy.matchAll();
 			long after = System.nanoTime();
 
 			int size = match.size();

@@ -7,7 +7,7 @@ public abstract class OldStyleMatchStrategy extends AbstractMatchStrategy {
 
 	public abstract Match match0();
 
-	public final Set<Match> match() {
+	public final Set<Match> matchAll() {
 		Match match0 = match0();
 		if (match0 == null)
 			return Collections.emptySet();

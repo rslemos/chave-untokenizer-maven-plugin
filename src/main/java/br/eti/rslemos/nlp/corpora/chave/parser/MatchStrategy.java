@@ -8,5 +8,17 @@ public interface MatchStrategy {
 	
 	void setCG(List<String> cg);
 
-	Set<Match> match();
+	/**
+	 * Try to match the <code>i</code>-th key (and a few following it) over the
+	 * text possibly starting at <code>k</code>.
+	 * 
+	 * @param k
+	 * @param i
+	 * 
+	 * @return the nearest match starting at <code>k</code> if one such match
+	 * exists; <code>null</code> otherwise.
+	 */
+	//Match match(int k, int i);
+	
+	Set<Match> matchAll();
 }
