@@ -19,6 +19,8 @@ public abstract class AbstractContractionMatchStrategy implements MatchStrategy 
 
 	private final int[] prefixEnd;
 	private final int[] suffixStart;
+
+	private Map<String, Set<Match>> cache;
 	
 	private static int[] buildPrefixEnd(String[] cg1, int prefixLength) {
 		int[] result = new int[cg1.length];
@@ -45,62 +47,65 @@ public abstract class AbstractContractionMatchStrategy implements MatchStrategy 
 	}
 
 	public Set<Match> match(String text, List<String> cg) {
-		Map<String, Set<Match>> cache = new HashMap<String, Set<Match>>();
+		cache = new HashMap<String, Set<Match>>();
 		
 		Set<Match> result = new LinkedHashSet<Match>();
 		
 		for (int i = 0; i < cg.size() - 1; i++) {
-			String key0 = cg.get(i).toLowerCase();
-			
-			if ((!cg0.equals(key0) && !key0.endsWith("=" + cg0)))
-				continue;
-			
-			String key1 = cg.get(i + 1).toLowerCase();
-
-			int idx;
-			if ((idx = Arrays.binarySearch(cg1, key1.split("=")[0])) < 0)
-				continue;
-			
-			int span0_start = 0;
-			int span0_end = prefixEnd[idx];
-			int span1_start = suffixStart[idx];
-			int span1_end = results[idx].length();
-			
-			StringBuilder toMatchBuilder = new StringBuilder();
-			
-			if (key0.endsWith("=" + cg0)) {
-				String left = key0.replaceAll("=" + cg0 + "$", "=");
-				
-				toMatchBuilder.append(left);
-				span0_end += left.length();
-				span1_start += left.length();
-				span1_end += left.length();
-			}
-			
-			toMatchBuilder.append(results[idx]);
-			
-			if (key1.startsWith(cg1[idx] + "=")) {
-				String right = key1.replaceAll("^" + cg1[idx] + "=", "=");
-				
-				toMatchBuilder.append(right);
-				span1_end += right.length();
-			}
-			
-			String toMatch = toMatchBuilder.toString();
-
-			if (!cache.containsKey(toMatch)) {
-				cache.put(toMatch, DM.matchKey(text, toMatch, span(span0_start, span0_end, 0), span(span1_start, span1_end, 1)));
-			}
-			
-			Set<Match> matches = new LinkedHashSet<Match>();
-
-			for (Match match : cache.get(toMatch)) {
-				matches.add(match.adjust(0, i));
-			}
-			
-			result.addAll(matches);
+			addMatches(text, cg, i, result);
 		}
 		
 		return result;
+	}
+
+	private void addMatches(String text, List<String> cg, int i, Set<Match> result) {
+		String key0 = cg.get(i).toLowerCase();
+		String key1 = cg.get(i + 1).toLowerCase();
+		
+		if ((cg0.equals(key0) || key0.endsWith("=" + cg0))) {
+			int idx;
+			if ((idx = Arrays.binarySearch(cg1, key1.split("=")[0])) >= 0) {
+				int[][] marks = { { 0, 0 }, { 0, 0 } }; 
+				
+				String toMatch = buildMatchString(key0, key1, idx, marks);
+				
+				if (!cache.containsKey(toMatch)) {
+					cache.put(toMatch, DM.matchKey(text, toMatch, span(marks[0][0], marks[0][1], 0), span(marks[1][0], marks[1][1], 1)));
+				}
+				
+				for (Match match : cache.get(toMatch)) {
+					result.add(match.adjust(0, i));
+				}
+			}
+		}
+	}
+
+	private String buildMatchString(String key0, String key1, int idx, int[][] marks) {
+		StringBuilder toMatchBuilder = new StringBuilder();
+
+		marks[0][0] = 0;
+		marks[0][1] = prefixEnd[idx];
+		marks[1][0] = suffixStart[idx];
+		marks[1][1] = results[idx].length();
+
+		if (key0.endsWith("=" + cg0)) {
+			String left = key0.replaceAll("=" + cg0 + "$", "=");
+			
+			toMatchBuilder.append(left);
+			marks[0][1] += left.length();
+			marks[1][0] += left.length();
+			marks[1][1] += left.length();
+		}
+		
+		toMatchBuilder.append(results[idx]);
+		
+		if (key1.startsWith(cg1[idx] + "=")) {
+			String right = key1.replaceAll("^" + cg1[idx] + "=", "=");
+			
+			toMatchBuilder.append(right);
+			marks[1][1] += right.length();
+		}
+		
+		return toMatchBuilder.toString();
 	}
 }
