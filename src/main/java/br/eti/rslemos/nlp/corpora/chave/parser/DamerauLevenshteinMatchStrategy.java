@@ -3,7 +3,6 @@ package br.eti.rslemos.nlp.corpora.chave.parser;
 import static br.eti.rslemos.nlp.corpora.chave.parser.Match.Span.span;
 
 import java.util.Arrays;
-import java.util.List;
 
 public class DamerauLevenshteinMatchStrategy extends OldStyleMatchStrategy {
 
@@ -13,7 +12,7 @@ public class DamerauLevenshteinMatchStrategy extends OldStyleMatchStrategy {
 		this.maxDistance = maxDistance;
 	}
 
-	public Match match0(String text, List<String> cg) {
+	public Match match0() {
 		String key0 = cg.get(0);
 
 		if (cg.size() > 1) {

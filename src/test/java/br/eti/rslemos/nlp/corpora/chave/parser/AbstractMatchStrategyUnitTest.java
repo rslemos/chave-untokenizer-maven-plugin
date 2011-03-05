@@ -21,7 +21,9 @@ public abstract class AbstractMatchStrategyUnitTest {
 	}
 
 	protected void runOver(String sgml) {
-		matches = strategy.match(sgml, cg);
+		strategy.setText(sgml);
+		strategy.setCG(cg);
+		matches = strategy.match();
 	}
 
 	public void verifyMatches(Match... matches) {

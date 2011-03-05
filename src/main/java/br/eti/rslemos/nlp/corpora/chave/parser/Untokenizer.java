@@ -52,7 +52,9 @@ outer:
 				List<String> onlyKeys = onlyKeys(cg1.subList(i, cg1.size()));
 				
 				for (MatchStrategy strategy : strategies) {
-					mementos.addAll(keepFor(strategy.match(substring, onlyKeys), k, 0));
+					strategy.setText(substring);
+					strategy.setCG(onlyKeys);
+					mementos.addAll(keepFor(strategy.match(), k, 0));
 				}
 				
 				if (mementos.size() > 0) {

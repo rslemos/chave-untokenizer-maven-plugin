@@ -7,15 +7,14 @@ import static java.lang.Character.toLowerCase;
 import java.util.Arrays;
 import java.util.LinkedHashMap;
 import java.util.LinkedHashSet;
-import java.util.List;
 import java.util.Map;
 import java.util.Set;
 
 import br.eti.rslemos.nlp.corpora.chave.parser.Match.Span;
 
-public class DirectMatchStrategy implements MatchStrategy {
+public class DirectMatchStrategy extends AbstractMatchStrategy {
 	
-	public Set<Match> match(String text, List<String> cg) {
+	public Set<Match> match() {
 		Map<String, Set<Match>> cache = new LinkedHashMap<String, Set<Match>>();
 		Set<Match> matches = new LinkedHashSet<Match>();
 

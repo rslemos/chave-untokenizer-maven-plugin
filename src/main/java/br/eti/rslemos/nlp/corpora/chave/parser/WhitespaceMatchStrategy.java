@@ -2,12 +2,10 @@ package br.eti.rslemos.nlp.corpora.chave.parser;
 
 import static java.lang.Character.isWhitespace;
 
-import java.util.List;
-
 public class WhitespaceMatchStrategy extends OldStyleMatchStrategy {
 
 	@Override
-	public Match match0(String text, List<String> cg) {
+	public Match match0() {
 		int k = 0;
 		
 		try {

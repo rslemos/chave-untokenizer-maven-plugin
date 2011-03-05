@@ -9,7 +9,7 @@ import java.util.List;
 import java.util.Map;
 import java.util.Set;
 
-public abstract class AbstractContractionMatchStrategy implements MatchStrategy {
+public abstract class AbstractContractionMatchStrategy extends AbstractMatchStrategy {
 
 	private static final DirectMatchStrategy DM = new DirectMatchStrategy();
 	
@@ -46,7 +46,7 @@ public abstract class AbstractContractionMatchStrategy implements MatchStrategy 
 		this.suffixStart = suffixStart;
 	}
 
-	public Set<Match> match(String text, List<String> cg) {
+	public Set<Match> match() {
 		cache = new HashMap<String, Set<Match>>();
 		
 		Set<Match> result = new LinkedHashSet<Match>();

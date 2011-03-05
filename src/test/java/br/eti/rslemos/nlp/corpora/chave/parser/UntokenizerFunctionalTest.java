@@ -19,6 +19,7 @@ import java.util.Set;
 import java.util.TreeSet;
 
 import org.junit.Before;
+import org.junit.Ignore;
 import org.junit.Test;
 import org.junit.experimental.theories.DataPoint;
 import org.junit.experimental.theories.Theories;
@@ -28,7 +29,7 @@ import org.junit.runner.RunWith;
 import br.eti.rslemos.nlp.corpora.chave.parser.Match.Span;
 
 @RunWith(Theories.class)
-//@Ignore
+@Ignore
 public class UntokenizerFunctionalTest {
 	
 	private static final Charset UTF8 = Charset.forName("UTF-8");
@@ -254,7 +255,9 @@ public class UntokenizerFunctionalTest {
 			)) {
 			
 			long before = System.nanoTime();
-			Set<Match> match = strategy.match(text, cg);
+			strategy.setText(text);
+			strategy.setCG(cg);
+			Set<Match> match = strategy.match();
 			long after = System.nanoTime();
 
 			int size = match.size();

@@ -2,11 +2,9 @@ package br.eti.rslemos.nlp.corpora.chave.parser;
 
 import static br.eti.rslemos.nlp.corpora.chave.parser.Match.Span.span;
 
-import java.util.List;
-
 public class QuotesMatchStrategy extends OldStyleMatchStrategy {
 
-	public Match match0(String text, List<String> cg) {
+	public Match match0() {
 		try {
 			if (text.charAt(0) != '"')
 				return null;
