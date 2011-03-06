@@ -11,10 +11,10 @@ import java.util.Set;
 import br.eti.rslemos.nlp.corpora.chave.parser.Match.Span;
 
 public class TextMatcher {
-	private String text;
+	private char[] text;
 
 	public void setText(String text) {
-		this.text = text;
+		this.text = text.toCharArray();
 	}
 
 	public Set<Match> matchKey(String key, Span... inSpans) {
@@ -29,7 +29,7 @@ public class TextMatcher {
 			inPoints[i*2 + 3] = inSpans[i].to;
 		}
 		
-		for (int k = 0; k < text.length(); k++) {
+		for (int k = 0; k < text.length; k++) {
 			int[] outPoints = match(k, key, inPoints);
 			if (outPoints != null) {
 				Span[] outSpans = new Span[inSpans.length];
@@ -55,13 +55,13 @@ public class TextMatcher {
 			remap(j, inPoints, k, outPoints);
 			
 			if (toMatch.charAt(j) == '=') {
-				while (isWhitespace(text.charAt(k)))
+				while (isWhitespace(text[k]))
 					k++;
 				
 				continue;
 			}
 			
-			if (k >= text.length() || toLowerCase(toMatch.charAt(j)) != toLowerCase(text.charAt(k))) {
+			if (k >= text.length || toLowerCase(toMatch.charAt(j)) != toLowerCase(text[k])) {
 				return null;
 			}
 			
@@ -77,7 +77,7 @@ public class TextMatcher {
 	}
 
 	private boolean isNeitherWhitespaceNorWordBoundary(int k) {
-		return (k >= 0 && k < text.length()) && !(isWhitespace(text.charAt(k)) || isWordBoundary(text.charAt(k)));
+		return (k >= 0 && k < text.length) && !(isWhitespace(text[k]) || isWordBoundary(text[k]));
 	}
 	
 	private static boolean isWordBoundary(char c) {
@@ -92,12 +92,16 @@ public class TextMatcher {
 	}
 
 	@Deprecated
-	public void getChars(int i, int length, char[] cs, int j) {
-		text.getChars(i, length, cs, j);
+	public char charAt(int i) {
+		return text[i];
 	}
 
 	@Deprecated
-	public char charAt(int i) {
-		return text.charAt(i);
+	void getChars(char[] cs) {
+		int length = cs.length;
+		if (length > text.length || 0 > length) {
+		    throw new StringIndexOutOfBoundsException(length);
+		}
+		System.arraycopy(text, 0, cs, 0, length - 0);
 	}
 }
