@@ -20,5 +20,6 @@ public interface MatchStrategy {
 	 */
 	//Match match(int k, int i);
 	
+	@Deprecated
 	Set<Match> matchAll();
 }

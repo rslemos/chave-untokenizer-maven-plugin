@@ -29,7 +29,7 @@ public class DamerauLevenshteinMatchStrategy extends OldStyleMatchStrategy {
 
 		char[] cs = new char[key0.length()];
 		try {
-			text.getChars(0, cs.length, cs, 0);
+			matcher.getChars(0, cs.length, cs, 0);
 		} catch (StringIndexOutOfBoundsException e) {
 			return null;
 		}

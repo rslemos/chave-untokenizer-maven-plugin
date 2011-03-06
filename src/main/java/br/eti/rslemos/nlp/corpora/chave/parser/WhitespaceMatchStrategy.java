@@ -9,7 +9,7 @@ public class WhitespaceMatchStrategy extends OldStyleMatchStrategy {
 		int k = 0;
 		
 		try {
-			while(isWhitespace(text.charAt(k)))
+			while(isWhitespace(matcher.charAt(k)))
 				k++;
 		} catch (IndexOutOfBoundsException e) {}
 		

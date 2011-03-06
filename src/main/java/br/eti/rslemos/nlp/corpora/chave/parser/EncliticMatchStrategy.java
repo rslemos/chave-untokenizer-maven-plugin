@@ -10,11 +10,15 @@ import java.util.Set;
 
 public class EncliticMatchStrategy extends AbstractMatchStrategy {
 
-	private static final DirectMatchStrategy DM = new DirectMatchStrategy();
+	private Map<String, Set<Match>> cache;
+
+	@Override
+	public void setText(String text) {
+		super.setText(text);
+		cache = new LinkedHashMap<String, Set<Match>>();
+	}
 
 	public Set<Match> matchAll() {
-		Map<String, Set<Match>> cache = new LinkedHashMap<String, Set<Match>>();
-		
 		Set<Match> result = new LinkedHashSet<Match>();
 		
 		for (int i = 0; i < cg.size() - 1; i++) {
@@ -42,14 +46,7 @@ public class EncliticMatchStrategy extends AbstractMatchStrategy {
 				if (toMatch != null) {
 					toMatch += key1;
 					
-					if (!cache.containsKey(toMatch)) {
-						cache.put(toMatch, DM.matchKey(text, toMatch,
-									span(0, toMatch.length() - key1.length(), 0),
-									span(toMatch.length() - key1.length(), toMatch.length(), 1)
-								));
-					}
-					
-					for (Match match : cache.get(toMatch)) {
+					for (Match match : matchAndUpdateCache(toMatch, key1)) {
 						result.add(match.adjust(0, i));
 					}
 				}
@@ -57,6 +54,17 @@ public class EncliticMatchStrategy extends AbstractMatchStrategy {
 		}
 		
 		return result;
+	}
+
+	private Set<Match> matchAndUpdateCache(String toMatch, String key1) {
+		if (!cache.containsKey(toMatch)) {
+			cache.put(toMatch, matcher.matchKey(toMatch,
+						span(0, toMatch.length() - key1.length(), 0),
+						span(toMatch.length() - key1.length(), toMatch.length(), 1)
+					));
+		}
+		
+		return cache.get(toMatch);
 	}
 
 }

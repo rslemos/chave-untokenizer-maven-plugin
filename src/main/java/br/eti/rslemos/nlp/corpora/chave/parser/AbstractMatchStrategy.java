@@ -4,11 +4,11 @@ import java.util.List;
 
 public abstract class AbstractMatchStrategy implements MatchStrategy {
 
-	protected String text;
+	protected final TextMatcher matcher = new TextMatcher();
 	protected List<String> cg;
 
 	public void setText(String text) {
-		this.text = text;
+		matcher.setText(text);
 	}
 
 	public void setCG(List<String> cg) {

@@ -5,14 +5,11 @@ import static br.eti.rslemos.nlp.corpora.chave.parser.Match.Span.span;
 import java.util.Arrays;
 import java.util.HashMap;
 import java.util.LinkedHashSet;
-import java.util.List;
 import java.util.Map;
 import java.util.Set;
 
 public abstract class AbstractContractionMatchStrategy extends AbstractMatchStrategy {
 
-	private static final DirectMatchStrategy DM = new DirectMatchStrategy();
-	
 	private final String cg0;
 	private final String[] cg1;
 	private final String[] results;
@@ -46,38 +43,48 @@ public abstract class AbstractContractionMatchStrategy extends AbstractMatchStra
 		this.suffixStart = suffixStart;
 	}
 
-	public Set<Match> matchAll() {
+	@Override
+	public void setText(String text) {
+		super.setText(text);
 		cache = new HashMap<String, Set<Match>>();
-		
+	}
+
+	public Set<Match> matchAll() {
 		Set<Match> result = new LinkedHashSet<Match>();
 		
 		for (int i = 0; i < cg.size() - 1; i++) {
-			addMatches(text, cg, i, result);
+			addMatches(i, result);
 		}
 		
 		return result;
 	}
 
-	private void addMatches(String text, List<String> cg, int i, Set<Match> result) {
+	private void addMatches(int i, Set<Match> result) {
 		String key0 = cg.get(i).toLowerCase();
 		String key1 = cg.get(i + 1).toLowerCase();
 		
-		if ((cg0.equals(key0) || key0.endsWith("=" + cg0))) {
-			int idx;
-			if ((idx = Arrays.binarySearch(cg1, key1.split("=")[0])) >= 0) {
-				int[][] marks = { { 0, 0 }, { 0, 0 } }; 
-				
-				String toMatch = buildMatchString(key0, key1, idx, marks);
-				
-				if (!cache.containsKey(toMatch)) {
-					cache.put(toMatch, DM.matchKey(text, toMatch, span(marks[0][0], marks[0][1], 0), span(marks[1][0], marks[1][1], 1)));
-				}
-				
-				for (Match match : cache.get(toMatch)) {
-					result.add(match.adjust(0, i));
-				}
-			}
+		if ((!cg0.equals(key0) && !key0.endsWith("=" + cg0)))
+			return;
+		
+		int idx;
+		if ((idx = Arrays.binarySearch(cg1, key1.split("=")[0])) < 0)
+			return;
+
+		int[][] marks = { { 0, 0 }, { 0, 0 } }; 
+		
+		String toMatch = buildMatchString(key0, key1, idx, marks);
+		
+		for (Match match : matchAndUpdateCache(toMatch, marks)) {
+			result.add(match.adjust(0, i));
 		}
+	}
+
+	private Set<Match> matchAndUpdateCache(String toMatch, int[][] marks) {
+		if (!cache.containsKey(toMatch)) {
+			cache.put(toMatch, matcher.matchKey(toMatch, span(marks[0][0], marks[0][1], 0), span(marks[1][0], marks[1][1], 1)));
+		}
+		
+		return cache.get(toMatch);
 	}
 
 	private String buildMatchString(String key0, String key1, int idx, int[][] marks) {

@@ -6,7 +6,7 @@ public class QuotesMatchStrategy extends OldStyleMatchStrategy {
 
 	public Match match0() {
 		try {
-			if (text.charAt(0) != '"')
+			if (matcher.charAt(0) != '"')
 				return null;
 	
 			String key0 = cg.size() > 0 ? cg.get(0) : null;

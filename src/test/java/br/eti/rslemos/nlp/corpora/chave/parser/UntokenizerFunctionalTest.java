@@ -29,7 +29,6 @@ import org.junit.runner.RunWith;
 import br.eti.rslemos.nlp.corpora.chave.parser.Match.Span;
 
 @RunWith(Theories.class)
-@Ignore
 public class UntokenizerFunctionalTest {
 	
 	private static final Charset UTF8 = Charset.forName("UTF-8");
@@ -212,7 +211,7 @@ public class UntokenizerFunctionalTest {
 		return new InputStreamReader(url.openStream(), UTF8);
 	}
 
-	@Test
+	//@Test
 	public void testUniverseCount() throws Exception {
 		System.out.printf("Memory: %d\n", Runtime.getRuntime().totalMemory());
 		String basename = "/pt_BR/CHAVEFolha/1995/12/28/039";
