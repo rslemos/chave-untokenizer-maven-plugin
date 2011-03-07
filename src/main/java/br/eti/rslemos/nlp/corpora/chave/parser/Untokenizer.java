@@ -19,7 +19,7 @@ public class Untokenizer {
 	private static final Formatter FORMATTER = new Formatter();
 
 	public Document parse(List<CGEntry> cg, Document document) throws IOException, ParserException {
-		MatchStrategy[] strategies = {
+		MatchStrategy[] strategies2 = {
 				new DirectMatchStrategy(),
 				new EncliticMatchStrategy(),
 				new ContractionDeMatchStrategy(),
@@ -27,21 +27,27 @@ public class Untokenizer {
 				new ContractionAMatchStrategy(),
 				new ContractionPorMatchStrategy(),
 				new ContractionComMatchStrategy(),
+			};
+
+		MatchStrategy[] strategies = {
 				new QuotesMatchStrategy(),
 				new WhitespaceMatchStrategy(),
 				new NewLineMatchStrategy(),
 				new DamerauLevenshteinMatchStrategy(1),
 			};
 
-		return parser(strategies, cg, document);
-	}
-
-	private Document parser(MatchStrategy[] strategies, List<CGEntry> cg, Document document) throws IOException, ParserException {
 		List<CGEntry> cg1 = Collections.unmodifiableList(cg);
 		int i = 0;
 		
 		final String buffer = document.getContent().toString();
 		int k = 0;
+
+		Set<Match> mementos2 = new LinkedHashSet<Match>();
+		for (MatchStrategy strategy : strategies2) {
+			strategy.setText(buffer);
+			strategy.setCG(onlyKeys(cg1));
+			mementos2.addAll(strategy.matchAll());
+		}
 
 outer:
 		while (i < cg1.size()) {
@@ -54,35 +60,41 @@ outer:
 				for (MatchStrategy strategy : strategies) {
 					strategy.setText(substring);
 					strategy.setCG(onlyKeys);
-					mementos.addAll(keepFor(strategy.matchAll(), k, 0));
+					mementos.addAll(adjust(keepFor(strategy.matchAll(), k, 0), k, i));
 				}
+
+				mementos.addAll(keepFor(mementos2, k, i));
 				
 				if (mementos.size() > 0) {
-					int minSkip = Integer.MAX_VALUE;
+					int nextChar = Integer.MAX_VALUE;
 					for (Iterator<Match> iterator = mementos.iterator(); iterator.hasNext();) {
 						Match memento = iterator.next();
-						minSkip = Math.min(minSkip, memento.getSkipLength());
-						if (memento.getSkipLength() > 0)
+						if (memento.getSkipLength() >= k)
+							nextChar = Math.min(nextChar, memento.getSkipLength());
+						
+						if (memento.getSkipLength() != k)
 							iterator.remove();
 					}
 					
-					if (minSkip == 0) {
+					if (nextChar == k) {
 						Match best = null;
 						int bestLength = -1;
+						int bestEntries = -1;
 						for (Match memento : mementos) {
-							if (memento.getMatchLength() > bestLength) {
+							if (memento.getMatchLength() > bestLength || (memento.getMatchLength() == bestLength && memento.getSpans().size() > bestEntries)) {
 								best = memento;
 								bestLength = best.getMatchLength();
+								bestEntries = best.getSpans().size();
 							}
 						}
 						if (best != null) {
-							best.adjust(k, i).apply(document.getAnnotations(GateConstants.ORIGINAL_MARKUPS_ANNOT_SET_NAME), cg1);
+							best.apply(document.getAnnotations(GateConstants.ORIGINAL_MARKUPS_ANNOT_SET_NAME), cg1);
 							k += best.getMatchLength();
 							i += best.getConsume();
 							continue outer;
 						}
 					} else {
-						k += minSkip;
+						k = nextChar;
 						continue;
 					}
 				}
@@ -96,6 +108,16 @@ outer:
 		}
 		
 		return document;
+	}
+
+	private Set<Match> adjust(Set<Match> keepFor, int k, int i) {
+		Set<Match> result = new LinkedHashSet<Match>();
+		
+		for (Match match : keepFor) {
+			result.add(match.adjust(k, i));
+		}
+		
+		return result;
 	}
 
 	private Set<Match> keepFor(Set<Match> matches, int k, int i) {
