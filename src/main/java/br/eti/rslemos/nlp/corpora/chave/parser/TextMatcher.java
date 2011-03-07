@@ -99,7 +99,7 @@ public class TextMatcher {
 	@Deprecated
 	void getChars(char[] cs) {
 		int length = cs.length;
-		if (length > text.length || 0 > length) {
+		if (length > text.length) {
 		    throw new StringIndexOutOfBoundsException(length);
 		}
 		System.arraycopy(text, 0, cs, 0, length - 0);
