@@ -93,7 +93,7 @@ outer:
 							i += best.getConsume();
 							continue outer;
 						}
-					} else {
+					} else if (nextChar < Integer.MAX_VALUE){
 						k = nextChar;
 						continue;
 					}
