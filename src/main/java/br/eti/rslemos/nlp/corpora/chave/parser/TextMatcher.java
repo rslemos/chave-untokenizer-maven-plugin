@@ -102,6 +102,6 @@ public class TextMatcher {
 		if (length > text.length) {
 		    throw new StringIndexOutOfBoundsException(length);
 		}
-		System.arraycopy(text, 0, cs, 0, length - 0);
+		System.arraycopy(text, 0, cs, 0, length);
 	}
 }
