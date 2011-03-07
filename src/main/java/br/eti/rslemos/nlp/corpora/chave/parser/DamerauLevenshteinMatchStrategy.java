@@ -48,33 +48,39 @@ public class DamerauLevenshteinMatchStrategy extends OldStyleMatchStrategy {
 			return null;
 	}
 
-	private static int levenshteinDistance(char[] cs1, char[] cs2) {
-		int d[][] = new int [cs1.length + 1][cs2.length + 1];
+	private static int levenshteinDistance(char[] key, char[] text) {
+		int d0[] = null;
+		int d1[] = null;
+		int d2[] = null;
 
-		for(int i=0; i<=cs1.length; i++) {
-			d[i][0] = i;
+		d2 = new int[key.length + 1];
+
+		for(int i=0; i<=key.length; i++) {
+			d2[i] = i;
 		}
 		
-		for(int j=0; j<=cs2.length; j++) {
-			d[0][j] = j;
-		}
-		
-		for(int j=1; j<=cs2.length; j++) {
-			for(int i=1; i<=cs1.length; i++) {
+		for(int j=1; j<=text.length; j++) {
+			d0 = d1;
+			d1 = d2;
+			d2 = new int[key.length + 1];
+			
+			d2[0] = j;
+			
+			for(int i=1; i<=key.length; i++) {
 				int cost;
 				
-				if (cs1[i-1] == cs2[j-1])
+				if (key[i-1] == text[j-1])
 					cost = 0;
 				else
 					cost = 1;
 				
-				d[i][j] = Math.min(Math.min(d[i-1][j] + 1, d[i][j-1] + 1), d[i-1][j-1] + cost);
+				d2[i] = Math.min(Math.min(d2[i-1] + 1, d1[i] + 1), d1[i-1] + cost);
 
-				if (i > 1 && j > 1 && cs1[i-1] == cs2[j-2] && cs1[i-2] == cs2[j-1])
-					d[i][j] = Math.min(d[i][j], d[i-2][j-2] + cost);
+				if (i > 1 && j > 1 && key[i-1] == text[j-2] && key[i-2] == text[j-1])
+					d2[i] = Math.min(d2[i], d0[i-2] + cost);
 			}
 		}
 		
-		return d[cs1.length][cs2.length];
+		return d2[key.length];
 	}
 }
