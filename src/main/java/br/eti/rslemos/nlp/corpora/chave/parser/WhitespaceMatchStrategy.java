@@ -2,21 +2,37 @@ package br.eti.rslemos.nlp.corpora.chave.parser;
 
 import static java.lang.Character.isWhitespace;
 
-public class WhitespaceMatchStrategy extends OldStyleMatchStrategy {
+import java.util.LinkedHashSet;
+import java.util.List;
+import java.util.Set;
 
-	@Override
-	public Match match0() {
-		int k = 0;
+public class WhitespaceMatchStrategy implements MatchStrategy {
+
+	private char[] text;
+
+	public Set<Match> matchAll() {
+		Set<Match> result = new LinkedHashSet<Match>();
 		
-		try {
-			while(isWhitespace(matcher.charAt(k)))
-				k++;
-		} catch (IndexOutOfBoundsException e) {}
+		for (int k = 0; k < text.length; k++) {
+			if (isWhitespace(text[k])) {
+				int k1 = k;
+				while (k1 < text.length && isWhitespace(text[k1]))
+					k1++;
+
+				result.add(new Match(k, k1));
+				
+				k = k1;
+			}
+		}
 		
-		if (k > 0) {
-			return new Match(0, k);
-		} else
-			return null;
+		return result;
+	}
+
+	public void setText(String text) {
+		this.text = text.toCharArray();
+	}
+
+	public void setCG(List<String> cg) {
 	}
 
 }

@@ -28,10 +28,10 @@ public class Untokenizer {
 				new ContractionPorMatchStrategy(),
 				new ContractionComMatchStrategy(),
 				new QuotesMatchStrategy(),
+				new WhitespaceMatchStrategy(),
 			};
 
 		MatchStrategy[] strategies = {
-				new WhitespaceMatchStrategy(),
 				new NewLineMatchStrategy(),
 				new DamerauLevenshteinMatchStrategy(1),
 			};
