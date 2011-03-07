@@ -2,21 +2,25 @@ package br.eti.rslemos.nlp.corpora.chave.parser;
 
 import static br.eti.rslemos.nlp.corpora.chave.parser.Match.Span.span;
 
-public class QuotesMatchStrategy extends OldStyleMatchStrategy {
+import java.util.LinkedHashSet;
+import java.util.Set;
 
-	public Match match0() {
-		try {
-			if (matcher.charAt(0) != '"')
-				return null;
-	
-			String key0 = cg.size() > 0 ? cg.get(0) : null;
-			if (key0 != null && "$\"".equals(key0)) {
-				return new Match(0, 1, span(0, 1, 0));
-			} else {
-				return new Match(0, 1);
+public class QuotesMatchStrategy extends AbstractMatchStrategy {
+
+	public Set<Match> matchAll() {
+		Set<Match> basicSet = matcher.matchKey("\"");
+
+		Set<Match> result = new LinkedHashSet<Match>(basicSet);
+
+		for (int i = 0; i < cg.size(); i++) {
+			String key = cg.get(i);
+			if (key != null && "$\"".equals(key)) {
+				for (Match match : basicSet) {
+					result.add(new Match(match.getFrom(), match.getTo(), span(match.getFrom(), match.getTo(), i)));
+				}
 			}
-		} catch (IndexOutOfBoundsException e) {
-			return null;
 		}
+		
+		return result;
 	}
 }
