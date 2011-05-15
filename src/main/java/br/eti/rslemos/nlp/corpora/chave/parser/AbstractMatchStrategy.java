@@ -7,11 +7,8 @@ public abstract class AbstractMatchStrategy implements MatchStrategy {
 	protected final TextMatcher matcher = new TextMatcher();
 	protected List<String> cg;
 
-	public void setText(String text) {
+	public void setData(String text, List<String> cg) {
 		matcher.setText(text);
-	}
-
-	public void setCG(List<String> cg) {
 		this.cg = cg;
 	}
 }

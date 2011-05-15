@@ -5,6 +5,7 @@ import static br.eti.rslemos.nlp.corpora.chave.parser.Match.Span.span;
 import java.util.Arrays;
 import java.util.HashMap;
 import java.util.LinkedHashSet;
+import java.util.List;
 import java.util.Map;
 import java.util.Set;
 
@@ -44,8 +45,8 @@ public abstract class AbstractContractionMatchStrategy extends AbstractMatchStra
 	}
 
 	@Override
-	public void setText(String text) {
-		super.setText(text);
+	public void setData(String text, List<String> cg) {
+		super.setData(text, cg);
 		cache = new HashMap<String, Set<Match>>();
 	}
 

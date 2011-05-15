@@ -4,10 +4,8 @@ import java.util.List;
 import java.util.Set;
 
 public interface MatchStrategy {
-	void setText(String text);
+	void setData(String text, List<String> cg);
 	
-	void setCG(List<String> cg);
-
 	/**
 	 * Try to match the <code>i</code>-th key (and a few following it) over the
 	 * text possibly starting at <code>k</code>.

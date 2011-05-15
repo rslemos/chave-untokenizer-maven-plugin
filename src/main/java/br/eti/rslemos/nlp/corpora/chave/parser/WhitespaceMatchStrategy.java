@@ -28,11 +28,7 @@ public class WhitespaceMatchStrategy implements MatchStrategy {
 		return result;
 	}
 
-	public void setText(String text) {
+	public void setData(String text, List<String> cg) {
 		this.text = text.toCharArray();
 	}
-
-	public void setCG(List<String> cg) {
-	}
-
 }
