@@ -7,12 +7,12 @@ import static org.junit.Assert.assertThat;
 import org.junit.Test;
 
 public class AdaptativeDamerauLevenshteinDistanceUnitTest {
-	//@Test
+	@Test
 	public void testKittenSitting() {
 		test0("kitten", "sitting", 6, 6, 5, 4, 3, 3, 2, 3);
 	}
 
-	//@Test
+	@Test
 	public void testSaturdaySunday() {
 		test0("saturday", "sunday", 8, 7, 6, 6, 5, 4, 3);
 	}

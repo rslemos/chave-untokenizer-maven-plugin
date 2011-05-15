@@ -33,7 +33,7 @@ public class Untokenizer {
 
 		MatchStrategy[] strategies = {
 				new NewLineMatchStrategy(),
-				new DamerauLevenshteinMatchStrategy(1),
+				//new DamerauLevenshteinMatchStrategy(1),
 			};
 
 		List<CGEntry> cg1 = Collections.unmodifiableList(cg);
