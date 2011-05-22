@@ -81,6 +81,10 @@ public class AdaptativeDamerauLevenshteinDistance {
 	public int getDistance() {
 		return d2[key.length];
 	}
+
+	public int getMinimalDistance() {
+		return min(d2);
+	}
 	
 //	public int[] showPaths() {
 //
