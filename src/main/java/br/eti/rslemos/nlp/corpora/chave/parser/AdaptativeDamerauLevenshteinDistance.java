@@ -3,10 +3,11 @@ package br.eti.rslemos.nlp.corpora.chave.parser;
 import java.util.LinkedList;
 
 public class AdaptativeDamerauLevenshteinDistance {
-	private static final int INSERTION = 0x1;
-	private static final int DELETION = 0x2;
-	private static final int SUBSTITUTION = 0x4;
-	private static final int TRANSPOSITION = 0x8;
+	private static final int MATCH = 0x1;
+	private static final int INSERTION = 0x2;
+	private static final int DELETION = 0x4;
+	private static final int SUBSTITUTION = 0x8;
+	private static final int TRANSPOSITION = 0x10;
 	
 	private final char[] key;
 	
@@ -48,14 +49,15 @@ public class AdaptativeDamerauLevenshteinDistance {
 		op[0] = DELETION;
 		
 		for(int i=1; i<=key.length; i++) {
-			int ifnone = (key[i-1] == c2 ? d1[i-1] : Integer.MAX_VALUE);
+			int ifmatch = (key[i-1] == c2 ? d1[i-1] : Integer.MAX_VALUE);
 			int ifinsert = d2[i-1] + 1;
 			int ifdelete = d1[i] + 1;
 			int ifsubst = d1[i-1] + 1;
 			int iftransp = i > 1 && j > 1 && key[i-1] == c1 && key[i-2] == c2 ? d0[i-2] + 1 : Integer.MAX_VALUE;
 
-			d2[i] = min(ifnone, ifinsert, ifdelete, ifsubst, iftransp);
+			d2[i] = min(ifmatch, ifinsert, ifdelete, ifsubst, iftransp);
 			
+			if (d2[i] == ifmatch) op[i] |= MATCH;
 			if (d2[i] == ifinsert) op[i] |= INSERTION;
 			if (d2[i] == ifdelete) op[i] |= DELETION;
 			if (d2[i] == ifsubst) op[i] |= SUBSTITUTION;
