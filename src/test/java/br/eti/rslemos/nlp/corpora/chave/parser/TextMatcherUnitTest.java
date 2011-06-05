@@ -49,7 +49,7 @@ public class TextMatcherUnitTest {
 	//tem que resolver a questão do mapeamento junto com Damerau-Levenshtein distance
 	//verificar as idéias contidas em http://en.wikipedia.org/wiki/Smith-Waterman_algorithm,
 	//especialmente a reconstrução do alinhamento a partir da matriz; verificar se é possível fazer adaptativo
-	//@Test
+	@Test
 	public void testMappingWithTransposition() throws Exception {
 		matcher.setText("012 \t56879   3\t\t6789");
 		int[] results = matcher.match(
@@ -61,7 +61,7 @@ public class TextMatcherUnitTest {
 		assertThat(results, is(equalTo(new int[] {0, 1, 2, 3, 5, 6, 8, 7, 9, 10, 13, 14, 16, 17, 18, 19, 20})));
 	}
 
-	//@Test
+	@Test
 	public void testDamerauLevenshteinDistance1() throws Exception {
 		matcher.setText("3.º");
 		Set<Match> matches = matcher.matchKey("3º.",
