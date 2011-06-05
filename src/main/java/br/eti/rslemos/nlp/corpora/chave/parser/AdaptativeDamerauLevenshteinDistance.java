@@ -1,17 +1,24 @@
 package br.eti.rslemos.nlp.corpora.chave.parser;
 
+import java.util.ArrayList;
 import java.util.LinkedList;
 
+import static br.eti.rslemos.nlp.corpora.chave.parser.AdaptativeDamerauLevenshteinDistance.AlignOp.*;
+
 public class AdaptativeDamerauLevenshteinDistance {
-	private static final int MATCH = 0x1;
-	private static final int INSERTION = 0x2;
-	private static final int DELETION = 0x4;
-	private static final int SUBSTITUTION = 0x8;
-	private static final int TRANSPOSITION = 0x10;
+	public static enum AlignOp {
+		MATCH(0x1), INSERTION(0x2), DELETION(0x4), SUBSTITUTION(0x8), TRANSPOSITION(0x10);
+		
+		private final int mask;
+
+		private AlignOp(int mask) {
+			this.mask = mask;
+		}
+	}
 	
 	private final char[] key;
 	
-	private final LinkedList<int[]> history = new LinkedList<int[]>();
+	private final ArrayList<int[]> history = new ArrayList<int[]>();
 	
 	private int d0[] = null;
 	private int d1[] = null;
@@ -26,11 +33,11 @@ public class AdaptativeDamerauLevenshteinDistance {
 		d2 = new int[key.length + 1];
 		int[] op;
 		
-		history.addFirst(op = new int[key.length + 1]);
+		history.add(op = new int[key.length + 1]);
 		
 		for(int i=0; i<=key.length; i++) {
 			d2[i] = i;
-			op[i] = INSERTION;
+			op[i] = INSERTION.mask;
 		}
 
 		j = 1;
@@ -43,10 +50,10 @@ public class AdaptativeDamerauLevenshteinDistance {
 		d2 = new int[key.length + 1];
 		int[] op;
 		
-		history.addFirst(op = new int[key.length + 1]);
+		history.add(op = new int[key.length + 1]);
 		
 		d2[0] = j;
-		op[0] = DELETION;
+		op[0] = DELETION.mask;
 		
 		for(int i=1; i<=key.length; i++) {
 			int ifmatch = (key[i-1] == c2 ? d1[i-1] : Integer.MAX_VALUE);
@@ -57,11 +64,11 @@ public class AdaptativeDamerauLevenshteinDistance {
 
 			d2[i] = min(ifmatch, ifinsert, ifdelete, ifsubst, iftransp);
 			
-			if (d2[i] == ifmatch) op[i] |= MATCH;
-			if (d2[i] == ifinsert) op[i] |= INSERTION;
-			if (d2[i] == ifdelete) op[i] |= DELETION;
-			if (d2[i] == ifsubst) op[i] |= SUBSTITUTION;
-			if (d2[i] == iftransp) op[i] |= TRANSPOSITION;
+			if (d2[i] == ifmatch) op[i] |= MATCH.mask;
+			if (d2[i] == ifinsert) op[i] |= INSERTION.mask;
+			if (d2[i] == ifdelete) op[i] |= DELETION.mask;
+			if (d2[i] == ifsubst) op[i] |= SUBSTITUTION.mask;
+			if (d2[i] == iftransp) op[i] |= TRANSPOSITION.mask;
 		}
 		
 		c1 = c2;
@@ -87,36 +94,39 @@ public class AdaptativeDamerauLevenshteinDistance {
 	public int getMinimalDistance() {
 		return min(d2);
 	}
-	
-//	public int[] showPaths() {
-//
-//		LinkedList<Integer> result = new LinkedList<Integer>();
-//		
-//		int i = key.length;
-//		int j = 0;
-//		while (i > 0 && j < history.size()) {
-//			int[] op = history.get(j); 
-//			if ((op[i] & TRANSPOSITION) > 0) {
-//				result.addFirst(TRANSPOSITION);
-//				i -= 2;
-//				j += 2;
-//			} else if ((op[i] & INSERTION) > 0) {
-//				result.addFirst(INSERTION);
-//				i -= 1;
-//			} else if ((op[i] & DELETION) > 0) {
-//				result.addFirst(DELETION);
-//				j += 1;
-//			} else if ((op[i] & SUBSTITUTION) > 0) {
-//				result.addFirst(SUBSTITUTION);
-//				i -= 1;
-//				j += 1;
-//			} else {
-//				result.addFirst(0);
-//				i -= 1;
-//				j += 1;
-//			}
-//		}
-//
-//		return result.toArray(new int[result.size()]);
-//	}
+
+	public AlignOp[] getAlignment() {
+		LinkedList<AlignOp> alignment = new LinkedList<AlignOp>();
+		
+		int j = history.size()-1;
+		int i = key.length;
+		
+		while (j > 0 && i > 0) {
+			int[] op = history.get(j);
+			
+			if ((op[i] & MATCH.mask) > 0) {
+				alignment.addFirst(MATCH);
+				i--;
+				j--;
+			} else if ((op[i] & SUBSTITUTION.mask) > 0) {
+				alignment.addFirst(SUBSTITUTION);
+				i--;
+				j--;
+			} else if ((op[i] & DELETION.mask) > 0) {
+				alignment.addFirst(DELETION);
+				j--;
+			} else if ((op[i] & INSERTION.mask) > 0) {
+				alignment.addFirst(INSERTION);
+				i--;
+			} else if ((op[i] & TRANSPOSITION.mask) > 0) {
+				alignment.addFirst(TRANSPOSITION);
+				i-=2;
+				j-=2;
+			} else {
+				throw new IllegalStateException(op[i] + ": " + alignment.toString());
+			}
+		}
+		
+		return alignment.toArray(new AlignOp[alignment.size()]);
+	}
 }
