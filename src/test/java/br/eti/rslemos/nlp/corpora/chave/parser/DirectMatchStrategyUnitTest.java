@@ -87,9 +87,9 @@ public class DirectMatchStrategyUnitTest extends AbstractMatchStrategyUnitTest {
 	@Test
 	public void testManyMatchesOfTwoWords() throws Exception {
 		cg.add("feita");
-		cg.add("feito");
+		cg.add("velho");
 
-		runOver("feito feita feito feita");
+		runOver("velho feita velho feita");
 		
 		verifyMatches(
 				match("feit_ ".length()*0, "feit_ ".length()*1 - 1, span("feit_ ".length()*0, "feit_ ".length()*1 - 1, 1)),
