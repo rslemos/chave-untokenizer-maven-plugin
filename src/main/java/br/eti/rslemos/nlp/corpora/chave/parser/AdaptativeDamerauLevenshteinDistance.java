@@ -1,9 +1,13 @@
 package br.eti.rslemos.nlp.corpora.chave.parser;
 
-import java.util.ArrayList;
-import java.util.LinkedList;
+import static br.eti.rslemos.nlp.corpora.chave.parser.AdaptativeDamerauLevenshteinDistance.AlignOp.DELETION;
+import static br.eti.rslemos.nlp.corpora.chave.parser.AdaptativeDamerauLevenshteinDistance.AlignOp.INSERTION;
+import static br.eti.rslemos.nlp.corpora.chave.parser.AdaptativeDamerauLevenshteinDistance.AlignOp.MATCH;
+import static br.eti.rslemos.nlp.corpora.chave.parser.AdaptativeDamerauLevenshteinDistance.AlignOp.SUBSTITUTION;
+import static br.eti.rslemos.nlp.corpora.chave.parser.AdaptativeDamerauLevenshteinDistance.AlignOp.TRANSPOSITION;
 
-import static br.eti.rslemos.nlp.corpora.chave.parser.AdaptativeDamerauLevenshteinDistance.AlignOp.*;
+import java.util.ArrayList;
+import java.util.List;
 
 public class AdaptativeDamerauLevenshteinDistance {
 	public static enum AlignOp {
@@ -96,37 +100,50 @@ public class AdaptativeDamerauLevenshteinDistance {
 	}
 
 	public AlignOp[] getAlignment() {
-		LinkedList<AlignOp> alignment = new LinkedList<AlignOp>();
-		
-		int j = history.size()-1;
-		int i = key.length;
-		
-		while (j > 0 && i > 0) {
-			int[] op = history.get(j);
-			
-			if ((op[i] & MATCH.mask) > 0) {
-				alignment.addFirst(MATCH);
-				i--;
-				j--;
-			} else if ((op[i] & SUBSTITUTION.mask) > 0) {
-				alignment.addFirst(SUBSTITUTION);
-				i--;
-				j--;
-			} else if ((op[i] & DELETION.mask) > 0) {
-				alignment.addFirst(DELETION);
-				j--;
-			} else if ((op[i] & INSERTION.mask) > 0) {
-				alignment.addFirst(INSERTION);
-				i--;
-			} else if ((op[i] & TRANSPOSITION.mask) > 0) {
-				alignment.addFirst(TRANSPOSITION);
-				i-=2;
-				j-=2;
-			} else {
-				throw new IllegalStateException(op[i] + ": " + alignment.toString());
-			}
-		}
+		List<AlignOp> alignment = getAlignment(history.size()-1, key.length);
 		
 		return alignment.toArray(new AlignOp[alignment.size()]);
+	}
+
+	private List<AlignOp> getAlignment(int j, int i) {
+		if (j < 0 || i < 0)
+			throw new IllegalStateException();
+		
+		if (j == 0 && i == 0)
+			return new ArrayList<AlignOp>();
+		
+		int[] op = history.get(j);
+		
+		if ((op[i] & MATCH.mask) > 0) {
+			List<AlignOp> alignment = getAlignment(j-1, i-1);
+			alignment.add(MATCH);
+			return alignment;
+		}
+		
+		if ((op[i] & SUBSTITUTION.mask) > 0) {
+			List<AlignOp> alignment = getAlignment(j-1, i-1);
+			alignment.add(SUBSTITUTION);
+			return alignment;
+		}
+		
+		if ((op[i] & DELETION.mask) > 0) {
+			List<AlignOp> alignment = getAlignment(j-1, i);
+			alignment.add(DELETION);
+			return alignment;
+		} 
+
+		if ((op[i] & INSERTION.mask) > 0) {
+			List<AlignOp> alignment = getAlignment(j, i-1);
+			alignment.add(INSERTION);
+			return alignment;
+		}
+		
+		if ((op[i] & TRANSPOSITION.mask) > 0) {
+			List<AlignOp> alignment = getAlignment(j-2, i-2);
+			alignment.add(TRANSPOSITION);
+			return alignment;
+		} 
+		
+		throw new IllegalStateException(String.valueOf(op[i]));
 	}
 }
