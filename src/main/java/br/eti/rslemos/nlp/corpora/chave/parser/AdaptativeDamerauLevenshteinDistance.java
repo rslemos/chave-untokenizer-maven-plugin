@@ -34,24 +34,44 @@ public class AdaptativeDamerauLevenshteinDistance {
 	private char c1;
 
 	private int j;
+
+	private final int matchcost;
+	private final int substcost;
+	private final int insertcost;
+	private final int delcost;
+	private final int transpcost;
 	
 	public AdaptativeDamerauLevenshteinDistance(char[] key) {
+		this(key, 0, 1, 1, 1, 1);
+	}
+	
+	public AdaptativeDamerauLevenshteinDistance(char[] key, int matchcost, int substcost, int insertcost, int delcost, int transpcost) {
 		this.key = key;
+		this.matchcost = matchcost;
+		this.substcost = substcost;
+		this.insertcost = insertcost;
+		this.delcost = delcost;
+		this.transpcost = transpcost;
+		
 		d2 = new int[key.length + 1];
 		int[] op;
 		
 		history.add(op = new int[key.length + 1]);
 		
 		for(int i=0; i<=key.length; i++) {
-			d2[i] = i;
+			d2[i] = i * insertcost;
 			op[i] = INSERTION.mask;
 		}
 
 		j = 1;
 		op[0] = 0;
 	}
-	
+
 	public int append(char c2) {
+		return append(matchcost, substcost, insertcost, delcost, transpcost, c2);
+	}
+	
+	public int append(int matchcost, int substcost, int insertcost, int delcost, int transpcost, char c2) {
 		d0 = d1;
 		d1 = d2;
 		d2 = new int[key.length + 1];
@@ -59,15 +79,15 @@ public class AdaptativeDamerauLevenshteinDistance {
 		
 		history.add(op = new int[key.length + 1]);
 		
-		d2[0] = j;
+		d2[0] = j * delcost;
 		op[0] = DELETION.mask;
 		
 		for(int i=1; i<=key.length; i++) {
-			int ifmatch = (key[i-1] == c2 ? d1[i-1] : Integer.MAX_VALUE);
-			int ifinsert = d2[i-1] + 1;
-			int ifdelete = d1[i] + 1;
-			int ifsubst = d1[i-1] + 1;
-			int iftransp = i > 1 && j > 1 && key[i-1] == c1 && key[i-2] == c2 ? d0[i-2] + 1 : Integer.MAX_VALUE;
+			int ifmatch = (key[i-1] == c2 ? d1[i-1] + matchcost : Integer.MAX_VALUE);
+			int ifinsert = d2[i-1] + insertcost;
+			int ifdelete = d1[i] + delcost;
+			int ifsubst = d1[i-1] + substcost;
+			int iftransp = i > 1 && j > 1 && key[i-1] == c1 && key[i-2] == c2 ? d0[i-2] + transpcost : Integer.MAX_VALUE;
 
 			d2[i] = min(ifmatch, ifinsert, ifdelete, ifsubst, iftransp);
 			

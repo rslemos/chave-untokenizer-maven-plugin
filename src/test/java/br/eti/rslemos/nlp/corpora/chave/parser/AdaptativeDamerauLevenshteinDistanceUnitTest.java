@@ -28,6 +28,31 @@ public class AdaptativeDamerauLevenshteinDistanceUnitTest {
 	}
 
 	@Test
+	public void testDistanceCustomCosts() {
+		testDistanceCustomCosts(0, 2, 2, 2, 2, "kitten", "sitting", 12, 12, 10, 8, 6, 6, 4, 6);
+		testDistanceCustomCosts(0, 2, 2, 2, 2, "saturday", "sunday", 16, 14, 12, 12, 10, 8, 6);
+		
+		testDistanceCustomCosts(1, 2, 3, 4, 5, "kitten", "sitting", 18, 17, 15, 13, 11, 10, 8, 12);
+		testDistanceCustomCosts(5, 4, 3, 2, 1, "saturday", "sunday", 24, 25, 26, 27, 28, 29, 30);
+	}
+	
+	@Test
+	public void testDistanceCustomLocalCost() {
+		AdaptativeDamerauLevenshteinDistance c = new AdaptativeDamerauLevenshteinDistance("kitten".toCharArray());
+
+		assertThat(c.getDistance(), is(equalTo(6)));
+		c.append(0, 0, 1, 1, 1, 's');
+		assertThat(c.getDistance(), is(equalTo(5)));
+		c.append('i');
+		assertThat(c.getDistance(), is(equalTo(4)));
+		c.append('t');
+		assertThat(c.getDistance(), is(equalTo(3)));
+		c.append('t');
+		assertThat(c.getDistance(), is(equalTo(2)));
+		
+	}
+	
+	@Test
 	public void testMinimalDistance() {
 		testMinimalDistance("kitten", "sitting", 0, 1, 1, 1, 1, 2, 2, 3);
 		testMinimalDistance("saturday", "sunday", 0, 0, 1, 2, 3, 3, 3);
@@ -46,6 +71,17 @@ public class AdaptativeDamerauLevenshteinDistanceUnitTest {
 	
 	private void testDistance(String key, String text, int start, int... distance) {
 		AdaptativeDamerauLevenshteinDistance c = new AdaptativeDamerauLevenshteinDistance(key.toCharArray());
+		
+		assertThat(c.getDistance(), is(equalTo(start)));
+		
+		for (int i = 0; i < distance.length; i++) {
+			c.append(text.charAt(i));
+			assertThat(c.getDistance(), is(equalTo(distance[i])));
+		}
+	}
+
+	private void testDistanceCustomCosts(int matchcost, int substcost, int insertcost, int delcost, int transpcost, String key, String text, int start, int... distance) {
+		AdaptativeDamerauLevenshteinDistance c = new AdaptativeDamerauLevenshteinDistance(key.toCharArray(), matchcost, substcost, insertcost, delcost, transpcost);
 		
 		assertThat(c.getDistance(), is(equalTo(start)));
 		
