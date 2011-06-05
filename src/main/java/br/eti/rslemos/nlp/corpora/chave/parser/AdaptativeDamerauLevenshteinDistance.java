@@ -7,7 +7,10 @@ import static br.eti.rslemos.nlp.corpora.chave.parser.AdaptativeDamerauLevenshte
 import static br.eti.rslemos.nlp.corpora.chave.parser.AdaptativeDamerauLevenshteinDistance.AlignOp.TRANSPOSITION;
 
 import java.util.ArrayList;
+import java.util.Collections;
+import java.util.HashSet;
 import java.util.List;
+import java.util.Set;
 
 public class AdaptativeDamerauLevenshteinDistance {
 	public static enum AlignOp {
@@ -99,51 +102,55 @@ public class AdaptativeDamerauLevenshteinDistance {
 		return min(d2);
 	}
 
-	public AlignOp[] getAlignment() {
-		List<AlignOp> alignment = getAlignment(history.size()-1, key.length);
+	public Set<AlignOp[]> getAlignments() {
+		Set<List<AlignOp>> alignments = getAlignments(history.size()-1, key.length);
 		
-		return alignment.toArray(new AlignOp[alignment.size()]);
+		Set<AlignOp[]> result = new HashSet<AlignOp[]>(alignments.size());
+		for (List<AlignOp> alignment : alignments) {
+			result.add(alignment.toArray(new AlignOp[alignment.size()]));
+		}
+		
+		return result;
 	}
 
-	private List<AlignOp> getAlignment(int j, int i) {
-		if (j < 0 || i < 0)
-			throw new IllegalStateException();
+	private Set<List<AlignOp>> getAlignments(int j, int i) {
 		
 		if (j == 0 && i == 0)
-			return new ArrayList<AlignOp>();
+			return Collections.singleton((List<AlignOp>)new ArrayList<AlignOp>());
 		
+		Set<List<AlignOp>> result = new HashSet<List<AlignOp>>();
 		int[] op = history.get(j);
 		
 		if ((op[i] & MATCH.mask) > 0) {
-			List<AlignOp> alignment = getAlignment(j-1, i-1);
-			alignment.add(MATCH);
-			return alignment;
+			result.addAll(getAlignmentsAndAppend(j-1, i-1, MATCH));
 		}
 		
 		if ((op[i] & SUBSTITUTION.mask) > 0) {
-			List<AlignOp> alignment = getAlignment(j-1, i-1);
-			alignment.add(SUBSTITUTION);
-			return alignment;
+			result.addAll(getAlignmentsAndAppend(j-1, i-1, SUBSTITUTION));
 		}
 		
 		if ((op[i] & DELETION.mask) > 0) {
-			List<AlignOp> alignment = getAlignment(j-1, i);
-			alignment.add(DELETION);
-			return alignment;
+			result.addAll(getAlignmentsAndAppend(j-1, i, DELETION));
 		} 
 
 		if ((op[i] & INSERTION.mask) > 0) {
-			List<AlignOp> alignment = getAlignment(j, i-1);
-			alignment.add(INSERTION);
-			return alignment;
+			result.addAll(getAlignmentsAndAppend(j, i-1, INSERTION));
 		}
 		
 		if ((op[i] & TRANSPOSITION.mask) > 0) {
-			List<AlignOp> alignment = getAlignment(j-2, i-2);
-			alignment.add(TRANSPOSITION);
-			return alignment;
+			result.addAll(getAlignmentsAndAppend(j-2, i-2, TRANSPOSITION));
 		} 
 		
-		throw new IllegalStateException(String.valueOf(op[i]));
+		return result;
+	}
+
+	private Set<List<AlignOp>> getAlignmentsAndAppend(int j, int i, AlignOp alignop) {
+		Set<List<AlignOp>> alignments = getAlignments(j, i);
+		
+		for (List<AlignOp> alignment : alignments) {
+			alignment.add(alignop);
+		}
+		
+		return alignments;
 	}
 }
