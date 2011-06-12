@@ -68,7 +68,57 @@ public class AdaptativeDamerauLevenshteinDistanceUnitTest {
 				makeAlignment(MATCH, MATCH, MATCH, MATCH, DELETION, MATCH, SUBSTITUTION)
 			);
 	}
-	
+
+	@Test
+	public void testUndo() {
+		testUndo("kitten", "sitting", 6, 6, 5, 4, 3, 3, 2, 3);
+		testUndo("saturday", "sunday", 8, 7, 6, 6, 5, 4, 3);
+	}
+
+	@Test
+	public void testUndoOverAlignments() {
+		testUndoOverAlignments("kitten", "sitting", makeAlignment(SUBSTITUTION, MATCH, MATCH, MATCH, SUBSTITUTION, MATCH, DELETION));
+		testUndoOverAlignments("saturday", "sunday", makeAlignment(MATCH, INSERTION, INSERTION, MATCH, SUBSTITUTION, MATCH, MATCH, MATCH));
+		testUndoOverAlignments("euer", "eure", makeAlignment(MATCH, MATCH, TRANSPOSITION));
+		testUndoOverAlignments("dunkel", "dunkler", 
+				makeAlignment(MATCH, MATCH, MATCH, MATCH, TRANSPOSITION, DELETION),
+				makeAlignment(MATCH, MATCH, MATCH, MATCH, DELETION, MATCH, SUBSTITUTION)
+			);
+	}
+
+	@Test
+	public void testForbid2UndosInARow() {
+		AdaptativeDamerauLevenshteinDistance c = new AdaptativeDamerauLevenshteinDistance("kitten".toCharArray());
+		
+		c.append('s');
+		c.append('i');
+		c.append('t');
+
+		c.undo();
+		try {
+			c.undo();
+			fail("Should have thrown " + IllegalStateException.class);
+		} catch (IllegalStateException e) {}
+	}
+
+	@Test
+	public void testAllowUndoAfterFirstChar() {
+		AdaptativeDamerauLevenshteinDistance c = new AdaptativeDamerauLevenshteinDistance("kitten".toCharArray());
+		
+		c.append('s');
+		c.undo();
+	}
+
+	@Test
+	public void testForbidUndoBeforeFirstChar() {
+		AdaptativeDamerauLevenshteinDistance c = new AdaptativeDamerauLevenshteinDistance("kitten".toCharArray());
+		
+		try {
+			c.undo();
+			fail("Should have thrown " + IllegalStateException.class);
+		} catch (IllegalStateException e) {}
+	}
+
 	private void testDistance(String key, String text, int start, int... distance) {
 		AdaptativeDamerauLevenshteinDistance c = new AdaptativeDamerauLevenshteinDistance(key.toCharArray());
 		
@@ -102,6 +152,24 @@ public class AdaptativeDamerauLevenshteinDistanceUnitTest {
 		}
 	}
 	
+	private void testUndo(String key, String text, int start, int... distance) {
+		AdaptativeDamerauLevenshteinDistance c = new AdaptativeDamerauLevenshteinDistance(key.toCharArray());
+		
+		assertThat(c.getDistance(), is(equalTo(start)));
+		
+		c.append(text.charAt(0));
+		assertThat(c.getDistance(), is(equalTo(distance[0])));
+
+		for (int i = 1; i < distance.length; i++) {
+			c.append(text.charAt(i));
+			assertThat(c.getDistance(), is(equalTo(distance[i])));
+			c.undo();
+			assertThat(c.getDistance(), is(equalTo(distance[i-1])));
+			c.append(text.charAt(i));
+			assertThat(c.getDistance(), is(equalTo(distance[i])));
+		}
+	}
+
 	private void testAlignments(String key, String text, AlignOp[]... alignments) {
 		AdaptativeDamerauLevenshteinDistance c = new AdaptativeDamerauLevenshteinDistance(key.toCharArray());
 		
@@ -133,6 +201,41 @@ public class AdaptativeDamerauLevenshteinDistanceUnitTest {
 		}
 	}
 
+	private void testUndoOverAlignments(String key, String text, AlignOp[]... alignments) {
+		AdaptativeDamerauLevenshteinDistance c = new AdaptativeDamerauLevenshteinDistance(key.toCharArray());
+		
+		c.append(text.charAt(0));
+
+		for (int i = 1; i < text.length(); i++) {
+			c.append(text.charAt(i));
+			c.undo();
+			c.append(text.charAt(i));
+		}
+		
+		Set<AlignOp[]> actualAlignments = c.getAlignments();
+		
+		for (AlignOp[] alignment : alignments) {
+			assertThat(actualAlignments, hasItem(alignment));
+			
+			for (Iterator<AlignOp[]> iterator = actualAlignments.iterator(); iterator.hasNext();) {
+				AlignOp[] actualAlignment = iterator.next();
+				if (Arrays.equals(alignment, actualAlignment))
+					iterator.remove();
+			}
+		}
+		
+		if (actualAlignments.size() > 0) {
+			StringBuilder message = new StringBuilder();
+			message.append("More alignments found:\n");
+			
+			for (AlignOp[] alignment : actualAlignments) {
+				message.append(Arrays.toString(alignment)).append("\n");
+			}
+			
+			fail(message.toString());
+		}
+	}
+	
 	private static AlignOp[] makeAlignment(AlignOp... op) {
 		return op;
 	}

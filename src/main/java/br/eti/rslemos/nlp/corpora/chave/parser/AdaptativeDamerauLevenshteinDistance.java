@@ -31,6 +31,7 @@ public class AdaptativeDamerauLevenshteinDistance {
 	private int d1[] = null;
 	private int d2[] = null;
 	
+	private char c0;
 	private char c1;
 
 	private int j;
@@ -98,10 +99,27 @@ public class AdaptativeDamerauLevenshteinDistance {
 			if (d2[i] == iftransp) op[i] |= TRANSPOSITION.mask;
 		}
 		
+		c0 = c1;
 		c1 = c2;
 		j++;
 		
 		return getDistance();
+	}
+	
+	public void undo() {
+		if (j < 2 || d0 == null && j > 2)
+			throw new IllegalStateException("Can't undo");
+		
+		d2 = d1;
+		d1 = d0;
+		d0 = null;
+
+		history.remove(history.size() - 1);
+		
+		j--;
+		
+		c1 = c0;
+		c0 = 0;
 	}
 
 	private static int min(int... values) {
