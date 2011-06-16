@@ -272,7 +272,7 @@ public class UntokenizerFunctionalTest {
 			MatchStrategy strategy = STRATEGIES[i];
 			
 			long t0 = System.nanoTime();
-			strategy.setData(text, cg);
+			strategy.setData(new DamerauLevenshteinTextMatcher(text), cg);
 			Set<Match> match = strategy.matchAll();
 
 			long t1 = System.nanoTime();

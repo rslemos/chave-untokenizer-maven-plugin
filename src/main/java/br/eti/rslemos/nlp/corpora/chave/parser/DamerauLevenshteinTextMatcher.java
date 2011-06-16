@@ -171,4 +171,9 @@ public class DamerauLevenshteinTextMatcher implements TextMatcher {
 		}
 		System.arraycopy(text, 0, cs, 0, length);
 	}
+
+	@Deprecated
+	char[] getChars() {
+		return text.clone();
+	}
 }

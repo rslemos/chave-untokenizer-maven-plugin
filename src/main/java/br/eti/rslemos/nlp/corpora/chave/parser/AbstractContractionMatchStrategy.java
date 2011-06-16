@@ -45,8 +45,8 @@ public abstract class AbstractContractionMatchStrategy extends AbstractMatchStra
 	}
 
 	@Override
-	public void setData(String text, List<String> cg) {
-		super.setData(text, cg);
+	public void setData(TextMatcher matcher, List<String> cg) {
+		super.setData(matcher, cg);
 		cache = new HashMap<String, Set<Match>>();
 	}
 

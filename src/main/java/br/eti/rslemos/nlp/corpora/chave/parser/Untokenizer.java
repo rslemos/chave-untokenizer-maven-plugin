@@ -44,7 +44,7 @@ public class Untokenizer {
 
 		Set<Match> mementos2 = new LinkedHashSet<Match>();
 		for (MatchStrategy strategy : strategies2) {
-			strategy.setData(buffer, onlyKeys(cg1));
+			strategy.setData(new DamerauLevenshteinTextMatcher(buffer), onlyKeys(cg1));
 			mementos2.addAll(strategy.matchAll());
 		}
 
@@ -57,7 +57,7 @@ outer:
 				List<String> onlyKeys = onlyKeys(cg1.subList(i, cg1.size()));
 				
 				for (MatchStrategy strategy : strategies) {
-					strategy.setData(substring, onlyKeys);
+					strategy.setData(new DamerauLevenshteinTextMatcher(substring), onlyKeys);
 					mementos.addAll(adjust(keepFor(strategy.matchAll(), k, 0), k, i));
 				}
 

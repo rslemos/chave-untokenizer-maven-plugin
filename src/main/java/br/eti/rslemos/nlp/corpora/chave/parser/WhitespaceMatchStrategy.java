@@ -31,4 +31,8 @@ public class WhitespaceMatchStrategy implements MatchStrategy {
 	public void setData(String text, List<String> cg) {
 		this.text = text.toCharArray();
 	}
+
+	public void setData(TextMatcher matcher, List<String> cg) {
+		this.text = ((DamerauLevenshteinTextMatcher)matcher).getChars();
+	}
 }

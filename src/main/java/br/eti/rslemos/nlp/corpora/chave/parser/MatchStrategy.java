@@ -4,7 +4,7 @@ import java.util.List;
 import java.util.Set;
 
 public interface MatchStrategy {
-	void setData(String text, List<String> cg);
+	void setData(TextMatcher matcher, List<String> cg);
 	
 	/**
 	 * Try to match the <code>i</code>-th key (and a few following it) over the

@@ -14,8 +14,8 @@ public class EncliticMatchStrategy extends AbstractMatchStrategy {
 	private Map<String, Set<Match>> cache;
 
 	@Override
-	public void setData(String text, List<String> cg) {
-		super.setData(text, cg);
+	public void setData(TextMatcher matcher, List<String> cg) {
+		super.setData(matcher, cg);
 		cache = new LinkedHashMap<String, Set<Match>>();
 	}
 

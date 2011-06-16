@@ -21,7 +21,7 @@ public abstract class AbstractMatchStrategyUnitTest {
 	}
 
 	protected void runOver(String sgml) {
-		strategy.setData(sgml, cg);
+		strategy.setData(new DamerauLevenshteinTextMatcher(sgml), cg);
 		matches = strategy.matchAll();
 	}
 
