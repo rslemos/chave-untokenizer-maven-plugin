@@ -14,11 +14,13 @@ import java.net.URL;
 import java.nio.charset.Charset;
 import java.util.Arrays;
 import java.util.Comparator;
+import java.util.Formatter;
 import java.util.List;
 import java.util.Set;
 import java.util.TreeSet;
 
 import org.junit.Before;
+import org.junit.Test;
 import org.junit.experimental.theories.DataPoint;
 import org.junit.experimental.theories.Theories;
 import org.junit.experimental.theories.Theory;
@@ -44,6 +46,22 @@ public class UntokenizerFunctionalTest {
 //	@DataPoint public static String FSP_19940430_024 = "/pt_BR/CHAVEFolha/1994/04/30/024"; // 112777188
 //	@DataPoint public static String FSP_19940701_052 = "/pt_BR/CHAVEFolha/1994/07/01/052"; // 104747148
 //	@DataPoint public static String FSP_19941007_091 = "/pt_BR/CHAVEFolha/1994/10/07/091"; // 102355344
+
+	// casos que funcionam se a distância Damerau-Levenshtein for religada
+//	@DataPoint public static String FSP_19940101_002 = "/pt_BR/CHAVEFolha/1994/01/01/002";
+//	@DataPoint public static String FSP_19940101_027 = "/pt_BR/CHAVEFolha/1994/01/01/027";
+//	@DataPoint public static String FSP_19940101_032 = "/pt_BR/CHAVEFolha/1994/01/01/032";
+//	@DataPoint public static String FSP_19940101_043 = "/pt_BR/CHAVEFolha/1994/01/01/043";
+//	@DataPoint public static String FSP_19940101_050 = "/pt_BR/CHAVEFolha/1994/01/01/050";
+//	@DataPoint public static String FSP_19940101_065 = "/pt_BR/CHAVEFolha/1994/01/01/065";
+//	@DataPoint public static String FSP_19940101_077 = "/pt_BR/CHAVEFolha/1994/01/01/077";
+//	@DataPoint public static String FSP_19940101_080 = "/pt_BR/CHAVEFolha/1994/01/01/080";
+//	@DataPoint public static String FSP_19940101_105 = "/pt_BR/CHAVEFolha/1994/01/01/105";
+//	@DataPoint public static String FSP_19940101_107 = "/pt_BR/CHAVEFolha/1994/01/01/107";
+//	@DataPoint public static String FSP_19940101_109 = "/pt_BR/CHAVEFolha/1994/01/01/109";
+//	@DataPoint public static String FSP_19940101_117 = "/pt_BR/CHAVEFolha/1994/01/01/117";
+//	@DataPoint public static String FSP_19940101_129 = "/pt_BR/CHAVEFolha/1994/01/01/129";
+//	@DataPoint public static String FSP_19940101_131 = "/pt_BR/CHAVEFolha/1994/01/01/131";
 
 	@DataPoint public static String FSP_19940101_001 = "/pt_BR/CHAVEFolha/1994/01/01/001";
 	@DataPoint public static String FSP_19940101_003 = "/pt_BR/CHAVEFolha/1994/01/01/003";
@@ -145,21 +163,6 @@ public class UntokenizerFunctionalTest {
 	@DataPoint public static String FSP_19940101_128 = "/pt_BR/CHAVEFolha/1994/01/01/128";
 	@DataPoint public static String FSP_19940101_132 = "/pt_BR/CHAVEFolha/1994/01/01/132";
 
-	// casos que funcionam se a distância Damerau-Levenshtein for religada
-//	@DataPoint public static String FSP_19940101_002 = "/pt_BR/CHAVEFolha/1994/01/01/002";
-//	@DataPoint public static String FSP_19940101_027 = "/pt_BR/CHAVEFolha/1994/01/01/027";
-//	@DataPoint public static String FSP_19940101_032 = "/pt_BR/CHAVEFolha/1994/01/01/032";
-//	@DataPoint public static String FSP_19940101_043 = "/pt_BR/CHAVEFolha/1994/01/01/043";
-//	@DataPoint public static String FSP_19940101_050 = "/pt_BR/CHAVEFolha/1994/01/01/050";
-//	@DataPoint public static String FSP_19940101_065 = "/pt_BR/CHAVEFolha/1994/01/01/065";
-//	@DataPoint public static String FSP_19940101_077 = "/pt_BR/CHAVEFolha/1994/01/01/077";
-//	@DataPoint public static String FSP_19940101_080 = "/pt_BR/CHAVEFolha/1994/01/01/080";
-//	@DataPoint public static String FSP_19940101_105 = "/pt_BR/CHAVEFolha/1994/01/01/105";
-//	@DataPoint public static String FSP_19940101_107 = "/pt_BR/CHAVEFolha/1994/01/01/107";
-//	@DataPoint public static String FSP_19940101_109 = "/pt_BR/CHAVEFolha/1994/01/01/109";
-//	@DataPoint public static String FSP_19940101_117 = "/pt_BR/CHAVEFolha/1994/01/01/117";
-//	@DataPoint public static String FSP_19940101_129 = "/pt_BR/CHAVEFolha/1994/01/01/129";
-//	@DataPoint public static String FSP_19940101_131 = "/pt_BR/CHAVEFolha/1994/01/01/131";
 
 	// casos que nunca funcionaram
 //	@DataPoint public static String FSP_19940101_012 = "/pt_BR/CHAVEFolha/1994/01/01/012"; // 338-th entry: Africa=do=Sul=o'=apartheid'; buffer at 6590\nDump remaining buffer (5026): Africa do Sul o 'apartheid'
@@ -213,10 +216,10 @@ public class UntokenizerFunctionalTest {
 		return new InputStreamReader(url.openStream(), UTF8);
 	}
 
-	//@Test
+	@Test
 	public void testUniverseCount() throws Exception {
-		System.out.printf("Memory: %d\n", Runtime.getRuntime().totalMemory());
-		String basename = "/pt_BR/CHAVEFolha/1995/12/28/039";
+		System.err.printf("Memory: %d\n", Runtime.getRuntime().totalMemory());
+		String basename = "/pt_BR/CHAVEFolha/1994/01/01/002";
 		
 		List<CGEntry> cgLines = CGEntry.loadFromReader(open(basename + ".cg"));
 		
@@ -224,85 +227,137 @@ public class UntokenizerFunctionalTest {
 		
 		List<String> cg = Untokenizer.onlyKeys(cgLines);
 		String text = document.getContent().toString();
-		System.out.printf("Text: %d characters; CG: %d entries\n", text.length(), cg.size());
+		System.err.printf("Text: %d characters; CG: %d entries\n", text.length(), cg.size());
 		
-		Set<Match> matches = new TreeSet<Match>(new Comparator<Match>() {
-
-			public int compare(Match o1, Match o2) {
-				if (o1.equals(o2))
-					return 0;
-				
-				int compare = getMinEntry(o1) - getMinEntry(o2);
-				
-				if (compare == 0) 
-					compare = getMaxEntry(o2) - getMaxEntry(o1);
-				
-				if (compare == 0)
-					compare = -1;
-				
-				return compare;
-			}
-
-		});
+//		System.out.println("<html>\n<head>\n<style type=\"text/css\">\ntd { border: 1pt solid; }\n</style>\n</head>\n<body>\n<table>");
+//		System.out.println("<tr>");
+//		System.out.print("<td></td><td></td>");
+//		for (char c : text.toCharArray()) {
+//			System.out.printf("<td>%c</td>", c);
+//		}
+//		System.out.println();
+//		System.out.println("</tr>");
 		
-		for (MatchStrategy strategy : Arrays.asList(
+		@SuppressWarnings("unchecked")
+		Set<Span>[] matchesByEntry = new Set[cg.size()];
+		for (int i = 0; i < matchesByEntry.length; i++) {
+			matchesByEntry[i] = new TreeSet<Span>(new Comparator<Span>() {
+				public int compare(Span o1, Span o2) {
+					int fromdist = o1.from - o2.from;
+					int todist = o2.to - o1.to;
+					
+					if (fromdist == 0 && todist == 0)
+						System.err.println("Oops");
+					
+					return fromdist != 0 ? fromdist : todist;
+				}
+			});
+		}
+		
+		final MatchStrategy[] STRATEGIES = new MatchStrategy[] {
 				new ContractionDeMatchStrategy(),
 				new ContractionEmMatchStrategy(),
 				new ContractionAMatchStrategy(),
 				new ContractionPorMatchStrategy(),
+				new ContractionParaMatchStrategy(),
 				new ContractionComMatchStrategy(),
 				new EncliticMatchStrategy(),
-				new DirectMatchStrategy()
-			)) {
+				new DirectMatchStrategy(),
+			};
+		
+		//@SuppressWarnings("unchecked")
+		//Set<Match>[] matches = new Set[STRATEGIES.length];
+		
+		for (int i = 0; i < STRATEGIES.length; i++) {
+			MatchStrategy strategy = STRATEGIES[i];
 			
-			long before = System.nanoTime();
+			long t0 = System.nanoTime();
 			strategy.setData(text, cg);
 			Set<Match> match = strategy.matchAll();
-			long after = System.nanoTime();
 
-			int size = match.size();
-			matches.addAll(match);
-			System.out.printf("%s (%fms): %d = %f²\n", strategy.getClass().getSimpleName(), (float)(after - before)/1000000, size, Math.sqrt(size));
-		}
+			long t1 = System.nanoTime();
 
-		System.out.printf("Matches: %d = %f²\n", matches.size(), Math.sqrt(matches.size()));
-		
-		int lastEntry = -1;
-		int count = 0;
-		
-		for (Match match : matches) {
-			int minEntry = getMinEntry(match);
-		
-			if (minEntry != lastEntry) {
-				System.out.printf("%d. %d\n", lastEntry, count);
-				count = 0;
+			for (Match match2 : match) {
+				for (Span span : match2.getSpans()) {
+					matchesByEntry[span.entry].add(span);
+				}
 			}
 			
-			lastEntry = minEntry;
-			count++;
+			long t2 = System.nanoTime();
+			
+			int size = match.size();
+			System.err.printf("%-28s (%13fms + %9fms) : %4d = %11f²\n", strategy.getClass().getSimpleName(), (float)(t1 - t0)/1000000, (float)(t2 - t1)/1000000, size, Math.sqrt(size));
 		}
 
-		System.out.printf("Memory: %d\n", Runtime.getRuntime().totalMemory());
+		long t0 = System.nanoTime();
+		for (int i = 0; i < matchesByEntry.length; i++) {
+			System.err.printf("%4d. (%-15s) %3d : %s\n", i, cg.get(i), matchesByEntry[i].size(), toString(matchesByEntry[i]));
+//			System.out.println("<tr>");
+//			System.out.printf("<td>%d</td><td>%s</td>", i, cg.get(i));
+//			int j = 0;
+//			for (Span span : matchesByEntry[i]) {
+//				for (; j<span.from; j++)
+//					System.out.print("<td></td>");
+//				System.out.printf("<td colspan=\"%d\" style=\"bgcolor: blue;\">&nbsp;</td>", span.to - span.from);
+//				j = span.to;
+//			}
+//			System.out.println("\n</tr>");
+		}
+		
+//		System.out.println("</table></body></html>");
+		long t1 = System.nanoTime();
+		System.err.printf("%fms\n", (float)(t1 - t0)/1000000);
+
+		int prevsample = 0;
+		int count = 0;
+		
+		long sum = 0;
+		double sumsq = 0;
+		
+		float A = 0;
+		float Q = 0;
+		int i;
+		
+		for (i = 0; i < matchesByEntry.length; i++) {
+			if (matchesByEntry[i].size() == 1) {
+				count++;
+				
+				int length = i - prevsample;
+				
+				sum += length;
+				sumsq += length*length;
+				prevsample = i;
+
+				// http://en.wikipedia.org/wiki/Standard_deviation#Rapid_calculation_methods
+				Q += (length - A)*(length - (A += (length - A)/count));
+			}
+		}
+
+		count++;
+		int length = i - prevsample;
+		sum += length;
+		
+		// http://en.wikipedia.org/wiki/Standard_deviation#Rapid_calculation_methods
+		Q += (length - A)*(length - (A += (length - A)/count));
+
+		System.err.printf("Fixed entries: %d\n", count);
+		System.err.printf("Mean length: %f\n", A);
+		System.err.printf("Mean length: %f\n", (float)sum/count);
+		System.err.printf("Standard deviation: %f\n", Math.sqrt(Q/(count-1)));
+		System.err.printf("Standard deviation: %f\n", Math.sqrt(count*sumsq - (double)sum*sum)/count);
+		
+		System.err.printf("Memory: %d\n", Runtime.getRuntime().totalMemory());
 	}
 
-	private static int getMinEntry(Match o) {
-		int minEntry = Integer.MAX_VALUE;
-		for (Span span : o.getSpans()) {
-			if (span.entry < minEntry)
-				minEntry = span.entry;
+	private String toString(Set<Span> spans) {
+		Formatter result = new Formatter();
+		
+		for (Span span : spans) {
+			result.format("%3d-%-3d (%2d); ", span.from, span.to, span.to - span.from);
 		}
 		
-		return minEntry;
+		return result.toString();
 	}
-	
-	private static int getMaxEntry(Match o) {
-		int maxEntry = Integer.MIN_VALUE;
-		for (Span span : o.getSpans()) {
-			if (span.entry > maxEntry)
-				maxEntry = span.entry;
-		}
-		
-		return maxEntry;
-	}
-	
+
+
 }
