@@ -12,17 +12,16 @@ import java.util.Set;
 import org.junit.Before;
 import org.junit.Test;
 
-public class TextMatcherUnitTest {
-	private TextMatcher matcher;
+public class DamerauLevenshteinTextMatcherUnitTest {
+	private DamerauLevenshteinTextMatcher matcher;
 
 	@Before
 	public void setUp() {
-		matcher = new TextMatcher();
 	}
 	
 	@Test
 	public void testMatchKey() throws Exception {
-		matcher.setText("Devido  às   quais");
+		setText("Devido  às   quais");
 		Set<Match> matches = matcher.matchKey("Devido=às=quais", span(0, "Devido=à".length(), 0), span("Devido=".length(), "Devido=às=quais".length(), 1));
 		
 		assertThat(matches.size(), is(equalTo(1)));
@@ -36,7 +35,7 @@ public class TextMatcherUnitTest {
 
 	@Test
 	public void testMapping() throws Exception {
-		matcher.setText("012 \t56789   3\t\t6789");
+		setText("012 \t56789   3\t\t6789");
 		int[] results = matcher.match(
 				0, 
 				"012=56789=3=6789", 
@@ -51,7 +50,7 @@ public class TextMatcherUnitTest {
 	//especialmente a reconstrução do alinhamento a partir da matriz; verificar se é possível fazer adaptativo
 	@Test
 	public void testMappingWithTransposition() throws Exception {
-		matcher.setText("012 \t56879   3\t\t6789");
+		setText("012 \t56879   3\t\t6789");
 		int[] results = matcher.match(
 				0, 
 				"012=56789=3=6789", 
@@ -63,7 +62,7 @@ public class TextMatcherUnitTest {
 
 	@Test
 	public void testDamerauLevenshteinDistance1() throws Exception {
-		matcher.setText("3.º");
+		setText("3.º");
 		Set<Match> matches = matcher.matchKey("3º.",
 				span(0, "3º.".length(), 0)
 			);
@@ -75,6 +74,9 @@ public class TextMatcherUnitTest {
 					)
 			));
 	}
-	
+
+	private void setText(String text) {
+		matcher = new DamerauLevenshteinTextMatcher(text);
+	}
 
 }

@@ -4,11 +4,15 @@ import java.util.List;
 
 public abstract class AbstractMatchStrategy implements MatchStrategy {
 
-	protected final TextMatcher matcher = new TextMatcher();
+	protected TextMatcher matcher;
 	protected List<String> cg;
 
 	public void setData(String text, List<String> cg) {
-		matcher.setText(text);
+		setData(new DamerauLevenshteinTextMatcher(text), cg);
+	}
+
+	private void setData(TextMatcher matcher, List<String> cg) {
+		this.matcher = matcher;
 		this.cg = cg;
 	}
 }

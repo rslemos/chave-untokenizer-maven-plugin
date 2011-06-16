@@ -8,7 +8,7 @@ public class NewLineMatchStrategy extends OldStyleMatchStrategy {
 		if ("$¶".equals(cg.get(0))) {
 			int l;
 			try {
-				if ('\n' == matcher.charAt(0)) {
+				if ('\n' == ((DamerauLevenshteinTextMatcher)matcher).charAt(0)) {
 					l = 1;
 				} else {
 					l = 0;
