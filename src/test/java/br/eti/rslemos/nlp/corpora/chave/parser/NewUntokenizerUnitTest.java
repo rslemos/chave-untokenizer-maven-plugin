@@ -80,20 +80,19 @@ public class NewUntokenizerUnitTest {
 		assertThatHasAnnotation( 5,  8,  2, "vai");
 		assertThatHasAnnotation( 9, 19,  3, "investigar");
 		assertThatHasAnnotation(20, 30,  4, "pagamentos");
-//		assertThatHasAnnotation(31, 32,  5, "d");
-//		assertThatHasAnnotation(32, 33,  6, "a");
+		assertThatHasAnnotation(31, 32,  5, "d");
+		assertThatHasAnnotation(32, 33,  6, "a");
 		assertThatHasAnnotation(34, 44,  7, "Prefeitura");
 		assertThatHasAnnotation(45, 47,  8, "de");
 		assertThatHasAnnotation(48, 57,  9, "São Paulo");
 		assertThatHasAnnotation(58, 59, 10, "a");
 		assertThatHasAnnotation(60, 72, 11, "construtoras");
 		assertThatHasAnnotation(73, 80, 12, "citadas");
-//		assertThatHasAnnotation(81, 82, 13, "n");
-//		assertThatHasAnnotation(82, 83, 14, "o");
+		assertThatHasAnnotation(81, 82, 13, "n");
+		assertThatHasAnnotation(82, 83, 14, "o");
 		assertThatHasAnnotation(84, 88, 15, "caso");
 		assertThatHasAnnotation(89, 98, 16, "Paubrasil");
 		assertThatHasAnnotation(98, 99, 17, ".");
-
 	}
 
 	private void untokenize() {

@@ -46,13 +46,13 @@ public class NewUntokenizer {
 	private void untokenize() {
 		final MatchStrategy[] strategies = {
 			new DirectMatchStrategy(),
-//			new ContractionAMatchStrategy(),
-//			new ContractionComMatchStrategy(),
-//			new ContractionDeMatchStrategy(),
-//			new ContractionEmMatchStrategy(),
-//			new ContractionParaMatchStrategy(),
-//			new ContractionPorMatchStrategy(),
-//			new EncliticMatchStrategy(),
+			new ContractionAMatchStrategy(),
+			new ContractionComMatchStrategy(),
+			new ContractionDeMatchStrategy(),
+			new ContractionEmMatchStrategy(),
+			new ContractionParaMatchStrategy(),
+			new ContractionPorMatchStrategy(),
+			new EncliticMatchStrategy(),
 		};
 		
 		@SuppressWarnings("unchecked")
@@ -97,24 +97,28 @@ public class NewUntokenizer {
 			throw new RuntimeException(e);
 		}
 		
-		for (int i = start; i < fixedSpan.entry; i++) {
+		Span[] spans = fixedFullMatch.getSpans().toArray(new Span[fixedFullMatch.getConsume()]);
+		
+		int from = 0;
+		
+		for (int i = 0; i < spans.length; i++) {
+			splitAndRecurse(spansByEntry, start, spans[i].entry, from, spans[i].from);
+			from = spans[i].to;
+			start = spans[i].entry + 1;
+		}
+		splitAndRecurse(spansByEntry, start, end, from, text.length());
+	}
+
+	private void splitAndRecurse(List<Span>[] spansByEntry, int startEntry, int endEntry, int from, int to) {
+		for (int i = startEntry; i < endEntry; i++) {
 			for (Iterator<Span> iterator = spansByEntry[i].iterator(); iterator.hasNext();) {
 				Span span = iterator.next();
-				if (span.to > fixedSpan.from)
+				if (span.to > to || span.from < from)
 					iterator.remove();
 			}
 		}
 		
-		for (int i = fixedSpan.entry + 1; i < end; i++) {
-			for (Iterator<Span> iterator = spansByEntry[i].iterator(); iterator.hasNext();) {
-				Span span = iterator.next();
-				if (span.from < fixedSpan.to)
-					iterator.remove();
-			}
-		}
-		
-		annotateAndSplit(spansByEntry, start, fixedSpan.entry);
-		annotateAndSplit(spansByEntry, fixedSpan.entry + 1, end);
+		annotateAndSplit(spansByEntry, startEntry, endEntry);
 	}
 
 	private Span chooseFixedSpan(List<Span>[] spansByEntry, int start, int end) {
