@@ -6,6 +6,7 @@ import gate.util.InvalidOffsetException;
 import gate.util.SimpleFeatureMapImpl;
 
 import java.util.Arrays;
+import java.util.Comparator;
 import java.util.LinkedHashSet;
 import java.util.List;
 import java.util.Set;
@@ -103,6 +104,15 @@ public final class Match {
 	}
 	
 	public static class Span {
+		public static final class SpanComparatorByOffsets implements Comparator<Span> {
+			public int compare(Span o1, Span o2) {
+				int fromdist = o1.from - o2.from;
+				int todist = o2.to - o1.to;
+				
+				return fromdist != 0 ? fromdist : todist;
+			}
+		}
+
 		public final int from;
 		public final int to;
 		public final int entry;

@@ -13,7 +13,6 @@ import java.io.Reader;
 import java.net.URL;
 import java.nio.charset.Charset;
 import java.util.Arrays;
-import java.util.Comparator;
 import java.util.Formatter;
 import java.util.List;
 import java.util.Set;
@@ -241,17 +240,7 @@ public class UntokenizerFunctionalTest {
 		@SuppressWarnings("unchecked")
 		Set<Span>[] matchesByEntry = new Set[cg.size()];
 		for (int i = 0; i < matchesByEntry.length; i++) {
-			matchesByEntry[i] = new TreeSet<Span>(new Comparator<Span>() {
-				public int compare(Span o1, Span o2) {
-					int fromdist = o1.from - o2.from;
-					int todist = o2.to - o1.to;
-					
-					if (fromdist == 0 && todist == 0)
-						System.err.println("Oops");
-					
-					return fromdist != 0 ? fromdist : todist;
-				}
-			});
+			matchesByEntry[i] = new TreeSet<Span>(new Span.SpanComparatorByOffsets());
 		}
 		
 		final MatchStrategy[] STRATEGIES = new MatchStrategy[] {
