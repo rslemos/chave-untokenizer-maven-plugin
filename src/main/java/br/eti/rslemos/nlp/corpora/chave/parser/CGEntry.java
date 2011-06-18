@@ -2,6 +2,7 @@ package br.eti.rslemos.nlp.corpora.chave.parser;
 
 import java.io.IOException;
 import java.io.Reader;
+import java.util.AbstractList;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.regex.Matcher;
@@ -33,12 +34,18 @@ public class CGEntry {
 		return String.valueOf(key);
 	}
 	
-	public static List<String> onlyKeys(List<CGEntry> cg) {
-		ArrayList<String> result = new ArrayList<String>(cg.size());
-		for (CGEntry entry : cg) {
-			result.add(entry.getKey());
-		}
-		return result;
+	public static List<String> onlyKeys(final List<CGEntry> cg) {
+		return new AbstractList<String>() {
+			@Override
+			public String get(int index) {
+				return cg.get(index).getKey();
+			}
+
+			@Override
+			public int size() {
+				return cg.size();
+			}
+		};
 	}
 
 	public static CGEntry entry(String key, String value) {
