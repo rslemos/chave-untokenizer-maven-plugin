@@ -61,13 +61,14 @@ public final class Match {
 
 	public Match adjust(int k, int i) {
 		Set<Span> spans = new LinkedHashSet<Span>(this.spans.size());
+		Match match = new Match(from + k, to + k, spans);
 		
 		for (Span span : this.spans) {
-			span = new Span(span.from + k, span.to + k, span.entry + i);
+			span = match.new Span(span.from + k, span.to + k, span.entry + i);
 			spans.add(span);
 		}
 		
-		return new Match(from + k, to + k, spans);
+		return match;
 	}
 
 	public int getMatchLength() {
