@@ -24,22 +24,22 @@ public final class Match {
 			return Match.this;
 		}
 
-		@Override
-		public boolean equals(Object o) {
-			if (!super.equals(o))
-				return false;
-			
-			if (!(o instanceof Span))
-				return false;
-			
-			Span m = (Span) o;
-			return Match.this == m.getMatch(); 
-		}
+//		@Override
+//		public boolean equals(Object o) {
+//			if (!super.equals(o))
+//				return false;
+//			
+//			if (!(o instanceof Span))
+//				return false;
+//			
+//			Span m = (Span) o;
+//			return Match.this == m.getMatch(); 
+//		}
 
-		@Override
-		public int hashCode() {
-			return 11 * System.identityHashCode(Match.this) + super.hashCode();
-		}
+//		@Override
+//		public int hashCode() {
+//			return 11 * System.identityHashCode(Match.this) + super.hashCode();
+//		}
 	}
 	
 	private Match(int from, int to, Set<Span> spans) {
