@@ -33,6 +33,14 @@ public class CGEntry {
 		return String.valueOf(key);
 	}
 	
+	public static List<String> onlyKeys(List<CGEntry> cg) {
+		ArrayList<String> result = new ArrayList<String>(cg.size());
+		for (CGEntry entry : cg) {
+			result.add(entry.getKey());
+		}
+		return result;
+	}
+
 	public static CGEntry entry(String key, String value) {
 		return new CGEntry(key, value);
 	}

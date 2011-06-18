@@ -223,7 +223,7 @@ public class UntokenizerFunctionalTest {
 		
 		Document document = GateLoader.load(UntokenizerUnitTest.class.getResource(basename + ".sgml"), "UTF-8");
 		
-		List<String> cg = Untokenizer.onlyKeys(cgLines);
+		List<String> cg = CGEntry.onlyKeys(cgLines);
 		String text = document.getContent().toString();
 		System.err.printf("Text: %d characters; CG: %d entries\n", text.length(), cg.size());
 		

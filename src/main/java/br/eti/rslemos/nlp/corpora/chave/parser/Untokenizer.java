@@ -4,7 +4,6 @@ import gate.Document;
 import gate.GateConstants;
 
 import java.io.IOException;
-import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Formatter;
 import java.util.Iterator;
@@ -43,7 +42,7 @@ public class Untokenizer {
 
 		Set<Match> mementos2 = new LinkedHashSet<Match>();
 		for (MatchStrategy strategy : strategies2) {
-			strategy.setData(new DamerauLevenshteinTextMatcher(buffer), onlyKeys(cg1));
+			strategy.setData(new DamerauLevenshteinTextMatcher(buffer), CGEntry.onlyKeys(cg1));
 			mementos2.addAll(strategy.matchAll());
 		}
 
@@ -53,7 +52,7 @@ outer:
 				Set<Match> mementos = new LinkedHashSet<Match>(strategies.length);
 
 				String substring = buffer.substring(k);
-				List<String> onlyKeys = onlyKeys(cg1.subList(i, cg1.size()));
+				List<String> onlyKeys = CGEntry.onlyKeys(cg1.subList(i, cg1.size()));
 				
 				for (MatchStrategy strategy : strategies) {
 					strategy.setData(new DamerauLevenshteinTextMatcher(substring), onlyKeys);
@@ -131,14 +130,5 @@ outer:
 		}
 		
 		return matches;
-	}
-
-	public static List<String> onlyKeys(List<CGEntry> cg1) {
-		ArrayList<String> result = new ArrayList<String>(cg1.size());
-		for (CGEntry entry : cg1) {
-			result.add(entry.getKey());
-		}
-		
-		return Collections.unmodifiableList(result);
 	}
 }
