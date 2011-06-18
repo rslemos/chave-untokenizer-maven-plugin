@@ -10,6 +10,7 @@ import gate.util.InvalidOffsetException;
 
 import java.util.ArrayList;
 import java.util.BitSet;
+import java.util.Iterator;
 import java.util.List;
 import java.util.Set;
 
@@ -18,6 +19,12 @@ import br.eti.rslemos.nlp.corpora.chave.parser.Match.Span;
 
 public class NewUntokenizer {
 
+	private AnnotationSet originalMarkups;
+	private List<CGEntry> cg;
+	private Document document;
+	private String text;
+	private List<String> cgKeys;
+
 	public Document createDocument(String text) {
 		Document result = new DocumentImpl();
 		result.setContent(new DocumentContentImpl(text));
@@ -25,20 +32,27 @@ public class NewUntokenizer {
 	}
 
 	public void untokenize(Document document, List<CGEntry> cg) {
-		final String text = document.getContent().toString();
-		final List<String> cgKeys = onlyKeys(cg);
+		this.document = document;
+		this.cg = cg;
+
+		originalMarkups = document.getAnnotations(GateConstants.ORIGINAL_MARKUPS_ANNOT_SET_NAME);
+
+		text = document.getContent().toString();
+		cgKeys = onlyKeys(cg);
 		
-		AnnotationSet originalMarkups = document.getAnnotations(GateConstants.ORIGINAL_MARKUPS_ANNOT_SET_NAME);
-		
+		untokenize();
+	}
+
+	private void untokenize() {
 		final MatchStrategy[] strategies = {
 			new DirectMatchStrategy(),
-			new ContractionAMatchStrategy(),
-			new ContractionComMatchStrategy(),
-			new ContractionDeMatchStrategy(),
-			new ContractionEmMatchStrategy(),
-			new ContractionParaMatchStrategy(),
-			new ContractionPorMatchStrategy(),
-			new EncliticMatchStrategy(),
+//			new ContractionAMatchStrategy(),
+//			new ContractionComMatchStrategy(),
+//			new ContractionDeMatchStrategy(),
+//			new ContractionEmMatchStrategy(),
+//			new ContractionParaMatchStrategy(),
+//			new ContractionPorMatchStrategy(),
+//			new EncliticMatchStrategy(),
 		};
 		
 		@SuppressWarnings("unchecked")
@@ -61,7 +75,20 @@ public class NewUntokenizer {
 			}
 		}
 		
-		Span fixedSpan = chooseFixedSpan(spansByEntry);
+		int start = 0;
+		int end = spansByEntry.length;
+		
+		annotateAndSplit(spansByEntry, start, end);
+	}
+
+	private void annotateAndSplit(List<Span>[] spansByEntry, int start, int end) {
+		if (end <= start)
+			return;
+		
+		Span fixedSpan = chooseFixedSpan(spansByEntry, start, end);
+		if (fixedSpan == null)
+			return;
+		
 		Match fixedFullMatch = fixedSpan.getMatch();
 		
 		try {
@@ -69,17 +96,39 @@ public class NewUntokenizer {
 		} catch (InvalidOffsetException e) {
 			throw new RuntimeException(e);
 		}
+		
+		for (int i = start; i < fixedSpan.entry; i++) {
+			for (Iterator<Span> iterator = spansByEntry[i].iterator(); iterator.hasNext();) {
+				Span span = iterator.next();
+				if (span.to > fixedSpan.from)
+					iterator.remove();
+			}
+		}
+		
+		for (int i = fixedSpan.entry + 1; i < end; i++) {
+			for (Iterator<Span> iterator = spansByEntry[i].iterator(); iterator.hasNext();) {
+				Span span = iterator.next();
+				if (span.from < fixedSpan.to)
+					iterator.remove();
+			}
+		}
+		
+		annotateAndSplit(spansByEntry, start, fixedSpan.entry);
+		annotateAndSplit(spansByEntry, fixedSpan.entry + 1, end);
 	}
 
-	private Span chooseFixedSpan(final List<Span>[] spansByEntry) {
+	private Span chooseFixedSpan(List<Span>[] spansByEntry, int start, int end) {
 		BitSet fixedEntries = new BitSet(spansByEntry.length);
-		for (int i = 0; i < spansByEntry.length; i++) {
+		for (int i = start; i < end; i++) {
 			fixedEntries.set(i, spansByEntry[i].size() == 1);
 		}
 
 		int fixedEntry = chooseFixedEntry(fixedEntries);
 		
-		return spansByEntry[fixedEntry].get(0);
+		if (fixedEntry < 0)
+			return null;
+		else
+			return spansByEntry[fixedEntry].get(0);
 	}
 
 	private int chooseFixedEntry(BitSet fixedEntries) {
