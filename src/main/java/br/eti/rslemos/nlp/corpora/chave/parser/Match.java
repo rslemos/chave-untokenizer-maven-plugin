@@ -52,6 +52,7 @@ public final class Match {
 		for (Span span : getSpans()) {
 			if (span.from >= 0 && span.to >= 0) {
 				FeatureMap features = new SimpleFeatureMapImpl();
+				features.put("index", span.entry);
 				features.put("match", cg.get(span.entry).getKey());
 				features.put("cg", cg.get(span.entry).getValue());
 				annotationSet.add((long)span.from, (long)span.to, "token", features);
