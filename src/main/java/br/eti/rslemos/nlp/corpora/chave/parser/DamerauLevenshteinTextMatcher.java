@@ -6,7 +6,6 @@ import static br.eti.rslemos.nlp.corpora.chave.parser.Match.Span.span;
 import static java.lang.Character.isWhitespace;
 import static java.lang.Character.toLowerCase;
 
-import java.util.Arrays;
 import java.util.LinkedHashSet;
 import java.util.Set;
 
@@ -15,11 +14,17 @@ import br.eti.rslemos.nlp.corpora.chave.parser.Match.Span;
 
 public class DamerauLevenshteinTextMatcher implements TextMatcher {
 	private final char[] text;
+	private final int threshold;
 
 	public DamerauLevenshteinTextMatcher(String text) {
-		this.text = text.toCharArray();
+		this(text, 1);
 	}
 	
+	public DamerauLevenshteinTextMatcher(String text, int threshold) {
+		this.text = text.toCharArray();
+		this.threshold = threshold;
+	}
+
 	public Set<Match> matchKey(String key, Span... inSpans) {
 		Set<Match> matches = new LinkedHashSet<Match>();
 
@@ -49,7 +54,7 @@ public class DamerauLevenshteinTextMatcher implements TextMatcher {
 
 	int[] match(int k0, String toMatch, int... inPoints) {
 		int k = k0;
-		int threshold = toMatch.length() > 1 ? 1 : 0;
+		int threshold = toMatch.length() > 1 ? this.threshold : 0;
 		
 		if (isNeitherWhitespaceNorWordBoundary(k - 1) && !isWordBoundary(toMatch.charAt(0)))
 			return null;
