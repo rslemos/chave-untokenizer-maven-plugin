@@ -4,6 +4,7 @@ import static br.eti.rslemos.nlp.corpora.chave.parser.Span.span;
 
 import java.util.LinkedHashSet;
 import java.util.Set;
+import static br.eti.rslemos.nlp.corpora.chave.parser.Match.match;
 
 public class QuotesMatchStrategy extends AbstractMatchStrategy {
 
@@ -16,7 +17,7 @@ public class QuotesMatchStrategy extends AbstractMatchStrategy {
 			String key = cg.get(i);
 			if (key != null && "$\"".equals(key)) {
 				for (Match match : basicSet) {
-					result.add(new Match(match.getFrom(), match.getTo(), span(match.getFrom(), match.getTo(), i)));
+					result.add(match(match.getFrom(), match.getTo(), span(match.getFrom(), match.getTo(), i)));
 				}
 			}
 		}

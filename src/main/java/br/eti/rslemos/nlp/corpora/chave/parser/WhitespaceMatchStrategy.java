@@ -5,6 +5,7 @@ import static java.lang.Character.isWhitespace;
 import java.util.LinkedHashSet;
 import java.util.List;
 import java.util.Set;
+import static br.eti.rslemos.nlp.corpora.chave.parser.Match.match;
 
 public class WhitespaceMatchStrategy implements MatchStrategy {
 
@@ -19,7 +20,7 @@ public class WhitespaceMatchStrategy implements MatchStrategy {
 				while (k1 < text.length && isWhitespace(text[k1]))
 					k1++;
 
-				result.add(new Match(k, k1));
+				result.add(match(k, k1));
 				
 				k = k1;
 			}

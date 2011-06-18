@@ -5,23 +5,44 @@ import gate.FeatureMap;
 import gate.util.InvalidOffsetException;
 import gate.util.SimpleFeatureMapImpl;
 
-import java.util.Arrays;
 import java.util.LinkedHashSet;
 import java.util.List;
 import java.util.Set;
 
-
 public final class Match {
-	private int from;
-	private int to;
+	private final int from;
+	private final int to;
 	
-	private Set<Span> spans;
+	private final Set<Span> spans;
 	
-	public Match(int from, int to, Span... spans) {
-		this(from, to, new LinkedHashSet<Span>(Arrays.asList(spans)));
+	public class Span extends br.eti.rslemos.nlp.corpora.chave.parser.Span {
+		public Span(int from, int to, int entry) {
+			super(from, to, entry);
+		}
+
+		public Match getMatch() {
+			return Match.this;
+		}
+
+		@Override
+		public boolean equals(Object o) {
+			if (!super.equals(o))
+				return false;
+			
+			if (!(o instanceof Span))
+				return false;
+			
+			Span m = (Span) o;
+			return Match.this == m.getMatch(); 
+		}
+
+		@Override
+		public int hashCode() {
+			return 11 * System.identityHashCode(Match.this) + super.hashCode();
+		}
 	}
 	
-	public Match(int from, int to, Set<Span> spans) {
+	private Match(int from, int to, Set<Span> spans) {
 		this.from = from;
 		this.to = to;
 		this.spans = spans;
@@ -42,7 +63,7 @@ public final class Match {
 		Set<Span> spans = new LinkedHashSet<Span>(this.spans.size());
 		
 		for (Span span : this.spans) {
-			span = Span.span(span.from + k, span.to + k, span.entry + i);
+			span = new Span(span.from + k, span.to + k, span.entry + i);
 			spans.add(span);
 		}
 		
@@ -98,7 +119,18 @@ public final class Match {
 		return "{" + from + ", " + to + "}/" + spans;
 	}
 	
-	public static Match match(int from, int to, Span... spans) {
+	private Match(int from, int to, br.eti.rslemos.nlp.corpora.chave.parser.Span... nakedSpans) {
+		this.from = from;
+		this.to = to;
+		this.spans = new LinkedHashSet<Span>(nakedSpans.length);
+		
+		for (br.eti.rslemos.nlp.corpora.chave.parser.Span nakedSpan : nakedSpans) {
+			Span span = new Span(nakedSpan.from, nakedSpan.to, nakedSpan.entry);
+			spans.add(span);
+		}
+	}
+	
+	public static Match match(int from, int to, br.eti.rslemos.nlp.corpora.chave.parser.Span... spans) {
 		return new Match(from, to, spans);
 	}
 }

@@ -10,6 +10,7 @@ import java.util.LinkedHashSet;
 import java.util.Set;
 
 import br.eti.rslemos.nlp.corpora.chave.parser.AdaptativeDamerauLevenshteinDistance.AlignOp;
+import static br.eti.rslemos.nlp.corpora.chave.parser.Match.match;
 
 public class DamerauLevenshteinTextMatcher implements TextMatcher {
 	private final char[] text;
@@ -44,7 +45,7 @@ public class DamerauLevenshteinTextMatcher implements TextMatcher {
 					outSpans[i] = span(outPoints[i*2 + 2], outPoints[i*2 + 3], inSpans[i].entry);
 				}
 				
-				matches.add(new Match(outPoints[0], outPoints[1], outSpans));
+				matches.add(Match.match(outPoints[0], outPoints[1], outSpans));
 			}
 		}
 		

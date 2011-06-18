@@ -3,6 +3,7 @@ package br.eti.rslemos.nlp.corpora.chave.parser;
 import static br.eti.rslemos.nlp.corpora.chave.parser.Span.span;
 
 import java.util.Arrays;
+import static br.eti.rslemos.nlp.corpora.chave.parser.Match.match;
 
 public class DamerauLevenshteinMatchStrategy extends OldStyleMatchStrategy {
 
@@ -43,7 +44,7 @@ public class DamerauLevenshteinMatchStrategy extends OldStyleMatchStrategy {
 			return null;
 		
 		if (levenshteinDistance(key0.toCharArray(), cs1) <= maxDistance) {
-			return new Match(0, cs1.length, span(0, cs1.length, 0));
+			return match(0, cs1.length, span(0, cs1.length, 0));
 		} else
 			return null;
 	}
