@@ -1,7 +1,7 @@
 package br.eti.rslemos.nlp.corpora.chave.parser;
 
 import static br.eti.rslemos.nlp.corpora.chave.parser.Match.match;
-import static br.eti.rslemos.nlp.corpora.chave.parser.Match.Span.span;
+import static br.eti.rslemos.nlp.corpora.chave.parser.Span.span;
 import static org.hamcrest.CoreMatchers.equalTo;
 import static org.hamcrest.CoreMatchers.is;
 import static org.hamcrest.Matchers.hasItems;

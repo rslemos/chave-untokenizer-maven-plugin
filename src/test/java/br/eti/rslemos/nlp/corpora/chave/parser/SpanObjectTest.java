@@ -1,10 +1,9 @@
 package br.eti.rslemos.nlp.corpora.chave.parser;
 
-import static br.eti.rslemos.nlp.corpora.chave.parser.Match.Span.span;
+import static br.eti.rslemos.nlp.corpora.chave.parser.Span.span;
 
 import org.junit.experimental.theories.DataPoint;
 
-import br.eti.rslemos.nlp.corpora.chave.parser.Match.Span;
 import br.eti.rslemos.tools.test.ObjectTest;
 
 public class SpanObjectTest extends ObjectTest {

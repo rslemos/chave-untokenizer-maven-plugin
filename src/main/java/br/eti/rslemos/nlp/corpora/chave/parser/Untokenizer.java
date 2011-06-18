@@ -12,7 +12,6 @@ import java.util.LinkedHashSet;
 import java.util.List;
 import java.util.Set;
 
-import br.eti.rslemos.nlp.corpora.chave.parser.Match.Span;
 
 
 public class Untokenizer {

@@ -2,7 +2,7 @@ package br.eti.rslemos.nlp.corpora.chave.parser;
 
 import static br.eti.rslemos.nlp.corpora.chave.parser.AdaptativeDamerauLevenshteinDistance.AlignOp.MATCH;
 import static br.eti.rslemos.nlp.corpora.chave.parser.AdaptativeDamerauLevenshteinDistance.AlignOp.TRANSPOSITION;
-import static br.eti.rslemos.nlp.corpora.chave.parser.Match.Span.span;
+import static br.eti.rslemos.nlp.corpora.chave.parser.Span.span;
 import static java.lang.Character.isWhitespace;
 import static java.lang.Character.toLowerCase;
 
@@ -10,7 +10,6 @@ import java.util.LinkedHashSet;
 import java.util.Set;
 
 import br.eti.rslemos.nlp.corpora.chave.parser.AdaptativeDamerauLevenshteinDistance.AlignOp;
-import br.eti.rslemos.nlp.corpora.chave.parser.Match.Span;
 
 public class DamerauLevenshteinTextMatcher implements TextMatcher {
 	private final char[] text;
