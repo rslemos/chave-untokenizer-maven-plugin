@@ -19,6 +19,17 @@ import br.eti.rslemos.nlp.corpora.chave.parser.Match.Span;
 
 public class NewUntokenizer {
 
+	private final MatchStrategy[] STRATEGIES = {
+			new DirectMatchStrategy(),
+			new ContractionAMatchStrategy(),
+			new ContractionComMatchStrategy(),
+			new ContractionDeMatchStrategy(),
+			new ContractionEmMatchStrategy(),
+			new ContractionParaMatchStrategy(),
+			new ContractionPorMatchStrategy(),
+			new EncliticMatchStrategy(),
+		};
+
 	private AnnotationSet originalMarkups;
 	private List<CGEntry> cg;
 	private Document document;
@@ -44,16 +55,6 @@ public class NewUntokenizer {
 	}
 
 	private void untokenize() {
-		final MatchStrategy[] strategies = {
-			new DirectMatchStrategy(),
-			new ContractionAMatchStrategy(),
-			new ContractionComMatchStrategy(),
-			new ContractionDeMatchStrategy(),
-			new ContractionEmMatchStrategy(),
-			new ContractionParaMatchStrategy(),
-			new ContractionPorMatchStrategy(),
-			new EncliticMatchStrategy(),
-		};
 		
 		@SuppressWarnings("unchecked")
 		final List<Span>[] spansByEntry = new List[cgKeys.size()];
@@ -64,7 +65,7 @@ public class NewUntokenizer {
 		
 		final TextMatcher textMatcher = new DamerauLevenshteinTextMatcher(text, 0);
 		
-		for (MatchStrategy strategy : strategies) {
+		for (MatchStrategy strategy : STRATEGIES) {
 			strategy.setData(textMatcher, cgKeys);
 			Set<Match> matches = strategy.matchAll();
 			
@@ -75,10 +76,7 @@ public class NewUntokenizer {
 			}
 		}
 		
-		int start = 0;
-		int end = spansByEntry.length;
-		
-		annotateAndSplit(spansByEntry, start, end);
+		annotateAndSplit(spansByEntry, 0, spansByEntry.length);
 	}
 
 	private void annotateAndSplit(List<Span>[] spansByEntry, int start, int end) {
