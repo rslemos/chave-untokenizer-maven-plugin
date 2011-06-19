@@ -11,6 +11,22 @@ import java.util.Set;
 import br.eti.rslemos.nlp.corpora.chave.parser.AdaptativeDamerauLevenshteinDistance.AlignOp;
 
 public class DamerauLevenshteinTextMatcher implements TextMatcher {
+	public static class Parameters {
+		public int threshold;
+		public boolean caseSensitive;
+		public boolean wordBoundaryCheck;
+		
+		public Parameters(int threshold, boolean caseSensitive, boolean wordBoundaryCheck) {
+			this.threshold = threshold;
+			this.caseSensitive = caseSensitive;
+			this.wordBoundaryCheck = wordBoundaryCheck;
+		}
+		
+		public DamerauLevenshteinTextMatcher create(String text) {
+			return new DamerauLevenshteinTextMatcher(text, threshold, caseSensitive, wordBoundaryCheck);
+		}
+	}
+	
 	private final char[] text;
 	private final int threshold;
 	private final boolean caseSensitive;
