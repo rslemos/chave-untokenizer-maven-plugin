@@ -156,7 +156,7 @@ public class Untokenizer {
 		int from = 0;
 		
 		for (int i = 0; i < spans.length; i++) {
-			splitAndRecurse(spansByEntry, start, spans[i].entry, from, spans[i].from);
+			splitAndRecurse(start, spans[i].entry, from, spans[i].from);
 			from = spans[i].to;
 			start = spans[i].entry + 1;
 			
@@ -167,10 +167,10 @@ public class Untokenizer {
 			spansByEntry[spans[i].entry].add(spans[i]);
 		}
 		
-		splitAndRecurse(spansByEntry, start, end, from, text.length());
+		splitAndRecurse(start, end, from, text.length());
 	}
 
-	private void splitAndRecurse(List<Span>[] spansByEntry, int startEntry, int endEntry, int from, int to) {
+	private void splitAndRecurse(int startEntry, int endEntry, int from, int to) {
 		for (int i = startEntry; i < endEntry; i++) {
 			for (Iterator<Span> iterator = spansByEntry[i].iterator(); iterator.hasNext();) {
 				Span span = iterator.next();
