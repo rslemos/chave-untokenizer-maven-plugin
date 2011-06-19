@@ -37,12 +37,15 @@ public class Untokenizer {
 	private String text;
 	private List<String> cgKeys;
 
+	private List<Span>[] spansByEntry;
+
 	public Document createDocument(String text) {
 		Document result = new DocumentImpl();
 		result.setContent(new DocumentContentImpl(text));
 		return result;
 	}
 
+	@SuppressWarnings("unchecked")
 	public void untokenize(Document document, List<CGEntry> cg) {
 		this.document = document;
 		this.cg = cg;
@@ -52,18 +55,16 @@ public class Untokenizer {
 		text = document.getContent().toString();
 		cgKeys = onlyKeys(cg);
 		
-		untokenize();
-	}
-
-	private void untokenize() {
-		
-		@SuppressWarnings("unchecked")
-		final List<Span>[] spansByEntry = new List[cgKeys.size()];
+		spansByEntry = new List[cgKeys.size()];
 		
 		for (int i = 0; i < spansByEntry.length; i++) {
 			spansByEntry[i] = new ArrayList<Span>();
 		}
 		
+		untokenize();
+	}
+
+	private void untokenize() {
 		final TextMatcher textMatcher = new DamerauLevenshteinTextMatcher(text, 0);
 		
 		for (MatchStrategy strategy : STRATEGIES) {
@@ -77,19 +78,14 @@ public class Untokenizer {
 			}
 		}
 		
-		annotateAndSplit(spansByEntry, 0, spansByEntry.length);
+		annotateAndSplit(0, spansByEntry.length);
 
-		BitSet fixedEntries = new BitSet(spansByEntry.length);
-		for (int i = 0; i < spansByEntry.length; i++) {
-			fixedEntries.set(i, spansByEntry[i].size() == 1);
-		}
+		BitSet fixedEntries = getFixedEntries(0, spansByEntry.length);
 		
 		int entry = fixedEntries.nextClearBit(0);
 		
 		while (entry >= 0 && entry < spansByEntry.length) {
-			//debugUncoveredEntry(spansByEntry, entry);
-
-			if ("$¶".equals(cgKeys.get(entry))) {
+			if ("$¶".equals(cgKeys.get(entry)) && (entry == 0 || fixedEntries.get(entry - 1))) {
 				int pos = entry > 0 ? spansByEntry[entry - 1].get(0).to : 0;
 				
 				try {
@@ -103,33 +99,32 @@ public class Untokenizer {
 			
 			entry = fixedEntries.nextClearBit(entry+1);
 		}
-		
 	}
 
-	private void debugUncoveredEntry(final List<Span>[] spansByEntry, int entry) {
+	private void debugUncoveredEntry(int entry) {
 		int from = 0;
 		int to = text.length();
 		
 		if (entry > 0) {
 			System.err.printf("%s\n", spansByEntry[entry - 1]);
-			from = spansByEntry[entry - 1].get(0).to;
+			//from = spansByEntry[entry - 1].get(0).to;
 		}
 		
 		System.err.printf("%d. %s (%s): %s\n", entry, cg.get(entry).getKey(), cg.get(entry).getValue(), spansByEntry[entry]);
 		
 		if (entry + 1 < spansByEntry.length) {
 			System.err.printf("%s\n", spansByEntry[entry + 1]);
-			to = spansByEntry[entry + 1].get(0).from;
+			//to = spansByEntry[entry + 1].get(0).from;
 		}
 		
-		System.err.printf("Text left to parse: '%s'\n", text.substring(from, to));
+		//System.err.printf("Text left to parse: '%s'\n", text.substring(from, to));
 	}
 
-	private void annotateAndSplit(List<Span>[] spansByEntry, int start, int end) {
+	private void annotateAndSplit(int start, int end) {
 		if (end <= start)
 			return;
 		
-		Span fixedSpan = chooseFixedSpan(spansByEntry, start, end);
+		Span fixedSpan = chooseFixedSpan(start, end);
 		if (fixedSpan == null) {
 			//System.err.printf("No fixed span in [%d, %d[\n", start, end);
 			return;
@@ -165,14 +160,11 @@ public class Untokenizer {
 			}
 		}
 		
-		annotateAndSplit(spansByEntry, startEntry, endEntry);
+		annotateAndSplit(startEntry, endEntry);
 	}
 
-	private Span chooseFixedSpan(List<Span>[] spansByEntry, int start, int end) {
-		BitSet fixedEntries = new BitSet(spansByEntry.length);
-		for (int i = start; i < end; i++) {
-			fixedEntries.set(i, spansByEntry[i].size() == 1);
-		}
+	private Span chooseFixedSpan(int start, int end) {
+		BitSet fixedEntries = getFixedEntries(start, end);
 
 		int fixedEntry = chooseFixedEntry(fixedEntries);
 		
@@ -201,6 +193,14 @@ public class Untokenizer {
 			
 			return entry;
 		}
+	}
+
+	private BitSet getFixedEntries(int start, int end) {
+		BitSet fixedEntries = new BitSet(spansByEntry.length);
+		for (int i = start; i < end; i++) {
+			fixedEntries.set(i, spansByEntry[i].size() == 1);
+		}
+		return fixedEntries;
 	}
 
 }
