@@ -25,29 +25,54 @@ public class DamerauLevenshteinTextMatcher implements TextMatcher {
 		public DamerauLevenshteinTextMatcher create(String text) {
 			return new DamerauLevenshteinTextMatcher(text, threshold, caseSensitive, wordBoundaryCheck);
 		}
+		
+		public DamerauLevenshteinTextMatcher create(String text, int from, int to) {
+			return new DamerauLevenshteinTextMatcher(text, from, to, threshold, caseSensitive, wordBoundaryCheck);
+		}
 	}
 	
 	private final char[] text;
+	private final int from;
+	private final int to;
+
 	private final int threshold;
 	private final boolean caseSensitive;
 	private final boolean wordBoundaryCheck;
 
 	public DamerauLevenshteinTextMatcher(String text) {
-		this(text, 1);
+		this(text, 0, text.length());
 	}
 	
 	public DamerauLevenshteinTextMatcher(String text, int threshold) {
-		this(text, threshold, false);
+		this(text, 0, text.length(), threshold);
 	}
 
 	public DamerauLevenshteinTextMatcher(String text, int threshold, boolean caseSensitive) {
-		this(text, threshold, caseSensitive, true);
+		this(text, 0, text.length(), threshold, caseSensitive);
 	}
 
 	public DamerauLevenshteinTextMatcher(String text, int threshold, boolean caseSensitive, boolean wordBoundaryCheck) {
+		this(text, 0, text.length(), threshold, caseSensitive, wordBoundaryCheck);
+	}
+
+	public DamerauLevenshteinTextMatcher(String text, int from, int to) {
+		this(text, from, to, 1);
+	}
+	
+	public DamerauLevenshteinTextMatcher(String text, int from, int to, int threshold) {
+		this(text, from, to, threshold, false);
+	}
+
+	public DamerauLevenshteinTextMatcher(String text, int from, int to, int threshold, boolean caseSensitive) {
+		this(text, from, to, threshold, caseSensitive, true);
+	}
+
+	public DamerauLevenshteinTextMatcher(String text, int from, int to, int threshold, boolean caseSensitive, boolean wordBoundaryCheck) {
+		this.text = text.toCharArray();
+		this.from = from;
+		this.to = to;
 		this.caseSensitive = caseSensitive;
 		this.wordBoundaryCheck = wordBoundaryCheck;
-		this.text = text.toCharArray();
 		this.threshold = threshold;
 	}
 
@@ -63,7 +88,7 @@ public class DamerauLevenshteinTextMatcher implements TextMatcher {
 			inPoints[i*2 + 3] = inSpans[i].to;
 		}
 		
-		for (int k = 0; k < text.length; k++) {
+		for (int k = from; k < to; k++) {
 			int[] outPoints = match(k, key, inPoints);
 			if (outPoints != null) {
 				Span[] outSpans = new Span[inSpans.length];
@@ -90,15 +115,15 @@ public class DamerauLevenshteinTextMatcher implements TextMatcher {
 		
 		AdaptativeDamerauLevenshteinDistance dl = new AdaptativeDamerauLevenshteinDistance(toLowerCase(toMatch).toCharArray());
 		
-		while (k < text.length && dl.getDistance() > 0) {
+		while (k < to && dl.getDistance() > 0) {
 			if (isWhitespace(text[k])) {
 				dl.append('=');
 				k++;
-				while (k < text.length && isWhitespace(text[k])) {
+				while (k < to && isWhitespace(text[k])) {
 					// idealmente seria Integer.MAX_VALUE em vez de text.length*2
 					// porém estava dando overflow nos cálculos internos do Damerau-Levenshtein
 					// e os custos ficavam negativos
-					dl.append(text.length*2, text.length*2, text.length*2, 0, text.length*2, ' ');
+					dl.append(to*2, to*2, to*2, 0, to*2, ' ');
 					k++;
 				}
 			} else {
@@ -189,7 +214,7 @@ public class DamerauLevenshteinTextMatcher implements TextMatcher {
 	}
 
 	private boolean isNeitherWhitespaceNorWordBoundary(int k) {
-		return (k >= 0 && k < text.length) && !(isWhitespace(text[k]) || isWordBoundary(text[k]));
+		return (k >= from && k < to) && !(isWhitespace(text[k]) || isWordBoundary(text[k]));
 	}
 	
 	private static boolean isWordBoundary(char c) {

@@ -42,13 +42,32 @@ public class DamerauLevenshteinTextMatcherUnitTest {
 		matcher = new DamerauLevenshteinTextMatcher(PRE_TEXTO + "Devido  às   quais" + POS_TEXTO);
 		
 		Set<Match> matches = matcher.matchKey("Devido=às=quais", span(0, "Devido=à".length(), 0), span("Devido=".length(), "Devido=às=quais".length(), 1));
-		System.out.println(matches);
 		
 		assertThat(matches.size(), is(equalTo(1)));
 		assertThat(matches, hasItems(
 				match(PRE_TEXTO.length(), PRE_TEXTO.length() + "Devido  às   quais".length(),
 						span(PRE_TEXTO.length(), PRE_TEXTO.length() + "Devido  à".length(), 0),
 						span(PRE_TEXTO.length() + "Devido  ".length(), PRE_TEXTO.length() + "Devido  às   quais".length(), 1)
+					)
+			));
+	}
+
+	@Test
+	public void testMatchKeyWithRange() throws Exception {
+		final String PRE_TEXTO_RESOLVIDO = "< texto já resolvido usando Devido às quais > ";
+		final String POS_TEXTO_RESOLVIDO = "< texto já resolvido usando Devido às quais > ";
+		
+		matcher = new DamerauLevenshteinTextMatcher(PRE_TEXTO_RESOLVIDO + "Devido  às   quais" + POS_TEXTO_RESOLVIDO,
+				PRE_TEXTO_RESOLVIDO.length(), PRE_TEXTO_RESOLVIDO.length() + "Devido  às   quais".length()
+			);
+		
+		Set<Match> matches = matcher.matchKey("Devido=às=quais", span(0, "Devido=à".length(), 0), span("Devido=".length(), "Devido=às=quais".length(), 1));
+		
+		assertThat(matches.size(), is(equalTo(1)));
+		assertThat(matches, hasItems(
+				match(PRE_TEXTO_RESOLVIDO.length(), PRE_TEXTO_RESOLVIDO.length() + "Devido  às   quais".length(),
+						span(PRE_TEXTO_RESOLVIDO.length(), PRE_TEXTO_RESOLVIDO.length() + "Devido  à".length(), 0),
+						span(PRE_TEXTO_RESOLVIDO.length() + "Devido  ".length(), PRE_TEXTO_RESOLVIDO.length() + "Devido  às   quais".length(), 1)
 					)
 			));
 	}
