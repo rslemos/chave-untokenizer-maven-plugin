@@ -104,6 +104,7 @@ public class Untokenizer {
 				try {
 					Match match = Match.match(pos, pos, br.eti.rslemos.nlp.corpora.chave.parser.Span.span(pos, pos, entry));
 					spansByEntry[entry].addAll(match.getSpans());
+					fixedEntries.set(entry);
 					match.apply(originalMarkups, cg);
 				} catch (InvalidOffsetException e) {
 					throw new RuntimeException(e);
