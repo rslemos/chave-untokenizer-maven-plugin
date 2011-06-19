@@ -14,6 +14,7 @@ public class DamerauLevenshteinTextMatcher implements TextMatcher {
 	private final char[] text;
 	private final int threshold;
 	private final boolean caseSensitive;
+	private final boolean wordBoundaryCheck;
 
 	public DamerauLevenshteinTextMatcher(String text) {
 		this(text, 1);
@@ -24,7 +25,12 @@ public class DamerauLevenshteinTextMatcher implements TextMatcher {
 	}
 
 	public DamerauLevenshteinTextMatcher(String text, int threshold, boolean caseSensitive) {
+		this(text, threshold, caseSensitive, true);
+	}
+
+	public DamerauLevenshteinTextMatcher(String text, int threshold, boolean caseSensitive, boolean wordBoundaryCheck) {
 		this.caseSensitive = caseSensitive;
+		this.wordBoundaryCheck = wordBoundaryCheck;
 		this.text = text.toCharArray();
 		this.threshold = threshold;
 	}
@@ -60,7 +66,7 @@ public class DamerauLevenshteinTextMatcher implements TextMatcher {
 		int k = k0;
 		int threshold = toMatch.length() > 1 ? this.threshold : 0;
 		
-		if (isNeitherWhitespaceNorWordBoundary(k - 1) && !isWordBoundary(toMatch.charAt(0)))
+		if (wordBoundaryCheck && isNeitherWhitespaceNorWordBoundary(k - 1) && !isWordBoundary(toMatch.charAt(0)))
 			return null;
 
 		int[] outPoints = new int[inPoints.length];
@@ -87,7 +93,10 @@ public class DamerauLevenshteinTextMatcher implements TextMatcher {
 		
 		if (dl.getDistance() > threshold)
 			return null;
-		
+
+		if (wordBoundaryCheck && isNeitherWhitespaceNorWordBoundary(k) && !isWordBoundary(toMatch.charAt(toMatch.length() - 1)))
+			return null;
+
 		AlignOp[] alignment = stuffTransposition(selectBestAlignment(dl.getAlignments()));
 		for (int i = 0; i < alignment.length; i++) {
 			AlignOp op = alignment[i];
@@ -125,9 +134,6 @@ public class DamerauLevenshteinTextMatcher implements TextMatcher {
 			outPoints[i] += k0;
 		}
 		
-		if (isNeitherWhitespaceNorWordBoundary(k) && !isWordBoundary(toMatch.charAt(toMatch.length() - 1)))
-			return null;
-
 		return outPoints;
 	}
 

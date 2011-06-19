@@ -114,4 +114,20 @@ public class DamerauLevenshteinTextMatcherUnitTest {
 					)
 			));
 	}
+	
+	@Test
+	public void testWordBoundaryCheckOff() throws Exception {
+		matcher = new DamerauLevenshteinTextMatcher("43min20", 0, false, false);
+		
+		Set<Match> matches;
+		
+		matches = matcher.matchKey("43", span(0, "43".length(), 0));
+		
+		assertThat(matches.size(), is(equalTo(1)));
+		assertThat(matches, hasItems(
+				match(0, "43".length(),
+						span(0, "43".length(), 0)
+					)
+			));
+	}
 }
