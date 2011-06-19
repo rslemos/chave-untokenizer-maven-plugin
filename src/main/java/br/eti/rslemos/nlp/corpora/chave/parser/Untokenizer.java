@@ -81,6 +81,15 @@ public class Untokenizer {
 		annotateAndSplit(0, spansByEntry.length);
 
 		coverNewLines();
+
+		BitSet fixedEntries = getFixedEntries(0, spansByEntry.length);
+		
+		int entry = fixedEntries.nextClearBit(0);
+		
+		while (entry >= 0 && entry < spansByEntry.length) {
+			debugUncoveredEntry(entry);
+			entry = fixedEntries.nextClearBit(entry+1);
+		}
 	}
 
 	private void coverNewLines() {
@@ -150,6 +159,12 @@ public class Untokenizer {
 			splitAndRecurse(spansByEntry, start, spans[i].entry, from, spans[i].from);
 			from = spans[i].to;
 			start = spans[i].entry + 1;
+			
+			// garante que a tabela vai possuir apenas o span que já foi commitado
+			// nos casos normais não faz diferença, mas nas contrações, garante que todos
+			// os spans do conjunto fiquem com contagem 1
+			spansByEntry[spans[i].entry].clear();
+			spansByEntry[spans[i].entry].add(spans[i]);
 		}
 		
 		splitAndRecurse(spansByEntry, start, end, from, text.length());
