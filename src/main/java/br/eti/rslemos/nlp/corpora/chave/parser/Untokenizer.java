@@ -1,134 +1,206 @@
 package br.eti.rslemos.nlp.corpora.chave.parser;
 
+import static br.eti.rslemos.nlp.corpora.chave.parser.CGEntry.onlyKeys;
+import gate.AnnotationSet;
 import gate.Document;
 import gate.GateConstants;
+import gate.corpora.DocumentContentImpl;
+import gate.corpora.DocumentImpl;
+import gate.util.InvalidOffsetException;
 
-import java.io.IOException;
-import java.util.Collections;
-import java.util.Formatter;
+import java.util.ArrayList;
+import java.util.BitSet;
 import java.util.Iterator;
-import java.util.LinkedHashSet;
 import java.util.List;
 import java.util.Set;
 
+import br.eti.rslemos.nlp.corpora.chave.parser.Match.Span;
 
 
 public class Untokenizer {
-	private static final Formatter FORMATTER = new Formatter();
 
-	public Document parse(List<CGEntry> cg, Document document) throws IOException, ParserException {
-		MatchStrategy[] strategies2 = {
-				new DirectMatchStrategy(),
-				new EncliticMatchStrategy(),
-				new ContractionDeMatchStrategy(),
-				new ContractionEmMatchStrategy(),
-				new ContractionAMatchStrategy(),
-				new ContractionPorMatchStrategy(),
-				new ContractionComMatchStrategy(),
-				new QuotesMatchStrategy(),
-				new WhitespaceMatchStrategy(),
-			};
+	private final MatchStrategy[] STRATEGIES = {
+			new DirectMatchStrategy(),
+			new ContractionAMatchStrategy(),
+			new ContractionComMatchStrategy(),
+			new ContractionDeMatchStrategy(),
+			new ContractionEmMatchStrategy(),
+			new ContractionParaMatchStrategy(),
+			new ContractionPorMatchStrategy(),
+			new EncliticMatchStrategy(),
+			new NewLineMatchStrategy(),
+		};
 
-		MatchStrategy[] strategies = {
-				new OldNewLineMatchStrategy(),
-				//new DamerauLevenshteinMatchStrategy(1),
-			};
+	private AnnotationSet originalMarkups;
+	private List<CGEntry> cg;
+	private Document document;
+	private String text;
+	private List<String> cgKeys;
 
-		List<CGEntry> cg1 = Collections.unmodifiableList(cg);
-		int i = 0;
-		
-		final String buffer = document.getContent().toString();
-		int k = 0;
-
-		Set<Match> mementos2 = new LinkedHashSet<Match>();
-		for (MatchStrategy strategy : strategies2) {
-			strategy.setData(new DamerauLevenshteinTextMatcher(buffer), CGEntry.onlyKeys(cg1));
-			mementos2.addAll(strategy.matchAll());
-		}
-
-outer:
-		while (i < cg1.size()) {
-			try {
-				Set<Match> mementos = new LinkedHashSet<Match>(strategies.length);
-
-				String substring = buffer.substring(k);
-				List<String> onlyKeys = CGEntry.onlyKeys(cg1.subList(i, cg1.size()));
-				
-				for (MatchStrategy strategy : strategies) {
-					strategy.setData(new DamerauLevenshteinTextMatcher(substring), onlyKeys);
-					mementos.addAll(adjust(keepFor(strategy.matchAll(), k, 0), k, i));
-				}
-
-				mementos.addAll(keepFor(mementos2, k, i));
-				
-				if (mementos.size() > 0) {
-					int nextChar = Integer.MAX_VALUE;
-					for (Iterator<Match> iterator = mementos.iterator(); iterator.hasNext();) {
-						Match memento = iterator.next();
-						if (memento.getSkipLength() >= k)
-							nextChar = Math.min(nextChar, memento.getSkipLength());
-						
-						if (memento.getSkipLength() != k)
-							iterator.remove();
-					}
-					
-					if (nextChar == k) {
-						Match best = null;
-						int bestLength = -1;
-						int bestEntries = -1;
-						for (Match memento : mementos) {
-							if (memento.getMatchLength() > bestLength || (memento.getMatchLength() == bestLength && memento.getSpans().size() > bestEntries)) {
-								best = memento;
-								bestLength = best.getMatchLength();
-								bestEntries = best.getSpans().size();
-							}
-						}
-						if (best != null) {
-							best.apply(document.getAnnotations(GateConstants.ORIGINAL_MARKUPS_ANNOT_SET_NAME), cg1);
-							k += best.getMatchLength();
-							i += best.getConsume();
-							continue outer;
-						}
-					} else if (nextChar < Integer.MAX_VALUE){
-						k = nextChar;
-						continue;
-					}
-				}
-
-			} catch (Exception e) {
-				e.printStackTrace();
-			}
-			
-			FORMATTER.format("%d-th entry: %s; Dump remaining buffer: %s\n", i, cg1.get(i).getKey(), buffer.substring(k));
-			throw new ParserException(FORMATTER.out().toString());
-		}
-		
-		return document;
-	}
-
-	private Set<Match> adjust(Set<Match> keepFor, int k, int i) {
-		Set<Match> result = new LinkedHashSet<Match>();
-		
-		for (Match match : keepFor) {
-			result.add(match.adjust(k, i));
-		}
-		
+	public Document createDocument(String text) {
+		Document result = new DocumentImpl();
+		result.setContent(new DocumentContentImpl(text));
 		return result;
 	}
 
-	private Set<Match> keepFor(Set<Match> matches, int k, int i) {
-		matches = new LinkedHashSet<Match>(matches);
-		for (Iterator<Match> iterator = matches.iterator(); iterator.hasNext();) {
-			Match match = iterator.next();
-			int minEntry = Integer.MAX_VALUE;
-			for (Span span : match.getSpans()) {
-				minEntry = Math.min(minEntry, span.entry);
-			}
-			
-			if (minEntry != i && match.getSpans().size() > 0)
-				iterator.remove();
+	public void untokenize(Document document, List<CGEntry> cg) {
+		this.document = document;
+		this.cg = cg;
+
+		originalMarkups = document.getAnnotations(GateConstants.ORIGINAL_MARKUPS_ANNOT_SET_NAME);
+
+		text = document.getContent().toString();
+		cgKeys = onlyKeys(cg);
+		
+		untokenize();
+	}
+
+	private void untokenize() {
+		
+		@SuppressWarnings("unchecked")
+		final List<Span>[] spansByEntry = new List[cgKeys.size()];
+		
+		for (int i = 0; i < spansByEntry.length; i++) {
+			spansByEntry[i] = new ArrayList<Span>();
 		}
 		
-		return matches;
+		final TextMatcher textMatcher = new DamerauLevenshteinTextMatcher(text, 0);
+		
+		for (MatchStrategy strategy : STRATEGIES) {
+			strategy.setData(textMatcher, cgKeys);
+			Set<Match> matches = strategy.matchAll();
+			
+			for (Match match : matches) {
+				for (Span span : match.getSpans()) {
+					spansByEntry[span.entry].add(span);
+				}
+			}
+		}
+		
+		annotateAndSplit(spansByEntry, 0, spansByEntry.length);
+
+		BitSet fixedEntries = new BitSet(spansByEntry.length);
+		for (int i = 0; i < spansByEntry.length; i++) {
+			fixedEntries.set(i, spansByEntry[i].size() == 1);
+		}
+		
+		int entry = fixedEntries.nextClearBit(0);
+		
+		while (entry >= 0 && entry < spansByEntry.length) {
+			//debugUncoveredEntry(spansByEntry, entry);
+
+			if ("$¶".equals(cgKeys.get(entry))) {
+				int pos = entry > 0 ? spansByEntry[entry - 1].get(0).to : 0;
+				
+				try {
+					Match match = Match.match(pos, pos, br.eti.rslemos.nlp.corpora.chave.parser.Span.span(pos, pos, entry));
+					spansByEntry[entry].addAll(match.getSpans());
+					match.apply(originalMarkups, cg);
+				} catch (InvalidOffsetException e) {
+					throw new RuntimeException(e);
+				}
+			}
+			
+			entry = fixedEntries.nextClearBit(entry+1);
+		}
+		
 	}
+
+	private void debugUncoveredEntry(final List<Span>[] spansByEntry, int entry) {
+		int from = 0;
+		int to = text.length();
+		
+		if (entry > 0) {
+			System.err.printf("%s\n", spansByEntry[entry - 1]);
+			from = spansByEntry[entry - 1].get(0).to;
+		}
+		
+		System.err.printf("%d. %s (%s): %s\n", entry, cg.get(entry).getKey(), cg.get(entry).getValue(), spansByEntry[entry]);
+		
+		if (entry + 1 < spansByEntry.length) {
+			System.err.printf("%s\n", spansByEntry[entry + 1]);
+			to = spansByEntry[entry + 1].get(0).from;
+		}
+		
+		System.err.printf("Text left to parse: '%s'\n", text.substring(from, to));
+	}
+
+	private void annotateAndSplit(List<Span>[] spansByEntry, int start, int end) {
+		if (end <= start)
+			return;
+		
+		Span fixedSpan = chooseFixedSpan(spansByEntry, start, end);
+		if (fixedSpan == null) {
+			//System.err.printf("No fixed span in [%d, %d[\n", start, end);
+			return;
+		}
+		
+		Match fixedFullMatch = fixedSpan.getMatch();
+		
+		try {
+			fixedFullMatch.apply(originalMarkups, cg);
+		} catch (InvalidOffsetException e) {
+			throw new RuntimeException(e);
+		}
+		
+		Span[] spans = fixedFullMatch.getSpans().toArray(new Span[fixedFullMatch.getConsume()]);
+		
+		int from = 0;
+		
+		for (int i = 0; i < spans.length; i++) {
+			splitAndRecurse(spansByEntry, start, spans[i].entry, from, spans[i].from);
+			from = spans[i].to;
+			start = spans[i].entry + 1;
+		}
+		
+		splitAndRecurse(spansByEntry, start, end, from, text.length());
+	}
+
+	private void splitAndRecurse(List<Span>[] spansByEntry, int startEntry, int endEntry, int from, int to) {
+		for (int i = startEntry; i < endEntry; i++) {
+			for (Iterator<Span> iterator = spansByEntry[i].iterator(); iterator.hasNext();) {
+				Span span = iterator.next();
+				if (span.to > to || span.from < from)
+					iterator.remove();
+			}
+		}
+		
+		annotateAndSplit(spansByEntry, startEntry, endEntry);
+	}
+
+	private Span chooseFixedSpan(List<Span>[] spansByEntry, int start, int end) {
+		BitSet fixedEntries = new BitSet(spansByEntry.length);
+		for (int i = start; i < end; i++) {
+			fixedEntries.set(i, spansByEntry[i].size() == 1);
+		}
+
+		int fixedEntry = chooseFixedEntry(fixedEntries);
+		
+		if (fixedEntry < 0)
+			return null;
+		else
+			return spansByEntry[fixedEntry].get(0);
+	}
+
+	private int chooseFixedEntry(BitSet fixedEntries) {
+		int cardinality = fixedEntries.cardinality();
+		
+		if (cardinality == 1)
+			return fixedEntries.nextSetBit(0);
+		else if (cardinality == 0)
+			return -1;
+		else { // cardinality >= 2
+			int median = cardinality/2;
+			
+			int entry = fixedEntries.nextSetBit(0);
+			
+			while (entry >= 0 && median > 0) {
+				median--;
+				entry = fixedEntries.nextSetBit(entry+1);
+			}
+			
+			return entry;
+		}
+	}
+
 }

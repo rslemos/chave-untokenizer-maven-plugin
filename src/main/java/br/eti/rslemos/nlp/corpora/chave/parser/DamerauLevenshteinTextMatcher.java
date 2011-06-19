@@ -10,7 +10,6 @@ import java.util.LinkedHashSet;
 import java.util.Set;
 
 import br.eti.rslemos.nlp.corpora.chave.parser.AdaptativeDamerauLevenshteinDistance.AlignOp;
-import static br.eti.rslemos.nlp.corpora.chave.parser.Match.match;
 
 public class DamerauLevenshteinTextMatcher implements TextMatcher {
 	private final char[] text;
@@ -161,24 +160,5 @@ public class DamerauLevenshteinTextMatcher implements TextMatcher {
 	
 	private static boolean isWordBoundary(char c) {
 		return !Character.isLetterOrDigit(c);
-	}
-
-	@Deprecated
-	public char charAt(int i) {
-		return text[i];
-	}
-
-	@Deprecated
-	void getChars(char[] cs) {
-		int length = cs.length;
-		if (length > text.length) {
-		    throw new StringIndexOutOfBoundsException(length);
-		}
-		System.arraycopy(text, 0, cs, 0, length);
-	}
-
-	@Deprecated
-	char[] getChars() {
-		return text.clone();
 	}
 }
