@@ -30,7 +30,7 @@ public class Untokenizer {
 			};
 
 		MatchStrategy[] strategies = {
-				new NewLineMatchStrategy(),
+				new OldNewLineMatchStrategy(),
 				//new DamerauLevenshteinMatchStrategy(1),
 			};
 

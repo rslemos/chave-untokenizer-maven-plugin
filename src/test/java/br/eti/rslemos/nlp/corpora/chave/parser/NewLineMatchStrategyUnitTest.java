@@ -18,20 +18,4 @@ public class NewLineMatchStrategyUnitTest extends AbstractMatchStrategyUnitTest 
 		
 		verifyMatches(match(0, 1, span(0, 1, 0)));
 	}
-
-	@Test
-	public void testOptionalNewLine() throws Exception {
-		cg.add("$¶");
-		runOver("abcd");
-		
-		verifyMatches(match(0, 0, span(0, 0, 0)));
-	}
-
-	@Test
-	public void testEmptyInput() throws Exception {
-		cg.add("$¶");
-		runOver("");
-		
-		verifyMatches(match(0, 0, span(0, 0, 0)));
-	}
 }
