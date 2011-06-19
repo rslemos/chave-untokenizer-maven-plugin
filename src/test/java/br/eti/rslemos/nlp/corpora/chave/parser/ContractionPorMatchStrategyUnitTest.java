@@ -11,8 +11,9 @@ public class ContractionPorMatchStrategyUnitTest extends AbstractMatchStrategyUn
 		super(new ContractionPorMatchStrategy());
 	}
 	
+	// por + x
 	@Test
-	public void testContraction_de_o() throws Exception {
+	public void testContraction_por_o() throws Exception {
 		cg.add("por");
 		cg.add("o");
 		
@@ -24,7 +25,7 @@ public class ContractionPorMatchStrategyUnitTest extends AbstractMatchStrategyUn
 	}
 	
 	@Test
-	public void testContraction_de_a() throws Exception {
+	public void testContraction_por_a() throws Exception {
 		cg.add("por");
 		cg.add("a");
 		
@@ -36,7 +37,7 @@ public class ContractionPorMatchStrategyUnitTest extends AbstractMatchStrategyUn
 	}
 	
 	@Test
-	public void testContraction_de_os() throws Exception {
+	public void testContraction_por_os() throws Exception {
 		cg.add("por");
 		cg.add("os");
 		
@@ -48,7 +49,7 @@ public class ContractionPorMatchStrategyUnitTest extends AbstractMatchStrategyUn
 	}
 	
 	@Test
-	public void testContraction_de_as() throws Exception {
+	public void testContraction_por_as() throws Exception {
 		cg.add("por");
 		cg.add("as");
 		
