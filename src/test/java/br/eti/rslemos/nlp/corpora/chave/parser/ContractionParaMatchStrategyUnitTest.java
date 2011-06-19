@@ -233,12 +233,12 @@ public class ContractionParaMatchStrategyUnitTest extends AbstractMatchStrategyU
 	@Test
 	public void testContraction_PARA_O() throws Exception {
 		cg.add("PARA");
-		cg.add("o");
+		cg.add("O");
 		
-		runOver("PRo");
+		runOver("PRO");
 		
-		verifyMatches(match(0, "PRo".length(), span(0, "PR".length(), 0), 
-				span("PR".length(), "PRo".length(), 1)
+		verifyMatches(match(0, "PRO".length(), span(0, "PR".length(), 0), 
+				span("PR".length(), "PRO".length(), 1)
 			));
 	}
 	
