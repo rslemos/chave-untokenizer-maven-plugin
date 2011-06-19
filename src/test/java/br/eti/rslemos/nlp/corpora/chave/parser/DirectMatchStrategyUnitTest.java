@@ -98,4 +98,25 @@ public class DirectMatchStrategyUnitTest extends AbstractMatchStrategyUnitTest {
 				match("feit_ ".length()*3, "feit_ ".length()*4 - 1, span("feit_ ".length()*3, "feit_ ".length()*4 - 1, 0))
 			);
 	}
+	
+	//
+	@Test
+	public void testSingleWordDistance1() throws Exception {
+		cg.add("3º.");
+		runOver("3.º");
+		
+		verifyMatches(
+				match(0, 3, span(0, 3, 0))
+			);
+	}
+	
+	@Test
+	public void testDontMatchSingleChar() throws Exception {
+		cg.add("o");
+		runOver("\"");
+		
+		verifyMatches();
+	}
+
+	
 }
