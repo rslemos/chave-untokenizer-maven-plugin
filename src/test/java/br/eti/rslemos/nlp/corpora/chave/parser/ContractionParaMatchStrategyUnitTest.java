@@ -11,6 +11,7 @@ public class ContractionParaMatchStrategyUnitTest extends AbstractMatchStrategyU
 		super(new ContractionParaMatchStrategy());
 	}
 	
+	// para + x
 	@Test
 	public void testContraction_para_o() throws Exception {
 		cg.add("para");
@@ -119,4 +120,221 @@ public class ContractionParaMatchStrategyUnitTest extends AbstractMatchStrategyU
 			));
 	}
 	
+	// Para + x
+	@Test
+	public void testContraction_Para_o() throws Exception {
+		cg.add("Para");
+		cg.add("o");
+		
+		runOver("Pro");
+		
+		verifyMatches(match(0, "Pro".length(), span(0, "Pr".length(), 0), 
+				span("Pr".length(), "Pro".length(), 1)
+			));
+	}
+	
+	@Test
+	public void testContraction_Para_a() throws Exception {
+		cg.add("Para");
+		cg.add("a");
+		
+		runOver("Pra");
+		
+		verifyMatches(match(0, "Pra".length(), span(0, "Pra".length(), 0), 
+				span("Pr".length(), "Pra".length(), 1)
+			));
+	}
+	
+	@Test
+	public void testContraction_Para_os() throws Exception {
+		cg.add("Para");
+		cg.add("os");
+		
+		runOver("Pros");
+		
+		verifyMatches(match(0, "Pros".length(), span(0, "Pr".length(), 0), 
+				span("Pr".length(), "Pros".length(), 1)
+			));
+	}
+	
+	@Test
+	public void testContraction_Para_as() throws Exception {
+		cg.add("Para");
+		cg.add("as");
+		
+		runOver("Pras");
+		
+		verifyMatches(match(0, "Pras".length(), span(0, "Pra".length(), 0), 
+				span("Pr".length(), "Pras".length(), 1)
+			));
+	}
+
+	@Test
+	public void testContraction_Para_aquele() throws Exception {
+		cg.add("Para");
+		cg.add("aquele");
+		
+		runOver("Praquele");
+		
+		verifyMatches(match(0, "Praquele".length(), span(0, "Pra".length(), 0), 
+				span("Pr".length(), "Praquele".length(), 1)
+			));
+	}
+	
+	@Test
+	public void testContraction_Para_aquela() throws Exception {
+		cg.add("Para");
+		cg.add("aquela");
+		
+		runOver("Praquela");
+		
+		verifyMatches(match(0, "Praquela".length(), span(0, "Pra".length(), 0), 
+				span("Pr".length(), "Praquela".length(), 1)
+			));
+	}
+	
+	@Test
+	public void testContraction_Para_aqueles() throws Exception {
+		cg.add("Para");
+		cg.add("aqueles");
+		
+		runOver("Praqueles");
+		
+		verifyMatches(match(0, "Praqueles".length(), span(0, "Pra".length(), 0), 
+				span("Pr".length(), "Praqueles".length(), 1)
+			));
+	}
+	
+	@Test
+	public void testContraction_Para_aquelas() throws Exception {
+		cg.add("Para");
+		cg.add("aquelas");
+		
+		runOver("Praquelas");
+		
+		verifyMatches(match(0, "Praquelas".length(), span(0, "Pra".length(), 0), 
+				span("Pr".length(), "Praquelas".length(), 1)
+			));
+	}
+	
+	@Test
+	public void testContraction_Para_aquilo() throws Exception {
+		cg.add("Para");
+		cg.add("aquilo");
+		
+		runOver("Praquilo");
+		
+		verifyMatches(match(0, "Praquilo".length(), span(0, "Pra".length(), 0), 
+				span("Pr".length(), "Praquilo".length(), 1)
+			));
+	}
+	
+	// PARA + X
+	@Test
+	public void testContraction_PARA_O() throws Exception {
+		cg.add("PARA");
+		cg.add("o");
+		
+		runOver("PRo");
+		
+		verifyMatches(match(0, "PRo".length(), span(0, "PR".length(), 0), 
+				span("PR".length(), "PRo".length(), 1)
+			));
+	}
+	
+	@Test
+	public void testContraction_PARA_A() throws Exception {
+		cg.add("PARA");
+		cg.add("A");
+		
+		runOver("PRA");
+		
+		verifyMatches(match(0, "PRA".length(), span(0, "PRA".length(), 0), 
+				span("PR".length(), "PRA".length(), 1)
+			));
+	}
+	
+	@Test
+	public void testContraction_PARA_OS() throws Exception {
+		cg.add("PARA");
+		cg.add("OS");
+		
+		runOver("PROS");
+		
+		verifyMatches(match(0, "PROS".length(), span(0, "PR".length(), 0), 
+				span("PR".length(), "PROS".length(), 1)
+			));
+	}
+	
+	@Test
+	public void testContraction_PARA_AS() throws Exception {
+		cg.add("PARA");
+		cg.add("AS");
+		
+		runOver("PRAS");
+		
+		verifyMatches(match(0, "PRAS".length(), span(0, "PRA".length(), 0), 
+				span("PR".length(), "PRAS".length(), 1)
+			));
+	}
+
+	@Test
+	public void testContraction_PARA_AQUELE() throws Exception {
+		cg.add("PARA");
+		cg.add("AQUELE");
+		
+		runOver("PRAQUELE");
+		
+		verifyMatches(match(0, "PRAQUELE".length(), span(0, "PRa".length(), 0), 
+				span("PR".length(), "PRAQUELE".length(), 1)
+			));
+	}
+	
+	@Test
+	public void testContraction_PARA_AQUELA() throws Exception {
+		cg.add("PARA");
+		cg.add("AQUELA");
+		
+		runOver("PRAQUELA");
+		
+		verifyMatches(match(0, "PRAQUELA".length(), span(0, "PRa".length(), 0), 
+				span("PR".length(), "PRAQUELA".length(), 1)
+			));
+	}
+	
+	@Test
+	public void testContraction_PARA_AQUELES() throws Exception {
+		cg.add("PARA");
+		cg.add("AQUELES");
+		
+		runOver("PRAQUELES");
+		
+		verifyMatches(match(0, "PRAQUELES".length(), span(0, "PRa".length(), 0), 
+				span("PR".length(), "PRAQUELES".length(), 1)
+			));
+	}
+	
+	@Test
+	public void testContraction_PARA_AQUELAS() throws Exception {
+		cg.add("PARA");
+		cg.add("AQUELAS");
+		
+		runOver("PRAQUELAS");
+		
+		verifyMatches(match(0, "PRAQUELAS".length(), span(0, "PRa".length(), 0), 
+				span("PR".length(), "PRAQUELAS".length(), 1)
+			));
+	}
+	
+	@Test
+	public void testContraction_PARA_AQUILO() throws Exception {
+		cg.add("PARA");
+		cg.add("AQUILO");
+		
+		runOver("PRAQUILO");
+		
+		verifyMatches(match(0, "PRAQUILO".length(), span(0, "PRa".length(), 0), 
+				span("PR".length(), "PRAQUILO".length(), 1)
+			));
+	}
 }
