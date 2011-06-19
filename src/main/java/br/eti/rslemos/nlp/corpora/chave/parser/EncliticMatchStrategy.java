@@ -19,10 +19,10 @@ public class EncliticMatchStrategy extends AbstractMatchStrategy {
 		cache = new LinkedHashMap<String, Set<Match>>();
 	}
 
-	public Set<Match> matchAll() {
+	public Set<Match> matchAll(int start, int end) {
 		Set<Match> result = new LinkedHashSet<Match>();
 		
-		for (int i = 0; i < cg.size() - 1; i++) {
+		for (int i = start; i < end - 1; i++) {
 			String key0 = cg.get(i).toLowerCase();
 			String key1 = cg.get(i + 1).toLowerCase();
 			

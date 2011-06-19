@@ -50,10 +50,10 @@ public abstract class AbstractContractionMatchStrategy extends AbstractMatchStra
 		cache = new HashMap<String, Set<Match>>();
 	}
 
-	public Set<Match> matchAll() {
+	public Set<Match> matchAll(int start, int end) {
 		Set<Match> result = new LinkedHashSet<Match>();
 		
-		for (int i = 0; i < cg.size() - 1; i++) {
+		for (int i = start; i < end - 1; i++) {
 			addMatches(i, result);
 		}
 		

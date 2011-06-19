@@ -1,6 +1,7 @@
 package br.eti.rslemos.nlp.corpora.chave.parser;
 
 import java.util.List;
+import java.util.Set;
 
 public abstract class AbstractMatchStrategy implements MatchStrategy {
 
@@ -10,5 +11,9 @@ public abstract class AbstractMatchStrategy implements MatchStrategy {
 	public void setData(TextMatcher matcher, List<String> cg) {
 		this.matcher = matcher;
 		this.cg = cg;
+	}
+
+	public Set<Match> matchAll() {
+		return matchAll(0, cg.size());
 	}
 }

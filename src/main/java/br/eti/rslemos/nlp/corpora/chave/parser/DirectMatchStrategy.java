@@ -19,10 +19,10 @@ public class DirectMatchStrategy extends AbstractMatchStrategy {
 		cache = new LinkedHashMap<String, Set<Match>>();
 	}
 
-	public Set<Match> matchAll() {
+	public Set<Match> matchAll(int start, int end) {
 		Set<Match> matches = new LinkedHashSet<Match>();
 
-		for (int i = 0; i < cg.size(); i++) {
+		for (int i = start; i < end; i++) {
 			addAllMatches(i, matches);
 		}
 		

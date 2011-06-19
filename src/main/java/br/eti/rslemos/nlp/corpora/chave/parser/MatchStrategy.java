@@ -7,4 +7,6 @@ public interface MatchStrategy {
 	void setData(TextMatcher matcher, List<String> cg);
 	
 	Set<Match> matchAll();
+
+	Set<Match> matchAll(int start, int end);
 }
