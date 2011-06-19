@@ -10,7 +10,8 @@ public class ContractionDeMatchStrategyUnitTest extends AbstractMatchStrategyUni
 	public ContractionDeMatchStrategyUnitTest() {
 		super(new ContractionDeMatchStrategy());
 	}
-	
+
+	// de + x
 	@Test
 	public void testContraction_de_o() throws Exception {
 		cg.add("de");
@@ -341,5 +342,607 @@ public class ContractionDeMatchStrategyUnitTest extends AbstractMatchStrategyUni
 						span(10, 11, 5)
 					)
 			);
+	}
+
+	// De + x
+	@Test
+	public void testContraction_De_o() throws Exception {
+		cg.add("De");
+		cg.add("o");
+		
+		runOver("Do");
+		
+		verifyMatches(match(0, 2, span(0, 1, 0), 
+				span(1, 2, 1)
+			));
+	}
+	
+	@Test
+	public void testContraction_De_a() throws Exception {
+		cg.add("De");
+		cg.add("a");
+		
+		runOver("Da");
+		
+		verifyMatches(match(0, 2, span(0, 1, 0), 
+				span(1, 2, 1)
+			));
+	}
+	
+	@Test
+	public void testContraction_De_os() throws Exception {
+		cg.add("De");
+		cg.add("os");
+		
+		runOver("Dos");
+		
+		verifyMatches(match(0, 3, span(0, 1, 0), 
+				span(1, 3, 1)
+			));
+	}
+	
+	@Test
+	public void testContraction_De_as() throws Exception {
+		cg.add("De");
+		cg.add("as");
+		
+		runOver("Das");
+		
+		verifyMatches(match(0, 3, span(0, 1, 0), 
+				span(1, 3, 1)
+			));
+	}
+
+	@Test
+	public void testContraction_De_este() throws Exception {
+		cg.add("De");
+		cg.add("este");
+		
+		runOver("Deste");
+		
+		verifyMatches(match(0, "Deste".length(), span(0, 1, 0), 
+				span(1, "Deste".length(), 1)
+			));
+	}
+	
+	@Test
+	public void testContraction_De_esse() throws Exception {
+		cg.add("De");
+		cg.add("esse");
+		
+		runOver("Desse");
+		
+		verifyMatches(match(0, "Desse".length(), span(0, 1, 0), 
+				span(1, "Desse".length(), 1)
+			));
+	}
+	
+	@Test
+	public void testContraction_De_esta() throws Exception {
+		cg.add("De");
+		cg.add("esta");
+		
+		runOver("Desta");
+		
+		verifyMatches(match(0, "Desta".length(), span(0, 1, 0), 
+				span(1, "Desta".length(), 1)
+			));
+	}
+	
+	@Test
+	public void testContraction_De_essa() throws Exception {
+		cg.add("De");
+		cg.add("essa");
+		
+		runOver("Dessa");
+		
+		verifyMatches(match(0, "Dessa".length(), span(0, 1, 0), 
+				span(1, "Dessa".length(), 1)
+			));
+	}
+	
+	@Test
+	public void testContraction_De_estes() throws Exception {
+		cg.add("De");
+		cg.add("estes");
+		
+		runOver("Destes");
+		
+		verifyMatches(match(0, "Destes".length(), span(0, 1, 0), 
+				span(1, "Destes".length(), 1)
+			));
+	}
+	
+	@Test
+	public void testContraction_De_esses() throws Exception {
+		cg.add("De");
+		cg.add("esses");
+		
+		runOver("Desses");
+		
+		verifyMatches(match(0, "Desses".length(), span(0, 1, 0), 
+				span(1, "Desses".length(), 1)
+			));
+	}
+	
+	@Test
+	public void testContraction_De_estas() throws Exception {
+		cg.add("De");
+		cg.add("estas");
+		
+		runOver("Destas");
+		
+		verifyMatches(match(0, "Destas".length(), span(0, 1, 0), 
+				span(1, "Destas".length(), 1)
+			));
+	}
+	
+	@Test
+	public void testContraction_De_essas() throws Exception {
+		cg.add("De");
+		cg.add("essas");
+		
+		runOver("Dessas");
+		
+		verifyMatches(match(0, "Dessas".length(), span(0, 1, 0), 
+				span(1, "Dessas".length(), 1)
+			));
+	}
+	
+	@Test
+	public void testContraction_De_isto() throws Exception {
+		cg.add("De");
+		cg.add("isto");
+		
+		runOver("Disto");
+		
+		verifyMatches(match(0, "Disto".length(), span(0, 1, 0), 
+				span(1, "Disto".length(), 1)
+			));
+	}
+	
+	@Test
+	public void testContraction_De_isso() throws Exception {
+		cg.add("De");
+		cg.add("isso");
+		
+		runOver("Disso");
+		
+		verifyMatches(match(0, "Disso".length(), span(0, 1, 0), 
+				span(1, "Disso".length(), 1)
+			));
+	}
+	
+	@Test
+	public void testContraction_De_aquele() throws Exception {
+		cg.add("De");
+		cg.add("aquele");
+		
+		runOver("Daquele");
+		
+		verifyMatches(match(0, "Daquele".length(), span(0, 1, 0), 
+				span(1, "Daquele".length(), 1)
+			));
+	}
+	
+	@Test
+	public void testContraction_De_aquela() throws Exception {
+		cg.add("De");
+		cg.add("aquela");
+		
+		runOver("Daquela");
+		
+		verifyMatches(match(0, "Daquela".length(), span(0, 1, 0), 
+				span(1, "Daquela".length(), 1)
+			));
+	}
+	
+	@Test
+	public void testContraction_De_aqueles() throws Exception {
+		cg.add("De");
+		cg.add("aqueles");
+		
+		runOver("Daqueles");
+		
+		verifyMatches(match(0, "Daqueles".length(), span(0, 1, 0), 
+				span(1, "Daqueles".length(), 1)
+			));
+	}
+	
+	@Test
+	public void testContraction_De_aquelas() throws Exception {
+		cg.add("De");
+		cg.add("aquelas");
+		
+		runOver("Daquelas");
+		
+		verifyMatches(match(0, "Daquelas".length(), span(0, 1, 0), 
+				span(1, "Daquelas".length(), 1)
+			));
+	}
+	
+	@Test
+	public void testContraction_De_aquilo() throws Exception {
+		cg.add("De");
+		cg.add("aquilo");
+		
+		runOver("Daquilo");
+		
+		verifyMatches(match(0, "Daquilo".length(), span(0, 1, 0), 
+				span(1, "Daquilo".length(), 1)
+			));
+	}
+	
+	@Test
+	public void testContraction_De_ele() throws Exception {
+		cg.add("De");
+		cg.add("ele");
+		
+		runOver("Dele");
+		
+		verifyMatches(match(0, "Dele".length(), span(0, 1, 0), 
+				span(1, "Dele".length(), 1)
+			));
+	}
+	
+	@Test
+	public void testContraction_De_ela() throws Exception {
+		cg.add("De");
+		cg.add("ela");
+		
+		runOver("Dela");
+		
+		verifyMatches(match(0, "Dela".length(), span(0, 1, 0), 
+				span(1, "Dela".length(), 1)
+			));
+	}
+	
+	@Test
+	public void testContraction_De_eles() throws Exception {
+		cg.add("De");
+		cg.add("eles");
+		
+		runOver("Deles");
+		
+		verifyMatches(match(0, "Deles".length(), span(0, 1, 0), 
+				span(1, "Deles".length(), 1)
+			));
+	}
+	
+	@Test
+	public void testContraction_De_elas() throws Exception {
+		cg.add("De");
+		cg.add("elas");
+		
+		runOver("Delas");
+		
+		verifyMatches(match(0, "Delas".length(), span(0, 1, 0), 
+				span(1, "Delas".length(), 1)
+			));
+	}
+	
+	@Test
+	public void testContraction_De_aí() throws Exception {
+		cg.add("De");
+		cg.add("aí");
+		
+		runOver("Daí");
+		
+		verifyMatches(match(0, "Daí".length(), span(0, 1, 0), 
+				span(1, "Daí".length(), 1)
+			));
+	}
+	
+	@Test
+	public void testExpressionContraction_Alem_De_isso() throws Exception {
+		cg.add("Além=de");
+		cg.add("isso");
+		
+		runOver("Além disso");
+		
+		verifyMatches(match(0, "Além disso".length(), span(0, "Além d".length(), 0), 
+				span("Além d".length(), "Além disso".length(), 1)
+			));
+	}
+
+	// DE + X
+	@Test
+	public void testContraction_DE_O() throws Exception {
+		cg.add("DE");
+		cg.add("O");
+		
+		runOver("DO");
+		
+		verifyMatches(match(0, 2, span(0, 1, 0), 
+				span(1, 2, 1)
+			));
+	}
+	
+	@Test
+	public void testContraction_DE_A() throws Exception {
+		cg.add("DE");
+		cg.add("A");
+		
+		runOver("DA");
+		
+		verifyMatches(match(0, 2, span(0, 1, 0), 
+				span(1, 2, 1)
+			));
+	}
+	
+	@Test
+	public void testContraction_DE_OS() throws Exception {
+		cg.add("DE");
+		cg.add("OS");
+		
+		runOver("DOS");
+		
+		verifyMatches(match(0, 3, span(0, 1, 0), 
+				span(1, 3, 1)
+			));
+	}
+	
+	@Test
+	public void testContraction_DE_AS() throws Exception {
+		cg.add("DE");
+		cg.add("AS");
+		
+		runOver("DAS");
+		
+		verifyMatches(match(0, 3, span(0, 1, 0), 
+				span(1, 3, 1)
+			));
+	}
+
+	@Test
+	public void testContraction_DE_ESTE() throws Exception {
+		cg.add("DE");
+		cg.add("ESTE");
+		
+		runOver("DESTE");
+		
+		verifyMatches(match(0, "DESTE".length(), span(0, 1, 0), 
+				span(1, "DESTE".length(), 1)
+			));
+	}
+	
+	@Test
+	public void testContraction_DE_ESSE() throws Exception {
+		cg.add("DE");
+		cg.add("ESSE");
+		
+		runOver("DESSE");
+		
+		verifyMatches(match(0, "DESSE".length(), span(0, 1, 0), 
+				span(1, "DESSE".length(), 1)
+			));
+	}
+	
+	@Test
+	public void testContraction_DE_ESTA() throws Exception {
+		cg.add("DE");
+		cg.add("ESTA");
+		
+		runOver("DESTA");
+		
+		verifyMatches(match(0, "DESTA".length(), span(0, 1, 0), 
+				span(1, "DESTA".length(), 1)
+			));
+	}
+	
+	@Test
+	public void testContraction_DE_ESSA() throws Exception {
+		cg.add("DE");
+		cg.add("ESSA");
+		
+		runOver("DESSA");
+		
+		verifyMatches(match(0, "DESSA".length(), span(0, 1, 0), 
+				span(1, "DESSA".length(), 1)
+			));
+	}
+	
+	@Test
+	public void testContraction_DE_ESTES() throws Exception {
+		cg.add("DE");
+		cg.add("ESTES");
+		
+		runOver("DESTES");
+		
+		verifyMatches(match(0, "DESTES".length(), span(0, 1, 0), 
+				span(1, "DESTES".length(), 1)
+			));
+	}
+	
+	@Test
+	public void testContraction_DE_ESSES() throws Exception {
+		cg.add("DE");
+		cg.add("ESSES");
+		
+		runOver("DESSES");
+		
+		verifyMatches(match(0, "DESSES".length(), span(0, 1, 0), 
+				span(1, "DESSES".length(), 1)
+			));
+	}
+	
+	@Test
+	public void testContraction_DE_ESTAS() throws Exception {
+		cg.add("DE");
+		cg.add("ESTAS");
+		
+		runOver("DESTAS");
+		
+		verifyMatches(match(0, "DESTAS".length(), span(0, 1, 0), 
+				span(1, "DESTAS".length(), 1)
+			));
+	}
+	
+	@Test
+	public void testContraction_DE_ESSAS() throws Exception {
+		cg.add("DE");
+		cg.add("ESSAS");
+		
+		runOver("DESSAS");
+		
+		verifyMatches(match(0, "DESSAS".length(), span(0, 1, 0), 
+				span(1, "DESSAS".length(), 1)
+			));
+	}
+	
+	@Test
+	public void testContraction_DE_ISTO() throws Exception {
+		cg.add("DE");
+		cg.add("ISTO");
+		
+		runOver("DISTO");
+		
+		verifyMatches(match(0, "DISTO".length(), span(0, 1, 0), 
+				span(1, "DISTO".length(), 1)
+			));
+	}
+	
+	@Test
+	public void testContraction_DE_ISSO() throws Exception {
+		cg.add("DE");
+		cg.add("ISSO");
+		
+		runOver("DISSO");
+		
+		verifyMatches(match(0, "DISSO".length(), span(0, 1, 0), 
+				span(1, "DISSO".length(), 1)
+			));
+	}
+	
+	@Test
+	public void testContraction_DE_AQUELE() throws Exception {
+		cg.add("DE");
+		cg.add("AQUELE");
+		
+		runOver("DAQUELE");
+		
+		verifyMatches(match(0, "DAQUELE".length(), span(0, 1, 0), 
+				span(1, "DAQUELE".length(), 1)
+			));
+	}
+	
+	@Test
+	public void testContraction_DE_AQUELA() throws Exception {
+		cg.add("DE");
+		cg.add("AQUELA");
+		
+		runOver("DAQUELA");
+		
+		verifyMatches(match(0, "DAQUELA".length(), span(0, 1, 0), 
+				span(1, "DAQUELA".length(), 1)
+			));
+	}
+	
+	@Test
+	public void testContraction_DE_AQUELES() throws Exception {
+		cg.add("DE");
+		cg.add("AQUELES");
+		
+		runOver("DAQUELES");
+		
+		verifyMatches(match(0, "DAQUELES".length(), span(0, 1, 0), 
+				span(1, "DAQUELES".length(), 1)
+			));
+	}
+	
+	@Test
+	public void testContraction_DE_AQUELAS() throws Exception {
+		cg.add("DE");
+		cg.add("AQUELAS");
+		
+		runOver("DAQUELAS");
+		
+		verifyMatches(match(0, "DAQUELAS".length(), span(0, 1, 0), 
+				span(1, "DAQUELAS".length(), 1)
+			));
+	}
+	
+	@Test
+	public void testContraction_DE_AQUILO() throws Exception {
+		cg.add("DE");
+		cg.add("AQUILO");
+		
+		runOver("DAQUILO");
+		
+		verifyMatches(match(0, "DAQUILO".length(), span(0, 1, 0), 
+				span(1, "DAQUILO".length(), 1)
+			));
+	}
+	
+	@Test
+	public void testContraction_DE_ELE() throws Exception {
+		cg.add("DE");
+		cg.add("ELE");
+		
+		runOver("DELE");
+		
+		verifyMatches(match(0, "DELE".length(), span(0, 1, 0), 
+				span(1, "DELE".length(), 1)
+			));
+	}
+	
+	@Test
+	public void testContraction_DE_ELA() throws Exception {
+		cg.add("DE");
+		cg.add("ELA");
+		
+		runOver("DELA");
+		
+		verifyMatches(match(0, "DELA".length(), span(0, 1, 0), 
+				span(1, "DELA".length(), 1)
+			));
+	}
+	
+	@Test
+	public void testContraction_DE_ELES() throws Exception {
+		cg.add("DE");
+		cg.add("ELES");
+		
+		runOver("DELES");
+		
+		verifyMatches(match(0, "DELES".length(), span(0, 1, 0), 
+				span(1, "DELES".length(), 1)
+			));
+	}
+	
+	@Test
+	public void testContraction_DE_ELAS() throws Exception {
+		cg.add("DE");
+		cg.add("ELAS");
+		
+		runOver("DELAS");
+		
+		verifyMatches(match(0, "DELAS".length(), span(0, 1, 0), 
+				span(1, "DELAS".length(), 1)
+			));
+	}
+	
+	@Test
+	public void testContraction_DE_AÍ() throws Exception {
+		cg.add("DE");
+		cg.add("AÍ");
+		
+		runOver("DAÍ");
+		
+		verifyMatches(match(0, "DAÍ".length(), span(0, 1, 0), 
+				span(1, "DAÍ".length(), 1)
+			));
+	}
+	
+	@Test
+	public void testExpressionContraction_ALÉM_DE_ISSO() throws Exception {
+		cg.add("ALÉM=DE");
+		cg.add("ISSO");
+		
+		runOver("ALÉM DISSO");
+		
+		verifyMatches(match(0, "ALÉM DISSO".length(), span(0, "ALÉM D".length(), 0), 
+				span("ALÉM D".length(), "ALÉM DISSO".length(), 1)
+			));
 	}
 }
