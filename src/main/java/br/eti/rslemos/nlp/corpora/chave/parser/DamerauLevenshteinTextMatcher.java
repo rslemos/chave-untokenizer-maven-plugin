@@ -98,8 +98,7 @@ public class DamerauLevenshteinTextMatcher implements TextMatcher {
 					// idealmente seria Integer.MAX_VALUE em vez de text.length*2
 					// porém estava dando overflow nos cálculos internos do Damerau-Levenshtein
 					// e os custos ficavam negativos
-					dl.append(text.length*2, text.length*2, text.length*2, 1, text.length*2, ' ');
-					threshold++;
+					dl.append(text.length*2, text.length*2, text.length*2, 0, text.length*2, ' ');
 					k++;
 				}
 			} else {
