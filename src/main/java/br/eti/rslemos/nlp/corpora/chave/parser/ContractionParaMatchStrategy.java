@@ -1,15 +1,23 @@
 package br.eti.rslemos.nlp.corpora.chave.parser;
 
-
 public class ContractionParaMatchStrategy extends AbstractContractionMatchStrategy {
+
+	private static final ContractionTemplate[] TEMPLATES = {
+			new ContractionTemplate("para", "a", "pra", 3, 2),
+			new ContractionTemplate("para", "aquela", "praquela", 3, 2),
+			new ContractionTemplate("para", "aquelas", "praquelas", 3, 2),
+			new ContractionTemplate("para", "aquele", "praquele", 3, 2),
+			new ContractionTemplate("para", "aqueles", "praqueles", 3, 2),
+			new ContractionTemplate("para", "aquilo", "praquilo", 3, 2),
+			new ContractionTemplate("para", "as", "pras", 3, 2),
+			new ContractionTemplate("para", "o", "pro", 2, 2),
+			new ContractionTemplate("para", "os", "pros", 2, 2),
+		};
+	
 	public ContractionParaMatchStrategy() {
-		super("para", 
-				new String[] {   "a",   "aquela",   "aquelas",   "aquele",   "aqueles",   "aquilo",   "as",   "o",   "os", }, 
-				new String[] { "pra", "praquela", "praquelas", "praquele", "praqueles", "praquilo", "pras", "pro", "pros", },
-				new int[] { 3, 3, 3, 3, 3, 3, 3, 2, 2 },
-				new int[] { 2, 2, 2, 2, 2, 2, 2, 2, 2 } 
-			);
+		super(TEMPLATES);
 	}
+
 }
 
  

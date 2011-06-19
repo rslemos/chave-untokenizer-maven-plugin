@@ -2,7 +2,7 @@ package br.eti.rslemos.nlp.corpora.chave.parser;
 
 public class ContractionEmMatchStrategy extends AbstractContractionMatchStrategy {
 
-	private static ContractionTemplate[] EM_CONTRACTIONS = {
+	private static final ContractionTemplate[] TEMPLATES = {
 			// EM + X
 			new ContractionTemplate("EM", "A", "NA", 1, 1),
 			new ContractionTemplate("EM", "AQUELA", "NAQUELA", 1, 1),
@@ -90,7 +90,7 @@ public class ContractionEmMatchStrategy extends AbstractContractionMatchStrategy
 		};
 	
 	public ContractionEmMatchStrategy() {
-		super(EM_CONTRACTIONS);
+		super(TEMPLATES);
 	}
 
 }

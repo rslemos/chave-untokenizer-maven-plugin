@@ -1,15 +1,17 @@
 package br.eti.rslemos.nlp.corpora.chave.parser;
 
-
 public class ContractionComMatchStrategy extends AbstractContractionMatchStrategy {
+	
+	private static final ContractionTemplate[] TEMPLATES = {
+			new ContractionTemplate("com", "mim", "comigo", 3, 2),
+			new ContractionTemplate("com", "nos", "conosco", 3, 2),
+			new ContractionTemplate("com", "si", "consigo", 3, 3),
+			new ContractionTemplate("com", "ti", "contigo", 3, 3),
+			new ContractionTemplate("com", "vos", "convosco", 3, 3),
+		};
 
 	public ContractionComMatchStrategy() {
-		super("com", 
-				new String[] {   "mim" ,   "nos"  ,    "si"  ,    "ti"  ,    "vos"  },
-				new String[] { "comigo", "conosco", "consigo", "contigo", "convosco"},
-				new int[] { 3, 3, 3, 3, 3 },
-				new int[] { 2, 2, 3, 3, 3 }
-		);
+		super(TEMPLATES);
 	}
 
 }

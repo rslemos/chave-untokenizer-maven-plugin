@@ -78,41 +78,6 @@ public abstract class AbstractContractionMatchStrategy extends AbstractMatchStra
 	
 	private Map<String, Set<Match>> cache;
 	
-	@Deprecated
-	private static int[] buildPrefixEnd(String[] cg1, int prefixLength) {
-		int[] result = new int[cg1.length];
-		Arrays.fill(result, prefixLength);
-		return result;
-	}
-
-	@Deprecated
-	private static int[] buildSuffixStart(String[] cg1, int prefixLength) {
-		int[] result = new int[cg1.length];
-		Arrays.fill(result, prefixLength);
-		return result;
-	}
-
-	@Deprecated
-	private static ContractionTemplate[] buildTemplates(String cg0, String[] cg1, String[] results, int[] prefixEnd, int[] suffixStart) {
-		ContractionTemplate[] templates = new ContractionTemplate[cg1.length];
-		
-		for (int i = 0; i < cg1.length; i++) {
-			templates[i] = new ContractionTemplate(cg0, cg1[i], results[i], prefixEnd[i], suffixStart[i]);
-		}
-		
-		return templates;
-	}
-
-	@Deprecated
-	public AbstractContractionMatchStrategy(String cg0, String[] cg1, String[] results, int prefixLength) {
-		this(cg0, cg1, results, buildPrefixEnd(cg1, prefixLength), buildSuffixStart(cg1, prefixLength));
-	}
-
-	@Deprecated
-	public AbstractContractionMatchStrategy(String cg0, String[] cg1, String[] results, int[] prefixEnd, int[] suffixStart) {
-		this(buildTemplates(cg0, cg1, results, prefixEnd, suffixStart));
-	}
-
 	public AbstractContractionMatchStrategy(ContractionTemplate... templates) {
 		this.templates = templates.clone();
 		Arrays.sort(templates);
