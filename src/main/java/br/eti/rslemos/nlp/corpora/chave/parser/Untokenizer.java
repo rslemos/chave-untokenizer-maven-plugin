@@ -80,6 +80,10 @@ public class Untokenizer {
 		
 		annotateAndSplit(0, spansByEntry.length);
 
+		coverNewLines();
+	}
+
+	private void coverNewLines() {
 		BitSet fixedEntries = getFixedEntries(0, spansByEntry.length);
 		
 		int entry = fixedEntries.nextClearBit(0);
