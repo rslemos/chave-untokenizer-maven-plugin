@@ -4,7 +4,6 @@ import static br.eti.rslemos.nlp.corpora.chave.parser.AdaptativeDamerauLevenshte
 import static br.eti.rslemos.nlp.corpora.chave.parser.AdaptativeDamerauLevenshteinDistance.AlignOp.TRANSPOSITION;
 import static br.eti.rslemos.nlp.corpora.chave.parser.Span.span;
 import static java.lang.Character.isWhitespace;
-import static java.lang.Character.toLowerCase;
 
 import java.util.LinkedHashSet;
 import java.util.Set;
@@ -14,12 +13,18 @@ import br.eti.rslemos.nlp.corpora.chave.parser.AdaptativeDamerauLevenshteinDista
 public class DamerauLevenshteinTextMatcher implements TextMatcher {
 	private final char[] text;
 	private final int threshold;
+	private final boolean caseSensitive;
 
 	public DamerauLevenshteinTextMatcher(String text) {
 		this(text, 1);
 	}
 	
 	public DamerauLevenshteinTextMatcher(String text, int threshold) {
+		this(text, threshold, false);
+	}
+
+	public DamerauLevenshteinTextMatcher(String text, int threshold, boolean caseSensitive) {
+		this.caseSensitive = caseSensitive;
 		this.text = text.toCharArray();
 		this.threshold = threshold;
 	}
@@ -61,7 +66,7 @@ public class DamerauLevenshteinTextMatcher implements TextMatcher {
 		int[] outPoints = new int[inPoints.length];
 		System.arraycopy(inPoints, 0, outPoints, 0, outPoints.length);
 		
-		AdaptativeDamerauLevenshteinDistance dl = new AdaptativeDamerauLevenshteinDistance(toMatch.toLowerCase().toCharArray());
+		AdaptativeDamerauLevenshteinDistance dl = new AdaptativeDamerauLevenshteinDistance(toLowerCase(toMatch).toCharArray());
 		
 		while (k < text.length && dl.getDistance() > 0) {
 			if (isWhitespace(text[k])) {
@@ -124,6 +129,14 @@ public class DamerauLevenshteinTextMatcher implements TextMatcher {
 			return null;
 
 		return outPoints;
+	}
+
+	private String toLowerCase(String toMatch) {
+		return caseSensitive ? toMatch : toMatch.toLowerCase();
+	}
+
+	private char toLowerCase(char ch) {
+		return caseSensitive ? ch : Character.toLowerCase(ch);
 	}
 
 	private static AlignOp[] stuffTransposition(AlignOp[] alignment) {

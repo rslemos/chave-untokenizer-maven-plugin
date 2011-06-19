@@ -21,7 +21,8 @@ public class DamerauLevenshteinTextMatcherUnitTest {
 	
 	@Test
 	public void testMatchKey() throws Exception {
-		setText("Devido  às   quais");
+		matcher = new DamerauLevenshteinTextMatcher("Devido  às   quais");
+		
 		Set<Match> matches = matcher.matchKey("Devido=às=quais", span(0, "Devido=à".length(), 0), span("Devido=".length(), "Devido=às=quais".length(), 1));
 		
 		assertThat(matches.size(), is(equalTo(1)));
@@ -35,7 +36,8 @@ public class DamerauLevenshteinTextMatcherUnitTest {
 
 	@Test
 	public void testMapping() throws Exception {
-		setText("012 \t56789   3\t\t6789");
+		matcher = new DamerauLevenshteinTextMatcher("012 \t56789   3\t\t6789");
+		
 		int[] results = matcher.match(
 				0, 
 				"012=56789=3=6789", 
@@ -50,7 +52,8 @@ public class DamerauLevenshteinTextMatcherUnitTest {
 	//especialmente a reconstrução do alinhamento a partir da matriz; verificar se é possível fazer adaptativo
 	@Test
 	public void testMappingWithTransposition() throws Exception {
-		setText("012 \t56879   3\t\t6789");
+		matcher = new DamerauLevenshteinTextMatcher("012 \t56879   3\t\t6789");
+		
 		int[] results = matcher.match(
 				0, 
 				"012=56789=3=6789", 
@@ -62,7 +65,8 @@ public class DamerauLevenshteinTextMatcherUnitTest {
 
 	@Test
 	public void testDamerauLevenshteinDistance1() throws Exception {
-		setText("3.º");
+		matcher = new DamerauLevenshteinTextMatcher("3.º");
+		
 		Set<Match> matches = matcher.matchKey("3º.",
 				span(0, "3º.".length(), 0)
 			);
@@ -74,9 +78,40 @@ public class DamerauLevenshteinTextMatcherUnitTest {
 					)
 			));
 	}
-
-	private void setText(String text) {
-		matcher = new DamerauLevenshteinTextMatcher(text);
+	
+	@Test
+	public void testCaseSensitive() throws Exception {
+		matcher = new DamerauLevenshteinTextMatcher("CaseSensitive", 0, true);
+		
+		Set<Match> matches;
+		
+		matches = matcher.matchKey("CaseSensitive", span(0, "CaseSensitive".length(), 0));
+		
+		assertThat(matches.size(), is(equalTo(1)));
+		assertThat(matches, hasItems(
+				match(0, "CaseSensitive".length(),
+						span(0, "CaseSensitive".length(), 0)
+					)
+			));
+		
+		matches = matcher.matchKey("casesensitive", span(0, "casesensitive".length(), 0));
+		
+		assertThat(matches.size(), is(equalTo(0)));
 	}
 
+	@Test
+	public void testCaseInsensitive() throws Exception {
+		matcher = new DamerauLevenshteinTextMatcher("CaseInsensitive", 0, false);
+		
+		Set<Match> matches;
+		
+		matches = matcher.matchKey("caseinsensitive", span(0, "caseinsensitive".length(), 0));
+		
+		assertThat(matches.size(), is(equalTo(1)));
+		assertThat(matches, hasItems(
+				match(0, "caseinsensitive".length(),
+						span(0, "caseinsensitive".length(), 0)
+					)
+			));
+	}
 }
