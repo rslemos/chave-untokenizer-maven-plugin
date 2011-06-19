@@ -28,6 +28,7 @@ public class NewUntokenizer {
 			new ContractionParaMatchStrategy(),
 			new ContractionPorMatchStrategy(),
 			new EncliticMatchStrategy(),
+			new NewLineMatchStrategy(),
 		};
 
 	private AnnotationSet originalMarkups;
@@ -77,6 +78,51 @@ public class NewUntokenizer {
 		}
 		
 		annotateAndSplit(spansByEntry, 0, spansByEntry.length);
+
+		BitSet fixedEntries = new BitSet(spansByEntry.length);
+		for (int i = 0; i < spansByEntry.length; i++) {
+			fixedEntries.set(i, spansByEntry[i].size() == 1);
+		}
+		
+		int entry = fixedEntries.nextClearBit(0);
+		
+		while (entry >= 0 && entry < spansByEntry.length) {
+			//debugUncoveredEntry(spansByEntry, entry);
+
+			if ("$¶".equals(cgKeys.get(entry))) {
+				int pos = entry > 0 ? spansByEntry[entry - 1].get(0).to : 0;
+				
+				try {
+					Match match = Match.match(pos, pos, br.eti.rslemos.nlp.corpora.chave.parser.Span.span(pos, pos, entry));
+					spansByEntry[entry].addAll(match.getSpans());
+					match.apply(originalMarkups, cg);
+				} catch (InvalidOffsetException e) {
+					throw new RuntimeException(e);
+				}
+			}
+			
+			entry = fixedEntries.nextClearBit(entry+1);
+		}
+		
+	}
+
+	private void debugUncoveredEntry(final List<Span>[] spansByEntry, int entry) {
+		int from = 0;
+		int to = text.length();
+		
+		if (entry > 0) {
+			System.err.printf("%s\n", spansByEntry[entry - 1]);
+			from = spansByEntry[entry - 1].get(0).to;
+		}
+		
+		System.err.printf("%d. %s (%s): %s\n", entry, cg.get(entry).getKey(), cg.get(entry).getValue(), spansByEntry[entry]);
+		
+		if (entry + 1 < spansByEntry.length) {
+			System.err.printf("%s\n", spansByEntry[entry + 1]);
+			to = spansByEntry[entry + 1].get(0).from;
+		}
+		
+		System.err.printf("Text left to parse: '%s'\n", text.substring(from, to));
 	}
 
 	private void annotateAndSplit(List<Span>[] spansByEntry, int start, int end) {
@@ -84,8 +130,10 @@ public class NewUntokenizer {
 			return;
 		
 		Span fixedSpan = chooseFixedSpan(spansByEntry, start, end);
-		if (fixedSpan == null)
+		if (fixedSpan == null) {
+			//System.err.printf("No fixed span in [%d, %d[\n", start, end);
 			return;
+		}
 		
 		Match fixedFullMatch = fixedSpan.getMatch();
 		
@@ -104,6 +152,7 @@ public class NewUntokenizer {
 			from = spans[i].to;
 			start = spans[i].entry + 1;
 		}
+		
 		splitAndRecurse(spansByEntry, start, end, from, text.length());
 	}
 
