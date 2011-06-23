@@ -33,7 +33,6 @@ public class Untokenizer {
 
 	private AnnotationSet originalMarkups;
 	private List<CGEntry> cg;
-	private Document document;
 	private String text;
 	private List<String> cgKeys;
 
@@ -47,7 +46,6 @@ public class Untokenizer {
 
 	@SuppressWarnings("unchecked")
 	public void untokenize(Document document, List<CGEntry> cg) {
-		this.document = document;
 		this.cg = cg;
 
 		originalMarkups = document.getAnnotations(GateConstants.ORIGINAL_MARKUPS_ANNOT_SET_NAME);
