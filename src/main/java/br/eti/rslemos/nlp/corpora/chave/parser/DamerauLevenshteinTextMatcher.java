@@ -2,15 +2,14 @@ package br.eti.rslemos.nlp.corpora.chave.parser;
 
 import static br.eti.rslemos.nlp.corpora.chave.parser.AdaptativeDamerauLevenshteinDistance.AlignOp.MATCH;
 import static br.eti.rslemos.nlp.corpora.chave.parser.AdaptativeDamerauLevenshteinDistance.AlignOp.TRANSPOSITION;
-import static br.eti.rslemos.nlp.corpora.chave.parser.Span.span;
+import static java.lang.Character.isLetterOrDigit;
 import static java.lang.Character.isWhitespace;
 
-import java.util.LinkedHashSet;
 import java.util.Set;
 
 import br.eti.rslemos.nlp.corpora.chave.parser.AdaptativeDamerauLevenshteinDistance.AlignOp;
 
-public class DamerauLevenshteinTextMatcher implements TextMatcher {
+public class DamerauLevenshteinTextMatcher extends AbstractTextMatcher {
 	public static class Parameters {
 		public int threshold;
 		public boolean caseSensitive;
@@ -37,14 +36,8 @@ public class DamerauLevenshteinTextMatcher implements TextMatcher {
 		}
 	}
 	
-	private final char[] text;
-	private final int from;
-	private final int to;
-
 	private final int threshold;
-	private final boolean caseSensitive;
-	private final boolean wordBoundaryCheck;
-
+	
 	public DamerauLevenshteinTextMatcher(String text) {
 		this(text, 0, text.length());
 	}
@@ -74,46 +67,16 @@ public class DamerauLevenshteinTextMatcher implements TextMatcher {
 	}
 
 	public DamerauLevenshteinTextMatcher(String text, int from, int to, int threshold, boolean caseSensitive, boolean wordBoundaryCheck) {
-		this.text = text.toCharArray();
-		this.from = from;
-		this.to = to;
-		this.caseSensitive = caseSensitive;
-		this.wordBoundaryCheck = wordBoundaryCheck;
+		super(text.toCharArray(), from, to, caseSensitive, wordBoundaryCheck);
 		this.threshold = threshold;
 	}
 
-	public Set<Match> matchKey(String key, Span... inSpans) {
-		Set<Match> matches = new LinkedHashSet<Match>();
-
-		int[] inPoints = new int[inSpans.length*2 + 2];
-		inPoints[0] = 0;
-		inPoints[1] = key.length();
-		
-		for (int i = 0; i < inSpans.length; i++) {
-			inPoints[i*2 + 2] = inSpans[i].from;
-			inPoints[i*2 + 3] = inSpans[i].to;
-		}
-		
-		for (int k = from; k < to; k++) {
-			int[] outPoints = match(k, key, inPoints);
-			if (outPoints != null) {
-				Span[] outSpans = new Span[inSpans.length];
-				for (int i = 0; i < outSpans.length; i++) {
-					outSpans[i] = span(outPoints[i*2 + 2], outPoints[i*2 + 3], inSpans[i].entry);
-				}
-				
-				matches.add(Match.match(outPoints[0], outPoints[1], outSpans));
-			}
-		}
-		
-		return matches;
-	}
-
-	int[] match(int k0, String toMatch, int... inPoints) {
+	@Override
+	protected int[] match(int k0, String toMatch, int... inPoints) {
 		int k = k0;
 		int threshold = toMatch.length() > 1 ? this.threshold : 0;
 		
-		if (wordBoundaryCheck && isNeitherWhitespaceNorWordBoundary(k - 1) && !isWordBoundary(toMatch.charAt(0)))
+		if (wordBoundaryCheck && (k - 1) >= from && (k - 1) < to && isLetterOrDigit(text[k - 1]) && isLetterOrDigit(toMatch.charAt(0)))
 			return null;
 
 		int[] outPoints = new int[inPoints.length];
@@ -140,7 +103,7 @@ public class DamerauLevenshteinTextMatcher implements TextMatcher {
 		if (dl.getDistance() > threshold)
 			return null;
 
-		if (wordBoundaryCheck && isNeitherWhitespaceNorWordBoundary(k) && !isWordBoundary(toMatch.charAt(toMatch.length() - 1)))
+		if (wordBoundaryCheck && k >= from && k < to && isLetterOrDigit(text[k]) && isLetterOrDigit(toMatch.charAt(toMatch.length() - 1)))
 			return null;
 
 		AlignOp[] alignment = stuffTransposition(selectBestAlignment(dl.getAlignments()));
@@ -183,14 +146,6 @@ public class DamerauLevenshteinTextMatcher implements TextMatcher {
 		return outPoints;
 	}
 
-	private String toLowerCase(String toMatch) {
-		return caseSensitive ? toMatch : toMatch.toLowerCase();
-	}
-
-	private char toLowerCase(char ch) {
-		return caseSensitive ? ch : Character.toLowerCase(ch);
-	}
-
 	private static AlignOp[] stuffTransposition(AlignOp[] alignment) {
 		int transpositions = 0;
 		for (AlignOp op : alignment) {
@@ -217,13 +172,5 @@ public class DamerauLevenshteinTextMatcher implements TextMatcher {
 		// mais tarde pode preferir sequências mais simples
 		// ou dar peso maior a alinhamentos sem determinadas operações
 		return alignments.iterator().next();
-	}
-
-	private boolean isNeitherWhitespaceNorWordBoundary(int k) {
-		return (k >= from && k < to) && !(isWhitespace(text[k]) || isWordBoundary(text[k]));
-	}
-	
-	private static boolean isWordBoundary(char c) {
-		return !Character.isLetterOrDigit(c);
 	}
 }

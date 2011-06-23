@@ -7,4 +7,6 @@ public interface TextMatcher {
 
 	public abstract Set<Match> matchKey(String key, Span... inSpans);
 
+	// ugly kid joe
+	public abstract Set<Match> matchWordEndOrNewLine();
 }

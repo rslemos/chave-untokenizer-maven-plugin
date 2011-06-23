@@ -37,6 +37,20 @@ public abstract class TextMatcherAbstractUnitTest {
 	}
 
 	@Test
+	public void testMatchTrailingWhitespaceKey() throws Exception {
+		TextMatcher matcher = createTextMatcher("Devido  às   quais");
+		
+		Set<Match> matches = matcher.matchKey("Devido=", span(0, "Devido=".length(), 0));
+		
+		assertThat(matches.size(), is(equalTo(1)));
+		assertThat(matches, hasItems(
+				match(0, "Devido  ".length(),
+						span(0, "Devido  ".length(), 0)
+					)
+			));
+	}
+
+	@Test
 	public void testMatchKeyInsideText() throws Exception {
 		final String PRE_TEXTO = " xxx ";
 		final String POS_TEXTO = " xxx ";
@@ -120,4 +134,52 @@ public abstract class TextMatcherAbstractUnitTest {
 			));
 	}
 
+	@Test
+	public void testMatchWordEnd() throws Exception {
+		TextMatcher matcher = createTextMatcher("Devido  às   quais?  ");
+		
+		Set<Match> matches = matcher.matchWordEndOrNewLine();
+		
+		assertThat(matches.size(), is(equalTo(4)));
+		assertThat(matches, hasItems(
+				match("Devido".length(), "Devido".length(),
+						span("Devido".length(), "Devido".length(), 0)
+					),
+				match("Devido  às".length(), "Devido  às".length(),
+						span("Devido  às".length(), "Devido  às".length(), 0)
+					),
+				match("Devido  às   quais".length(), "Devido  às   quais".length(),
+						span("Devido  às   quais".length(), "Devido  às   quais".length(), 0)
+					),
+				match("Devido  às   quais?".length(), "Devido  às   quais?".length(),
+						span("Devido  às   quais?".length(), "Devido  às   quais?".length(), 0)
+					)
+			));
+	}
+
+	@Test
+	public void testMatchNewLine() throws Exception {
+		TextMatcher matcher = createTextMatcher("Devido  às   quais\n\n\n  ");
+		
+		Set<Match> matches = matcher.matchWordEndOrNewLine();
+		
+		assertThat(matches.size(), is(equalTo(5)));
+		assertThat(matches, hasItems(
+				match("Devido".length(), "Devido".length(),
+						span("Devido".length(), "Devido".length(), 0)
+					),
+				match("Devido  às".length(), "Devido  às".length(),
+						span("Devido  às".length(), "Devido  às".length(), 0)
+					),
+				match("Devido  às   quais".length(), "Devido  às   quais\n".length(),
+						span("Devido  às   quais".length(), "Devido  às   quais\n".length(), 0)
+					),
+				match("Devido  às   quais\n".length(), "Devido  às   quais\n\n".length(),
+						span("Devido  às   quais\n".length(), "Devido  às   quais\n\n".length(), 0)
+					),
+				match("Devido  às   quais\n\n".length(), "Devido  às   quais\n\n\n".length(),
+						span("Devido  às   quais\n\n".length(), "Devido  às   quais\n\n\n".length(), 0)
+					)
+			));
+	}
 }

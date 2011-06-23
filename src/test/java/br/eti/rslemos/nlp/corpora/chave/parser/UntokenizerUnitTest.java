@@ -49,7 +49,7 @@ public class UntokenizerUnitTest {
 	}
 	
 	@Test
-	public void testSimpleSentence() {
+	public void testSimpleSentence1() {
 		TEXT = "A PF vai investigar pagamentos da Prefeitura de São Paulo a construtoras citadas no caso Paubrasil.";
 		
 		CG = Arrays.asList(new CGEntry[] {
@@ -93,6 +93,41 @@ public class UntokenizerUnitTest {
 		assertThatHasAnnotation(84, 88, 15, "caso");
 		assertThatHasAnnotation(89, 98, 16, "Paubrasil");
 		assertThatHasAnnotation(98, 99, 17, ".");
+	}
+
+	@Test
+	public void testSimpleSentence2() {
+		TEXT = "GILBERTO DIMENSTEIN\nO brasileiro paga muito ou pouco imposto?";
+		
+		CG = Arrays.asList(new CGEntry[] {
+				entry("Gilberto=Dimenstein",	"[Gilberto=Dimenstein] PROP M S @NPHR"),
+				entry("$¶",						"[$¶] PU <<<"),
+				entry("O",						"[o] DET M S <artd> @>N"),
+				entry("brasileiro",				"[brasileiro] N M S @SUBJ>"),
+				entry("paga",					"[pagar] V PR 3S IND VFIN <fmc> @FMV"),
+				entry("muito",					"[muito] DET M S <quant> @>N"),
+				entry("ou",						"[ou] KC @CO"),
+				entry("pouco",					"[pouco] DET M S <quant> @>N"),
+				entry("imposto",				"[imposto] N M S @<ACC"),
+				entry("$?",						"[$?] PU <<<"),
+				entry("$¶",						"[$¶] PU <<<"),
+			});
+		
+		untokenize();
+
+		// "GILBERTO DIMENSTEIN\O brasileiro paga muito ou pouco imposto?";
+		
+		assertThatHasAnnotation( 0, 19,  0, "GILBERTO DIMENSTEIN");
+		assertThatHasAnnotation(19, 20,  1, "\n");
+		assertThatHasAnnotation(20, 21,  2, "O");
+		assertThatHasAnnotation(22, 32,  3, "brasileiro");
+		assertThatHasAnnotation(33, 37,  4, "paga");
+		assertThatHasAnnotation(38, 43,  5, "muito");
+		assertThatHasAnnotation(44, 46,  6, "ou");
+		assertThatHasAnnotation(47, 52,  7, "pouco");
+		assertThatHasAnnotation(53, 60,  8, "imposto");
+		assertThatHasAnnotation(60, 61,  9, "?");
+		assertThatHasAnnotation(61, 61, 10, "");
 	}
 
 	@Test
@@ -181,10 +216,25 @@ public class UntokenizerUnitTest {
 		if ((endOffset - startOffset) != text.length())
 			throw new IllegalArgumentException();
 		
-		AnnotationSet set = originalMarkups.getContained(startOffset, endOffset);
-		assertThat(set.size(), is(equalTo(1)));
 		
-		Annotation ann = set.iterator().next();
+		Annotation ann = null;
+		if (endOffset > startOffset) {
+			AnnotationSet set = originalMarkups.getContained(startOffset, endOffset);
+			assertThat(set.size(), is(equalTo(1)));
+			
+			ann = set.iterator().next();
+		} else {
+			AnnotationSet set = originalMarkups.getContained(startOffset, endOffset + 1);
+			
+			for (Annotation annotation : set) {
+				if (annotation.getEndNode().getOffset() == endOffset) {
+					ann = annotation;
+					break;
+				}
+			}
+		}
+		
+		assertThat(ann, is(not(nullValue(Annotation.class))));
 		assertThat(ann.getType(), is(equalTo("token")));
 		assertThat(Utils.stringFor(document, ann), is(equalTo(text)));
 		assertThat(ann.getFeatures(), hasEntry((Object)"index", (Object)index));

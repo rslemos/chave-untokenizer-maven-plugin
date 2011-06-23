@@ -1,0 +1,95 @@
+package br.eti.rslemos.nlp.corpora.chave.parser;
+
+import static br.eti.rslemos.nlp.corpora.chave.parser.Span.span;
+import static java.lang.Character.isLetterOrDigit;
+
+import java.util.LinkedHashSet;
+import java.util.Set;
+
+public abstract class AbstractTextMatcher implements TextMatcher {
+
+	protected abstract int[] match(int k0, String toMatch, int... inPoints);
+
+	protected final char[] text;
+	protected final int from;
+	protected final int to;
+	
+	private final boolean caseSensitive;
+	protected final boolean wordBoundaryCheck;
+
+	public AbstractTextMatcher(char[] text, int from, int to, boolean caseSensitive, boolean wordBoundaryCheck) {
+		super();
+		this.text = text;
+		this.from = from;
+		this.to = to;
+		this.caseSensitive = caseSensitive;
+		this.wordBoundaryCheck = wordBoundaryCheck;
+	}
+
+	public Set<Match> matchKey(String key, Span... inSpans) {
+		Set<Match> matches = new LinkedHashSet<Match>();
+	
+		int[] inPoints = new int[inSpans.length*2 + 2];
+		inPoints[0] = 0;
+		inPoints[1] = key.length();
+		
+		for (int i = 0; i < inSpans.length; i++) {
+			inPoints[i*2 + 2] = inSpans[i].from;
+			inPoints[i*2 + 3] = inSpans[i].to;
+		}
+		
+		for (int k = from; k < to; k++) {
+			int[] outPoints = match(k, key, inPoints);
+			if (outPoints != null) {
+				Span[] outSpans = new Span[inSpans.length];
+				for (int i = 0; i < outSpans.length; i++) {
+					outSpans[i] = span(outPoints[i*2 + 2], outPoints[i*2 + 3], inSpans[i].entry);
+				}
+				
+				matches.add(Match.match(outPoints[0], outPoints[1], outSpans));
+			}
+		}
+		
+		return matches;
+	}
+
+	public Set<Match> matchWordEndOrNewLine() {
+		Set<Match> result = new LinkedHashSet<Match>();
+
+
+		int k = from;
+
+		if (text[k] == '\n')
+			result.add(Match.match(k, k + 1, span(k, k + 1, 0)));
+
+		for (k++; k < to; k++) {
+			if (text[k] == '\n') {
+				result.add(Match.match(k, k + 1, span(k, k + 1, 0)));
+			} else {
+				if ((!isLetterOrDigit(text[k]) && isLetterOrDigit(text[k - 1])) || isPunctuation(text[k - 1])) {
+					result.add(Match.match(k, k, span(k, k, 0)));
+				}
+			}
+		}
+
+		if (isLetterOrDigit(text[k - 1]) || isPunctuation(text[k - 1])) {
+			result.add(Match.match(k, k, span(k, k, 0)));
+		}
+
+		return result;
+	}
+
+	protected String toLowerCase(String toMatch) {
+		return caseSensitive ? toMatch : toMatch.toLowerCase();
+	}
+
+	protected char toLowerCase(char ch) {
+		return caseSensitive ? ch : Character.toLowerCase(ch);
+	}
+
+	private static boolean isPunctuation(char ch) {
+		final int MASK = (1 << Character.OTHER_PUNCTUATION);
+		
+		return ((MASK >> Character.getType(ch)) & 1) != 0;
+	}
+}

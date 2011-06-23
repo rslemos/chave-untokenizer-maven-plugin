@@ -14,8 +14,40 @@ public class NewLineMatchStrategyUnitTest extends AbstractMatchStrategyUnitTest 
 	@Test
 	public void testNewLine() throws Exception {
 		cg.add("$¶");
-		runOver("\n");
+		runOver("sampletext\n");
 		
-		verifyMatches(match(0, 1, span(0, 1, 0)));
+		verifyMatches(match("sampletext".length(), "sampletext\n".length(), span("sampletext".length(), "sampletext\n".length(), 0)));
+	}
+
+	@Test
+	public void testEmptyNewLine() throws Exception {
+		cg.add("$¶");
+		runOver("sampletext");
+		
+		verifyMatches(match("sampletext".length(), "sampletext".length(), span("sampletext".length(), "sampletext".length(), 0)));
+	}
+
+	@Test
+	public void testWordBoundaries() throws Exception {
+		cg.add("$¶");
+		runOver("sample text");
+		
+		verifyMatches(
+				match("sample".length(), "sample".length(), span("sample".length(), "sample".length(), 0)),
+				match("sample text".length(), "sample text".length(), span("sample text".length(), "sample text".length(), 0))
+			);
+	}
+
+
+	@Test
+	public void testPunctuationMark() throws Exception {
+		cg.add("$¶");
+		runOver("sample text?");
+		
+		verifyMatches(
+				match("sample".length(), "sample".length(), span("sample".length(), "sample".length(), 0)),
+				match("sample text".length(), "sample text".length(), span("sample text".length(), "sample text".length(), 0)),
+				match("sample text?".length(), "sample text?".length(), span("sample text?".length(), "sample text?".length(), 0))
+			);
 	}
 }
