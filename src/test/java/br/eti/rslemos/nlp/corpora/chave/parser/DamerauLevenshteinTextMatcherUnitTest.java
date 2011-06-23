@@ -9,74 +9,14 @@ import static org.junit.Assert.assertThat;
 
 import java.util.Set;
 
-import org.junit.Before;
 import org.junit.Test;
 
-public class DamerauLevenshteinTextMatcherUnitTest {
-	private DamerauLevenshteinTextMatcher matcher;
-
-	@Before
-	public void setUp() {
-	}
-	
-	@Test
-	public void testMatchKey() throws Exception {
-		matcher = new DamerauLevenshteinTextMatcher("Devido  às   quais");
-		
-		Set<Match> matches = matcher.matchKey("Devido=às=quais", span(0, "Devido=à".length(), 0), span("Devido=".length(), "Devido=às=quais".length(), 1));
-		
-		assertThat(matches.size(), is(equalTo(1)));
-		assertThat(matches, hasItems(
-				match(0, "Devido  às   quais".length(),
-						span(0, "Devido  à".length(), 0),
-						span("Devido  ".length(), "Devido  às   quais".length(), 1)
-					)
-			));
-	}
-
-	@Test
-	public void testMatchKeyInsideText() throws Exception {
-		final String PRE_TEXTO = " xxx ";
-		final String POS_TEXTO = " xxx ";
-		
-		matcher = new DamerauLevenshteinTextMatcher(PRE_TEXTO + "Devido  às   quais" + POS_TEXTO);
-		
-		Set<Match> matches = matcher.matchKey("Devido=às=quais", span(0, "Devido=à".length(), 0), span("Devido=".length(), "Devido=às=quais".length(), 1));
-		
-		assertThat(matches.size(), is(equalTo(1)));
-		assertThat(matches, hasItems(
-				match(PRE_TEXTO.length(), PRE_TEXTO.length() + "Devido  às   quais".length(),
-						span(PRE_TEXTO.length(), PRE_TEXTO.length() + "Devido  à".length(), 0),
-						span(PRE_TEXTO.length() + "Devido  ".length(), PRE_TEXTO.length() + "Devido  às   quais".length(), 1)
-					)
-			));
-	}
-
-	@Test
-	public void testMatchKeyWithRange() throws Exception {
-		final String PRE_TEXTO_RESOLVIDO = "< texto já resolvido usando Devido às quais > ";
-		final String POS_TEXTO_RESOLVIDO = "< texto já resolvido usando Devido às quais > ";
-		
-		matcher = new DamerauLevenshteinTextMatcher(PRE_TEXTO_RESOLVIDO + "Devido  às   quais" + POS_TEXTO_RESOLVIDO,
-				PRE_TEXTO_RESOLVIDO.length(), PRE_TEXTO_RESOLVIDO.length() + "Devido  às   quais".length()
-			);
-		
-		Set<Match> matches = matcher.matchKey("Devido=às=quais", span(0, "Devido=à".length(), 0), span("Devido=".length(), "Devido=às=quais".length(), 1));
-		
-		assertThat(matches.size(), is(equalTo(1)));
-		assertThat(matches, hasItems(
-				match(PRE_TEXTO_RESOLVIDO.length(), PRE_TEXTO_RESOLVIDO.length() + "Devido  às   quais".length(),
-						span(PRE_TEXTO_RESOLVIDO.length(), PRE_TEXTO_RESOLVIDO.length() + "Devido  à".length(), 0),
-						span(PRE_TEXTO_RESOLVIDO.length() + "Devido  ".length(), PRE_TEXTO_RESOLVIDO.length() + "Devido  às   quais".length(), 1)
-					)
-			));
-	}
-
+public class DamerauLevenshteinTextMatcherUnitTest extends TextMatcherAbstractUnitTest {
 	@Test
 	public void testMapping() throws Exception {
-		matcher = new DamerauLevenshteinTextMatcher("012 \t56789   3\t\t6789");
+		DamerauLevenshteinTextMatcher matcher = createTextMatcher("012 \t56789   3\t\t6789");
 		
-		int[] results = matcher.match(
+		int[] results = ((DamerauLevenshteinTextMatcher)matcher).match(
 				0, 
 				"012=56789=3=6789", 
 				0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16
@@ -90,9 +30,9 @@ public class DamerauLevenshteinTextMatcherUnitTest {
 	//especialmente a reconstrução do alinhamento a partir da matriz; verificar se é possível fazer adaptativo
 	@Test
 	public void testMappingWithTransposition() throws Exception {
-		matcher = new DamerauLevenshteinTextMatcher("012 \t56879   3\t\t6789");
+		DamerauLevenshteinTextMatcher matcher = createTextMatcher("012 \t56879   3\t\t6789");
 		
-		int[] results = matcher.match(
+		int[] results = ((DamerauLevenshteinTextMatcher)matcher).match(
 				0, 
 				"012=56789=3=6789", 
 				0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16
@@ -103,7 +43,7 @@ public class DamerauLevenshteinTextMatcherUnitTest {
 
 	@Test
 	public void testDamerauLevenshteinDistance1() throws Exception {
-		matcher = new DamerauLevenshteinTextMatcher("3.º");
+		DamerauLevenshteinTextMatcher matcher = createTextMatcher("3.º");
 		
 		Set<Match> matches = matcher.matchKey("3º.",
 				span(0, "3º.".length(), 0)
@@ -117,55 +57,23 @@ public class DamerauLevenshteinTextMatcherUnitTest {
 			));
 	}
 	
-	@Test
-	public void testCaseSensitive() throws Exception {
-		matcher = new DamerauLevenshteinTextMatcher("CaseSensitive", 0, true);
-		
-		Set<Match> matches;
-		
-		matches = matcher.matchKey("CaseSensitive", span(0, "CaseSensitive".length(), 0));
-		
-		assertThat(matches.size(), is(equalTo(1)));
-		assertThat(matches, hasItems(
-				match(0, "CaseSensitive".length(),
-						span(0, "CaseSensitive".length(), 0)
-					)
-			));
-		
-		matches = matcher.matchKey("casesensitive", span(0, "casesensitive".length(), 0));
-		
-		assertThat(matches.size(), is(equalTo(0)));
+	@Override
+	protected DamerauLevenshteinTextMatcher createTextMatcher(String text) {
+		return new DamerauLevenshteinTextMatcher(text);
 	}
 
-	@Test
-	public void testCaseInsensitive() throws Exception {
-		matcher = new DamerauLevenshteinTextMatcher("CaseInsensitive", 0, false);
-		
-		Set<Match> matches;
-		
-		matches = matcher.matchKey("caseinsensitive", span(0, "caseinsensitive".length(), 0));
-		
-		assertThat(matches.size(), is(equalTo(1)));
-		assertThat(matches, hasItems(
-				match(0, "caseinsensitive".length(),
-						span(0, "caseinsensitive".length(), 0)
-					)
-			));
+	@Override
+	protected DamerauLevenshteinTextMatcher createTextMatcher(String text, int from, int to) {
+		return new DamerauLevenshteinTextMatcher(text, from, to);
 	}
-	
-	@Test
-	public void testWordBoundaryCheckOff() throws Exception {
-		matcher = new DamerauLevenshteinTextMatcher("43min20", 0, false, false);
-		
-		Set<Match> matches;
-		
-		matches = matcher.matchKey("43", span(0, "43".length(), 0));
-		
-		assertThat(matches.size(), is(equalTo(1)));
-		assertThat(matches, hasItems(
-				match(0, "43".length(),
-						span(0, "43".length(), 0)
-					)
-			));
+
+	@Override
+	protected DamerauLevenshteinTextMatcher createTextMatcher(String text, boolean caseSensitive) {
+		return new DamerauLevenshteinTextMatcher(text, 0, caseSensitive);
+	}
+
+	@Override
+	protected DamerauLevenshteinTextMatcher createTextMatcher(String text, boolean caseSensitive, boolean wordBoundaryCheck) {
+		return new DamerauLevenshteinTextMatcher(text, 0, caseSensitive, wordBoundaryCheck);
 	}
 }

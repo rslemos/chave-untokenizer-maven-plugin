@@ -22,12 +22,18 @@ public class DamerauLevenshteinTextMatcher implements TextMatcher {
 			this.wordBoundaryCheck = wordBoundaryCheck;
 		}
 		
-		public DamerauLevenshteinTextMatcher create(String text) {
-			return new DamerauLevenshteinTextMatcher(text, threshold, caseSensitive, wordBoundaryCheck);
+		public TextMatcher create(String text) {
+			if (threshold > 0)
+				return new DamerauLevenshteinTextMatcher(text, threshold, caseSensitive, wordBoundaryCheck);
+			else
+				return new PlainTextMatcher(text, caseSensitive, wordBoundaryCheck);
 		}
 		
-		public DamerauLevenshteinTextMatcher create(String text, int from, int to) {
-			return new DamerauLevenshteinTextMatcher(text, from, to, threshold, caseSensitive, wordBoundaryCheck);
+		public TextMatcher create(String text, int from, int to) {
+			if (threshold > 0)
+				return new DamerauLevenshteinTextMatcher(text, from, to, threshold, caseSensitive, wordBoundaryCheck);
+			else
+				return new PlainTextMatcher(text, from, to, caseSensitive, wordBoundaryCheck);
 		}
 	}
 	
