@@ -14,6 +14,7 @@ import java.util.Iterator;
 import java.util.List;
 import java.util.Set;
 
+import br.eti.rslemos.nlp.corpora.chave.parser.DamerauLevenshteinTextMatcher.Parameters;
 import br.eti.rslemos.nlp.corpora.chave.parser.Match.Span;
 
 
@@ -63,7 +64,7 @@ public class Untokenizer {
 	}
 
 	private void untokenize() {
-		final TextMatcher textMatcher = new DamerauLevenshteinTextMatcher(text, 0);
+		final TextMatcher textMatcher = new Parameters(0, false, true).create(text);
 		
 		for (MatchStrategy strategy : STRATEGIES) {
 			strategy.setData(textMatcher, cgKeys);
@@ -78,7 +79,7 @@ public class Untokenizer {
 		
 		annotateAndSplit(0, spansByEntry.length);
 
-		coverNewLines();
+//		coverNewLines();
 
 		BitSet fixedEntries = getFixedEntries(0, spansByEntry.length);
 		
