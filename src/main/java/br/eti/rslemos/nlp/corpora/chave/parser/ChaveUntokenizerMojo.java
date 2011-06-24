@@ -3,8 +3,9 @@ package br.eti.rslemos.nlp.corpora.chave.parser;
 import gate.Document;
 
 import java.io.File;
-import java.io.FileReader;
+import java.io.FileInputStream;
 import java.io.IOException;
+import java.io.InputStreamReader;
 import java.util.BitSet;
 import java.util.Collections;
 import java.util.Iterator;
@@ -106,7 +107,7 @@ public class ChaveUntokenizerMojo extends AbstractMojo {
 	private void untokenize(File inText, File inCG, File out) {
 		try {
 			Document document = GateLoader.load(inText.toURI().toURL(), encoding);
-			List<CGEntry> cg = CGEntry.loadFromReader(new FileReader(inCG));
+			List<CGEntry> cg = CGEntry.loadFromReader(new InputStreamReader(new FileInputStream(inCG), encoding));
 
 			try {
 				String text = document.getContent().toString();
@@ -117,40 +118,50 @@ public class ChaveUntokenizerMojo extends AbstractMojo {
 				List<Span>[] spans = untokenizer.getProcessingResults();
 				BitSet fixedEntries = Untokenizer.getFixedEntries(spans, 0, cg.size());
 				if (fixedEntries.cardinality() < cg.size()) {
+					final int CONTEXT = 4;
+					
 					System.out.printf("%s failed\n", inText.toString());
 					
 					int firstSet = 0;
 					int firstClear;
 					
 					while ((firstClear = fixedEntries.nextClearBit(firstSet)) < cg.size()) {
-						firstSet = fixedEntries.nextSetBit(firstClear);
+						int nextClear = firstClear;
+						do {
+							firstSet = fixedEntries.nextSetBit(nextClear);
+							firstSet = firstSet >= 0 ? firstSet : cg.size();
+							nextClear = fixedEntries.nextClearBit(firstSet);
+						} while (nextClear < cg.size() && nextClear < firstSet + CONTEXT*2 + 1);
 
-						int from = firstClear > 0 ? spans[firstClear - 1].get(0).from : 0;
-						int to = firstSet >= 0 ? spans[firstSet].get(0).to : text.length();
+						int firstReported = Math.max(0, firstClear - CONTEXT);
+						int lastReported = Math.min(cg.size(), firstSet + CONTEXT) - 1;
 
-						System.out.println("========== cut here ==========");
+						int from = 0;
+						int to = text.length();
+						
+						if (spans[firstReported].size() == 1)
+							from = spans[firstReported].get(0).from;
+						
+						if (spans[lastReported].size() == 1)
+							to = spans[lastReported].get(0).to;
+						
+						System.out.printf(  "========== [%5d;%5d[ ==========\n", from, to);
 						System.out.println(text.substring(from, to));
-						System.out.println("\n========== cut here ==========");
+						System.out.printf("\n===================================\n");
 						
-						if (firstClear > 0) {
-							CGEntry entry = cg.get(firstClear - 1);
-							System.out.printf("%4d. %s (%s)\n", firstClear - 1, entry.getKey(), entry.getValue());
-						}
-						
-						for (int i = firstClear; i < firstSet; i++) {
+						for (int i = firstReported; i <= lastReported; i++) {
 							CGEntry entry = cg.get(i);
-							System.out.printf("%4d. %s (%s) : %s\n", i, entry.getKey(), entry.getValue(), spans[i].toString());
-						}
-						
-						if (firstSet >= 0) {
-							CGEntry entry = cg.get(firstSet);
-							System.out.printf("%4d. %s (%s)\n", firstSet, entry.getKey(), entry.getValue());
+							if (spans[i].size() == 1) {
+								System.out.printf("%4d.   %-30s (%s)\n", i, '"' + entry.getKey() + '"', entry.getValue());
+							} else {
+								System.out.printf("%4d. * %-30s (%s) : #%d - %s\n", i, '"' + entry.getKey() + '"', entry.getValue(), spans[i].size(), spans[i].toString());
+							}
 						}
 					}
 				}
 				
 			} catch (Exception e) {
-				System.err.println(e.getMessage());
+				e.printStackTrace();
 			}
 			
 			FileUtils.fileWrite(out.toString(), document.toXml());
