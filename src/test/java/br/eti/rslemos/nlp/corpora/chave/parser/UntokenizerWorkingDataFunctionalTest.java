@@ -1,7 +1,9 @@
 package br.eti.rslemos.nlp.corpora.chave.parser;
 
+import org.junit.Ignore;
 import org.junit.Test;
 
+@Ignore
 public class UntokenizerWorkingDataFunctionalTest extends UntokenizerAbstractFunctionalTest {
 	@Test public void test$pt_BR$CHAVEFolha$1994$01$01$001() { _(); }
 	@Test public void test$pt_BR$CHAVEFolha$1994$01$01$003() { _(); }
