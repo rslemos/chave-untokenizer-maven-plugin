@@ -3,7 +3,9 @@ package br.eti.rslemos.nlp.corpora.chave.parser;
 import gate.Document;
 
 import java.io.File;
+import java.io.FileReader;
 import java.io.IOException;
+import java.util.BitSet;
 import java.util.Collections;
 import java.util.Iterator;
 import java.util.List;
@@ -14,6 +16,8 @@ import org.apache.maven.plugin.MojoExecutionException;
 import org.apache.maven.plugin.MojoFailureException;
 import org.apache.maven.plugin.logging.Log;
 import org.codehaus.plexus.util.FileUtils;
+
+import br.eti.rslemos.nlp.corpora.chave.parser.Match.Span;
 
 /**
  * @goal untokenize
@@ -41,7 +45,7 @@ public class ChaveUntokenizerMojo extends AbstractMojo {
      * @parameter expression="${maven.resources.overwrite}" default-value="false"
      * @since 2.3
      */
-    private boolean overwrite;
+    //private boolean overwrite;
     
     /**
      * Copy any empty directories included in the Ressources.
@@ -75,19 +79,23 @@ public class ChaveUntokenizerMojo extends AbstractMojo {
 			try {
 				getLog().info("Processing " + resource.getDirectory());
 				getLog().info("Collecting filenames");
-				List fileNames = FileUtils.getFileNames(new File(resource.getDirectory()), "**/*.sgml", "", false);
+				
+				@SuppressWarnings("unchecked")
+				List<String> fileNames = FileUtils.getFileNames(new File(resource.getDirectory()), "**/*.sgml", "", false);
+				
 				getLog().info("Sorting");
 				Collections.sort(fileNames);
 				getLog().info("Untokenizing");
-				for (Iterator iterator = fileNames.iterator(); iterator.hasNext();) {
+				for (Iterator<String> iterator = fileNames.iterator(); iterator.hasNext();) {
 					String fileName = (String) iterator.next();
 					
-					File in = new File(resource.getDirectory(), fileName);
+					File inText = new File(resource.getDirectory(), fileName);
+					File inCG = new File(resource.getDirectory(), FileUtils.removeExtension(fileName) + ".cg");
 					File out = new File(outputDirectory, FileUtils.removeExtension(fileName) + ".xml");
 
 					getLog().info(out.toString());
 					out.getParentFile().mkdirs();
-					untokenize(in, out);
+					untokenize(inText, inCG, out);
 				}
 			} catch (IOException e) {
 				throw new MojoExecutionException("Iterating throw input directories", e);
@@ -95,38 +103,60 @@ public class ChaveUntokenizerMojo extends AbstractMojo {
 		}
 	}
 
-	private void process(File base, File file) {
-		File in = file;
-		if (in.isDirectory()) {
-			File[] files = in.listFiles();
-			for (File e : files) {
-				process(base, e);
-			}
-		} else {
-			if (!in.toString().endsWith(".sgml"))
-				return;
-
-			String suffix = FileUtils.basename(getSuffix(base, in), ".sgml") + ".xml";
-			File out = new File(outputDirectory, suffix);
-			out.getParentFile().mkdirs();
-			getLog().info(out.toString());
-			untokenize(in, out);
-		}
-	}
-
-	private void untokenize(File in, File out) {
+	private void untokenize(File inText, File inCG, File out) {
 		try {
-			Document document = GateLoader.load(in.toURI().toURL(), encoding);
+			Document document = GateLoader.load(inText.toURI().toURL(), encoding);
+			List<CGEntry> cg = CGEntry.loadFromReader(new FileReader(inCG));
+
+			try {
+				String text = document.getContent().toString();
+				
+				Untokenizer untokenizer = new Untokenizer();
+				untokenizer.untokenize(document, cg);
+				
+				List<Span>[] spans = untokenizer.getProcessingResults();
+				BitSet fixedEntries = Untokenizer.getFixedEntries(spans, 0, cg.size());
+				if (fixedEntries.cardinality() < cg.size()) {
+					System.out.printf("%s failed\n", inText.toString());
+					
+					int firstSet = 0;
+					int firstClear;
+					
+					while ((firstClear = fixedEntries.nextClearBit(firstSet)) < cg.size()) {
+						firstSet = fixedEntries.nextSetBit(firstClear);
+
+						int from = firstClear > 0 ? spans[firstClear - 1].get(0).from : 0;
+						int to = firstSet >= 0 ? spans[firstSet].get(0).to : text.length();
+
+						System.out.println("========== cut here ==========");
+						System.out.println(text.substring(from, to));
+						System.out.println("\n========== cut here ==========");
+						
+						if (firstClear > 0) {
+							CGEntry entry = cg.get(firstClear - 1);
+							System.out.printf("%4d. %s (%s)\n", firstClear - 1, entry.getKey(), entry.getValue());
+						}
+						
+						for (int i = firstClear; i < firstSet; i++) {
+							CGEntry entry = cg.get(i);
+							System.out.printf("%4d. %s (%s) : %s\n", i, entry.getKey(), entry.getValue(), spans[i].toString());
+						}
+						
+						if (firstSet >= 0) {
+							CGEntry entry = cg.get(firstSet);
+							System.out.printf("%4d. %s (%s)\n", firstSet, entry.getKey(), entry.getValue());
+						}
+					}
+				}
+				
+			} catch (Exception e) {
+				System.err.println(e.getMessage());
+			}
+			
 			FileUtils.fileWrite(out.toString(), document.toXml());
 		} catch (Exception e) {
 			getLog().error(e);
 		}
 	}
 
-	private static String getSuffix(File base, File file) {
-		if (base.equals(file))
-			return ".";
-		else 
-			return getSuffix(base, file.getParentFile()) + File.separator + file.getName(); 
-	}
 }
