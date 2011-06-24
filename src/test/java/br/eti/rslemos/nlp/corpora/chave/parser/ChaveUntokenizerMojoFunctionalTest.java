@@ -14,7 +14,7 @@ public class ChaveUntokenizerMojoFunctionalTest {
 	public void test() throws Exception {
 		File testDir = ResourceExtractor.simpleExtractResources(getClass(), "/chave-untokenizer-test");
 		Verifier verifier = new Verifier(testDir.getAbsolutePath());
-		verifier.executeGoal("br.eti.rslemos.nlp.corpora:maven-chave-parser-plugin:untokenize");
+		verifier.executeGoal("br.eti.rslemos.nlp.corpora:chave-untokenizer-maven-plugin:untokenize");
 		verifier.verifyErrorFreeLog();
 		
 	}
