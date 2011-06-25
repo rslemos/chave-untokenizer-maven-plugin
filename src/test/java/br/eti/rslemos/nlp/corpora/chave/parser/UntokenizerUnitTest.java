@@ -131,6 +131,35 @@ public class UntokenizerUnitTest {
 	}
 
 	@Test
+	public void testUndecidablePilcrow() {
+		TEXT = "podem ser demitidos.\n\"A decisão do";
+		
+		CG = Arrays.asList(new CGEntry[] {
+				entry("podem",		"[poder] V PR 3P IND VFIN @FAUX"),
+				entry("ser",		"[ser] V INF @IAUX @#ICL-AUX<"),
+				entry("demitidos",	"[demitir] V PCP M P @IMV @#ICL-AUX<"),
+				entry("$.",			"[$.] PU <<<"),
+				entry("$¶",			"[$¶] PU <<<"),
+				entry("A",			"[o] <*1> <artd> DET F S @>N"),
+				entry("decisão",	"[decisão] N F S @SUBJ>"),
+				entry("de",			"[de] <sam-> PRP @N<"),
+				entry("o",			"[o] <artd> <-sam> DET M S @>N"),
+			});
+		
+		untokenize();
+
+		assertThatHasAnnotation( 0,  5,  0, "podem");
+		assertThatHasAnnotation( 6,  9,  1, "ser");
+		assertThatHasAnnotation(10, 19,  2, "demitidos");
+		assertThatHasAnnotation(19, 20,  3, ".");
+		assertThatHasAnnotation(20, 21,  4, "\n");
+		assertThatHasAnnotation(22, 23,  5, "A");
+		assertThatHasAnnotation(24, 31,  6, "decisão");
+		assertThatHasAnnotation(32, 33,  7, "d");
+		assertThatHasAnnotation(33, 34,  8, "o");
+	}
+
+	@Test
 	public void testGivesPriorityToLengthierMatch() throws Exception {
 		TEXT = "deles";
 

@@ -90,6 +90,19 @@ public class Untokenizer {
 			return;
 		
 		Span fixedSpan = chooseFixedSpan(start, end);
+		
+		if (fixedSpan == null) {
+			// squeezed pilcrow with many options
+			if (end - start == 1 && "$¶".equals(cgKeys.get(start)) && spansByEntry[start].size() > 1) {
+				for (Span span : spansByEntry[start]) {
+					if (span.to - span.from == 1) {
+						fixedSpan = span;
+						break;
+					}
+				}
+			}
+		}
+		
 		if (fixedSpan == null) {
 			for (int i = start; i < end; i++) {
 				processingResults[i].addAll(spansByEntry[i]);
