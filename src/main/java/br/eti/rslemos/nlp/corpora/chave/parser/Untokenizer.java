@@ -11,8 +11,11 @@ import gate.util.InvalidOffsetException;
 import java.util.ArrayList;
 import java.util.BitSet;
 import java.util.Collections;
+import java.util.HashMap;
+import java.util.HashSet;
 import java.util.Iterator;
 import java.util.List;
+import java.util.Map;
 import java.util.Set;
 
 import br.eti.rslemos.nlp.corpora.chave.parser.DamerauLevenshteinTextMatcher.Parameters;
@@ -110,6 +113,50 @@ public class Untokenizer {
 							break;
 						}
 					}
+				}
+			}
+			
+			HashMap<String, List<List<Span>>> spansByKey = new HashMap<String, List<List<Span>>>(end - start);
+			for (int i = start; i < end; i++) {
+				List<List<Span>> spanList = spansByKey.get(cgKeys.get(i));
+				
+				if (spanList == null) {
+					spanList = new ArrayList<List<Span>>();
+					spansByKey.put(cgKeys.get(i), spanList);
+				}
+				
+				spanList.add(spansByEntry[i]);
+			}
+			
+			outer:
+			for (Map.Entry<String, List<List<Span>>> spanListByKey : spansByKey.entrySet()) {
+				List<List<Span>> spanList = spanListByKey.getValue();
+				int multiplicity = spanList.size();
+				
+				if (multiplicity > 1) {
+					int[] entries = new int[multiplicity];
+
+					int i = 0;
+					for (List<Span> spans : spanList) {
+						if (spans.size() != multiplicity)
+							continue outer;
+
+						entries[i++] = spans.get(0).entry;
+					}
+				
+					for (i = 0; i < entries.length; i++) {
+						int entry = entries[i];
+						
+						Collections.sort(spansByEntry[entry], new br.eti.rslemos.nlp.corpora.chave.parser.Span.SpanComparatorByOffsets());
+						
+						Span theSpan = spansByEntry[entry].get(i);
+						spansByEntry[entry] = new ArrayList<Match.Span>(1);
+						spansByEntry[entry].add(theSpan);
+					}
+					
+					annotateAndSplit(start, end);
+					
+					return;
 				}
 			}
 		}
