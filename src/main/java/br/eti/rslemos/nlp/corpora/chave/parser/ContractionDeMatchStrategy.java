@@ -5,6 +5,7 @@ public class ContractionDeMatchStrategy extends AbstractContractionMatchStrategy
 	private static final ContractionTemplate[] TEMPLATES = {
 			// DE + X
 			new ContractionTemplate("DE", "A", "DA", 1, 1),
+			new ContractionTemplate("DE", "ALI", "DALI", 1, 1),
 			new ContractionTemplate("DE", "AQUELA", "DAQUELA", 1, 1),
 			new ContractionTemplate("DE", "AQUELAS", "DAQUELAS", 1, 1),
 			new ContractionTemplate("DE", "AQUELE", "DAQUELE", 1, 1),
@@ -32,6 +33,7 @@ public class ContractionDeMatchStrategy extends AbstractContractionMatchStrategy
 			new ContractionTemplate("DE", "OS", "DOS", 1, 1),
 			// De + x
 			new ContractionTemplate("De", "a", "Da", 1, 1),
+			new ContractionTemplate("De", "ali", "Dali", 1, 1),
 			new ContractionTemplate("De", "aquela", "Daquela", 1, 1),
 			new ContractionTemplate("De", "aquelas", "Daquelas", 1, 1),
 			new ContractionTemplate("De", "aquele", "Daquele", 1, 1),
@@ -59,6 +61,7 @@ public class ContractionDeMatchStrategy extends AbstractContractionMatchStrategy
 			new ContractionTemplate("De", "os", "Dos", 1, 1),
 			// de + x
 			new ContractionTemplate("de", "a", "da", 1, 1),
+			new ContractionTemplate("de", "ali", "dali", 1, 1),
 			new ContractionTemplate("de", "aquela", "daquela", 1, 1),
 			new ContractionTemplate("de", "aquelas", "daquelas", 1, 1),
 			new ContractionTemplate("de", "aquele", "daquele", 1, 1),

@@ -313,6 +313,18 @@ public class ContractionDeMatchStrategyUnitTest extends AbstractMatchStrategyUni
 	}
 	
 	@Test
+	public void testContraction_de_ali() throws Exception {
+		cg.add("de");
+		cg.add("ali");
+		
+		runOver("dali");
+		
+		verifyMatches(match(0, "dali".length(), span(0, 1, 0), 
+				span(1, "dali".length(), 1)
+			));
+	}
+	
+	@Test
 	public void testContraction_de_aí() throws Exception {
 		cg.add("de");
 		cg.add("aí");
@@ -670,6 +682,18 @@ public class ContractionDeMatchStrategyUnitTest extends AbstractMatchStrategyUni
 	}
 	
 	@Test
+	public void testContraction_De_ali() throws Exception {
+		cg.add("De");
+		cg.add("ali");
+		
+		runOver("Dali");
+		
+		verifyMatches(match(0, "Dali".length(), span(0, 1, 0), 
+				span(1, "Dali".length(), 1)
+			));
+	}
+	
+	@Test
 	public void testContraction_De_aí() throws Exception {
 		cg.add("De");
 		cg.add("aí");
@@ -991,6 +1015,18 @@ public class ContractionDeMatchStrategyUnitTest extends AbstractMatchStrategyUni
 		
 		verifyMatches(match(0, "DAQUI".length(), span(0, 1, 0), 
 				span(1, "DAQUI".length(), 1)
+			));
+	}
+	
+	@Test
+	public void testContraction_DE_ALI() throws Exception {
+		cg.add("DE");
+		cg.add("ALI");
+		
+		runOver("DALI");
+		
+		verifyMatches(match(0, "DALI".length(), span(0, 1, 0), 
+				span(1, "DALI".length(), 1)
 			));
 	}
 	
