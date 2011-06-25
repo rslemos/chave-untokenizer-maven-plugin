@@ -289,6 +289,18 @@ public class ContractionDeMatchStrategyUnitTest extends AbstractMatchStrategyUni
 	}
 	
 	@Test
+	public void testContraction_de_entre() throws Exception {
+		cg.add("de");
+		cg.add("entre");
+		
+		runOver("dentre");
+		
+		verifyMatches(match(0, "dentre".length(), span(0, 1, 0), 
+				span(1, "dentre".length(), 1)
+			));
+	}
+	
+	@Test
 	public void testContraction_de_aqui() throws Exception {
 		cg.add("de");
 		cg.add("aqui");
@@ -634,6 +646,18 @@ public class ContractionDeMatchStrategyUnitTest extends AbstractMatchStrategyUni
 	}
 	
 	@Test
+	public void testContraction_De_entre() throws Exception {
+		cg.add("De");
+		cg.add("entre");
+		
+		runOver("Dentre");
+		
+		verifyMatches(match(0, "Dentre".length(), span(0, 1, 0), 
+				span(1, "Dentre".length(), 1)
+			));
+	}
+	
+	@Test
 	public void testContraction_De_aqui() throws Exception {
 		cg.add("De");
 		cg.add("aqui");
@@ -943,6 +967,18 @@ public class ContractionDeMatchStrategyUnitTest extends AbstractMatchStrategyUni
 		
 		verifyMatches(match(0, "DELAS".length(), span(0, 1, 0), 
 				span(1, "DELAS".length(), 1)
+			));
+	}
+	
+	@Test
+	public void testContraction_DE_ENTRE() throws Exception {
+		cg.add("DE");
+		cg.add("ENTRE");
+		
+		runOver("DENTRE");
+		
+		verifyMatches(match(0, "DENTRE".length(), span(0, 1, 0), 
+				span(1, "DENTRE".length(), 1)
 			));
 	}
 	
