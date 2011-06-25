@@ -145,16 +145,17 @@ public class ChaveUntokenizerMojo extends AbstractMojo {
 						if (spans[lastReported].size() == 1)
 							to = spans[lastReported].get(0).to;
 						
-						System.out.printf(  "========== [%5d;%5d[ ==========\n", from, to);
+						System.out.printf("========== [%5d;%5d[ ==========\n", from, to);
 						System.out.println(text.substring(from, to));
-						System.out.printf("\n===================================\n");
+						System.out.printf("===================================\n");
 						
 						for (int i = firstReported; i <= lastReported; i++) {
 							CGEntry entry = cg.get(i);
 							if (spans[i].size() == 1) {
-								System.out.printf("%4d.   %-30s (%s)\n", i, '"' + entry.getKey() + '"', entry.getValue());
+								Span matchSpan = spans[i].get(0);
+								System.out.printf("%5d.   %-30s (%s) : \"%s\"\n", i, '"' + entry.getKey() + '"', entry.getValue(), text.substring(matchSpan.from, spans[i].get(0).to));
 							} else {
-								System.out.printf("%4d. * %-30s (%s) : #%d - %s\n", i, '"' + entry.getKey() + '"', entry.getValue(), spans[i].size(), spans[i].toString());
+								System.out.printf("%5d. * %-30s (%s) : #%d - %s\n", i, '"' + entry.getKey() + '"', entry.getValue(), spans[i].size(), spans[i].toString());
 							}
 						}
 					}
