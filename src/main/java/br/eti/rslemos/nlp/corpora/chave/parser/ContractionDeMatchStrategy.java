@@ -31,6 +31,10 @@ public class ContractionDeMatchStrategy extends AbstractContractionMatchStrategy
 			new ContractionTemplate("DE", "ISTO", "DISTO", 1, 1),
 			new ContractionTemplate("DE", "O", "DO", 1, 1),
 			new ContractionTemplate("DE", "OS", "DOS", 1, 1),
+			new ContractionTemplate("DE", "UM", "DUM", 1, 1),
+			new ContractionTemplate("DE", "UMA", "DUMA", 1, 1),
+			new ContractionTemplate("DE", "UMAS", "DUMAS", 1, 1),
+			new ContractionTemplate("DE", "UNS", "DUNS", 1, 1),
 			// De + x
 			new ContractionTemplate("De", "a", "Da", 1, 1),
 			new ContractionTemplate("De", "ali", "Dali", 1, 1),
@@ -59,6 +63,10 @@ public class ContractionDeMatchStrategy extends AbstractContractionMatchStrategy
 			new ContractionTemplate("De", "isto", "Disto", 1, 1),
 			new ContractionTemplate("De", "o", "Do", 1, 1),
 			new ContractionTemplate("De", "os", "Dos", 1, 1),
+			new ContractionTemplate("De", "um", "Dum", 1, 1),
+			new ContractionTemplate("De", "uma", "Duma", 1, 1),
+			new ContractionTemplate("De", "umas", "Dumas", 1, 1),
+			new ContractionTemplate("De", "uns", "Duns", 1, 1),
 			// de + x
 			new ContractionTemplate("de", "a", "da", 1, 1),
 			new ContractionTemplate("de", "ali", "dali", 1, 1),
@@ -87,6 +95,10 @@ public class ContractionDeMatchStrategy extends AbstractContractionMatchStrategy
 			new ContractionTemplate("de", "isto", "disto", 1, 1),
 			new ContractionTemplate("de", "o", "do", 1, 1),
 			new ContractionTemplate("de", "os", "dos", 1, 1),
+			new ContractionTemplate("de", "um", "dum", 1, 1),
+			new ContractionTemplate("de", "uma", "duma", 1, 1),
+			new ContractionTemplate("de", "umas", "dumas", 1, 1),
+			new ContractionTemplate("de", "uns", "duns", 1, 1),
 		};
 	
 	public ContractionDeMatchStrategy() {

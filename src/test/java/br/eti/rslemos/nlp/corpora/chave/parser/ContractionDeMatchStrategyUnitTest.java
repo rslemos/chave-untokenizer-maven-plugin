@@ -61,6 +61,54 @@ public class ContractionDeMatchStrategyUnitTest extends AbstractMatchStrategyUni
 	}
 
 	@Test
+	public void testContraction_de_um() throws Exception {
+		cg.add("de");
+		cg.add("um");
+		
+		runOver("dum");
+		
+		verifyMatches(match(0, "dum".length(), span(0, 1, 0), 
+				span(1, "dum".length(), 1)
+			));
+	}
+	
+	@Test
+	public void testContraction_de_uma() throws Exception {
+		cg.add("de");
+		cg.add("uma");
+		
+		runOver("duma");
+		
+		verifyMatches(match(0, "duma".length(), span(0, 1, 0), 
+				span(1, "duma".length(), 1)
+			));
+	}
+	
+	@Test
+	public void testContraction_de_uns() throws Exception {
+		cg.add("de");
+		cg.add("uns");
+		
+		runOver("duns");
+		
+		verifyMatches(match(0, "duns".length(), span(0, 1, 0), 
+				span(1, "duns".length(), 1)
+			));
+	}
+	
+	@Test
+	public void testContraction_de_umas() throws Exception {
+		cg.add("de");
+		cg.add("umas");
+		
+		runOver("dumas");
+		
+		verifyMatches(match(0, "dumas".length(), span(0, 1, 0), 
+				span(1, "dumas".length(), 1)
+			));
+	}
+	
+	@Test
 	public void testContraction_de_este() throws Exception {
 		cg.add("de");
 		cg.add("este");
@@ -430,6 +478,54 @@ public class ContractionDeMatchStrategyUnitTest extends AbstractMatchStrategyUni
 	}
 
 	@Test
+	public void testContraction_De_um() throws Exception {
+		cg.add("De");
+		cg.add("um");
+		
+		runOver("Dum");
+		
+		verifyMatches(match(0, "Dum".length(), span(0, 1, 0), 
+				span(1, "Dum".length(), 1)
+			));
+	}
+	
+	@Test
+	public void testContraction_De_uma() throws Exception {
+		cg.add("De");
+		cg.add("uma");
+		
+		runOver("Duma");
+		
+		verifyMatches(match(0, "Duma".length(), span(0, 1, 0), 
+				span(1, "Duma".length(), 1)
+			));
+	}
+	
+	@Test
+	public void testContraction_De_uns() throws Exception {
+		cg.add("De");
+		cg.add("uns");
+		
+		runOver("Duns");
+		
+		verifyMatches(match(0, "Duns".length(), span(0, 1, 0), 
+				span(1, "Duns".length(), 1)
+			));
+	}
+	
+	@Test
+	public void testContraction_De_umas() throws Exception {
+		cg.add("De");
+		cg.add("umas");
+		
+		runOver("Dumas");
+		
+		verifyMatches(match(0, "Dumas".length(), span(0, 1, 0), 
+				span(1, "Dumas".length(), 1)
+			));
+	}
+	
+	@Test
 	public void testContraction_De_este() throws Exception {
 		cg.add("De");
 		cg.add("este");
@@ -766,6 +862,54 @@ public class ContractionDeMatchStrategyUnitTest extends AbstractMatchStrategyUni
 			));
 	}
 
+	@Test
+	public void testContraction_DE_UM() throws Exception {
+		cg.add("DE");
+		cg.add("UM");
+		
+		runOver("DUM");
+		
+		verifyMatches(match(0, "DUM".length(), span(0, 1, 0), 
+				span(1, "DUM".length(), 1)
+			));
+	}
+	
+	@Test
+	public void testContraction_DE_UMA() throws Exception {
+		cg.add("DE");
+		cg.add("UMA");
+		
+		runOver("DUMA");
+		
+		verifyMatches(match(0, "DUMA".length(), span(0, 1, 0), 
+				span(1, "DUMA".length(), 1)
+			));
+	}
+	
+	@Test
+	public void testContraction_DE_UNS() throws Exception {
+		cg.add("DE");
+		cg.add("UNS");
+		
+		runOver("DUNS");
+		
+		verifyMatches(match(0, "DUNS".length(), span(0, 1, 0), 
+				span(1, "DUNS".length(), 1)
+			));
+	}
+	
+	@Test
+	public void testContraction_DE_UMAS() throws Exception {
+		cg.add("DE");
+		cg.add("UMAS");
+		
+		runOver("DUMAS");
+		
+		verifyMatches(match(0, "DUMAS".length(), span(0, 1, 0), 
+				span(1, "DUMAS".length(), 1)
+			));
+	}
+	
 	@Test
 	public void testContraction_DE_ESTE() throws Exception {
 		cg.add("DE");
