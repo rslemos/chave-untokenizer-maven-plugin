@@ -10,6 +10,7 @@ import gate.util.InvalidOffsetException;
 
 import java.util.ArrayList;
 import java.util.BitSet;
+import java.util.Collections;
 import java.util.Iterator;
 import java.util.List;
 import java.util.Set;
@@ -98,6 +99,16 @@ public class Untokenizer {
 					if (span.to - span.from == 1) {
 						fixedSpan = span;
 						break;
+					}
+				}
+				
+				if (fixedSpan == null) {
+					Collections.sort(spansByEntry[start], new br.eti.rslemos.nlp.corpora.chave.parser.Span.SpanComparatorByOffsets());
+					for (Span span : spansByEntry[start]) {
+						if (text.charAt(span.from) == ' ') {
+							fixedSpan = span;
+							break;
+						}
 					}
 				}
 			}

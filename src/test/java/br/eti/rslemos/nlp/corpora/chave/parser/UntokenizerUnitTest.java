@@ -131,7 +131,7 @@ public class UntokenizerUnitTest {
 	}
 
 	@Test
-	public void testUndecidablePilcrow() {
+	public void testUndecidablePilcrow1() {
 		TEXT = "podem ser demitidos.\n\"A decisão do";
 		
 		CG = Arrays.asList(new CGEntry[] {
@@ -157,6 +157,35 @@ public class UntokenizerUnitTest {
 		assertThatHasAnnotation(24, 31,  6, "decisão");
 		assertThatHasAnnotation(32, 33,  7, "d");
 		assertThatHasAnnotation(33, 34,  8, "o");
+	}
+
+	@Test
+	public void testUndecidablePilcrow2() {
+		TEXT = "pela média. \"O presidente já disse";
+		
+		CG = Arrays.asList(new CGEntry[] {
+				entry("por",		"[por] PRP <sam-> @<ADVL"),
+				entry("a",			"[o] DET F S <artd> <-sam> @>N"),
+				entry("média",		"[média] N F S @P<"),
+				entry("$.",			"[$.] PU <<<"),
+				entry("$¶",			"[$¶] PU <<<"),
+				entry("O",			"[o] DET M S <artd> <*1> @>N"),
+				entry("presidente",	"[presidente] N M S @SUBJ>"),
+				entry("já",			"[já] ADV @ADVL>"),
+				entry("disse",		"[dizer] V PS 3S IND VFIN <fmc> @FMV"),
+			});
+		
+		untokenize();
+
+		assertThatHasAnnotation( 0,  3,  0, "pel");
+		assertThatHasAnnotation( 3,  4,  1, "a");
+		assertThatHasAnnotation( 5, 10,  2, "média");
+		assertThatHasAnnotation(10, 11,  3, ".");
+		assertThatHasAnnotation(13, 14,  5, "O");
+		assertThatHasAnnotation(15, 25,  6, "presidente");
+		assertThatHasAnnotation(26, 28,  7, "já");
+		assertThatHasAnnotation(29, 34,  8, "disse");
+		assertThatHasAnnotation(11, 11,  4, "");
 	}
 
 	@Test
