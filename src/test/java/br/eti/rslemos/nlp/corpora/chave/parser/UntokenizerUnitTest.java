@@ -189,6 +189,119 @@ public class UntokenizerUnitTest {
 	}
 
 	@Test
+	public void testUndecidableRepetition1() {
+		TEXT = "o grupo dos ``top ten'' a partir de segunda-feira, graças à";
+		
+		CG = Arrays.asList(new CGEntry[] {
+				entry("o",					"[o] DET M S <artd> <-sam> @>N"),
+				entry("grupo",				"[grupo] N M S @P<"),
+				entry("de",					"[de] PRP <sam-> @N<"),
+				entry("os",					"[o] DET M P <artd> <-sam> @>N"),
+				entry("$`",					"[$`] PU"),
+				entry("$`",					"[$`] PU"),
+				entry("top=ten ALT xxx",	"[top=ten] N M S @P<"),
+				entry("$'",					"[$'] PU"),
+				entry("$'",					"[$'] PU"),
+				entry("a=partir=de",		"[a=partir=de] PRP @<ADVL"),
+				entry("segunda-feira",		"[segunda-feira] N F S @P<"),
+				entry("$,",					null),
+				entry("graças=a",			"[graças=a] PRP <sam-> @<ADVL"),
+				entry("a",					"[o] DET F S <artd> <-sam> @>N"),
+			});
+		
+		untokenize();
+
+		assertThatHasAnnotation( 0,  1,  0, "o");
+		assertThatHasAnnotation( 2,  7,  1, "grupo");
+		assertThatHasAnnotation( 8,  9,  2, "d");
+		assertThatHasAnnotation( 9, 11,  3, "os");
+		assertThatHasAnnotation(12, 13,  4, "`");
+		assertThatHasAnnotation(13, 14,  5, "`");
+		assertThatHasAnnotation(14, 21,  6, "top ten");
+		assertThatHasAnnotation(21, 22,  7, "'");
+		assertThatHasAnnotation(22, 23,  8, "'");
+		assertThatHasAnnotation(24, 35,  9, "a partir de");
+		assertThatHasAnnotation(36, 49, 10, "segunda-feira");
+		assertThatHasAnnotation(49, 50, 11, ",");
+		//tem que acertar o assertThatHasAnnotation
+		//para que pegue overlapping matches
+		//assertThatHasAnnotation(51, 59, 12, "graças à");
+		assertThatHasAnnotation(58, 59, 13, "à");
+	}
+
+	@Test
+	public void testUndecidableRepetition2() {
+		TEXT = "Morreu jovem, jovem e velho. Velho e jovem. Sua ausência amplia o";
+		
+		CG = Arrays.asList(new CGEntry[] {
+				entry("Morreu",		"[morrer] V PS 3S IND VFIN <fmc> @FMV"),
+				entry("jovem",		"[jovem] ADJ M/F S @<PRED"),
+				entry("$,",			null),
+				entry("jovem",		"[jovem] ADJ M/F S @<PRED"),
+				entry("e",			"[e] KC @CO"),
+				entry("velho",		"[velho] ADJ M S @<PRED"),
+				entry("$.",			"[$.] PU <<<"),
+				entry("$¶",			"[$¶] PU <<<"),
+				entry("Velho",		"[velho] ADJ M S @NPHR"),
+				entry("e",			"[e] KC @CO"),
+				entry("jovem",		"[jovem] ADJ M/F S @NPHR"),
+				entry("$.",			"[$.] PU <<<"),
+				entry("$¶",			"[$¶] PU <<<"),
+				entry("Sua",		"[seu] DET F S <poss 3S> @>N"),
+				entry("ausência",	"[ausência] N F S @SUBJ>"),
+				entry("amplia",		"[ampliar] V PR 3S IND VFIN <fmc> @FMV"),
+				entry("o",			"[o] DET M S <artd> @>N"),
+			});
+		
+		untokenize();
+
+		assertThatHasAnnotation( 0,  6,  0, "Morreu");
+		assertThatHasAnnotation( 7, 12,  1, "jovem");
+		assertThatHasAnnotation(12, 13,  2, ",");
+		assertThatHasAnnotation(14, 19,  3, "jovem");
+		assertThatHasAnnotation(20, 21,  4, "e");
+		assertThatHasAnnotation(22, 27,  5, "velho");
+		assertThatHasAnnotation(27, 28,  6, ".");
+		assertThatHasAnnotation(28, 28,  7, "");
+		assertThatHasAnnotation(29, 34,  8, "Velho");
+		assertThatHasAnnotation(35, 36,  9, "e");
+		assertThatHasAnnotation(37, 42, 10, "jovem");
+		assertThatHasAnnotation(42, 43, 11, ".");
+		assertThatHasAnnotation(43, 43, 12, "");
+		assertThatHasAnnotation(44, 47, 13, "Sua");
+		assertThatHasAnnotation(48, 56, 14, "ausência");
+		assertThatHasAnnotation(57, 63, 15, "amplia");
+		assertThatHasAnnotation(64, 65, 16, "o");
+	}
+
+	@Test
+	public void testHyphen() {
+		TEXT = "17 de setembro - o guerrilheiro Carlos Lamarca é";
+		
+		CG = Arrays.asList(new CGEntry[] {
+				entry("17",				"[17] <card> NUM M/F P @ADVL>"),
+				entry("de",				"[de] PRP @N<"),
+				entry("setembro",		"[setembro] N M S @P<"),
+				entry("$--",			"[$--] PU"),
+				entry("o",				"[o] <artd> DET M S @>N"),
+				entry("guerrilheiro",	"[guerrilheiro] N M S @SUBJ>"),
+				entry("Carlos=Lamarca",	"[Carlos=Lamarca] PROP M S @N<"),
+				entry("é",				"[ser] <fmc> V PR 3S IND VFIN @FAUX"),
+			});
+		
+		untokenize();
+
+		assertThatHasAnnotation( 0,  2,  0, "17");
+		assertThatHasAnnotation( 3,  5,  1, "de");
+		assertThatHasAnnotation( 6, 14,  2, "setembro");
+		assertThatHasAnnotation(17, 18,  4, "o");
+		assertThatHasAnnotation(19, 31,  5, "guerrilheiro");
+		assertThatHasAnnotation(32, 46,  6, "Carlos Lamarca");
+		assertThatHasAnnotation(47, 48,  7, "é");
+		assertThatHasAnnotation(15, 16,  3, "-");
+	}
+
+	@Test
 	public void testGivesPriorityToLengthierMatch() throws Exception {
 		TEXT = "deles";
 

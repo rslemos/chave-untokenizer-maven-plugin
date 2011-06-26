@@ -46,6 +46,8 @@ public class DirectMatchStrategy extends AbstractMatchStrategy {
 	private String getKey(int i) {
 		String key0 = getKey(cg.get(i));
 		
+		// TODO: retirar este bacalho quando o DL for religado;
+		// este bacalho resolve o caso "sra." + "$."; o DL conseguiria capturar este caso
 		if (cg.size() > i + 1) {
 			String key1 = getKey(cg.get(i + 1));
 			
@@ -59,12 +61,15 @@ public class DirectMatchStrategy extends AbstractMatchStrategy {
 		return key0;
 	}
 
-
 	private static String getKey(String currentKey) {
 		currentKey = currentKey.split(" ")[0];
 		
+		if ("$--".equals(currentKey))
+			currentKey = "-";
+		
 		if (currentKey.startsWith("$"))
 			currentKey = currentKey.substring(1);
+
 		
 		return currentKey;
 	}
