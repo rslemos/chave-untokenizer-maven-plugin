@@ -12,7 +12,6 @@ import java.util.ArrayList;
 import java.util.BitSet;
 import java.util.Collections;
 import java.util.HashMap;
-import java.util.HashSet;
 import java.util.Iterator;
 import java.util.List;
 import java.util.Map;
@@ -26,12 +25,7 @@ public class Untokenizer {
 
 	private final MatchStrategy[] STRATEGIES = {
 			new DirectMatchStrategy(),
-			new ContractionAMatchStrategy(),
-			new ContractionComMatchStrategy(),
-			new ContractionDeMatchStrategy(),
-			new ContractionEmMatchStrategy(),
-			new ContractionParaMatchStrategy(),
-			new ContractionPorMatchStrategy(),
+			new ContractionMatchStrategy(),
 			new EncliticMatchStrategy(),
 			new NewLineMatchStrategy(),
 		};

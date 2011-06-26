@@ -5,11 +5,7 @@ import static br.eti.rslemos.nlp.corpora.chave.parser.Span.span;
 
 import org.junit.Test;
 
-public class ContractionEmMatchStrategyUnitTest extends AbstractMatchStrategyUnitTest {
-	
-	public ContractionEmMatchStrategyUnitTest() {
-		super(new ContractionEmMatchStrategy());
-	}
+public class ContractionEmMatchStrategyUnitTest extends ContractionMatchStrategyUnitTest {
 
 	// em + x
 	@Test
