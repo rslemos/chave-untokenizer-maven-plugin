@@ -2,17 +2,18 @@ package br.eti.rslemos.nlp.corpora.chave.parser;
 
 import static br.eti.rslemos.nlp.corpora.chave.parser.Span.span;
 
+import java.util.ArrayList;
 import java.util.Arrays;
-import java.util.Formatter;
 import java.util.HashMap;
 import java.util.LinkedHashSet;
 import java.util.List;
 import java.util.Map;
 import java.util.Set;
+import java.util.TreeMap;
 
 public abstract class AbstractContractionMatchStrategy extends AbstractMatchStrategy {
 
-	public static class ContractionTemplate implements Comparable<ContractionTemplate> {
+	public static class ContractionTemplate {
 		public final String prefix;
 		public final String suffix;
 		public final String contraction;
@@ -26,61 +27,45 @@ public abstract class AbstractContractionMatchStrategy extends AbstractMatchStra
 			this.prefixEnd = prefixEnd;
 			this.suffixStart = suffixStart;
 		}
-
-		// for lookup purposes only
-		private ContractionTemplate(String prefix, String suffix) {
-			this(prefix, suffix, null, -1, -1);
-		}
-
-		public int compareTo(ContractionTemplate o) {
-			int prefixCompare = prefix.compareTo(o.prefix);
-			
-			return prefixCompare != 0 ? prefixCompare : suffix.compareTo(o.suffix);
-		}
-
-		@Override
-		public int hashCode() {
-			int hashCode = 0;
-			
-			hashCode += prefix != null ? prefix.hashCode() : 0;
-			hashCode *= 3;
-			hashCode += suffix != null ? suffix.hashCode() : 0;
-			
-			return hashCode;
-		}
-
-		@Override
-		public boolean equals(Object obj) {
-			if (this == obj)
-				return true;
-			
-			if (obj == null)
-				return false;
-			
-			if (!(obj instanceof ContractionTemplate))
-				return false;
-			
-			ContractionTemplate other = (ContractionTemplate) obj;
-
-			return (prefix != null ? prefix.equals(other.prefix) : other.prefix == null) &&
-					(suffix != null ? suffix.equals(other.suffix) : other.suffix == null);
-		}
-		
-		public String toString() {
-			Formatter out = new Formatter();
-			out.format("new ContractionTemplate(\"%s\", \"%s\", \"%s\", %d, %d),",
-					prefix, suffix, contraction, prefixEnd, suffixStart);
-			return out.toString();
-		}
 	}
 	
-	private final ContractionTemplate[] templates;
+	private final ContractionTemplate[][] templates;
+	
+	private final String[] prefixes;
+	private final String[][] suffixes;
+	
 	
 	private Map<String, Set<Match>> cache;
 	
 	public AbstractContractionMatchStrategy(ContractionTemplate... templates) {
-		this.templates = templates.clone();
-		Arrays.sort(templates);
+		Map<String, List<ContractionTemplate>> templateByPrefix = new TreeMap<String, List<ContractionTemplate>>();
+		
+		for (ContractionTemplate template : templates) {
+			List<ContractionTemplate> templateList = templateByPrefix.get(template.prefix);
+			if (templateList == null) {
+				templateList = new ArrayList<ContractionTemplate>();
+				templateByPrefix.put(template.prefix, templateList);
+			}
+			
+			templateList.add(template);
+		}
+		
+		this.prefixes = templateByPrefix.keySet().toArray(new String[templateByPrefix.size()]);
+		this.suffixes = new String[prefixes.length][];
+		this.templates = new ContractionTemplate[prefixes.length][];
+		
+		
+		for (int i = 0; i < prefixes.length; i++) {
+			List<ContractionTemplate> templateList = templateByPrefix.get(this.prefixes[i]);
+			
+			this.suffixes[i] = new String[templateList.size()];
+			this.templates[i] = new ContractionTemplate[templateList.size()];
+			
+			for (int j = 0; j < this.suffixes[i].length; j++) {
+				this.templates[i][j] = templateList.get(j);
+				this.suffixes[i][j] = this.templates[i][j].suffix;
+			}
+		}
 	}
 	
 	@Override
@@ -106,13 +91,17 @@ public abstract class AbstractContractionMatchStrategy extends AbstractMatchStra
 		String prefix = getLast(key0.split("="));
 		String suffix = getFirst(key1.split("="));
 		
-		int idx;
-		if ((idx = Arrays.binarySearch(templates, new ContractionTemplate(prefix, suffix))) < 0)
+		int idx0;
+		if ((idx0 = Arrays.binarySearch(prefixes, prefix)) < 0)
 			return;
 
+		int idx1;
+		if ((idx1 = Arrays.binarySearch(suffixes[idx0], suffix)) < 0)
+			return;
+		
 		int[][] marks = { { 0, 0 }, { 0, 0 } }; 
 		
-		String toMatch = buildMatchString(key0, key1, idx, marks);
+		String toMatch = buildMatchString(key0, key1, templates[idx0][idx1], marks);
 		
 		for (Match match : matchAndUpdateCache(toMatch, marks)) {
 			result.add(match.adjust(0, i));
@@ -135,16 +124,16 @@ public abstract class AbstractContractionMatchStrategy extends AbstractMatchStra
 		return cache.get(toMatch);
 	}
 
-	private String buildMatchString(String key0, String key1, int idx, int[][] marks) {
+	private static String buildMatchString(String key0, String key1, ContractionTemplate template, int[][] marks) {
 		StringBuilder toMatchBuilder = new StringBuilder();
 
 		marks[0][0] = 0;
-		marks[0][1] = templates[idx].prefixEnd;
-		marks[1][0] = templates[idx].suffixStart;
-		marks[1][1] = templates[idx].contraction.length();
+		marks[0][1] = template.prefixEnd;
+		marks[1][0] = template.suffixStart;
+		marks[1][1] = template.contraction.length();
 
-		if (key0.endsWith("=" + templates[idx].prefix)) {
-			String left = key0.replaceAll("=" + templates[idx].prefix + "$", "=");
+		if (key0.endsWith("=" + template.prefix)) {
+			String left = key0.replaceAll("=" + template.prefix + "$", "=");
 			
 			toMatchBuilder.append(left);
 			marks[0][1] += left.length();
@@ -152,10 +141,10 @@ public abstract class AbstractContractionMatchStrategy extends AbstractMatchStra
 			marks[1][1] += left.length();
 		}
 		
-		toMatchBuilder.append(templates[idx].contraction);
+		toMatchBuilder.append(template.contraction);
 		
-		if (key1.startsWith(templates[idx].suffix + "=")) {
-			String right = key1.replaceAll("^" + templates[idx].suffix + "=", "=");
+		if (key1.startsWith(template.suffix + "=")) {
+			String right = key1.replaceAll("^" + template.suffix + "=", "=");
 			
 			toMatchBuilder.append(right);
 			marks[1][1] += right.length();
