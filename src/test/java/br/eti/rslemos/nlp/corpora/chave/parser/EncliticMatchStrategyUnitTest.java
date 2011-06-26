@@ -157,51 +157,51 @@ public class EncliticMatchStrategyUnitTest extends AbstractMatchStrategyUnitTest
 	
 	@Test
 	public void testInfinitiv_por_lo() throws Exception {
-		cg.add("assistir-");
+		cg.add("por-");
 		cg.add("lo");
 		
-		runOver("assisti-lo");
+		runOver("pô-lo");
 		
-		verifyMatches(match(0, "assisti-lo".length(), span(0, "assisti-".length(), 0), 
-				span("assisti-".length(), "assisti-lo".length(), 1)
+		verifyMatches(match(0, "pô-lo".length(), span(0, "pô-".length(), 0), 
+				span("pô-".length(), "pô-lo".length(), 1)
 			));
 	}
 
 	@Test
 	public void testInfinitiv_por_la() throws Exception {
-		cg.add("assistir-");
+		cg.add("por-");
 		cg.add("la");
 		
-		runOver("assisti-la");
+		runOver("pô-la");
 		
-		verifyMatches(match(0, "assisti-la".length(), span(0, "assisti-".length(), 0), 
-				span("assisti-".length(), "assisti-la".length(), 1)
+		verifyMatches(match(0, "pô-la".length(), span(0, "pô-".length(), 0), 
+				span("pô-".length(), "pô-la".length(), 1)
 			));
 	}
 	
 	@Test
 	public void testInfinitiv_por_los() throws Exception {
-		cg.add("assistir-");
+		cg.add("por-");
 		cg.add("los");
 		
-		runOver("assisti-los");
+		runOver("pô-los");
 		
-		verifyMatches(match(0, "assisti-los".length(), span(0, "assisti-".length(), 0), 
-				span("assisti-".length(), "assisti-los".length(), 1)
+		verifyMatches(match(0, "pô-los".length(), span(0, "pô-".length(), 0), 
+				span("pô-".length(), "pô-los".length(), 1)
 			));
 	}
 
 	@Test
 	public void testInfinitiv_por_las() throws Exception {
-		cg.add("assistir-");
+		cg.add("por-");
 		cg.add("las");
 		
-		runOver("assisti-las");
+		runOver("pô-las");
 		
 		verifyMatches(
-				match(0, "assisti-las".length(),
-						span(0, "assisti-".length(), 0), 
-						span("assisti-".length(), "assisti-las".length(), 1)
+				match(0, "pô-las".length(),
+						span(0, "pô-".length(), 0), 
+						span("pô-".length(), "pô-las".length(), 1)
 					)
 			);
 	}
