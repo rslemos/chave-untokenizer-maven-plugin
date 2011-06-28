@@ -71,22 +71,6 @@ public final class Match {
 		
 		return match;
 	}
-
-	public int getMatchLength() {
-		return to - from;
-	}
-
-	public int getSkipLength() {
-		return from;
-	}
-
-	public int getFrom() {
-		return from;
-	}
-	
-	public int getTo() {
-		return to;
-	}
 	
 	public Set<Span> getSpans() {
 		return spans;
