@@ -5,7 +5,6 @@ import static br.eti.rslemos.nlp.corpora.chave.parser.Span.span;
 import java.lang.reflect.Array;
 import java.util.ArrayList;
 import java.util.Arrays;
-import java.util.HashMap;
 import java.util.LinkedHashSet;
 import java.util.List;
 import java.util.Map;
@@ -138,9 +137,6 @@ public final class ContractionMatchStrategy extends AbstractMatchStrategy {
 	private final String[] prefixes;
 	private final String[][] suffixes;
 	
-	
-	private Map<String, Set<Match>> cache;
-	
 	public ContractionMatchStrategy() {
 		this(
 			union(ContractionTemplate.class,
@@ -185,12 +181,6 @@ public final class ContractionMatchStrategy extends AbstractMatchStrategy {
 		}
 	}
 	
-	@Override
-	public void setData(TextMatcher matcher, List<String> cg) {
-		super.setData(matcher, cg);
-		cache = new HashMap<String, Set<Match>>();
-	}
-
 	public Set<Match> matchAll(int start, int end) {
 		Set<Match> result = new LinkedHashSet<Match>();
 		
@@ -220,7 +210,7 @@ public final class ContractionMatchStrategy extends AbstractMatchStrategy {
 		
 		String toMatch = buildMatchString(key0, key1, templates[idx0][idx1], marks);
 		
-		for (Match match : matchAndUpdateCache(toMatch, marks)) {
+		for (Match match : matchKey(toMatch, marks)) {
 			result.add(match.adjust(0, i));
 		}
 	}
@@ -233,12 +223,8 @@ public final class ContractionMatchStrategy extends AbstractMatchStrategy {
 		return array[array.length - 1];
 	}
 
-	private Set<Match> matchAndUpdateCache(String toMatch, int[][] marks) {
-		if (!cache.containsKey(toMatch)) {
-			cache.put(toMatch, matcher.matchKey(toMatch, span(marks[0][0], marks[0][1], 0), span(marks[1][0], marks[1][1], 1)));
-		}
-		
-		return cache.get(toMatch);
+	private Set<Match> matchKey(String toMatch, int[][] marks) {
+		return matcher.matchKey(toMatch, span(marks[0][0], marks[0][1], 0), span(marks[1][0], marks[1][1], 1));
 	}
 
 	private static String buildMatchString(String key0, String key1, ContractionTemplate template, int[][] marks) {
