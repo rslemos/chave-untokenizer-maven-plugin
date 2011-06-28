@@ -232,16 +232,9 @@ public class Untokenizer {
 		
 		public TextMatcher create(String text) {
 			if (threshold > 0)
-				return new DamerauLevenshteinTextMatcher(text, threshold, caseSensitive, wordBoundaryCheck);
+				return new CachingTextMatcher(new DamerauLevenshteinTextMatcher(text, threshold, caseSensitive, wordBoundaryCheck));
 			else
-				return new PlainTextMatcher(text, caseSensitive, wordBoundaryCheck);
-		}
-		
-		public TextMatcher create(String text, int from, int to) {
-			if (threshold > 0)
-				return new DamerauLevenshteinTextMatcher(text, from, to, threshold, caseSensitive, wordBoundaryCheck);
-			else
-				return new PlainTextMatcher(text, from, to, caseSensitive, wordBoundaryCheck);
+				return new CachingTextMatcher(new PlainTextMatcher(text, caseSensitive, wordBoundaryCheck));
 		}
 	}
 
