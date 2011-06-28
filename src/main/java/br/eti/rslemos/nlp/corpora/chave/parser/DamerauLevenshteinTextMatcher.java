@@ -10,32 +10,6 @@ import java.util.Set;
 import br.eti.rslemos.nlp.corpora.chave.parser.AdaptativeDamerauLevenshteinDistance.AlignOp;
 
 public class DamerauLevenshteinTextMatcher extends AbstractTextMatcher {
-	public static class Parameters {
-		public int threshold;
-		public boolean caseSensitive;
-		public boolean wordBoundaryCheck;
-		
-		public Parameters(int threshold, boolean caseSensitive, boolean wordBoundaryCheck) {
-			this.threshold = threshold;
-			this.caseSensitive = caseSensitive;
-			this.wordBoundaryCheck = wordBoundaryCheck;
-		}
-		
-		public TextMatcher create(String text) {
-			if (threshold > 0)
-				return new DamerauLevenshteinTextMatcher(text, threshold, caseSensitive, wordBoundaryCheck);
-			else
-				return new PlainTextMatcher(text, caseSensitive, wordBoundaryCheck);
-		}
-		
-		public TextMatcher create(String text, int from, int to) {
-			if (threshold > 0)
-				return new DamerauLevenshteinTextMatcher(text, from, to, threshold, caseSensitive, wordBoundaryCheck);
-			else
-				return new PlainTextMatcher(text, from, to, caseSensitive, wordBoundaryCheck);
-		}
-	}
-	
 	private final int threshold;
 	
 	public DamerauLevenshteinTextMatcher(String text) {
