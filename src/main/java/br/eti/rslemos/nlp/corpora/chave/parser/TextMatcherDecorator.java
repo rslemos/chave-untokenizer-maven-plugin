@@ -10,14 +10,12 @@ public class TextMatcherDecorator implements TextMatcher {
 		this.concreteTextMatcher = concreteTextMatcher;
 	}
 
-	@Override
-	public Set<Match> matchKey(String key, Span... inSpans) {
-		return concreteTextMatcher.matchKey(key, inSpans);
+	public Set<Match> matchKey(int from, int to, String key, Span... inSpans) {
+		return concreteTextMatcher.matchKey(from, to, key, inSpans);
 	}
 
-	@Override
-	public Set<Match> matchWordEndOrNewLine() {
-		return concreteTextMatcher.matchWordEndOrNewLine();
+	public Set<Match> matchWordEndOrNewLine(int from, int to) {
+		return concreteTextMatcher.matchWordEndOrNewLine(from, to);
 	}
 
 }

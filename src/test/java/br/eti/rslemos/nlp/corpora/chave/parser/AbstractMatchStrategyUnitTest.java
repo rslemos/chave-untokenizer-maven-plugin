@@ -22,7 +22,7 @@ public abstract class AbstractMatchStrategyUnitTest {
 
 	protected void runOver(String sgml) {
 		strategy.setData(new DamerauLevenshteinTextMatcher(sgml), cg);
-		matches = strategy.matchAll();
+		matches = strategy.matchAll(0, sgml.length());
 	}
 
 	public void verifyMatches(Match... matches) {

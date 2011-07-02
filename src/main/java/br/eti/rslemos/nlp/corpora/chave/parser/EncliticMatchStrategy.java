@@ -8,7 +8,7 @@ import java.util.Set;
 
 public class EncliticMatchStrategy extends AbstractMatchStrategy {
 
-	public Set<Match> matchAll(int start, int end) {
+	public Set<Match> matchAll(int from, int to, int start, int end) {
 		Set<Match> result = new LinkedHashSet<Match>();
 		
 		for (int i = start; i < end - 1; i++) {
@@ -36,7 +36,7 @@ public class EncliticMatchStrategy extends AbstractMatchStrategy {
 				if (toMatch != null) {
 					toMatch += key1;
 					
-					for (Match match : matchAndUpdateCache(toMatch, key1)) {
+					for (Match match : matchAndUpdateCache(from, to, toMatch, key1)) {
 						result.add(match.adjust(0, i));
 					}
 				}
@@ -46,8 +46,8 @@ public class EncliticMatchStrategy extends AbstractMatchStrategy {
 		return result;
 	}
 
-	private Set<Match> matchAndUpdateCache(String toMatch, String key1) {
-		return matcher.matchKey(toMatch,
+	private Set<Match> matchAndUpdateCache(int from, int to, String toMatch, String key1) {
+		return matcher.matchKey(from, to, toMatch,
 					span(0, toMatch.length() - key1.length(), 0),
 					span(toMatch.length() - key1.length(), toMatch.length(), 1)
 				);

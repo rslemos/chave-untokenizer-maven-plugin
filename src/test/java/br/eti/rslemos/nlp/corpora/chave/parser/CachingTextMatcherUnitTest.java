@@ -16,11 +16,15 @@ import org.junit.Test;
 
 public class CachingTextMatcherUnitTest {
 
+	private int from;
+	private int to;
 	private TextMatcher concreteTextMatcher;
 	private CachingTextMatcher cachingTextMatcher;
 
 	@Before
 	public void setUp() {
+		from = (int) (Math.random() * Integer.MAX_VALUE);
+		to = (int) (Math.random() * Integer.MAX_VALUE);
 		concreteTextMatcher = mock(TextMatcher.class);
 		cachingTextMatcher = new CachingTextMatcher(concreteTextMatcher);
 	}
@@ -33,14 +37,14 @@ public class CachingTextMatcherUnitTest {
 		
 		Set<Match> set11 = new HashSet<Match>();
 		
-		when(concreteTextMatcher.matchKey(key1, spans1)).thenReturn(set11);
+		when(concreteTextMatcher.matchKey(from, to, key1, spans1)).thenReturn(set11);
 		
-		assertThat(cachingTextMatcher.matchKey(key1, spans1), is(sameInstance(set11)));
-		assertThat(cachingTextMatcher.matchKey(key1, spans1), is(sameInstance(set11)));
-		assertThat(cachingTextMatcher.matchKey(key1, spans1), is(sameInstance(set11)));
-		assertThat(cachingTextMatcher.matchKey(key1, spans1), is(sameInstance(set11)));
+		assertThat(cachingTextMatcher.matchKey(from, to, key1, spans1), is(sameInstance(set11)));
+		assertThat(cachingTextMatcher.matchKey(from, to, key1, spans1), is(sameInstance(set11)));
+		assertThat(cachingTextMatcher.matchKey(from, to, key1, spans1), is(sameInstance(set11)));
+		assertThat(cachingTextMatcher.matchKey(from, to, key1, spans1), is(sameInstance(set11)));
 		
-		verify(concreteTextMatcher, times(1)).matchKey(key1, spans1);
+		verify(concreteTextMatcher, times(1)).matchKey(from, to, key1, spans1);
 	}
 	
 	@Test
@@ -53,20 +57,20 @@ public class CachingTextMatcherUnitTest {
 		Set<Match> set11 = new HashSet<Match>();
 		Set<Match> set12 = new HashSet<Match>();
 		
-		when(concreteTextMatcher.matchKey(key1, spans1)).thenReturn(set11);
-		when(concreteTextMatcher.matchKey(key1, spans2)).thenReturn(set12);
+		when(concreteTextMatcher.matchKey(from, to, key1, spans1)).thenReturn(set11);
+		when(concreteTextMatcher.matchKey(from, to, key1, spans2)).thenReturn(set12);
 		
-		assertThat(cachingTextMatcher.matchKey(key1, spans1), is(sameInstance(set11)));
-		assertThat(cachingTextMatcher.matchKey(key1, spans2), is(sameInstance(set12)));
-		assertThat(cachingTextMatcher.matchKey(key1, spans1), is(sameInstance(set11)));
-		assertThat(cachingTextMatcher.matchKey(key1, spans2), is(sameInstance(set12)));
-		assertThat(cachingTextMatcher.matchKey(key1, spans1), is(sameInstance(set11)));
-		assertThat(cachingTextMatcher.matchKey(key1, spans2), is(sameInstance(set12)));
-		assertThat(cachingTextMatcher.matchKey(key1, spans1), is(sameInstance(set11)));
-		assertThat(cachingTextMatcher.matchKey(key1, spans2), is(sameInstance(set12)));
+		assertThat(cachingTextMatcher.matchKey(from, to, key1, spans1), is(sameInstance(set11)));
+		assertThat(cachingTextMatcher.matchKey(from, to, key1, spans2), is(sameInstance(set12)));
+		assertThat(cachingTextMatcher.matchKey(from, to, key1, spans1), is(sameInstance(set11)));
+		assertThat(cachingTextMatcher.matchKey(from, to, key1, spans2), is(sameInstance(set12)));
+		assertThat(cachingTextMatcher.matchKey(from, to, key1, spans1), is(sameInstance(set11)));
+		assertThat(cachingTextMatcher.matchKey(from, to, key1, spans2), is(sameInstance(set12)));
+		assertThat(cachingTextMatcher.matchKey(from, to, key1, spans1), is(sameInstance(set11)));
+		assertThat(cachingTextMatcher.matchKey(from, to, key1, spans2), is(sameInstance(set12)));
 		
-		verify(concreteTextMatcher, times(1)).matchKey(key1, spans1);
-		verify(concreteTextMatcher, times(1)).matchKey(key1, spans2);
+		verify(concreteTextMatcher, times(1)).matchKey(from, to, key1, spans1);
+		verify(concreteTextMatcher, times(1)).matchKey(from, to, key1, spans2);
 	}
 	
 	@Test
@@ -82,27 +86,27 @@ public class CachingTextMatcherUnitTest {
 		Set<Match> set21 = new HashSet<Match>();
 		Set<Match> set22 = new HashSet<Match>();
 		
-		when(concreteTextMatcher.matchKey(key1, spans1)).thenReturn(set11);
-		when(concreteTextMatcher.matchKey(key1, spans2)).thenReturn(set12);
-		when(concreteTextMatcher.matchKey(key2, spans1)).thenReturn(set21);
-		when(concreteTextMatcher.matchKey(key2, spans2)).thenReturn(set22);
+		when(concreteTextMatcher.matchKey(from, to, key1, spans1)).thenReturn(set11);
+		when(concreteTextMatcher.matchKey(from, to, key1, spans2)).thenReturn(set12);
+		when(concreteTextMatcher.matchKey(from, to, key2, spans1)).thenReturn(set21);
+		when(concreteTextMatcher.matchKey(from, to, key2, spans2)).thenReturn(set22);
 		
-		assertThat(cachingTextMatcher.matchKey(key1, spans1), is(sameInstance(set11)));
-		assertThat(cachingTextMatcher.matchKey(key1, spans2), is(sameInstance(set12)));
-		assertThat(cachingTextMatcher.matchKey(key2, spans1), is(sameInstance(set21)));
-		assertThat(cachingTextMatcher.matchKey(key2, spans2), is(sameInstance(set22)));
-		assertThat(cachingTextMatcher.matchKey(key1, spans1), is(sameInstance(set11)));
-		assertThat(cachingTextMatcher.matchKey(key1, spans2), is(sameInstance(set12)));
-		assertThat(cachingTextMatcher.matchKey(key2, spans1), is(sameInstance(set21)));
-		assertThat(cachingTextMatcher.matchKey(key2, spans2), is(sameInstance(set22)));
-		assertThat(cachingTextMatcher.matchKey(key1, spans1), is(sameInstance(set11)));
-		assertThat(cachingTextMatcher.matchKey(key1, spans2), is(sameInstance(set12)));
-		assertThat(cachingTextMatcher.matchKey(key2, spans1), is(sameInstance(set21)));
-		assertThat(cachingTextMatcher.matchKey(key2, spans2), is(sameInstance(set22)));
+		assertThat(cachingTextMatcher.matchKey(from, to, key1, spans1), is(sameInstance(set11)));
+		assertThat(cachingTextMatcher.matchKey(from, to, key1, spans2), is(sameInstance(set12)));
+		assertThat(cachingTextMatcher.matchKey(from, to, key2, spans1), is(sameInstance(set21)));
+		assertThat(cachingTextMatcher.matchKey(from, to, key2, spans2), is(sameInstance(set22)));
+		assertThat(cachingTextMatcher.matchKey(from, to, key1, spans1), is(sameInstance(set11)));
+		assertThat(cachingTextMatcher.matchKey(from, to, key1, spans2), is(sameInstance(set12)));
+		assertThat(cachingTextMatcher.matchKey(from, to, key2, spans1), is(sameInstance(set21)));
+		assertThat(cachingTextMatcher.matchKey(from, to, key2, spans2), is(sameInstance(set22)));
+		assertThat(cachingTextMatcher.matchKey(from, to, key1, spans1), is(sameInstance(set11)));
+		assertThat(cachingTextMatcher.matchKey(from, to, key1, spans2), is(sameInstance(set12)));
+		assertThat(cachingTextMatcher.matchKey(from, to, key2, spans1), is(sameInstance(set21)));
+		assertThat(cachingTextMatcher.matchKey(from, to, key2, spans2), is(sameInstance(set22)));
 		
-		verify(concreteTextMatcher, times(1)).matchKey(key1, spans1);
-		verify(concreteTextMatcher, times(1)).matchKey(key1, spans2);
-		verify(concreteTextMatcher, times(1)).matchKey(key2, spans1);
-		verify(concreteTextMatcher, times(1)).matchKey(key2, spans2);
+		verify(concreteTextMatcher, times(1)).matchKey(from, to, key1, spans1);
+		verify(concreteTextMatcher, times(1)).matchKey(from, to, key1, spans2);
+		verify(concreteTextMatcher, times(1)).matchKey(from, to, key2, spans1);
+		verify(concreteTextMatcher, times(1)).matchKey(from, to, key2, spans2);
 	}
 }

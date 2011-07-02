@@ -66,13 +66,15 @@ public class Untokenizer {
 
 	private class Work {
 		private Untokenizer.Parameters config = new Untokenizer.Parameters(0, false, true);
+		private int from = 0;
+		private int to = text.length();
 		
 		public void untokenize() {
 			final TextMatcher textMatcher = config.create(text);
 			
 			for (MatchStrategy strategy : STRATEGIES) {
 				strategy.setData(textMatcher, cgKeys);
-				Set<Match> matches = strategy.matchAll();
+				Set<Match> matches = strategy.matchAll(from, to);
 				
 				for (Match match : matches) {
 					for (Span span : match.getSpans()) {

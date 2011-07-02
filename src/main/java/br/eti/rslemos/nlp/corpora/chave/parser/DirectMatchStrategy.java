@@ -8,24 +8,24 @@ import java.util.Set;
 
 public class DirectMatchStrategy extends AbstractMatchStrategy {
 	
-	public Set<Match> matchAll(int start, int end) {
+	public Set<Match> matchAll(int from, int to, int start, int end) {
 		Set<Match> matches = new LinkedHashSet<Match>();
 
 		for (int i = start; i < end; i++) {
-			addAllMatches(i, matches);
+			addAllMatches(from, to, i, matches);
 		}
 		
 		return matches;
 	}
 
-	private void addAllMatches(int i, Set<Match> matches) {
-		for (Match match : matchKey(getKey(i))) {
+	private void addAllMatches(int from, int to, int i, Set<Match> matches) {
+		for (Match match : matchKey(from, to, getKey(i))) {
 			matches.add(match.adjust(0, i));
 		}
 	}
 
-	private Set<Match> matchKey(String key0) {
-		return matcher.matchKey(key0, span(0, key0.length(), 0));
+	private Set<Match> matchKey(int from, int to, String key0) {
+		return matcher.matchKey(from, to, key0, span(0, key0.length(), 0));
 	}
 
 	private String getKey(int i) {

@@ -63,11 +63,6 @@ public class DamerauLevenshteinTextMatcherUnitTest extends TextMatcherAbstractUn
 	}
 
 	@Override
-	protected DamerauLevenshteinTextMatcher createTextMatcher(String text, int from, int to) {
-		return new DamerauLevenshteinTextMatcher(text, from, to);
-	}
-
-	@Override
 	protected DamerauLevenshteinTextMatcher createTextMatcher(String text, boolean caseSensitive) {
 		return new DamerauLevenshteinTextMatcher(text, 0, caseSensitive);
 	}

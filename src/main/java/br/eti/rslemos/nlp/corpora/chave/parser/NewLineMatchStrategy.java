@@ -5,10 +5,10 @@ import java.util.Set;
 
 public class NewLineMatchStrategy extends AbstractMatchStrategy {
 
-	public Set<Match> matchAll(int start, int end) {
+	public Set<Match> matchAll(int from, int to, int start, int end) {
 		Set<Match> matches = new LinkedHashSet<Match>();
 
-		Set<Match> plainMatches = matcher.matchWordEndOrNewLine();
+		Set<Match> plainMatches = matcher.matchWordEndOrNewLine(from, to);
 		
 		for (int i = start; i < end; i++) {
 			if ("$¶".equals(cg.get(i))) {

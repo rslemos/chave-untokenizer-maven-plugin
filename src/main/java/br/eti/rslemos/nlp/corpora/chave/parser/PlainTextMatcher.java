@@ -8,30 +8,18 @@ import java.util.Arrays;
 public class PlainTextMatcher extends AbstractTextMatcher {
 
 	public PlainTextMatcher(String text) {
-		this(text, 0, text.length());
+		this(text, false);
 	}
 	
 	public PlainTextMatcher(String text, boolean caseSensitive) {
-		this(text, 0, text.length(), caseSensitive);
+		this(text, caseSensitive, true);
 	}
 
 	public PlainTextMatcher(String text, boolean caseSensitive, boolean wordBoundaryCheck) {
-		this(text, 0, text.length(), caseSensitive, wordBoundaryCheck);
+		super(text.toCharArray(), caseSensitive, wordBoundaryCheck);
 	}
 
-	public PlainTextMatcher(String text, int from, int to) {
-		this(text, from, to, false);
-	}
-
-	public PlainTextMatcher(String text, int from, int to, boolean caseSensitive) {
-		this(text, from, to, caseSensitive, true);
-	}
-
-	public PlainTextMatcher(String text, int from, int to, boolean caseSensitive, boolean wordBoundaryCheck) {
-		super(text.toCharArray(), from, to, caseSensitive, wordBoundaryCheck);
-	}
-
-	protected int[] match(int k, String toMatch, int... inPoints) {
+	protected int[] match(int from, int to, int k, String toMatch, int... inPoints) {
 		int k1 = k - 1;
 		if (wordBoundaryCheck && k1 >= from && k1 < to && isLetterOrDigit(text[k1]) && isLetterOrDigit(toMatch.charAt(0)))
 			return null;

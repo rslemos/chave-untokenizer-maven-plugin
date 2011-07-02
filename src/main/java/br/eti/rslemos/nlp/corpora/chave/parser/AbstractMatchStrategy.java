@@ -13,7 +13,7 @@ public abstract class AbstractMatchStrategy implements MatchStrategy {
 		this.cg = cg;
 	}
 
-	public Set<Match> matchAll() {
-		return matchAll(0, cg.size());
+	public Set<Match> matchAll(int from, int to) {
+		return matchAll(from, to, 0, cg.size());
 	}
 }

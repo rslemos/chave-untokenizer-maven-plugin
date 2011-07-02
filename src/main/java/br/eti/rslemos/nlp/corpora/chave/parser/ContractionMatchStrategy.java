@@ -181,17 +181,17 @@ public final class ContractionMatchStrategy extends AbstractMatchStrategy {
 		}
 	}
 	
-	public Set<Match> matchAll(int start, int end) {
+	public Set<Match> matchAll(int from, int to, int start, int end) {
 		Set<Match> result = new LinkedHashSet<Match>();
 		
 		for (int i = start; i < end - 1; i++) {
-			addMatches(i, result);
+			addMatches(from, to, i, result);
 		}
 		
 		return result;
 	}
 
-	private void addMatches(int i, Set<Match> result) {
+	private void addMatches(int from, int to, int i, Set<Match> result) {
 		String key0 = cg.get(i);
 		String key1 = cg.get(i + 1);
 		
@@ -210,7 +210,7 @@ public final class ContractionMatchStrategy extends AbstractMatchStrategy {
 		
 		String toMatch = buildMatchString(key0, key1, templates[idx0][idx1], marks);
 		
-		for (Match match : matchKey(toMatch, marks)) {
+		for (Match match : matchKey(from, to, toMatch, marks)) {
 			result.add(match.adjust(0, i));
 		}
 	}
@@ -223,8 +223,8 @@ public final class ContractionMatchStrategy extends AbstractMatchStrategy {
 		return array[array.length - 1];
 	}
 
-	private Set<Match> matchKey(String toMatch, int[][] marks) {
-		return matcher.matchKey(toMatch, span(marks[0][0], marks[0][1], 0), span(marks[1][0], marks[1][1], 1));
+	private Set<Match> matchKey(int from, int to, String toMatch, int[][] marks) {
+		return matcher.matchKey(from, to, toMatch, span(marks[0][0], marks[0][1], 0), span(marks[1][0], marks[1][1], 1));
 	}
 
 	private static String buildMatchString(String key0, String key1, ContractionTemplate template, int[][] marks) {

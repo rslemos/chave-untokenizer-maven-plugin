@@ -8,25 +8,25 @@ import java.util.Set;
 
 public abstract class AbstractTextMatcher implements TextMatcher {
 
-	protected abstract int[] match(int k0, String toMatch, int... inPoints);
+	protected abstract int[] match(int from, int to, int k0, String toMatch, int... inPoints);
 
 	protected final char[] text;
-	protected final int from;
-	protected final int to;
 	
 	private final boolean caseSensitive;
 	protected final boolean wordBoundaryCheck;
 
-	public AbstractTextMatcher(char[] text, int from, int to, boolean caseSensitive, boolean wordBoundaryCheck) {
+	public AbstractTextMatcher(char[] text, boolean caseSensitive, boolean wordBoundaryCheck) {
 		super();
 		this.text = text;
-		this.from = from;
-		this.to = to;
 		this.caseSensitive = caseSensitive;
 		this.wordBoundaryCheck = wordBoundaryCheck;
 	}
 
 	public Set<Match> matchKey(String key, Span... inSpans) {
+		return matchKey(0, text.length, key, inSpans);
+	}
+	
+	public Set<Match> matchKey(int from, int to, String key, Span... inSpans) {
 		Set<Match> matches = new LinkedHashSet<Match>();
 	
 		int[] inPoints = new int[inSpans.length*2 + 2];
@@ -39,7 +39,7 @@ public abstract class AbstractTextMatcher implements TextMatcher {
 		}
 		
 		for (int k = from; k < to; k++) {
-			int[] outPoints = match(k, key, inPoints);
+			int[] outPoints = match(from, to, k, key, inPoints);
 			if (outPoints != null) {
 				Span[] outSpans = new Span[inSpans.length];
 				for (int i = 0; i < outSpans.length; i++) {
@@ -54,6 +54,10 @@ public abstract class AbstractTextMatcher implements TextMatcher {
 	}
 
 	public Set<Match> matchWordEndOrNewLine() {
+		return matchWordEndOrNewLine(0, text.length);
+	}
+	
+	public Set<Match> matchWordEndOrNewLine(int from, int to) {
 		Set<Match> result = new LinkedHashSet<Match>();
 
 

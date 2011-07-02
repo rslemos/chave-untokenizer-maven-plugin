@@ -25,29 +25,34 @@ public class TextMatcherDecoratorUnitTest {
 	
 	@Test
 	public void testForwardMatchKey() {
+		int from = (int) (Math.random() * Integer.MAX_VALUE);
+		int to = (int) (Math.random() * Integer.MAX_VALUE);
 		String key = "key";
 		Span[] inSpans = {};
 		
 		Set<Match> set = new HashSet<Match>();
 		
-		when(concreteTextMatcher.matchKey(key, inSpans)).thenReturn(set);
+		when(concreteTextMatcher.matchKey(from, to, key, inSpans)).thenReturn(set);
 		
-		Set<Match> result = decoratorTextMatcher.matchKey(key, inSpans);
+		Set<Match> result = decoratorTextMatcher.matchKey(from, to, key, inSpans);
 		assertThat(result, is(sameInstance(set)));
 		
-		verify(concreteTextMatcher).matchKey(key, inSpans);
+		verify(concreteTextMatcher).matchKey(from, to, key, inSpans);
 	}
 
 	
 	@Test
 	public void testMatchWordEndOrNewLine() {
+		int from = (int) (Math.random() * Integer.MAX_VALUE);
+		int to = (int) (Math.random() * Integer.MAX_VALUE);
+
 		Set<Match> set = new HashSet<Match>();
 		
-		when(concreteTextMatcher.matchWordEndOrNewLine()).thenReturn(set);
+		when(concreteTextMatcher.matchWordEndOrNewLine(from, to)).thenReturn(set);
 		
-		Set<Match> result = decoratorTextMatcher.matchWordEndOrNewLine();
+		Set<Match> result = decoratorTextMatcher.matchWordEndOrNewLine(from, to);
 		assertThat(result, is(sameInstance(set)));
 		
-		verify(concreteTextMatcher).matchWordEndOrNewLine();
+		verify(concreteTextMatcher).matchWordEndOrNewLine(from, to);
 	}
 }

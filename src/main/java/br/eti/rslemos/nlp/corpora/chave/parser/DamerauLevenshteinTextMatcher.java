@@ -13,40 +13,28 @@ public class DamerauLevenshteinTextMatcher extends AbstractTextMatcher {
 	private final int threshold;
 	
 	public DamerauLevenshteinTextMatcher(String text) {
-		this(text, 0, text.length());
+		this(text, 1);
 	}
 	
 	public DamerauLevenshteinTextMatcher(String text, int threshold) {
-		this(text, 0, text.length(), threshold);
+		this(text, threshold, false);
 	}
 
 	public DamerauLevenshteinTextMatcher(String text, int threshold, boolean caseSensitive) {
-		this(text, 0, text.length(), threshold, caseSensitive);
+		this(text, threshold, caseSensitive, true);
 	}
 
 	public DamerauLevenshteinTextMatcher(String text, int threshold, boolean caseSensitive, boolean wordBoundaryCheck) {
-		this(text, 0, text.length(), threshold, caseSensitive, wordBoundaryCheck);
-	}
-
-	public DamerauLevenshteinTextMatcher(String text, int from, int to) {
-		this(text, from, to, 1);
-	}
-	
-	public DamerauLevenshteinTextMatcher(String text, int from, int to, int threshold) {
-		this(text, from, to, threshold, false);
-	}
-
-	public DamerauLevenshteinTextMatcher(String text, int from, int to, int threshold, boolean caseSensitive) {
-		this(text, from, to, threshold, caseSensitive, true);
-	}
-
-	public DamerauLevenshteinTextMatcher(String text, int from, int to, int threshold, boolean caseSensitive, boolean wordBoundaryCheck) {
-		super(text.toCharArray(), from, to, caseSensitive, wordBoundaryCheck);
+		super(text.toCharArray(), caseSensitive, wordBoundaryCheck);
 		this.threshold = threshold;
 	}
 
-	@Override
 	protected int[] match(int k0, String toMatch, int... inPoints) {
+		return match(0, text.length, k0, toMatch, inPoints);
+	}
+	
+	@Override
+	protected int[] match(int from, int to, int k0, String toMatch, int... inPoints) {
 		int k = k0;
 		int threshold = toMatch.length() > 1 ? this.threshold : 0;
 		

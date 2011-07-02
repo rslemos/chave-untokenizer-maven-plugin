@@ -16,13 +16,13 @@ public class CachingTextMatcher extends TextMatcherDecorator {
 	}
 
 	@Override
-	public Set<Match> matchKey(String key, Span... inSpans) {
+	public Set<Match> matchKey(int from, int to, String key, Span... inSpans) {
 		TextMatcherKey k = new TextMatcherKey(key, inSpans);
 		
 		Set<Match> result = cache.get(k);
 		
 		if (result == null) {
-			result = super.matchKey(key, inSpans);
+			result = super.matchKey(from, to, key, inSpans);
 			cache.put(k, result);
 		}
 		
