@@ -10,8 +10,8 @@ import java.util.List;
 import java.util.Set;
 
 public final class Match {
-	private final int from;
-	private final int to;
+	public final int from;
+	public final int to;
 	
 	private final Set<Span> spans;
 	

@@ -1,29 +1,84 @@
 package br.eti.rslemos.nlp.corpora.chave.parser;
 
+import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.BitSet;
 import java.util.HashMap;
+import java.util.HashSet;
+import java.util.LinkedHashSet;
+import java.util.List;
 import java.util.Map;
 import java.util.Set;
 
 public class CachingTextMatcher extends TextMatcherDecorator {
 
-	private Map<TextMatcherKey, Set<Match>> cache;
+	private Map<TextMatcherKey, List<FragmentMatchSet>> cache;
 
 	public CachingTextMatcher(TextMatcher concreteTextMatcher) {
 		super(concreteTextMatcher);
 		
-		cache = new HashMap<TextMatcherKey, Set<Match>>();
+		cache = new HashMap<TextMatcherKey, List<FragmentMatchSet>>();
 	}
 
 	@Override
 	public Set<Match> matchKey(int from, int to, String key, Span... inSpans) {
 		TextMatcherKey k = new TextMatcherKey(key, inSpans);
 		
-		Set<Match> result = cache.get(k);
+		List<FragmentMatchSet> fragments = cache.get(k);
 		
-		if (result == null) {
-			result = super.matchKey(from, to, key, inSpans);
-			cache.put(k, result);
+		if (fragments == null) {
+			fragments = new ArrayList<FragmentMatchSet>();
+			cache.put(k, fragments);
+		}
+		
+		if (fragments.isEmpty()) {
+			fragments.add(new FragmentMatchSet(from, to, super.matchKey(from, to, key, inSpans)));
+		}
+		
+		Set<Match> fullResult = new LinkedHashSet<Match>();
+		
+		BitSet bs = new BitSet(to);
+		
+		bs.set(from, to);
+		for (FragmentMatchSet fragment : fragments) {
+//			if (fragment.from == from && fragment.to == to)
+//				return fragment.result;
+
+			int maxFrom = Math.max(from, fragment.from);
+			int minTo = Math.min(to, fragment.to);
+			
+			if (minTo > maxFrom) {
+				bs.clear(maxFrom, minTo);
+				fullResult.addAll(filter(fragment, maxFrom, minTo));
+			}
+		}
+		
+		from = bs.nextSetBit(0);
+		
+		while (from >= 0) {
+			to = bs.nextClearBit(from);
+			
+			Set<Match> partial = super.matchKey(from, to, key, inSpans);
+			fragments.add(new FragmentMatchSet(from, to, partial));
+			fullResult.addAll(partial);
+			
+			from = bs.nextSetBit(to);
+		}
+
+		
+		return fullResult;
+	}
+
+
+	private Set<Match> filter(FragmentMatchSet fragment, int from, int to) {
+		if (fragment.from == from && fragment.to == to)
+			return fragment.result;
+		
+		Set<Match> result = new HashSet<Match>();
+		
+		for (Match match : fragment.result) {
+			if (match.from >= from && match.to <= to)
+				result.add(match);
 		}
 		
 		return result;
@@ -69,5 +124,17 @@ public class CachingTextMatcher extends TextMatcherDecorator {
 		}
 		
 		
+	}
+	
+	private static class FragmentMatchSet {
+		private final int from;
+		private final int to;
+		private final Set<Match> result;
+		
+		private FragmentMatchSet(int from, int to, Set<Match> result) {
+			this.from = from;
+			this.to = to;
+			this.result = result;
+		}
 	}
 }
