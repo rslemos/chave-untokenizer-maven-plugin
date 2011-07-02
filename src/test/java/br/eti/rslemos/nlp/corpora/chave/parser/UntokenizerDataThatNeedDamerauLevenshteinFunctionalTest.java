@@ -18,5 +18,4 @@ public class UntokenizerDataThatNeedDamerauLevenshteinFunctionalTest extends Unt
 	@Test public void test$pt_BR$CHAVEFolha$1994$01$01$109() { _(); }
 	@Test public void test$pt_BR$CHAVEFolha$1994$01$01$117() { _(); }
 	@Test public void test$pt_BR$CHAVEFolha$1994$01$01$129() { _(); }
-	@Test public void test$pt_BR$CHAVEFolha$1994$01$01$131() { _(); }
 }
