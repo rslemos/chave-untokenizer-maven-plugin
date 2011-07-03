@@ -61,19 +61,21 @@ public class Untokenizer {
 		}
 		
 		
-		new Work(0, cgKeys.size()).untokenize();
+		new Work(0, text.length(), 0, cgKeys.size()).untokenize();
 	}
 
 	private class Work {
-		private Untokenizer.Parameters config = new Untokenizer.Parameters(0, false, true);
+		private final Parameters config = new Parameters(0, false, true);
 
-		private final int from = 0;
-		private final int to = text.length();
+		private final int from;
+		private final int to;
 		
 		private final int start;
 		private final int end;
 
-		private Work(int start, int end) {
+		private Work(int from, int to, int start, int end) {
+			this.from = from;
+			this.to = to;
 			this.start = start;
 			this.end = end;
 		}
@@ -190,7 +192,7 @@ public class Untokenizer {
 			int start = this.start;
 			
 			for (int i = 0; i < spans.length; i++) {
-				new Work(start, spans[i].entry).splitAndRecurse(from, spans[i].from);
+				new Work(from, to, start, spans[i].entry).splitAndRecurse(from, spans[i].from);
 				from = spans[i].to;
 				start = spans[i].entry + 1;
 				
@@ -203,7 +205,7 @@ public class Untokenizer {
 				processingResults[spans[i].entry].add(spans[i]);
 			}
 			
-			new Work(start, end).splitAndRecurse(from, text.length());
+			new Work(from, to, start, end).splitAndRecurse(from, text.length());
 		}
 	
 		private void splitAndRecurse(int from, int to) {
