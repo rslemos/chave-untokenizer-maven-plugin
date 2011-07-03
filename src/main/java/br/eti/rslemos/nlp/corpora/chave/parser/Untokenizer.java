@@ -61,14 +61,23 @@ public class Untokenizer {
 		}
 		
 		
-		new Work().untokenize();
+		new Work(0, cgKeys.size()).untokenize();
 	}
 
 	private class Work {
 		private Untokenizer.Parameters config = new Untokenizer.Parameters(0, false, true);
-		private int from = 0;
-		private int to = text.length();
+
+		private final int from = 0;
+		private final int to = text.length();
 		
+		private final int start;
+		private final int end;
+
+		private Work(int start, int end) {
+			this.start = start;
+			this.end = end;
+		}
+
 		public void untokenize() {
 			final TextMatcher textMatcher = config.create(text);
 			
@@ -82,11 +91,11 @@ public class Untokenizer {
 					}
 				}
 			}
-			
-			annotateAndSplit(0, spansByEntry.length);
+
+			annotateAndSplit();
 		}
-	
-		private void annotateAndSplit(int start, int end) {
+
+		private void annotateAndSplit() {
 			if (end <= start)
 				return;
 			
@@ -151,7 +160,7 @@ public class Untokenizer {
 							spansByEntry[entry].add(theSpan);
 						}
 						
-						annotateAndSplit(start, end);
+						annotateAndSplit();
 						
 						return;
 					}
@@ -178,8 +187,10 @@ public class Untokenizer {
 			
 			int from = 0;
 			
+			int start = this.start;
+			
 			for (int i = 0; i < spans.length; i++) {
-				splitAndRecurse(start, spans[i].entry, from, spans[i].from);
+				new Work(start, spans[i].entry).splitAndRecurse(from, spans[i].from);
 				from = spans[i].to;
 				start = spans[i].entry + 1;
 				
@@ -192,11 +203,11 @@ public class Untokenizer {
 				processingResults[spans[i].entry].add(spans[i]);
 			}
 			
-			splitAndRecurse(start, end, from, text.length());
+			new Work(start, end).splitAndRecurse(from, text.length());
 		}
 	
-		private void splitAndRecurse(int startEntry, int endEntry, int from, int to) {
-			for (int i = startEntry; i < endEntry; i++) {
+		private void splitAndRecurse(int from, int to) {
+			for (int i = start; i < end; i++) {
 				for (Iterator<Span> iterator = spansByEntry[i].iterator(); iterator.hasNext();) {
 					Span span = iterator.next();
 					if (span.to > to || span.from < from)
@@ -204,7 +215,7 @@ public class Untokenizer {
 				}
 			}
 			
-			annotateAndSplit(startEntry, endEntry);
+			annotateAndSplit();
 		}
 	
 		private Span chooseFixedSpan(int start, int end) {
