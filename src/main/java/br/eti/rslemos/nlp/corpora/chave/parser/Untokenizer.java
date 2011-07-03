@@ -114,7 +114,7 @@ public class Untokenizer {
 				if (end <= start)
 					return;
 				
-				Span fixedSpan = chooseFixedSpan(start, end);
+				Span fixedSpan = chooseFixedSpan();
 				
 				if (fixedSpan == null) {
 					// squeezed pilcrow with many options
@@ -234,7 +234,7 @@ public class Untokenizer {
 			}
 		}
 		
-		private Span chooseFixedSpan(int start, int end) {
+		private Span chooseFixedSpan() {
 			BitSet fixedEntries = getFixedEntries(start, end);
 	
 			int fixedEntry = chooseFixedEntry(fixedEntries);
