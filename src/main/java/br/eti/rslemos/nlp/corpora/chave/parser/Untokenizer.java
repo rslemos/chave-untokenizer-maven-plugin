@@ -200,7 +200,7 @@ public class Untokenizer {
 				
 				Span[] spans = fixedFullMatch.getSpans().toArray(new Span[fixedFullMatch.getConsume()]);
 				
-				int from = 0;
+				int from = this.from;
 				
 				int start = this.start;
 				
