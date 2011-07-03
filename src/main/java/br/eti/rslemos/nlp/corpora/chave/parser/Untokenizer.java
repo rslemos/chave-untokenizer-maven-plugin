@@ -61,10 +61,10 @@ public class Untokenizer {
 		}
 		
 		
-		new Work(0, text.length(), 0, cgKeys.size()).untokenize();
+		new MatchWork(0, text.length(), 0, cgKeys.size()).untokenize();
 	}
 
-	private class Work {
+	private class MatchWork {
 		private final Parameters config = new Parameters(0, false, true);
 
 		private final int from;
@@ -73,7 +73,7 @@ public class Untokenizer {
 		private final int start;
 		private final int end;
 
-		private Work(int from, int to, int start, int end) {
+		private MatchWork(int from, int to, int start, int end) {
 			this.from = from;
 			this.to = to;
 			this.start = start;
@@ -94,132 +94,146 @@ public class Untokenizer {
 				}
 			}
 
-			annotateAndSplit();
+			new NarrowWork(from, to, start, end).annotateAndSplit();
 		}
 
-		private void annotateAndSplit() {
-			if (end <= start)
-				return;
-			
-			Span fixedSpan = chooseFixedSpan(start, end);
-			
-			if (fixedSpan == null) {
-				// squeezed pilcrow with many options
-				if (end - start == 1 && "$¶".equals(cgKeys.get(start)) && spansByEntry[start].size() > 1) {
-					for (Span span : spansByEntry[start]) {
-						if (span.to - span.from == 1) {
-							fixedSpan = span;
-							break;
-						}
-					}
-					
-					if (fixedSpan == null) {
-						Collections.sort(spansByEntry[start], new br.eti.rslemos.nlp.corpora.chave.parser.Span.SpanComparatorByOffsets());
+		private class NarrowWork {
+			private final int from;
+			private final int to;
+			private final int start;
+			private final int end;
+
+			public NarrowWork(int from, int to, int start, int end) {
+				this.from = from;
+				this.to = to;
+				this.start = start;
+				this.end = end;
+			}
+
+			private void annotateAndSplit() {
+				if (end <= start)
+					return;
+				
+				Span fixedSpan = chooseFixedSpan(start, end);
+				
+				if (fixedSpan == null) {
+					// squeezed pilcrow with many options
+					if (end - start == 1 && "$¶".equals(cgKeys.get(start)) && spansByEntry[start].size() > 1) {
 						for (Span span : spansByEntry[start]) {
-							if (text.charAt(span.from) == ' ') {
+							if (span.to - span.from == 1) {
 								fixedSpan = span;
 								break;
 							}
 						}
-					}
-				}
-				
-				HashMap<String, List<List<Span>>> spansByKey = new HashMap<String, List<List<Span>>>(end - start);
-				for (int i = start; i < end; i++) {
-					List<List<Span>> spanList = spansByKey.get(cgKeys.get(i));
-					
-					if (spanList == null) {
-						spanList = new ArrayList<List<Span>>();
-						spansByKey.put(cgKeys.get(i), spanList);
-					}
-					
-					spanList.add(spansByEntry[i]);
-				}
-				
-				outer:
-				for (Map.Entry<String, List<List<Span>>> spanListByKey : spansByKey.entrySet()) {
-					List<List<Span>> spanList = spanListByKey.getValue();
-					int multiplicity = spanList.size();
-					
-					if (multiplicity > 1) {
-						int[] entries = new int[multiplicity];
-	
-						int i = 0;
-						for (List<Span> spans : spanList) {
-							if (spans.size() != multiplicity)
-								continue outer;
-	
-							entries[i++] = spans.get(0).entry;
+						
+						if (fixedSpan == null) {
+							Collections.sort(spansByEntry[start], new br.eti.rslemos.nlp.corpora.chave.parser.Span.SpanComparatorByOffsets());
+							for (Span span : spansByEntry[start]) {
+								if (text.charAt(span.from) == ' ') {
+									fixedSpan = span;
+									break;
+								}
+							}
 						}
+					}
 					
-						for (i = 0; i < entries.length; i++) {
-							int entry = entries[i];
-							
-							Collections.sort(spansByEntry[entry], new br.eti.rslemos.nlp.corpora.chave.parser.Span.SpanComparatorByOffsets());
-							
-							Span theSpan = spansByEntry[entry].get(i);
-							spansByEntry[entry] = new ArrayList<Match.Span>(1);
-							spansByEntry[entry].add(theSpan);
+					HashMap<String, List<List<Span>>> spansByKey = new HashMap<String, List<List<Span>>>(end - start);
+					for (int i = start; i < end; i++) {
+						List<List<Span>> spanList = spansByKey.get(cgKeys.get(i));
+						
+						if (spanList == null) {
+							spanList = new ArrayList<List<Span>>();
+							spansByKey.put(cgKeys.get(i), spanList);
 						}
 						
-						annotateAndSplit();
+						spanList.add(spansByEntry[i]);
+					}
+					
+					outer:
+					for (Map.Entry<String, List<List<Span>>> spanListByKey : spansByKey.entrySet()) {
+						List<List<Span>> spanList = spanListByKey.getValue();
+						int multiplicity = spanList.size();
 						
-						return;
+						if (multiplicity > 1) {
+							int[] entries = new int[multiplicity];
+		
+							int i = 0;
+							for (List<Span> spans : spanList) {
+								if (spans.size() != multiplicity)
+									continue outer;
+		
+								entries[i++] = spans.get(0).entry;
+							}
+						
+							for (i = 0; i < entries.length; i++) {
+								int entry = entries[i];
+								
+								Collections.sort(spansByEntry[entry], new br.eti.rslemos.nlp.corpora.chave.parser.Span.SpanComparatorByOffsets());
+								
+								Span theSpan = spansByEntry[entry].get(i);
+								spansByEntry[entry] = new ArrayList<Match.Span>(1);
+								spansByEntry[entry].add(theSpan);
+							}
+							
+							annotateAndSplit();
+							
+							return;
+						}
 					}
 				}
+				
+				if (fixedSpan == null) {
+					for (int i = start; i < end; i++) {
+						processingResults[i].addAll(spansByEntry[i]);
+					}
+					//System.err.printf("No fixed span in [%d, %d[\n", start, end);
+					return;
+				}
+				
+				Match fixedFullMatch = fixedSpan.getMatch();
+				
+				try {
+					fixedFullMatch.apply(originalMarkups, cg);
+				} catch (InvalidOffsetException e) {
+					throw new RuntimeException(e);
+				}
+				
+				Span[] spans = fixedFullMatch.getSpans().toArray(new Span[fixedFullMatch.getConsume()]);
+				
+				int from = 0;
+				
+				int start = this.start;
+				
+				for (int i = 0; i < spans.length; i++) {
+					new NarrowWork(from, to, start, spans[i].entry).splitAndRecurse(from, spans[i].from);
+					from = spans[i].to;
+					start = spans[i].entry + 1;
+					
+					// garante que a tabela vai possuir apenas o span que já foi commitado
+					// nos casos normais não faz diferença, mas nas contrações, garante que todos
+					// os spans do conjunto fiquem com contagem 1
+					spansByEntry[spans[i].entry].clear();
+					spansByEntry[spans[i].entry].add(spans[i]);
+					
+					processingResults[spans[i].entry].add(spans[i]);
+				}
+				
+				new NarrowWork(from, to, start, end).splitAndRecurse(from, text.length());
 			}
-			
-			if (fixedSpan == null) {
+		
+			private void splitAndRecurse(int from, int to) {
 				for (int i = start; i < end; i++) {
-					processingResults[i].addAll(spansByEntry[i]);
+					for (Iterator<Span> iterator = spansByEntry[i].iterator(); iterator.hasNext();) {
+						Span span = iterator.next();
+						if (span.to > to || span.from < from)
+							iterator.remove();
+					}
 				}
-				//System.err.printf("No fixed span in [%d, %d[\n", start, end);
-				return;
-			}
-			
-			Match fixedFullMatch = fixedSpan.getMatch();
-			
-			try {
-				fixedFullMatch.apply(originalMarkups, cg);
-			} catch (InvalidOffsetException e) {
-				throw new RuntimeException(e);
-			}
-			
-			Span[] spans = fixedFullMatch.getSpans().toArray(new Span[fixedFullMatch.getConsume()]);
-			
-			int from = 0;
-			
-			int start = this.start;
-			
-			for (int i = 0; i < spans.length; i++) {
-				new Work(from, to, start, spans[i].entry).splitAndRecurse(from, spans[i].from);
-				from = spans[i].to;
-				start = spans[i].entry + 1;
 				
-				// garante que a tabela vai possuir apenas o span que já foi commitado
-				// nos casos normais não faz diferença, mas nas contrações, garante que todos
-				// os spans do conjunto fiquem com contagem 1
-				spansByEntry[spans[i].entry].clear();
-				spansByEntry[spans[i].entry].add(spans[i]);
-				
-				processingResults[spans[i].entry].add(spans[i]);
+				annotateAndSplit();
 			}
-			
-			new Work(from, to, start, end).splitAndRecurse(from, text.length());
 		}
-	
-		private void splitAndRecurse(int from, int to) {
-			for (int i = start; i < end; i++) {
-				for (Iterator<Span> iterator = spansByEntry[i].iterator(); iterator.hasNext();) {
-					Span span = iterator.next();
-					if (span.to > to || span.from < from)
-						iterator.remove();
-				}
-			}
-			
-			annotateAndSplit();
-		}
-	
+		
 		private Span chooseFixedSpan(int start, int end) {
 			BitSet fixedEntries = getFixedEntries(start, end);
 	
