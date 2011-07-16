@@ -37,7 +37,7 @@ public class EncliticMatchStrategy extends AbstractMatchStrategy {
 					toMatch += key1;
 					
 					for (Match match : matchAndUpdateCache(from, to, toMatch, key1)) {
-						result.add(match.adjust(0, i));
+						result.add(match.adjust(0, i, this.getClass()));
 					}
 				}
 			}

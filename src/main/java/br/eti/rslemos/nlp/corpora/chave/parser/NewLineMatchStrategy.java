@@ -13,7 +13,7 @@ public class NewLineMatchStrategy extends AbstractMatchStrategy {
 		for (int i = start; i < end; i++) {
 			if ("$¶".equals(cg.get(i))) {
 				for (Match match : plainMatches) {
-					matches.add(match.adjust(0, i));
+					matches.add(match.adjust(0, i, this.getClass()));
 				}
 			}
 		}

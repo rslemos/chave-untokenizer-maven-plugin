@@ -20,7 +20,7 @@ public class DirectMatchStrategy extends AbstractMatchStrategy {
 
 	private void addAllMatches(int from, int to, int i, Set<Match> matches) {
 		for (Match match : matchKey(from, to, getKey(i))) {
-			matches.add(match.adjust(0, i));
+			matches.add(match.adjust(0, i, this.getClass()));
 		}
 	}
 

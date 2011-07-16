@@ -5,6 +5,7 @@ import gate.FeatureMap;
 import gate.util.InvalidOffsetException;
 import gate.util.SimpleFeatureMapImpl;
 
+import java.util.ArrayList;
 import java.util.LinkedHashSet;
 import java.util.List;
 import java.util.Set;
@@ -14,6 +15,7 @@ public final class Match {
 	public final int to;
 	
 	private final Set<Span> spans;
+	private final Class<? extends MatchStrategy> strategy;
 	
 	public class Span extends br.eti.rslemos.nlp.corpora.chave.parser.Span {
 		public Span(int from, int to, int entry) {
@@ -42,13 +44,15 @@ public final class Match {
 //		}
 	}
 	
-	private Match(int from, int to, Set<Span> spans) {
+	private Match(int from, int to, Class<? extends MatchStrategy> strategy, Set<Span> spans) {
 		this.from = from;
 		this.to = to;
+		this.strategy = strategy;
 		this.spans = spans;
 	}
 	
 	public void apply(AnnotationSet annotationSet, List<CGEntry> cg) throws InvalidOffsetException {
+		List<FeatureMap> tokens = new ArrayList<FeatureMap>();
 		for (Span span : getSpans()) {
 			if (span.from >= 0 && span.to >= 0) {
 				FeatureMap features = new SimpleFeatureMapImpl();
@@ -56,13 +60,22 @@ public final class Match {
 				features.put("match", cg.get(span.entry).getKey());
 				features.put("cg", cg.get(span.entry).getValue());
 				annotationSet.add((long)span.from, (long)span.to, "token", features);
+				
+				tokens.add(features);
 			}
 		}
+		
+		FeatureMap fullMatch = new SimpleFeatureMapImpl();
+
+		fullMatch.put("strategy", strategy.getName());
+		fullMatch.put("tokens", tokens.toArray(new FeatureMap[tokens.size()]));
+		
+		annotationSet.add((long)from, (long)to, "match", fullMatch);
 	}
 
-	public Match adjust(int k, int i) {
+	public Match adjust(int k, int i, Class<? extends MatchStrategy> strategy) {
 		Set<Span> spans = new LinkedHashSet<Span>(this.spans.size());
-		Match match = new Match(from + k, to + k, spans);
+		Match match = new Match(from + k, to + k, strategy, spans);
 		
 		for (Span span : this.spans) {
 			span = match.new Span(span.from + k, span.to + k, span.entry + i);
@@ -105,9 +118,10 @@ public final class Match {
 		return "{" + from + ", " + to + "}/" + spans;
 	}
 	
-	private Match(int from, int to, br.eti.rslemos.nlp.corpora.chave.parser.Span... nakedSpans) {
+	private Match(int from, int to, Class<? extends MatchStrategy> strategy, br.eti.rslemos.nlp.corpora.chave.parser.Span... nakedSpans) {
 		this.from = from;
 		this.to = to;
+		this.strategy = strategy;
 		this.spans = new LinkedHashSet<Span>(nakedSpans.length);
 		
 		for (br.eti.rslemos.nlp.corpora.chave.parser.Span nakedSpan : nakedSpans) {
@@ -117,6 +131,6 @@ public final class Match {
 	}
 	
 	public static Match match(int from, int to, br.eti.rslemos.nlp.corpora.chave.parser.Span... spans) {
-		return new Match(from, to, spans);
+		return new Match(from, to, null, spans);
 	}
 }

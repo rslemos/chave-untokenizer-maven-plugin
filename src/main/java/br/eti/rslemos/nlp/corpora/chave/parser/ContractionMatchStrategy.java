@@ -211,7 +211,7 @@ public final class ContractionMatchStrategy extends AbstractMatchStrategy {
 		String toMatch = buildMatchString(key0, key1, templates[idx0][idx1], marks);
 		
 		for (Match match : matchKey(from, to, toMatch, marks)) {
-			result.add(match.adjust(0, i));
+			result.add(match.adjust(0, i, this.getClass()));
 		}
 	}
 
