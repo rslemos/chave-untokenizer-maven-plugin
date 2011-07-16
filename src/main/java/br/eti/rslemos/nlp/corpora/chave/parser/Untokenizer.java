@@ -205,7 +205,7 @@ public class Untokenizer {
 				int start = this.start;
 				
 				for (int i = 0; i < spans.length; i++) {
-					new NarrowWork(from, to, start, spans[i].entry).splitAndRecurse(from, spans[i].from);
+					new NarrowWork(from, spans[i].from, start, spans[i].entry).splitAndRecurse();
 					from = spans[i].to;
 					start = spans[i].entry + 1;
 					
@@ -218,10 +218,10 @@ public class Untokenizer {
 					processingResults[spans[i].entry].add(spans[i]);
 				}
 				
-				new NarrowWork(from, to, start, end).splitAndRecurse(from, text.length());
+				new NarrowWork(from, to, start, end).splitAndRecurse();
 			}
 		
-			private void splitAndRecurse(int from, int to) {
+			private void splitAndRecurse() {
 				for (int i = start; i < end; i++) {
 					for (Iterator<Span> iterator = spansByEntry[i].iterator(); iterator.hasNext();) {
 						Span span = iterator.next();
@@ -232,20 +232,18 @@ public class Untokenizer {
 				
 				annotateAndSplit();
 			}
-		}
-		
-		private Span chooseFixedSpan() {
-			BitSet fixedEntries = getFixedEntries(start, end);
-	
-			int fixedEntry = chooseFixedEntry(fixedEntries);
 			
-			if (fixedEntry < 0)
-				return null;
-			else
-				return spansByEntry[fixedEntry].get(0);
-		}
-	
+			private Span chooseFixedSpan() {
+				BitSet fixedEntries = getFixedEntries(start, end);
 		
+				int fixedEntry = chooseFixedEntry(fixedEntries);
+				
+				if (fixedEntry < 0)
+					return null;
+				else
+					return spansByEntry[fixedEntry].get(0);
+			}
+		}
 	}
 
 	private static class Parameters {
