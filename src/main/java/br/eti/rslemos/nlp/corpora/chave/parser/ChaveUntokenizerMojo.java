@@ -6,8 +6,11 @@ import java.io.File;
 import java.io.FileInputStream;
 import java.io.IOException;
 import java.io.InputStreamReader;
+import java.io.PrintWriter;
+import java.io.StringWriter;
 import java.util.BitSet;
 import java.util.Collections;
+import java.util.Formatter;
 import java.util.Iterator;
 import java.util.List;
 
@@ -17,6 +20,7 @@ import org.apache.maven.plugin.MojoExecutionException;
 import org.apache.maven.plugin.MojoFailureException;
 import org.apache.maven.plugin.logging.Log;
 import org.codehaus.plexus.util.FileUtils;
+import org.codehaus.plexus.util.StringOutputStream;
 
 import br.eti.rslemos.nlp.corpora.chave.parser.Match.Span;
 
@@ -104,7 +108,7 @@ public class ChaveUntokenizerMojo extends AbstractMojo {
 		}
 	}
 
-	private void untokenize(File inText, File inCG, File out) {
+	private void untokenize(File inText, File inCG, File outDoc) {
 		try {
 			Document document = GateLoader.load(inText.toURI().toURL(), encoding);
 			List<CGEntry> cg = CGEntry.loadFromReader(new InputStreamReader(new FileInputStream(inCG), encoding));
@@ -112,15 +116,25 @@ public class ChaveUntokenizerMojo extends AbstractMojo {
 			try {
 				String text = document.getContent().toString();
 				
+				document.getFeatures().put("br.eti.rslemos.nlp.corpora.chave.parser.textLength", text.length());
+				document.getFeatures().put("br.eti.rslemos.nlp.corpora.chave.parser.cgSize", cg.size());
+				
 				Untokenizer untokenizer = new Untokenizer();
+				long before = System.nanoTime();
 				untokenizer.untokenize(document, cg);
+				long after = System.nanoTime();
+				
+				document.getFeatures().put("br.eti.rslemos.nlp.corpora.chave.parser.processingTime", after - before);
 				
 				List<Span>[] spans = untokenizer.getProcessingResults();
 				BitSet fixedEntries = Untokenizer.getFixedEntries(spans, 0, cg.size());
+				
 				if (fixedEntries.cardinality() < cg.size()) {
-					final int CONTEXT = 4;
+					Formatter failure = new Formatter();
 					
-					System.out.printf("%s failed\n", inText.toString());
+					getLog().warn(inText.toString() + " failed");
+					
+					final int CONTEXT = 4;
 					
 					int firstSet = 0;
 					int firstClear;
@@ -145,27 +159,34 @@ public class ChaveUntokenizerMojo extends AbstractMojo {
 						if (spans[lastReported].size() == 1)
 							to = spans[lastReported].get(0).to;
 						
-						System.out.printf("========== [%5d;%5d[ ==========\n", from, to);
-						System.out.println(text.substring(from, to));
-						System.out.printf("===================================\n");
+						failure.format("========== [%5d;%5d[ ==========\n", from, to);
+						failure.format("%s\n", text.substring(from, to));
+						failure.format("===================================\n");
 						
 						for (int i = firstReported; i <= lastReported; i++) {
 							CGEntry entry = cg.get(i);
 							if (spans[i].size() == 1) {
 								Span matchSpan = spans[i].get(0);
-								System.out.printf("%5d.   %-30s (%s) : \"%s\"\n", i, '"' + entry.getKey() + '"', entry.getValue(), text.substring(matchSpan.from, spans[i].get(0).to));
+								failure.format("%5d.   %-30s (%s) : \"%s\"\n", i, '"' + entry.getKey() + '"', entry.getValue(), text.substring(matchSpan.from, spans[i].get(0).to));
 							} else {
-								System.out.printf("%5d. * %-30s (%s) : #%d - %s\n", i, '"' + entry.getKey() + '"', entry.getValue(), spans[i].size(), spans[i].toString());
+								failure.format("%5d. * %-30s (%s) : #%d - %s\n", i, '"' + entry.getKey() + '"', entry.getValue(), spans[i].size(), spans[i].toString());
 							}
 						}
 					}
+					
+					document.getFeatures().put("br.eti.rslemos.nlp.corpora.chave.parser.failure", failure.toString());
 				}
 				
 			} catch (Exception e) {
-				e.printStackTrace();
+				getLog().warn(inText.toString() + " exception: " + e.getMessage());
+
+				StringWriter trace = new StringWriter();
+				e.printStackTrace(new PrintWriter(trace));
+				document.getFeatures().put("br.eti.rslemos.nlp.corpora.chave.parser.exception", e.getMessage());
+				document.getFeatures().put("br.eti.rslemos.nlp.corpora.chave.parser.exceptionTrace", trace.toString());
 			}
 			
-			FileUtils.fileWrite(out.toString(), document.toXml());
+			FileUtils.fileWrite(outDoc.toString(), document.toXml());
 		} catch (Exception e) {
 			getLog().error(e);
 		}
