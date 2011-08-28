@@ -20,7 +20,6 @@ import org.apache.maven.plugin.MojoExecutionException;
 import org.apache.maven.plugin.MojoFailureException;
 import org.apache.maven.plugin.logging.Log;
 import org.codehaus.plexus.util.FileUtils;
-import org.codehaus.plexus.util.StringOutputStream;
 
 import br.eti.rslemos.nlp.corpora.chave.parser.Match.Span;
 
