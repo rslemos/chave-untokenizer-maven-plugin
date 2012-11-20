@@ -102,7 +102,18 @@ public class Untokenizer {
 		markups.add((long)match.from, (long)match.to, "match", fullMatch);
 	}
 
-	private static class State { 
+	private static ArrayList<Span>[] init(int start, int end) {
+		@SuppressWarnings("unchecked")
+		ArrayList<Span>[] spansByEntry = new ArrayList[end];
+		
+		for (int i = start; i < end; i++) {
+			spansByEntry[i] = new ArrayList<Span>();
+		}
+		
+		return spansByEntry;
+	}
+
+	private class NarrowWork { 
 		private final ArrayList<Span>[] spansByEntry;
 		
 		private final int from;
@@ -110,22 +121,11 @@ public class Untokenizer {
 		private final int start;
 		private final int end;
 		
-		public State(int from, int to, int start, int end) {
+		public NarrowWork(int from, int to, int start, int end) {
 			this(from, to, start, end, init(start, end));
 		}
 		
-		private static ArrayList<Span>[] init(int start, int end) {
-			@SuppressWarnings("unchecked")
-			ArrayList<Span>[] spansByEntry = new ArrayList[end];
-			
-			for (int i = start; i < end; i++) {
-				spansByEntry[i] = new ArrayList<Span>();
-			}
-			
-			return spansByEntry;
-		}
-
-		public State(int from, int to, int start, int end, ArrayList<Span>[] spansByEntry) {
+		public NarrowWork(int from, int to, int start, int end, ArrayList<Span>[] spansByEntry) {
 			this.from = from;
 			this.to = to;
 			this.start = start;
@@ -151,7 +151,89 @@ public class Untokenizer {
 			}
 		}
 
-		public State narrow(int from, int to, int start, int end) {
+		public Set<Match> split() {
+			if (end <= start)
+				return Collections.emptySet();
+			
+			Span fixedSpan = chooseFixedSpan();
+			
+			if (fixedSpan == null) {
+				// squeezed pilcrow with many options
+				if (end - start == 1 && "$¶".equals(cgKeys.get(start)) && getSpans(start).size() > 1) {
+					for (Span span : getSpans(start)) {
+						if (span.to - span.from == 1) {
+							fixedSpan = span;
+							break;
+						}
+					}
+					
+					if (fixedSpan == null) {
+						for (Span span : getSpans(start)) {
+							if (span.to == span.from || text.charAt(span.from) == ' ') {
+								fixedSpan = span;
+								break;
+							}
+						}
+					}
+				}
+				
+				HashMap<String, List<List<Span>>> spansByKey = new HashMap<String, List<List<Span>>>(end - start);
+				for (int i = start; i < end; i++) {
+					List<List<Span>> spanList = spansByKey.get(cgKeys.get(i));
+					
+					if (spanList == null) {
+						spanList = new ArrayList<List<Span>>();
+						spansByKey.put(cgKeys.get(i), spanList);
+					}
+					
+					spanList.add(getSpans(i));
+				}
+				
+				outer:
+				for (Map.Entry<String, List<List<Span>>> spanListByKey : spansByKey.entrySet()) {
+					List<List<Span>> spanList = spanListByKey.getValue();
+					int multiplicity = spanList.size();
+					
+					if (multiplicity > 1) {
+						for (List<Span> spans : spanList) {
+							if (spans.size() != multiplicity)
+								continue outer;
+						}
+					
+						fixedSpan = getSpans(spanList.get(0).get(0).entry).get(0);
+						break;
+					}
+				}
+			}
+			
+			if (fixedSpan == null) {
+//				for (int i = start; i < end; i++) {
+//					processingResults[i].addAll(spansByEntry[i]);
+//				}
+				//System.err.printf("No fixed span in [%d, %d[\n", start, end);
+				return Collections.emptySet();
+			}
+			
+			Match fixedFullMatch = fixedSpan.getMatch();
+			
+			Set<Match> matches = new HashSet<Match>();
+			matches.add(fixedFullMatch);
+			
+			int from = this.from;
+			int start = this.start;
+			
+			for (Span span : fixedFullMatch.getSpans()) {
+				matches.addAll(narrow(from, span.from, start, span.entry).split());
+				from = span.to;
+				start = span.entry + 1;
+			}
+			
+			matches.addAll(narrow(from, to, start, end).split());
+			
+			return matches;
+		}
+
+		public NarrowWork narrow(int from, int to, int start, int end) {
 			@SuppressWarnings("unchecked")
 			ArrayList<Span>[] validSpans = new ArrayList[end];
 			
@@ -164,7 +246,7 @@ public class Untokenizer {
 				validSpans[i].trimToSize();
 			}
 			
-			return new State(from, to, start, end, validSpans);
+			return new NarrowWork(from, to, start, end, validSpans);
 		}
 
 		public Span chooseFixedSpan() {
@@ -187,7 +269,7 @@ public class Untokenizer {
 			return fixedEntries;
 		}
 		
-		private static int chooseFixedEntry(BitSet fixedEntries) {
+		private int chooseFixedEntry(BitSet fixedEntries) {
 			int cardinality = fixedEntries.cardinality();
 			
 			if (cardinality == 1)
@@ -211,10 +293,10 @@ public class Untokenizer {
 	
 	private class MatchWork {
 		private final Parameters config = new Parameters(0, false, true);
-		private State state0;
+		private NarrowWork state0;
 
 		private MatchWork(int from, int to, int start, int end) {
-			state0 = new State(from, to, start, end);
+			state0 = new NarrowWork(from, to, start, end);
 		}
 
 		public Set<Match> untokenize() {
@@ -234,101 +316,7 @@ public class Untokenizer {
 
 			state0.trimToSize();
 			
-			return new NarrowWork(state0).annotateAndSplit();
-		}
-
-		private class NarrowWork {
-			private final State state;
-
-			public NarrowWork(State state) {
-				this.state = state;
-			}
-
-			private Set<Match> annotateAndSplit() {
-				if (state.end <= state.start)
-					return Collections.emptySet();
-				
-				Span fixedSpan = state.chooseFixedSpan();
-				
-				if (fixedSpan == null) {
-					// squeezed pilcrow with many options
-					if (state.end - state.start == 1 && "$¶".equals(cgKeys.get(state.start)) && state.getSpans(state.start).size() > 1) {
-						for (Span span : state.getSpans(state.start)) {
-							if (span.to - span.from == 1) {
-								fixedSpan = span;
-								break;
-							}
-						}
-						
-						if (fixedSpan == null) {
-							for (Span span : state.getSpans(state.start)) {
-								if (span.to == span.from || text.charAt(span.from) == ' ') {
-									fixedSpan = span;
-									break;
-								}
-							}
-						}
-					}
-					
-					HashMap<String, List<List<Span>>> spansByKey = new HashMap<String, List<List<Span>>>(state.end - state.start);
-					for (int i = state.start; i < state.end; i++) {
-						List<List<Span>> spanList = spansByKey.get(cgKeys.get(i));
-						
-						if (spanList == null) {
-							spanList = new ArrayList<List<Span>>();
-							spansByKey.put(cgKeys.get(i), spanList);
-						}
-						
-						spanList.add(state.getSpans(i));
-					}
-					
-					outer:
-					for (Map.Entry<String, List<List<Span>>> spanListByKey : spansByKey.entrySet()) {
-						List<List<Span>> spanList = spanListByKey.getValue();
-						int multiplicity = spanList.size();
-						
-						if (multiplicity > 1) {
-							for (List<Span> spans : spanList) {
-								if (spans.size() != multiplicity)
-									continue outer;
-							}
-						
-							fixedSpan = state.getSpans(spanList.get(0).get(0).entry).get(0);
-							break;
-						}
-					}
-				}
-				
-				if (fixedSpan == null) {
-//					for (int i = start; i < end; i++) {
-//						processingResults[i].addAll(spansByEntry[i]);
-//					}
-					//System.err.printf("No fixed span in [%d, %d[\n", start, end);
-					return Collections.emptySet();
-				}
-				
-				Match fixedFullMatch = fixedSpan.getMatch();
-				
-				Set<Match> matches = new HashSet<Match>();
-				matches.add(fixedFullMatch);
-				
-				int from = state.from;
-				int start = state.start;
-				
-				for (Span span : fixedFullMatch.getSpans()) {
-					matches.addAll(new NarrowWork(state.narrow(from, span.from, start, span.entry)).splitAndRecurse());
-					from = span.to;
-					start = span.entry + 1;
-				}
-				
-				matches.addAll(new NarrowWork(state.narrow(from, state.to, start, state.end)).splitAndRecurse());
-				
-				return matches;
-			}
-
-			private Set<Match> splitAndRecurse() {
-				return annotateAndSplit();
-			}
+			return state0.split();
 		}
 	}
 
