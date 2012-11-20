@@ -137,22 +137,9 @@ public class Untokenizer {
 			if (i < start || i >= end)
 				throw new IndexOutOfBoundsException();
 			
-			return validSpans(spansByEntry[i]);
+			return spansByEntry[i];
 		}
 		
-		private List<Span> validSpans(List<Span> spans) {
-			ArrayList<Span> validSpans = new ArrayList<Span>(spans.size());
-			
-			for (Span span : spans) {
-				if (span.from >= from && span.to <= to)
-					validSpans.add(span);
-			}
-			
-			validSpans.trimToSize();
-			
-			return validSpans;
-		}
-
 		public void add(Span span) {
 			spansByEntry[span.entry].add(span);
 		}
@@ -165,7 +152,19 @@ public class Untokenizer {
 		}
 
 		public State narrow(int from, int to, int start, int end) {
-			return new State(from, to, start, end, spansByEntry);
+			@SuppressWarnings("unchecked")
+			ArrayList<Span>[] validSpans = new ArrayList[end];
+			
+			for (int i = start; i < end; i++) {
+				validSpans[i] = new ArrayList<Span>(this.spansByEntry[i].size());
+				for (Span span : this.spansByEntry[i]) {
+					if (span.from >= from && span.to <= to)
+						validSpans[i].add(span);
+				}
+				validSpans[i].trimToSize();
+			}
+			
+			return new State(from, to, start, end, validSpans);
 		}
 
 		public Span chooseFixedSpan() {
