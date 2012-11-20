@@ -64,13 +64,14 @@ public class Untokenizer {
 	public void untokenize(Document document, List<CGEntry> cg) {
 		this.cg = cg;
 
-		AnnotationSet originalMarkups = document.getAnnotations(GateConstants.ORIGINAL_MARKUPS_ANNOT_SET_NAME);
-
 		text = document.getContent().toString();
 		cgKeys = onlyKeys(cg);
 		
-		Set<Match> matches = new MatchWork(0, text.length(), 0, cgKeys.size()).untokenize();
+		Parameters config = new Parameters(0, false, true);
+		Set<Match> matches = untokenize(config, 0, text.length(), 0, cgKeys.size());
 		
+		AnnotationSet originalMarkups = document.getAnnotations(GateConstants.ORIGINAL_MARKUPS_ANNOT_SET_NAME);
+
 		try {
 			for (Match match : matches) {
 				apply(match, originalMarkups);
@@ -291,33 +292,25 @@ public class Untokenizer {
 		}
 	}
 	
-	private class MatchWork {
-		private final Parameters config = new Parameters(0, false, true);
-		private NarrowWork state0;
-
-		private MatchWork(int from, int to, int start, int end) {
-			state0 = new NarrowWork(from, to, start, end);
-		}
-
-		public Set<Match> untokenize() {
+	public Set<Match> untokenize(Parameters config, int from, int to, int start, int end) {
+		NarrowWork work = new NarrowWork(from, to, start, end);
+		
+		final TextMatcher textMatcher = config.create(text);
+		
+		for (MatchStrategy strategy : STRATEGIES) {
+			strategy.setData(textMatcher, cgKeys);
+			Set<Match> matches = strategy.matchAll(work.from, work.to);
 			
-			final TextMatcher textMatcher = config.create(text);
-			
-			for (MatchStrategy strategy : STRATEGIES) {
-				strategy.setData(textMatcher, cgKeys);
-				Set<Match> matches = strategy.matchAll(state0.from, state0.to);
-				
-				for (Match match : matches) {
-					for (Span span : match.getSpans()) {
-						state0.add(span);
-					}
+			for (Match match : matches) {
+				for (Span span : match.getSpans()) {
+					work.add(span);
 				}
 			}
-
-			state0.trimToSize();
-			
-			return state0.split();
 		}
+
+		work.trimToSize();
+		
+		return work.split();
 	}
 
 	private static class Parameters {
