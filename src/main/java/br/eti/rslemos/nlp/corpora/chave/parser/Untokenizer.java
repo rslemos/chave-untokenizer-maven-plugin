@@ -24,10 +24,12 @@ package br.eti.rslemos.nlp.corpora.chave.parser;
 import static br.eti.rslemos.nlp.corpora.chave.parser.CGEntry.onlyKeys;
 import gate.AnnotationSet;
 import gate.Document;
+import gate.FeatureMap;
 import gate.GateConstants;
 import gate.corpora.DocumentContentImpl;
 import gate.corpora.DocumentImpl;
 import gate.util.InvalidOffsetException;
+import gate.util.SimpleFeatureMapImpl;
 
 import java.util.ArrayList;
 import java.util.BitSet;
@@ -214,7 +216,7 @@ public class Untokenizer {
 				Match fixedFullMatch = fixedSpan.getMatch();
 				
 				try {
-					fixedFullMatch.apply(originalMarkups, cg);
+					apply(fixedFullMatch);
 				} catch (InvalidOffsetException e) {
 					throw new RuntimeException(e);
 				}
@@ -240,6 +242,28 @@ public class Untokenizer {
 				}
 				
 				new NarrowWork(from, to, start, end).splitAndRecurse();
+			}
+
+			private void apply(Match match) throws InvalidOffsetException {
+				List<FeatureMap> tokens = new ArrayList<FeatureMap>();
+				for (Span span : match.getSpans()) {
+					if (span.from >= 0 && span.to >= 0) {
+						FeatureMap features = new SimpleFeatureMapImpl();
+						features.put("index", span.entry);
+						features.put("match", cg.get(span.entry).getKey());
+						features.put("cg", cg.get(span.entry).getValue());
+						originalMarkups.add((long)span.from, (long)span.to, "token", features);
+						
+						tokens.add(features);
+					}
+				}
+				
+				FeatureMap fullMatch = new SimpleFeatureMapImpl();
+				
+				fullMatch.put("strategy", match.strategy.getName());
+				fullMatch.put("tokens", tokens.toArray(new FeatureMap[tokens.size()]));
+				
+				originalMarkups.add((long)match.from, (long)match.to, "match", fullMatch);
 			}
 		
 			private void splitAndRecurse() {

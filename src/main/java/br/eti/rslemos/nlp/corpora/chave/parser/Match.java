@@ -21,14 +21,7 @@
  ******************************************************************************/
 package br.eti.rslemos.nlp.corpora.chave.parser;
 
-import gate.AnnotationSet;
-import gate.FeatureMap;
-import gate.util.InvalidOffsetException;
-import gate.util.SimpleFeatureMapImpl;
-
-import java.util.ArrayList;
 import java.util.LinkedHashSet;
-import java.util.List;
 import java.util.Set;
 
 public final class Match {
@@ -36,7 +29,7 @@ public final class Match {
 	public final int to;
 	
 	private final Set<Span> spans;
-	private final Class<? extends MatchStrategy> strategy;
+	final Class<? extends MatchStrategy> strategy;
 	
 	public class Span extends br.eti.rslemos.nlp.corpora.chave.parser.Span {
 		public Span(int from, int to, int entry) {
@@ -72,28 +65,6 @@ public final class Match {
 		this.spans = spans;
 	}
 	
-	public void apply(AnnotationSet annotationSet, List<CGEntry> cg) throws InvalidOffsetException {
-		List<FeatureMap> tokens = new ArrayList<FeatureMap>();
-		for (Span span : getSpans()) {
-			if (span.from >= 0 && span.to >= 0) {
-				FeatureMap features = new SimpleFeatureMapImpl();
-				features.put("index", span.entry);
-				features.put("match", cg.get(span.entry).getKey());
-				features.put("cg", cg.get(span.entry).getValue());
-				annotationSet.add((long)span.from, (long)span.to, "token", features);
-				
-				tokens.add(features);
-			}
-		}
-		
-		FeatureMap fullMatch = new SimpleFeatureMapImpl();
-
-		fullMatch.put("strategy", strategy.getName());
-		fullMatch.put("tokens", tokens.toArray(new FeatureMap[tokens.size()]));
-		
-		annotationSet.add((long)from, (long)to, "match", fullMatch);
-	}
-
 	public Match adjust(int k, int i, Class<? extends MatchStrategy> strategy) {
 		Set<Span> spans = new LinkedHashSet<Span>(this.spans.size());
 		Match match = new Match(from + k, to + k, strategy, spans);
