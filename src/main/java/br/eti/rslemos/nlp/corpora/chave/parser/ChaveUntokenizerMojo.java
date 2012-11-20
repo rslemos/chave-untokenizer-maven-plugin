@@ -135,9 +135,9 @@ public class ChaveUntokenizerMojo extends AbstractMojo {
 				document.getFeatures().put("br.eti.rslemos.nlp.corpora.chave.parser.textLength", text.length());
 				document.getFeatures().put("br.eti.rslemos.nlp.corpora.chave.parser.cgSize", cg.size());
 				
-				Untokenizer untokenizer = new Untokenizer();
+				Untokenizer untokenizer = new Untokenizer(document, cg);
 				long before = System.nanoTime();
-				untokenizer.untokenize(document, cg);
+				untokenizer.untokenize();
 				long after = System.nanoTime();
 				
 				document.getFeatures().put("br.eti.rslemos.nlp.corpora.chave.parser.processingTime", after - before);

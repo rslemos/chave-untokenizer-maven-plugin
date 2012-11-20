@@ -40,6 +40,8 @@ import java.util.List;
 import java.util.Map;
 import java.util.Set;
 
+import com.google.common.collect.ImmutableList;
+
 import br.eti.rslemos.nlp.corpora.chave.parser.Match.Span;
 
 public class Untokenizer {
@@ -51,21 +53,25 @@ public class Untokenizer {
 			new NewLineMatchStrategy(),
 		};
 
-	private List<CGEntry> cg;
-	private String text;
-	private List<String> cgKeys;
+	private final Document document;
+	private final String text;
+	private final List<CGEntry> cg;
+	private final List<String> cgKeys;
 
-	public Document createDocument(String text) {
+	public Untokenizer(Document document, List<CGEntry> cg) {
+		this.document = document;
+		this.text = document.getContent().toString();
+		this.cg = ImmutableList.copyOf(cg);
+		this.cgKeys = ImmutableList.copyOf(onlyKeys(cg));
+	}
+	
+	public static Document createDocument(String text) {
 		Document result = new DocumentImpl();
 		result.setContent(new DocumentContentImpl(text));
 		return result;
 	}
 
-	public void untokenize(Document document, List<CGEntry> cg) {
-		this.cg = cg;
-
-		text = document.getContent().toString();
-		cgKeys = onlyKeys(cg);
+	public void untokenize() {
 		
 		Parameters config = new Parameters(0, false, true);
 		Set<Match> matches = untokenize(config, 0, text.length(), 0, cgKeys.size());

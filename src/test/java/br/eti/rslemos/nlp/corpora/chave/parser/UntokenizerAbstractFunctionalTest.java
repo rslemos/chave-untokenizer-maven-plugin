@@ -36,21 +36,13 @@ import java.util.List;
 
 import junit.framework.TestCase;
 
-import org.junit.Before;
-
 public abstract class UntokenizerAbstractFunctionalTest extends TestCase {
 
 	private static final Charset UTF8 = Charset.forName("UTF-8");
 	
-	private Untokenizer untokenizer;
-
-	@Before
-	public void setUp() {
-		untokenizer = new Untokenizer();
-	}
-	
 	protected void untokenize(Document document, List<CGEntry> cgLines) {
-		untokenizer.untokenize(document, cgLines);
+		Untokenizer untokenizer = new Untokenizer(document, cgLines);
+		untokenizer.untokenize();
 	}
 
 	void _() {

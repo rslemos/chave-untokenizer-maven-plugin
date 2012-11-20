@@ -45,15 +45,12 @@ public class UntokenizerUnitTest {
 	private Document document;
 	private List<CGEntry> CG;
 	private String TEXT;
-	private Untokenizer untokenizer;
 
 	@Before
 	public void setUp() {
 		char[] separator = new char[80];
 		Arrays.fill(separator, '=');
 		System.out.println(separator);
-		
-		untokenizer = new Untokenizer();
 	}
 	
 	@Test
@@ -394,11 +391,13 @@ public class UntokenizerUnitTest {
 	
 	private void untokenize() {
 		createDocument();
-		untokenizer.untokenize(document, CG);
+		
+		Untokenizer untokenizer = new Untokenizer(document, CG);
+		untokenizer.untokenize();
 	}
 
 	private void createDocument() {
-		document = untokenizer.createDocument(TEXT);
+		document = Untokenizer.createDocument(TEXT);
 		assertThat(document, is(not(nullValue(Document.class))));
 		
 		originalMarkups = document.getAnnotations(GateConstants.ORIGINAL_MARKUPS_ANNOT_SET_NAME);
