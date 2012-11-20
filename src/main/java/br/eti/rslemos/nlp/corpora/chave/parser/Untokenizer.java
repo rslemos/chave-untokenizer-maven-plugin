@@ -242,24 +242,21 @@ public class Untokenizer {
 				Set<Match> matches = new HashSet<Match>();
 				matches.add(fixedFullMatch);
 				
-				Span[] spans = fixedFullMatch.getSpans().toArray(new Span[fixedFullMatch.getConsume()]);
-				
 				int from = this.from;
-				
 				int start = this.start;
 				
-				for (int i = 0; i < spans.length; i++) {
-					matches.addAll(new NarrowWork(from, spans[i].from, start, spans[i].entry).splitAndRecurse());
-					from = spans[i].to;
-					start = spans[i].entry + 1;
+				for (Span span : fixedFullMatch.getSpans()) {
+					matches.addAll(new NarrowWork(from, span.from, start, span.entry).splitAndRecurse());
+					from = span.to;
+					start = span.entry + 1;
 					
 					// garante que a tabela vai possuir apenas o span que já foi commitado
 					// nos casos normais não faz diferença, mas nas contrações, garante que todos
 					// os spans do conjunto fiquem com contagem 1
-					spansByEntry[spans[i].entry].clear();
-					spansByEntry[spans[i].entry].add(spans[i]);
+					spansByEntry[span.entry].clear();
+					spansByEntry[span.entry].add(span);
 					
-					// processingResults[spans[i].entry].add(spans[i]);
+					// processingResults[span.entry].add(span);
 				}
 				
 				matches.addAll(new NarrowWork(from, to, start, end).splitAndRecurse());

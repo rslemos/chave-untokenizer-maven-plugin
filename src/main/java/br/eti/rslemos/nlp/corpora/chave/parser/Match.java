@@ -21,14 +21,14 @@
  ******************************************************************************/
 package br.eti.rslemos.nlp.corpora.chave.parser;
 
-import java.util.LinkedHashSet;
-import java.util.Set;
+import java.util.ArrayList;
+import java.util.List;
 
 public final class Match {
 	public final int from;
 	public final int to;
 	
-	private final Set<Span> spans;
+	private final List<Span> spans;
 	final Class<? extends MatchStrategy> strategy;
 	
 	public class Span extends br.eti.rslemos.nlp.corpora.chave.parser.Span {
@@ -58,7 +58,7 @@ public final class Match {
 //		}
 	}
 	
-	private Match(int from, int to, Class<? extends MatchStrategy> strategy, Set<Span> spans) {
+	private Match(int from, int to, Class<? extends MatchStrategy> strategy, List<Span> spans) {
 		this.from = from;
 		this.to = to;
 		this.strategy = strategy;
@@ -66,7 +66,7 @@ public final class Match {
 	}
 	
 	public Match adjust(int k, int i, Class<? extends MatchStrategy> strategy) {
-		Set<Span> spans = new LinkedHashSet<Span>(this.spans.size());
+		ArrayList<Span> spans = new ArrayList<Span>(this.spans.size());
 		Match match = new Match(from + k, to + k, strategy, spans);
 		
 		for (Span span : this.spans) {
@@ -74,17 +74,15 @@ public final class Match {
 			spans.add(span);
 		}
 		
+		spans.trimToSize();
+		
 		return match;
 	}
 	
-	public Set<Span> getSpans() {
+	public List<Span> getSpans() {
 		return spans;
 	}
 
-	public int getConsume() {
-		return spans.size();
-	}
-	
 	public boolean equals(Object o) {
 		if (o == null)
 			return false;
@@ -114,12 +112,16 @@ public final class Match {
 		this.from = from;
 		this.to = to;
 		this.strategy = strategy;
-		this.spans = new LinkedHashSet<Span>(nakedSpans.length);
+		
+		ArrayList<Span> spans = new ArrayList<Span>(nakedSpans.length);
+		this.spans = spans;
 		
 		for (br.eti.rslemos.nlp.corpora.chave.parser.Span nakedSpan : nakedSpans) {
 			Span span = new Span(nakedSpan.from, nakedSpan.to, nakedSpan.entry);
 			spans.add(span);
 		}
+		
+		spans.trimToSize();
 	}
 	
 	public static Match match(int from, int to, br.eti.rslemos.nlp.corpora.chave.parser.Span... spans) {
