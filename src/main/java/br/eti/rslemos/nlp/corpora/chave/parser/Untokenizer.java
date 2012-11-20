@@ -56,17 +56,12 @@ public class Untokenizer {
 	private String text;
 	private List<String> cgKeys;
 
-	private List<Span>[] spansByEntry;
-
-	private List<Span>[] processingResults;
-
 	public Document createDocument(String text) {
 		Document result = new DocumentImpl();
 		result.setContent(new DocumentContentImpl(text));
 		return result;
 	}
 
-	@SuppressWarnings("unchecked")
 	public void untokenize(Document document, List<CGEntry> cg) {
 		this.cg = cg;
 
@@ -74,15 +69,6 @@ public class Untokenizer {
 
 		text = document.getContent().toString();
 		cgKeys = onlyKeys(cg);
-		
-		spansByEntry = new List[cgKeys.size()];
-		processingResults = new List[cgKeys.size()];
-		
-		for (int i = 0; i < spansByEntry.length; i++) {
-			spansByEntry[i] = new ArrayList<Span>();
-			processingResults[i] = new ArrayList<Span>();
-		}
-		
 		
 		Set<Match> matches = new MatchWork(0, text.length(), 0, cgKeys.size()).untokenize();
 		
@@ -120,20 +106,30 @@ public class Untokenizer {
 	private class MatchWork {
 		private final Parameters config = new Parameters(0, false, true);
 
+		private List<Span>[] spansByEntry;
+
 		private final int from;
 		private final int to;
 		
 		private final int start;
 		private final int end;
 
+		@SuppressWarnings("unchecked")
 		private MatchWork(int from, int to, int start, int end) {
 			this.from = from;
 			this.to = to;
 			this.start = start;
 			this.end = end;
+			
+			spansByEntry = new List[end];
+			
+			for (int i = 0; i < spansByEntry.length; i++) {
+				spansByEntry[i] = new ArrayList<Span>();
+			}
 		}
 
 		public Set<Match> untokenize() {
+
 			final TextMatcher textMatcher = config.create(text);
 			
 			for (MatchStrategy strategy : STRATEGIES) {
@@ -234,9 +230,9 @@ public class Untokenizer {
 				}
 				
 				if (fixedSpan == null) {
-					for (int i = start; i < end; i++) {
-						processingResults[i].addAll(spansByEntry[i]);
-					}
+//					for (int i = start; i < end; i++) {
+//						processingResults[i].addAll(spansByEntry[i]);
+//					}
 					//System.err.printf("No fixed span in [%d, %d[\n", start, end);
 					return Collections.emptySet();
 				}
@@ -263,7 +259,7 @@ public class Untokenizer {
 					spansByEntry[spans[i].entry].clear();
 					spansByEntry[spans[i].entry].add(spans[i]);
 					
-					processingResults[spans[i].entry].add(spans[i]);
+					// processingResults[spans[i].entry].add(spans[i]);
 				}
 				
 				matches.addAll(new NarrowWork(from, to, start, end).splitAndRecurse());
@@ -284,7 +280,7 @@ public class Untokenizer {
 			}
 			
 			private Span chooseFixedSpan() {
-				BitSet fixedEntries = getFixedEntries(start, end);
+				BitSet fixedEntries = getFixedEntries();
 		
 				int fixedEntry = chooseFixedEntry(fixedEntries);
 				
@@ -292,6 +288,15 @@ public class Untokenizer {
 					return null;
 				else
 					return spansByEntry[fixedEntry].get(0);
+			}
+
+			private BitSet getFixedEntries() {
+				BitSet fixedEntries = new BitSet(spansByEntry.length);
+				for (int i = start; i < end; i++) {
+					fixedEntries.set(i, spansByEntry[i].size() == 1);
+				}
+				
+				return fixedEntries;
 			}
 		}
 	}
@@ -315,10 +320,6 @@ public class Untokenizer {
 		}
 	}
 
-	private BitSet getFixedEntries(int start, int end) {
-		return getFixedEntries(spansByEntry, start, end);
-	}
-
 	private static int chooseFixedEntry(BitSet fixedEntries) {
 		int cardinality = fixedEntries.cardinality();
 		
@@ -339,18 +340,4 @@ public class Untokenizer {
 			return entry;
 		}
 	}
-
-	public static BitSet getFixedEntries(List<Span>[] spansByEntry, int start, int end) {
-		BitSet fixedEntries = new BitSet(spansByEntry.length);
-		for (int i = start; i < end; i++) {
-			fixedEntries.set(i, spansByEntry[i].size() == 1);
-		}
-		
-		return fixedEntries;
-	}
-
-	public List<Span>[] getProcessingResults() {
-		return processingResults;
-	}
-
 }

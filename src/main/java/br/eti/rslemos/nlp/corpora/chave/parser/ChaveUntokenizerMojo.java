@@ -29,9 +29,7 @@ import java.io.IOException;
 import java.io.InputStreamReader;
 import java.io.PrintWriter;
 import java.io.StringWriter;
-import java.util.BitSet;
 import java.util.Collections;
-import java.util.Formatter;
 import java.util.Iterator;
 import java.util.List;
 
@@ -41,8 +39,6 @@ import org.apache.maven.plugin.MojoExecutionException;
 import org.apache.maven.plugin.MojoFailureException;
 import org.apache.maven.plugin.logging.Log;
 import org.codehaus.plexus.util.FileUtils;
-
-import br.eti.rslemos.nlp.corpora.chave.parser.Match.Span;
 
 /**
  * @goal untokenize
@@ -146,56 +142,57 @@ public class ChaveUntokenizerMojo extends AbstractMojo {
 				
 				document.getFeatures().put("br.eti.rslemos.nlp.corpora.chave.parser.processingTime", after - before);
 				
-				List<Span>[] spans = untokenizer.getProcessingResults();
-				BitSet fixedEntries = Untokenizer.getFixedEntries(spans, 0, cg.size());
-				
-				if (fixedEntries.cardinality() < cg.size()) {
-					Formatter failure = new Formatter();
-					
-					getLog().warn(inText.toString() + " failed");
-					
-					final int CONTEXT = 4;
-					
-					int firstSet = 0;
-					int firstClear;
-					
-					while ((firstClear = fixedEntries.nextClearBit(firstSet)) < cg.size()) {
-						int nextClear = firstClear;
-						do {
-							firstSet = fixedEntries.nextSetBit(nextClear);
-							firstSet = firstSet >= 0 ? firstSet : cg.size();
-							nextClear = fixedEntries.nextClearBit(firstSet);
-						} while (nextClear < cg.size() && nextClear < firstSet + CONTEXT*2 + 1);
-
-						int firstReported = Math.max(0, firstClear - CONTEXT);
-						int lastReported = Math.min(cg.size(), firstSet + CONTEXT) - 1;
-
-						int from = 0;
-						int to = text.length();
-						
-						if (spans[firstReported].size() == 1)
-							from = spans[firstReported].get(0).from;
-						
-						if (spans[lastReported].size() == 1)
-							to = spans[lastReported].get(0).to;
-						
-						failure.format("========== [%5d;%5d[ ==========\n", from, to);
-						failure.format("%s\n", text.substring(from, to));
-						failure.format("===================================\n");
-						
-						for (int i = firstReported; i <= lastReported; i++) {
-							CGEntry entry = cg.get(i);
-							if (spans[i].size() == 1) {
-								Span matchSpan = spans[i].get(0);
-								failure.format("%5d.   %-30s (%s) : \"%s\"\n", i, '"' + entry.getKey() + '"', entry.getValue(), text.substring(matchSpan.from, spans[i].get(0).to));
-							} else {
-								failure.format("%5d. * %-30s (%s) : #%d - %s\n", i, '"' + entry.getKey() + '"', entry.getValue(), spans[i].size(), spans[i].toString());
-							}
-						}
-					}
-					
-					document.getFeatures().put("br.eti.rslemos.nlp.corpora.chave.parser.failure", failure.toString());
-				}
+				/* grande trecho de código que ajudava a depurar problemas de processamento */
+//				List<Span>[] spans = untokenizer.getProcessingResults();
+//				BitSet fixedEntries = Untokenizer.getFixedEntries(spans, 0, cg.size());
+//				
+//				if (fixedEntries.cardinality() < cg.size()) {
+//					Formatter failure = new Formatter();
+//					
+//					getLog().warn(inText.toString() + " failed");
+//					
+//					final int CONTEXT = 4;
+//					
+//					int firstSet = 0;
+//					int firstClear;
+//					
+//					while ((firstClear = fixedEntries.nextClearBit(firstSet)) < cg.size()) {
+//						int nextClear = firstClear;
+//						do {
+//							firstSet = fixedEntries.nextSetBit(nextClear);
+//							firstSet = firstSet >= 0 ? firstSet : cg.size();
+//							nextClear = fixedEntries.nextClearBit(firstSet);
+//						} while (nextClear < cg.size() && nextClear < firstSet + CONTEXT*2 + 1);
+//
+//						int firstReported = Math.max(0, firstClear - CONTEXT);
+//						int lastReported = Math.min(cg.size(), firstSet + CONTEXT) - 1;
+//
+//						int from = 0;
+//						int to = text.length();
+//						
+//						if (spans[firstReported].size() == 1)
+//							from = spans[firstReported].get(0).from;
+//						
+//						if (spans[lastReported].size() == 1)
+//							to = spans[lastReported].get(0).to;
+//						
+//						failure.format("========== [%5d;%5d[ ==========\n", from, to);
+//						failure.format("%s\n", text.substring(from, to));
+//						failure.format("===================================\n");
+//						
+//						for (int i = firstReported; i <= lastReported; i++) {
+//							CGEntry entry = cg.get(i);
+//							if (spans[i].size() == 1) {
+//								Span matchSpan = spans[i].get(0);
+//								failure.format("%5d.   %-30s (%s) : \"%s\"\n", i, '"' + entry.getKey() + '"', entry.getValue(), text.substring(matchSpan.from, spans[i].get(0).to));
+//							} else {
+//								failure.format("%5d. * %-30s (%s) : #%d - %s\n", i, '"' + entry.getKey() + '"', entry.getValue(), spans[i].size(), spans[i].toString());
+//							}
+//						}
+//					}
+//					
+//					document.getFeatures().put("br.eti.rslemos.nlp.corpora.chave.parser.failure", failure.toString());
+//				}
 				
 			} catch (Exception e) {
 				getLog().warn(inText.toString() + " exception: " + e.getMessage());
