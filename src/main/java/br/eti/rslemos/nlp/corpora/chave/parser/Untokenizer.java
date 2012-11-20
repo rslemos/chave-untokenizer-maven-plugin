@@ -35,6 +35,7 @@ import java.util.ArrayList;
 import java.util.BitSet;
 import java.util.Collections;
 import java.util.HashMap;
+import java.util.HashSet;
 import java.util.Iterator;
 import java.util.List;
 import java.util.Map;
@@ -51,7 +52,6 @@ public class Untokenizer {
 			new NewLineMatchStrategy(),
 		};
 
-	private AnnotationSet originalMarkups;
 	private List<CGEntry> cg;
 	private String text;
 	private List<String> cgKeys;
@@ -70,7 +70,7 @@ public class Untokenizer {
 	public void untokenize(Document document, List<CGEntry> cg) {
 		this.cg = cg;
 
-		originalMarkups = document.getAnnotations(GateConstants.ORIGINAL_MARKUPS_ANNOT_SET_NAME);
+		AnnotationSet originalMarkups = document.getAnnotations(GateConstants.ORIGINAL_MARKUPS_ANNOT_SET_NAME);
 
 		text = document.getContent().toString();
 		cgKeys = onlyKeys(cg);
@@ -84,7 +84,37 @@ public class Untokenizer {
 		}
 		
 		
-		new MatchWork(0, text.length(), 0, cgKeys.size()).untokenize();
+		Set<Match> matches = new MatchWork(0, text.length(), 0, cgKeys.size()).untokenize();
+		
+		try {
+			for (Match match : matches) {
+				apply(match, originalMarkups);
+			}
+		} catch (InvalidOffsetException e) {
+			throw new RuntimeException(e);
+		}
+	}
+
+	private void apply(Match match, AnnotationSet markups) throws InvalidOffsetException {
+		List<FeatureMap> tokens = new ArrayList<FeatureMap>();
+		for (Span span : match.getSpans()) {
+			if (span.from >= 0 && span.to >= 0) {
+				FeatureMap features = new SimpleFeatureMapImpl();
+				features.put("index", span.entry);
+				features.put("match", cg.get(span.entry).getKey());
+				features.put("cg", cg.get(span.entry).getValue());
+				markups.add((long)span.from, (long)span.to, "token", features);
+				
+				tokens.add(features);
+			}
+		}
+		
+		FeatureMap fullMatch = new SimpleFeatureMapImpl();
+		
+		fullMatch.put("strategy", match.strategy.getName());
+		fullMatch.put("tokens", tokens.toArray(new FeatureMap[tokens.size()]));
+		
+		markups.add((long)match.from, (long)match.to, "match", fullMatch);
 	}
 
 	private class MatchWork {
@@ -103,7 +133,7 @@ public class Untokenizer {
 			this.end = end;
 		}
 
-		public void untokenize() {
+		public Set<Match> untokenize() {
 			final TextMatcher textMatcher = config.create(text);
 			
 			for (MatchStrategy strategy : STRATEGIES) {
@@ -117,7 +147,7 @@ public class Untokenizer {
 				}
 			}
 
-			new NarrowWork(from, to, start, end).annotateAndSplit();
+			return new NarrowWork(from, to, start, end).annotateAndSplit();
 		}
 
 		private class NarrowWork {
@@ -133,9 +163,9 @@ public class Untokenizer {
 				this.end = end;
 			}
 
-			private void annotateAndSplit() {
+			private Set<Match> annotateAndSplit() {
 				if (end <= start)
-					return;
+					return Collections.emptySet();
 				
 				Span fixedSpan = chooseFixedSpan();
 				
@@ -198,9 +228,7 @@ public class Untokenizer {
 								spansByEntry[entry].add(theSpan);
 							}
 							
-							annotateAndSplit();
-							
-							return;
+							return annotateAndSplit();
 						}
 					}
 				}
@@ -210,16 +238,13 @@ public class Untokenizer {
 						processingResults[i].addAll(spansByEntry[i]);
 					}
 					//System.err.printf("No fixed span in [%d, %d[\n", start, end);
-					return;
+					return Collections.emptySet();
 				}
 				
 				Match fixedFullMatch = fixedSpan.getMatch();
 				
-				try {
-					apply(fixedFullMatch);
-				} catch (InvalidOffsetException e) {
-					throw new RuntimeException(e);
-				}
+				Set<Match> matches = new HashSet<Match>();
+				matches.add(fixedFullMatch);
 				
 				Span[] spans = fixedFullMatch.getSpans().toArray(new Span[fixedFullMatch.getConsume()]);
 				
@@ -228,7 +253,7 @@ public class Untokenizer {
 				int start = this.start;
 				
 				for (int i = 0; i < spans.length; i++) {
-					new NarrowWork(from, spans[i].from, start, spans[i].entry).splitAndRecurse();
+					matches.addAll(new NarrowWork(from, spans[i].from, start, spans[i].entry).splitAndRecurse());
 					from = spans[i].to;
 					start = spans[i].entry + 1;
 					
@@ -241,32 +266,12 @@ public class Untokenizer {
 					processingResults[spans[i].entry].add(spans[i]);
 				}
 				
-				new NarrowWork(from, to, start, end).splitAndRecurse();
+				matches.addAll(new NarrowWork(from, to, start, end).splitAndRecurse());
+				
+				return matches;
 			}
 
-			private void apply(Match match) throws InvalidOffsetException {
-				List<FeatureMap> tokens = new ArrayList<FeatureMap>();
-				for (Span span : match.getSpans()) {
-					if (span.from >= 0 && span.to >= 0) {
-						FeatureMap features = new SimpleFeatureMapImpl();
-						features.put("index", span.entry);
-						features.put("match", cg.get(span.entry).getKey());
-						features.put("cg", cg.get(span.entry).getValue());
-						originalMarkups.add((long)span.from, (long)span.to, "token", features);
-						
-						tokens.add(features);
-					}
-				}
-				
-				FeatureMap fullMatch = new SimpleFeatureMapImpl();
-				
-				fullMatch.put("strategy", match.strategy.getName());
-				fullMatch.put("tokens", tokens.toArray(new FeatureMap[tokens.size()]));
-				
-				originalMarkups.add((long)match.from, (long)match.to, "match", fullMatch);
-			}
-		
-			private void splitAndRecurse() {
+			private Set<Match> splitAndRecurse() {
 				for (int i = start; i < end; i++) {
 					for (Iterator<Span> iterator = spansByEntry[i].iterator(); iterator.hasNext();) {
 						Span span = iterator.next();
@@ -275,7 +280,7 @@ public class Untokenizer {
 					}
 				}
 				
-				annotateAndSplit();
+				return annotateAndSplit();
 			}
 			
 			private Span chooseFixedSpan() {
