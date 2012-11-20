@@ -102,77 +102,159 @@ public class Untokenizer {
 		markups.add((long)match.from, (long)match.to, "match", fullMatch);
 	}
 
-	private class MatchWork {
-		private final Parameters config = new Parameters(0, false, true);
-
-		private ArrayList<Span>[] spansByEntry;
-
+	private static class State { 
+		private final ArrayList<Span>[] spansByEntry;
+		
 		private final int from;
 		private final int to;
-		
 		private final int start;
 		private final int end;
-
-		@SuppressWarnings("unchecked")
-		private MatchWork(int from, int to, int start, int end) {
-			this.from = from;
-			this.to = to;
-			this.start = start;
-			this.end = end;
-			
-			spansByEntry = new ArrayList[end];
+		
+		public State(int from, int to, int start, int end) {
+			this(from, to, start, end, init(start, end));
+		}
+		
+		private static ArrayList<Span>[] init(int start, int end) {
+			@SuppressWarnings("unchecked")
+			ArrayList<Span>[] spansByEntry = new ArrayList[end];
 			
 			for (int i = start; i < end; i++) {
 				spansByEntry[i] = new ArrayList<Span>();
 			}
+			
+			return spansByEntry;
 		}
 
-		public Set<Match> untokenize() {
+		public State(int from, int to, int start, int end, ArrayList<Span>[] spansByEntry) {
+			this.from = from;
+			this.to = to;
+			this.start = start;
+			this.end = end;
+			this.spansByEntry = spansByEntry;
+		}
 
-			final TextMatcher textMatcher = config.create(text);
+		public List<Span> getSpans(int i) {
+			if (i < start || i >= end)
+				throw new IndexOutOfBoundsException();
 			
-			for (MatchStrategy strategy : STRATEGIES) {
-				strategy.setData(textMatcher, cgKeys);
-				Set<Match> matches = strategy.matchAll(from, to);
-				
-				for (Match match : matches) {
-					for (Span span : match.getSpans()) {
-						spansByEntry[span.entry].add(span);
-					}
-				}
+			return validSpans(spansByEntry[i]);
+		}
+		
+		private List<Span> validSpans(List<Span> spans) {
+			ArrayList<Span> validSpans = new ArrayList<Span>(spans.size());
+			
+			for (Span span : spans) {
+				if (span.from >= from && span.to <= to)
+					validSpans.add(span);
 			}
+			
+			validSpans.trimToSize();
+			
+			return validSpans;
+		}
 
+		public void add(Span span) {
+			spansByEntry[span.entry].add(span);
+		}
+
+		public void trimToSize() {
 			for (int i = start; i < end; i++) {
 				spansByEntry[i].trimToSize();
 				Collections.sort(spansByEntry[i], new br.eti.rslemos.nlp.corpora.chave.parser.Span.SpanComparatorByOffsets());
 			}
+		}
+
+		public State narrow(int from, int to, int start, int end) {
+			return new State(from, to, start, end, spansByEntry);
+		}
+
+		public Span chooseFixedSpan() {
+			BitSet fixedEntries = getFixedEntries();
+	
+			int fixedEntry = chooseFixedEntry(fixedEntries);
 			
-			return new NarrowWork(from, to, start, end).annotateAndSplit();
+			if (fixedEntry < 0)
+				return null;
+			else
+				return getSpans(fixedEntry).get(0);
+		}
+
+		private BitSet getFixedEntries() {
+			BitSet fixedEntries = new BitSet(spansByEntry.length);
+			for (int i = start; i < end; i++) {
+				fixedEntries.set(i, getSpans(i).size() == 1);
+			}
+			
+			return fixedEntries;
+		}
+		
+		private static int chooseFixedEntry(BitSet fixedEntries) {
+			int cardinality = fixedEntries.cardinality();
+			
+			if (cardinality == 1)
+				return fixedEntries.nextSetBit(0);
+			else if (cardinality == 0)
+				return -1;
+			else { // cardinality >= 2
+				int median = cardinality/2;
+				
+				int entry = fixedEntries.nextSetBit(0);
+				
+				while (entry >= 0 && median > 0) {
+					median--;
+					entry = fixedEntries.nextSetBit(entry+1);
+				}
+				
+				return entry;
+			}
+		}
+	}
+	
+	private class MatchWork {
+		private final Parameters config = new Parameters(0, false, true);
+		private State state0;
+
+		private MatchWork(int from, int to, int start, int end) {
+			state0 = new State(from, to, start, end);
+		}
+
+		public Set<Match> untokenize() {
+			
+			final TextMatcher textMatcher = config.create(text);
+			
+			for (MatchStrategy strategy : STRATEGIES) {
+				strategy.setData(textMatcher, cgKeys);
+				Set<Match> matches = strategy.matchAll(state0.from, state0.to);
+				
+				for (Match match : matches) {
+					for (Span span : match.getSpans()) {
+						state0.add(span);
+					}
+				}
+			}
+
+			state0.trimToSize();
+			
+			return new NarrowWork(state0).annotateAndSplit();
 		}
 
 		private class NarrowWork {
-			private final int from;
-			private final int to;
-			private final int start;
-			private final int end;
+			private final State state;
 
-			public NarrowWork(int from, int to, int start, int end) {
-				this.from = from;
-				this.to = to;
-				this.start = start;
-				this.end = end;
+			public NarrowWork(State state) {
+				this.state = state;
 			}
 
 			private Set<Match> annotateAndSplit() {
-				if (end <= start)
+				if (state.end <= state.start)
 					return Collections.emptySet();
 				
-				Span fixedSpan = chooseFixedSpan();
+				Span fixedSpan = state.chooseFixedSpan();
 				
 				if (fixedSpan == null) {
 					// squeezed pilcrow with many options
-					if (end - start == 1 && "$¶".equals(cgKeys.get(start)) && validSpans(spansByEntry[start]).size() > 1) {
-						for (Span span : validSpans(spansByEntry[start])) {
+					if (state.end - state.start == 1 && "$¶".equals(cgKeys.get(state.start)) && state.getSpans(state.start).size() > 1) {
+						for (Span span : state.getSpans(state.start)) {
 							if (span.to - span.from == 1) {
 								fixedSpan = span;
 								break;
@@ -180,7 +262,7 @@ public class Untokenizer {
 						}
 						
 						if (fixedSpan == null) {
-							for (Span span : validSpans(spansByEntry[start])) {
+							for (Span span : state.getSpans(state.start)) {
 								if (span.to == span.from || text.charAt(span.from) == ' ') {
 									fixedSpan = span;
 									break;
@@ -189,8 +271,8 @@ public class Untokenizer {
 						}
 					}
 					
-					HashMap<String, List<List<Span>>> spansByKey = new HashMap<String, List<List<Span>>>(end - start);
-					for (int i = start; i < end; i++) {
+					HashMap<String, List<List<Span>>> spansByKey = new HashMap<String, List<List<Span>>>(state.end - state.start);
+					for (int i = state.start; i < state.end; i++) {
 						List<List<Span>> spanList = spansByKey.get(cgKeys.get(i));
 						
 						if (spanList == null) {
@@ -198,7 +280,7 @@ public class Untokenizer {
 							spansByKey.put(cgKeys.get(i), spanList);
 						}
 						
-						spanList.add(validSpans(spansByEntry[i]));
+						spanList.add(state.getSpans(i));
 					}
 					
 					outer:
@@ -212,7 +294,7 @@ public class Untokenizer {
 									continue outer;
 							}
 						
-							fixedSpan = validSpans(spansByEntry[spanList.get(0).get(0).entry]).get(0);
+							fixedSpan = state.getSpans(spanList.get(0).get(0).entry).get(0);
 							break;
 						}
 					}
@@ -231,54 +313,22 @@ public class Untokenizer {
 				Set<Match> matches = new HashSet<Match>();
 				matches.add(fixedFullMatch);
 				
-				int from = this.from;
-				int start = this.start;
+				int from = state.from;
+				int start = state.start;
 				
 				for (Span span : fixedFullMatch.getSpans()) {
-					matches.addAll(new NarrowWork(from, span.from, start, span.entry).splitAndRecurse());
+					matches.addAll(new NarrowWork(state.narrow(from, span.from, start, span.entry)).splitAndRecurse());
 					from = span.to;
 					start = span.entry + 1;
 				}
 				
-				matches.addAll(new NarrowWork(from, to, start, end).splitAndRecurse());
+				matches.addAll(new NarrowWork(state.narrow(from, state.to, start, state.end)).splitAndRecurse());
 				
 				return matches;
 			}
 
 			private Set<Match> splitAndRecurse() {
 				return annotateAndSplit();
-			}
-			
-			private Span chooseFixedSpan() {
-				BitSet fixedEntries = getFixedEntries();
-		
-				int fixedEntry = chooseFixedEntry(fixedEntries);
-				
-				if (fixedEntry < 0)
-					return null;
-				else
-					return validSpans(spansByEntry[fixedEntry]).get(0);
-			}
-
-			private BitSet getFixedEntries() {
-				BitSet fixedEntries = new BitSet(spansByEntry.length);
-				for (int i = start; i < end; i++) {
-					fixedEntries.set(i, validSpans(spansByEntry[i]).size() == 1);
-				}
-				
-				return fixedEntries;
-			}
-
-			private List<Span> validSpans(List<Span> spans) {
-				ArrayList<Span> validSpans = new ArrayList<Span>(spans.size());
-				
-				for (Span span : spans) {
-					if (span.from >= from && span.to <= to)
-						validSpans.add(span);
-				}
-				
-				validSpans.trimToSize();
-				return validSpans;
 			}
 		}
 	}
@@ -299,27 +349,6 @@ public class Untokenizer {
 				return new CachingTextMatcher(new DamerauLevenshteinTextMatcher(text, threshold, caseSensitive, wordBoundaryCheck));
 			else
 				return new CachingTextMatcher(new PlainTextMatcher(text, caseSensitive, wordBoundaryCheck));
-		}
-	}
-
-	private static int chooseFixedEntry(BitSet fixedEntries) {
-		int cardinality = fixedEntries.cardinality();
-		
-		if (cardinality == 1)
-			return fixedEntries.nextSetBit(0);
-		else if (cardinality == 0)
-			return -1;
-		else { // cardinality >= 2
-			int median = cardinality/2;
-			
-			int entry = fixedEntries.nextSetBit(0);
-			
-			while (entry >= 0 && median > 0) {
-				median--;
-				entry = fixedEntries.nextSetBit(entry+1);
-			}
-			
-			return entry;
 		}
 	}
 }
