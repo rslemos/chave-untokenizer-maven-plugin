@@ -237,7 +237,6 @@ public class Untokenizer {
 			
 			for (Span span : fixedSpans) {
 				result.addAll(fixSpan(span));
-				break;
 			}
 			
 			return result;
