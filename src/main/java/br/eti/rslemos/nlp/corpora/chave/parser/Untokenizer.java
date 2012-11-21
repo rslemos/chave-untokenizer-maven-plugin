@@ -124,17 +124,6 @@ public class Untokenizer {
 		markups.add((long)match.from, (long)match.to, "match", fullMatch);
 	}
 
-	private static ArrayList<Span>[] init(int start, int end) {
-		@SuppressWarnings("unchecked")
-		ArrayList<Span>[] spansByEntry = new ArrayList[end];
-		
-		for (int i = start; i < end; i++) {
-			spansByEntry[i] = new ArrayList<Span>();
-		}
-		
-		return spansByEntry;
-	}
-
 	public class NarrowWork { 
 		private final ArrayList<Span>[] spansByEntry;
 		
@@ -143,17 +132,39 @@ public class Untokenizer {
 		private final int start;
 		private final int end;
 
-		
-		public NarrowWork(int from, int to, int start, int end) {
-			this(from, to, start, end, init(start, end));
-		}
-		
 		public NarrowWork(int from, int to, int start, int end, ArrayList<Span>[] spansByEntry) {
 			this.from = from;
 			this.to = to;
 			this.start = start;
 			this.end = end;
 			this.spansByEntry = spansByEntry;
+		}
+
+		@SuppressWarnings("unchecked")
+		public NarrowWork(Parameters config, int from, int to, int start, int end) {
+			this(from, to, start, end, new ArrayList[end]);
+			
+			for (int i = start; i < end; i++) {
+				spansByEntry[i] = new ArrayList<Span>();
+			}
+
+			final TextMatcher textMatcher = config.create(text);
+			
+			for (MatchStrategy strategy : STRATEGIES) {
+				strategy.setData(textMatcher, cgKeys);
+				Set<Match> matches = strategy.matchAll(from, to);
+				
+				for (Match match : matches) {
+					for (Span span : match.getSpans()) {
+						spansByEntry[span.entry].add(span);
+					}
+				}
+			}
+
+			for (int i = start; i < end; i++) {
+				spansByEntry[i].trimToSize();
+				Collections.sort(spansByEntry[i], new br.eti.rslemos.nlp.corpora.chave.parser.Span.SpanComparatorByOffsets());
+			}
 		}
 
 		public List<Span> getSpans(int i) {
@@ -163,17 +174,6 @@ public class Untokenizer {
 			return spansByEntry[i];
 		}
 		
-		public void add(Span span) {
-			spansByEntry[span.entry].add(span);
-		}
-
-		public void trimToSize() {
-			for (int i = start; i < end; i++) {
-				spansByEntry[i].trimToSize();
-				Collections.sort(spansByEntry[i], new br.eti.rslemos.nlp.corpora.chave.parser.Span.SpanComparatorByOffsets());
-			}
-		}
-
 		public Multiset<Set<Match>> split() throws UntokenizerException {
 			if (end <= start)
 				return ImmutableMultiset.of(NO_MATCHES);
@@ -311,22 +311,7 @@ public class Untokenizer {
 	}
 	
 	public Multiset<Set<Match>> untokenize(Parameters config, int from, int to, int start, int end) throws UntokenizerException {
-		NarrowWork work = new NarrowWork(from, to, start, end);
-		
-		final TextMatcher textMatcher = config.create(text);
-		
-		for (MatchStrategy strategy : STRATEGIES) {
-			strategy.setData(textMatcher, cgKeys);
-			Set<Match> matches = strategy.matchAll(work.from, work.to);
-			
-			for (Match match : matches) {
-				for (Span span : match.getSpans()) {
-					work.add(span);
-				}
-			}
-		}
-
-		work.trimToSize();
+		NarrowWork work = new NarrowWork(config, from, to, start, end);
 		
 		return work.split();
 	}
