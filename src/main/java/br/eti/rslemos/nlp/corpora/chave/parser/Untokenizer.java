@@ -40,11 +40,16 @@ import java.util.List;
 import java.util.Map;
 import java.util.Set;
 
-import com.google.common.collect.ImmutableList;
-
 import br.eti.rslemos.nlp.corpora.chave.parser.Match.Span;
 
+import com.google.common.collect.ImmutableList;
+import com.google.common.collect.ImmutableMultiset;
+import com.google.common.collect.Multiset;
+import com.google.common.collect.Multiset.Entry;
+
 public class Untokenizer {
+
+	private static final Set<Match> NO_MATCHES = Collections.emptySet();
 
 	private final MatchStrategy[] STRATEGIES = {
 			new DirectMatchStrategy(),
@@ -74,8 +79,18 @@ public class Untokenizer {
 	public void untokenize() {
 		
 		Parameters config = new Parameters(0, false, true);
-		Set<Match> matches = untokenize(config, 0, text.length(), 0, cgKeys.size());
+		Multiset<Set<Match>> allMatches = untokenize(config, 0, text.length(), 0, cgKeys.size());
 		
+		// pegando a mais comum
+		int max = Integer.MIN_VALUE;
+		Set<Match> matches = null;
+		
+		for (Entry<Set<Match>> entry : allMatches.entrySet()) {
+			if (entry.getCount() > max) {
+				max = entry.getCount();
+				matches = entry.getElement();
+			}
+		}
 		AnnotationSet originalMarkups = document.getAnnotations(GateConstants.ORIGINAL_MARKUPS_ANNOT_SET_NAME);
 
 		try {
@@ -127,6 +142,7 @@ public class Untokenizer {
 		private final int to;
 		private final int start;
 		private final int end;
+
 		
 		public NarrowWork(int from, int to, int start, int end) {
 			this(from, to, start, end, init(start, end));
@@ -158,9 +174,9 @@ public class Untokenizer {
 			}
 		}
 
-		public Set<Match> split() {
+		public Multiset<Set<Match>> split() {
 			if (end <= start)
-				return Collections.emptySet();
+				return ImmutableMultiset.of(NO_MATCHES);
 			
 			Span fixedSpan = chooseFixedSpan();
 			
@@ -218,7 +234,7 @@ public class Untokenizer {
 //					processingResults[i].addAll(spansByEntry[i]);
 //				}
 				//System.err.printf("No fixed span in [%d, %d[\n", start, end);
-				return Collections.emptySet();
+				return ImmutableMultiset.of(NO_MATCHES);
 			}
 			
 			Match fixedFullMatch = fixedSpan.getMatch();
@@ -230,14 +246,14 @@ public class Untokenizer {
 			int start = this.start;
 			
 			for (Span span : fixedFullMatch.getSpans()) {
-				matches.addAll(narrow(from, span.from, start, span.entry).split());
+				matches.addAll(narrow(from, span.from, start, span.entry).split().iterator().next());
 				from = span.to;
 				start = span.entry + 1;
 			}
 			
-			matches.addAll(narrow(from, to, start, end).split());
+			matches.addAll(narrow(from, to, start, end).split().iterator().next());
 			
-			return matches;
+			return ImmutableMultiset.of(matches);
 		}
 
 		public NarrowWork narrow(int from, int to, int start, int end) {
@@ -298,7 +314,7 @@ public class Untokenizer {
 		}
 	}
 	
-	public Set<Match> untokenize(Parameters config, int from, int to, int start, int end) {
+	public Multiset<Set<Match>> untokenize(Parameters config, int from, int to, int start, int end) {
 		NarrowWork work = new NarrowWork(from, to, start, end);
 		
 		final TextMatcher textMatcher = config.create(text);
