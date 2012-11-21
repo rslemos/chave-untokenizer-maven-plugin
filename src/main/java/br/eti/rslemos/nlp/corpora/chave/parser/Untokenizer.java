@@ -42,6 +42,7 @@ import java.util.Set;
 
 import br.eti.rslemos.nlp.corpora.chave.parser.Match.Span;
 
+import com.google.common.collect.HashMultiset;
 import com.google.common.collect.ImmutableList;
 import com.google.common.collect.ImmutableMultiset;
 import com.google.common.collect.Multiset;
@@ -178,22 +179,22 @@ public class Untokenizer {
 			if (end <= start)
 				return ImmutableMultiset.of(NO_MATCHES);
 			
-			Span fixedSpan = chooseFixedSpan();
-			
-			if (fixedSpan == null) {
+			List<Span> fixedSpans = getFixedSpans();
+
+			if (fixedSpans.isEmpty()) {
 				// squeezed pilcrow with many options
 				if (end - start == 1 && "$¶".equals(cgKeys.get(start)) && getSpans(start).size() > 1) {
 					for (Span span : getSpans(start)) {
 						if (span.to - span.from == 1) {
-							fixedSpan = span;
+							fixedSpans.add(span);
 							break;
 						}
 					}
 					
-					if (fixedSpan == null) {
+					if (fixedSpans.isEmpty()) {
 						for (Span span : getSpans(start)) {
 							if (span.to == span.from || text.charAt(span.from) == ' ') {
-								fixedSpan = span;
+								fixedSpans.add(span);
 								break;
 							}
 						}
@@ -223,33 +224,63 @@ public class Untokenizer {
 								continue outer;
 						}
 					
-						fixedSpan = getSpans(spanList.get(0).get(0).entry).get(0);
+						fixedSpans.add(getSpans(spanList.get(0).get(0).entry).get(0));
 						break;
 					}
 				}
 			}
-			
-			if (fixedSpan == null) {
+
+			if (fixedSpans.isEmpty())
 				throw new UntokenizerException(this);
+
+			Multiset<Set<Match>> result = HashMultiset.create();
+			
+			for (Span span : fixedSpans) {
+				result.addAll(fixSpan(span));
+				break;
 			}
+			
+			return result;
+		}
+
+		private Multiset<Set<Match>> fixSpan(Span fixedSpan) throws UntokenizerException {
+			Multiset<Set<Match>> result = HashMultiset.create();
 			
 			Match fixedFullMatch = fixedSpan.getMatch();
 			
-			Set<Match> matches = new HashSet<Match>();
-			matches.add(fixedFullMatch);
+			{
+				Set<Match> matches = new HashSet<Match>();
+				matches.add(fixedFullMatch);
+				
+				result.add(matches);
+			}
 			
 			int from = this.from;
 			int start = this.start;
 			
 			for (Span span : fixedFullMatch.getSpans()) {
-				matches.addAll(narrow(from, span.from, start, span.entry).split().iterator().next());
+				result = cartesianProduct(result, narrow(from, span.from, start, span.entry).split());
 				from = span.to;
 				start = span.entry + 1;
 			}
 			
-			matches.addAll(narrow(from, to, start, end).split().iterator().next());
+			result = cartesianProduct(result, narrow(from, to, start, end).split());
 			
-			return ImmutableMultiset.of(matches);
+			return result;
+		}
+
+		private Multiset<Set<Match>> cartesianProduct(Multiset<Set<Match>> A, Multiset<Set<Match>> B) {
+			Multiset<Set<Match>> result = HashMultiset.create();
+			
+			for (Entry<Set<Match>> entryA : A.entrySet()) {
+				for (Entry<Set<Match>> entryB : B.entrySet()) {
+					Set<Match> matches = new HashSet<Match>(entryA.getElement());
+					matches.addAll(entryB.getElement());
+					result.add(matches, entryA.getCount() * entryB.getCount());
+				}
+			}
+			
+			return result;
 		}
 
 		public NarrowWork narrow(int from, int to, int start, int end) {
@@ -268,45 +299,25 @@ public class Untokenizer {
 			return new NarrowWork(from, to, start, end, validSpans);
 		}
 
-		public Span chooseFixedSpan() {
-			BitSet fixedEntries = getFixedEntries();
-	
-			int fixedEntry = chooseFixedEntry(fixedEntries);
+		public List<Span> getFixedSpans() {
+			ArrayList<Span> fixedSpans = new ArrayList<Span>();
 			
-			if (fixedEntry < 0)
-				return null;
-			else
-				return getSpans(fixedEntry).get(0);
+			BitSet fixedEntries = getFixedEntries0();
+	
+			for (int i = fixedEntries.nextSetBit(0); i >= 0; i = fixedEntries.nextSetBit(i+1)) {
+				fixedSpans.add(getSpans(i).get(0));
+			}
+			
+			return fixedSpans;
 		}
 
-		private BitSet getFixedEntries() {
+		private BitSet getFixedEntries0() {
 			BitSet fixedEntries = new BitSet(spansByEntry.length);
 			for (int i = start; i < end; i++) {
 				fixedEntries.set(i, getSpans(i).size() == 1);
 			}
 			
 			return fixedEntries;
-		}
-		
-		private int chooseFixedEntry(BitSet fixedEntries) {
-			int cardinality = fixedEntries.cardinality();
-			
-			if (cardinality == 1)
-				return fixedEntries.nextSetBit(0);
-			else if (cardinality == 0)
-				return -1;
-			else { // cardinality >= 2
-				int median = cardinality/2;
-				
-				int entry = fixedEntries.nextSetBit(0);
-				
-				while (entry >= 0 && median > 0) {
-					median--;
-					entry = fixedEntries.nextSetBit(entry+1);
-				}
-				
-				return entry;
-			}
 		}
 	}
 	
