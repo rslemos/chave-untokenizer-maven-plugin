@@ -40,7 +40,7 @@ public abstract class UntokenizerAbstractFunctionalTest extends TestCase {
 
 	private static final Charset UTF8 = Charset.forName("UTF-8");
 	
-	protected void untokenize(Document document, List<CGEntry> cgLines) {
+	protected void untokenize(Document document, List<CGEntry> cgLines) throws UntokenizerException {
 		Untokenizer untokenizer = new Untokenizer(document, cgLines);
 		untokenizer.untokenize();
 	}

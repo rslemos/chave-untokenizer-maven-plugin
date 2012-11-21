@@ -76,7 +76,7 @@ public class Untokenizer {
 		return result;
 	}
 
-	public void untokenize() {
+	public void untokenize() throws UntokenizerException {
 		
 		Parameters config = new Parameters(0, false, true);
 		Multiset<Set<Match>> allMatches = untokenize(config, 0, text.length(), 0, cgKeys.size());
@@ -135,7 +135,7 @@ public class Untokenizer {
 		return spansByEntry;
 	}
 
-	private class NarrowWork { 
+	public class NarrowWork { 
 		private final ArrayList<Span>[] spansByEntry;
 		
 		private final int from;
@@ -174,7 +174,7 @@ public class Untokenizer {
 			}
 		}
 
-		public Multiset<Set<Match>> split() {
+		public Multiset<Set<Match>> split() throws UntokenizerException {
 			if (end <= start)
 				return ImmutableMultiset.of(NO_MATCHES);
 			
@@ -230,11 +230,7 @@ public class Untokenizer {
 			}
 			
 			if (fixedSpan == null) {
-//				for (int i = start; i < end; i++) {
-//					processingResults[i].addAll(spansByEntry[i]);
-//				}
-				//System.err.printf("No fixed span in [%d, %d[\n", start, end);
-				return ImmutableMultiset.of(NO_MATCHES);
+				throw new UntokenizerException(this);
 			}
 			
 			Match fixedFullMatch = fixedSpan.getMatch();
@@ -314,7 +310,7 @@ public class Untokenizer {
 		}
 	}
 	
-	public Multiset<Set<Match>> untokenize(Parameters config, int from, int to, int start, int end) {
+	public Multiset<Set<Match>> untokenize(Parameters config, int from, int to, int start, int end) throws UntokenizerException {
 		NarrowWork work = new NarrowWork(from, to, start, end);
 		
 		final TextMatcher textMatcher = config.create(text);

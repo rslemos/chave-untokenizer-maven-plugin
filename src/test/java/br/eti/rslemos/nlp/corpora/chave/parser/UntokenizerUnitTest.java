@@ -393,7 +393,11 @@ public class UntokenizerUnitTest {
 		createDocument();
 		
 		Untokenizer untokenizer = new Untokenizer(document, CG);
-		untokenizer.untokenize();
+		try {
+			untokenizer.untokenize();
+		} catch (UntokenizerException e) {
+			throw new RuntimeException(e);
+		}
 	}
 
 	private void createDocument() {
