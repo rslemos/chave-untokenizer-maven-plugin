@@ -33,7 +33,6 @@ import gate.util.SimpleFeatureMapImpl;
 
 import java.util.ArrayList;
 import java.util.Arrays;
-import java.util.BitSet;
 import java.util.Collections;
 import java.util.HashMap;
 import java.util.HashSet;
@@ -149,22 +148,22 @@ public class Untokenizer {
 			if (end <= start)
 				return NO_MATCHES;
 			
-			List<Span> fixedSpans = getFixedSpans();
+			List<Span> candidates = getFixedEntries();
 
-			if (fixedSpans.isEmpty()) {
+			if (candidates.isEmpty()) {
 				// squeezed pilcrow with many options
 				if (end - start == 1 && "$¶".equals(cgKeys.get(start)) && getSpans(start).size() > 1) {
 					for (Span span : getSpans(start)) {
 						if (span.to - span.from == 1) {
-							fixedSpans.add(span);
+							candidates.add(span);
 							break;
 						}
 					}
 					
-					if (fixedSpans.isEmpty()) {
+					if (candidates.isEmpty()) {
 						for (Span span : getSpans(start)) {
 							if (span.to == span.from || text.charAt(span.from) == ' ') {
-								fixedSpans.add(span);
+								candidates.add(span);
 								break;
 							}
 						}
@@ -194,16 +193,16 @@ public class Untokenizer {
 								continue outer;
 						}
 					
-						fixedSpans.add(getSpans(spanList.get(0).get(0).entry).get(0));
+						candidates.add(getSpans(spanList.get(0).get(0).entry).get(0));
 						break;
 					}
 				}
 			}
 
-			if (fixedSpans.isEmpty())
+			if (candidates.isEmpty())
 				throw new UntokenizerException(this);
 
-			return fixSpan(fixedSpans.get(fixedSpans.size() / 2));
+			return fixSpan(candidates.get(candidates.size() / 2));
 		}
 
 		private Set<Match> fixSpan(Span fixedSpan) throws UntokenizerException {
@@ -229,26 +228,17 @@ public class Untokenizer {
 			return new NarrowWork(config, from, to, start, end, this);
 		}
 
-		public List<Span> getFixedSpans() {
-			ArrayList<Span> fixedSpans = new ArrayList<Span>();
+		public List<Span> getFixedEntries() {
+			ArrayList<Span> fixedEntries = new ArrayList<Span>();
 			
-			BitSet fixedEntries = getFixedEntries0();
-	
-			for (int i = fixedEntries.nextSetBit(0); i >= 0; i = fixedEntries.nextSetBit(i+1)) {
-				fixedSpans.add(getSpans(i).get(0));
-			}
-			
-			return fixedSpans;
-		}
-
-		private BitSet getFixedEntries0() {
-			BitSet fixedEntries = new BitSet(spansByEntry.length);
 			for (int i = start; i < end; i++) {
-				fixedEntries.set(i, getSpans(i).size() == 1);
+				if (getSpans(i).size() == 1)
+					fixedEntries.add(getSpans(i).get(0));
 			}
 			
 			return fixedEntries;
 		}
+		
 	}
 	
 	public class MatchWork extends AbstractWork {
