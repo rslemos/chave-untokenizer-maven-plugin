@@ -1,12 +1,12 @@
 package br.eti.rslemos.nlp.corpora.chave.parser;
 
-import br.eti.rslemos.nlp.corpora.chave.parser.Untokenizer.NarrowWork;
+import br.eti.rslemos.nlp.corpora.chave.parser.Untokenizer.AbstractWork;
 
 public class UntokenizerException extends Exception {
 
-	private NarrowWork state;
+	private AbstractWork state;
 
-	public UntokenizerException(NarrowWork state) {
+	public UntokenizerException(AbstractWork state) {
 		this.state = state;
 		// TODO Auto-generated constructor stub
 	}
