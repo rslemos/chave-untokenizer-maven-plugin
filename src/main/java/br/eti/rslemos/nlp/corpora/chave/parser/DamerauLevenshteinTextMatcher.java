@@ -67,10 +67,14 @@ public class DamerauLevenshteinTextMatcher extends AbstractTextMatcher {
 		
 		AdaptativeDamerauLevenshteinDistance dl = new AdaptativeDamerauLevenshteinDistance(toLowerCase(toMatch).toCharArray());
 		
-		while (k < to && dl.getDistance() > 0) {
+		// algo deve ser feito aqui, porque o algoritmo para apenas quando se chega ao final do texto
+		// (k == to) ou quando acontece um match com custo zero (getDistance() == 0)
+		// obviamente deveria parar quando atingisse o menor custo possível
+		while (k < to && dl.getDistance() >= dl.getMinimalFutureDistance()) {
 			if (isWhitespace(text[k])) {
 				dl.append('=');
 				k++;
+				boolean wouldContinue = dl.getDistance() >= dl.getMinimalFutureDistance();
 				while (k < to && isWhitespace(text[k])) {
 					// idealmente seria Integer.MAX_VALUE em vez de text.length*2
 					// porém estava dando overflow nos cálculos internos do Damerau-Levenshtein
@@ -78,10 +82,14 @@ public class DamerauLevenshteinTextMatcher extends AbstractTextMatcher {
 					dl.append(to*2, to*2, to*2, 0, to*2, ' ');
 					k++;
 				}
+				if (!wouldContinue) break;
 			} else {
 				dl.append(toLowerCase(text[k++]));
 			}
 		}
+		
+		if (dl.getDistance() > dl.getPastDistance())
+			dl.undo();
 		
 		if (dl.getDistance() > threshold)
 			return null;

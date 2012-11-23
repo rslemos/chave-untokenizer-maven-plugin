@@ -75,7 +75,13 @@ public class Untokenizer {
 
 	public void untokenize() throws UntokenizerException {
 		
-		Parameters config = new Parameters(0, false, true);
+		Parameters config = new Parameters(0, false, true,
+				new Parameters(1, false, false,
+						new Parameters(2, false, false,
+								new Parameters(3, false, false, null)
+							)
+					)
+			);
 		Set<Match> matches = untokenize(config, 0, text.length(), 0, cgKeys.size());
 		
 		AnnotationSet originalMarkups = document.getAnnotations(GateConstants.ORIGINAL_MARKUPS_ANNOT_SET_NAME);
@@ -199,10 +205,13 @@ public class Untokenizer {
 				}
 			}
 
-			if (candidates.isEmpty())
-				throw new UntokenizerException(this);
-
-			return fixSpan(candidates.get(candidates.size() / 2));
+			if (!candidates.isEmpty())
+				return fixSpan(candidates.get(candidates.size() / 2));
+			
+			if (config.getNext() != null)
+				return new MatchWork(config.getNext(), from, to, start, end).split();
+			
+			throw new UntokenizerException(this);
 		}
 
 		private Set<Match> fixSpan(Span fixedSpan) throws UntokenizerException {
@@ -259,10 +268,18 @@ public class Untokenizer {
 			for (MatchStrategy strategy : config.getStrategies()) {
 				strategy.setData(textMatcher, cgKeys);
 				Set<Match> matches = strategy.matchAll(from, to);
-				
+
+				outer:
 				for (Match match : matches) {
-					for (Span span : match.getSpans()) {
-						spansByEntry[span.entry].add(span);
+					if (match.from >= from && match.to <= to) {
+						for (Span span : match.getSpans()) {
+							if (span.entry < start || span.entry >= end)
+								continue outer;
+						}
+						
+						for (Span span : match.getSpans()) {
+							spansByEntry[span.entry].add(span);
+						}
 					}
 				}
 			}
@@ -310,13 +327,32 @@ public class Untokenizer {
 		public final int threshold;
 		public final boolean caseSensitive;
 		public final boolean wordBoundaryCheck;
+		private final Parameters next;
 		
-		public Parameters(int threshold, boolean caseSensitive, boolean wordBoundaryCheck) {
+		private final transient int hashCode;
+		
+		public Parameters(int threshold, boolean caseSensitive, boolean wordBoundaryCheck, Parameters next) {
 			this.threshold = threshold;
 			this.caseSensitive = caseSensitive;
 			this.wordBoundaryCheck = wordBoundaryCheck;
+			this.next = next;
+			
+			int hashCode = 0;
+			
+			hashCode += caseSensitive ? 1 : 0;
+			hashCode += wordBoundaryCheck ? 2 : 0;
+			hashCode *= 17;
+			hashCode += threshold;
+			hashCode *= 13;
+			hashCode += Arrays.deepHashCode(STRATEGIES);
+			
+			this.hashCode = hashCode;
 		}
 		
+		public Parameters getNext() {
+			return next;
+		}
+
 		public MatchStrategy[] getStrategies() {
 			return STRATEGIES;
 		}

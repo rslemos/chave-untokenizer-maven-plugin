@@ -144,10 +144,14 @@ public class AdaptativeDamerauLevenshteinDistance {
 	}
 
 	private static int min(int... values) {
+		return minSection(0, values.length, values);
+	}
+
+	private static int minSection(int start, int end, int... values) {
 		int result = Integer.MAX_VALUE;
 		
-		for (int value : values) {
-			result = Math.min(result, value);
+		for (int i = start; i < end; i++) {
+			result = Math.min(result, values[i]);
 		}
 		
 		return result;
@@ -157,8 +161,16 @@ public class AdaptativeDamerauLevenshteinDistance {
 		return d2[key.length];
 	}
 
+	public int getPastDistance() {
+		return d1[key.length];
+	}
+
 	public int getMinimalDistance() {
 		return min(d2);
+	}
+
+	public int getMinimalFutureDistance() {
+		return minSection(0, d2.length - 1, d2);
 	}
 
 	public Set<AlignOp[]> getAlignments() {
