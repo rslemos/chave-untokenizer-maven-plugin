@@ -65,6 +65,14 @@ public class DirectMatchStrategyUnitTest extends AbstractMatchStrategyUnitTest {
 	}
 
 	@Test
+	public void testEqualsSymbol() throws Exception {
+		cg.add("$=");
+		runOver(" = ");
+		
+		verifyMatches(match(1, 2, span(1, 2, 0)));
+	}
+
+	@Test
 	public void testEmptyInput() throws Exception {
 		cg.add("Pesquisa=Datafolha");
 		runOver("");

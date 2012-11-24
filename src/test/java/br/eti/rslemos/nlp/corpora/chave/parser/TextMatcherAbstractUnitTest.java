@@ -41,11 +41,11 @@ public abstract class TextMatcherAbstractUnitTest {
 	protected abstract TextMatcher createTextMatcher(String text, boolean caseSensitive, boolean wordBoundaryCheck);
 
 	@Test
-	public void testMatchKey() throws Exception {
+	public void testMatchKey1() throws Exception {
 		String text = "Devido  às   quais";
 		TextMatcher matcher = createTextMatcher(text);
 		
-		Set<Match> matches = matcher.matchKey(0, text.length(), "Devido=às=quais", span(0, "Devido=à".length(), 0), span("Devido=".length(), "Devido=às=quais".length(), 1));
+		Set<Match> matches = matcher.matchKey(0, text.length(), "Devido às quais", span(0, "Devido à".length(), 0), span("Devido ".length(), "Devido às quais".length(), 1));
 		
 		assertThat(matches.size(), is(equalTo(1)));
 		assertThat(matches, hasItems(
@@ -55,13 +55,28 @@ public abstract class TextMatcherAbstractUnitTest {
 					)
 			));
 	}
+	
+	@Test
+	public void testMatchKey2() throws Exception {
+		String text = " = ";
+		TextMatcher matcher = createTextMatcher(text);
+		
+		Set<Match> matches = matcher.matchKey(0, text.length(), "=", span(0, "=".length(), 0));
+		
+		assertThat(matches.size(), is(equalTo(1)));
+		assertThat(matches, hasItems(
+				match(" ".length(), " =".length(),
+						span(" ".length(), " =".length(), 0)
+					)
+			));
+	}
 
 	@Test
 	public void testMatchTrailingWhitespaceKey() throws Exception {
 		String text = "Devido  às   quais";
 		TextMatcher matcher = createTextMatcher(text);
 		
-		Set<Match> matches = matcher.matchKey(0, text.length(), "Devido=", span(0, "Devido=".length(), 0));
+		Set<Match> matches = matcher.matchKey(0, text.length(), "Devido ", span(0, "Devido ".length(), 0));
 		
 		assertThat(matches.size(), is(equalTo(1)));
 		assertThat(matches, hasItems(
@@ -80,7 +95,7 @@ public abstract class TextMatcherAbstractUnitTest {
 		
 		TextMatcher matcher = createTextMatcher(text);
 		
-		Set<Match> matches = matcher.matchKey(0, text.length(), "Devido=às=quais", span(0, "Devido=à".length(), 0), span("Devido=".length(), "Devido=às=quais".length(), 1));
+		Set<Match> matches = matcher.matchKey(0, text.length(), "Devido às quais", span(0, "Devido à".length(), 0), span("Devido ".length(), "Devido às quais".length(), 1));
 		
 		assertThat(matches.size(), is(equalTo(1)));
 		assertThat(matches, hasItems(
@@ -101,9 +116,9 @@ public abstract class TextMatcherAbstractUnitTest {
 		Set<Match> matches = matcher.matchKey(
 				PRE_TEXTO_RESOLVIDO.length(), 
 				PRE_TEXTO_RESOLVIDO.length() + "Devido  às   quais".length(), 
-				"Devido=às=quais", 
-					span(0, "Devido=à".length(), 0), 
-					span("Devido=".length(), "Devido=às=quais".length(), 1)
+				"Devido às quais", 
+					span(0, "Devido à".length(), 0), 
+					span("Devido ".length(), "Devido às quais".length(), 1)
 			);
 		
 		assertThat(matches.size(), is(equalTo(1)));

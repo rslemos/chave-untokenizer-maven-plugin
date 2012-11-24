@@ -229,7 +229,7 @@ public final class ContractionMatchStrategy extends AbstractMatchStrategy {
 		
 		int[][] marks = { { 0, 0 }, { 0, 0 } }; 
 		
-		String toMatch = buildMatchString(key0, key1, templates[idx0][idx1], marks);
+		String toMatch = buildMatchString(key0, key1, templates[idx0][idx1], marks).replaceAll("=", " ");
 		
 		for (Match match : matchKey(from, to, toMatch, marks)) {
 			result.add(match.adjust(0, i, this.getClass()));

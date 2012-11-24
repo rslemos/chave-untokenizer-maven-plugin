@@ -69,7 +69,7 @@ public class DamerauLevenshteinTextMatcher extends AbstractTextMatcher {
 		
 		while (k < to && dl.getDistance() >= dl.getMinimalFutureDistance()) {
 			if (isWhitespace(text[k])) {
-				dl.append('=');
+				dl.append(' ');
 				k++;
 				boolean wouldContinue = dl.getDistance() >= dl.getMinimalFutureDistance();
 				while (k < to && isWhitespace(text[k])) {

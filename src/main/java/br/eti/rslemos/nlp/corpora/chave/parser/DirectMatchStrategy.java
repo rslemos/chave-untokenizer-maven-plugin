@@ -75,7 +75,8 @@ public class DirectMatchStrategy extends AbstractMatchStrategy {
 		
 		if (currentKey.startsWith("$"))
 			currentKey = currentKey.substring(1);
-
+		else
+			currentKey = currentKey.replaceAll("=", " ");
 		
 		return currentKey;
 	}

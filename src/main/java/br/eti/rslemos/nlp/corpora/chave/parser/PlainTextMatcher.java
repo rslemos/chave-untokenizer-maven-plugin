@@ -51,7 +51,7 @@ public class PlainTextMatcher extends AbstractTextMatcher {
 		for (int j = 0; j < toMatch.length(); j++) {
 			remap(j, inPoints, k, outPoints);
 
-			if (toMatch.charAt(j) == '=') {
+			if (toMatch.charAt(j) == ' ') {
 				while (isWhitespace(text[k]) && k < to)
 					k++;
 				
