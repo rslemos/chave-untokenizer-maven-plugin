@@ -7,8 +7,8 @@ public class UntokenizerException extends Exception {
 	private AbstractWork state;
 
 	public UntokenizerException(AbstractWork state) {
+		super("from: " + state.from + "; to: " + state.to + "; start: " + state.start + "; end: " + state.end);
 		this.state = state;
-		// TODO Auto-generated constructor stub
 	}
 
 }
