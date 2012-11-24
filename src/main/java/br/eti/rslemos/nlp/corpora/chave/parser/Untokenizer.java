@@ -145,10 +145,10 @@ public class Untokenizer {
 		protected abstract void init();
 
 		public Set<Match> split0() throws UntokenizerException {
-			init();
-			
 			if (end <= start)
 				return NO_MATCHES;
+			
+			init();
 			
 			List<Span> candidates = getFixedEntries();
 
@@ -263,7 +263,7 @@ public class Untokenizer {
 			
 			for (MatchStrategy strategy : config.getStrategies()) {
 				strategy.setData(textMatcher, cgKeys);
-				Set<Match> matches = strategy.matchAll(from, to);
+				Set<Match> matches = strategy.matchAll(from, to, start, end);
 
 				outer:
 				for (Match match : matches) {
