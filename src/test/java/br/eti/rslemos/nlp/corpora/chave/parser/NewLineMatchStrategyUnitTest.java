@@ -71,4 +71,16 @@ public class NewLineMatchStrategyUnitTest extends AbstractMatchStrategyUnitTest 
 				match("sample text?".length(), "sample text?".length(), span("sample text?".length(), "sample text?".length(), 0))
 			);
 	}
+
+	@Test
+	public void testParenthesis() throws Exception {
+		cg.add("$¶");
+		runOver("sample text)");
+		
+		verifyMatches(
+				match("sample".length(), "sample".length(), span("sample".length(), "sample".length(), 0)),
+				match("sample text".length(), "sample text".length(), span("sample text".length(), "sample text".length(), 0)),
+				match("sample text)".length(), "sample text)".length(), span("sample text)".length(), "sample text)".length(), 0))
+			);
+	}
 }

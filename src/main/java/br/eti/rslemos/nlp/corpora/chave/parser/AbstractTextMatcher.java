@@ -113,7 +113,7 @@ public abstract class AbstractTextMatcher implements TextMatcher {
 	}
 
 	private static boolean isPunctuation(char ch) {
-		final int MASK = (1 << Character.OTHER_PUNCTUATION);
+		final int MASK = (1 << Character.OTHER_PUNCTUATION) | (1 << Character.END_PUNCTUATION);
 		
 		return ((MASK >> Character.getType(ch)) & 1) != 0;
 	}
