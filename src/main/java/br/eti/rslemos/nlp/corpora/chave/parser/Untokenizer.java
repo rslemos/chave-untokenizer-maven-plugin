@@ -43,11 +43,7 @@ import java.util.Set;
 
 import br.eti.rslemos.nlp.corpora.chave.parser.Match.Span;
 
-import com.google.common.collect.HashMultiset;
 import com.google.common.collect.ImmutableList;
-import com.google.common.collect.ImmutableMultiset;
-import com.google.common.collect.Multiset;
-import com.google.common.collect.Multiset.Entry;
 
 public class Untokenizer {
 
@@ -65,9 +61,6 @@ public class Untokenizer {
 	private final List<CGEntry> cg;
 	private final List<String> cgKeys;
 	
-	private final Map<AbstractWork, Object> memoization = new HashMap<AbstractWork, Object>();
-	private int miss, hit;
-
 	public Untokenizer(Document document, List<CGEntry> cg) {
 		this.document = document;
 		this.text = document.getContent().toString();
@@ -84,25 +77,7 @@ public class Untokenizer {
 	public void untokenize() throws UntokenizerException {
 		
 		Parameters config = new Parameters(0, false, true);
-		System.out.println();
-		Multiset<Set<Match>> allMatches = untokenize(config, 0, text.length(), 0, cgKeys.size());
-		
-		// pegando a mais comum
-		int max = Integer.MIN_VALUE;
-		Set<Match> matches = null;
-		
-		System.out.printf("\n%d unique results:\n", allMatches.entrySet().size());
-		
-		for (Entry<Set<Match>> entry : allMatches.entrySet()) {
-			System.out.printf("+ %d copies\n", entry.getCount());
-			if (entry.getCount() > max) {
-				max = entry.getCount();
-				matches = entry.getElement();
-			}
-		}
-		
-		System.out.printf("= %d total results\n", allMatches.size());
-		System.out.printf("memoization: %d hit + %d miss (%f hit rate)\n", hit, miss, (float)hit / (float)(hit + miss));
+		Set<Match> matches = untokenize(config, 0, text.length(), 0, cgKeys.size());
 		
 		AnnotationSet originalMarkups = document.getAnnotations(GateConstants.ORIGINAL_MARKUPS_ANNOT_SET_NAME);
 
@@ -137,9 +112,6 @@ public class Untokenizer {
 		markups.add((long)match.from, (long)match.to, "match", fullMatch);
 	}
 
-//	StringBuilder indent = new StringBuilder();
-	int level;
-
 	public abstract class AbstractWork { 
 		protected final Parameters config;
 		
@@ -165,52 +137,17 @@ public class Untokenizer {
 			return spansByEntry[i];
 		}
 		
-		public Multiset<Set<Match>> split() throws UntokenizerException {
-			level++;
-			System.out.printf("%d\r", level);
-			System.out.flush();
-//			indent.append("  ");
-//			System.out.printf("%ssplit() ", indent);
-			try {
-				// memoization
-				Object result;
-				
-				if (!memoization.containsKey(this)) {
-					miss++;
-//					System.out.println("miss");
-					try {
-						result = split0();
-					} catch (UntokenizerException e) {
-						result = e;
-					}
-					memoization.put(this, result);
-				} else {
-//					System.out.println("hit");
-					hit++;
-					result = memoization.get(this);
-				}
-				
-				if (result instanceof UntokenizerException) {
-//					System.out.printf("%sno results\n", indent);
-					throw (UntokenizerException)result;
-				} else {
-//					System.out.printf("%sresults: %d/%d\n", indent, ((Multiset<Set<Match>>) result).entrySet().size(), ((Multiset<Set<Match>>) result).size());
-//					System.out.printf("%smemoization: %d/%d\n", indent, ((Multiset<Set<Match>>) result).entrySet().size(), ((Multiset<Set<Match>>) result).size());
-					return (Multiset<Set<Match>>) result;
-				}
-			} finally {
-				level--;
-//				indent.setLength(indent.length() - 2);
-			}
+		public Set<Match> split() throws UntokenizerException {
+			return split0();
 		}
 		
 		protected abstract void init();
 
-		public Multiset<Set<Match>> split0() throws UntokenizerException {
+		public Set<Match> split0() throws UntokenizerException {
 			init();
 			
 			if (end <= start)
-				return ImmutableMultiset.of(NO_MATCHES);
+				return NO_MATCHES;
 			
 			List<Span> fixedSpans = getFixedSpans();
 
@@ -266,61 +203,26 @@ public class Untokenizer {
 			if (fixedSpans.isEmpty())
 				throw new UntokenizerException(this);
 
-			Multiset<Set<Match>> result = HashMultiset.create();
-			
-			for (Span span : fixedSpans) {
-				Multiset<Set<Match>> partialResults = fixSpan(span);
-				for (Entry<Set<Match>> entry : partialResults.entrySet()) {
-					if (result.contains(entry.getElement())) {
-						long count = (long)result.count(entry.getElement()) + (long)entry.getCount(); 
-						result.setCount(entry.getElement(), (int)Math.min(count, Integer.MAX_VALUE - 1));
-					} else
-						result.add(entry.getElement(), entry.getCount());
-					
-				}
-			}
-			
-			return result;
+			return fixSpan(fixedSpans.get(fixedSpans.size() / 2));
 		}
 
-		private Multiset<Set<Match>> fixSpan(Span fixedSpan) throws UntokenizerException {
-			Multiset<Set<Match>> result = HashMultiset.create();
-			
+		private Set<Match> fixSpan(Span fixedSpan) throws UntokenizerException {
 			Match fixedFullMatch = fixedSpan.getMatch();
-			
-			{
-				Set<Match> matches = new HashSet<Match>();
-				matches.add(fixedFullMatch);
+			Set<Match> matches = new HashSet<Match>();
+			matches.add(fixedFullMatch);
 				
-				result.add(matches);
-			}
-			
 			int from = this.from;
 			int start = this.start;
 			
 			for (Span span : fixedFullMatch.getSpans()) {
-				result = cartesianProduct(result, narrow(from, span.from, start, span.entry).split());
+				matches.addAll(narrow(from, span.from, start, span.entry).split());
 				from = span.to;
 				start = span.entry + 1;
 			}
 			
-			result = cartesianProduct(result, narrow(from, to, start, end).split());
+			matches.addAll(narrow(from, to, start, end).split());
 			
-			return result;
-		}
-
-		private Multiset<Set<Match>> cartesianProduct(Multiset<Set<Match>> A, Multiset<Set<Match>> B) {
-			Multiset<Set<Match>> result = HashMultiset.create();
-			
-			for (Entry<Set<Match>> entryA : A.entrySet()) {
-				for (Entry<Set<Match>> entryB : B.entrySet()) {
-					Set<Match> matches = new HashSet<Match>(entryA.getElement());
-					matches.addAll(entryB.getElement());
-					result.add(matches, (int)Math.min((long)entryA.getCount() * (long)entryB.getCount(), Integer.MAX_VALUE - 1));
-				}
-			}
-			
-			return result;
+			return matches;
 		}
 
 		public AbstractWork narrow(int from, int to, int start, int end) {
@@ -346,41 +248,6 @@ public class Untokenizer {
 			}
 			
 			return fixedEntries;
-		}
-		
-		@Override
-		public int hashCode() {
-			int hashCode = 1;
-			
-			hashCode += from + to + start + end;
-			hashCode *= 2;
-			hashCode += config.hashCode();
-//			hashCode *= 3;
-//			hashCode += Arrays.deepHashCode(spansByEntry);
-			
-			return hashCode;
-		}
-
-		@Override
-		public boolean equals(Object obj) {
-			if (obj == null)
-				return false;
-			
-			if (obj == this)
-				return true;
-			
-			if (!(obj instanceof NarrowWork))
-				return false;
-			
-			NarrowWork other = (NarrowWork) obj;
-			
-			
-			return from == other.from &&
-					to == other.to &&
-					start == other.start &&
-					end == other.end &&
-					config.equals(other.config);
-//					Arrays.deepEquals(spansByEntry, other.spansByEntry);
 		}
 	}
 	
@@ -443,7 +310,7 @@ public class Untokenizer {
 		}
 		
 	}
-	public Multiset<Set<Match>> untokenize(Parameters config, int from, int to, int start, int end) throws UntokenizerException {
+	public Set<Match> untokenize(Parameters config, int from, int to, int start, int end) throws UntokenizerException {
 		MatchWork work = new MatchWork(config, from, to, start, end);
 		
 		return work.split();
@@ -454,23 +321,10 @@ public class Untokenizer {
 		public final boolean caseSensitive;
 		public final boolean wordBoundaryCheck;
 		
-		private final transient int hashCode;
-		
 		public Parameters(int threshold, boolean caseSensitive, boolean wordBoundaryCheck) {
 			this.threshold = threshold;
 			this.caseSensitive = caseSensitive;
 			this.wordBoundaryCheck = wordBoundaryCheck;
-			
-			int hashCode = 0;
-			
-			hashCode += caseSensitive ? 1 : 0;
-			hashCode += wordBoundaryCheck ? 2 : 0;
-			hashCode *= 17;
-			hashCode += threshold;
-			hashCode *= 13;
-			hashCode += Arrays.deepHashCode(STRATEGIES);
-			
-			this.hashCode = hashCode;
 		}
 		
 		public MatchStrategy[] getStrategies() {
@@ -483,31 +337,5 @@ public class Untokenizer {
 			else
 				return new CachingTextMatcher(new PlainTextMatcher(text, caseSensitive, wordBoundaryCheck));
 		}
-
-		@Override
-		public int hashCode() {
-			return hashCode;
-		}
-
-		@Override
-		public boolean equals(Object obj) {
-			if (obj == this)
-				return true;
-			
-			if (obj == null)
-				return false;
-			
-			if (!(obj instanceof Parameters))
-				return false;
-			
-			Parameters other = (Parameters)obj;
-			
-			return threshold == other.threshold &&
-					caseSensitive == other.caseSensitive &&
-					wordBoundaryCheck == other.wordBoundaryCheck &&
-					Arrays.deepEquals(STRATEGIES, STRATEGIES);
-		}
-		
-		
 	}
 }
