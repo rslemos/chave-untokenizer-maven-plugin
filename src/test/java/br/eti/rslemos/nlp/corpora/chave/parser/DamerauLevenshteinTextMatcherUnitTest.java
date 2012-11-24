@@ -78,6 +78,23 @@ public class DamerauLevenshteinTextMatcherUnitTest extends TextMatcherAbstractUn
 			));
 	}
 	
+
+	@Test
+	public void testDamerauLevenshteinDistance1EmbeddedInLongerText() throws Exception {
+		DamerauLevenshteinTextMatcher matcher = createTextMatcher(" 1.º ");
+		
+		Set<Match> matches = matcher.matchKey("1º.",
+				span(0, "1º.".length(), 0)
+			);
+		
+		assertThat(matches.size(), is(equalTo(1)));
+		assertThat(matches, hasItems(
+				match(" ".length(), " 1.º".length(),
+						span(" ".length(), " 1.º".length(), 0)
+					)
+			));
+	}
+	
 	@Override
 	protected DamerauLevenshteinTextMatcher createTextMatcher(String text) {
 		return new DamerauLevenshteinTextMatcher(text);

@@ -33,6 +33,8 @@ import static org.junit.Assert.assertThat;
 import static org.junit.Assert.fail;
 import static org.hamcrest.collection.IsCollectionContaining.hasItem;
 
+import java.lang.reflect.InvocationTargetException;
+import java.lang.reflect.Method;
 import java.util.Arrays;
 import java.util.Iterator;
 import java.util.Set;
@@ -46,6 +48,12 @@ public class AdaptativeDamerauLevenshteinDistanceUnitTest {
 	public void testDistance() {
 		testDistance("kitten", "sitting", 6, 6, 5, 4, 3, 3, 2, 3);
 		testDistance("saturday", "sunday", 8, 7, 6, 6, 5, 4, 3);
+	}
+
+	@Test
+	public void testPastDistance() {
+		testPastDistance("kitten", "sitting", 6, 6, 5, 4, 3, 3, 2);
+		testPastDistance("saturday", "sunday", 8, 7, 6, 6, 5, 4);
 	}
 
 	@Test
@@ -77,6 +85,12 @@ public class AdaptativeDamerauLevenshteinDistanceUnitTest {
 	public void testMinimalDistance() {
 		testMinimalDistance("kitten", "sitting", 0, 1, 1, 1, 1, 2, 2, 3);
 		testMinimalDistance("saturday", "sunday", 0, 0, 1, 2, 3, 3, 3);
+	}
+	
+	@Test
+	public void testMinimalFutureDistance() {
+		testMinimalFutureDistance("kitten", "sitting", 0, 1, 1, 1, 1, 2, 3, 4);
+		testMinimalFutureDistance("saturday", "sunday", 0, 0, 1, 2, 3, 3, 4);
 	}
 	
 	@Test
@@ -140,37 +154,84 @@ public class AdaptativeDamerauLevenshteinDistanceUnitTest {
 		} catch (IllegalStateException e) {}
 	}
 
-	private void testDistance(String key, String text, int start, int... distance) {
-		AdaptativeDamerauLevenshteinDistance c = new AdaptativeDamerauLevenshteinDistance(key.toCharArray());
-		
-		assertThat(c.getDistance(), is(equalTo(start)));
-		
-		for (int i = 0; i < distance.length; i++) {
-			c.append(text.charAt(i));
-			assertThat(c.getDistance(), is(equalTo(distance[i])));
+	private Method getMethod(String methodName) {
+		Method method;
+		try {
+			method = AdaptativeDamerauLevenshteinDistance.class.getMethod(methodName);
+			if (!int.class.isAssignableFrom(method.getReturnType()))
+				throw new IllegalArgumentException(methodName + " should be assignable to int");
+		} catch (Exception e) {
+			throw new RuntimeException(e);
+		}
+		return method;
+	}
+	
+	private int[] runAndCollect(AdaptativeDamerauLevenshteinDistance c, String text, String methodName) {
+		return runAndCollect(c, text, methodName, 0);
+	}
+	
+	private int[] runAndCollect(AdaptativeDamerauLevenshteinDistance c, String text, String methodName, int skipMeasurements) {
+		return runAndCollect0(c, text, getMethod(methodName), skipMeasurements);
+	}
+
+	private int[] runAndCollect0(AdaptativeDamerauLevenshteinDistance c, String text, Method method, int skipMeasurements) {
+		int[] result = new int[text.length() + 1 - skipMeasurements];
+
+		try {
+			int i;
+			
+			for (i = 0; i < skipMeasurements; i++) {
+				c.append(text.charAt(i));
+			}
+			
+			text = text.substring(i);
+			
+			for (i = 0; i < text.length(); i++) {
+				result[i] = (Integer)method.invoke(c);
+				c.append(text.charAt(i));
+				
+			}
+			
+			result[i] = (Integer)method.invoke(c);
+			
+			return result;
+		} catch (IllegalArgumentException e) {
+			throw new RuntimeException(e);
+		} catch (IllegalAccessException e) {
+			throw new RuntimeException(e);
+		} catch (InvocationTargetException e) {
+			throw new RuntimeException(e);
 		}
 	}
 
-	private void testDistanceCustomCosts(int matchcost, int substcost, int insertcost, int delcost, int transpcost, String key, String text, int start, int... distance) {
+	private void testDistance(String key, String text, int... expectedDistance) {
+		AdaptativeDamerauLevenshteinDistance c = new AdaptativeDamerauLevenshteinDistance(key.toCharArray());
+		
+		assertThat(runAndCollect(c, text, "getDistance"), is(equalTo(expectedDistance)));
+	}
+
+	private void testDistanceCustomCosts(int matchcost, int substcost, int insertcost, int delcost, int transpcost, String key, String text, int... expectedDistance) {
 		AdaptativeDamerauLevenshteinDistance c = new AdaptativeDamerauLevenshteinDistance(key.toCharArray(), matchcost, substcost, insertcost, delcost, transpcost);
 		
-		assertThat(c.getDistance(), is(equalTo(start)));
-		
-		for (int i = 0; i < distance.length; i++) {
-			c.append(text.charAt(i));
-			assertThat(c.getDistance(), is(equalTo(distance[i])));
-		}
+		assertThat(runAndCollect(c, text, "getDistance"), is(equalTo(expectedDistance)));
 	}
 
-	private void testMinimalDistance(String key, String text, int start, int... minimalDistance) {
+	private void testPastDistance(String key, String text, int... expectedPastDistance) {
 		AdaptativeDamerauLevenshteinDistance c = new AdaptativeDamerauLevenshteinDistance(key.toCharArray());
 		
-		assertThat(c.getMinimalDistance(), is(equalTo(start)));
+		assertThat(runAndCollect(c, text, "getPastDistance", 1), is(equalTo(expectedPastDistance)));
+	}
+
+	private void testMinimalDistance(String key, String text, int... expectedMinimalDistance) {
+		AdaptativeDamerauLevenshteinDistance c = new AdaptativeDamerauLevenshteinDistance(key.toCharArray());
 		
-		for (int i = 0; i < minimalDistance.length; i++) {
-			c.append(text.charAt(i));
-			assertThat(c.getMinimalDistance(), is(equalTo(minimalDistance[i])));
-		}
+		assertThat(runAndCollect(c, text, "getMinimalDistance"), is(equalTo(expectedMinimalDistance)));
+	}
+
+	private void testMinimalFutureDistance(String key, String text, int... expectedMinimalFutureDistance) {
+		AdaptativeDamerauLevenshteinDistance c = new AdaptativeDamerauLevenshteinDistance(key.toCharArray());
+		
+		assertThat(runAndCollect(c, text, "getMinimalFutureDistance"), is(equalTo(expectedMinimalFutureDistance)));
 	}
 	
 	private void testUndo(String key, String text, int start, int... distance) {
