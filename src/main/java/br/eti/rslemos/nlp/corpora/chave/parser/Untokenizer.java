@@ -265,17 +265,9 @@ public class Untokenizer {
 				strategy.setData(textMatcher, cgKeys);
 				Set<Match> matches = strategy.matchAll(from, to, start, end);
 
-				outer:
 				for (Match match : matches) {
-					if (match.from >= from && match.to <= to) {
-						for (Span span : match.getSpans()) {
-							if (span.entry < start || span.entry >= end)
-								continue outer;
-						}
-						
-						for (Span span : match.getSpans()) {
-							spansByEntry[span.entry].add(span);
-						}
+					for (Span span : match.getSpans()) {
+						spansByEntry[span.entry].add(span);
 					}
 				}
 			}
