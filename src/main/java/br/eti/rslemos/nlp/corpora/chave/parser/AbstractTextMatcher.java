@@ -81,6 +81,8 @@ public abstract class AbstractTextMatcher implements TextMatcher {
 	public Set<Match> matchWordEndOrNewLine(int from, int to) {
 		Set<Match> result = new LinkedHashSet<Match>();
 
+		if (from == to)
+			return result;
 
 		int k = from;
 

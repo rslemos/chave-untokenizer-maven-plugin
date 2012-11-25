@@ -205,28 +205,44 @@ public abstract class TextMatcherAbstractUnitTest {
 
 	@Test
 	public void testMatchNewLine() throws Exception {
-		String text = "Devido  às   quais\n\n\n  ";
+		String text = "\nDevido  às   quais\n\n\n  \n";
 		TextMatcher matcher = createTextMatcher(text);
 		
 		Set<Match> matches = matcher.matchWordEndOrNewLine(0, text.length());
 		
-		assertThat(matches.size(), is(equalTo(5)));
+		assertThat(matches.size(), is(equalTo(7)));
 		assertThat(matches, hasItems(
-				match("Devido".length(), "Devido".length(),
-						span("Devido".length(), "Devido".length(), 0)
+				match("".length(), "\n".length(),
+						span("".length(), "\n".length(), 0)
 					),
-				match("Devido  às".length(), "Devido  às".length(),
-						span("Devido  às".length(), "Devido  às".length(), 0)
+				match("\nDevido".length(), "\nDevido".length(),
+						span("\nDevido".length(), "\nDevido".length(), 0)
 					),
-				match("Devido  às   quais".length(), "Devido  às   quais\n".length(),
-						span("Devido  às   quais".length(), "Devido  às   quais\n".length(), 0)
+				match("\nDevido  às".length(), "\nDevido  às".length(),
+						span("\nDevido  às".length(), "\nDevido  às".length(), 0)
 					),
-				match("Devido  às   quais\n".length(), "Devido  às   quais\n\n".length(),
-						span("Devido  às   quais\n".length(), "Devido  às   quais\n\n".length(), 0)
+				match("\nDevido  às   quais".length(), "\nDevido  às   quais\n".length(),
+						span("\nDevido  às   quais".length(), "\nDevido  às   quais\n".length(), 0)
 					),
-				match("Devido  às   quais\n\n".length(), "Devido  às   quais\n\n\n".length(),
-						span("Devido  às   quais\n\n".length(), "Devido  às   quais\n\n\n".length(), 0)
+				match("\nDevido  às   quais\n".length(), "\nDevido  às   quais\n\n".length(),
+						span("\nDevido  às   quais\n".length(), "\nDevido  às   quais\n\n".length(), 0)
+					),
+				match("\nDevido  às   quais\n\n".length(), "\nDevido  às   quais\n\n\n".length(),
+						span("\nDevido  às   quais\n\n".length(), "\nDevido  às   quais\n\n\n".length(), 0)
+					),
+				match("\nDevido  às   quais\n\n\n  ".length(), "\nDevido  às   quais\n\n\n  \n".length(),
+						span("\nDevido  às   quais\n\n\n  ".length(), "\nDevido  às   quais\n\n\n  \n".length(), 0)
 					)
 			));
+	}
+
+	@Test
+	public void testNotMatchOnEmptyText() throws Exception {
+		String text = "Texto há, só que o range é nulo e fica no final da string";
+		TextMatcher matcher = createTextMatcher(text);
+		
+		Set<Match> matches = matcher.matchWordEndOrNewLine(text.length(), text.length());
+		
+		assertThat(matches.size(), is(equalTo(0)));
 	}
 }
