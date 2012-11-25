@@ -58,12 +58,37 @@ public abstract class UntokenizerAbstractFunctionalTest extends TestCase {
 			
 			Document document = GateLoader.load(UntokenizerAbstractFunctionalTest.class.getResource(basename + ".sgml"), "UTF-8");
 			System.out.printf(",%d", document.getContent().size());
-			
-			long before = System.nanoTime();
-			untokenize(document, cgLines);
-			long after = System.nanoTime();
-			
-			System.out.printf(",%d", after - before);
+
+			try {
+				long before = System.nanoTime();
+				untokenize(document, cgLines);
+				long after = System.nanoTime();
+				
+				System.out.printf(",%d", after - before);
+			} catch (UntokenizerException e) {
+				System.out.println();
+				System.out.println(e.getMessage());
+				
+				final int from = e.state.from;
+				final int to = e.state.to;
+				final int start = e.state.start;
+				final int end = e.state.end;
+				
+				System.out.printf("%s>%s<%s\n", 
+						document.getContent().getContent((long)Math.max(from - 20, 0), (long)from).toString(),
+						document.getContent().getContent((long)from, (long)to).toString(),
+						document.getContent().getContent((long)to, (long)Math.min(to + 20, document.getContent().size())).toString()
+					);
+				for (int i = Math.max(start - 1, 0); i < start; i++) {
+					System.out.printf("  %4d. %s (%s)\n", i, cgLines.get(i).getKey(), cgLines.get(i).getValue());
+				}
+				for (int i = start; i < end; i++) {
+					System.out.printf("! %4d. %s (%s) : %s\n", i, cgLines.get(i).getKey(), cgLines.get(i).getValue(), e.state.spansByEntry[i]);
+				}
+				for (int i = end; i < Math.min(end + 1, cgLines.size()); i++) {
+					System.out.printf("  %4d. %s (%s)\n", i, cgLines.get(i).getKey(), cgLines.get(i).getValue());
+				}
+			}
 			
 			AnnotationSet originalMarkups = document.getAnnotations(GateConstants.ORIGINAL_MARKUPS_ANNOT_SET_NAME);
 			tokens = originalMarkups.get("token");
