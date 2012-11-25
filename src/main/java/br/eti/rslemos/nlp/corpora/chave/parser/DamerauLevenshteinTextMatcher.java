@@ -23,14 +23,35 @@ package br.eti.rslemos.nlp.corpora.chave.parser;
 
 import static br.eti.rslemos.nlp.corpora.chave.parser.AdaptativeDamerauLevenshteinDistance.AlignOp.MATCH;
 import static br.eti.rslemos.nlp.corpora.chave.parser.AdaptativeDamerauLevenshteinDistance.AlignOp.TRANSPOSITION;
+import static br.eti.rslemos.nlp.corpora.chave.parser.AdaptativeDamerauLevenshteinDistance.*;
 import static java.lang.Character.isLetterOrDigit;
 import static java.lang.Character.isWhitespace;
 
 import java.util.Set;
 
 import br.eti.rslemos.nlp.corpora.chave.parser.AdaptativeDamerauLevenshteinDistance.AlignOp;
+import br.eti.rslemos.nlp.corpora.chave.parser.AdaptativeDamerauLevenshteinDistance.Cost2;
 
 public class DamerauLevenshteinTextMatcher extends AbstractTextMatcher {
+	private static final Cost2[] SUBST_COSTS_FOR_LENGTH_1 = new Cost2[] {
+		// custo "infinito" para substituição de qualquer coisa por espaço
+		buildCost2FromMasks(10000, 
+				WHITESPACE_CLASSES,
+				~WHITESPACE_CLASSES),
+		buildCost2FromMasks(10000,
+				~WHITESPACE_CLASSES,
+				WHITESPACE_CLASSES),
+		// custo alto para substituição de letra por outra classe
+		buildCost2FromMasks(2, 
+				LETTER_CLASSES,
+				~LETTER_CLASSES),
+		buildCost2FromMasks(2,
+				~LETTER_CLASSES,
+				LETTER_CLASSES),
+		// custo um para o resto
+		buildCost2FromMasks(1, -1, -1)
+	};
+	
 	private final int threshold;
 	
 	public DamerauLevenshteinTextMatcher(String text) {
@@ -57,7 +78,7 @@ public class DamerauLevenshteinTextMatcher extends AbstractTextMatcher {
 	@Override
 	protected int[] match(int from, int to, int k0, String toMatch, int... inPoints) {
 		int k = k0;
-		int threshold = toMatch.length() > 1 ? this.threshold : 0;
+		// int threshold = toMatch.length() > 1 ? this.threshold : 0;
 		
 		if (wordBoundaryCheck && (k - 1) >= from && (k - 1) < to && isLetterOrDigit(text[k - 1]) && isLetterOrDigit(toMatch.charAt(0)))
 			return null;
@@ -65,7 +86,18 @@ public class DamerauLevenshteinTextMatcher extends AbstractTextMatcher {
 		int[] outPoints = new int[inPoints.length];
 		System.arraycopy(inPoints, 0, outPoints, 0, outPoints.length);
 		
-		AdaptativeDamerauLevenshteinDistance dl = new AdaptativeDamerauLevenshteinDistance(toLowerCase(toMatch).toCharArray());
+		AdaptativeDamerauLevenshteinDistance dl;
+		
+		if (toMatch.length() > 1)
+			dl = new AdaptativeDamerauLevenshteinDistance(toLowerCase(toMatch).toCharArray());
+		else
+			dl = new AdaptativeDamerauLevenshteinDistance(toLowerCase(toMatch).toCharArray(),
+					constantCost1(0), SUBST_COSTS_FOR_LENGTH_1,
+					// insert com custo 2 para evitar match em epsilon
+					constantCost1(2),
+					constantCost1(1),
+					constantCost2(1)
+				);
 		
 		while (k < to && dl.getDistance() >= dl.getMinimalFutureDistance()) {
 			if (isWhitespace(text[k])) {

@@ -77,7 +77,6 @@ public class DamerauLevenshteinTextMatcherUnitTest extends TextMatcherAbstractUn
 					)
 			));
 	}
-	
 
 	@Test
 	public void testDamerauLevenshteinDistance1EmbeddedInLongerText() throws Exception {
@@ -91,6 +90,22 @@ public class DamerauLevenshteinTextMatcherUnitTest extends TextMatcherAbstractUn
 		assertThat(matches, hasItems(
 				match(" ".length(), " 1.º".length(),
 						span(" ".length(), " 1.º".length(), 0)
+					)
+			));
+	}
+
+	@Test
+	public void testDamerauLevenshteinDistance1WithLength1() throws Exception {
+		DamerauLevenshteinTextMatcher matcher = createTextMatcher("' ");
+		
+		Set<Match> matches = matcher.matchKey("`",
+				span(0, "`".length(), 0)
+			);
+		
+		assertThat(matches.size(), is(equalTo(1)));
+		assertThat(matches, hasItems(
+				match(0, "'".length(),
+						span(0, "'".length(), 0)
 					)
 			));
 	}

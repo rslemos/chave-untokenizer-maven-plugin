@@ -22,6 +22,10 @@
 package br.eti.rslemos.nlp.corpora.chave.parser;
 
 
+import static br.eti.rslemos.nlp.corpora.chave.parser.AdaptativeDamerauLevenshteinDistance.buildCost1FromClasses;
+import static br.eti.rslemos.nlp.corpora.chave.parser.AdaptativeDamerauLevenshteinDistance.buildCost2FromClasses;
+import static br.eti.rslemos.nlp.corpora.chave.parser.AdaptativeDamerauLevenshteinDistance.constantCost1;
+import static br.eti.rslemos.nlp.corpora.chave.parser.AdaptativeDamerauLevenshteinDistance.constantCost2;
 import static br.eti.rslemos.nlp.corpora.chave.parser.AdaptativeDamerauLevenshteinDistance.AlignOp.DELETION;
 import static br.eti.rslemos.nlp.corpora.chave.parser.AdaptativeDamerauLevenshteinDistance.AlignOp.INSERTION;
 import static br.eti.rslemos.nlp.corpora.chave.parser.AdaptativeDamerauLevenshteinDistance.AlignOp.MATCH;
@@ -29,9 +33,9 @@ import static br.eti.rslemos.nlp.corpora.chave.parser.AdaptativeDamerauLevenshte
 import static br.eti.rslemos.nlp.corpora.chave.parser.AdaptativeDamerauLevenshteinDistance.AlignOp.TRANSPOSITION;
 import static org.hamcrest.CoreMatchers.equalTo;
 import static org.hamcrest.CoreMatchers.is;
+import static org.hamcrest.collection.IsCollectionContaining.hasItem;
 import static org.junit.Assert.assertThat;
 import static org.junit.Assert.fail;
-import static org.hamcrest.collection.IsCollectionContaining.hasItem;
 
 import java.lang.reflect.InvocationTargetException;
 import java.lang.reflect.Method;
@@ -42,6 +46,8 @@ import java.util.Set;
 import org.junit.Test;
 
 import br.eti.rslemos.nlp.corpora.chave.parser.AdaptativeDamerauLevenshteinDistance.AlignOp;
+import br.eti.rslemos.nlp.corpora.chave.parser.AdaptativeDamerauLevenshteinDistance.Cost1;
+import br.eti.rslemos.nlp.corpora.chave.parser.AdaptativeDamerauLevenshteinDistance.Cost2;
 
 public class AdaptativeDamerauLevenshteinDistanceUnitTest {
 	@Test
@@ -63,6 +69,33 @@ public class AdaptativeDamerauLevenshteinDistanceUnitTest {
 		
 		testDistanceCustomCosts(1, 2, 3, 4, 5, "kitten", "sitting", 18, 17, 15, 13, 11, 10, 8, 12);
 		testDistanceCustomCosts(5, 4, 3, 2, 1, "saturday", "sunday", 24, 25, 26, 27, 28, 29, 30);
+	}
+
+	@Test
+	public void testDistanceAdvancedCostModel() {
+		Cost1 cost1Upper = buildCost1FromClasses(1, Character.UPPERCASE_LETTER);
+		Cost1 cost0Any = new Cost1(-1, 0);
+		Cost1 cost2Any = new Cost1(-1, 2);
+		
+		Cost2 cost1LowerToUpper = buildCost2FromClasses(1, Character.LOWERCASE_LETTER, Character.UPPERCASE_LETTER);
+		Cost2 cost1UpperToLower = buildCost2FromClasses(1, Character.UPPERCASE_LETTER, Character.LOWERCASE_LETTER);
+		Cost2 cost2AnyToAny = new Cost2(-1, -1, 2);
+		
+		// matchcost
+		testDistanceAdvancedCostModel(new Cost1[] { cost1Upper, cost0Any }, constantCost2(2), constantCost1(2), constantCost1(2), constantCost2(2),
+				"Kitten", "Kitten", 12, 11, 9, 7, 5, 3, 1);
+		// substcost
+		testDistanceAdvancedCostModel(constantCost1(0), new Cost2[] { cost1LowerToUpper, cost2AnyToAny }, constantCost1(2), constantCost1(2), constantCost2(2),
+				"kitten", "KITTEN", 12, 11, 10, 9, 8, 7, 6);
+		// delcost
+		testDistanceAdvancedCostModel(constantCost1(0), constantCost2(2), constantCost1(2), new Cost1[] { cost1Upper, cost2Any }, constantCost2(2),
+				"kitten", "Kkitten", 12, 12, 11, 9, 7, 5, 3, 1);
+		// inscost
+		testDistanceAdvancedCostModel(constantCost1(0), constantCost2(2), new Cost1[] { cost1Upper, cost2Any }, constantCost1(2), constantCost2(2),
+				"Kitten", "itten", 11, 9, 7, 5, 3, 1);
+		// tranpcost
+		testDistanceAdvancedCostModel(constantCost1(0), constantCost2(2), constantCost1(2), constantCost1(2), new Cost2[] { cost1UpperToLower, cost2AnyToAny },
+				"kItten", "Iktten", 12, 10, 9, 7, 5, 3, 1);
 	}
 	
 	@Test
@@ -216,6 +249,12 @@ public class AdaptativeDamerauLevenshteinDistanceUnitTest {
 		assertThat(runAndCollect(c, text, "getDistance"), is(equalTo(expectedDistance)));
 	}
 
+	private void testDistanceAdvancedCostModel(Cost1[] matchcosts, Cost2[] substcosts, Cost1[] insertcosts, Cost1[] delcosts, Cost2[] transpcosts, String key, String text, int... expectedDistance) {
+		AdaptativeDamerauLevenshteinDistance c = new AdaptativeDamerauLevenshteinDistance(key.toCharArray(), matchcosts, substcosts, insertcosts, delcosts, transpcosts);
+		
+		assertThat(runAndCollect(c, text, "getDistance"), is(equalTo(expectedDistance)));
+	}
+	
 	private void testPastDistance(String key, String text, int... expectedPastDistance) {
 		AdaptativeDamerauLevenshteinDistance c = new AdaptativeDamerauLevenshteinDistance(key.toCharArray());
 		

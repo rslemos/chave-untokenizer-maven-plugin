@@ -32,7 +32,6 @@ import gate.util.InvalidOffsetException;
 import gate.util.SimpleFeatureMapImpl;
 
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.Collections;
 import java.util.HashMap;
 import java.util.HashSet;
