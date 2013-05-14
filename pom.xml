@@ -35,6 +35,24 @@
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<mavenVersion>2.0.6</mavenVersion>
 	</properties>
+	
+	<developers>
+		<developer>
+			<id>rslemos</id>
+			<name>R. Lemos</name>
+			<email>rslemos@gmail.com</email>
+			<timezone>-3</timezone>
+			<roles>
+			</roles>
+		</developer>
+	</developers>
+
+	<licenses>
+		<license>
+			<name>GNU Lesser General Public License version 3</name>
+			<url>http://www.gnu.org/licenses/lgpl.txt</url>
+		</license>
+	</licenses>
 
 	<dependencies>
 		<dependency>
