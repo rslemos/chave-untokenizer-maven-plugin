@@ -42,19 +42,10 @@ import br.eti.rslemos.nlp.corpora.chave.parser.Match.Span;
 
 public class Untokenizer {
 
-	private final MatchStrategy[] STRATEGIES = {
-			new DirectMatchStrategy(),
-			new ContractionMatchStrategy(),
-			new EncliticMatchStrategy(),
-			new NewLineMatchStrategy(),
-		};
-
 	private AnnotationSet originalMarkups;
 	private List<CGEntry> cg;
 	private String text;
 	private List<String> cgKeys;
-
-	private List<Span>[] spansByEntry;
 
 	private List<Span>[] processingResults;
 
@@ -66,6 +57,19 @@ public class Untokenizer {
 
 	@SuppressWarnings("unchecked")
 	public void untokenize(Document document, List<CGEntry> cg) {
+		Parameters config1 = new Parameters(0, false, true, new MatchStrategy[] {
+				new DirectMatchStrategy(),
+				new ContractionMatchStrategy(),
+				new EncliticMatchStrategy(),
+				new NewLineMatchStrategy(),
+			}, null);
+		
+		Parameters config0 = new Parameters(0, false, true, new MatchStrategy[] {
+				new DirectMatchStrategy(),
+				new ContractionMatchStrategy(),
+				new EncliticMatchStrategy(),
+			}, config1);
+		
 		this.cg = cg;
 
 		originalMarkups = document.getAnnotations(GateConstants.ORIGINAL_MARKUPS_ANNOT_SET_NAME);
@@ -73,20 +77,13 @@ public class Untokenizer {
 		text = document.getContent().toString();
 		cgKeys = onlyKeys(cg);
 		
-		spansByEntry = new List[cgKeys.size()];
 		processingResults = new List[cgKeys.size()];
 		
-		for (int i = 0; i < spansByEntry.length; i++) {
-			spansByEntry[i] = new ArrayList<Span>();
-			processingResults[i] = new ArrayList<Span>();
-		}
-		
-		
-		new MatchWork(0, text.length(), 0, cgKeys.size()).untokenize();
+		new MatchWork(0, text.length(), 0, cgKeys.size(), config0).untokenize();
 	}
 
 	private class MatchWork {
-		private final Parameters config = new Parameters(0, false, true);
+		private final Parameters config;
 
 		private final int from;
 		private final int to;
@@ -94,17 +91,38 @@ public class Untokenizer {
 		private final int start;
 		private final int end;
 
-		private MatchWork(int from, int to, int start, int end) {
+		private List<Span>[] spansByEntry;
+
+
+		@SuppressWarnings("unchecked")
+		private MatchWork(int from, int to, int start, int end, Parameters config) {
 			this.from = from;
 			this.to = to;
 			this.start = start;
 			this.end = end;
+			this.config = config;
+
+			spansByEntry = new List[cgKeys.size()];
+			
+			for (int i = start; i < end; i++) {
+				spansByEntry[i] = new ArrayList<Span>();
+				processingResults[i] = new ArrayList<Span>();
+			}
+		}
+		
+		public void untokenize() {
+			untokenize(from, to, start, end);
+		}
+		
+		public void untokenize(int from, int to, int start, int end) {
+			matchAll();
+			new NarrowWork(from, to, start, end).splitAndRecurse();
 		}
 
-		public void untokenize() {
+		private void matchAll() {
 			final TextMatcher textMatcher = config.create(text);
 			
-			for (MatchStrategy strategy : STRATEGIES) {
+			for (MatchStrategy strategy : config.strategies) {
 				strategy.setData(textMatcher, cgKeys);
 				Set<Match> matches = strategy.matchAll(from, to);
 				
@@ -114,8 +132,6 @@ public class Untokenizer {
 					}
 				}
 			}
-
-			new NarrowWork(from, to, start, end).annotateAndSplit();
 		}
 
 		private class NarrowWork {
@@ -203,6 +219,13 @@ public class Untokenizer {
 					}
 				}
 				
+				if (fixedSpan == null && config.next != null) {
+					new MatchWork(MatchWork.this.from, MatchWork.this.to, MatchWork.this.start, MatchWork.this.end, config.next)
+						.untokenize(from, to, start, end);
+					
+					return;
+				}
+				
 				if (fixedSpan == null) {
 					for (int i = start; i < end; i++) {
 						processingResults[i].addAll(spansByEntry[i]);
@@ -265,17 +288,25 @@ public class Untokenizer {
 					return spansByEntry[fixedEntry].get(0);
 			}
 		}
+		
+		private BitSet getFixedEntries(int start, int end) {
+			return Untokenizer.getFixedEntries(spansByEntry, start, end);
+		}
 	}
 
 	private static class Parameters {
-		public int threshold;
-		public boolean caseSensitive;
-		public boolean wordBoundaryCheck;
+		public final int threshold;
+		public final boolean caseSensitive;
+		public final boolean wordBoundaryCheck;
+		public final MatchStrategy[] strategies;
+		public final Parameters next;
 		
-		public Parameters(int threshold, boolean caseSensitive, boolean wordBoundaryCheck) {
+		public Parameters(int threshold, boolean caseSensitive, boolean wordBoundaryCheck, MatchStrategy[] strategies, Parameters next) {
 			this.threshold = threshold;
 			this.caseSensitive = caseSensitive;
 			this.wordBoundaryCheck = wordBoundaryCheck;
+			this.strategies = strategies;
+			this.next = next;
 		}
 		
 		public TextMatcher create(String text) {
@@ -284,10 +315,6 @@ public class Untokenizer {
 			else
 				return new CachingTextMatcher(new PlainTextMatcher(text, caseSensitive, wordBoundaryCheck));
 		}
-	}
-
-	private BitSet getFixedEntries(int start, int end) {
-		return getFixedEntries(spansByEntry, start, end);
 	}
 
 	private static int chooseFixedEntry(BitSet fixedEntries) {

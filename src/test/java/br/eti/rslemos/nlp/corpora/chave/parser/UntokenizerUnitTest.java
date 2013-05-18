@@ -392,6 +392,31 @@ public class UntokenizerUnitTest {
 		assertThatHasAnnotation(3, 4, 1, ".");
 	}
 	
+	@Test
+	public void testBetterChoiceIsNotInTheMiddle() throws Exception {
+		TEXT = ". (FR)";
+
+		CG = Arrays.asList(new CGEntry[] {
+				entry("$.", " [$.] PU <<<"),
+				entry("$¶", " [$¶] PU <<<"),
+				entry("$(", " [$(] PU"),
+				entry("Fr", " [fr] N M S @NPHR"),
+				entry("$)", " [$)] PU"),
+				entry("$¶", " [$¶] PU <<<"),
+				entry("$¶", " [$¶] PU <<<"),
+			});
+
+		untokenize();
+		
+		assertThatHasAnnotation(0, 1, 0, ".");
+		assertThatHasAnnotation(1, 1, 1, "");
+		assertThatHasAnnotation(2, 3, 2, "(");
+		assertThatHasAnnotation(3, 5, 3, "FR");
+		assertThatHasAnnotation(5, 6, 4, ")");
+		assertThatHasAnnotation(6, 6, 5, "");
+		assertThatHasAnnotation(6, 6, 6, "");
+	}
+	
 	private void untokenize() {
 		createDocument();
 		untokenizer.untokenize(document, CG);
@@ -419,7 +444,7 @@ public class UntokenizerUnitTest {
 			AnnotationSet set = originalMarkups.getContained(startOffset, endOffset + 1);
 			
 			for (Annotation annotation : set) {
-				if (annotation.getEndNode().getOffset() == endOffset && "token".equals(annotation.getType())) {
+				if (annotation.getEndNode().getOffset() == endOffset && "token".equals(annotation.getType()) && annotation.getFeatures().containsKey("index") && (annotation.getFeatures().get("index")).equals(index)) {
 					ann = annotation;
 					break;
 				}
