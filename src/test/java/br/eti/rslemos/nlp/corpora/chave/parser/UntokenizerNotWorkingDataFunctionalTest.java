@@ -44,27 +44,4 @@ public class UntokenizerNotWorkingDataFunctionalTest extends UntokenizerAbstract
 	@Test public void test$pt_BR$CHAVEFolha$1994$01$01$122() { _(); } //331-th entry: mudou; Dump remaining buffer: as mulheres se esqueceram de 
 	@Test public void test$pt_BR$CHAVEFolha$1994$01$01$126() { _(); } //32-th entry: repetiu=o'=boom ALT xxx; Dump remaining buffer: repetiu o 'boom' de vendas
 	@Test public void test$pt_BR$CHAVEFolha$1994$01$01$130() { _(); } //232-th entry: Rosalie=Gões=Shopping; Dump remaining buffer: Rosalie Goes Shopping).
-	
-	@Test public void test$pt_BR$CHAVEFolha$1994$01$01$031() { _(); }
-	@Test public void test$pt_BR$CHAVEFolha$1994$01$01$037() { _(); }
-	@Test public void test$pt_BR$CHAVEFolha$1994$01$01$041() { _(); }
-	@Test public void test$pt_BR$CHAVEFolha$1994$01$01$044() { _(); }
-	@Test public void test$pt_BR$CHAVEFolha$1994$01$01$052() { _(); }
-	@Test public void test$pt_BR$CHAVEFolha$1994$01$01$053() { _(); }
-	@Test public void test$pt_BR$CHAVEFolha$1994$01$01$054() { _(); }
-	@Test public void test$pt_BR$CHAVEFolha$1994$01$01$056() { _(); }
-	@Test public void test$pt_BR$CHAVEFolha$1994$01$01$062() { _(); }
-	@Test public void test$pt_BR$CHAVEFolha$1994$01$01$078() { _(); }
-	@Test public void test$pt_BR$CHAVEFolha$1994$01$01$083() { _(); }
-	@Test public void test$pt_BR$CHAVEFolha$1994$01$01$084() { _(); }
-	@Test public void test$pt_BR$CHAVEFolha$1994$01$01$086() { _(); }
-	@Test public void test$pt_BR$CHAVEFolha$1994$01$01$088() { _(); }
-	@Test public void test$pt_BR$CHAVEFolha$1994$01$01$089() { _(); }
-	@Test public void test$pt_BR$CHAVEFolha$1994$01$01$101() { _(); }
-	@Test public void test$pt_BR$CHAVEFolha$1994$01$01$102() { _(); }
-	@Test public void test$pt_BR$CHAVEFolha$1994$01$01$113() { _(); }
-	@Test public void test$pt_BR$CHAVEFolha$1994$01$01$115() { _(); }
-	@Test public void test$pt_BR$CHAVEFolha$1994$01$01$116() { _(); }
-	@Test public void test$pt_BR$CHAVEFolha$1994$01$01$123() { _(); }
-	@Test public void test$pt_BR$CHAVEFolha$1994$01$01$124() { _(); }
 }
