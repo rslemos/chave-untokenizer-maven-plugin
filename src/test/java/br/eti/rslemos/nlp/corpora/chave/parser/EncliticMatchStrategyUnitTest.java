@@ -26,7 +26,7 @@ import static br.eti.rslemos.nlp.corpora.chave.parser.Span.span;
 
 import org.junit.Test;
 
-public class EncliticMatchStrategyUnitTest extends AbstractMatchStrategyUnitTest {
+public class EncliticMatchStrategyUnitTest extends AbstractMatchStrategyUnitTest<EncliticMatchStrategy> {
 	
 	public EncliticMatchStrategyUnitTest() {
 		super(new EncliticMatchStrategy());

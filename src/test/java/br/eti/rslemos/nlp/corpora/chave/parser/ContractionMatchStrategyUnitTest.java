@@ -21,7 +21,7 @@
  ******************************************************************************/
 package br.eti.rslemos.nlp.corpora.chave.parser;
 
-public abstract class ContractionMatchStrategyUnitTest extends AbstractMatchStrategyUnitTest {
+public abstract class ContractionMatchStrategyUnitTest extends AbstractMatchStrategyUnitTest<ContractionMatchStrategy> {
 
 	protected ContractionMatchStrategyUnitTest() {
 		super(new ContractionMatchStrategy());

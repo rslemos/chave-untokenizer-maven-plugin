@@ -26,7 +26,7 @@ import static br.eti.rslemos.nlp.corpora.chave.parser.Span.span;
 
 import org.junit.Test;
 
-public class DirectMatchStrategyUnitTest extends AbstractMatchStrategyUnitTest {
+public class DirectMatchStrategyUnitTest extends AbstractMatchStrategyUnitTest<DirectMatchStrategy> {
 
 	public DirectMatchStrategyUnitTest () {
 		super(new DirectMatchStrategy());

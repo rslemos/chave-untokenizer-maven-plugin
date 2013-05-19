@@ -5,7 +5,7 @@ import static br.eti.rslemos.nlp.corpora.chave.parser.Span.span;
 
 import org.junit.Test;
 
-public class EpsilonMatchStrategyUnitTest extends AbstractMatchStrategyUnitTest {
+public class EpsilonMatchStrategyUnitTest extends AbstractMatchStrategyUnitTest<EpsilonMatchStrategy> {
 
 	public EpsilonMatchStrategyUnitTest() {
 		super(new EpsilonMatchStrategy());

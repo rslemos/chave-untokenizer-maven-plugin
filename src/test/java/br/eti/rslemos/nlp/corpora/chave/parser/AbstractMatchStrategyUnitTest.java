@@ -30,14 +30,14 @@ import java.util.LinkedList;
 import java.util.List;
 import java.util.Set;
 
-public abstract class AbstractMatchStrategyUnitTest {
+public abstract class AbstractMatchStrategyUnitTest<S extends MatchStrategy> {
 
-	private final MatchStrategy strategy;
+	protected final S strategy;
 	protected final List<String> cg = new LinkedList<String>();
 
 	private Set<Match> matches;
 
-	protected AbstractMatchStrategyUnitTest(MatchStrategy strategy) {
+	protected AbstractMatchStrategyUnitTest(S strategy) {
 		this.strategy = strategy;
 	}
 

@@ -39,7 +39,7 @@ public class DirectMatchStrategy extends AbstractMatchStrategy {
 		return matches;
 	}
 
-	private void addAllMatches(int from, int to, int i, Set<Match> matches) {
+	protected void addAllMatches(int from, int to, int i, Set<Match> matches) {
 		for (Match match : matchKey(from, to, getKey(i))) {
 			matches.add(match.adjust(0, i, this.getClass()));
 		}
@@ -49,7 +49,7 @@ public class DirectMatchStrategy extends AbstractMatchStrategy {
 		return matcher.matchKey(from, to, key0, span(0, key0.length(), 0));
 	}
 
-	private String getKey(int i) {
+	protected String getKey(int i) {
 		String key0 = getKey(cg.get(i));
 		
 		// TODO: retirar este bacalho quando o DL for religado;
