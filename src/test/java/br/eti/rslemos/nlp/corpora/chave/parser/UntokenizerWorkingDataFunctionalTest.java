@@ -117,6 +117,7 @@ public class UntokenizerWorkingDataFunctionalTest extends UntokenizerAbstractFun
 	@Test public void test$pt_BR$CHAVEFolha$1994$01$01$091() { _(); }
 	@Test public void test$pt_BR$CHAVEFolha$1994$01$01$092() { _(); }
 	@Test public void test$pt_BR$CHAVEFolha$1994$01$01$093() { _(); }
+	@Test public void test$pt_BR$CHAVEFolha$1994$01$01$094() { _(); } //2-th entry: dÁgua ALT xxxua; Dump remaining buffer: d'Água' obteve
 	@Test public void test$pt_BR$CHAVEFolha$1994$01$01$095() { _(); }
 	@Test public void test$pt_BR$CHAVEFolha$1994$01$01$096() { _(); }
 	@Test public void test$pt_BR$CHAVEFolha$1994$01$01$097() { _(); }

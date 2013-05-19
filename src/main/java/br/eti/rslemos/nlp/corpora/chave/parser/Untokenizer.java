@@ -52,8 +52,14 @@ public class Untokenizer {
 	private static final MatchStrategy ENCLITICMATCH = new EncliticMatchStrategy();
 	private static final MatchStrategy NEWLINEMATCH = new NewLineMatchStrategy();
 	private static final MatchStrategy EPSILONMATCH = new EpsilonMatchStrategy();
+	private static final IdiossincraticMatchStrategy IDIOSSINCRATICMATCH = new IdiossincraticMatchStrategy();
 	
-	private static final Parameters CONFIG02 = new Parameters(1, false, false, EPSILONMATCH);
+	static {
+		IDIOSSINCRATICMATCH.addMatch("d'Água", "dÁgua");
+	}
+	
+	private static final Parameters CONFIG03 = new Parameters(1, false, false, EPSILONMATCH);
+	private static final Parameters CONFIG02 = new Parameters(CONFIG03, 0, false, false, DIRECTMATCH, CONTRACTIONMATCH, ENCLITICMATCH, NEWLINEMATCH, IDIOSSINCRATICMATCH);
 	private static final Parameters CONFIG01 = new Parameters(CONFIG02, 1, false, false, DIRECTMATCH, CONTRACTIONMATCH, ENCLITICMATCH, NEWLINEMATCH);
 	private static final Parameters CONFIG00 = new Parameters(CONFIG01, 0, false, true, DIRECTMATCH, CONTRACTIONMATCH, ENCLITICMATCH, NEWLINEMATCH);
 
