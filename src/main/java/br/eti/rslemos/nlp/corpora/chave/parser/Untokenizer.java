@@ -47,12 +47,13 @@ public class Untokenizer {
 
 	private static final Set<Match> NO_MATCHES = Collections.emptySet();
 
-	private final static MatchStrategy[] STRATEGIES = {
-			new DirectMatchStrategy(),
-			new ContractionMatchStrategy(),
-			new EncliticMatchStrategy(),
-			new NewLineMatchStrategy(),
-		};
+	private static final MatchStrategy DIRECTMATCH = new DirectMatchStrategy();
+	private static final MatchStrategy CONTRACTIONMATCH = new ContractionMatchStrategy();
+	private static final MatchStrategy ENCLITICMATCH = new EncliticMatchStrategy();
+	private static final MatchStrategy NEWLINEMATCH = new NewLineMatchStrategy();
+	
+	private static final Parameters CONFIG01 = new Parameters(1, false, false, DIRECTMATCH, CONTRACTIONMATCH, ENCLITICMATCH, NEWLINEMATCH);
+	private static final Parameters CONFIG00 = new Parameters(CONFIG01, 0, false, true, DIRECTMATCH, CONTRACTIONMATCH, ENCLITICMATCH, NEWLINEMATCH);
 
 	private final Document document;
 	private final String text;
@@ -74,10 +75,7 @@ public class Untokenizer {
 
 	public void untokenize() throws UntokenizerException {
 		
-		Parameters config = new Parameters(0, false, true,
-				new Parameters(1, false, false, null)
-			);
-		Set<Match> matches = untokenize(config, 0, text.length(), 0, cgKeys.size());
+		Set<Match> matches = untokenize(CONFIG00, 0, text.length(), 0, cgKeys.size());
 		
 		AnnotationSet originalMarkups = document.getAnnotations(GateConstants.ORIGINAL_MARKUPS_ANNOT_SET_NAME);
 
@@ -203,8 +201,8 @@ public class Untokenizer {
 			if (!candidates.isEmpty())
 				return fixSpan(candidates.get(candidates.size() / 2));
 			
-			if (config.getNext() != null)
-				return new MatchWork(config.getNext(), from, to, start, end).split();
+			if (config.next != null)
+				return new MatchWork(config.next, from, to, start, end).split();
 			
 			throw new UntokenizerException(this);
 		}
@@ -260,7 +258,7 @@ public class Untokenizer {
 
 			final TextMatcher textMatcher = config.create(text);
 			
-			for (MatchStrategy strategy : config.getStrategies()) {
+			for (MatchStrategy strategy : config.strategies) {
 				strategy.setData(textMatcher, cgKeys);
 				Set<Match> matches = strategy.matchAll(from, to, start, end);
 
@@ -314,23 +312,21 @@ public class Untokenizer {
 		public final int threshold;
 		public final boolean caseSensitive;
 		public final boolean wordBoundaryCheck;
-		private final Parameters next;
+		public final Parameters next;
+		public final MatchStrategy[] strategies;
 		
-		public Parameters(int threshold, boolean caseSensitive, boolean wordBoundaryCheck, Parameters next) {
+		public Parameters(int threshold, boolean caseSensitive, boolean wordBoundaryCheck, MatchStrategy... strategies) {
+			this(null, threshold, caseSensitive, wordBoundaryCheck, strategies);
+		}
+		
+		public Parameters(Parameters next, int threshold, boolean caseSensitive, boolean wordBoundaryCheck, MatchStrategy... strategies) {
 			this.threshold = threshold;
 			this.caseSensitive = caseSensitive;
 			this.wordBoundaryCheck = wordBoundaryCheck;
 			this.next = next;
+			this.strategies = strategies;
 		}
 		
-		public Parameters getNext() {
-			return next;
-		}
-
-		public MatchStrategy[] getStrategies() {
-			return STRATEGIES;
-		}
-
 		public TextMatcher create(String text) {
 			if (threshold > 0)
 				return new CachingTextMatcher(new DamerauLevenshteinTextMatcher(text, threshold, caseSensitive, wordBoundaryCheck));
