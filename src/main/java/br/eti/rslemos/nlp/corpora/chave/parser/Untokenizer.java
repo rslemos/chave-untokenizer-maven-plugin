@@ -51,8 +51,10 @@ public class Untokenizer {
 	private static final MatchStrategy CONTRACTIONMATCH = new ContractionMatchStrategy();
 	private static final MatchStrategy ENCLITICMATCH = new EncliticMatchStrategy();
 	private static final MatchStrategy NEWLINEMATCH = new NewLineMatchStrategy();
+	private static final MatchStrategy EPSILONMATCH = new EpsilonMatchStrategy();
 	
-	private static final Parameters CONFIG01 = new Parameters(1, false, false, DIRECTMATCH, CONTRACTIONMATCH, ENCLITICMATCH, NEWLINEMATCH);
+	private static final Parameters CONFIG02 = new Parameters(1, false, false, EPSILONMATCH);
+	private static final Parameters CONFIG01 = new Parameters(CONFIG02, 1, false, false, DIRECTMATCH, CONTRACTIONMATCH, ENCLITICMATCH, NEWLINEMATCH);
 	private static final Parameters CONFIG00 = new Parameters(CONFIG01, 0, false, true, DIRECTMATCH, CONTRACTIONMATCH, ENCLITICMATCH, NEWLINEMATCH);
 
 	private final Document document;

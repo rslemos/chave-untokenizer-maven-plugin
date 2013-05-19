@@ -110,6 +110,10 @@ public final class Match {
 	}
 	
 	public static Match match(int from, int to, br.eti.rslemos.nlp.corpora.chave.parser.Span... spans) {
-		return new Match(from, to, null, spans);
+		return match(from, to, null, spans);
+	}
+
+	public static Match match(int from, int to, Class<? extends MatchStrategy> strategy, br.eti.rslemos.nlp.corpora.chave.parser.Span... spans) {
+		return new Match(from, to, strategy, spans);
 	}
 }

@@ -388,6 +388,23 @@ public class UntokenizerUnitTest {
 		assertThatHasAnnotation(0, 3, 0, "sra");
 		assertThatHasAnnotation(3, 4, 1, ".");
 	}
+
+	@Test
+	public void testMissingPunctuation() throws Exception {
+		TEXT = "*\n";
+
+		CG = Arrays.asList(new CGEntry[] {
+				entry("$*", " [$*] PU"),
+				entry("$.", " [$.] PU <<<"),
+				entry("$¶", " [$¶] PU <<<"),
+			});
+
+		untokenize();
+		
+		assertThatHasAnnotation(0, 1, 0, "*");
+		assertThatHasAnnotation(1, 1, 1, "");
+		assertThatHasAnnotation(1, 2, 2, "\n");
+	}
 	
 	private void untokenize() {
 		createDocument();
