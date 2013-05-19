@@ -46,7 +46,7 @@ public class EncliticMatchStrategy extends AbstractMatchStrategy {
 					toMatch = key0.replaceAll("er-$", "ê-");
 				
 				if (key0.endsWith("ir-"))
-					toMatch = key0.replaceAll("ir-$", "i-");
+					toMatch = key0.replaceAll("ir-$", "í-");
 				
 				if (key0.endsWith("por-"))
 					toMatch = key0.replaceAll("por-$", "po-");
