@@ -38,57 +38,30 @@ import org.apache.maven.plugin.AbstractMojo;
 import org.apache.maven.plugin.MojoExecutionException;
 import org.apache.maven.plugin.MojoFailureException;
 import org.apache.maven.plugin.logging.Log;
+import org.apache.maven.plugins.annotations.LifecyclePhase;
+import org.apache.maven.plugins.annotations.Mojo;
+import org.apache.maven.plugins.annotations.Parameter;
 import org.codehaus.plexus.util.FileUtils;
 
-/**
- * @goal untokenize
- * @phase compile
- */
+@Mojo(name = "untokenize", defaultPhase = LifecyclePhase.COMPILE)
 public class ChaveUntokenizerMojo extends AbstractMojo {
 
     /**
      * The character encoding scheme to be applied when filtering resources.
-     *
-     * @parameter expression="${encoding}" default-value="${project.build.sourceEncoding}"
      */
+	@Parameter(defaultValue = "${project.build.sourceEncoding}")
     protected String encoding;
 
     /**
      * The output directory into which to copy the resources.
-     *
-     * @parameter default-value="${project.build.outputDirectory}"
-     * @required
      */
+	@Parameter(defaultValue = "${project.build.outputDirectory}", required = true)
     private File outputDirectory;
 
     /**
-     * Overwrite existing files even if the destination files are newer.
-     * @parameter expression="${maven.resources.overwrite}" default-value="false"
-     * @since 2.3
-     */
-    //private boolean overwrite;
-    
-    /**
-     * Copy any empty directories included in the Ressources.
-     * @parameter expression="${maven.resources.includeEmptyDirs}" default-value="false"
-     * @since 2.3
-     */    
-    protected boolean includeEmptyDirs;
-    
-    /**
-     * Whether to escape backslashes and colons in windows-style paths.
-     * @parameter expression="${maven.resources.escapeWindowsPaths}" default-value="true"
-     * @since 2.4
-     */
-    protected boolean escapeWindowsPaths;
-    
-    /**
      * The list of resources we want to transfer.
-     *
-     * @parameter default-value="${project.resources}"
-     * @required
-     * @readonly
      */
+	@Parameter(defaultValue = "${project.resources}", required = true, readonly = true)
     private List<Resource> resources;
 
 	public void execute() throws MojoExecutionException, MojoFailureException {
